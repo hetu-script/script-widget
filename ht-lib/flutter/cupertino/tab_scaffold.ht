@@ -1,0 +1,30 @@
+external class CupertinoTabController {
+    construct 
+    get index
+    set index(value)
+    fun dispose
+    fun addListener
+    fun removeListener
+}
+external class CupertinoTabScaffold {
+    construct 
+    get tabBar
+    get controller
+    get tabBuilder
+    get backgroundColor
+    get resizeToAvoidBottomInset
+    get restorationId
+    fun createState
+}
+external class RestorableCupertinoTabController {
+    construct 
+    fun createDefaultValue
+    fun fromPrimitives
+    fun toPrimitives
+    fun initWithValue
+    fun dispose
+    get value
+    get enabled
+    fun addListener
+    fun removeListener
+}

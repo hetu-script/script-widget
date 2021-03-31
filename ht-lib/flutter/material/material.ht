@@ -1,0 +1,36 @@
+external class MaterialType {
+    static const canvas
+    static const card
+    static const circle
+    static const button
+    static const transparency
+}
+external class Material {
+    construct 
+    get child
+    get type
+    get elevation
+    get color
+    get shadowColor
+    get textStyle
+    get shape
+    get borderOnForeground
+    get clipBehavior
+    get animationDuration
+    get borderRadius
+    fun createState
+    fun debugFillProperties
+    static fun of (context)
+    static const defaultSplashRadius
+}
+external class ShapeBorderTween {
+    construct 
+    var begin
+    var end
+    fun lerp
+    fun transform
+    fun toString
+    fun evaluate
+    fun animate
+    fun chain
+}

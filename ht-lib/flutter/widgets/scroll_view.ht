@@ -1,0 +1,80 @@
+external class ScrollViewKeyboardDismissBehavior {
+    static const manual
+    static const onDrag
+}
+external class CustomScrollView {
+    construct 
+    get slivers
+    get scrollDirection
+    get reverse
+    get controller
+    get primary
+    get physics
+    get shrinkWrap
+    get center
+    get anchor
+    get cacheExtent
+    get semanticChildCount
+    get dragStartBehavior
+    get keyboardDismissBehavior
+    get restorationId
+    get clipBehavior
+    fun buildSlivers
+    fun build
+    fun debugFillProperties
+}
+external class ListView {
+    construct 
+    construct builder
+    construct separated
+    construct custom
+    get itemExtent
+    get childrenDelegate
+    get padding
+    get scrollDirection
+    get reverse
+    get controller
+    get primary
+    get physics
+    get shrinkWrap
+    get center
+    get anchor
+    get cacheExtent
+    get semanticChildCount
+    get dragStartBehavior
+    get keyboardDismissBehavior
+    get restorationId
+    get clipBehavior
+    fun buildChildLayout
+    fun debugFillProperties
+    fun buildSlivers
+    fun build
+}
+external class GridView {
+    construct 
+    construct builder
+    construct custom
+    construct count
+    construct extent
+    get gridDelegate
+    get childrenDelegate
+    get padding
+    get scrollDirection
+    get reverse
+    get controller
+    get primary
+    get physics
+    get shrinkWrap
+    get center
+    get anchor
+    get cacheExtent
+    get semanticChildCount
+    get dragStartBehavior
+    get keyboardDismissBehavior
+    get restorationId
+    get clipBehavior
+    fun buildChildLayout
+    fun buildSlivers
+    fun debugFillProperties
+    fun build
+}

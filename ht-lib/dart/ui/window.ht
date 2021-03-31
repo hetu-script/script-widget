@@ -1,0 +1,4 @@
+external class Brightness {
+    static const dark
+    static const light
+}

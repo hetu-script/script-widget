@@ -1,0 +1,22 @@
+external class TextSelection {
+    construct 
+    construct collapsed
+    construct fromPosition
+    get baseOffset
+    get extentOffset
+    get affinity
+    get isDirectional
+    get start
+    get end
+    get base
+    get extent
+    fun toString
+    get hashCode
+    fun copyWith
+    get isValid
+    get isCollapsed
+    get isNormalized
+    fun textBefore
+    fun textAfter
+    fun textInside
+}

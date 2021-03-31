@@ -1,0 +1,31 @@
+external class RawKeyEventDataFuchsia {
+    construct 
+    get hidUsage
+    get codePoint
+    get modifiers
+    get keyLabel
+    get logicalKey
+    get physicalKey
+    fun isModifierPressed
+    fun getModifierSide
+    fun toString
+    get isControlPressed
+    get isShiftPressed
+    get isAltPressed
+    get isMetaPressed
+    get modifiersPressed
+    static const modifierNone
+    static const modifierCapsLock
+    static const modifierLeftShift
+    static const modifierRightShift
+    static const modifierShift
+    static const modifierLeftControl
+    static const modifierRightControl
+    static const modifierControl
+    static const modifierLeftAlt
+    static const modifierRightAlt
+    static const modifierAlt
+    static const modifierLeftMeta
+    static const modifierRightMeta
+    static const modifierMeta
+}

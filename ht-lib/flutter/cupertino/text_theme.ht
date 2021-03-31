@@ -1,0 +1,14 @@
+external class CupertinoTextThemeData {
+    construct 
+    get textStyle
+    get actionTextStyle
+    get tabLabelTextStyle
+    get navTitleTextStyle
+    get navLargeTitleTextStyle
+    get navActionTextStyle
+    get pickerTextStyle
+    get dateTimePickerTextStyle
+    fun resolveFrom
+    fun copyWith
+    fun debugFillProperties
+}

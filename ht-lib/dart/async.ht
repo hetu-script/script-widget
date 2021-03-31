@@ -1,0 +1,5 @@
+import 'dart://async/async_error.ht'
+import 'dart://async/future.ht'
+import 'dart://async/deferred_load.ht'
+import 'dart://async/timer.ht'
+import 'dart://async/zone.ht'

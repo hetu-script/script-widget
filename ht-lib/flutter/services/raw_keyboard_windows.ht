@@ -1,0 +1,31 @@
+external class RawKeyEventDataWindows {
+    construct 
+    get keyCode
+    get scanCode
+    get characterCodePoint
+    get modifiers
+    get keyLabel
+    get physicalKey
+    get logicalKey
+    fun isModifierPressed
+    fun getModifierSide
+    get isControlPressed
+    get isShiftPressed
+    get isAltPressed
+    get isMetaPressed
+    get modifiersPressed
+    static const modifierShift
+    static const modifierLeftShift
+    static const modifierRightShift
+    static const modifierControl
+    static const modifierLeftControl
+    static const modifierRightControl
+    static const modifierAlt
+    static const modifierLeftAlt
+    static const modifierRightAlt
+    static const modifierLeftMeta
+    static const modifierRightMeta
+    static const modifierCaps
+    static const modifierNumLock
+    static const modifierScrollLock
+}

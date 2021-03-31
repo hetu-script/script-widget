@@ -1,0 +1,126 @@
+external class TraversalDirection {
+    static const up
+    static const right
+    static const down
+    static const left
+}
+external class WidgetOrderTraversalPolicy {
+    construct
+    fun sortDescendants
+    fun invalidateScopeData
+    fun changedScope
+    fun findFirstFocusInDirection
+    fun inDirection
+    fun findFirstFocus
+    fun findLastFocus
+    fun next
+    fun previous
+}
+external class ReadingOrderTraversalPolicy {
+    construct
+    fun sortDescendants
+    fun invalidateScopeData
+    fun changedScope
+    fun findFirstFocusInDirection
+    fun inDirection
+    fun findFirstFocus
+    fun findLastFocus
+    fun next
+    fun previous
+}
+external class NumericFocusOrder {
+    construct 
+    get order
+    fun doCompare
+    fun debugFillProperties
+    fun compareTo
+}
+external class LexicalFocusOrder {
+    construct 
+    get order
+    fun doCompare
+    fun debugFillProperties
+    fun compareTo
+}
+external class OrderedTraversalPolicy {
+    construct 
+    get secondary
+    fun sortDescendants
+    fun invalidateScopeData
+    fun changedScope
+    fun findFirstFocusInDirection
+    fun inDirection
+    fun findFirstFocus
+    fun findLastFocus
+    fun next
+    fun previous
+}
+external class FocusTraversalOrder {
+    construct 
+    get order
+    fun updateShouldNotify
+    fun debugFillProperties
+    static fun of (context)
+    static fun maybeOf (context)
+}
+external class FocusTraversalGroup {
+    construct 
+    get policy
+    get descendantsAreFocusable
+    get child
+    fun createState
+    fun debugFillProperties
+    static fun of (context)
+    static fun maybeOf (context)
+}
+external class RequestFocusIntent {
+    construct 
+    get focusNode
+}
+external class RequestFocusAction {
+    construct
+    fun invoke
+    get intentType
+    fun isEnabled
+    fun consumesKey
+    fun addActionListener
+    fun removeActionListener
+}
+external class NextFocusIntent {
+    construct 
+}
+external class NextFocusAction {
+    construct
+    fun invoke
+    get intentType
+    fun isEnabled
+    fun consumesKey
+    fun addActionListener
+    fun removeActionListener
+}
+external class PreviousFocusIntent {
+    construct 
+}
+external class PreviousFocusAction {
+    construct
+    fun invoke
+    get intentType
+    fun isEnabled
+    fun consumesKey
+    fun addActionListener
+    fun removeActionListener
+}
+external class DirectionalFocusIntent {
+    construct 
+    get direction
+    get ignoreTextFields
+}
+external class DirectionalFocusAction {
+    construct
+    fun invoke
+    get intentType
+    fun isEnabled
+    fun consumesKey
+    fun addActionListener
+    fun removeActionListener
+}

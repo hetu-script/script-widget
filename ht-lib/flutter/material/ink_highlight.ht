@@ -1,0 +1,15 @@
+external class InkHighlight {
+    construct 
+    get referenceBox
+    get onRemoved
+    get active
+    fun activate
+    fun deactivate
+    fun dispose
+    fun paintFeature
+    fun confirm
+    fun cancel
+    get color
+    get controller
+    fun toString
+}

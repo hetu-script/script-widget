@@ -1,0 +1,11 @@
+external class Listenable {
+    construct merge
+    fun addListener
+    fun removeListener
+}
+external class ChangeNotifier {
+    construct
+    fun addListener
+    fun removeListener
+    fun dispose
+}

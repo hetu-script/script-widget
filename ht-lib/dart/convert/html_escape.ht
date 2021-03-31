@@ -1,0 +1,21 @@
+external class HtmlEscapeMode {
+    construct 
+    get escapeLtGt
+    get escapeQuot
+    get escapeApos
+    get escapeSlash
+    fun toString
+    static const unknown
+    static const attribute
+    static const sqAttribute
+    static const element
+}
+external class HtmlEscape {
+    construct 
+    get mode
+    fun convert
+    fun startChunkedConversion
+    fun fuse
+    fun bind
+    fun cast
+}

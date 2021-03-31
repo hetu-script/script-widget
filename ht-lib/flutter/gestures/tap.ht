@@ -1,0 +1,48 @@
+external class TapDownDetails {
+    construct 
+    get globalPosition
+    get kind
+    get localPosition
+}
+external class TapUpDetails {
+    construct 
+    get globalPosition
+    get localPosition
+    get kind
+}
+external class TapGestureRecognizer {
+    construct 
+    var onTapDown
+    var onTapUp
+    var onTap
+    var onTapCancel
+    var onSecondaryTap
+    var onSecondaryTapDown
+    var onSecondaryTapUp
+    var onSecondaryTapCancel
+    var onTertiaryTapDown
+    var onTertiaryTapUp
+    var onTertiaryTapCancel
+    get deadline
+    get preAcceptSlopTolerance
+    get postAcceptSlopTolerance
+    var state
+    var primaryPointer
+    var initialPosition
+    get debugOwner
+    fun isPointerAllowed
+    get debugDescription
+    fun addAllowedPointer
+    fun handlePrimaryPointer
+    fun resolve
+    fun didExceedDeadline
+    fun acceptGesture
+    fun rejectGesture
+    fun debugFillProperties
+    fun handleEvent
+    fun didStopTrackingLastPointer
+    fun dispose
+    fun handleNonAllowedPointer
+    get team
+    fun addPointer
+}

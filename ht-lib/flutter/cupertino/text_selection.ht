@@ -1,0 +1,15 @@
+external class CupertinoTextSelectionControls {
+    construct
+    fun getHandleSize
+    fun buildToolbar
+    fun buildHandle
+    fun getHandleAnchor
+    fun canCut
+    fun canCopy
+    fun canPaste
+    fun canSelectAll
+    fun handleCut
+    fun handleCopy
+    fun handlePaste
+    fun handleSelectAll
+}

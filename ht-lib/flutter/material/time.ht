@@ -1,0 +1,34 @@
+external class DayPeriod {
+    static const am
+    static const pm
+}
+external class TimeOfDayFormat {
+    static const HH_colon_mm
+    static const HH_dot_mm
+    static const frenchCanadian
+    static const H_colon_mm
+    static const h_colon_mm_space_a
+    static const a_space_h_colon_mm
+}
+external class HourFormat {
+    static const HH
+    static const H
+    static const h
+}
+external class TimeOfDay {
+    construct 
+    construct fromDateTime
+    construct now
+    get hour
+    get minute
+    fun replacing
+    get period
+    get hourOfPeriod
+    get periodOffset
+    fun format
+    get hashCode
+    fun toString
+    static const hoursPerDay
+    static const hoursPerPeriod
+    static const minutesPerHour
+}

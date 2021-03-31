@@ -1,0 +1,42 @@
+external class RenderErrorBox {
+    construct 
+    get message
+    fun computeMaxIntrinsicWidth
+    fun computeMaxIntrinsicHeight
+    get sizedByParent
+    fun hitTestSelf
+    fun computeDryLayout
+    fun paint
+    fun setupParentData
+    fun getMinIntrinsicWidth
+    fun getMaxIntrinsicWidth
+    fun getMinIntrinsicHeight
+    fun getMaxIntrinsicHeight
+    fun getDryLayout
+    fun debugCannotComputeDryLayout
+    get hasSize
+    get size
+    fun debugAdoptSize
+    get semanticBounds
+    fun debugResetSize
+    fun getDistanceToBaseline
+    get constraints
+    fun debugAssertDoesMeetConstraints
+    fun markNeedsLayout
+    fun performResize
+    fun performLayout
+    fun hitTest
+    fun applyPaintTransform
+    fun globalToLocal
+    fun localToGlobal
+    get paintBounds
+    fun handleEvent
+    fun debugHandleEvent
+    fun debugPaint
+    fun debugFillProperties
+    static var padding
+    static var minimumWidth
+    static var backgroundColor
+    static var textStyle
+    static var paragraphStyle
+}

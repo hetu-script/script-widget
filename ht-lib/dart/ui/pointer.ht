@@ -1,0 +1,59 @@
+external class PointerChange {
+    static const cancel
+    static const add
+    static const remove
+    static const hover
+    static const down
+    static const move
+    static const up
+}
+external class PointerDeviceKind {
+    static const touch
+    static const mouse
+    static const stylus
+    static const invertedStylus
+    static const unknown
+}
+external class PointerSignalKind {
+    static const none
+    static const scroll
+    static const unknown
+}
+external class PointerData {
+    construct 
+    get embedderId
+    get timeStamp
+    get change
+    get kind
+    get signalKind
+    get device
+    get pointerIdentifier
+    get physicalX
+    get physicalY
+    get physicalDeltaX
+    get physicalDeltaY
+    get buttons
+    get obscured
+    get synthesized
+    get pressure
+    get pressureMin
+    get pressureMax
+    get distance
+    get distanceMax
+    get size
+    get radiusMajor
+    get radiusMinor
+    get radiusMin
+    get radiusMax
+    get orientation
+    get tilt
+    get platformData
+    get scrollDeltaX
+    get scrollDeltaY
+    fun toString
+    fun toStringFull
+}
+external class PointerDataPacket {
+    construct 
+    get data
+}

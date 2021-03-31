@@ -1,0 +1,141 @@
+external class PlatformViewHitTestBehavior {
+    static const opaque
+    static const translucent
+    static const transparent
+}
+external class RenderAndroidView {
+    construct 
+    get viewcontroller
+    set viewController(value)
+    get clipBehavior
+    set clipBehavior(value)
+    fun updateGestureRecognizers
+    get sizedByParent
+    get alwaysNeedsCompositing
+    get isRepaintBoundary
+    fun computeDryLayout
+    fun performResize
+    fun paint
+    fun describeSemanticsConfiguration
+    set hitTestBehavior(value)
+    fun hitTest
+    fun hitTestSelf
+    get onEnter
+    get onExit
+    get cursor
+    get validForMouseTracker
+    fun handleEvent
+    fun detach
+    fun setupParentData
+    fun getMinIntrinsicWidth
+    fun getMaxIntrinsicWidth
+    fun getMinIntrinsicHeight
+    fun getMaxIntrinsicHeight
+    fun getDryLayout
+    fun debugCannotComputeDryLayout
+    get hasSize
+    get size
+    fun debugAdoptSize
+    get semanticBounds
+    fun debugResetSize
+    fun getDistanceToBaseline
+    get constraints
+    fun debugAssertDoesMeetConstraints
+    fun markNeedsLayout
+    fun performLayout
+    fun applyPaintTransform
+    fun globalToLocal
+    fun localToGlobal
+    get paintBounds
+    fun debugHandleEvent
+    fun debugPaint
+    fun debugFillProperties
+}
+external class RenderUiKitView {
+    construct 
+    var hitTestBehavior
+    get viewController
+    set viewController(value)
+    fun updateGestureRecognizers
+    get sizedByParent
+    get alwaysNeedsCompositing
+    get isRepaintBoundary
+    fun computeDryLayout
+    fun paint
+    fun hitTest
+    fun hitTestSelf
+    fun handleEvent
+    fun describeSemanticsConfiguration
+    fun attach
+    fun detach
+    fun setupParentData
+    fun getMinIntrinsicWidth
+    fun getMaxIntrinsicWidth
+    fun getMinIntrinsicHeight
+    fun getMaxIntrinsicHeight
+    fun getDryLayout
+    fun debugCannotComputeDryLayout
+    get hasSize
+    get size
+    fun debugAdoptSize
+    get semanticBounds
+    fun debugResetSize
+    fun getDistanceToBaseline
+    get constraints
+    fun debugAssertDoesMeetConstraints
+    fun markNeedsLayout
+    fun performResize
+    fun performLayout
+    fun applyPaintTransform
+    fun globalToLocal
+    fun localToGlobal
+    get paintBounds
+    fun debugHandleEvent
+    fun debugPaint
+    fun debugFillProperties
+}
+external class PlatformViewRenderBox {
+    construct 
+    set controller(value)
+    fun updateGestureRecognizers
+    get sizedByParent
+    get alwaysNeedsCompositing
+    get isRepaintBoundary
+    fun computeDryLayout
+    fun paint
+    fun describeSemanticsConfiguration
+    set hitTestBehavior(value)
+    fun hitTest
+    fun hitTestSelf
+    get onEnter
+    get onExit
+    get cursor
+    get validForMouseTracker
+    fun handleEvent
+    fun detach
+    fun setupParentData
+    fun getMinIntrinsicWidth
+    fun getMaxIntrinsicWidth
+    fun getMinIntrinsicHeight
+    fun getMaxIntrinsicHeight
+    fun getDryLayout
+    fun debugCannotComputeDryLayout
+    get hasSize
+    get size
+    fun debugAdoptSize
+    get semanticBounds
+    fun debugResetSize
+    fun getDistanceToBaseline
+    get constraints
+    fun debugAssertDoesMeetConstraints
+    fun markNeedsLayout
+    fun performResize
+    fun performLayout
+    fun applyPaintTransform
+    fun globalToLocal
+    fun localToGlobal
+    get paintBounds
+    fun debugHandleEvent
+    fun debugPaint
+    fun debugFillProperties
+}

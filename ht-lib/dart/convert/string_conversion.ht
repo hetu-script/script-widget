@@ -1,0 +1,18 @@
+external class StringConversionSink {
+    construct withCallback
+    construct from
+    construct fromStringSink
+    fun addSlice
+    fun asUtf8Sink
+    fun asStringSink
+    fun add
+    fun close
+}
+external class ClosableStringSink {
+    construct fromStringSink
+    fun close
+    fun write
+    fun writeAll
+    fun writeln
+    fun writeCharCode
+}

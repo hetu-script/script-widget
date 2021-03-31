@@ -1,0 +1,14 @@
+external class IOSink {
+    construct 
+    var encoding
+    fun add
+    fun write
+    fun writeAll
+    fun writeln
+    fun writeCharCode
+    fun addError
+    fun addStream
+    fun flush
+    fun close
+    get done
+}

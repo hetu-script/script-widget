@@ -1,0 +1,57 @@
+external class FileMode {
+    static const read
+    static const write
+    static const append
+    static const writeOnly
+    static const writeOnlyAppend
+}
+external class FileLock {
+    static const shared
+    static const exclusive
+    static const blockingShared
+    static const blockingExclusive
+}
+external class File {
+    construct 
+    construct fromUri
+    construct fromRawPath
+    fun create
+    fun createSync
+    fun rename
+    fun renameSync
+    fun copy
+    fun copySync
+    fun length
+    fun lengthSync
+    get absolute
+    fun lastAccessed
+    fun lastAccessedSync
+    fun setLastAccessed
+    fun setLastAccessedSync
+    fun lastModified
+    fun lastModifiedSync
+    fun setLastModified
+    fun setLastModifiedSync
+    fun open
+    fun openSync
+    fun openRead
+    fun openWrite
+    fun readAsBytes
+    fun readAsBytesSync
+    fun readAsString
+    fun readAsStringSync
+    fun readAsLines
+    fun readAsLinesSync
+    fun writeAsBytes
+    fun writeAsBytesSync
+    fun writeAsString
+    fun writeAsStringSync
+    get path
+}
+external class FileSystemException {
+    construct 
+    get message
+    get path
+    get osError
+    fun toString
+}

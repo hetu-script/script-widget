@@ -1,0 +1,170 @@
+external class FontStyle {
+    static const normal
+    static const italic
+}
+external class TextAlign {
+    static const left
+    static const right
+    static const center
+    static const justify
+    static const start
+    static const end
+}
+external class TextBaseline {
+    static const alphabetic
+    static const ideographic
+}
+external class TextDecorationStyle {
+    static const solid
+    static const double
+    static const dotted
+    static const dashed
+    static const wavy
+}
+external class TextDirection {
+    static const rtl
+    static const ltr
+}
+external class TextAffinity {
+    static const upstream
+    static const downstream
+}
+external class BoxHeightStyle {
+    static const tight
+    static const max
+    static const includeLineSpacingMiddle
+    static const includeLineSpacingTop
+    static const includeLineSpacingBottom
+    static const strut
+}
+external class BoxWidthStyle {
+    static const tight
+    static const max
+}
+external class PlaceholderAlignment {
+    static const baseline
+    static const aboveBaseline
+    static const belowBaseline
+    static const top
+    static const bottom
+    static const middle
+}
+external class FontWeight {
+    static fun lerp (a, b, t)
+    static const w100
+    static const w200
+    static const w300
+    static const w400
+    static const w500
+    static const w600
+    static const w700
+    static const w800
+    static const w900
+    static const normal
+    static const bold
+    static const values
+}
+external class FontFeature {
+    construct 
+    construct enable
+    construct disable
+    construct randomize
+    construct stylisticSet
+    construct slashedZero
+    construct oldstyleFigures
+    construct proportionalFigures
+    construct tabularFigures
+    get feature
+    get value
+    get hashCode
+    fun toString
+}
+external class TextDecoration {
+    construct combine
+    fun contains
+    get hashCode
+    fun toString
+    static const none
+    static const underline
+    static const overline
+    static const lineThrough
+}
+external class TextHeightBehavior {
+    construct 
+    construct fromEncoded
+    get applyHeightToFirstAscent
+    get applyHeightToLastDescent
+    fun encode
+    get hashCode
+    fun toString
+}
+external class ParagraphStyle {
+    construct 
+    get hashCode
+    fun toString
+}
+external class TextBox {
+    construct fromLTRBD
+    get left
+    get top
+    get right
+    get bottom
+    get direction
+    fun toRect
+    get start
+    get end
+    get hashCode
+    fun toString
+}
+external class TextPosition {
+    construct 
+    get offset
+    get affinity
+    get hashCode
+    fun toString
+}
+external class TextRange {
+    construct 
+    construct collapsed
+    get start
+    get end
+    get isValid
+    get isCollapsed
+    get isNormalized
+    fun textBefore
+    fun textAfter
+    fun textInside
+    get hashCode
+    fun toString
+    static const empty
+}
+external class ParagraphConstraints {
+    construct 
+    get width
+    get hashCode
+    fun toString
+}
+external class LineMetrics {
+    construct 
+    get hardBreak
+    get ascent
+    get descent
+    get unscaledAscent
+    get height
+    get width
+    get left
+    get baseline
+    get lineNumber
+    get hashCode
+    fun toString
+}
+external class ParagraphBuilder {
+    construct 
+    get placeholderCount
+    get placeholderScales
+    fun pushStyle
+    fun pop
+    fun addText
+    fun addPlaceholder
+    fun build
+}

@@ -1,0 +1,138 @@
+external class SawTooth {
+    construct 
+    get count
+    fun transformInternal
+    fun toString
+    fun transform
+    get flipped
+}
+external class Interval {
+    construct 
+    get begin
+    get end
+    get curve
+    fun transformInternal
+    fun toString
+    fun transform
+    get flipped
+}
+external class Threshold {
+    construct 
+    get threshold
+    fun transformInternal
+    fun transform
+    get flipped
+    fun toString
+}
+external class Cubic {
+    construct 
+    get a
+    get b
+    get c
+    get d
+    fun transformInternal
+    fun toString
+    fun transform
+    get flipped
+}
+external class Curve2DSample {
+    construct 
+    get t
+    get value
+    fun toString
+}
+external class CatmullRomSpline {
+    construct 
+    construct precompute
+    fun transformInternal
+    fun generateSamples
+    fun findInverse
+    fun transform
+    fun toString
+}
+external class CatmullRomCurve {
+    construct 
+    construct precompute
+    get controlPoints
+    get tension
+    fun transformInternal
+    fun transform
+    get flipped
+    fun toString
+    static fun validateControlPoints (controlPoints, {tension, reasons})
+}
+external class FlippedCurve {
+    construct 
+    get curve
+    fun transformInternal
+    fun toString
+    fun transform
+    get flipped
+}
+external class ElasticInCurve {
+    construct 
+    get period
+    fun transformInternal
+    fun toString
+    fun transform
+    get flipped
+}
+external class ElasticOutCurve {
+    construct 
+    get period
+    fun transformInternal
+    fun toString
+    fun transform
+    get flipped
+}
+external class ElasticInOutCurve {
+    construct 
+    get period
+    fun transformInternal
+    fun toString
+    fun transform
+    get flipped
+}
+external class Curves {
+    static const linear
+    static const decelerate
+    static const fastLinearToSlowEaseIn
+    static const ease
+    static const easeIn
+    static const easeInToLinear
+    static const easeInSine
+    static const easeInQuad
+    static const easeInCubic
+    static const easeInQuart
+    static const easeInQuint
+    static const easeInExpo
+    static const easeInCirc
+    static const easeInBack
+    static const easeOut
+    static const linearToEaseOut
+    static const easeOutSine
+    static const easeOutQuad
+    static const easeOutCubic
+    static const easeOutQuart
+    static const easeOutQuint
+    static const easeOutExpo
+    static const easeOutCirc
+    static const easeOutBack
+    static const easeInOut
+    static const easeInOutSine
+    static const easeInOutQuad
+    static const easeInOutCubic
+    static const easeInOutQuart
+    static const easeInOutQuint
+    static const easeInOutExpo
+    static const easeInOutCirc
+    static const easeInOutBack
+    static const fastOutSlowIn
+    static const slowMiddle
+    static const bounceIn
+    static const bounceOut
+    static const bounceInOut
+    static const elasticIn
+    static const elasticOut
+    static const elasticInOut
+}

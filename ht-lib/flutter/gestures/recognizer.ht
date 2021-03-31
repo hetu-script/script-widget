@@ -1,0 +1,18 @@
+external class DragStartBehavior {
+    static const down
+    static const start
+}
+external class GestureRecognizerState {
+    static const ready
+    static const possible
+    static const defunct
+}
+external class OffsetPair {
+    construct 
+    construct fromEventPosition
+    construct fromEventDelta
+    get local
+    get global
+    fun toString
+    static const zero
+}

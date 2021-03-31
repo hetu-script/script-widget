@@ -1,0 +1,25 @@
+external class DiagnosticLevel {
+    static const hidden
+    static const fine
+    static const debug
+    static const info
+    static const warning
+    static const hint
+    static const summary
+    static const error
+    static const off
+}
+external class DiagnosticsTreeStyle {
+    static const none
+    static const sparse
+    static const offstage
+    static const dense
+    static const transition
+    static const error
+    static const whitespace
+    static const flat
+    static const singleLine
+    static const errorProperty
+    static const shallow
+    static const truncateChildren
+}

@@ -1,0 +1,6 @@
+external class Priority {
+    static const idle
+    static const animation
+    static const touch
+    static const kMaxOffset
+}

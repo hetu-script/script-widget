@@ -1,0 +1,30 @@
+external class Duration {
+    construct 
+    get inDays
+    get inHours
+    get inMinutes
+    get inSeconds
+    get inMilliseconds
+    get inMicroseconds
+    get hashCode
+    fun compareTo
+    fun toString
+    get isNegative
+    fun abs
+    static const microsecondsPerMillisecond
+    static const millisecondsPerSecond
+    static const secondsPerMinute
+    static const minutesPerHour
+    static const hoursPerDay
+    static const microsecondsPerSecond
+    static const microsecondsPerMinute
+    static const microsecondsPerHour
+    static const microsecondsPerDay
+    static const millisecondsPerMinute
+    static const millisecondsPerHour
+    static const millisecondsPerDay
+    static const secondsPerHour
+    static const secondsPerDay
+    static const minutesPerDay
+    static const zero
+}

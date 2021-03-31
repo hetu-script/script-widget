@@ -1,0 +1,8 @@
+external class Timer {
+    construct 
+    construct periodic
+    fun cancel
+    get tick
+    get isActive
+    static fun run (callback)
+}

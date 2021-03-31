@@ -1,0 +1,29 @@
+external class Theme {
+    construct 
+    get data
+    get child
+    fun build
+    fun debugFillProperties
+    static fun of (context)
+}
+external class ThemeDataTween {
+    construct 
+    var begin
+    var end
+    fun lerp
+    fun transform
+    fun toString
+    fun evaluate
+    fun animate
+    fun chain
+}
+external class AnimatedTheme {
+    construct 
+    get data
+    get child
+    get curve
+    get duration
+    get onEnd
+    fun createState
+    fun debugFillProperties
+}

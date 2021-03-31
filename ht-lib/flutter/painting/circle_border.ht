@@ -1,0 +1,14 @@
+external class CircleBorder {
+    construct 
+    get side
+    get dimensions
+    fun scale
+    fun lerpFrom
+    fun lerpTo
+    fun getInnerPath
+    fun getOuterPath
+    fun copyWith
+    fun paint
+    get hashCode
+    fun toString
+}

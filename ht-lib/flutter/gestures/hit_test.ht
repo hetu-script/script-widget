@@ -1,0 +1,13 @@
+external class HitTestEntry {
+    construct 
+    get target
+    fun toString
+    get transform
+}
+external class HitTestResult {
+    construct 
+    construct wrap
+    get path
+    fun add
+    fun toString
+}

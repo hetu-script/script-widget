@@ -1,0 +1,10 @@
+external class DragAnchor {
+    static const child
+    static const pointer
+}
+external class DraggableDetails {
+    construct 
+    get wasAccepted
+    get velocity
+    get offset
+}

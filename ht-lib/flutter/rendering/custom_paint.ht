@@ -1,0 +1,61 @@
+external class CustomPainterSemantics {
+    construct 
+    get key
+    get rect
+    get transform
+    get properties
+    get tags
+}
+external class RenderCustomPaint {
+    construct 
+    var isComplex
+    var willChange
+    get painter
+    set painter(value)
+    get foregroundPainter
+    set foregroundPainter(value)
+    get preferredSize
+    set preferredSize(value)
+    fun computeMinIntrinsicWidth
+    fun computeMaxIntrinsicWidth
+    fun computeMinIntrinsicHeight
+    fun computeMaxIntrinsicHeight
+    fun attach
+    fun detach
+    fun hitTestChildren
+    fun hitTestSelf
+    fun performLayout
+    fun computeSizeForNoChild
+    fun paint
+    fun describeSemanticsConfiguration
+    fun assembleSemanticsNode
+    fun clearSemantics
+    fun setupParentData
+    fun computeDistanceToActualBaseline
+    fun computeDryLayout
+    fun applyPaintTransform
+    fun getMinIntrinsicWidth
+    fun getMaxIntrinsicWidth
+    fun getMinIntrinsicHeight
+    fun getMaxIntrinsicHeight
+    fun getDryLayout
+    fun debugCannotComputeDryLayout
+    get hasSize
+    get size
+    fun debugAdoptSize
+    get semanticBounds
+    fun debugResetSize
+    fun getDistanceToBaseline
+    get constraints
+    fun debugAssertDoesMeetConstraints
+    fun markNeedsLayout
+    fun performResize
+    fun hitTest
+    fun globalToLocal
+    fun localToGlobal
+    get paintBounds
+    fun handleEvent
+    fun debugHandleEvent
+    fun debugPaint
+    fun debugFillProperties
+}

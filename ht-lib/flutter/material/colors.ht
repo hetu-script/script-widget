@@ -1,0 +1,105 @@
+external class MaterialColor {
+    construct 
+    get value
+    get shade50
+    get shade100
+    get shade200
+    get shade300
+    get shade400
+    get shade500
+    get shade600
+    get shade700
+    get shade800
+    get shade900
+    get hashCode
+    fun toString
+    get alpha
+    get opacity
+    get red
+    get green
+    get blue
+    fun withAlpha
+    fun withOpacity
+    fun withRed
+    fun withGreen
+    fun withBlue
+    fun computeLuminance
+}
+external class MaterialAccentColor {
+    construct 
+    get value
+    get shade50
+    get shade100
+    get shade200
+    get shade400
+    get shade700
+    get hashCode
+    fun toString
+    get alpha
+    get opacity
+    get red
+    get green
+    get blue
+    fun withAlpha
+    fun withOpacity
+    fun withRed
+    fun withGreen
+    fun withBlue
+    fun computeLuminance
+}
+external class Colors {
+    static const transparent
+    static const black
+    static const black87
+    static const black54
+    static const black45
+    static const black38
+    static const black26
+    static const black12
+    static const white
+    static const white70
+    static const white60
+    static const white54
+    static const white38
+    static const white30
+    static const white24
+    static const white12
+    static const white10
+    static const red
+    static const redAccent
+    static const pink
+    static const pinkAccent
+    static const purple
+    static const purpleAccent
+    static const deepPurple
+    static const deepPurpleAccent
+    static const indigo
+    static const indigoAccent
+    static const blue
+    static const blueAccent
+    static const lightBlue
+    static const lightBlueAccent
+    static const cyan
+    static const cyanAccent
+    static const teal
+    static const tealAccent
+    static const green
+    static const greenAccent
+    static const lightGreen
+    static const lightGreenAccent
+    static const lime
+    static const limeAccent
+    static const yellow
+    static const yellowAccent
+    static const amber
+    static const amberAccent
+    static const orange
+    static const orangeAccent
+    static const deepOrange
+    static const deepOrangeAccent
+    static const brown
+    static const grey
+    static const blueGrey
+    static const primaries
+    static const accents
+}

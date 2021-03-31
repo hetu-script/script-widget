@@ -1,0 +1,18 @@
+external class AutomaticKeepAlive {
+    construct 
+    get child
+    fun createState
+}
+external class KeepAliveNotification {
+    construct 
+    get handle
+    fun dispatch
+    fun toString
+}
+external class KeepAliveHandle {
+    construct
+    fun release
+    fun addListener
+    fun removeListener
+    fun dispose
+}

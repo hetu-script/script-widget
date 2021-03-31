@@ -1,0 +1,29 @@
+external class CollapseMode {
+    static const parallax
+    static const pin
+    static const none
+}
+external class StretchMode {
+    static const zoomBackground
+    static const blurBackground
+    static const fadeTitle
+}
+external class FlexibleSpaceBar {
+    construct 
+    get title
+    get background
+    get centerTitle
+    get collapseMode
+    get stretchModes
+    get titlePadding
+    fun createState
+    static fun createSettings ({toolbarOpacity, minExtent, maxExtent, currentExtent, child})
+}
+external class FlexibleSpaceBarSettings {
+    construct 
+    get toolbarOpacity
+    get minExtent
+    get maxExtent
+    get currentExtent
+    fun updateShouldNotify
+}

@@ -1,0 +1,144 @@
+external class ListWheelChildListDelegate {
+    construct 
+    get children
+    get estimatedChildCount
+    fun build
+    fun shouldRebuild
+    fun trueIndexOf
+}
+external class ListWheelChildLoopingListDelegate {
+    construct 
+    get children
+    get estimatedChildCount
+    fun trueIndexOf
+    fun build
+    fun shouldRebuild
+}
+external class ListWheelChildBuilderDelegate {
+    construct 
+    get builder
+    get childCount
+    get estimatedChildCount
+    fun build
+    fun shouldRebuild
+    fun trueIndexOf
+}
+external class FixedExtentScrollController {
+    construct 
+    get initialItem
+    get keepScrollOffset
+    get debugLabel
+    get selectedItem
+    fun animateToItem
+    fun jumpToItem
+    fun createScrollPosition
+    get initialScrollOffset
+    get hasClients
+    get position
+    get offset
+    fun animateTo
+    fun jumpTo
+    fun attach
+    fun detach
+    fun dispose
+    fun toString
+    fun debugFillDescription
+    fun addListener
+    fun removeListener
+}
+external class FixedExtentMetrics {
+    construct 
+    get itemIndex
+    get axisDirection
+    fun copyWith
+    get minScrollExtent
+    get maxScrollExtent
+    get hasContentDimensions
+    get pixels
+    get hasPixels
+    get viewportDimension
+    get hasViewportDimension
+    fun toString
+    get axis
+    get outOfRange
+    get atEdge
+    get extentBefore
+    get extentInside
+    get extentAfter
+}
+external class FixedExtentScrollPhysics {
+    construct 
+    get parent
+    fun applyTo
+    fun createBallisticSimulation
+    fun applyPhysicsToUserOffset
+    fun shouldAcceptUserOffset
+    fun recommendDeferredLoading
+    fun applyBoundaryConditions
+    fun adjustPositionForNewDimensions
+    get spring
+    get tolerance
+    get minFlingDistance
+    get minFlingVelocity
+    get maxFlingVelocity
+    fun carriedMomentum
+    get dragStartDistanceMotionThreshold
+    get allowImplicitScrolling
+    fun toString
+}
+external class ListWheelScrollView {
+    construct 
+    construct useDelegate
+    get controller
+    get physics
+    get diameterRatio
+    get perspective
+    get offAxisFraction
+    get useMagnifier
+    get magnification
+    get overAndUnderCenterOpacity
+    get itemExtent
+    get squeeze
+    get onSelectedItemChanged
+    get renderChildrenOutsideViewport
+    get childDelegate
+    get clipBehavior
+    get restorationId
+    fun createState
+}
+external class ListWheelElement {
+    construct 
+    get widget
+    get renderObject
+    fun update
+    get childCount
+    fun performRebuild
+    fun retrieveWidget
+    fun childExistsAt
+    fun createChild
+    fun removeChild
+    fun updateChild
+    fun insertRenderObjectChild
+    fun moveRenderObjectChild
+    fun removeRenderObjectChild
+    fun visitChildren
+    fun forgetChild
+}
+external class ListWheelViewport {
+    construct 
+    get diameterRatio
+    get perspective
+    get offAxisFraction
+    get useMagnifier
+    get magnification
+    get overAndUnderCenterOpacity
+    get itemExtent
+    get squeeze
+    get renderChildrenOutsideViewport
+    get offset
+    get childDelegate
+    get clipBehavior
+    fun createElement
+    fun createRenderObject
+    fun updateRenderObject
+}

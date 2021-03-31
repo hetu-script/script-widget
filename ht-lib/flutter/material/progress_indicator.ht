@@ -1,0 +1,34 @@
+external class LinearProgressIndicator {
+    construct 
+    get minHeight
+    get value
+    get backgroundColor
+    get valueColor
+    get semanticsLabel
+    get semanticsValue
+    fun createState
+    fun debugFillProperties
+}
+external class CircularProgressIndicator {
+    construct 
+    construct adaptive
+    get strokeWidth
+    get value
+    get backgroundColor
+    get valueColor
+    get semanticsLabel
+    get semanticsValue
+    fun createState
+    fun debugFillProperties
+}
+external class RefreshProgressIndicator {
+    construct 
+    get strokeWidth
+    get value
+    get backgroundColor
+    get valueColor
+    get semanticsLabel
+    get semanticsValue
+    fun createState
+    fun debugFillProperties
+}

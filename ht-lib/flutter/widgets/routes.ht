@@ -1,0 +1,5 @@
+external class LocalHistoryEntry {
+    construct 
+    get onRemove
+    fun remove
+}

@@ -1,0 +1,81 @@
+external class VerticalDragGestureRecognizer {
+    construct 
+    var dragStartBehavior
+    var onDown
+    var onStart
+    var onUpdate
+    var onEnd
+    var onCancel
+    var minFlingDistance
+    var minFlingVelocity
+    var maxFlingVelocity
+    var velocityTrackerBuilder
+    get debugOwner
+    fun isFlingGesture
+    get debugDescription
+    fun isPointerAllowed
+    fun addAllowedPointer
+    fun handleEvent
+    fun acceptGesture
+    fun rejectGesture
+    fun didStopTrackingLastPointer
+    fun dispose
+    fun debugFillProperties
+    fun handleNonAllowedPointer
+    get team
+    fun addPointer
+}
+external class HorizontalDragGestureRecognizer {
+    construct 
+    var dragStartBehavior
+    var onDown
+    var onStart
+    var onUpdate
+    var onEnd
+    var onCancel
+    var minFlingDistance
+    var minFlingVelocity
+    var maxFlingVelocity
+    var velocityTrackerBuilder
+    get debugOwner
+    fun isFlingGesture
+    get debugDescription
+    fun isPointerAllowed
+    fun addAllowedPointer
+    fun handleEvent
+    fun acceptGesture
+    fun rejectGesture
+    fun didStopTrackingLastPointer
+    fun dispose
+    fun debugFillProperties
+    fun handleNonAllowedPointer
+    get team
+    fun addPointer
+}
+external class PanGestureRecognizer {
+    construct 
+    var dragStartBehavior
+    var onDown
+    var onStart
+    var onUpdate
+    var onEnd
+    var onCancel
+    var minFlingDistance
+    var minFlingVelocity
+    var maxFlingVelocity
+    var velocityTrackerBuilder
+    get debugOwner
+    fun isFlingGesture
+    get debugDescription
+    fun isPointerAllowed
+    fun addAllowedPointer
+    fun handleEvent
+    fun acceptGesture
+    fun rejectGesture
+    fun didStopTrackingLastPointer
+    fun dispose
+    fun debugFillProperties
+    fun handleNonAllowedPointer
+    get team
+    fun addPointer
+}

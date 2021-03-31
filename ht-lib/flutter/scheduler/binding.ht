@@ -1,0 +1,7 @@
+external class SchedulerPhase {
+    static const idle
+    static const transientCallbacks
+    static const midFrameMicrotasks
+    static const persistentCallbacks
+    static const postFrameCallbacks
+}

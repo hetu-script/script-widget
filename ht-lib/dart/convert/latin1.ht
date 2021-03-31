@@ -1,0 +1,25 @@
+external class Latin1Codec {
+    construct 
+    get name
+    fun encode
+    fun decode
+    get encoder
+    get decoder
+    fun decodeStream
+}
+external class Latin1Encoder {
+    construct 
+    fun convert
+    fun startChunkedConversion
+    fun bind
+    fun fuse
+    fun cast
+}
+external class Latin1Decoder {
+    construct 
+    fun startChunkedConversion
+    fun convert
+    fun bind
+    fun fuse
+    fun cast
+}

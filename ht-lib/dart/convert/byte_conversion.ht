@@ -1,0 +1,7 @@
+external class ByteConversionSink {
+    construct withCallback
+    construct from
+    fun addSlice
+    fun add
+    fun close
+}

@@ -1,0 +1,291 @@
+external class BlendMode {
+    static const clear
+    static const src
+    static const dst
+    static const srcOver
+    static const dstOver
+    static const srcIn
+    static const dstIn
+    static const srcOut
+    static const dstOut
+    static const srcATop
+    static const dstATop
+    static const xor
+    static const plus
+    static const modulate
+    static const screen
+    static const overlay
+    static const darken
+    static const lighten
+    static const colorDodge
+    static const colorBurn
+    static const hardLight
+    static const softLight
+    static const difference
+    static const exclusion
+    static const multiply
+    static const hue
+    static const saturation
+    static const color
+    static const luminosity
+}
+external class FilterQuality {
+    static const none
+    static const low
+    static const medium
+    static const high
+}
+external class StrokeCap {
+    static const butt
+    static const round
+    static const square
+}
+external class StrokeJoin {
+    static const miter
+    static const round
+    static const bevel
+}
+external class PaintingStyle {
+    static const fill
+    static const stroke
+}
+external class Clip {
+    static const none
+    static const hardEdge
+    static const antiAlias
+    static const antiAliasWithSaveLayer
+}
+external class ImageByteFormat {
+    static const rawRgba
+    static const rawUnmodified
+    static const png
+}
+external class PixelFormat {
+    static const rgba8888
+    static const bgra8888
+}
+external class PathFillType {
+    static const nonZero
+    static const evenOdd
+}
+external class PathOperation {
+    static const difference
+    static const intersect
+    static const union
+    static const xor
+    static const reverseDifference
+}
+external class BlurStyle {
+    static const normal
+    static const solid
+    static const outer
+    static const inner
+}
+external class TileMode {
+    static const clamp
+    static const repeated
+    static const mirror
+    static const decal
+}
+external class VertexMode {
+    static const triangles
+    static const triangleStrip
+    static const triangleFan
+}
+external class PointMode {
+    static const points
+    static const lines
+    static const polygon
+}
+external class ClipOp {
+    static const difference
+    static const intersect
+}
+external class Color {
+    construct 
+    construct fromARGB
+    construct fromRGBO
+    get value
+    get alpha
+    get opacity
+    get red
+    get green
+    get blue
+    fun withAlpha
+    fun withOpacity
+    fun withRed
+    fun withGreen
+    fun withBlue
+    fun computeLuminance
+    get hashCode
+    fun toString
+    static fun lerp (a, b, t)
+    static fun alphaBlend (foreground, background)
+    static fun getAlphaFromOpacity (opacity)
+}
+external class Paint {
+    construct 
+    get isAntiAlias
+    set isAntiAlias(value)
+    get color
+    set color(value)
+    get blendMode
+    set blendMode(value)
+    get style
+    set style(value)
+    get strokeWidth
+    set strokeWidth(value)
+    get strokeCap
+    set strokeCap(value)
+    get strokeJoin
+    set strokeJoin(value)
+    get strokeMiterLimit
+    set strokeMiterLimit(value)
+    get maskFilter
+    set maskFilter(value)
+    get filterQuality
+    set filterQuality(value)
+    get shader
+    set shader(value)
+    get colorFilter
+    set colorFilter(value)
+    get imageFilter
+    set imageFilter(value)
+    get invertColors
+    set invertColors(value)
+    fun toString
+    static var enableDithering
+}
+external class Path {
+    construct 
+    construct from
+    get fillType
+    set fillType(value)
+    fun moveTo
+    fun relativeMoveTo
+    fun lineTo
+    fun relativeLineTo
+    fun quadraticBezierTo
+    fun relativeQuadraticBezierTo
+    fun cubicTo
+    fun relativeCubicTo
+    fun conicTo
+    fun relativeConicTo
+    fun arcTo
+    fun arcToPoint
+    fun relativeArcToPoint
+    fun addRect
+    fun addOval
+    fun addArc
+    fun addPolygon
+    fun addRRect
+    fun addPath
+    fun extendWithPath
+    fun close
+    fun reset
+    fun contains
+    fun shift
+    fun transform
+    fun getBounds
+    fun computeMetrics
+    static fun combine (operation, path1, path2)
+}
+external class Tangent {
+    construct 
+    construct fromAngle
+    get position
+    get vector
+    get angle
+}
+external class MaskFilter {
+    construct blur
+    get hashCode
+    fun toString
+}
+external class ColorFilter {
+    construct mode
+    construct matrix
+    construct linearToSrgbGamma
+    construct srgbToLinearGamma
+    get hashCode
+    fun toString
+}
+external class ImageFilter {
+    construct blur
+    construct matrix
+    construct compose
+}
+external class ImageShader {
+    construct 
+}
+external class Vertices {
+    construct 
+    construct raw
+}
+external class Canvas {
+    construct 
+    fun save
+    fun saveLayer
+    fun restore
+    fun getSaveCount
+    fun translate
+    fun scale
+    fun rotate
+    fun skew
+    fun transform
+    fun clipRect
+    fun clipRRect
+    fun clipPath
+    fun drawColor
+    fun drawLine
+    fun drawPaint
+    fun drawRect
+    fun drawRRect
+    fun drawDRRect
+    fun drawOval
+    fun drawCircle
+    fun drawArc
+    fun drawPath
+    fun drawImage
+    fun drawImageRect
+    fun drawImageNine
+    fun drawPicture
+    fun drawParagraph
+    fun drawPoints
+    fun drawRawPoints
+    fun drawVertices
+    fun drawAtlas
+    fun drawRawAtlas
+    fun drawShadow
+}
+external class PictureRecorder {
+    construct 
+    get isRecording
+    fun endRecording
+}
+external class Shadow {
+    construct 
+    get color
+    get offset
+    get blurRadius
+    get blurSigma
+    fun toPaint
+    fun scale
+    get hashCode
+    fun toString
+    static fun convertRadiusToSigma (radius)
+    static fun lerp (a, b, t)
+    static fun lerpList (a, b, t)
+}
+external class ImmutableBuffer {
+    static fun fromUint8List (list)
+}
+external class ImageDescriptor {
+    construct raw
+    get width
+    get height
+    get bytesPerPixel
+    fun dispose
+    fun instantiateCodec
+    static fun encoded (buffer)
+}

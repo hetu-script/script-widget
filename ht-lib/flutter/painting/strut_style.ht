@@ -1,0 +1,19 @@
+external class StrutStyle {
+    construct 
+    construct fromTextStyle
+    get fontFamily
+    get fontSize
+    get height
+    get fontWeight
+    get fontStyle
+    get leading
+    get forceStrutHeight
+    get debugLabel
+    get fontFamilyFallback
+    fun compareTo
+    fun inheritFromTextStyle
+    get hashCode
+    fun toStringShort
+    fun debugFillProperties
+    static const disabled
+}

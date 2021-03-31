@@ -1,0 +1,12 @@
+external class PageStorageBucket {
+    construct
+    fun writeState
+    fun readState
+}
+external class PageStorage {
+    construct 
+    get child
+    get bucket
+    fun build
+    static fun of (context)
+}

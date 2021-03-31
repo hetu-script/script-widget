@@ -1,0 +1,53 @@
+external class ImageInfo {
+    construct 
+    get image
+    get scale
+    get debugLabel
+    fun clone
+    fun isCloneOf
+    fun dispose
+    fun toString
+    get hashCode
+}
+external class ImageStreamListener {
+    construct 
+    get onImage
+    get onChunk
+    get onError
+    get hashCode
+}
+external class ImageChunkEvent {
+    construct 
+    get cumulativeBytesLoaded
+    get expectedTotalBytes
+    fun debugFillProperties
+}
+external class ImageStream {
+    construct 
+    get completer
+    fun setCompleter
+    fun addListener
+    fun removeListener
+    get key
+    fun debugFillProperties
+}
+external class OneFrameImageStreamCompleter {
+    construct 
+    var debugLabel
+    fun addListener
+    fun keepAlive
+    fun removeListener
+    fun addOnLastListenerRemovedCallback
+    fun removeOnLastListenerRemovedCallback
+    fun debugFillProperties
+}
+external class MultiFrameImageStreamCompleter {
+    construct 
+    var debugLabel
+    fun addListener
+    fun removeListener
+    fun keepAlive
+    fun addOnLastListenerRemovedCallback
+    fun removeOnLastListenerRemovedCallback
+    fun debugFillProperties
+}

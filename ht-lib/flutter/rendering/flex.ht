@@ -1,0 +1,93 @@
+external class FlexFit {
+    static const tight
+    static const loose
+}
+external class MainAxisSize {
+    static const min
+    static const max
+}
+external class MainAxisAlignment {
+    static const start
+    static const end
+    static const center
+    static const spaceBetween
+    static const spaceAround
+    static const spaceEvenly
+}
+external class CrossAxisAlignment {
+    static const start
+    static const end
+    static const center
+    static const stretch
+    static const baseline
+}
+external class FlexParentData {
+    construct
+    var flex
+    var fit
+    var offset
+    fun toString
+}
+external class RenderFlex {
+    construct 
+    get direction
+    set direction(value)
+    get mainAxisAlignment
+    set mainAxisAlignment(value)
+    get mainAxisSize
+    set mainAxisSize(value)
+    get crossAxisAlignment
+    set crossAxisAlignment(value)
+    get textDirection
+    set textDirection(value)
+    get verticalDirection
+    set verticalDirection(value)
+    get textBaseline
+    set textBaseline(value)
+    get clipBehavior
+    set clipBehavior(value)
+    fun setupParentData
+    fun computeMinIntrinsicWidth
+    fun computeMaxIntrinsicWidth
+    fun computeMinIntrinsicHeight
+    fun computeMaxIntrinsicHeight
+    fun computeDistanceToActualBaseline
+    fun computeDryLayout
+    fun performLayout
+    fun hitTestChildren
+    fun paint
+    fun describeApproximatePaintClip
+    fun toStringShort
+    fun debugFillProperties
+    fun defaultComputeDistanceToFirstActualBaseline
+    fun defaultComputeDistanceToHighestActualBaseline
+    fun defaultHitTestChildren
+    fun defaultPaint
+    fun getChildrenAsList
+    fun paintOverflowIndicator
+    fun reassemble
+    fun getMinIntrinsicWidth
+    fun getMaxIntrinsicWidth
+    fun getMinIntrinsicHeight
+    fun getMaxIntrinsicHeight
+    fun getDryLayout
+    fun debugCannotComputeDryLayout
+    get hasSize
+    get size
+    fun debugAdoptSize
+    get semanticBounds
+    fun debugResetSize
+    fun getDistanceToBaseline
+    get constraints
+    fun debugAssertDoesMeetConstraints
+    fun markNeedsLayout
+    fun performResize
+    fun hitTest
+    fun applyPaintTransform
+    fun globalToLocal
+    fun localToGlobal
+    get paintBounds
+    fun handleEvent
+    fun debugHandleEvent
+    fun debugPaint
+}

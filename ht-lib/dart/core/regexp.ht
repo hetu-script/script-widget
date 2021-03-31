@@ -1,0 +1,13 @@
+external class RegExp {
+    construct 
+    fun firstMatch
+    fun allMatches
+    fun hasMatch
+    fun stringMatch
+    get pattern
+    get isMultiLine
+    get isCaseSensitive
+    get isUnicode
+    get isDotAll
+    static fun escape (text)
+}

@@ -1,0 +1,22 @@
+external class Directory {
+    construct 
+    construct fromRawPath
+    construct fromUri
+    get path
+    get uri
+    fun create
+    fun createSync
+    fun createTemp
+    fun createTempSync
+    fun resolveSymbolicLinks
+    fun resolveSymbolicLinksSync
+    fun rename
+    fun renameSync
+    get absolute
+    fun list
+    fun listSync
+    fun toString
+    static get current
+    static set current (path)
+    static get systemTemp
+}

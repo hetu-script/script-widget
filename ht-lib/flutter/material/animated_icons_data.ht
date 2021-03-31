@@ -1,0 +1,16 @@
+external class AnimatedIcons {
+    static const add_event
+    static const arrow_menu
+    static const close_menu
+    static const ellipsis_search
+    static const event_add
+    static const home_menu
+    static const list_view
+    static const menu_arrow
+    static const menu_close
+    static const menu_home
+    static const pause_play
+    static const play_pause
+    static const search_ellipsis
+    static const view_list
+}

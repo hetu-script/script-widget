@@ -1,0 +1,19 @@
+external class BorderStyle {
+    static const none
+    static const solid
+}
+external class BorderSide {
+    construct 
+    get color
+    get width
+    get style
+    fun copyWith
+    fun scale
+    fun toPaint
+    get hashCode
+    fun toString
+    static fun merge (a, b)
+    static fun canMerge (a, b)
+    static fun lerp (a, b, t)
+    static const none
+}

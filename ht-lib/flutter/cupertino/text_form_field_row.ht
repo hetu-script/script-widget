@@ -1,0 +1,13 @@
+external class CupertinoTextFormFieldRow {
+    construct 
+    get prefix
+    get padding
+    get controller
+    get onSaved
+    get validator
+    get builder
+    get initialValue
+    get enabled
+    get autovalidateMode
+    fun createState
+}

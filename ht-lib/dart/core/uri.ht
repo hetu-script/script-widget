@@ -1,0 +1,66 @@
+external class Uri {
+    construct 
+    construct http
+    construct https
+    construct file
+    construct directory
+    construct dataFromString
+    construct dataFromBytes
+    get scheme
+    get authority
+    get userInfo
+    get host
+    get port
+    get path
+    get query
+    get fragment
+    get pathSegments
+    get queryParameters
+    get queryParametersAll
+    get isAbsolute
+    get hasScheme
+    get hasAuthority
+    get hasPort
+    get hasQuery
+    get hasFragment
+    get hasEmptyPath
+    get hasAbsolutePath
+    get origin
+    fun isScheme
+    fun toFilePath
+    get data
+    get hashCode
+    fun toString
+    fun replace
+    fun removeFragment
+    fun resolve
+    fun resolveUri
+    fun normalizePath
+    static get base
+    static fun parse (uri, start, end)
+    static fun tryParse (uri, start, end)
+    static fun encodeComponent (component)
+    static fun encodeQueryComponent (component, {encoding})
+    static fun decodeComponent (encodedComponent)
+    static fun decodeQueryComponent (encodedComponent, {encoding})
+    static fun encodeFull (uri)
+    static fun decodeFull (uri)
+    static fun splitQueryString (query, {encoding})
+    static fun parseIPv4Address (host)
+    static fun parseIPv6Address (host, start, end)
+}
+external class UriData {
+    construct fromString
+    construct fromBytes
+    construct fromUri
+    get uri
+    get mimeType
+    get charset
+    get isBase64
+    get contentText
+    fun contentAsBytes
+    fun contentAsString
+    get parameters
+    fun toString
+    static fun parse (uri)
+}

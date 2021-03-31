@@ -1,0 +1,11 @@
+external class CupertinoUserInterfaceLevelData {
+    static const base
+    static const elevated
+}
+external class CupertinoUserInterfaceLevel {
+    construct 
+    fun updateShouldNotify
+    fun debugFillProperties
+    static fun of (context)
+    static fun maybeOf (context)
+}

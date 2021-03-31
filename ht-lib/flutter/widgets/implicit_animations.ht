@@ -1,0 +1,214 @@
+external class BoxConstraintsTween {
+    construct 
+    var begin
+    var end
+    fun lerp
+    fun transform
+    fun toString
+    fun evaluate
+    fun animate
+    fun chain
+}
+external class DecorationTween {
+    construct 
+    var begin
+    var end
+    fun lerp
+    fun transform
+    fun toString
+    fun evaluate
+    fun animate
+    fun chain
+}
+external class EdgeInsetsTween {
+    construct 
+    var begin
+    var end
+    fun lerp
+    fun transform
+    fun toString
+    fun evaluate
+    fun animate
+    fun chain
+}
+external class EdgeInsetsGeometryTween {
+    construct 
+    var begin
+    var end
+    fun lerp
+    fun transform
+    fun toString
+    fun evaluate
+    fun animate
+    fun chain
+}
+external class BorderRadiusTween {
+    construct 
+    var begin
+    var end
+    fun lerp
+    fun transform
+    fun toString
+    fun evaluate
+    fun animate
+    fun chain
+}
+external class BorderTween {
+    construct 
+    var begin
+    var end
+    fun lerp
+    fun transform
+    fun toString
+    fun evaluate
+    fun animate
+    fun chain
+}
+external class Matrix4Tween {
+    construct 
+    var begin
+    var end
+    fun lerp
+    fun transform
+    fun toString
+    fun evaluate
+    fun animate
+    fun chain
+}
+external class TextStyleTween {
+    construct 
+    var begin
+    var end
+    fun lerp
+    fun transform
+    fun toString
+    fun evaluate
+    fun animate
+    fun chain
+}
+external class AnimatedContainer {
+    construct 
+    get child
+    get alignment
+    get padding
+    get decoration
+    get foregroundDecoration
+    get constraints
+    get margin
+    get transform
+    get transformAlignment
+    get clipBehavior
+    get curve
+    get duration
+    get onEnd
+    fun createState
+    fun debugFillProperties
+}
+external class AnimatedPadding {
+    construct 
+    get padding
+    get child
+    get curve
+    get duration
+    get onEnd
+    fun createState
+    fun debugFillProperties
+}
+external class AnimatedAlign {
+    construct 
+    get alignment
+    get child
+    get heightFactor
+    get widthFactor
+    get curve
+    get duration
+    get onEnd
+    fun createState
+    fun debugFillProperties
+}
+external class AnimatedPositioned {
+    construct 
+    construct fromRect
+    get child
+    get left
+    get top
+    get right
+    get bottom
+    get width
+    get height
+    get curve
+    get duration
+    get onEnd
+    fun createState
+    fun debugFillProperties
+}
+external class AnimatedPositionedDirectional {
+    construct 
+    get child
+    get start
+    get top
+    get end
+    get bottom
+    get width
+    get height
+    get curve
+    get duration
+    get onEnd
+    fun createState
+    fun debugFillProperties
+}
+external class AnimatedOpacity {
+    construct 
+    get child
+    get opacity
+    get alwaysIncludeSemantics
+    get curve
+    get duration
+    get onEnd
+    fun createState
+    fun debugFillProperties
+}
+external class SliverAnimatedOpacity {
+    construct 
+    get sliver
+    get opacity
+    get alwaysIncludeSemantics
+    get curve
+    get duration
+    get onEnd
+    fun createState
+    fun debugFillProperties
+}
+external class AnimatedDefaultTextStyle {
+    construct 
+    get child
+    get style
+    get textAlign
+    get softWrap
+    get overflow
+    get maxLines
+    get textWidthBasis
+    get textHeightBehavior
+    get curve
+    get duration
+    get onEnd
+    fun createState
+    fun debugFillProperties
+}
+external class AnimatedPhysicalModel {
+    construct 
+    get child
+    get shape
+    get clipBehavior
+    get borderRadius
+    get elevation
+    get color
+    get animateColor
+    get shadowColor
+    get animateShadowColor
+    get curve
+    get duration
+    get onEnd
+    fun createState
+    fun debugFillProperties
+}

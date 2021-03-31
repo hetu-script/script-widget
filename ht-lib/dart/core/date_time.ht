@@ -1,0 +1,56 @@
+external class DateTime {
+    construct 
+    construct utc
+    construct now
+    construct fromMillisecondsSinceEpoch
+    construct fromMicrosecondsSinceEpoch
+    get isUtc
+    fun isBefore
+    fun isAfter
+    fun isAtSameMomentAs
+    fun compareTo
+    get hashCode
+    fun toLocal
+    fun toUtc
+    fun toString
+    fun toIso8601String
+    fun add
+    fun subtract
+    fun difference
+    get millisecondsSinceEpoch
+    get microsecondsSinceEpoch
+    get timeZoneName
+    get timeZoneOffset
+    get year
+    get month
+    get day
+    get hour
+    get minute
+    get second
+    get millisecond
+    get microsecond
+    get weekday
+    static fun parse (formattedString)
+    static fun tryParse (formattedString)
+    static const monday
+    static const tuesday
+    static const wednesday
+    static const thursday
+    static const friday
+    static const saturday
+    static const sunday
+    static const daysPerWeek
+    static const january
+    static const february
+    static const march
+    static const april
+    static const may
+    static const june
+    static const july
+    static const august
+    static const september
+    static const october
+    static const november
+    static const december
+    static const monthsPerYear
+}

@@ -1,0 +1,53 @@
+external class ImmediateMultiDragGestureRecognizer {
+    construct 
+    var onStart
+    get debugOwner
+    fun createNewPointerState
+    get debugDescription
+    fun addAllowedPointer
+    fun acceptGesture
+    fun rejectGesture
+    fun dispose
+    fun addPointer
+    fun debugFillProperties
+}
+external class HorizontalMultiDragGestureRecognizer {
+    construct 
+    var onStart
+    get debugOwner
+    fun createNewPointerState
+    get debugDescription
+    fun addAllowedPointer
+    fun acceptGesture
+    fun rejectGesture
+    fun dispose
+    fun addPointer
+    fun debugFillProperties
+}
+external class VerticalMultiDragGestureRecognizer {
+    construct 
+    var onStart
+    get debugOwner
+    fun createNewPointerState
+    get debugDescription
+    fun addAllowedPointer
+    fun acceptGesture
+    fun rejectGesture
+    fun dispose
+    fun addPointer
+    fun debugFillProperties
+}
+external class DelayedMultiDragGestureRecognizer {
+    construct 
+    get delay
+    var onStart
+    get debugOwner
+    fun createNewPointerState
+    get debugDescription
+    fun addAllowedPointer
+    fun acceptGesture
+    fun rejectGesture
+    fun dispose
+    fun addPointer
+    fun debugFillProperties
+}

@@ -1,0 +1,20 @@
+external class RenderComparison {
+    static const identical
+    static const metadata
+    static const paint
+    static const layout
+}
+external class Axis {
+    static const horizontal
+    static const vertical
+}
+external class VerticalDirection {
+    static const up
+    static const down
+}
+external class AxisDirection {
+    static const up
+    static const right
+    static const down
+    static const left
+}

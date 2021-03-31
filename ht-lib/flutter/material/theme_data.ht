@@ -1,0 +1,123 @@
+external class MaterialTapTargetSize {
+    static const padded
+    static const shrinkWrap
+}
+external class ThemeData {
+    construct 
+    construct raw
+    construct from
+    construct light
+    construct dark
+    construct fallback
+    get visualDensity
+    get primaryColor
+    get primaryColorBrightness
+    get primaryColorLight
+    get primaryColorDark
+    get canvasColor
+    get shadowColor
+    get accentColor
+    get accentColorBrightness
+    get scaffoldBackgroundColor
+    get bottomAppBarColor
+    get cardColor
+    get dividerColor
+    get focusColor
+    get hoverColor
+    get highlightColor
+    get splashColor
+    get splashFactory
+    get selectedRowColor
+    get unselectedWidgetColor
+    get disabledColor
+    get buttonTheme
+    get toggleButtonsTheme
+    get buttonColor
+    get secondaryHeaderColor
+    get backgroundColor
+    get dialogBackgroundColor
+    get indicatorColor
+    get hintColor
+    get errorColor
+    get toggleableActiveColor
+    get textTheme
+    get primaryTextTheme
+    get accentTextTheme
+    get inputDecorationTheme
+    get iconTheme
+    get primaryIconTheme
+    get accentIconTheme
+    get sliderTheme
+    get tabBarTheme
+    get tooltipTheme
+    get cardTheme
+    get chipTheme
+    get platform
+    get materialTapTargetSize
+    get applyElevationOverlayColor
+    get pageTransitionsTheme
+    get appBarTheme
+    get scrollbarTheme
+    get bottomAppBarTheme
+    get colorScheme
+    get snackBarTheme
+    get dialogTheme
+    get floatingActionButtonTheme
+    get navigationRailTheme
+    get typography
+    get cupertinoOverrideTheme
+    get bottomSheetTheme
+    get popupMenuTheme
+    get bannerTheme
+    get dividerTheme
+    get buttonBarTheme
+    get bottomNavigationBarTheme
+    get timePickerTheme
+    get textButtonTheme
+    get elevatedButtonTheme
+    get outlinedButtonTheme
+    get textSelectionTheme
+    get dataTableTheme
+    get checkboxTheme
+    get radioTheme
+    get switchTheme
+    get fixTextFieldOutlineLabel
+    get brightness
+    fun copyWith
+    get hashCode
+    fun debugFillProperties
+    static fun localize (baseTheme, localTextGeometry)
+    static fun estimateBrightnessForColor (color)
+    static fun lerp (a, b, t)
+}
+external class MaterialBasedCupertinoThemeData {
+    construct 
+    get brightness
+    get primaryColor
+    get primaryContrastingColor
+    get scaffoldBackgroundColor
+    fun copyWith
+    fun resolveFrom
+    get textTheme
+    get barBackgroundColor
+    fun noDefault
+    fun debugFillProperties
+}
+external class VisualDensity {
+    construct 
+    get horizontal
+    get vertical
+    fun copyWith
+    get baseSizeAdjustment
+    fun effectiveConstraints
+    get hashCode
+    fun debugFillProperties
+    fun toStringShort
+    static get adaptivePlatformDensity
+    static fun lerp (a, b, t)
+    static const minimumDensity
+    static const maximumDensity
+    static const standard
+    static const comfortable
+    static const compact
+}

@@ -1,0 +1,76 @@
+external class CupertinoColors {
+    static const activeBlue
+    static const activeGreen
+    static const activeOrange
+    static const white
+    static const black
+    static const lightBackgroundGray
+    static const extraLightBackgroundGray
+    static const darkBackgroundGray
+    static const inactiveGray
+    static const destructiveRed
+    static const systemBlue
+    static const systemGreen
+    static const systemIndigo
+    static const systemOrange
+    static const systemPink
+    static const systemPurple
+    static const systemRed
+    static const systemTeal
+    static const systemYellow
+    static const systemGrey
+    static const systemGrey2
+    static const systemGrey3
+    static const systemGrey4
+    static const systemGrey5
+    static const systemGrey6
+    static const label
+    static const secondaryLabel
+    static const tertiaryLabel
+    static const quaternaryLabel
+    static const systemFill
+    static const secondarySystemFill
+    static const tertiarySystemFill
+    static const quaternarySystemFill
+    static const placeholderText
+    static const systemBackground
+    static const secondarySystemBackground
+    static const tertiarySystemBackground
+    static const systemGroupedBackground
+    static const secondarySystemGroupedBackground
+    static const tertiarySystemGroupedBackground
+    static const separator
+    static const opaqueSeparator
+    static const link
+}
+external class CupertinoDynamicColor {
+    construct 
+    construct withBrightnessAndContrast
+    construct withBrightness
+    get color
+    get darkColor
+    get highContrastColor
+    get darkHighContrastColor
+    get elevatedColor
+    get darkElevatedColor
+    get highContrastElevatedColor
+    get darkHighContrastElevatedColor
+    get value
+    fun resolveFrom
+    get hashCode
+    fun toString
+    fun debugFillProperties
+    get alpha
+    get opacity
+    get red
+    get green
+    get blue
+    fun withAlpha
+    fun withOpacity
+    fun withRed
+    fun withGreen
+    fun withBlue
+    fun computeLuminance
+    static fun resolve (resolvable, context)
+    static fun maybeResolve (resolvable, context)
+}

@@ -1,0 +1,56 @@
+external class FlowParentData {
+    construct
+    var offset
+    fun toString
+}
+external class RenderFlow {
+    construct 
+    fun setupParentData
+    get delegate
+    set delegate(value)
+    get clipBehavior
+    set clipBehavior(value)
+    fun attach
+    fun detach
+    get isRepaintBoundary
+    fun computeMinIntrinsicWidth
+    fun computeMaxIntrinsicWidth
+    fun computeMinIntrinsicHeight
+    fun computeMaxIntrinsicHeight
+    fun computeDryLayout
+    fun performLayout
+    fun getChildSize
+    fun paintChild
+    fun paint
+    fun hitTestChildren
+    fun applyPaintTransform
+    fun defaultComputeDistanceToFirstActualBaseline
+    fun defaultComputeDistanceToHighestActualBaseline
+    fun defaultHitTestChildren
+    fun defaultPaint
+    fun getChildrenAsList
+    fun getMinIntrinsicWidth
+    fun getMaxIntrinsicWidth
+    fun getMinIntrinsicHeight
+    fun getMaxIntrinsicHeight
+    fun getDryLayout
+    fun debugCannotComputeDryLayout
+    get hasSize
+    get size
+    fun debugAdoptSize
+    get semanticBounds
+    fun debugResetSize
+    fun getDistanceToBaseline
+    get constraints
+    fun debugAssertDoesMeetConstraints
+    fun markNeedsLayout
+    fun performResize
+    fun hitTest
+    fun globalToLocal
+    fun localToGlobal
+    get paintBounds
+    fun handleEvent
+    fun debugHandleEvent
+    fun debugPaint
+    fun debugFillProperties
+}

@@ -1,0 +1,28 @@
+external class ForcePressDetails {
+    construct 
+    get globalPosition
+    get localPosition
+    get pressure
+}
+external class ForcePressGestureRecognizer {
+    construct 
+    var onStart
+    var onUpdate
+    var onPeak
+    var onEnd
+    get startPressure
+    get peakPressure
+    get interpolation
+    get debugOwner
+    fun addAllowedPointer
+    fun handleEvent
+    fun acceptGesture
+    fun didStopTrackingLastPointer
+    fun rejectGesture
+    get debugDescription
+    fun handleNonAllowedPointer
+    fun dispose
+    get team
+    fun addPointer
+    fun debugFillProperties
+}

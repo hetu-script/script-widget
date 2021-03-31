@@ -1,0 +1,34 @@
+external class RenderSliverPadding {
+    construct 
+    get resolvedPadding
+    get padding
+    set padding(value)
+    get textDirection
+    set textDirection(value)
+    fun performLayout
+    fun debugFillProperties
+    get beforePadding
+    get afterPadding
+    get mainAxisPadding
+    get crossAxisPadding
+    fun setupParentData
+    fun hitTestChildren
+    fun childMainAxisPosition
+    fun childCrossAxisPosition
+    fun childScrollOffset
+    fun applyPaintTransform
+    fun paint
+    fun debugPaint
+    get constraints
+    get geometry
+    get semanticBounds
+    get paintBounds
+    fun debugResetSize
+    fun debugAssertDoesMeetConstraints
+    fun performResize
+    get centerOffsetAdjustment
+    fun hitTest
+    fun calculatePaintOffset
+    fun calculateCacheOffset
+    fun handleEvent
+}

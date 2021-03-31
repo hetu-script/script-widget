@@ -1,0 +1,31 @@
+external class StepState {
+    static const indexed
+    static const editing
+    static const complete
+    static const disabled
+    static const error
+}
+external class StepperType {
+    static const vertical
+    static const horizontal
+}
+external class Step {
+    construct 
+    get title
+    get subtitle
+    get content
+    get state
+    get isActive
+}
+external class Stepper {
+    construct 
+    get steps
+    get physics
+    get type
+    get currentStep
+    get onStepTapped
+    get onStepContinue
+    get onStepCancel
+    get controlsBuilder
+    fun createState
+}

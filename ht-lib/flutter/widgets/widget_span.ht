@@ -1,0 +1,22 @@
+external class WidgetSpan {
+    construct 
+    get child
+    get alignment
+    get baseline
+    get style
+    fun build
+    fun visitChildren
+    fun getSpanForPositionVisitor
+    fun codeUnitAtVisitor
+    fun compareTo
+    get hashCode
+    fun getSpanForPosition
+    fun debugAssertIsValid
+    fun computeToPlainText
+    fun computeSemanticsInformation
+    fun describeSemantics
+    fun debugFillProperties
+    fun toPlainText
+    fun getSemanticsInformation
+    fun codeUnitAt
+}

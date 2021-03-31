@@ -1,0 +1,70 @@
+external class ProcessInfo {
+    construct
+    static get currentRss
+    static get maxRss
+}
+external class ProcessStartMode {
+    static get values
+    static const normal
+    static const inheritStdio
+    static const detached
+    static const detachedWithStdio
+}
+external class Process {
+    static fun start (executable, arguments, {workingDirectory, environment, includeParentEnvironment, runInShell, mode})
+    static fun run (executable, arguments, {workingDirectory, environment, includeParentEnvironment, runInShell, stdoutEncoding, stderrEncoding})
+    static fun runSync (executable, arguments, {workingDirectory, environment, includeParentEnvironment, runInShell, stdoutEncoding, stderrEncoding})
+    static fun killPid (pid, signal)
+}
+external class ProcessResult {
+    construct 
+    get exitCode
+    get stdout
+    get stderr
+    get pid
+}
+external class ProcessSignal {
+    static const sighup
+    static const sigint
+    static const sigquit
+    static const sigill
+    static const sigtrap
+    static const sigabrt
+    static const sigbus
+    static const sigfpe
+    static const sigkill
+    static const sigusr1
+    static const sigsegv
+    static const sigusr2
+    static const sigpipe
+    static const sigalrm
+    static const sigterm
+    static const sigchld
+    static const sigcont
+    static const sigstop
+    static const sigtstp
+    static const sigttin
+    static const sigttou
+    static const sigurg
+    static const sigxcpu
+    static const sigxfsz
+    static const sigvtalrm
+    static const sigprof
+    static const sigwinch
+    static const sigpoll
+    static const sigsys
+}
+external class SignalException {
+    construct 
+    get message
+    get osError
+    fun toString
+}
+external class ProcessException {
+    construct 
+    get executable
+    get arguments
+    get message
+    get errorCode
+    fun toString
+}

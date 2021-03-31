@@ -1,0 +1,40 @@
+external class MaterialPointArcTween {
+    construct 
+    get center
+    get radius
+    get beginAngle
+    get endAngle
+    set begin(value)
+    set end(value)
+    fun lerp
+    fun toString
+    fun transform
+    fun evaluate
+    fun animate
+    fun chain
+}
+external class MaterialRectArcTween {
+    construct 
+    get beginArc
+    get endArc
+    set begin(value)
+    set end(value)
+    fun lerp
+    fun toString
+    fun transform
+    fun evaluate
+    fun animate
+    fun chain
+}
+external class MaterialRectCenterArcTween {
+    construct 
+    get centerArc
+    set begin(value)
+    set end(value)
+    fun lerp
+    fun toString
+    fun transform
+    fun evaluate
+    fun animate
+    fun chain
+}

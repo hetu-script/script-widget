@@ -1,0 +1,6 @@
+external class ConnectionState {
+    static const none
+    static const waiting
+    static const active
+    static const done
+}

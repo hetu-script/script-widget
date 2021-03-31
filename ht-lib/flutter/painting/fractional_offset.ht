@@ -1,0 +1,27 @@
+external class FractionalOffset {
+    construct 
+    construct fromOffsetAndSize
+    construct fromOffsetAndRect
+    get x
+    get y
+    get dx
+    get dy
+    fun toString
+    fun add
+    fun alongOffset
+    fun alongSize
+    fun withinRect
+    fun inscribe
+    fun resolve
+    get hashCode
+    static fun lerp (a, b, t)
+    static const topLeft
+    static const topCenter
+    static const topRight
+    static const centerLeft
+    static const center
+    static const centerRight
+    static const bottomLeft
+    static const bottomCenter
+    static const bottomRight
+}

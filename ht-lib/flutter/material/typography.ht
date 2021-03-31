@@ -1,0 +1,35 @@
+external class ScriptCategory {
+    static const englishLike
+    static const dense
+    static const tall
+}
+external class Typography {
+    construct material2014
+    construct material2018
+    get black
+    get white
+    get englishLike
+    get dense
+    get tall
+    fun geometryThemeFor
+    fun copyWith
+    get hashCode
+    fun debugFillProperties
+    static fun lerp (a, b, t)
+    static const blackMountainView
+    static const whiteMountainView
+    static const blackRedmond
+    static const whiteRedmond
+    static const blackHelsinki
+    static const whiteHelsinki
+    static const blackCupertino
+    static const whiteCupertino
+    static const blackRedwoodCity
+    static const whiteRedwoodCity
+    static const englishLike2014
+    static const englishLike2018
+    static const dense2014
+    static const dense2018
+    static const tall2014
+    static const tall2018
+}

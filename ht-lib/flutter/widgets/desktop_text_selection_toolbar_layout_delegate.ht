@@ -1,0 +1,8 @@
+external class DesktopTextSelectionToolbarLayoutDelegate {
+    construct 
+    get anchor
+    fun getConstraintsForChild
+    fun getPositionForChild
+    fun shouldRelayout
+    fun getSize
+}

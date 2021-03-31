@@ -1,0 +1,6 @@
+external class PopupMenuDivider {
+    construct 
+    get height
+    fun represents
+    fun createState
+}

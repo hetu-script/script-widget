@@ -1,0 +1,8 @@
+external class GravitySimulation {
+    construct 
+    var tolerance
+    fun x
+    fun dx
+    fun isDone
+    fun toString
+}

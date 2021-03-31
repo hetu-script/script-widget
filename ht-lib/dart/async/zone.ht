@@ -1,0 +1,21 @@
+external class ZoneSpecification {
+    construct 
+    construct from
+    get handleUncaughtError
+    get run
+    get runUnary
+    get runBinary
+    get registerCallback
+    get registerUnaryCallback
+    get registerBinaryCallback
+    get errorCallback
+    get scheduleMicrotask
+    get createTimer
+    get createPeriodicTimer
+    get print
+    get fork
+}
+external class Zone {
+    static get current
+    static const root
+}

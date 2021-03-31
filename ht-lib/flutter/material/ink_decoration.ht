@@ -1,0 +1,24 @@
+external class Ink {
+    construct 
+    construct image
+    get child
+    get padding
+    get decoration
+    get width
+    get height
+    fun debugFillProperties
+    fun createState
+}
+external class InkDecoration {
+    construct 
+    get referenceBox
+    get onRemoved
+    get decoration
+    set decoration(value)
+    get configuration
+    set configuration(value)
+    fun dispose
+    fun paintFeature
+    get controller
+    fun toString
+}

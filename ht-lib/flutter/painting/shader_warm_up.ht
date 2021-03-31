@@ -1,0 +1,8 @@
+external class DefaultShaderWarmUp {
+    construct 
+    get drawCallSpacing
+    get canvasSize
+    get size
+    fun warmUpOnCanvas
+    fun execute
+}

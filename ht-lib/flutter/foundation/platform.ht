@@ -1,0 +1,8 @@
+external class TargetPlatform {
+    static const android
+    static const fuchsia
+    static const iOS
+    static const linux
+    static const macOS
+    static const windows
+}

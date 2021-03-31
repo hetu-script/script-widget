@@ -1,0 +1,53 @@
+external class RawKeyEventDataLinux {
+    construct 
+    get keyHelper
+    get unicodeScalarValues
+    get scanCode
+    get keyCode
+    get modifiers
+    get isDown
+    get keyLabel
+    get physicalKey
+    get logicalKey
+    fun isModifierPressed
+    fun getModifierSide
+    fun toString
+    get isControlPressed
+    get isShiftPressed
+    get isAltPressed
+    get isMetaPressed
+    get modifiersPressed
+}
+external class KeyHelper {
+    construct 
+    fun getModifierSide
+    fun isModifierPressed
+    fun numpadKey
+    fun logicalKey
+}
+external class GLFWKeyHelper {
+    construct
+    fun isModifierPressed
+    fun getModifierSide
+    fun numpadKey
+    fun logicalKey
+    static const modifierCapsLock
+    static const modifierShift
+    static const modifierControl
+    static const modifierAlt
+    static const modifierMeta
+    static const modifierNumericPad
+}
+external class GtkKeyHelper {
+    construct
+    fun isModifierPressed
+    fun getModifierSide
+    fun numpadKey
+    fun logicalKey
+    static const modifierShift
+    static const modifierCapsLock
+    static const modifierControl
+    static const modifierMod1
+    static const modifierMod2
+    static const modifierMeta
+}

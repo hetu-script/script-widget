@@ -1,0 +1,38 @@
+external class RenderSliverList {
+    construct 
+    fun performLayout
+    fun setupParentData
+    get debugChildIntegrityEnabled
+    fun adoptChild
+    fun insert
+    fun move
+    fun remove
+    fun removeAll
+    fun attach
+    fun detach
+    fun redepthChildren
+    fun visitChildren
+    fun visitChildrenForSemantics
+    fun indexOf
+    fun hitTestChildren
+    fun childMainAxisPosition
+    fun childScrollOffset
+    fun applyPaintTransform
+    fun paint
+    fun debugFillProperties
+    fun debugAssertChildListIsNonEmptyAndContiguous
+    fun debugDescribeChildren
+    get constraints
+    get geometry
+    get semanticBounds
+    get paintBounds
+    fun debugResetSize
+    fun debugAssertDoesMeetConstraints
+    fun performResize
+    get centerOffsetAdjustment
+    fun hitTest
+    fun calculatePaintOffset
+    fun calculateCacheOffset
+    fun debugPaint
+    fun handleEvent
+}

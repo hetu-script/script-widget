@@ -1,0 +1,105 @@
+external class ProxyAnimation {
+    construct 
+    get parent
+    set parent(value)
+    fun didStartListening
+    fun didStopListening
+    get status
+    get value
+    fun toString
+    fun didRegisterListener
+    fun didUnregisterListener
+    get isListening
+    fun addListener
+    fun removeListener
+    fun notifyListeners
+    fun addStatusListener
+    fun removeStatusListener
+    fun notifyStatusListeners
+    get isDismissed
+    get isCompleted
+    fun drive
+    fun toStringDetails
+}
+external class ReverseAnimation {
+    construct 
+    get parent
+    fun addListener
+    fun removeListener
+    fun didStartListening
+    fun didStopListening
+    get status
+    get value
+    fun toString
+    fun didRegisterListener
+    fun didUnregisterListener
+    get isListening
+    fun addStatusListener
+    fun removeStatusListener
+    fun notifyStatusListeners
+    get isDismissed
+    get isCompleted
+    fun drive
+    fun toStringDetails
+}
+external class CurvedAnimation {
+    construct 
+    get parent
+    var curve
+    var reverseCurve
+    get value
+    fun toString
+    fun addListener
+    fun removeListener
+    fun addStatusListener
+    fun removeStatusListener
+    get status
+    get isDismissed
+    get isCompleted
+    fun drive
+    fun toStringDetails
+}
+external class TrainHoppingAnimation {
+    construct 
+    var onSwitchedTrain
+    get currentTrain
+    get status
+    get value
+    fun dispose
+    fun toString
+    fun didRegisterListener
+    fun didUnregisterListener
+    fun addListener
+    fun removeListener
+    fun notifyListeners
+    fun addStatusListener
+    fun removeStatusListener
+    fun notifyStatusListeners
+    get isDismissed
+    get isCompleted
+    fun drive
+    fun toStringDetails
+}
+external class AnimationMean {
+    construct 
+    get first
+    get next
+    get value
+    fun didStartListening
+    fun didStopListening
+    get status
+    fun toString
+    fun didRegisterListener
+    fun didUnregisterListener
+    get isListening
+    fun addListener
+    fun removeListener
+    fun notifyListeners
+    fun addStatusListener
+    fun removeStatusListener
+    fun notifyStatusListeners
+    get isDismissed
+    get isCompleted
+    fun drive
+    fun toStringDetails
+}

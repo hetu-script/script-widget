@@ -1,0 +1,33 @@
+external class FractionalOffsetTween {
+    construct 
+    var begin
+    var end
+    fun lerp
+    fun transform
+    fun toString
+    fun evaluate
+    fun animate
+    fun chain
+}
+external class AlignmentTween {
+    construct 
+    var begin
+    var end
+    fun lerp
+    fun transform
+    fun toString
+    fun evaluate
+    fun animate
+    fun chain
+}
+external class AlignmentGeometryTween {
+    construct 
+    var begin
+    var end
+    fun lerp
+    fun transform
+    fun toString
+    fun evaluate
+    fun animate
+    fun chain
+}

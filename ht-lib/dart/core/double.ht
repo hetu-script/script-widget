@@ -1,0 +1,9 @@
+external class double {
+    static fun parse (source, onError)
+    static fun tryParse (source)
+    static const nan
+    static const infinity
+    static const negativeInfinity
+    static const minPositive
+    static const maxFinite
+}

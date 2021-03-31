@@ -1,0 +1,85 @@
+external class PageController {
+    construct 
+    get initialPage
+    get keepPage
+    get viewportFraction
+    get keepScrollOffset
+    get debugLabel
+    get page
+    fun animateToPage
+    fun jumpToPage
+    fun nextPage
+    fun previousPage
+    fun createScrollPosition
+    fun attach
+    get initialScrollOffset
+    get hasClients
+    get position
+    get offset
+    fun animateTo
+    fun jumpTo
+    fun detach
+    fun dispose
+    fun toString
+    fun debugFillDescription
+    fun addListener
+    fun removeListener
+}
+external class PageMetrics {
+    construct 
+    get viewportFraction
+    get axisDirection
+    fun copyWith
+    get page
+    get minScrollExtent
+    get maxScrollExtent
+    get hasContentDimensions
+    get pixels
+    get hasPixels
+    get viewportDimension
+    get hasViewportDimension
+    fun toString
+    get axis
+    get outOfRange
+    get atEdge
+    get extentBefore
+    get extentInside
+    get extentAfter
+}
+external class PageScrollPhysics {
+    construct 
+    get parent
+    fun applyTo
+    fun createBallisticSimulation
+    get allowImplicitScrolling
+    fun applyPhysicsToUserOffset
+    fun shouldAcceptUserOffset
+    fun recommendDeferredLoading
+    fun applyBoundaryConditions
+    fun adjustPositionForNewDimensions
+    get spring
+    get tolerance
+    get minFlingDistance
+    get minFlingVelocity
+    get maxFlingVelocity
+    fun carriedMomentum
+    get dragStartDistanceMotionThreshold
+    fun toString
+}
+external class PageView {
+    construct 
+    construct builder
+    construct custom
+    get allowImplicitScrolling
+    get restorationId
+    get scrollDirection
+    get reverse
+    get controller
+    get physics
+    get pageSnapping
+    get onPageChanged
+    get childrenDelegate
+    get dragStartBehavior
+    get clipBehavior
+    fun createState
+}

@@ -1,0 +1,34 @@
+external class LogicalKeySet {
+    construct 
+    construct fromSet
+    fun debugDescribeKeys
+    fun debugFillProperties
+    get keys
+    get hashCode
+}
+external class ShortcutMapProperty {
+    construct 
+    get value
+    fun valueToString
+}
+external class ShortcutManager {
+    construct 
+    get modal
+    get shortcuts
+    set shortcuts(value)
+    fun debugFillProperties
+    fun addListener
+    fun removeListener
+    fun dispose
+}
+external class Shortcuts {
+    construct 
+    get manager
+    get shortcuts
+    get child
+    get debugLabel
+    fun createState
+    fun debugFillProperties
+    static fun of (context)
+    static fun maybeOf (context)
+}

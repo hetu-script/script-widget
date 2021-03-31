@@ -1,0 +1,27 @@
+external class BigInt {
+    construct from
+    fun abs
+    fun remainder
+    fun compareTo
+    get bitLength
+    get sign
+    get isEven
+    get isOdd
+    get isNegative
+    fun pow
+    fun modPow
+    fun modInverse
+    fun gcd
+    fun toUnsigned
+    fun toSigned
+    get isValidInt
+    fun toInt
+    fun toDouble
+    fun toString
+    fun toRadixString
+    static get zero
+    static get one
+    static get two
+    static fun parse (source, {radix})
+    static fun tryParse (source, {radix})
+}

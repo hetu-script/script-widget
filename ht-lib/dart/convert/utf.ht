@@ -1,0 +1,24 @@
+external class Utf8Codec {
+    construct 
+    get name
+    fun decode
+    get encoder
+    get decoder
+    fun decodeStream
+}
+external class Utf8Encoder {
+    construct 
+    fun convert
+    fun startChunkedConversion
+    fun bind
+    fun fuse
+    fun cast
+}
+external class Utf8Decoder {
+    construct 
+    fun convert
+    fun startChunkedConversion
+    fun bind
+    fun fuse
+    fun cast
+}

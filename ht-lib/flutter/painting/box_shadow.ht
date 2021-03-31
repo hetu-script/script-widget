@@ -1,0 +1,14 @@
+external class BoxShadow {
+    construct 
+    get spreadRadius
+    get color
+    get offset
+    get blurRadius
+    fun toPaint
+    fun scale
+    get hashCode
+    fun toString
+    get blurSigma
+    static fun lerp (a, b, t)
+    static fun lerpList (a, b, t)
+}

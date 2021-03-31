@@ -1,0 +1,60 @@
+external class ScrollIncrementType {
+    static const line
+    static const page
+}
+external class Scrollable {
+    construct 
+    get axisDirection
+    get controller
+    get physics
+    get viewportBuilder
+    get incrementCalculator
+    get excludeFromSemantics
+    get semanticChildCount
+    get dragStartBehavior
+    get restorationId
+    get axis
+    fun createState
+    fun debugFillProperties
+    static fun of (context)
+    static fun recommendDeferredLoadingForContext (context)
+    static fun ensureVisible (context, {alignment, duration, curve, alignmentPolicy})
+}
+external class ScrollableState {
+    construct
+    get position
+    get axisDirection
+    fun restoreState
+    fun saveOffset
+    fun didChangeDependencies
+    fun didUpdateWidget
+    fun dispose
+    get vsync
+    get notificationContext
+    get storageContext
+    fun build
+    fun debugFillProperties
+    get restorationId
+    fun createTicker
+    get bucket
+    get restorePending
+}
+external class ScrollIncrementDetails {
+    construct 
+    get type
+    get metrics
+}
+external class ScrollIntent {
+    construct 
+    get direction
+    get type
+}
+external class ScrollAction {
+    construct
+    fun isEnabled
+    fun invoke
+    get intentType
+    fun consumesKey
+    fun addActionListener
+    fun removeActionListener
+}

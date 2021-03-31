@@ -1,0 +1,153 @@
+external class CacheExtentStyle {
+    static const pixel
+    static const viewport
+}
+external class RenderAbstractViewport {
+    static fun of (object)
+    static const defaultCacheExtent
+}
+external class RevealedOffset {
+    construct 
+    get offset
+    get rect
+    fun toString
+}
+external class RenderViewport {
+    construct 
+    fun setupParentData
+    get anchor
+    set anchor(value)
+    get center
+    set center(value)
+    get sizedByParent
+    fun computeDryLayout
+    fun performLayout
+    get hasVisualOverflow
+    fun updateOutOfBandData
+    fun updateChildLayoutOffset
+    fun paintOffsetOf
+    fun scrollOffsetOf
+    fun maxScrollObstructionExtentBefore
+    fun applyPaintTransform
+    fun computeChildMainAxisPosition
+    get indexOfFirstChild
+    fun labelForChild
+    get childrenInPaintOrder
+    get childrenInHitTestOrder
+    fun debugFillProperties
+    fun describeSemanticsConfiguration
+    fun visitChildrenForSemantics
+    get axisDirection
+    get crossAxisDirection
+    get axis
+    get offset
+    get cacheExtent
+    get cacheExtentStyle
+    get clipBehavior
+    fun attach
+    fun detach
+    fun computeMinIntrinsicWidth
+    fun computeMaxIntrinsicWidth
+    fun computeMinIntrinsicHeight
+    fun computeMaxIntrinsicHeight
+    get isRepaintBoundary
+    fun describeApproximatePaintClip
+    fun describeSemanticsClip
+    fun paint
+    fun debugPaintSize
+    fun hitTestChildren
+    fun getOffsetToReveal
+    fun debugDescribeChildren
+    fun showOnScreen
+    fun getMinIntrinsicWidth
+    fun getMaxIntrinsicWidth
+    fun getMinIntrinsicHeight
+    fun getMaxIntrinsicHeight
+    fun getDryLayout
+    fun debugCannotComputeDryLayout
+    get hasSize
+    get size
+    fun debugAdoptSize
+    get semanticBounds
+    fun debugResetSize
+    fun getDistanceToBaseline
+    get constraints
+    fun debugAssertDoesMeetConstraints
+    fun markNeedsLayout
+    fun performResize
+    fun hitTest
+    fun globalToLocal
+    fun localToGlobal
+    get paintBounds
+    fun handleEvent
+    fun debugHandleEvent
+    fun debugPaint
+    static const useTwoPaneSemantics
+    static const excludeFromScrolling
+}
+external class RenderShrinkWrappingViewport {
+    construct 
+    fun setupParentData
+    fun debugThrowIfNotCheckingIntrinsics
+    fun performLayout
+    get hasVisualOverflow
+    fun updateOutOfBandData
+    fun updateChildLayoutOffset
+    fun paintOffsetOf
+    fun scrollOffsetOf
+    fun maxScrollObstructionExtentBefore
+    fun applyPaintTransform
+    fun computeChildMainAxisPosition
+    get indexOfFirstChild
+    fun labelForChild
+    get childrenInPaintOrder
+    get childrenInHitTestOrder
+    fun describeSemanticsConfiguration
+    fun visitChildrenForSemantics
+    get axisDirection
+    get crossAxisDirection
+    get axis
+    get offset
+    get cacheExtent
+    get cacheExtentStyle
+    get clipBehavior
+    fun attach
+    fun detach
+    fun computeMinIntrinsicWidth
+    fun computeMaxIntrinsicWidth
+    fun computeMinIntrinsicHeight
+    fun computeMaxIntrinsicHeight
+    get isRepaintBoundary
+    fun describeApproximatePaintClip
+    fun describeSemanticsClip
+    fun paint
+    fun debugPaintSize
+    fun hitTestChildren
+    fun getOffsetToReveal
+    fun debugFillProperties
+    fun debugDescribeChildren
+    fun showOnScreen
+    fun getMinIntrinsicWidth
+    fun getMaxIntrinsicWidth
+    fun getMinIntrinsicHeight
+    fun getMaxIntrinsicHeight
+    fun getDryLayout
+    fun debugCannotComputeDryLayout
+    get hasSize
+    get size
+    fun debugAdoptSize
+    get semanticBounds
+    fun debugResetSize
+    fun getDistanceToBaseline
+    get constraints
+    fun debugAssertDoesMeetConstraints
+    fun markNeedsLayout
+    fun performResize
+    fun hitTest
+    fun globalToLocal
+    fun localToGlobal
+    get paintBounds
+    fun handleEvent
+    fun debugHandleEvent
+    fun debugPaint
+}

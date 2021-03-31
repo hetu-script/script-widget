@@ -1,0 +1,16 @@
+external class NetworkAssetBundle {
+    construct 
+    fun load
+    fun loadStructuredData
+    fun toString
+    fun loadString
+    fun evict
+}
+external class PlatformAssetBundle {
+    construct
+    fun load
+    fun loadString
+    fun loadStructuredData
+    fun evict
+    fun toString
+}

@@ -1,0 +1,8 @@
+external class FlippedTweenSequence {
+    construct 
+    fun transform
+    fun toString
+    fun evaluate
+    fun animate
+    fun chain
+}

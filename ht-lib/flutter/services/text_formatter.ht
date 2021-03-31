@@ -1,0 +1,26 @@
+external class MaxLengthEnforcement {
+    static const none
+    static const enforced
+    static const truncateAfterCompositionEnds
+}
+external class TextInputFormatter {
+    static fun withFunction (formatFunction)
+}
+external class FilteringTextInputFormatter {
+    construct 
+    construct allow
+    construct deny
+    get filterPattern
+    get allow
+    get replacementString
+    fun formatEditUpdate
+    static const singleLineFormatter
+    static const digitsOnly
+}
+external class LengthLimitingTextInputFormatter {
+    construct 
+    get maxLength
+    get maxLengthEnforcement
+    fun formatEditUpdate
+    static fun getDefaultMaxLengthEnforcement (platform)
+}

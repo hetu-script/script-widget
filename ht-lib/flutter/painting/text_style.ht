@@ -1,0 +1,35 @@
+external class TextStyle {
+    construct 
+    get inherit
+    get color
+    get backgroundColor
+    get fontFamily
+    get fontSize
+    get fontWeight
+    get fontStyle
+    get letterSpacing
+    get wordSpacing
+    get textBaseline
+    get height
+    get locale
+    get foreground
+    get background
+    get decoration
+    get decorationColor
+    get decorationStyle
+    get decorationThickness
+    get debugLabel
+    get shadows
+    get fontFeatures
+    get fontFamilyFallback
+    fun copyWith
+    fun apply
+    fun merge
+    fun getTextStyle
+    fun getParagraphStyle
+    fun compareTo
+    get hashCode
+    fun toStringShort
+    fun debugFillProperties
+    static fun lerp (a, b, t)
+}

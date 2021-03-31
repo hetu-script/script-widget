@@ -1,0 +1,58 @@
+external class ScrollStartNotification {
+    construct 
+    get dragDetails
+    get metrics
+    get context
+    fun debugFillDescription
+    get depth
+    fun visitAncestor
+    fun dispatch
+    fun toString
+}
+external class ScrollUpdateNotification {
+    construct 
+    get dragDetails
+    get scrollDelta
+    get metrics
+    get context
+    fun debugFillDescription
+    get depth
+    fun visitAncestor
+    fun dispatch
+    fun toString
+}
+external class OverscrollNotification {
+    construct 
+    get dragDetails
+    get overscroll
+    get velocity
+    get metrics
+    get context
+    fun debugFillDescription
+    get depth
+    fun visitAncestor
+    fun dispatch
+    fun toString
+}
+external class ScrollEndNotification {
+    construct 
+    get dragDetails
+    get metrics
+    get context
+    fun debugFillDescription
+    get depth
+    fun visitAncestor
+    fun dispatch
+    fun toString
+}
+external class UserScrollNotification {
+    construct 
+    get direction
+    get metrics
+    get context
+    fun debugFillDescription
+    get depth
+    fun visitAncestor
+    fun dispatch
+    fun toString
+}

@@ -1,0 +1,35 @@
+external class RawKeyEventDataMacOs {
+    construct 
+    get characters
+    get charactersIgnoringModifiers
+    get keyCode
+    get modifiers
+    get keyLabel
+    get physicalKey
+    get logicalKey
+    fun isModifierPressed
+    fun getModifierSide
+    fun toString
+    get isControlPressed
+    get isShiftPressed
+    get isAltPressed
+    get isMetaPressed
+    get modifiersPressed
+    static const modifierCapsLock
+    static const modifierShift
+    static const modifierLeftShift
+    static const modifierRightShift
+    static const modifierControl
+    static const modifierLeftControl
+    static const modifierRightControl
+    static const modifierOption
+    static const modifierLeftOption
+    static const modifierRightOption
+    static const modifierCommand
+    static const modifierLeftCommand
+    static const modifierRightCommand
+    static const modifierNumericPad
+    static const modifierHelp
+    static const modifierFunction
+    static const deviceIndependentMask
+}

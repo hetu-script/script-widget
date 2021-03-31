@@ -1,0 +1,6 @@
+external class Symbol {
+    construct 
+    get hashCode
+    static const unaryMinus
+    static const empty
+}

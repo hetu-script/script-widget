@@ -1,0 +1,6 @@
+external class StackTrace {
+    construct fromString
+    fun toString
+    static get current
+    static const empty
+}

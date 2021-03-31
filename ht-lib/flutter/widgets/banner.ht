@@ -1,0 +1,41 @@
+external class BannerLocation {
+    static const topStart
+    static const topEnd
+    static const bottomStart
+    static const bottomEnd
+}
+external class BannerPainter {
+    construct 
+    get message
+    get textDirection
+    get location
+    get layoutDirection
+    get color
+    get textStyle
+    fun paint
+    fun shouldRepaint
+    fun hitTest
+    fun addListener
+    fun removeListener
+    get semanticsBuilder
+    fun shouldRebuildSemantics
+    fun toString
+}
+external class Banner {
+    construct 
+    get child
+    get message
+    get textDirection
+    get location
+    get layoutDirection
+    get color
+    get textStyle
+    fun build
+    fun debugFillProperties
+}
+external class CheckedModeBanner {
+    construct 
+    get child
+    fun build
+    fun debugFillProperties
+}

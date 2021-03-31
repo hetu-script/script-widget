@@ -1,0 +1,9 @@
+external class SystemEncoding {
+    construct 
+    get name
+    fun encode
+    fun decode
+    get encoder
+    get decoder
+    fun decodeStream
+}

@@ -1,0 +1,45 @@
+external class AnimationBehavior {
+    static const normal
+    static const preserve
+}
+external class AnimationController {
+    construct 
+    construct unbounded
+    get lowerBound
+    get upperBound
+    get debugLabel
+    get animationBehavior
+    var duration
+    var reverseDuration
+    get view
+    fun resync
+    get value
+    set value(value)
+    fun reset
+    get velocity
+    get lastElapsedDuration
+    get isAnimating
+    get status
+    fun forward
+    fun reverse
+    fun animateTo
+    fun animateBack
+    fun repeat
+    fun fling
+    fun animateWith
+    fun stop
+    fun dispose
+    fun toStringDetails
+    fun didRegisterListener
+    fun didUnregisterListener
+    fun addListener
+    fun removeListener
+    fun notifyListeners
+    fun addStatusListener
+    fun removeStatusListener
+    fun notifyStatusListeners
+    get isDismissed
+    get isCompleted
+    fun drive
+    fun toString
+}

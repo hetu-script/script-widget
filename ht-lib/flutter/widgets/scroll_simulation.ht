@@ -1,0 +1,23 @@
+external class BouncingScrollSimulation {
+    construct 
+    get leadingExtent
+    get trailingExtent
+    get spring
+    var tolerance
+    fun x
+    fun dx
+    fun isDone
+    fun toString
+    static const maxSpringTransferVelocity
+}
+external class ClampingScrollSimulation {
+    construct 
+    get position
+    get velocity
+    get friction
+    var tolerance
+    fun x
+    fun dx
+    fun isDone
+    fun toString
+}

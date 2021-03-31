@@ -1,0 +1,22 @@
+external class Platform {
+    construct
+    static get numberOfProcessors
+    static get pathSeparator
+    static get localeName
+    static get operatingSystem
+    static get operatingSystemVersion
+    static get localHostname
+    static get environment
+    static get executable
+    static get resolvedExecutable
+    static get script
+    static get executableArguments
+    static get packageConfig
+    static get version
+    static const isLinux
+    static const isMacOS
+    static const isWindows
+    static const isAndroid
+    static const isIOS
+    static const isFuchsia
+}

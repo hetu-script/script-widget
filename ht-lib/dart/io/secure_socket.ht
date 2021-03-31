@@ -1,0 +1,33 @@
+external class SecureSocket {
+    static fun connect (host, port, {context, onBadCertificate, supportedProtocols, timeout})
+    static fun startConnect (host, port, {context, onBadCertificate, supportedProtocols})
+    static fun secure (socket, {host, context, onBadCertificate, supportedProtocols})
+    static fun secureServer (socket, context, {bufferedData, requestClientCertificate, requireClientCertificate, supportedProtocols})
+}
+external class RawSecureSocket {
+    static fun connect (host, port, {context, onBadCertificate, supportedProtocols, timeout})
+    static fun startConnect (host, port, {context, onBadCertificate, supportedProtocols})
+    static fun secure (socket, {subscription, host, context, onBadCertificate, supportedProtocols})
+    static fun secureServer (socket, context, {subscription, bufferedData, requestClientCertificate, requireClientCertificate, supportedProtocols})
+}
+external class TlsException {
+    construct 
+    get type
+    get message
+    get osError
+    fun toString
+}
+external class HandshakeException {
+    construct 
+    get type
+    get message
+    get osError
+    fun toString
+}
+external class CertificateException {
+    construct 
+    get type
+    get message
+    get osError
+    fun toString
+}

@@ -1,0 +1,5 @@
+import 'flutter://physics/gravity_simulation.ht'
+import 'flutter://physics/spring_simulation.ht'
+import 'flutter://physics/friction_simulation.ht'
+import 'flutter://physics/clamped_simulation.ht'
+import 'flutter://physics/tolerance.ht'

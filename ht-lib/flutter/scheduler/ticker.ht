@@ -1,0 +1,30 @@
+external class Ticker {
+    construct 
+    get debugLabel
+    get muted
+    set muted(value)
+    get isTicking
+    get isActive
+    fun start
+    fun describeForError
+    fun stop
+    fun absorbTicker
+    fun dispose
+    fun toString
+}
+external class TickerFuture {
+    construct complete
+    fun whenCompleteOrCancel
+    get orCancel
+    fun asStream
+    fun catchError
+    fun then
+    fun timeout
+    fun whenComplete
+    fun toString
+}
+external class TickerCanceled {
+    construct 
+    get ticker
+    fun toString
+}

@@ -1,0 +1,25 @@
+external class int {
+    construct fromEnvironment
+    fun modPow
+    fun modInverse
+    fun gcd
+    get isEven
+    get isOdd
+    get bitLength
+    fun toUnsigned
+    fun toSigned
+    fun abs
+    get sign
+    fun round
+    fun floor
+    fun ceil
+    fun truncate
+    fun roundToDouble
+    fun floorToDouble
+    fun ceilToDouble
+    fun truncateToDouble
+    fun toString
+    fun toRadixString
+    static fun parse (source, {radix, onError})
+    static fun tryParse (source, {radix})
+}

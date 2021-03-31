@@ -1,0 +1,75 @@
+external class AutofillHints {
+    static const addressCity
+    static const addressCityAndState
+    static const addressState
+    static const birthday
+    static const birthdayDay
+    static const birthdayMonth
+    static const birthdayYear
+    static const countryCode
+    static const countryName
+    static const creditCardExpirationDate
+    static const creditCardExpirationDay
+    static const creditCardExpirationMonth
+    static const creditCardExpirationYear
+    static const creditCardFamilyName
+    static const creditCardGivenName
+    static const creditCardMiddleName
+    static const creditCardName
+    static const creditCardNumber
+    static const creditCardSecurityCode
+    static const creditCardType
+    static const email
+    static const familyName
+    static const fullStreetAddress
+    static const gender
+    static const givenName
+    static const impp
+    static const jobTitle
+    static const language
+    static const location
+    static const middleInitial
+    static const middleName
+    static const name
+    static const namePrefix
+    static const nameSuffix
+    static const newPassword
+    static const newUsername
+    static const nickname
+    static const oneTimeCode
+    static const organizationName
+    static const password
+    static const photo
+    static const postalAddress
+    static const postalAddressExtended
+    static const postalAddressExtendedPostalCode
+    static const postalCode
+    static const streetAddressLevel1
+    static const streetAddressLevel2
+    static const streetAddressLevel3
+    static const streetAddressLevel4
+    static const streetAddressLine1
+    static const streetAddressLine2
+    static const streetAddressLine3
+    static const sublocality
+    static const telephoneNumber
+    static const telephoneNumberAreaCode
+    static const telephoneNumberCountryCode
+    static const telephoneNumberDevice
+    static const telephoneNumberExtension
+    static const telephoneNumberLocal
+    static const telephoneNumberLocalPrefix
+    static const telephoneNumberLocalSuffix
+    static const telephoneNumberNational
+    static const transactionAmount
+    static const transactionCurrency
+    static const url
+    static const username
+}
+external class AutofillConfiguration {
+    construct 
+    get uniqueIdentifier
+    get autofillHints
+    get currentEditingValue
+    fun toJson
+}

@@ -1,0 +1,14 @@
+external class SecurityContext {
+    construct 
+    fun usePrivateKey
+    fun usePrivateKeyBytes
+    fun setTrustedCertificates
+    fun setTrustedCertificatesBytes
+    fun useCertificateChain
+    fun useCertificateChainBytes
+    fun setClientAuthorities
+    fun setClientAuthoritiesBytes
+    fun setAlpnProtocols
+    static get defaultContext
+    static get alpnSupported
+}

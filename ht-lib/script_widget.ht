@@ -1,0 +1,11 @@
+external class App {
+    construct
+    static fun handleFuture (future, function)
+    static fun futureMaker (function, {posArgs, namedArgs, typeArgs})
+}
+external class ScriptWidget {
+    construct 
+    get child
+    fun createState
+    static fun rebuild (instance)
+}

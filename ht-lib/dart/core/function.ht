@@ -1,0 +1,3 @@
+external class Function {
+    static fun apply (function, positionalArguments, namedArguments)
+}

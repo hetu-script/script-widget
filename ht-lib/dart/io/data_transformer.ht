@@ -1,0 +1,72 @@
+external class ZLibOption {
+    static const minWindowBits
+    static const maxWindowBits
+    static const defaultWindowBits
+    static const minLevel
+    static const maxLevel
+    static const defaultLevel
+    static const minMemLevel
+    static const maxMemLevel
+    static const defaultMemLevel
+    static const strategyFiltered
+    static const strategyHuffmanOnly
+    static const strategyRle
+    static const strategyFixed
+    static const strategyDefault
+}
+external class ZLibCodec {
+    construct 
+    get gzip
+    get level
+    get memLevel
+    get strategy
+    get windowBits
+    get raw
+    get dictionary
+    get encoder
+    get decoder
+}
+external class GZipCodec {
+    construct 
+    get gzip
+    get level
+    get memLevel
+    get strategy
+    get windowBits
+    get dictionary
+    get raw
+    get encoder
+    get decoder
+}
+external class ZLibEncoder {
+    construct 
+    get gzip
+    get level
+    get memLevel
+    get strategy
+    get windowBits
+    get dictionary
+    get raw
+    fun convert
+    fun startChunkedConversion
+    fun fuse
+    fun bind
+    fun cast
+}
+external class ZLibDecoder {
+    construct 
+    get windowBits
+    get dictionary
+    get raw
+    fun convert
+    fun startChunkedConversion
+    fun fuse
+    fun bind
+    fun cast
+}
+external class RawZLibFilter {
+    construct deflateFilter
+    construct inflateFilter
+    fun process
+    fun processed
+}

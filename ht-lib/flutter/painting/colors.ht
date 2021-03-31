@@ -1,0 +1,36 @@
+external class HSVColor {
+    construct fromAHSV
+    construct fromColor
+    get alpha
+    get hue
+    get saturation
+    get value
+    fun withAlpha
+    fun withHue
+    fun withSaturation
+    fun withValue
+    fun toColor
+    get hashCode
+    fun toString
+    static fun lerp (a, b, t)
+}
+external class HSLColor {
+    construct fromAHSL
+    construct fromColor
+    get alpha
+    get hue
+    get saturation
+    get lightness
+    fun withAlpha
+    fun withHue
+    fun withSaturation
+    fun withLightness
+    fun toColor
+    get hashCode
+    fun toString
+    static fun lerp (a, b, t)
+}
+external class ColorProperty {
+    construct 
+    fun toJsonMap
+}

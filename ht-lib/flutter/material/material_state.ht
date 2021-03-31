@@ -1,0 +1,9 @@
+external class MaterialState {
+    static const hovered
+    static const focused
+    static const pressed
+    static const dragged
+    static const selected
+    static const disabled
+    static const error
+}

@@ -1,0 +1,14 @@
+external class BoxFit {
+    static const fill
+    static const contain
+    static const cover
+    static const fitWidth
+    static const fitHeight
+    static const none
+    static const scaleDown
+}
+external class FittedSizes {
+    construct 
+    get source
+    get destination
+}

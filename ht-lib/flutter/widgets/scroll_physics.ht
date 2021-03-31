@@ -1,0 +1,121 @@
+external class ScrollPhysics {
+    construct 
+    get parent
+    fun applyTo
+    fun applyPhysicsToUserOffset
+    fun shouldAcceptUserOffset
+    fun recommendDeferredLoading
+    fun applyBoundaryConditions
+    fun adjustPositionForNewDimensions
+    fun createBallisticSimulation
+    get spring
+    get tolerance
+    get minFlingDistance
+    get minFlingVelocity
+    get maxFlingVelocity
+    fun carriedMomentum
+    get dragStartDistanceMotionThreshold
+    get allowImplicitScrolling
+    fun toString
+}
+external class RangeMaintainingScrollPhysics {
+    construct 
+    get parent
+    fun applyTo
+    fun adjustPositionForNewDimensions
+    fun applyPhysicsToUserOffset
+    fun shouldAcceptUserOffset
+    fun recommendDeferredLoading
+    fun applyBoundaryConditions
+    fun createBallisticSimulation
+    get spring
+    get tolerance
+    get minFlingDistance
+    get minFlingVelocity
+    get maxFlingVelocity
+    fun carriedMomentum
+    get dragStartDistanceMotionThreshold
+    get allowImplicitScrolling
+    fun toString
+}
+external class BouncingScrollPhysics {
+    construct 
+    get parent
+    fun applyTo
+    fun frictionFactor
+    fun applyPhysicsToUserOffset
+    fun applyBoundaryConditions
+    fun createBallisticSimulation
+    get minFlingVelocity
+    fun carriedMomentum
+    get dragStartDistanceMotionThreshold
+    fun shouldAcceptUserOffset
+    fun recommendDeferredLoading
+    fun adjustPositionForNewDimensions
+    get spring
+    get tolerance
+    get minFlingDistance
+    get maxFlingVelocity
+    get allowImplicitScrolling
+    fun toString
+}
+external class ClampingScrollPhysics {
+    construct 
+    get parent
+    fun applyTo
+    fun applyBoundaryConditions
+    fun createBallisticSimulation
+    fun applyPhysicsToUserOffset
+    fun shouldAcceptUserOffset
+    fun recommendDeferredLoading
+    fun adjustPositionForNewDimensions
+    get spring
+    get tolerance
+    get minFlingDistance
+    get minFlingVelocity
+    get maxFlingVelocity
+    fun carriedMomentum
+    get dragStartDistanceMotionThreshold
+    get allowImplicitScrolling
+    fun toString
+}
+external class AlwaysScrollableScrollPhysics {
+    construct 
+    get parent
+    fun applyTo
+    fun shouldAcceptUserOffset
+    fun applyPhysicsToUserOffset
+    fun recommendDeferredLoading
+    fun applyBoundaryConditions
+    fun adjustPositionForNewDimensions
+    fun createBallisticSimulation
+    get spring
+    get tolerance
+    get minFlingDistance
+    get minFlingVelocity
+    get maxFlingVelocity
+    fun carriedMomentum
+    get dragStartDistanceMotionThreshold
+    get allowImplicitScrolling
+    fun toString
+}
+external class NeverScrollableScrollPhysics {
+    construct 
+    get parent
+    fun applyTo
+    fun shouldAcceptUserOffset
+    get allowImplicitScrolling
+    fun applyPhysicsToUserOffset
+    fun recommendDeferredLoading
+    fun applyBoundaryConditions
+    fun adjustPositionForNewDimensions
+    fun createBallisticSimulation
+    get spring
+    get tolerance
+    get minFlingDistance
+    get minFlingVelocity
+    get maxFlingVelocity
+    fun carriedMomentum
+    get dragStartDistanceMotionThreshold
+    fun toString
+}

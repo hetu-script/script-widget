@@ -1,0 +1,14 @@
+external class UnderlineTabIndicator {
+    construct 
+    get borderSide
+    get insets
+    fun lerpFrom
+    fun lerpTo
+    fun createBoxPainter
+    fun getClipPath
+    fun toStringShort
+    fun debugAssertIsValid
+    get padding
+    get isComplex
+    fun hitTest
+}

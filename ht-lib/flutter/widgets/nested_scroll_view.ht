@@ -1,0 +1,185 @@
+external class NestedScrollView {
+    construct 
+    get controller
+    get scrollDirection
+    get reverse
+    get physics
+    get headerSliverBuilder
+    get body
+    get dragStartBehavior
+    get floatHeaderSlivers
+    get clipBehavior
+    get restorationId
+    fun createState
+    static fun sliverOverlapAbsorberHandleFor (context)
+}
+external class NestedScrollViewState {
+    construct
+    get innerController
+    get outerController
+    fun initState
+    fun didChangeDependencies
+    fun didUpdateWidget
+    fun dispose
+    fun build
+}
+external class SliverOverlapAbsorberHandle {
+    construct
+    get layoutExtent
+    get scrollExtent
+    fun toString
+    fun addListener
+    fun removeListener
+    fun dispose
+}
+external class SliverOverlapAbsorber {
+    construct 
+    get handle
+    fun createRenderObject
+    fun updateRenderObject
+    fun debugFillProperties
+}
+external class RenderSliverOverlapAbsorber {
+    construct 
+    get handle
+    set handle(value)
+    fun attach
+    fun detach
+    fun performLayout
+    fun applyPaintTransform
+    fun hitTestChildren
+    fun paint
+    fun debugFillProperties
+    get constraints
+    get geometry
+    get semanticBounds
+    get paintBounds
+    fun debugResetSize
+    fun debugAssertDoesMeetConstraints
+    fun performResize
+    get centerOffsetAdjustment
+    fun hitTest
+    fun calculatePaintOffset
+    fun calculateCacheOffset
+    fun childScrollOffset
+    fun debugPaint
+    fun handleEvent
+}
+external class SliverOverlapInjector {
+    construct 
+    get handle
+    fun createRenderObject
+    fun updateRenderObject
+    fun debugFillProperties
+}
+external class RenderSliverOverlapInjector {
+    construct 
+    get handle
+    set handle(value)
+    fun attach
+    fun detach
+    fun performLayout
+    fun debugPaint
+    fun debugFillProperties
+    get constraints
+    get geometry
+    get semanticBounds
+    get paintBounds
+    fun debugResetSize
+    fun debugAssertDoesMeetConstraints
+    fun performResize
+    get centerOffsetAdjustment
+    fun hitTest
+    fun calculatePaintOffset
+    fun calculateCacheOffset
+    fun childScrollOffset
+    fun applyPaintTransform
+    fun handleEvent
+}
+external class NestedScrollViewViewport {
+    construct 
+    get handle
+    get axisDirection
+    get crossAxisDirection
+    get anchor
+    get offset
+    get center
+    get cacheExtent
+    get cacheExtentStyle
+    get clipBehavior
+    fun createRenderObject
+    fun updateRenderObject
+    fun debugFillProperties
+    fun createElement
+}
+external class RenderNestedScrollViewViewport {
+    construct 
+    get handle
+    set handle(value)
+    fun markNeedsLayout
+    fun debugFillProperties
+    fun setupParentData
+    get anchor
+    get center
+    get sizedByParent
+    fun computeDryLayout
+    fun performLayout
+    get hasVisualOverflow
+    fun updateOutOfBandData
+    fun updateChildLayoutOffset
+    fun paintOffsetOf
+    fun scrollOffsetOf
+    fun maxScrollObstructionExtentBefore
+    fun applyPaintTransform
+    fun computeChildMainAxisPosition
+    get indexOfFirstChild
+    fun labelForChild
+    get childrenInPaintOrder
+    get childrenInHitTestOrder
+    fun describeSemanticsConfiguration
+    fun visitChildrenForSemantics
+    get axisDirection
+    get crossAxisDirection
+    get axis
+    get offset
+    get cacheExtent
+    get cacheExtentStyle
+    get clipBehavior
+    fun attach
+    fun detach
+    fun computeMinIntrinsicWidth
+    fun computeMaxIntrinsicWidth
+    fun computeMinIntrinsicHeight
+    fun computeMaxIntrinsicHeight
+    get isRepaintBoundary
+    fun describeApproximatePaintClip
+    fun describeSemanticsClip
+    fun paint
+    fun debugPaintSize
+    fun hitTestChildren
+    fun getOffsetToReveal
+    fun debugDescribeChildren
+    fun showOnScreen
+    fun getMinIntrinsicWidth
+    fun getMaxIntrinsicWidth
+    fun getMinIntrinsicHeight
+    fun getMaxIntrinsicHeight
+    fun getDryLayout
+    fun debugCannotComputeDryLayout
+    get hasSize
+    get size
+    fun debugAdoptSize
+    get semanticBounds
+    fun debugResetSize
+    fun getDistanceToBaseline
+    get constraints
+    fun debugAssertDoesMeetConstraints
+    fun performResize
+    fun hitTest
+    fun globalToLocal
+    fun localToGlobal
+    get paintBounds
+    fun handleEvent
+    fun debugHandleEvent
+    fun debugPaint
+}

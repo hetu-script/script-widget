@@ -1,0 +1,5 @@
+external class LayoutChangedNotification {
+    construct
+    fun dispatch
+    fun toString
+}

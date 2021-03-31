@@ -1,0 +1,99 @@
+external class IdleScrollActivity {
+    construct 
+    fun applyNewDimensions
+    get shouldIgnorePointer
+    get isScrolling
+    get velocity
+    get delegate
+    fun updateDelegate
+    fun resetActivity
+    fun dispatchScrollStartNotification
+    fun dispatchScrollUpdateNotification
+    fun dispatchOverscrollNotification
+    fun dispatchScrollEndNotification
+    fun dispose
+    fun toString
+}
+external class HoldScrollActivity {
+    construct 
+    get onHoldCanceled
+    get shouldIgnorePointer
+    get isScrolling
+    get velocity
+    fun cancel
+    fun dispose
+    get delegate
+    fun updateDelegate
+    fun resetActivity
+    fun dispatchScrollStartNotification
+    fun dispatchScrollUpdateNotification
+    fun dispatchOverscrollNotification
+    fun dispatchScrollEndNotification
+    fun applyNewDimensions
+    fun toString
+}
+external class ScrollDragController {
+    construct 
+    get onDragCanceled
+    get carriedVelocity
+    get motionStartDistanceThreshold
+    get delegate
+    fun updateDelegate
+    fun update
+    fun end
+    fun cancel
+    fun dispose
+    get lastDetails
+    fun toString
+    static const momentumRetainStationaryDurationThreshold
+    static const motionStoppedDurationThreshold
+}
+external class DragScrollActivity {
+    construct 
+    fun dispatchScrollStartNotification
+    fun dispatchScrollUpdateNotification
+    fun dispatchOverscrollNotification
+    fun dispatchScrollEndNotification
+    get shouldIgnorePointer
+    get isScrolling
+    get velocity
+    fun dispose
+    fun toString
+    get delegate
+    fun updateDelegate
+    fun resetActivity
+    fun applyNewDimensions
+}
+external class BallisticScrollActivity {
+    construct 
+    fun resetActivity
+    fun applyNewDimensions
+    fun dispatchOverscrollNotification
+    get shouldIgnorePointer
+    get isScrolling
+    get velocity
+    fun dispose
+    fun toString
+    get delegate
+    fun updateDelegate
+    fun dispatchScrollStartNotification
+    fun dispatchScrollUpdateNotification
+    fun dispatchScrollEndNotification
+}
+external class DrivenScrollActivity {
+    construct 
+    get done
+    fun dispatchOverscrollNotification
+    get shouldIgnorePointer
+    get isScrolling
+    get velocity
+    fun dispose
+    fun toString
+    get delegate
+    fun updateDelegate
+    fun resetActivity
+    fun dispatchScrollStartNotification
+    fun dispatchScrollUpdateNotification
+    fun dispatchScrollEndNotification
+    fun applyNewDimensions
+}

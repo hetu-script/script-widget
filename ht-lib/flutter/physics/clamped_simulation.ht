@@ -1,0 +1,13 @@
+external class ClampedSimulation {
+    construct 
+    get simulation
+    get xMin
+    get xMax
+    get dxMin
+    get dxMax
+    var tolerance
+    fun x
+    fun dx
+    fun isDone
+    fun toString
+}

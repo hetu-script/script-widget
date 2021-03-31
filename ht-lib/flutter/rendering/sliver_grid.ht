@@ -1,0 +1,92 @@
+external class SliverGridGeometry {
+    construct 
+    get scrollOffset
+    get crossAxisOffset
+    get mainAxisExtent
+    get crossAxisExtent
+    get trailingScrollOffset
+    fun getBoxConstraints
+    fun toString
+}
+external class SliverGridRegularTileLayout {
+    construct 
+    get crossAxisCount
+    get mainAxisStride
+    get crossAxisStride
+    get childMainAxisExtent
+    get childCrossAxisExtent
+    get reverseCrossAxis
+    fun getMinChildIndexForScrollOffset
+    fun getMaxChildIndexForScrollOffset
+    fun getGeometryForChildIndex
+    fun computeMaxScrollOffset
+}
+external class SliverGridDelegateWithFixedCrossAxisCount {
+    construct 
+    get crossAxisCount
+    get mainAxisSpacing
+    get crossAxisSpacing
+    get childAspectRatio
+    get mainAxisExtent
+    fun getLayout
+    fun shouldRelayout
+}
+external class SliverGridDelegateWithMaxCrossAxisExtent {
+    construct 
+    get maxCrossAxisExtent
+    get mainAxisSpacing
+    get crossAxisSpacing
+    get childAspectRatio
+    get mainAxisExtent
+    fun getLayout
+    fun shouldRelayout
+}
+external class SliverGridParentData {
+    construct
+    var crossAxisOffset
+    var index
+    var layoutOffset
+    fun toString
+    get keptAlive
+}
+external class RenderSliverGrid {
+    construct 
+    fun setupParentData
+    get gridDelegate
+    set gridDelegate(value)
+    fun childCrossAxisPosition
+    fun performLayout
+    get debugChildIntegrityEnabled
+    fun adoptChild
+    fun insert
+    fun move
+    fun remove
+    fun removeAll
+    fun attach
+    fun detach
+    fun redepthChildren
+    fun visitChildren
+    fun visitChildrenForSemantics
+    fun indexOf
+    fun hitTestChildren
+    fun childMainAxisPosition
+    fun childScrollOffset
+    fun applyPaintTransform
+    fun paint
+    fun debugFillProperties
+    fun debugAssertChildListIsNonEmptyAndContiguous
+    fun debugDescribeChildren
+    get constraints
+    get geometry
+    get semanticBounds
+    get paintBounds
+    fun debugResetSize
+    fun debugAssertDoesMeetConstraints
+    fun performResize
+    get centerOffsetAdjustment
+    fun hitTest
+    fun calculatePaintOffset
+    fun calculateCacheOffset
+    fun debugPaint
+    fun handleEvent
+}

@@ -1,0 +1,20 @@
+external class CupertinoScrollbar {
+    construct 
+    get thicknessWhileDragging
+    get radiusWhileDragging
+    get child
+    get controller
+    get isAlwaysShown
+    get radius
+    get thickness
+    get thumbColor
+    get fadeDuration
+    get timeToFade
+    get pressDuration
+    get notificationPredicate
+    fun createState
+    static const defaultThickness
+    static const defaultThicknessWhileDragging
+    static const defaultRadius
+    static const defaultRadiusWhileDragging
+}

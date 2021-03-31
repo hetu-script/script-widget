@@ -1,0 +1,21 @@
+external class ShapeDecoration {
+    construct 
+    construct fromBoxDecoration
+    get color
+    get gradient
+    get image
+    get shadows
+    get shape
+    fun getClipPath
+    get padding
+    get isComplex
+    fun lerpFrom
+    fun lerpTo
+    get hashCode
+    fun debugFillProperties
+    fun hitTest
+    fun createBoxPainter
+    fun toStringShort
+    fun debugAssertIsValid
+    static fun lerp (a, b, t)
+}

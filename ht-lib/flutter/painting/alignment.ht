@@ -1,0 +1,50 @@
+external class Alignment {
+    construct 
+    get x
+    get y
+    fun add
+    fun alongOffset
+    fun alongSize
+    fun withinRect
+    fun inscribe
+    fun resolve
+    fun toString
+    get hashCode
+    static fun lerp (a, b, t)
+    static const topLeft
+    static const topCenter
+    static const topRight
+    static const centerLeft
+    static const center
+    static const centerRight
+    static const bottomLeft
+    static const bottomCenter
+    static const bottomRight
+}
+external class AlignmentDirectional {
+    construct 
+    get start
+    get y
+    fun add
+    fun resolve
+    fun toString
+    get hashCode
+    static fun lerp (a, b, t)
+    static const topStart
+    static const topCenter
+    static const topEnd
+    static const centerStart
+    static const center
+    static const centerEnd
+    static const bottomStart
+    static const bottomCenter
+    static const bottomEnd
+}
+external class TextAlignVertical {
+    construct 
+    get y
+    fun toString
+    static const top
+    static const center
+    static const bottom
+}

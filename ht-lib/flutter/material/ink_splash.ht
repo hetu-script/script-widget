@@ -1,0 +1,13 @@
+external class InkSplash {
+    construct 
+    get referenceBox
+    get onRemoved
+    fun confirm
+    fun cancel
+    fun dispose
+    fun paintFeature
+    get color
+    get controller
+    fun toString
+    static const splashFactory
+}

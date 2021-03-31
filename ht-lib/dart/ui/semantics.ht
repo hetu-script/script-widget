@@ -1,0 +1,57 @@
+external class SemanticsAction {
+    static const tap
+    static const longPress
+    static const scrollLeft
+    static const scrollRight
+    static const scrollUp
+    static const scrollDown
+    static const increase
+    static const decrease
+    static const showOnScreen
+    static const moveCursorForwardByCharacter
+    static const moveCursorBackwardByCharacter
+    static const setSelection
+    static const copy
+    static const cut
+    static const paste
+    static const didGainAccessibilityFocus
+    static const didLoseAccessibilityFocus
+    static const customAction
+    static const dismiss
+    static const moveCursorForwardByWord
+    static const moveCursorBackwardByWord
+    static const values
+}
+external class SemanticsFlag {
+    static const hasCheckedState
+    static const isChecked
+    static const isSelected
+    static const isButton
+    static const isTextField
+    static const isSlider
+    static const isReadOnly
+    static const isLink
+    static const isFocusable
+    static const isFocused
+    static const hasEnabledState
+    static const isEnabled
+    static const isInMutuallyExclusiveGroup
+    static const isHeader
+    static const isObscured
+    static const isMultiline
+    static const scopesRoute
+    static const namesRoute
+    static const isHidden
+    static const isImage
+    static const isLiveRegion
+    static const hasToggledState
+    static const isToggled
+    static const hasImplicitScrolling
+    static const values
+}
+external class SemanticsUpdateBuilder {
+    construct 
+    fun updateNode
+    fun updateCustomAction
+    fun build
+}

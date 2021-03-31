@@ -1,0 +1,27 @@
+external class RestorationManager {
+    construct 
+    get rootBucket
+    get isReplacing
+    fun flushData
+    fun addListener
+    fun removeListener
+    fun dispose
+}
+external class RestorationBucket {
+    construct empty
+    construct root
+    construct child
+    get debugOwner
+    get isReplacing
+    get restorationId
+    fun read
+    fun write
+    fun remove
+    fun contains
+    fun claimChild
+    fun adoptChild
+    fun finalize
+    fun rename
+    fun dispose
+    fun toString
+}

@@ -1,0 +1,14 @@
+external class Unicode {
+    static const LRE
+    static const RLE
+    static const PDF
+    static const LRO
+    static const RLO
+    static const LRI
+    static const RLI
+    static const FSI
+    static const PDI
+    static const LRM
+    static const RLM
+    static const ALM
+}

@@ -1,0 +1,24 @@
+external class ScrollDirection {
+    static const idle
+    static const forward
+    static const reverse
+}
+external class ViewportOffset {
+    construct fixed
+    construct zero
+    get pixels
+    get hasPixels
+    fun applyViewportDimension
+    fun applyContentDimensions
+    fun correctBy
+    fun jumpTo
+    fun animateTo
+    fun moveTo
+    get userScrollDirection
+    get allowImplicitScrolling
+    fun toString
+    fun debugFillDescription
+    fun addListener
+    fun removeListener
+    fun dispose
+}

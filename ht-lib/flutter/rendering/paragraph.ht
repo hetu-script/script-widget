@@ -1,0 +1,97 @@
+external class TextOverflow {
+    static const clip
+    static const fade
+    static const ellipsis
+    static const visible
+}
+external class TextParentData {
+    construct
+    var scale
+    var offset
+    fun toString
+}
+external class PlaceholderSpanIndexSemanticsTag {
+    construct 
+    get index
+    get name
+    get hashCode
+    fun toString
+}
+external class RenderParagraph {
+    construct 
+    fun setupParentData
+    get text
+    set text(value)
+    get textAlign
+    set textAlign(value)
+    get textDirection
+    set textDirection(value)
+    get softWrap
+    set softWrap(value)
+    get overflow
+    set overflow(value)
+    get textScaleFactor
+    set textScaleFactor(value)
+    get maxLines
+    set maxLines(value)
+    get locale
+    set locale(value)
+    get strutStyle
+    set strutStyle(value)
+    get textWidthBasis
+    set textWidthBasis(value)
+    get textHeightBehavior
+    set textHeightBehavior(value)
+    fun computeMinIntrinsicWidth
+    fun computeMaxIntrinsicWidth
+    fun computeMinIntrinsicHeight
+    fun computeMaxIntrinsicHeight
+    fun computeDistanceToActualBaseline
+    fun hitTestSelf
+    fun hitTestChildren
+    fun handleEvent
+    get debugHasOverflowShader
+    fun systemFontsDidChange
+    fun computeDryLayout
+    fun performLayout
+    fun paint
+    fun getOffsetForCaret
+    fun getFullHeightForCaret
+    fun getBoxesForSelection
+    fun getPositionForOffset
+    fun getWordBoundary
+    get textSize
+    fun describeSemanticsConfiguration
+    fun assembleSemanticsNode
+    fun clearSemantics
+    fun debugDescribeChildren
+    fun debugFillProperties
+    fun defaultComputeDistanceToFirstActualBaseline
+    fun defaultComputeDistanceToHighestActualBaseline
+    fun defaultHitTestChildren
+    fun defaultPaint
+    fun getChildrenAsList
+    fun getMinIntrinsicWidth
+    fun getMaxIntrinsicWidth
+    fun getMinIntrinsicHeight
+    fun getMaxIntrinsicHeight
+    fun getDryLayout
+    fun debugCannotComputeDryLayout
+    get hasSize
+    get size
+    fun debugAdoptSize
+    get semanticBounds
+    fun debugResetSize
+    fun getDistanceToBaseline
+    get constraints
+    fun debugAssertDoesMeetConstraints
+    fun markNeedsLayout
+    fun performResize
+    fun hitTest
+    fun applyPaintTransform
+    fun globalToLocal
+    fun localToGlobal
+    get paintBounds
+    fun debugHandleEvent
+    fun debugPaint
+}

@@ -1,0 +1,89 @@
+external class InternetAddressType {
+    static const IPv4
+    static const IPv6
+    static const unix
+    static const any
+}
+external class InternetAddress {
+    construct 
+    construct fromRawAddress
+    get type
+    get address
+    get host
+    get rawAddress
+    get isLoopback
+    get isLinkLocal
+    get isMulticast
+    fun reverse
+    static get loopbackIPv4
+    static get loopbackIPv6
+    static get anyIPv4
+    static get anyIPv6
+    static fun lookup (host, {type})
+    static fun tryParse (address)
+}
+external class NetworkInterface {
+    static get listSupported
+    static fun list ({includeLoopback, includeLinkLocal, type})
+}
+external class RawServerSocket {
+    static fun bind (address, port, {backlog, v6Only, shared})
+}
+external class ServerSocket {
+    static fun bind (address, port, {backlog, v6Only, shared})
+}
+external class SocketDirection {
+    static const receive
+    static const send
+    static const both
+}
+external class SocketOption {
+    static const tcpNoDelay
+}
+external class RawSocketOption {
+    construct 
+    construct fromInt
+    construct fromBool
+    get level
+    get option
+    get value
+    static get levelSocket
+    static get levelIPv4
+    static get IPv4MulticastInterface
+    static get levelIPv6
+    static get IPv6MulticastInterface
+    static get levelTcp
+    static get levelUdp
+}
+external class RawSocketEvent {
+    static const read
+    static const write
+    static const readClosed
+    static const closed
+}
+external class RawSocket {
+    static fun connect (host, port, {sourceAddress, timeout})
+    static fun startConnect (host, port, {sourceAddress})
+}
+external class Socket {
+    static fun connect (host, port, {sourceAddress, timeout})
+    static fun startConnect (host, port, {sourceAddress})
+}
+external class Datagram {
+    construct 
+    var data
+    var address
+    var port
+}
+external class RawDatagramSocket {
+    static fun bind (host, port, {reuseAddress, reusePort, ttl})
+}
+external class SocketException {
+    construct 
+    construct closed
+    get message
+    get osError
+    get address
+    get port
+    fun toString
+}

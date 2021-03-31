@@ -1,0 +1,19 @@
+external class FixedScrollMetrics {
+    construct 
+    get axisDirection
+    get minScrollExtent
+    get maxScrollExtent
+    get hasContentDimensions
+    get pixels
+    get hasPixels
+    get viewportDimension
+    get hasViewportDimension
+    fun toString
+    fun copyWith
+    get axis
+    get outOfRange
+    get atEdge
+    get extentBefore
+    get extentInside
+    get extentAfter
+}

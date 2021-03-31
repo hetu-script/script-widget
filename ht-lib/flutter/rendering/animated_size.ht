@@ -1,0 +1,59 @@
+external class RenderAnimatedSizeState {
+    static const start
+    static const stable
+    static const changed
+    static const unstable
+}
+external class RenderAnimatedSize {
+    construct 
+    get state
+    get duration
+    set duration(value)
+    get reverseDuration
+    set reverseDuration(value)
+    get curve
+    set curve(value)
+    get clipBehavior
+    set clipBehavior(value)
+    get isAnimating
+    get vsync
+    set vsync(value)
+    fun detach
+    fun performLayout
+    fun computeDryLayout
+    fun paint
+    get alignment
+    get textDirection
+    fun debugFillProperties
+    fun computeMinIntrinsicWidth
+    fun computeMaxIntrinsicWidth
+    fun computeMinIntrinsicHeight
+    fun computeMaxIntrinsicHeight
+    fun computeDistanceToActualBaseline
+    fun hitTestChildren
+    fun setupParentData
+    fun getMinIntrinsicWidth
+    fun getMaxIntrinsicWidth
+    fun getMinIntrinsicHeight
+    fun getMaxIntrinsicHeight
+    fun getDryLayout
+    fun debugCannotComputeDryLayout
+    get hasSize
+    get size
+    fun debugAdoptSize
+    get semanticBounds
+    fun debugResetSize
+    fun getDistanceToBaseline
+    get constraints
+    fun debugAssertDoesMeetConstraints
+    fun markNeedsLayout
+    fun performResize
+    fun hitTest
+    fun applyPaintTransform
+    fun globalToLocal
+    fun localToGlobal
+    get paintBounds
+    fun handleEvent
+    fun debugHandleEvent
+    fun debugPaint
+}

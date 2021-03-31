@@ -1,0 +1,5 @@
+external class IsolateNameServer {
+    static fun lookupPortByName (name)
+    static fun registerPortWithName (port, name)
+    static fun removePortNameMapping (name)
+}

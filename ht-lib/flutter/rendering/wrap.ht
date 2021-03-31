@@ -1,0 +1,79 @@
+external class WrapAlignment {
+    static const start
+    static const end
+    static const center
+    static const spaceBetween
+    static const spaceAround
+    static const spaceEvenly
+}
+external class WrapCrossAlignment {
+    static const start
+    static const end
+    static const center
+}
+external class WrapParentData {
+    construct
+    var offset
+    fun toString
+}
+external class RenderWrap {
+    construct 
+    get direction
+    set direction(value)
+    get alignment
+    set alignment(value)
+    get spacing
+    set spacing(value)
+    get runAlignment
+    set runAlignment(value)
+    get runSpacing
+    set runSpacing(value)
+    get crossAxisAlignment
+    set crossAxisAlignment(value)
+    get textDirection
+    set textDirection(value)
+    get verticalDirection
+    set verticalDirection(value)
+    get clipBehavior
+    set clipBehavior(value)
+    fun setupParentData
+    fun computeMinIntrinsicWidth
+    fun computeMaxIntrinsicWidth
+    fun computeMinIntrinsicHeight
+    fun computeMaxIntrinsicHeight
+    fun computeDistanceToActualBaseline
+    fun computeDryLayout
+    fun performLayout
+    fun hitTestChildren
+    fun paint
+    fun debugFillProperties
+    fun defaultComputeDistanceToFirstActualBaseline
+    fun defaultComputeDistanceToHighestActualBaseline
+    fun defaultHitTestChildren
+    fun defaultPaint
+    fun getChildrenAsList
+    fun getMinIntrinsicWidth
+    fun getMaxIntrinsicWidth
+    fun getMinIntrinsicHeight
+    fun getMaxIntrinsicHeight
+    fun getDryLayout
+    fun debugCannotComputeDryLayout
+    get hasSize
+    get size
+    fun debugAdoptSize
+    get semanticBounds
+    fun debugResetSize
+    fun getDistanceToBaseline
+    get constraints
+    fun debugAssertDoesMeetConstraints
+    fun markNeedsLayout
+    fun performResize
+    fun hitTest
+    fun applyPaintTransform
+    fun globalToLocal
+    fun localToGlobal
+    get paintBounds
+    fun handleEvent
+    fun debugHandleEvent
+    fun debugPaint
+}

@@ -1,0 +1,9 @@
+external class CallbackHandle {
+    construct fromRawHandle
+    fun toRawHandle
+    get hashCode
+}
+external class PluginUtilities {
+    static fun getCallbackHandle (callback)
+    static fun getCallbackFromHandle (handle)
+}

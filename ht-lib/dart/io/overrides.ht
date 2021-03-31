@@ -1,0 +1,6 @@
+external class IOOverrides {
+    static get current
+    static set global (overrides)
+    static fun runZoned (body, {createDirectory, getCurrentDirectory, setCurrentDirectory, getSystemTempDirectory, createFile, stat, statSync, fseIdentical, fseIdenticalSync, fseGetType, fseGetTypeSync, fsWatch, fsWatchIsSupported, createLink, socketConnect, socketStartConnect, serverSocketBind})
+    static fun runWithIOOverrides (body, overrides)
+}

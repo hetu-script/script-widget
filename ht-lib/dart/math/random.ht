@@ -1,0 +1,7 @@
+external class Random {
+    construct 
+    construct secure
+    fun nextInt
+    fun nextDouble
+    fun nextBool
+}

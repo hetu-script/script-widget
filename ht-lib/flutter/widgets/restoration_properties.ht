@@ -1,0 +1,117 @@
+external class RestorableDouble {
+    construct 
+    set value(value)
+    fun fromPrimitives
+    fun toPrimitives
+    fun createDefaultValue
+    fun didUpdateValue
+    fun initWithValue
+    get enabled
+    fun dispose
+    fun addListener
+    fun removeListener
+}
+external class RestorableInt {
+    construct 
+    set value(value)
+    fun fromPrimitives
+    fun toPrimitives
+    fun createDefaultValue
+    fun didUpdateValue
+    fun initWithValue
+    get enabled
+    fun dispose
+    fun addListener
+    fun removeListener
+}
+external class RestorableString {
+    construct 
+    set value(value)
+    fun fromPrimitives
+    fun toPrimitives
+    fun createDefaultValue
+    fun didUpdateValue
+    fun initWithValue
+    get enabled
+    fun dispose
+    fun addListener
+    fun removeListener
+}
+external class RestorableBool {
+    construct 
+    set value(value)
+    fun fromPrimitives
+    fun toPrimitives
+    fun createDefaultValue
+    fun didUpdateValue
+    fun initWithValue
+    get enabled
+    fun dispose
+    fun addListener
+    fun removeListener
+}
+external class RestorableBoolN {
+    construct 
+    fun createDefaultValue
+    fun didUpdateValue
+    fun fromPrimitives
+    fun toPrimitives
+    get value
+    fun initWithValue
+    get enabled
+    fun dispose
+    fun addListener
+    fun removeListener
+}
+external class RestorableDoubleN {
+    construct 
+    fun createDefaultValue
+    fun didUpdateValue
+    fun fromPrimitives
+    fun toPrimitives
+    get value
+    fun initWithValue
+    get enabled
+    fun dispose
+    fun addListener
+    fun removeListener
+}
+external class RestorableIntN {
+    construct 
+    fun createDefaultValue
+    fun didUpdateValue
+    fun fromPrimitives
+    fun toPrimitives
+    get value
+    fun initWithValue
+    get enabled
+    fun dispose
+    fun addListener
+    fun removeListener
+}
+external class RestorableStringN {
+    construct 
+    fun createDefaultValue
+    fun didUpdateValue
+    fun fromPrimitives
+    fun toPrimitives
+    get value
+    fun initWithValue
+    get enabled
+    fun dispose
+    fun addListener
+    fun removeListener
+}
+external class RestorableTextEditingController {
+    construct 
+    construct fromValue
+    fun createDefaultValue
+    fun fromPrimitives
+    fun toPrimitives
+    fun initWithValue
+    fun dispose
+    get value
+    get enabled
+    fun addListener
+    fun removeListener
+}

@@ -1,0 +1,21 @@
+external class AutovalidateMode {
+    static const disabled
+    static const always
+    static const onUserInteraction
+}
+external class Form {
+    construct 
+    get child
+    get onWillPop
+    get onChanged
+    get autovalidateMode
+    fun createState
+    static fun of (context)
+}
+external class FormState {
+    construct
+    fun build
+    fun save
+    fun reset
+    fun validate
+}

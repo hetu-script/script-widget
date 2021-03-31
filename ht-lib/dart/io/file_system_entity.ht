@@ -1,0 +1,31 @@
+external class FileSystemEntityType {
+    static const file
+    static const directory
+    static const link
+    static const notFound
+}
+external class FileStat {
+    static fun statSync (path)
+    static fun stat (path)
+}
+external class FileSystemEntity {
+    static fun identical (path1, path2)
+    static fun identicalSync (path1, path2)
+    static get isWatchSupported
+    static fun type (path, {followLinks})
+    static fun typeSync (path, {followLinks})
+    static fun isLink (path)
+    static fun isFile (path)
+    static fun isDirectory (path)
+    static fun isLinkSync (path)
+    static fun isFileSync (path)
+    static fun isDirectorySync (path)
+    static fun parentOf (path)
+}
+external class FileSystemEvent {
+    static const create
+    static const modify
+    static const delete
+    static const move
+    static const all
+}

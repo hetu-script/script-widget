@@ -1,0 +1,9 @@
+external class CupertinoThumbPainter {
+    construct 
+    construct switchThumb
+    get color
+    get shadows
+    fun paint
+    static const radius
+    static const extension
+}

@@ -1,0 +1,23 @@
+external class FlutterLogoStyle {
+    static const markOnly
+    static const horizontal
+    static const stacked
+}
+external class FlutterLogoDecoration {
+    construct 
+    get textColor
+    get style
+    get margin
+    fun debugAssertIsValid
+    get isComplex
+    fun lerpFrom
+    fun lerpTo
+    fun hitTest
+    fun createBoxPainter
+    fun getClipPath
+    get hashCode
+    fun debugFillProperties
+    fun toStringShort
+    get padding
+    static fun lerp (a, b, t)
+}

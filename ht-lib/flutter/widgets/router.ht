@@ -1,0 +1,39 @@
+external class RouteInformation {
+    construct 
+    get location
+    get state
+}
+external class RootBackButtonDispatcher {
+    construct 
+    fun addCallback
+    fun removeCallback
+    fun didPopRoute
+    get hasCallbacks
+    fun invokeCallback
+    fun createChildBackButtonDispatcher
+    fun takePriority
+    fun deferTo
+    fun forget
+}
+external class ChildBackButtonDispatcher {
+    construct 
+    get parent
+    fun takePriority
+    fun deferTo
+    fun removeCallback
+    get hasCallbacks
+    fun invokeCallback
+    fun createChildBackButtonDispatcher
+    fun forget
+    fun addCallback
+}
+external class PlatformRouteInformationProvider {
+    construct 
+    fun routerReportsNewRouteInformation
+    get value
+    fun addListener
+    fun removeListener
+    fun dispose
+    fun didPushRouteInformation
+    fun didPushRoute
+}

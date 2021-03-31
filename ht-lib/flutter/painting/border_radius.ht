@@ -1,0 +1,37 @@
+external class BorderRadius {
+    construct all
+    construct circular
+    construct vertical
+    construct horizontal
+    construct only
+    get topLeft
+    get topRight
+    get bottomLeft
+    get bottomRight
+    fun toRRect
+    fun subtract
+    fun add
+    fun resolve
+    fun toString
+    get hashCode
+    static fun lerp (a, b, t)
+    static const zero
+}
+external class BorderRadiusDirectional {
+    construct all
+    construct circular
+    construct vertical
+    construct horizontal
+    construct only
+    get topStart
+    get topEnd
+    get bottomStart
+    get bottomEnd
+    fun subtract
+    fun add
+    fun resolve
+    fun toString
+    get hashCode
+    static fun lerp (a, b, t)
+    static const zero
+}

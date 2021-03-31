@@ -1,0 +1,3 @@
+external class Key {
+    construct 
+}

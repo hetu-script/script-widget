@@ -1,0 +1,14 @@
+external class SystemChannels {
+    static const navigation
+    static const platform
+    static const textInput
+    static const keyEvent
+    static const lifecycle
+    static const system
+    static const accessibility
+    static const platform_views
+    static const skia
+    static const mouseCursor
+    static const restoration
+    static const deferredComponent
+}

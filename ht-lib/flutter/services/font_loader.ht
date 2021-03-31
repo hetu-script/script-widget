@@ -1,0 +1,6 @@
+external class FontLoader {
+    construct 
+    get family
+    fun addFont
+    fun load
+}

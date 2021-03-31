@@ -1,0 +1,92 @@
+external class SmartDashesType {
+    static const disabled
+    static const enabled
+}
+external class SmartQuotesType {
+    static const disabled
+    static const enabled
+}
+external class TextInputAction {
+    static const none
+    static const unspecified
+    static const done
+    static const go
+    static const search
+    static const send
+    static const next
+    static const previous
+    static const continueAction
+    static const join
+    static const route
+    static const emergencyCall
+    static const newline
+}
+external class TextCapitalization {
+    static const words
+    static const sentences
+    static const characters
+    static const none
+}
+external class FloatingCursorDragState {
+    static const Start
+    static const Update
+    static const End
+}
+external class TextInputType {
+    construct numberWithOptions
+    get index
+    get signed
+    get decimal
+    fun toJson
+    fun toString
+    get hashCode
+    static const text
+    static const multiline
+    static const number
+    static const phone
+    static const datetime
+    static const emailAddress
+    static const url
+    static const visiblePassword
+    static const name
+    static const streetAddress
+    static const values
+}
+external class TextInputConfiguration {
+    construct 
+    get inputType
+    get readOnly
+    get obscureText
+    get autocorrect
+    get autofillConfiguration
+    get smartDashesType
+    get smartQuotesType
+    get enableSuggestions
+    get actionLabel
+    get inputAction
+    get textCapitalization
+    get keyboardAppearance
+    fun toJson
+}
+external class RawFloatingCursorPoint {
+    construct 
+    get offset
+    get state
+}
+external class TextEditingValue {
+    construct 
+    construct fromJSON
+    get text
+    get selection
+    get composing
+    fun toJSON
+    fun copyWith
+    get isComposingRangeValid
+    fun toString
+    get hashCode
+    static const empty
+}
+external class TextInput {
+    static fun attach (client, configuration)
+    static fun finishAutofillContext ({shouldSave})
+}

@@ -1,0 +1,38 @@
+external class FramePhase {
+    static const vsyncStart
+    static const buildStart
+    static const buildFinish
+    static const rasterStart
+    static const rasterFinish
+}
+external class AppLifecycleState {
+    static const resumed
+    static const inactive
+    static const paused
+    static const detached
+}
+external class PlatformDispatcher {
+    static get instance
+}
+external class FrameTiming {
+    construct 
+    fun timestampInMicroseconds
+    get buildDuration
+    get rasterDuration
+    get vsyncOverhead
+    get totalSpan
+    fun toString
+}
+external class WindowPadding {
+    static const zero
+}
+external class Locale {
+    construct 
+    construct fromSubtags
+    get scriptCode
+    get languageCode
+    get countryCode
+    get hashCode
+    fun toString
+    fun toLanguageTag
+}

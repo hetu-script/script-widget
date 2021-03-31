@@ -1,0 +1,59 @@
+external class KeyboardSide {
+    static const any
+    static const left
+    static const right
+    static const all
+}
+external class ModifierKey {
+    static const controlModifier
+    static const shiftModifier
+    static const altModifier
+    static const metaModifier
+    static const capsLockModifier
+    static const numLockModifier
+    static const scrollLockModifier
+    static const functionModifier
+    static const symbolModifier
+}
+external class RawKeyEvent {
+    construct fromMessage
+    get character
+    get data
+    fun isKeyPressed
+    get isControlPressed
+    get isShiftPressed
+    get isAltPressed
+    get isMetaPressed
+    get physicalKey
+    get logicalKey
+    fun debugFillProperties
+}
+external class RawKeyDownEvent {
+    construct 
+    get character
+    get data
+    fun isKeyPressed
+    get isControlPressed
+    get isShiftPressed
+    get isAltPressed
+    get isMetaPressed
+    get physicalKey
+    get logicalKey
+    fun debugFillProperties
+}
+external class RawKeyUpEvent {
+    construct 
+    get character
+    get data
+    fun isKeyPressed
+    get isControlPressed
+    get isShiftPressed
+    get isAltPressed
+    get isMetaPressed
+    get physicalKey
+    get logicalKey
+    fun debugFillProperties
+}
+external class RawKeyboard {
+    static const instance
+}

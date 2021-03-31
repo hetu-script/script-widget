@@ -1,0 +1,14 @@
+external class Invocation {
+    construct method
+    construct genericMethod
+    construct getter
+    construct setter
+    get memberName
+    get typeArguments
+    get positionalArguments
+    get namedArguments
+    get isMethod
+    get isGetter
+    get isSetter
+    get isAccessor
+}

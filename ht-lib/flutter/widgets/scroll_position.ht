@@ -1,0 +1,5 @@
+external class ScrollPositionAlignmentPolicy {
+    static const explicit
+    static const keepVisibleAtEnd
+    static const keepVisibleAtStart
+}

@@ -1,0 +1,117 @@
+external class RenderSliverOpacity {
+    construct 
+    get alwaysNeedsCompositing
+    get opacity
+    set opacity(value)
+    get alwaysIncludeSemantics
+    set alwaysIncludeSemantics(value)
+    fun paint
+    fun visitChildrenForSemantics
+    fun debugFillProperties
+    fun setupParentData
+    fun performLayout
+    fun hitTestChildren
+    fun childMainAxisPosition
+    fun applyPaintTransform
+    get constraints
+    get geometry
+    get semanticBounds
+    get paintBounds
+    fun debugResetSize
+    fun debugAssertDoesMeetConstraints
+    fun performResize
+    get centerOffsetAdjustment
+    fun hitTest
+    fun calculatePaintOffset
+    fun calculateCacheOffset
+    fun childScrollOffset
+    fun debugPaint
+    fun handleEvent
+}
+external class RenderSliverIgnorePointer {
+    construct 
+    get ignoring
+    set ignoring(value)
+    get ignoringSemantics
+    set ignoringSemantics(value)
+    fun hitTest
+    fun visitChildrenForSemantics
+    fun debugFillProperties
+    fun setupParentData
+    fun performLayout
+    fun paint
+    fun hitTestChildren
+    fun childMainAxisPosition
+    fun applyPaintTransform
+    get constraints
+    get geometry
+    get semanticBounds
+    get paintBounds
+    fun debugResetSize
+    fun debugAssertDoesMeetConstraints
+    fun performResize
+    get centerOffsetAdjustment
+    fun calculatePaintOffset
+    fun calculateCacheOffset
+    fun childScrollOffset
+    fun debugPaint
+    fun handleEvent
+}
+external class RenderSliverOffstage {
+    construct 
+    get offstage
+    set offstage(value)
+    fun performLayout
+    fun hitTest
+    fun hitTestChildren
+    fun paint
+    fun visitChildrenForSemantics
+    fun debugFillProperties
+    fun debugDescribeChildren
+    fun setupParentData
+    fun childMainAxisPosition
+    fun applyPaintTransform
+    get constraints
+    get geometry
+    get semanticBounds
+    get paintBounds
+    fun debugResetSize
+    fun debugAssertDoesMeetConstraints
+    fun performResize
+    get centerOffsetAdjustment
+    fun calculatePaintOffset
+    fun calculateCacheOffset
+    fun childScrollOffset
+    fun debugPaint
+    fun handleEvent
+}
+external class RenderSliverAnimatedOpacity {
+    construct 
+    get alwaysNeedsCompositing
+    get opacity
+    get alwaysIncludeSemantics
+    fun attach
+    fun detach
+    fun paint
+    fun visitChildrenForSemantics
+    fun debugFillProperties
+    fun setupParentData
+    fun performLayout
+    fun hitTestChildren
+    fun childMainAxisPosition
+    fun applyPaintTransform
+    get constraints
+    get geometry
+    get semanticBounds
+    get paintBounds
+    fun debugResetSize
+    fun debugAssertDoesMeetConstraints
+    fun performResize
+    get centerOffsetAdjustment
+    fun hitTest
+    fun calculatePaintOffset
+    fun calculateCacheOffset
+    fun childScrollOffset
+    fun debugPaint
+    fun handleEvent
+}

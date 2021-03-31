@@ -1,0 +1,21 @@
+external class FrictionSimulation {
+    construct 
+    construct through
+    var tolerance
+    fun x
+    fun dx
+    get finalX
+    fun timeAtX
+    fun isDone
+    fun toString
+}
+external class BoundedFrictionSimulation {
+    construct 
+    var tolerance
+    fun x
+    fun isDone
+    fun dx
+    get finalX
+    fun timeAtX
+    fun toString
+}

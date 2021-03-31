@@ -1,0 +1,16 @@
+external class Link {
+    construct 
+    construct fromRawPath
+    construct fromUri
+    fun create
+    fun createSync
+    fun updateSync
+    fun update
+    fun resolveSymbolicLinks
+    fun resolveSymbolicLinksSync
+    fun rename
+    fun renameSync
+    get absolute
+    fun target
+    fun targetSync
+}

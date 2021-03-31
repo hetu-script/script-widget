@@ -1,0 +1,12 @@
+external class CupertinoIconThemeData {
+    construct 
+    get color
+    get size
+    fun resolve
+    fun copyWith
+    fun debugFillProperties
+    fun merge
+    get isConcrete
+    get opacity
+    get hashCode
+}

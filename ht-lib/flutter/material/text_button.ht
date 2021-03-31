@@ -1,0 +1,17 @@
+external class TextButton {
+    construct 
+    construct icon
+    get onPressed
+    get onLongPress
+    get style
+    get clipBehavior
+    get focusNode
+    get autofocus
+    get child
+    fun defaultStyleOf
+    fun themeStyleOf
+    get enabled
+    fun createState
+    fun debugFillProperties
+    static fun styleFrom ({primary, onSurface, backgroundColor, shadowColor, elevation, textStyle, padding, minimumSize, side, shape, enabledMouseCursor, disabledMouseCursor, visualDensity, tapTargetSize, animationDuration, enableFeedback, alignment})
+}

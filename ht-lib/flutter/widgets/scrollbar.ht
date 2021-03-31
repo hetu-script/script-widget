@@ -1,0 +1,53 @@
+external class ScrollbarPainter {
+    construct 
+    get fadeoutOpacityAnimation
+    get color
+    set color(value)
+    get trackColor
+    set trackColor(value)
+    get trackBorderColor
+    set trackBorderColor(value)
+    get textDirection
+    set textDirection(value)
+    get thickness
+    set thickness(value)
+    get mainAxisMargin
+    set mainAxisMargin(value)
+    get crossAxisMargin
+    set crossAxisMargin(value)
+    get radius
+    set radius(value)
+    get padding
+    set padding(value)
+    get minLength
+    set minLength(value)
+    get minOverscrollLength
+    set minOverscrollLength(value)
+    fun update
+    fun updateThickness
+    fun dispose
+    fun getTrackToScroll
+    fun paint
+    fun hitTestInteractive
+    fun hitTestOnlyThumbInteractive
+    fun hitTest
+    fun shouldRepaint
+    fun shouldRebuildSemantics
+    get semanticsBuilder
+    fun addListener
+    fun removeListener
+}
+external class RawScrollbar {
+    construct 
+    get child
+    get controller
+    get isAlwaysShown
+    get radius
+    get thickness
+    get thumbColor
+    get fadeDuration
+    get timeToFade
+    get pressDuration
+    get notificationPredicate
+    fun createState
+}
