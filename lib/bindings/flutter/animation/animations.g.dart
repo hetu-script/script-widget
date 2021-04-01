@@ -1,8 +1,5 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/animation.dart';
-import 'dart:math'as math;
-import 'package:flutter/foundation.dart';
-
 
 class ProxyAnimationAutoBinding extends HTExternalClass {
   ProxyAnimationAutoBinding() : super('ProxyAnimation');
@@ -11,7 +8,8 @@ class ProxyAnimationAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'ProxyAnimation':
-        return ({positionalArgs, namedArgs, typeArgs}) => ProxyAnimation(positionalArgs.length > 0 ? positionalArgs[0] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            ProxyAnimation(positionalArgs.length > 0 ? positionalArgs[0] : null);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -30,10 +28,10 @@ class ProxyAnimationAutoBinding extends HTExternalClass {
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
       'VoidCallback': (HTFunction function) => () => function.call(positionalArgs: const [], namedArgs: const {}),
-      'AnimationStatusListener': (HTFunction function) => (status) => function.call(positionalArgs: [status], namedArgs: const {}),
+      'AnimationStatusListener': (HTFunction function) =>
+          (status) => function.call(positionalArgs: [status], namedArgs: const {}),
     };
   }
-
 }
 
 extension ProxyAnimationBinding on ProxyAnimation {
@@ -54,31 +52,31 @@ extension ProxyAnimationBinding on ProxyAnimation {
       case 'isCompleted':
         return isCompleted;
       case 'didStartListening':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.didStartListening();
+        return ({positionalArgs, namedArgs, typeArgs}) => didStartListening();
       case 'didStopListening':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.didStopListening();
+        return ({positionalArgs, namedArgs, typeArgs}) => didStopListening();
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       case 'didRegisterListener':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.didRegisterListener();
+        return ({positionalArgs, namedArgs, typeArgs}) => didRegisterListener();
       case 'didUnregisterListener':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.didUnregisterListener();
+        return ({positionalArgs, namedArgs, typeArgs}) => didUnregisterListener();
       case 'addListener':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.addListener(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => addListener(positionalArgs[0]);
       case 'removeListener':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.removeListener(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => removeListener(positionalArgs[0]);
       case 'notifyListeners':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.notifyListeners();
+        return ({positionalArgs, namedArgs, typeArgs}) => notifyListeners();
       case 'addStatusListener':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.addStatusListener(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => addStatusListener(positionalArgs[0]);
       case 'removeStatusListener':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.removeStatusListener(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => removeStatusListener(positionalArgs[0]);
       case 'notifyStatusListeners':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.notifyStatusListeners(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => notifyStatusListeners(positionalArgs[0]);
       case 'drive':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.drive(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => drive(positionalArgs[0]);
       case 'toStringDetails':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toStringDetails();
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringDetails();
       default:
         throw HTErrorUndefined(varName);
     }
@@ -87,7 +85,7 @@ extension ProxyAnimationBinding on ProxyAnimation {
   void htAssign(String varName, dynamic value) {
     switch (varName) {
       case 'parent':
-        this.parent = value;
+        parent = value;
         break;
       default:
         throw HTErrorUndefined(varName);
@@ -113,14 +111,13 @@ class ReverseAnimationAutoBinding extends HTExternalClass {
     return (instance as ReverseAnimation).htFetch(id);
   }
 
-
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
       'VoidCallback': (HTFunction function) => () => function.call(positionalArgs: const [], namedArgs: const {}),
-      'AnimationStatusListener': (HTFunction function) => (status) => function.call(positionalArgs: [status], namedArgs: const {}),
+      'AnimationStatusListener': (HTFunction function) =>
+          (status) => function.call(positionalArgs: [status], namedArgs: const {}),
     };
   }
-
 }
 
 extension ReverseAnimationBinding on ReverseAnimation {
@@ -141,34 +138,33 @@ extension ReverseAnimationBinding on ReverseAnimation {
       case 'isCompleted':
         return isCompleted;
       case 'addListener':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.addListener(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => addListener(positionalArgs[0]);
       case 'removeListener':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.removeListener(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => removeListener(positionalArgs[0]);
       case 'didStartListening':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.didStartListening();
+        return ({positionalArgs, namedArgs, typeArgs}) => didStartListening();
       case 'didStopListening':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.didStopListening();
+        return ({positionalArgs, namedArgs, typeArgs}) => didStopListening();
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       case 'didRegisterListener':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.didRegisterListener();
+        return ({positionalArgs, namedArgs, typeArgs}) => didRegisterListener();
       case 'didUnregisterListener':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.didUnregisterListener();
+        return ({positionalArgs, namedArgs, typeArgs}) => didUnregisterListener();
       case 'addStatusListener':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.addStatusListener(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => addStatusListener(positionalArgs[0]);
       case 'removeStatusListener':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.removeStatusListener(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => removeStatusListener(positionalArgs[0]);
       case 'notifyStatusListeners':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.notifyStatusListeners(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => notifyStatusListeners(positionalArgs[0]);
       case 'drive':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.drive(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => drive(positionalArgs[0]);
       case 'toStringDetails':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toStringDetails();
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringDetails();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class CurvedAnimationAutoBinding extends HTExternalClass {
@@ -178,7 +174,10 @@ class CurvedAnimationAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'CurvedAnimation':
-        return ({positionalArgs, namedArgs, typeArgs}) => CurvedAnimation(parent : namedArgs['parent'], curve : namedArgs['curve'], reverseCurve : namedArgs.containsKey('reverseCurve') ? namedArgs['reverseCurve'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => CurvedAnimation(
+            parent: namedArgs['parent'],
+            curve: namedArgs['curve'],
+            reverseCurve: namedArgs.containsKey('reverseCurve') ? namedArgs['reverseCurve'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -197,10 +196,10 @@ class CurvedAnimationAutoBinding extends HTExternalClass {
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
       'VoidCallback': (HTFunction function) => () => function.call(positionalArgs: const [], namedArgs: const {}),
-      'AnimationStatusListener': (HTFunction function) => (status) => function.call(positionalArgs: [status], namedArgs: const {}),
+      'AnimationStatusListener': (HTFunction function) =>
+          (status) => function.call(positionalArgs: [status], namedArgs: const {}),
     };
   }
-
 }
 
 extension CurvedAnimationBinding on CurvedAnimation {
@@ -223,19 +222,19 @@ extension CurvedAnimationBinding on CurvedAnimation {
       case 'isCompleted':
         return isCompleted;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       case 'addListener':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.addListener(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => addListener(positionalArgs[0]);
       case 'removeListener':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.removeListener(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => removeListener(positionalArgs[0]);
       case 'addStatusListener':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.addStatusListener(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => addStatusListener(positionalArgs[0]);
       case 'removeStatusListener':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.removeStatusListener(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => removeStatusListener(positionalArgs[0]);
       case 'drive':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.drive(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => drive(positionalArgs[0]);
       case 'toStringDetails':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toStringDetails();
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringDetails();
       default:
         throw HTErrorUndefined(varName);
     }
@@ -244,10 +243,10 @@ extension CurvedAnimationBinding on CurvedAnimation {
   void htAssign(String varName, dynamic value) {
     switch (varName) {
       case 'curve':
-        this.curve = value;
+        curve = value;
         break;
       case 'reverseCurve':
-        this.reverseCurve = value;
+        reverseCurve = value;
         break;
       default:
         throw HTErrorUndefined(varName);
@@ -262,7 +261,8 @@ class TrainHoppingAnimationAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'TrainHoppingAnimation':
-        return ({positionalArgs, namedArgs, typeArgs}) => TrainHoppingAnimation(positionalArgs[0], positionalArgs[1], onSwitchedTrain : namedArgs.containsKey('onSwitchedTrain') ? namedArgs['onSwitchedTrain'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => TrainHoppingAnimation(positionalArgs[0], positionalArgs[1],
+            onSwitchedTrain: namedArgs.containsKey('onSwitchedTrain') ? namedArgs['onSwitchedTrain'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -281,10 +281,10 @@ class TrainHoppingAnimationAutoBinding extends HTExternalClass {
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
       'VoidCallback': (HTFunction function) => () => function.call(positionalArgs: const [], namedArgs: const {}),
-      'AnimationStatusListener': (HTFunction function) => (status) => function.call(positionalArgs: [status], namedArgs: const {}),
+      'AnimationStatusListener': (HTFunction function) =>
+          (status) => function.call(positionalArgs: [status], namedArgs: const {}),
     };
   }
-
 }
 
 extension TrainHoppingAnimationBinding on TrainHoppingAnimation {
@@ -305,29 +305,29 @@ extension TrainHoppingAnimationBinding on TrainHoppingAnimation {
       case 'isCompleted':
         return isCompleted;
       case 'dispose':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.dispose();
+        return ({positionalArgs, namedArgs, typeArgs}) => dispose();
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       case 'didRegisterListener':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.didRegisterListener();
+        return ({positionalArgs, namedArgs, typeArgs}) => didRegisterListener();
       case 'didUnregisterListener':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.didUnregisterListener();
+        return ({positionalArgs, namedArgs, typeArgs}) => didUnregisterListener();
       case 'addListener':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.addListener(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => addListener(positionalArgs[0]);
       case 'removeListener':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.removeListener(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => removeListener(positionalArgs[0]);
       case 'notifyListeners':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.notifyListeners();
+        return ({positionalArgs, namedArgs, typeArgs}) => notifyListeners();
       case 'addStatusListener':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.addStatusListener(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => addStatusListener(positionalArgs[0]);
       case 'removeStatusListener':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.removeStatusListener(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => removeStatusListener(positionalArgs[0]);
       case 'notifyStatusListeners':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.notifyStatusListeners(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => notifyStatusListeners(positionalArgs[0]);
       case 'drive':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.drive(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => drive(positionalArgs[0]);
       case 'toStringDetails':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toStringDetails();
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringDetails();
       default:
         throw HTErrorUndefined(varName);
     }
@@ -336,7 +336,7 @@ extension TrainHoppingAnimationBinding on TrainHoppingAnimation {
   void htAssign(String varName, dynamic value) {
     switch (varName) {
       case 'onSwitchedTrain':
-        this.onSwitchedTrain = value;
+        onSwitchedTrain = value;
         break;
       default:
         throw HTErrorUndefined(varName);
@@ -351,7 +351,8 @@ class AnimationMeanAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'AnimationMean':
-        return ({positionalArgs, namedArgs, typeArgs}) => AnimationMean(left : namedArgs['left'], right : namedArgs['right']);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            AnimationMean(left: namedArgs['left'], right: namedArgs['right']);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -362,14 +363,13 @@ class AnimationMeanAutoBinding extends HTExternalClass {
     return (instance as AnimationMean).htFetch(id);
   }
 
-
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
       'VoidCallback': (HTFunction function) => () => function.call(positionalArgs: const [], namedArgs: const {}),
-      'AnimationStatusListener': (HTFunction function) => (status) => function.call(positionalArgs: [status], namedArgs: const {}),
+      'AnimationStatusListener': (HTFunction function) =>
+          (status) => function.call(positionalArgs: [status], namedArgs: const {}),
     };
   }
-
 }
 
 extension AnimationMeanBinding on AnimationMean {
@@ -392,35 +392,33 @@ extension AnimationMeanBinding on AnimationMean {
       case 'isCompleted':
         return isCompleted;
       case 'didStartListening':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.didStartListening();
+        return ({positionalArgs, namedArgs, typeArgs}) => didStartListening();
       case 'didStopListening':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.didStopListening();
+        return ({positionalArgs, namedArgs, typeArgs}) => didStopListening();
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       case 'didRegisterListener':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.didRegisterListener();
+        return ({positionalArgs, namedArgs, typeArgs}) => didRegisterListener();
       case 'didUnregisterListener':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.didUnregisterListener();
+        return ({positionalArgs, namedArgs, typeArgs}) => didUnregisterListener();
       case 'addListener':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.addListener(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => addListener(positionalArgs[0]);
       case 'removeListener':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.removeListener(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => removeListener(positionalArgs[0]);
       case 'notifyListeners':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.notifyListeners();
+        return ({positionalArgs, namedArgs, typeArgs}) => notifyListeners();
       case 'addStatusListener':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.addStatusListener(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => addStatusListener(positionalArgs[0]);
       case 'removeStatusListener':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.removeStatusListener(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => removeStatusListener(positionalArgs[0]);
       case 'notifyStatusListeners':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.notifyStatusListeners(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => notifyStatusListeners(positionalArgs[0]);
       case 'drive':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.drive(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => drive(positionalArgs[0]);
       case 'toStringDetails':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toStringDetails();
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringDetails();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
-

@@ -1,0 +1,22 @@
+external class MaterialBanner {
+    construct 
+    get content
+    get contentTextStyle
+    get actions
+    get leading
+    get backgroundColor
+    get padding
+    get leadingPadding
+    get forceActionsBelow
+    get overflowAlignment
+    get key
+    fun build
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}

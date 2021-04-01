@@ -1,0 +1,17 @@
+external class CupertinoActivityIndicator {
+    construct 
+    construct partiallyRevealed
+    get animating
+    get radius
+    get progress
+    get key
+    fun createState
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}

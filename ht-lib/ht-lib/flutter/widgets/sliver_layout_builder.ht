@@ -1,0 +1,14 @@
+external class SliverLayoutBuilder {
+    construct 
+    get key
+    get builder
+    fun createRenderObject
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}

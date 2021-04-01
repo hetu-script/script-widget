@@ -1,9 +1,7 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/material.dart';
-import 'dart:ui';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart';
-
 
 class BottomNavigationBarThemeDataAutoBinding extends HTExternalClass {
   BottomNavigationBarThemeDataAutoBinding() : super('BottomNavigationBarThemeData');
@@ -12,9 +10,23 @@ class BottomNavigationBarThemeDataAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'BottomNavigationBarThemeData':
-        return ({positionalArgs, namedArgs, typeArgs}) => BottomNavigationBarThemeData(backgroundColor : namedArgs.containsKey('backgroundColor') ? namedArgs['backgroundColor'] : null, elevation : namedArgs.containsKey('elevation') ? namedArgs['elevation'] : null, selectedIconTheme : namedArgs.containsKey('selectedIconTheme') ? namedArgs['selectedIconTheme'] : null, unselectedIconTheme : namedArgs.containsKey('unselectedIconTheme') ? namedArgs['unselectedIconTheme'] : null, selectedItemColor : namedArgs.containsKey('selectedItemColor') ? namedArgs['selectedItemColor'] : null, unselectedItemColor : namedArgs.containsKey('unselectedItemColor') ? namedArgs['unselectedItemColor'] : null, selectedLabelStyle : namedArgs.containsKey('selectedLabelStyle') ? namedArgs['selectedLabelStyle'] : null, unselectedLabelStyle : namedArgs.containsKey('unselectedLabelStyle') ? namedArgs['unselectedLabelStyle'] : null, showSelectedLabels : namedArgs.containsKey('showSelectedLabels') ? namedArgs['showSelectedLabels'] : null, showUnselectedLabels : namedArgs.containsKey('showUnselectedLabels') ? namedArgs['showUnselectedLabels'] : null, type : namedArgs.containsKey('type') ? namedArgs['type'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => BottomNavigationBarThemeData(
+            backgroundColor: namedArgs.containsKey('backgroundColor') ? namedArgs['backgroundColor'] : null,
+            elevation: namedArgs.containsKey('elevation') ? namedArgs['elevation'] : null,
+            selectedIconTheme: namedArgs.containsKey('selectedIconTheme') ? namedArgs['selectedIconTheme'] : null,
+            unselectedIconTheme: namedArgs.containsKey('unselectedIconTheme') ? namedArgs['unselectedIconTheme'] : null,
+            selectedItemColor: namedArgs.containsKey('selectedItemColor') ? namedArgs['selectedItemColor'] : null,
+            unselectedItemColor: namedArgs.containsKey('unselectedItemColor') ? namedArgs['unselectedItemColor'] : null,
+            selectedLabelStyle: namedArgs.containsKey('selectedLabelStyle') ? namedArgs['selectedLabelStyle'] : null,
+            unselectedLabelStyle:
+                namedArgs.containsKey('unselectedLabelStyle') ? namedArgs['unselectedLabelStyle'] : null,
+            showSelectedLabels: namedArgs.containsKey('showSelectedLabels') ? namedArgs['showSelectedLabels'] : null,
+            showUnselectedLabels:
+                namedArgs.containsKey('showUnselectedLabels') ? namedArgs['showUnselectedLabels'] : null,
+            type: namedArgs.containsKey('type') ? namedArgs['type'] : null);
       case 'BottomNavigationBarThemeData.lerp':
-        return ({positionalArgs, namedArgs, typeArgs}) => BottomNavigationBarThemeData.lerp(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            BottomNavigationBarThemeData.lerp(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -24,9 +36,6 @@ class BottomNavigationBarThemeDataAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as BottomNavigationBarThemeData).htFetch(id);
   }
-
-
-
 }
 
 extension BottomNavigationBarThemeDataBinding on BottomNavigationBarThemeData {
@@ -59,14 +68,35 @@ extension BottomNavigationBarThemeDataBinding on BottomNavigationBarThemeData {
       case 'hashCode':
         return hashCode;
       case 'copyWith':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.copyWith(backgroundColor : namedArgs.containsKey('backgroundColor') ? namedArgs['backgroundColor'] : null, elevation : namedArgs.containsKey('elevation') ? namedArgs['elevation'] : null, selectedIconTheme : namedArgs.containsKey('selectedIconTheme') ? namedArgs['selectedIconTheme'] : null, unselectedIconTheme : namedArgs.containsKey('unselectedIconTheme') ? namedArgs['unselectedIconTheme'] : null, selectedItemColor : namedArgs.containsKey('selectedItemColor') ? namedArgs['selectedItemColor'] : null, unselectedItemColor : namedArgs.containsKey('unselectedItemColor') ? namedArgs['unselectedItemColor'] : null, selectedLabelStyle : namedArgs.containsKey('selectedLabelStyle') ? namedArgs['selectedLabelStyle'] : null, unselectedLabelStyle : namedArgs.containsKey('unselectedLabelStyle') ? namedArgs['unselectedLabelStyle'] : null, showSelectedLabels : namedArgs.containsKey('showSelectedLabels') ? namedArgs['showSelectedLabels'] : null, showUnselectedLabels : namedArgs.containsKey('showUnselectedLabels') ? namedArgs['showUnselectedLabels'] : null, type : namedArgs.containsKey('type') ? namedArgs['type'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => copyWith(
+            backgroundColor: namedArgs.containsKey('backgroundColor') ? namedArgs['backgroundColor'] : null,
+            elevation: namedArgs.containsKey('elevation') ? namedArgs['elevation'] : null,
+            selectedIconTheme: namedArgs.containsKey('selectedIconTheme') ? namedArgs['selectedIconTheme'] : null,
+            unselectedIconTheme: namedArgs.containsKey('unselectedIconTheme') ? namedArgs['unselectedIconTheme'] : null,
+            selectedItemColor: namedArgs.containsKey('selectedItemColor') ? namedArgs['selectedItemColor'] : null,
+            unselectedItemColor: namedArgs.containsKey('unselectedItemColor') ? namedArgs['unselectedItemColor'] : null,
+            selectedLabelStyle: namedArgs.containsKey('selectedLabelStyle') ? namedArgs['selectedLabelStyle'] : null,
+            unselectedLabelStyle:
+                namedArgs.containsKey('unselectedLabelStyle') ? namedArgs['unselectedLabelStyle'] : null,
+            showSelectedLabels: namedArgs.containsKey('showSelectedLabels') ? namedArgs['showSelectedLabels'] : null,
+            showUnselectedLabels:
+                namedArgs.containsKey('showUnselectedLabels') ? namedArgs['showUnselectedLabels'] : null,
+            type: namedArgs.containsKey('type') ? namedArgs['type'] : null);
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+      case 'toStringShort':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class BottomNavigationBarThemeAutoBinding extends HTExternalClass {
@@ -76,7 +106,10 @@ class BottomNavigationBarThemeAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'BottomNavigationBarTheme':
-        return ({positionalArgs, namedArgs, typeArgs}) => BottomNavigationBarTheme(key : namedArgs.containsKey('key') ? namedArgs['key'] : null, data : namedArgs['data'], child : namedArgs['child']);
+        return ({positionalArgs, namedArgs, typeArgs}) => BottomNavigationBarTheme(
+            key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
+            data: namedArgs['data'],
+            child: namedArgs['child']);
       case 'BottomNavigationBarTheme.of':
         return ({positionalArgs, namedArgs, typeArgs}) => BottomNavigationBarTheme.of(positionalArgs[0]);
       default:
@@ -88,9 +121,6 @@ class BottomNavigationBarThemeAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as BottomNavigationBarTheme).htFetch(id);
   }
-
-
-
 }
 
 extension BottomNavigationBarThemeBinding on BottomNavigationBarTheme {
@@ -100,12 +130,38 @@ extension BottomNavigationBarThemeBinding on BottomNavigationBarTheme {
         return HTTypeId('BottomNavigationBarTheme');
       case 'data':
         return data;
+      case 'child':
+        return child;
+      case 'key':
+        return key;
+      case 'hashCode':
+        return hashCode;
       case 'updateShouldNotify':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.updateShouldNotify(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => updateShouldNotify(positionalArgs[0]);
+      case 'createElement':
+        return ({positionalArgs, namedArgs, typeArgs}) => createElement();
+      case 'toStringShort':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'debugFillProperties':
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+      case 'toStringShallow':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
+            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toStringDeep':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
+            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
-

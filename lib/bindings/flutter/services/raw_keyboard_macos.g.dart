@@ -1,7 +1,5 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter/foundation.dart';
-
 
 class RawKeyEventDataMacOsAutoBinding extends HTExternalClass {
   RawKeyEventDataMacOsAutoBinding() : super('RawKeyEventDataMacOs');
@@ -10,7 +8,12 @@ class RawKeyEventDataMacOsAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'RawKeyEventDataMacOs':
-        return ({positionalArgs, namedArgs, typeArgs}) => RawKeyEventDataMacOs(characters : namedArgs.containsKey('characters') ? namedArgs['characters'] : '', charactersIgnoringModifiers : namedArgs.containsKey('charactersIgnoringModifiers') ? namedArgs['charactersIgnoringModifiers'] : '', keyCode : namedArgs.containsKey('keyCode') ? namedArgs['keyCode'] : 0, modifiers : namedArgs.containsKey('modifiers') ? namedArgs['modifiers'] : 0);
+        return ({positionalArgs, namedArgs, typeArgs}) => RawKeyEventDataMacOs(
+            characters: namedArgs.containsKey('characters') ? namedArgs['characters'] : '',
+            charactersIgnoringModifiers:
+                namedArgs.containsKey('charactersIgnoringModifiers') ? namedArgs['charactersIgnoringModifiers'] : '',
+            keyCode: namedArgs.containsKey('keyCode') ? namedArgs['keyCode'] : 0,
+            modifiers: namedArgs.containsKey('modifiers') ? namedArgs['modifiers'] : 0);
       case 'RawKeyEventDataMacOs.modifierCapsLock':
         return RawKeyEventDataMacOs.modifierCapsLock;
       case 'RawKeyEventDataMacOs.modifierShift':
@@ -54,9 +57,6 @@ class RawKeyEventDataMacOsAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as RawKeyEventDataMacOs).htFetch(id);
   }
-
-
-
 }
 
 extension RawKeyEventDataMacOsBinding on RawKeyEventDataMacOs {
@@ -89,15 +89,14 @@ extension RawKeyEventDataMacOsBinding on RawKeyEventDataMacOs {
       case 'modifiersPressed':
         return modifiersPressed;
       case 'isModifierPressed':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.isModifierPressed(positionalArgs[0], side : namedArgs.containsKey('side') ? namedArgs['side'] : KeyboardSide.any);
+        return ({positionalArgs, namedArgs, typeArgs}) => isModifierPressed(positionalArgs[0],
+            side: namedArgs.containsKey('side') ? namedArgs['side'] : KeyboardSide.any);
       case 'getModifierSide':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.getModifierSide(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => getModifierSide(positionalArgs[0]);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
-

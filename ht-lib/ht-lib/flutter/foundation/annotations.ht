@@ -1,0 +1,12 @@
+external class Category {
+    construct 
+    get sections
+}
+external class DocumentationIcon {
+    construct 
+    get url
+}
+external class Summary {
+    construct 
+    get text
+}

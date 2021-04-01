@@ -1,0 +1,25 @@
+external class Tooltip {
+    construct 
+    get message
+    get height
+    get padding
+    get margin
+    get verticalOffset
+    get preferBelow
+    get excludeFromSemantics
+    get child
+    get decoration
+    get textStyle
+    get waitDuration
+    get showDuration
+    get key
+    fun createState
+    fun debugFillProperties
+    fun createElement
+    fun toStringShort
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}

@@ -1,0 +1,73 @@
+external class LogicalKeySet {
+    construct 
+    construct fromSet
+    fun debugDescribeKeys
+    fun debugFillProperties
+    fun toStringShort
+    fun toString
+    fun toDiagnosticsNode
+    get keys
+    get hashCode
+}
+external class ShortcutMapProperty {
+    construct 
+    get expandableValue
+    get allowWrap
+    get allowNameWrap
+    get ifNull
+    get ifEmpty
+    get tooltip
+    get missingIfNull
+    get defaultValue
+    get name
+    get showSeparator
+    get showName
+    get linePrefix
+    get style
+    get value
+    fun valueToString
+    fun toJsonMap
+    fun toDescription
+    get propertyType
+    get exception
+    get level
+    fun getProperties
+    fun getChildren
+    fun isFiltered
+    get emptyBodyDescription
+    get allowTruncate
+    fun toString
+    fun toStringDeep
+}
+external class ShortcutManager {
+    construct 
+    get modal
+    get shortcuts
+    set shortcuts(value)
+    fun debugFillProperties
+    fun toStringShort
+    fun toString
+    fun toDiagnosticsNode
+    fun addListener
+    fun removeListener
+    fun dispose
+}
+external class Shortcuts {
+    construct 
+    get manager
+    get shortcuts
+    get child
+    get debugLabel
+    get key
+    fun createState
+    fun debugFillProperties
+    fun createElement
+    fun toStringShort
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+    static fun of (context)
+    static fun maybeOf (context)
+}

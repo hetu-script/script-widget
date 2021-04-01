@@ -1,0 +1,19 @@
+external class PerformanceOverlay {
+    construct 
+    construct allEnabled
+    get optionsMask
+    get rasterizerThreshold
+    get checkerboardRasterCacheImages
+    get checkerboardOffscreenLayers
+    get key
+    fun createRenderObject
+    fun updateRenderObject
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}

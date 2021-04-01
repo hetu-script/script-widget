@@ -1,7 +1,5 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/widgets.dart';
-import 'package:flutter/foundation.dart';
-
 
 class LayoutChangedNotificationAutoBinding extends HTExternalClass {
   LayoutChangedNotificationAutoBinding() : super('LayoutChangedNotification');
@@ -20,9 +18,6 @@ class LayoutChangedNotificationAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as LayoutChangedNotification).htFetch(id);
   }
-
-
-
 }
 
 extension LayoutChangedNotificationBinding on LayoutChangedNotification {
@@ -31,13 +26,11 @@ extension LayoutChangedNotificationBinding on LayoutChangedNotification {
       case 'typeid':
         return HTTypeId('LayoutChangedNotification');
       case 'dispatch':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.dispatch(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => dispatch(positionalArgs[0]);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
-

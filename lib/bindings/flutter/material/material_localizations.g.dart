@@ -1,8 +1,5 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/foundation.dart';
-import 'package:flutter/widgets.dart';
-
 
 class MaterialLocalizationsAutoBinding extends HTExternalClass {
   MaterialLocalizationsAutoBinding() : super('MaterialLocalizations');
@@ -16,12 +13,7 @@ class MaterialLocalizationsAutoBinding extends HTExternalClass {
         throw HTErrorUndefined(varName);
     }
   }
-
-
-
-
 }
-
 
 class DefaultMaterialLocalizationsAutoBinding extends HTExternalClass {
   DefaultMaterialLocalizationsAutoBinding() : super('DefaultMaterialLocalizations');
@@ -44,9 +36,6 @@ class DefaultMaterialLocalizationsAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as DefaultMaterialLocalizations).htFetch(id);
   }
-
-
-
 }
 
 extension DefaultMaterialLocalizationsBinding on DefaultMaterialLocalizations {
@@ -193,51 +182,58 @@ extension DefaultMaterialLocalizationsBinding on DefaultMaterialLocalizations {
       case 'refreshIndicatorSemanticLabel':
         return refreshIndicatorSemanticLabel;
       case 'formatHour':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.formatHour(positionalArgs[0], alwaysUse24HourFormat : namedArgs.containsKey('alwaysUse24HourFormat') ? namedArgs['alwaysUse24HourFormat'] : false);
+        return ({positionalArgs, namedArgs, typeArgs}) => formatHour(positionalArgs[0],
+            alwaysUse24HourFormat:
+                namedArgs.containsKey('alwaysUse24HourFormat') ? namedArgs['alwaysUse24HourFormat'] : false);
       case 'formatMinute':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.formatMinute(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => formatMinute(positionalArgs[0]);
       case 'formatYear':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.formatYear(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => formatYear(positionalArgs[0]);
       case 'formatCompactDate':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.formatCompactDate(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => formatCompactDate(positionalArgs[0]);
       case 'formatShortDate':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.formatShortDate(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => formatShortDate(positionalArgs[0]);
       case 'formatMediumDate':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.formatMediumDate(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => formatMediumDate(positionalArgs[0]);
       case 'formatFullDate':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.formatFullDate(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => formatFullDate(positionalArgs[0]);
       case 'formatMonthYear':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.formatMonthYear(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => formatMonthYear(positionalArgs[0]);
       case 'formatShortMonthDay':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.formatShortMonthDay(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => formatShortMonthDay(positionalArgs[0]);
       case 'parseCompactDate':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.parseCompactDate(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => parseCompactDate(positionalArgs[0]);
       case 'dateRangeStartDateSemanticLabel':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.dateRangeStartDateSemanticLabel(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => dateRangeStartDateSemanticLabel(positionalArgs[0]);
       case 'dateRangeEndDateSemanticLabel':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.dateRangeEndDateSemanticLabel(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => dateRangeEndDateSemanticLabel(positionalArgs[0]);
       case 'formatDecimal':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.formatDecimal(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => formatDecimal(positionalArgs[0]);
       case 'formatTimeOfDay':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.formatTimeOfDay(positionalArgs[0], alwaysUse24HourFormat : namedArgs.containsKey('alwaysUse24HourFormat') ? namedArgs['alwaysUse24HourFormat'] : false);
+        return ({positionalArgs, namedArgs, typeArgs}) => formatTimeOfDay(positionalArgs[0],
+            alwaysUse24HourFormat:
+                namedArgs.containsKey('alwaysUse24HourFormat') ? namedArgs['alwaysUse24HourFormat'] : false);
       case 'aboutListTileTitle':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.aboutListTileTitle(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => aboutListTileTitle(positionalArgs[0]);
       case 'licensesPackageDetailText':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.licensesPackageDetailText(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => licensesPackageDetailText(positionalArgs[0]);
       case 'pageRowsInfoTitle':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.pageRowsInfoTitle(positionalArgs[0], positionalArgs[1], positionalArgs[2], positionalArgs[3]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            pageRowsInfoTitle(positionalArgs[0], positionalArgs[1], positionalArgs[2], positionalArgs[3]);
       case 'tabLabel':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.tabLabel(tabIndex : namedArgs.containsKey('tabIndex') ? namedArgs['tabIndex'] : null, tabCount : namedArgs.containsKey('tabCount') ? namedArgs['tabCount'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => tabLabel(
+            tabIndex: namedArgs.containsKey('tabIndex') ? namedArgs['tabIndex'] : null,
+            tabCount: namedArgs.containsKey('tabCount') ? namedArgs['tabCount'] : null);
       case 'selectedRowCountTitle':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.selectedRowCountTitle(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => selectedRowCountTitle(positionalArgs[0]);
       case 'timeOfDayFormat':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.timeOfDayFormat(alwaysUse24HourFormat : namedArgs.containsKey('alwaysUse24HourFormat') ? namedArgs['alwaysUse24HourFormat'] : false);
+        return ({positionalArgs, namedArgs, typeArgs}) => timeOfDayFormat(
+            alwaysUse24HourFormat:
+                namedArgs.containsKey('alwaysUse24HourFormat') ? namedArgs['alwaysUse24HourFormat'] : false);
       case 'remainingTextFieldCharacterCount':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.remainingTextFieldCharacterCount(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => remainingTextFieldCharacterCount(positionalArgs[0]);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
-

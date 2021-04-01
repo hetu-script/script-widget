@@ -1,7 +1,5 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/gestures.dart';
-import 'package:flutter/foundation.dart';
-
 
 class PointerSignalResolverAutoBinding extends HTExternalClass {
   PointerSignalResolverAutoBinding() : super('PointerSignalResolver');
@@ -21,13 +19,12 @@ class PointerSignalResolverAutoBinding extends HTExternalClass {
     return (instance as PointerSignalResolver).htFetch(id);
   }
 
-
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'PointerSignalResolvedCallback': (HTFunction function) => (event) => function.call(positionalArgs: [event], namedArgs: const {}),
+      'PointerSignalResolvedCallback': (HTFunction function) =>
+          (event) => function.call(positionalArgs: [event], namedArgs: const {}),
     };
   }
-
 }
 
 extension PointerSignalResolverBinding on PointerSignalResolver {
@@ -36,13 +33,11 @@ extension PointerSignalResolverBinding on PointerSignalResolver {
       case 'typeid':
         return HTTypeId('PointerSignalResolver');
       case 'register':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.register(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => register(positionalArgs[0], positionalArgs[1]);
       case 'resolve':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.resolve(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => resolve(positionalArgs[0]);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
-

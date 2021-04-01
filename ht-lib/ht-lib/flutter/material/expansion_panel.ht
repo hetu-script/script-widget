@@ -1,0 +1,38 @@
+external class ExpansionPanel {
+    construct 
+    get headerBuilder
+    get body
+    get isExpanded
+    get canTapOnHeader
+    get backgroundColor
+}
+external class ExpansionPanelRadio {
+    construct 
+    get value
+    get headerBuilder
+    get body
+    get isExpanded
+    get canTapOnHeader
+    get backgroundColor
+}
+external class ExpansionPanelList {
+    construct 
+    construct radio
+    get children
+    get expansionCallback
+    get animationDuration
+    get initialOpenPanelValue
+    get expandedHeaderPadding
+    get dividerColor
+    get elevation
+    get key
+    fun createState
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}

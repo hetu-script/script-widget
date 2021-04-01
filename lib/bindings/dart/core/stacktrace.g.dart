@@ -1,10 +1,5 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'dart:core';
-import "dart:collection";
-import "dart:convert";
-import "dart:math";
-import "dart:typed_data";
-
 
 class StackTraceAutoBinding extends HTExternalClass {
   StackTraceAutoBinding() : super('StackTrace');
@@ -27,9 +22,6 @@ class StackTraceAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as StackTrace).htFetch(id);
   }
-
-
-
 }
 
 extension StackTraceBinding on StackTrace {
@@ -38,11 +30,9 @@ extension StackTraceBinding on StackTrace {
       case 'typeid':
         return HTTypeId('StackTrace');
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
-

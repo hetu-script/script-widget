@@ -1,7 +1,6 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/physics.dart';
 
-
 class GravitySimulationAutoBinding extends HTExternalClass {
   GravitySimulationAutoBinding() : super('GravitySimulation');
 
@@ -9,7 +8,8 @@ class GravitySimulationAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'GravitySimulation':
-        return ({positionalArgs, namedArgs, typeArgs}) => GravitySimulation(positionalArgs[0], positionalArgs[1], positionalArgs[2], positionalArgs[3]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            GravitySimulation(positionalArgs[0], positionalArgs[1], positionalArgs[2], positionalArgs[3]);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -24,8 +24,6 @@ class GravitySimulationAutoBinding extends HTExternalClass {
   void instanceMemberSet(dynamic instance, String id, dynamic value) {
     (instance as GravitySimulation).htAssign(id, value);
   }
-
-
 }
 
 extension GravitySimulationBinding on GravitySimulation {
@@ -36,13 +34,13 @@ extension GravitySimulationBinding on GravitySimulation {
       case 'tolerance':
         return tolerance;
       case 'x':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.x(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => x(positionalArgs[0]);
       case 'dx':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.dx(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => dx(positionalArgs[0]);
       case 'isDone':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.isDone(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => isDone(positionalArgs[0]);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
         throw HTErrorUndefined(varName);
     }
@@ -51,11 +49,10 @@ extension GravitySimulationBinding on GravitySimulation {
   void htAssign(String varName, dynamic value) {
     switch (varName) {
       case 'tolerance':
-        this.tolerance = value;
+        tolerance = value;
         break;
       default:
         throw HTErrorUndefined(varName);
     }
   }
 }
-

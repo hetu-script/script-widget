@@ -1,8 +1,5 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/material.dart';
-import 'dart:ui';
-import 'package:flutter/painting.dart';
-
 
 class MaterialColorAutoBinding extends HTExternalClass {
   MaterialColorAutoBinding() : super('MaterialColor');
@@ -21,9 +18,6 @@ class MaterialColorAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as MaterialColor).htFetch(id);
   }
-
-
-
 }
 
 extension MaterialColorBinding on MaterialColor {
@@ -66,24 +60,23 @@ extension MaterialColorBinding on MaterialColor {
       case 'blue':
         return blue;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       case 'withAlpha':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.withAlpha(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => withAlpha(positionalArgs[0]);
       case 'withOpacity':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.withOpacity(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => withOpacity(positionalArgs[0]);
       case 'withRed':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.withRed(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => withRed(positionalArgs[0]);
       case 'withGreen':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.withGreen(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => withGreen(positionalArgs[0]);
       case 'withBlue':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.withBlue(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => withBlue(positionalArgs[0]);
       case 'computeLuminance':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.computeLuminance();
+        return ({positionalArgs, namedArgs, typeArgs}) => computeLuminance();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class MaterialAccentColorAutoBinding extends HTExternalClass {
@@ -103,9 +96,6 @@ class MaterialAccentColorAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as MaterialAccentColor).htFetch(id);
   }
-
-
-
 }
 
 extension MaterialAccentColorBinding on MaterialAccentColor {
@@ -138,24 +128,23 @@ extension MaterialAccentColorBinding on MaterialAccentColor {
       case 'blue':
         return blue;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       case 'withAlpha':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.withAlpha(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => withAlpha(positionalArgs[0]);
       case 'withOpacity':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.withOpacity(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => withOpacity(positionalArgs[0]);
       case 'withRed':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.withRed(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => withRed(positionalArgs[0]);
       case 'withGreen':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.withGreen(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => withGreen(positionalArgs[0]);
       case 'withBlue':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.withBlue(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => withBlue(positionalArgs[0]);
       case 'computeLuminance':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.computeLuminance();
+        return ({positionalArgs, namedArgs, typeArgs}) => computeLuminance();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class ColorsAutoBinding extends HTExternalClass {
@@ -276,10 +265,4 @@ class ColorsAutoBinding extends HTExternalClass {
         throw HTErrorUndefined(varName);
     }
   }
-
-
-
-
 }
-
-

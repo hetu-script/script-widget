@@ -1,9 +1,5 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/gestures.dart';
-import 'dart:async';
-import 'dart:collection';
-import 'package:vector_math/vector_math_64.dart';
-import 'package:flutter/foundation.dart';
 
 class DragStartBehaviorAutoBinding extends HTExternalClass {
   DragStartBehaviorAutoBinding() : super('DragStartBehavior');
@@ -22,7 +18,6 @@ class DragStartBehaviorAutoBinding extends HTExternalClass {
     }
   }
 
-
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
@@ -37,6 +32,7 @@ class DragStartBehaviorAutoBinding extends HTExternalClass {
     }
   }
 }
+
 class GestureRecognizerStateAutoBinding extends HTExternalClass {
   GestureRecognizerStateAutoBinding() : super('GestureRecognizerState');
 
@@ -55,7 +51,6 @@ class GestureRecognizerStateAutoBinding extends HTExternalClass {
         throw HTErrorUndefined(varName);
     }
   }
-
 
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
@@ -79,7 +74,8 @@ class OffsetPairAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'OffsetPair':
-        return ({positionalArgs, namedArgs, typeArgs}) => OffsetPair(local : namedArgs['local'], global : namedArgs['global']);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            OffsetPair(local: namedArgs['local'], global: namedArgs['global']);
       case 'OffsetPair.fromEventPosition':
         return ({positionalArgs, namedArgs, typeArgs}) => OffsetPair.fromEventPosition(positionalArgs[0]);
       case 'OffsetPair.fromEventDelta':
@@ -95,9 +91,6 @@ class OffsetPairAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as OffsetPair).htFetch(id);
   }
-
-
-
 }
 
 extension OffsetPairBinding on OffsetPair {
@@ -110,11 +103,9 @@ extension OffsetPairBinding on OffsetPair {
       case 'global':
         return global;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
-

@@ -1,8 +1,5 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/rendering.dart';
-import 'package:flutter/foundation.dart';
-import 'package:vector_math/vector_math_64.dart';
-
 
 class SliverMultiBoxAdaptorParentDataAutoBinding extends HTExternalClass {
   SliverMultiBoxAdaptorParentDataAutoBinding() : super('SliverMultiBoxAdaptorParentData');
@@ -26,8 +23,6 @@ class SliverMultiBoxAdaptorParentDataAutoBinding extends HTExternalClass {
   void instanceMemberSet(dynamic instance, String id, dynamic value) {
     (instance as SliverMultiBoxAdaptorParentData).htAssign(id, value);
   }
-
-
 }
 
 extension SliverMultiBoxAdaptorParentDataBinding on SliverMultiBoxAdaptorParentData {
@@ -42,7 +37,9 @@ extension SliverMultiBoxAdaptorParentDataBinding on SliverMultiBoxAdaptorParentD
       case 'keptAlive':
         return keptAlive;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
+      case 'detach':
+        return ({positionalArgs, namedArgs, typeArgs}) => detach();
       default:
         throw HTErrorUndefined(varName);
     }
@@ -51,14 +48,13 @@ extension SliverMultiBoxAdaptorParentDataBinding on SliverMultiBoxAdaptorParentD
   void htAssign(String varName, dynamic value) {
     switch (varName) {
       case 'index':
-        this.index = value;
+        index = value;
         break;
       case 'layoutOffset':
-        this.layoutOffset = value;
+        layoutOffset = value;
         break;
       default:
         throw HTErrorUndefined(varName);
     }
   }
 }
-

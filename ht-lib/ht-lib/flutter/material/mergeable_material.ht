@@ -1,0 +1,31 @@
+external class MaterialSlice {
+    construct 
+    get child
+    get color
+    get key
+    fun toString
+}
+external class MaterialGap {
+    construct 
+    get size
+    get key
+    fun toString
+}
+external class MergeableMaterial {
+    construct 
+    get children
+    get mainAxis
+    get elevation
+    get hasDividers
+    get dividerColor
+    get key
+    fun debugFillProperties
+    fun createState
+    fun createElement
+    fun toStringShort
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}

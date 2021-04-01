@@ -1,0 +1,21 @@
+external class EagerGestureRecognizer {
+    construct 
+    get debugOwner
+    fun addAllowedPointer
+    get debugDescription
+    fun didStopTrackingLastPointer
+    fun handleEvent
+    fun handleNonAllowedPointer
+    fun acceptGesture
+    fun rejectGesture
+    fun dispose
+    get team
+    fun addPointer
+    fun debugFillProperties
+    fun toString
+    fun toStringShallow
+    fun toStringDeep
+    fun toStringShort
+    fun toDiagnosticsNode
+    fun debugDescribeChildren
+}

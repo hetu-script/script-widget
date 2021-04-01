@@ -1,0 +1,105 @@
+external class TabBarIndicatorSize {
+    static const tab
+    static const label
+}
+external class Tab {
+    construct 
+    get text
+    get child
+    get icon
+    get iconMargin
+    get key
+    fun build
+    fun debugFillProperties
+    fun createElement
+    fun toStringShort
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class TabBar {
+    construct 
+    get tabs
+    get controller
+    get isScrollable
+    get indicatorColor
+    get indicatorWeight
+    get indicatorPadding
+    get indicator
+    get automaticIndicatorColorAdjustment
+    get indicatorSize
+    get labelColor
+    get unselectedLabelColor
+    get labelStyle
+    get labelPadding
+    get unselectedLabelStyle
+    get overlayColor
+    get dragStartBehavior
+    get mouseCursor
+    get enableFeedback
+    get onTap
+    get physics
+    get key
+    get preferredSize
+    fun createState
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class TabBarView {
+    construct 
+    get controller
+    get children
+    get physics
+    get dragStartBehavior
+    get key
+    fun createState
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class TabPageSelectorIndicator {
+    construct 
+    get backgroundColor
+    get borderColor
+    get size
+    get key
+    fun build
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class TabPageSelector {
+    construct 
+    get controller
+    get indicatorSize
+    get color
+    get selectedColor
+    get key
+    fun build
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}

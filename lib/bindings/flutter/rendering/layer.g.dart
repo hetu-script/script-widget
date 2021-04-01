@@ -1,11 +1,9 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/rendering.dart';
-import 'dart:ui'as ui;
+import 'dart:ui' as ui;
 import 'package:flutter/foundation.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/painting.dart';
-import 'package:vector_math/vector_math_64.dart';
-
 
 class PictureLayerAutoBinding extends HTExternalClass {
   PictureLayerAutoBinding() : super('PictureLayer');
@@ -29,8 +27,6 @@ class PictureLayerAutoBinding extends HTExternalClass {
   void instanceMemberSet(dynamic instance, String id, dynamic value) {
     (instance as PictureLayer).htAssign(id, value);
   }
-
-
 }
 
 extension PictureLayerBinding on PictureLayer {
@@ -50,8 +46,6 @@ extension PictureLayerBinding on PictureLayer {
         return willChangeHint;
       case 'parent':
         return parent;
-      case 'debugSubtreeNeedsAddToScene':
-        return debugSubtreeNeedsAddToScene;
       case 'nextSibling':
         return nextSibling;
       case 'previousSibling':
@@ -63,31 +57,49 @@ extension PictureLayerBinding on PictureLayer {
       case 'attached':
         return attached;
       case 'addToScene':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.addToScene(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : Offset.zero);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            addToScene(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : Offset.zero);
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
       case 'findAnnotations':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.findAnnotations(positionalArgs[0], positionalArgs[1], onlyFirst : namedArgs.containsKey('onlyFirst') ? namedArgs['onlyFirst'] : null);
-      case 'debugMarkClean':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugMarkClean();
+        return ({positionalArgs, namedArgs, typeArgs}) => findAnnotations(positionalArgs[0], positionalArgs[1],
+            onlyFirst: namedArgs.containsKey('onlyFirst') ? namedArgs['onlyFirst'] : null);
       case 'dropChild':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.dropChild(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => dropChild(positionalArgs[0]);
       case 'adoptChild':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.adoptChild(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => adoptChild(positionalArgs[0]);
       case 'remove':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.remove();
+        return ({positionalArgs, namedArgs, typeArgs}) => remove();
       case 'find':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.find(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => find(positionalArgs[0]);
       case 'findAllAnnotations':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.findAllAnnotations(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => findAllAnnotations(positionalArgs[0]);
       case 'toStringShort':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toStringShort();
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+      case 'toStringShallow':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
+            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toStringDeep':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
+            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
+      case 'debugDescribeChildren':
+        return ({positionalArgs, namedArgs, typeArgs}) => debugDescribeChildren();
       case 'redepthChildren':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.redepthChildren();
+        return ({positionalArgs, namedArgs, typeArgs}) => redepthChildren();
       case 'attach':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.attach(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => attach(positionalArgs[0]);
       case 'detach':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.detach();
+        return ({positionalArgs, namedArgs, typeArgs}) => detach();
       default:
         throw HTErrorUndefined(varName);
     }
@@ -96,16 +108,16 @@ extension PictureLayerBinding on PictureLayer {
   void htAssign(String varName, dynamic value) {
     switch (varName) {
       case 'debugCreator':
-        this.debugCreator = value;
+        debugCreator = value;
         break;
       case 'picture':
-        this.picture = value;
+        picture = value;
         break;
       case 'isComplexHint':
-        this.isComplexHint = value;
+        isComplexHint = value;
         break;
       case 'willChangeHint':
-        this.willChangeHint = value;
+        willChangeHint = value;
         break;
       default:
         throw HTErrorUndefined(varName);
@@ -120,7 +132,11 @@ class TextureLayerAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'TextureLayer':
-        return ({positionalArgs, namedArgs, typeArgs}) => TextureLayer(rect : namedArgs['rect'], textureId : namedArgs['textureId'], freeze : namedArgs.containsKey('freeze') ? namedArgs['freeze'] : false, filterQuality : namedArgs.containsKey('filterQuality') ? namedArgs['filterQuality'] : ui.FilterQuality.low);
+        return ({positionalArgs, namedArgs, typeArgs}) => TextureLayer(
+            rect: namedArgs['rect'],
+            textureId: namedArgs['textureId'],
+            freeze: namedArgs.containsKey('freeze') ? namedArgs['freeze'] : false,
+            filterQuality: namedArgs.containsKey('filterQuality') ? namedArgs['filterQuality'] : ui.FilterQuality.low);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -135,8 +151,6 @@ class TextureLayerAutoBinding extends HTExternalClass {
   void instanceMemberSet(dynamic instance, String id, dynamic value) {
     (instance as TextureLayer).htAssign(id, value);
   }
-
-
 }
 
 extension TextureLayerBinding on TextureLayer {
@@ -156,8 +170,6 @@ extension TextureLayerBinding on TextureLayer {
         return debugCreator;
       case 'parent':
         return parent;
-      case 'debugSubtreeNeedsAddToScene':
-        return debugSubtreeNeedsAddToScene;
       case 'nextSibling':
         return nextSibling;
       case 'previousSibling':
@@ -169,31 +181,49 @@ extension TextureLayerBinding on TextureLayer {
       case 'attached':
         return attached;
       case 'addToScene':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.addToScene(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : Offset.zero);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            addToScene(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : Offset.zero);
       case 'findAnnotations':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.findAnnotations(positionalArgs[0], positionalArgs[1], onlyFirst : namedArgs.containsKey('onlyFirst') ? namedArgs['onlyFirst'] : null);
-      case 'debugMarkClean':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugMarkClean();
+        return ({positionalArgs, namedArgs, typeArgs}) => findAnnotations(positionalArgs[0], positionalArgs[1],
+            onlyFirst: namedArgs.containsKey('onlyFirst') ? namedArgs['onlyFirst'] : null);
       case 'dropChild':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.dropChild(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => dropChild(positionalArgs[0]);
       case 'adoptChild':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.adoptChild(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => adoptChild(positionalArgs[0]);
       case 'remove':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.remove();
+        return ({positionalArgs, namedArgs, typeArgs}) => remove();
       case 'find':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.find(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => find(positionalArgs[0]);
       case 'findAllAnnotations':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.findAllAnnotations(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => findAllAnnotations(positionalArgs[0]);
       case 'toStringShort':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toStringShort();
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+      case 'toStringShallow':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
+            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toStringDeep':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
+            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
+      case 'debugDescribeChildren':
+        return ({positionalArgs, namedArgs, typeArgs}) => debugDescribeChildren();
       case 'redepthChildren':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.redepthChildren();
+        return ({positionalArgs, namedArgs, typeArgs}) => redepthChildren();
       case 'attach':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.attach(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => attach(positionalArgs[0]);
       case 'detach':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.detach();
+        return ({positionalArgs, namedArgs, typeArgs}) => detach();
       default:
         throw HTErrorUndefined(varName);
     }
@@ -202,7 +232,7 @@ extension TextureLayerBinding on TextureLayer {
   void htAssign(String varName, dynamic value) {
     switch (varName) {
       case 'debugCreator':
-        this.debugCreator = value;
+        debugCreator = value;
         break;
       default:
         throw HTErrorUndefined(varName);
@@ -217,7 +247,8 @@ class PlatformViewLayerAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'PlatformViewLayer':
-        return ({positionalArgs, namedArgs, typeArgs}) => PlatformViewLayer(rect : namedArgs['rect'], viewId : namedArgs['viewId']);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            PlatformViewLayer(rect: namedArgs['rect'], viewId: namedArgs['viewId']);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -232,8 +263,6 @@ class PlatformViewLayerAutoBinding extends HTExternalClass {
   void instanceMemberSet(dynamic instance, String id, dynamic value) {
     (instance as PlatformViewLayer).htAssign(id, value);
   }
-
-
 }
 
 extension PlatformViewLayerBinding on PlatformViewLayer {
@@ -249,8 +278,6 @@ extension PlatformViewLayerBinding on PlatformViewLayer {
         return debugCreator;
       case 'parent':
         return parent;
-      case 'debugSubtreeNeedsAddToScene':
-        return debugSubtreeNeedsAddToScene;
       case 'nextSibling':
         return nextSibling;
       case 'previousSibling':
@@ -262,29 +289,46 @@ extension PlatformViewLayerBinding on PlatformViewLayer {
       case 'attached':
         return attached;
       case 'addToScene':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.addToScene(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : Offset.zero);
-      case 'debugMarkClean':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugMarkClean();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            addToScene(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : Offset.zero);
       case 'dropChild':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.dropChild(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => dropChild(positionalArgs[0]);
       case 'adoptChild':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.adoptChild(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => adoptChild(positionalArgs[0]);
       case 'remove':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.remove();
+        return ({positionalArgs, namedArgs, typeArgs}) => remove();
       case 'find':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.find(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => find(positionalArgs[0]);
       case 'findAllAnnotations':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.findAllAnnotations(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => findAllAnnotations(positionalArgs[0]);
       case 'toStringShort':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toStringShort();
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+      case 'toStringShallow':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
+            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toStringDeep':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
+            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
+      case 'debugDescribeChildren':
+        return ({positionalArgs, namedArgs, typeArgs}) => debugDescribeChildren();
       case 'redepthChildren':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.redepthChildren();
+        return ({positionalArgs, namedArgs, typeArgs}) => redepthChildren();
       case 'attach':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.attach(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => attach(positionalArgs[0]);
       case 'detach':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.detach();
+        return ({positionalArgs, namedArgs, typeArgs}) => detach();
       default:
         throw HTErrorUndefined(varName);
     }
@@ -293,7 +337,7 @@ extension PlatformViewLayerBinding on PlatformViewLayer {
   void htAssign(String varName, dynamic value) {
     switch (varName) {
       case 'debugCreator':
-        this.debugCreator = value;
+        debugCreator = value;
         break;
       default:
         throw HTErrorUndefined(varName);
@@ -308,7 +352,12 @@ class PerformanceOverlayLayerAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'PerformanceOverlayLayer':
-        return ({positionalArgs, namedArgs, typeArgs}) => PerformanceOverlayLayer(overlayRect : namedArgs['overlayRect'], optionsMask : namedArgs['optionsMask'], rasterizerThreshold : namedArgs['rasterizerThreshold'], checkerboardRasterCacheImages : namedArgs['checkerboardRasterCacheImages'], checkerboardOffscreenLayers : namedArgs['checkerboardOffscreenLayers']);
+        return ({positionalArgs, namedArgs, typeArgs}) => PerformanceOverlayLayer(
+            overlayRect: namedArgs['overlayRect'],
+            optionsMask: namedArgs['optionsMask'],
+            rasterizerThreshold: namedArgs['rasterizerThreshold'],
+            checkerboardRasterCacheImages: namedArgs['checkerboardRasterCacheImages'],
+            checkerboardOffscreenLayers: namedArgs['checkerboardOffscreenLayers']);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -323,8 +372,6 @@ class PerformanceOverlayLayerAutoBinding extends HTExternalClass {
   void instanceMemberSet(dynamic instance, String id, dynamic value) {
     (instance as PerformanceOverlayLayer).htAssign(id, value);
   }
-
-
 }
 
 extension PerformanceOverlayLayerBinding on PerformanceOverlayLayer {
@@ -346,8 +393,6 @@ extension PerformanceOverlayLayerBinding on PerformanceOverlayLayer {
         return overlayRect;
       case 'parent':
         return parent;
-      case 'debugSubtreeNeedsAddToScene':
-        return debugSubtreeNeedsAddToScene;
       case 'nextSibling':
         return nextSibling;
       case 'previousSibling':
@@ -359,31 +404,49 @@ extension PerformanceOverlayLayerBinding on PerformanceOverlayLayer {
       case 'attached':
         return attached;
       case 'addToScene':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.addToScene(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : Offset.zero);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            addToScene(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : Offset.zero);
       case 'findAnnotations':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.findAnnotations(positionalArgs[0], positionalArgs[1], onlyFirst : namedArgs.containsKey('onlyFirst') ? namedArgs['onlyFirst'] : null);
-      case 'debugMarkClean':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugMarkClean();
+        return ({positionalArgs, namedArgs, typeArgs}) => findAnnotations(positionalArgs[0], positionalArgs[1],
+            onlyFirst: namedArgs.containsKey('onlyFirst') ? namedArgs['onlyFirst'] : null);
       case 'dropChild':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.dropChild(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => dropChild(positionalArgs[0]);
       case 'adoptChild':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.adoptChild(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => adoptChild(positionalArgs[0]);
       case 'remove':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.remove();
+        return ({positionalArgs, namedArgs, typeArgs}) => remove();
       case 'find':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.find(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => find(positionalArgs[0]);
       case 'findAllAnnotations':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.findAllAnnotations(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => findAllAnnotations(positionalArgs[0]);
       case 'toStringShort':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toStringShort();
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+      case 'toStringShallow':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
+            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toStringDeep':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
+            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
+      case 'debugDescribeChildren':
+        return ({positionalArgs, namedArgs, typeArgs}) => debugDescribeChildren();
       case 'redepthChildren':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.redepthChildren();
+        return ({positionalArgs, namedArgs, typeArgs}) => redepthChildren();
       case 'attach':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.attach(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => attach(positionalArgs[0]);
       case 'detach':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.detach();
+        return ({positionalArgs, namedArgs, typeArgs}) => detach();
       default:
         throw HTErrorUndefined(varName);
     }
@@ -392,10 +455,10 @@ extension PerformanceOverlayLayerBinding on PerformanceOverlayLayer {
   void htAssign(String varName, dynamic value) {
     switch (varName) {
       case 'debugCreator':
-        this.debugCreator = value;
+        debugCreator = value;
         break;
       case 'overlayRect':
-        this.overlayRect = value;
+        overlayRect = value;
         break;
       default:
         throw HTErrorUndefined(varName);
@@ -425,8 +488,6 @@ class ContainerLayerAutoBinding extends HTExternalClass {
   void instanceMemberSet(dynamic instance, String id, dynamic value) {
     (instance as ContainerLayer).htAssign(id, value);
   }
-
-
 }
 
 extension ContainerLayerBinding on ContainerLayer {
@@ -444,8 +505,6 @@ extension ContainerLayerBinding on ContainerLayer {
         return hasChildren;
       case 'parent':
         return parent;
-      case 'debugSubtreeNeedsAddToScene':
-        return debugSubtreeNeedsAddToScene;
       case 'nextSibling':
         return nextSibling;
       case 'previousSibling':
@@ -457,47 +516,62 @@ extension ContainerLayerBinding on ContainerLayer {
       case 'attached':
         return attached;
       case 'buildScene':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.buildScene(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => buildScene(positionalArgs[0]);
       case 'updateSubtreeNeedsAddToScene':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.updateSubtreeNeedsAddToScene();
+        return ({positionalArgs, namedArgs, typeArgs}) => updateSubtreeNeedsAddToScene();
       case 'findAnnotations':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.findAnnotations(positionalArgs[0], positionalArgs[1], onlyFirst : namedArgs.containsKey('onlyFirst') ? namedArgs['onlyFirst'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => findAnnotations(positionalArgs[0], positionalArgs[1],
+            onlyFirst: namedArgs.containsKey('onlyFirst') ? namedArgs['onlyFirst'] : null);
       case 'attach':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.attach(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => attach(positionalArgs[0]);
       case 'detach':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.detach();
+        return ({positionalArgs, namedArgs, typeArgs}) => detach();
       case 'append':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.append(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => append(positionalArgs[0]);
       case 'removeAllChildren':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.removeAllChildren();
+        return ({positionalArgs, namedArgs, typeArgs}) => removeAllChildren();
       case 'addToScene':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.addToScene(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : Offset.zero);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            addToScene(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : Offset.zero);
       case 'addChildrenToScene':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.addChildrenToScene(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : Offset.zero);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            addChildrenToScene(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : Offset.zero);
       case 'applyTransform':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.applyTransform(positionalArgs[0], positionalArgs[1]);
-      case 'depthFirstIterateChildren':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.depthFirstIterateChildren();
+        return ({positionalArgs, namedArgs, typeArgs}) => applyTransform(positionalArgs[0], positionalArgs[1]);
       case 'debugDescribeChildren':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugDescribeChildren();
-      case 'debugMarkClean':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugMarkClean();
+        return ({positionalArgs, namedArgs, typeArgs}) => debugDescribeChildren();
       case 'dropChild':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.dropChild(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => dropChild(positionalArgs[0]);
       case 'adoptChild':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.adoptChild(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => adoptChild(positionalArgs[0]);
       case 'remove':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.remove();
+        return ({positionalArgs, namedArgs, typeArgs}) => remove();
       case 'find':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.find(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => find(positionalArgs[0]);
       case 'findAllAnnotations':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.findAllAnnotations(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => findAllAnnotations(positionalArgs[0]);
       case 'toStringShort':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toStringShort();
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+      case 'toStringShallow':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
+            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toStringDeep':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
+            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'redepthChildren':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.redepthChildren();
+        return ({positionalArgs, namedArgs, typeArgs}) => redepthChildren();
       default:
         throw HTErrorUndefined(varName);
     }
@@ -506,7 +580,7 @@ extension ContainerLayerBinding on ContainerLayer {
   void htAssign(String varName, dynamic value) {
     switch (varName) {
       case 'debugCreator':
-        this.debugCreator = value;
+        debugCreator = value;
         break;
       default:
         throw HTErrorUndefined(varName);
@@ -521,7 +595,8 @@ class OffsetLayerAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'OffsetLayer':
-        return ({positionalArgs, namedArgs, typeArgs}) => OffsetLayer(offset : namedArgs.containsKey('offset') ? namedArgs['offset'] : Offset.zero);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            OffsetLayer(offset: namedArgs.containsKey('offset') ? namedArgs['offset'] : Offset.zero);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -536,8 +611,6 @@ class OffsetLayerAutoBinding extends HTExternalClass {
   void instanceMemberSet(dynamic instance, String id, dynamic value) {
     (instance as OffsetLayer).htAssign(id, value);
   }
-
-
 }
 
 extension OffsetLayerBinding on OffsetLayer {
@@ -557,8 +630,6 @@ extension OffsetLayerBinding on OffsetLayer {
         return hasChildren;
       case 'parent':
         return parent;
-      case 'debugSubtreeNeedsAddToScene':
-        return debugSubtreeNeedsAddToScene;
       case 'nextSibling':
         return nextSibling;
       case 'previousSibling':
@@ -570,49 +641,65 @@ extension OffsetLayerBinding on OffsetLayer {
       case 'attached':
         return attached;
       case 'findAnnotations':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.findAnnotations(positionalArgs[0], positionalArgs[1], onlyFirst : namedArgs.containsKey('onlyFirst') ? namedArgs['onlyFirst'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => findAnnotations(positionalArgs[0], positionalArgs[1],
+            onlyFirst: namedArgs.containsKey('onlyFirst') ? namedArgs['onlyFirst'] : null);
       case 'applyTransform':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.applyTransform(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => applyTransform(positionalArgs[0], positionalArgs[1]);
       case 'addToScene':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.addToScene(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : Offset.zero);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            addToScene(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : Offset.zero);
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
       case 'toImage':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toImage(positionalArgs[0], pixelRatio : namedArgs.containsKey('pixelRatio') ? namedArgs['pixelRatio'] : 1.0);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toImage(positionalArgs[0], pixelRatio: namedArgs.containsKey('pixelRatio') ? namedArgs['pixelRatio'] : 1.0);
       case 'buildScene':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.buildScene(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => buildScene(positionalArgs[0]);
       case 'updateSubtreeNeedsAddToScene':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.updateSubtreeNeedsAddToScene();
+        return ({positionalArgs, namedArgs, typeArgs}) => updateSubtreeNeedsAddToScene();
       case 'attach':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.attach(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => attach(positionalArgs[0]);
       case 'detach':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.detach();
+        return ({positionalArgs, namedArgs, typeArgs}) => detach();
       case 'append':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.append(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => append(positionalArgs[0]);
       case 'removeAllChildren':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.removeAllChildren();
+        return ({positionalArgs, namedArgs, typeArgs}) => removeAllChildren();
       case 'addChildrenToScene':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.addChildrenToScene(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : Offset.zero);
-      case 'depthFirstIterateChildren':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.depthFirstIterateChildren();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            addChildrenToScene(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : Offset.zero);
       case 'debugDescribeChildren':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugDescribeChildren();
-      case 'debugMarkClean':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugMarkClean();
+        return ({positionalArgs, namedArgs, typeArgs}) => debugDescribeChildren();
       case 'dropChild':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.dropChild(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => dropChild(positionalArgs[0]);
       case 'adoptChild':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.adoptChild(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => adoptChild(positionalArgs[0]);
       case 'remove':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.remove();
+        return ({positionalArgs, namedArgs, typeArgs}) => remove();
       case 'find':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.find(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => find(positionalArgs[0]);
       case 'findAllAnnotations':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.findAllAnnotations(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => findAllAnnotations(positionalArgs[0]);
       case 'toStringShort':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toStringShort();
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+      case 'toStringShallow':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
+            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toStringDeep':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
+            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'redepthChildren':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.redepthChildren();
+        return ({positionalArgs, namedArgs, typeArgs}) => redepthChildren();
       default:
         throw HTErrorUndefined(varName);
     }
@@ -621,10 +708,10 @@ extension OffsetLayerBinding on OffsetLayer {
   void htAssign(String varName, dynamic value) {
     switch (varName) {
       case 'debugCreator':
-        this.debugCreator = value;
+        debugCreator = value;
         break;
       case 'offset':
-        this.offset = value;
+        offset = value;
         break;
       default:
         throw HTErrorUndefined(varName);
@@ -639,7 +726,9 @@ class ClipRectLayerAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'ClipRectLayer':
-        return ({positionalArgs, namedArgs, typeArgs}) => ClipRectLayer(clipRect : namedArgs.containsKey('clipRect') ? namedArgs['clipRect'] : null, clipBehavior : namedArgs.containsKey('clipBehavior') ? namedArgs['clipBehavior'] : Clip.hardEdge);
+        return ({positionalArgs, namedArgs, typeArgs}) => ClipRectLayer(
+            clipRect: namedArgs.containsKey('clipRect') ? namedArgs['clipRect'] : null,
+            clipBehavior: namedArgs.containsKey('clipBehavior') ? namedArgs['clipBehavior'] : Clip.hardEdge);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -654,8 +743,6 @@ class ClipRectLayerAutoBinding extends HTExternalClass {
   void instanceMemberSet(dynamic instance, String id, dynamic value) {
     (instance as ClipRectLayer).htAssign(id, value);
   }
-
-
 }
 
 extension ClipRectLayerBinding on ClipRectLayer {
@@ -677,8 +764,6 @@ extension ClipRectLayerBinding on ClipRectLayer {
         return hasChildren;
       case 'parent':
         return parent;
-      case 'debugSubtreeNeedsAddToScene':
-        return debugSubtreeNeedsAddToScene;
       case 'nextSibling':
         return nextSibling;
       case 'previousSibling':
@@ -690,47 +775,62 @@ extension ClipRectLayerBinding on ClipRectLayer {
       case 'attached':
         return attached;
       case 'findAnnotations':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.findAnnotations(positionalArgs[0], positionalArgs[1], onlyFirst : namedArgs.containsKey('onlyFirst') ? namedArgs['onlyFirst'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => findAnnotations(positionalArgs[0], positionalArgs[1],
+            onlyFirst: namedArgs.containsKey('onlyFirst') ? namedArgs['onlyFirst'] : null);
       case 'addToScene':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.addToScene(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : Offset.zero);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            addToScene(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : Offset.zero);
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
       case 'buildScene':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.buildScene(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => buildScene(positionalArgs[0]);
       case 'updateSubtreeNeedsAddToScene':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.updateSubtreeNeedsAddToScene();
+        return ({positionalArgs, namedArgs, typeArgs}) => updateSubtreeNeedsAddToScene();
       case 'attach':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.attach(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => attach(positionalArgs[0]);
       case 'detach':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.detach();
+        return ({positionalArgs, namedArgs, typeArgs}) => detach();
       case 'append':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.append(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => append(positionalArgs[0]);
       case 'removeAllChildren':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.removeAllChildren();
+        return ({positionalArgs, namedArgs, typeArgs}) => removeAllChildren();
       case 'addChildrenToScene':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.addChildrenToScene(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : Offset.zero);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            addChildrenToScene(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : Offset.zero);
       case 'applyTransform':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.applyTransform(positionalArgs[0], positionalArgs[1]);
-      case 'depthFirstIterateChildren':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.depthFirstIterateChildren();
+        return ({positionalArgs, namedArgs, typeArgs}) => applyTransform(positionalArgs[0], positionalArgs[1]);
       case 'debugDescribeChildren':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugDescribeChildren();
-      case 'debugMarkClean':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugMarkClean();
+        return ({positionalArgs, namedArgs, typeArgs}) => debugDescribeChildren();
       case 'dropChild':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.dropChild(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => dropChild(positionalArgs[0]);
       case 'adoptChild':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.adoptChild(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => adoptChild(positionalArgs[0]);
       case 'remove':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.remove();
+        return ({positionalArgs, namedArgs, typeArgs}) => remove();
       case 'find':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.find(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => find(positionalArgs[0]);
       case 'findAllAnnotations':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.findAllAnnotations(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => findAllAnnotations(positionalArgs[0]);
       case 'toStringShort':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toStringShort();
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+      case 'toStringShallow':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
+            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toStringDeep':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
+            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'redepthChildren':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.redepthChildren();
+        return ({positionalArgs, namedArgs, typeArgs}) => redepthChildren();
       default:
         throw HTErrorUndefined(varName);
     }
@@ -739,13 +839,13 @@ extension ClipRectLayerBinding on ClipRectLayer {
   void htAssign(String varName, dynamic value) {
     switch (varName) {
       case 'debugCreator':
-        this.debugCreator = value;
+        debugCreator = value;
         break;
       case 'clipRect':
-        this.clipRect = value;
+        clipRect = value;
         break;
       case 'clipBehavior':
-        this.clipBehavior = value;
+        clipBehavior = value;
         break;
       default:
         throw HTErrorUndefined(varName);
@@ -760,7 +860,9 @@ class ClipRRectLayerAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'ClipRRectLayer':
-        return ({positionalArgs, namedArgs, typeArgs}) => ClipRRectLayer(clipRRect : namedArgs.containsKey('clipRRect') ? namedArgs['clipRRect'] : null, clipBehavior : namedArgs.containsKey('clipBehavior') ? namedArgs['clipBehavior'] : Clip.antiAlias);
+        return ({positionalArgs, namedArgs, typeArgs}) => ClipRRectLayer(
+            clipRRect: namedArgs.containsKey('clipRRect') ? namedArgs['clipRRect'] : null,
+            clipBehavior: namedArgs.containsKey('clipBehavior') ? namedArgs['clipBehavior'] : Clip.antiAlias);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -775,8 +877,6 @@ class ClipRRectLayerAutoBinding extends HTExternalClass {
   void instanceMemberSet(dynamic instance, String id, dynamic value) {
     (instance as ClipRRectLayer).htAssign(id, value);
   }
-
-
 }
 
 extension ClipRRectLayerBinding on ClipRRectLayer {
@@ -798,8 +898,6 @@ extension ClipRRectLayerBinding on ClipRRectLayer {
         return hasChildren;
       case 'parent':
         return parent;
-      case 'debugSubtreeNeedsAddToScene':
-        return debugSubtreeNeedsAddToScene;
       case 'nextSibling':
         return nextSibling;
       case 'previousSibling':
@@ -811,47 +909,62 @@ extension ClipRRectLayerBinding on ClipRRectLayer {
       case 'attached':
         return attached;
       case 'findAnnotations':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.findAnnotations(positionalArgs[0], positionalArgs[1], onlyFirst : namedArgs.containsKey('onlyFirst') ? namedArgs['onlyFirst'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => findAnnotations(positionalArgs[0], positionalArgs[1],
+            onlyFirst: namedArgs.containsKey('onlyFirst') ? namedArgs['onlyFirst'] : null);
       case 'addToScene':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.addToScene(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : Offset.zero);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            addToScene(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : Offset.zero);
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
       case 'buildScene':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.buildScene(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => buildScene(positionalArgs[0]);
       case 'updateSubtreeNeedsAddToScene':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.updateSubtreeNeedsAddToScene();
+        return ({positionalArgs, namedArgs, typeArgs}) => updateSubtreeNeedsAddToScene();
       case 'attach':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.attach(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => attach(positionalArgs[0]);
       case 'detach':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.detach();
+        return ({positionalArgs, namedArgs, typeArgs}) => detach();
       case 'append':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.append(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => append(positionalArgs[0]);
       case 'removeAllChildren':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.removeAllChildren();
+        return ({positionalArgs, namedArgs, typeArgs}) => removeAllChildren();
       case 'addChildrenToScene':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.addChildrenToScene(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : Offset.zero);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            addChildrenToScene(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : Offset.zero);
       case 'applyTransform':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.applyTransform(positionalArgs[0], positionalArgs[1]);
-      case 'depthFirstIterateChildren':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.depthFirstIterateChildren();
+        return ({positionalArgs, namedArgs, typeArgs}) => applyTransform(positionalArgs[0], positionalArgs[1]);
       case 'debugDescribeChildren':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugDescribeChildren();
-      case 'debugMarkClean':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugMarkClean();
+        return ({positionalArgs, namedArgs, typeArgs}) => debugDescribeChildren();
       case 'dropChild':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.dropChild(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => dropChild(positionalArgs[0]);
       case 'adoptChild':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.adoptChild(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => adoptChild(positionalArgs[0]);
       case 'remove':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.remove();
+        return ({positionalArgs, namedArgs, typeArgs}) => remove();
       case 'find':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.find(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => find(positionalArgs[0]);
       case 'findAllAnnotations':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.findAllAnnotations(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => findAllAnnotations(positionalArgs[0]);
       case 'toStringShort':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toStringShort();
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+      case 'toStringShallow':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
+            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toStringDeep':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
+            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'redepthChildren':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.redepthChildren();
+        return ({positionalArgs, namedArgs, typeArgs}) => redepthChildren();
       default:
         throw HTErrorUndefined(varName);
     }
@@ -860,13 +973,13 @@ extension ClipRRectLayerBinding on ClipRRectLayer {
   void htAssign(String varName, dynamic value) {
     switch (varName) {
       case 'debugCreator':
-        this.debugCreator = value;
+        debugCreator = value;
         break;
       case 'clipRRect':
-        this.clipRRect = value;
+        clipRRect = value;
         break;
       case 'clipBehavior':
-        this.clipBehavior = value;
+        clipBehavior = value;
         break;
       default:
         throw HTErrorUndefined(varName);
@@ -881,7 +994,9 @@ class ClipPathLayerAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'ClipPathLayer':
-        return ({positionalArgs, namedArgs, typeArgs}) => ClipPathLayer(clipPath : namedArgs.containsKey('clipPath') ? namedArgs['clipPath'] : null, clipBehavior : namedArgs.containsKey('clipBehavior') ? namedArgs['clipBehavior'] : Clip.antiAlias);
+        return ({positionalArgs, namedArgs, typeArgs}) => ClipPathLayer(
+            clipPath: namedArgs.containsKey('clipPath') ? namedArgs['clipPath'] : null,
+            clipBehavior: namedArgs.containsKey('clipBehavior') ? namedArgs['clipBehavior'] : Clip.antiAlias);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -896,8 +1011,6 @@ class ClipPathLayerAutoBinding extends HTExternalClass {
   void instanceMemberSet(dynamic instance, String id, dynamic value) {
     (instance as ClipPathLayer).htAssign(id, value);
   }
-
-
 }
 
 extension ClipPathLayerBinding on ClipPathLayer {
@@ -919,8 +1032,6 @@ extension ClipPathLayerBinding on ClipPathLayer {
         return hasChildren;
       case 'parent':
         return parent;
-      case 'debugSubtreeNeedsAddToScene':
-        return debugSubtreeNeedsAddToScene;
       case 'nextSibling':
         return nextSibling;
       case 'previousSibling':
@@ -932,47 +1043,62 @@ extension ClipPathLayerBinding on ClipPathLayer {
       case 'attached':
         return attached;
       case 'findAnnotations':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.findAnnotations(positionalArgs[0], positionalArgs[1], onlyFirst : namedArgs.containsKey('onlyFirst') ? namedArgs['onlyFirst'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => findAnnotations(positionalArgs[0], positionalArgs[1],
+            onlyFirst: namedArgs.containsKey('onlyFirst') ? namedArgs['onlyFirst'] : null);
       case 'addToScene':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.addToScene(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : Offset.zero);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            addToScene(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : Offset.zero);
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
       case 'buildScene':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.buildScene(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => buildScene(positionalArgs[0]);
       case 'updateSubtreeNeedsAddToScene':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.updateSubtreeNeedsAddToScene();
+        return ({positionalArgs, namedArgs, typeArgs}) => updateSubtreeNeedsAddToScene();
       case 'attach':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.attach(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => attach(positionalArgs[0]);
       case 'detach':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.detach();
+        return ({positionalArgs, namedArgs, typeArgs}) => detach();
       case 'append':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.append(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => append(positionalArgs[0]);
       case 'removeAllChildren':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.removeAllChildren();
+        return ({positionalArgs, namedArgs, typeArgs}) => removeAllChildren();
       case 'addChildrenToScene':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.addChildrenToScene(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : Offset.zero);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            addChildrenToScene(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : Offset.zero);
       case 'applyTransform':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.applyTransform(positionalArgs[0], positionalArgs[1]);
-      case 'depthFirstIterateChildren':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.depthFirstIterateChildren();
+        return ({positionalArgs, namedArgs, typeArgs}) => applyTransform(positionalArgs[0], positionalArgs[1]);
       case 'debugDescribeChildren':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugDescribeChildren();
-      case 'debugMarkClean':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugMarkClean();
+        return ({positionalArgs, namedArgs, typeArgs}) => debugDescribeChildren();
       case 'dropChild':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.dropChild(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => dropChild(positionalArgs[0]);
       case 'adoptChild':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.adoptChild(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => adoptChild(positionalArgs[0]);
       case 'remove':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.remove();
+        return ({positionalArgs, namedArgs, typeArgs}) => remove();
       case 'find':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.find(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => find(positionalArgs[0]);
       case 'findAllAnnotations':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.findAllAnnotations(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => findAllAnnotations(positionalArgs[0]);
       case 'toStringShort':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toStringShort();
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+      case 'toStringShallow':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
+            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toStringDeep':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
+            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'redepthChildren':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.redepthChildren();
+        return ({positionalArgs, namedArgs, typeArgs}) => redepthChildren();
       default:
         throw HTErrorUndefined(varName);
     }
@@ -981,13 +1107,13 @@ extension ClipPathLayerBinding on ClipPathLayer {
   void htAssign(String varName, dynamic value) {
     switch (varName) {
       case 'debugCreator':
-        this.debugCreator = value;
+        debugCreator = value;
         break;
       case 'clipPath':
-        this.clipPath = value;
+        clipPath = value;
         break;
       case 'clipBehavior':
-        this.clipBehavior = value;
+        clipBehavior = value;
         break;
       default:
         throw HTErrorUndefined(varName);
@@ -1002,7 +1128,8 @@ class ColorFilterLayerAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'ColorFilterLayer':
-        return ({positionalArgs, namedArgs, typeArgs}) => ColorFilterLayer(colorFilter : namedArgs.containsKey('colorFilter') ? namedArgs['colorFilter'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            ColorFilterLayer(colorFilter: namedArgs.containsKey('colorFilter') ? namedArgs['colorFilter'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -1017,8 +1144,6 @@ class ColorFilterLayerAutoBinding extends HTExternalClass {
   void instanceMemberSet(dynamic instance, String id, dynamic value) {
     (instance as ColorFilterLayer).htAssign(id, value);
   }
-
-
 }
 
 extension ColorFilterLayerBinding on ColorFilterLayer {
@@ -1038,8 +1163,6 @@ extension ColorFilterLayerBinding on ColorFilterLayer {
         return hasChildren;
       case 'parent':
         return parent;
-      case 'debugSubtreeNeedsAddToScene':
-        return debugSubtreeNeedsAddToScene;
       case 'nextSibling':
         return nextSibling;
       case 'previousSibling':
@@ -1051,47 +1174,62 @@ extension ColorFilterLayerBinding on ColorFilterLayer {
       case 'attached':
         return attached;
       case 'addToScene':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.addToScene(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : Offset.zero);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            addToScene(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : Offset.zero);
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
       case 'buildScene':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.buildScene(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => buildScene(positionalArgs[0]);
       case 'updateSubtreeNeedsAddToScene':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.updateSubtreeNeedsAddToScene();
+        return ({positionalArgs, namedArgs, typeArgs}) => updateSubtreeNeedsAddToScene();
       case 'findAnnotations':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.findAnnotations(positionalArgs[0], positionalArgs[1], onlyFirst : namedArgs.containsKey('onlyFirst') ? namedArgs['onlyFirst'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => findAnnotations(positionalArgs[0], positionalArgs[1],
+            onlyFirst: namedArgs.containsKey('onlyFirst') ? namedArgs['onlyFirst'] : null);
       case 'attach':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.attach(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => attach(positionalArgs[0]);
       case 'detach':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.detach();
+        return ({positionalArgs, namedArgs, typeArgs}) => detach();
       case 'append':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.append(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => append(positionalArgs[0]);
       case 'removeAllChildren':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.removeAllChildren();
+        return ({positionalArgs, namedArgs, typeArgs}) => removeAllChildren();
       case 'addChildrenToScene':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.addChildrenToScene(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : Offset.zero);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            addChildrenToScene(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : Offset.zero);
       case 'applyTransform':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.applyTransform(positionalArgs[0], positionalArgs[1]);
-      case 'depthFirstIterateChildren':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.depthFirstIterateChildren();
+        return ({positionalArgs, namedArgs, typeArgs}) => applyTransform(positionalArgs[0], positionalArgs[1]);
       case 'debugDescribeChildren':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugDescribeChildren();
-      case 'debugMarkClean':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugMarkClean();
+        return ({positionalArgs, namedArgs, typeArgs}) => debugDescribeChildren();
       case 'dropChild':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.dropChild(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => dropChild(positionalArgs[0]);
       case 'adoptChild':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.adoptChild(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => adoptChild(positionalArgs[0]);
       case 'remove':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.remove();
+        return ({positionalArgs, namedArgs, typeArgs}) => remove();
       case 'find':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.find(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => find(positionalArgs[0]);
       case 'findAllAnnotations':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.findAllAnnotations(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => findAllAnnotations(positionalArgs[0]);
       case 'toStringShort':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toStringShort();
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+      case 'toStringShallow':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
+            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toStringDeep':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
+            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'redepthChildren':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.redepthChildren();
+        return ({positionalArgs, namedArgs, typeArgs}) => redepthChildren();
       default:
         throw HTErrorUndefined(varName);
     }
@@ -1100,10 +1238,10 @@ extension ColorFilterLayerBinding on ColorFilterLayer {
   void htAssign(String varName, dynamic value) {
     switch (varName) {
       case 'debugCreator':
-        this.debugCreator = value;
+        debugCreator = value;
         break;
       case 'colorFilter':
-        this.colorFilter = value;
+        colorFilter = value;
         break;
       default:
         throw HTErrorUndefined(varName);
@@ -1118,7 +1256,8 @@ class ImageFilterLayerAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'ImageFilterLayer':
-        return ({positionalArgs, namedArgs, typeArgs}) => ImageFilterLayer(imageFilter : namedArgs.containsKey('imageFilter') ? namedArgs['imageFilter'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            ImageFilterLayer(imageFilter: namedArgs.containsKey('imageFilter') ? namedArgs['imageFilter'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -1133,8 +1272,6 @@ class ImageFilterLayerAutoBinding extends HTExternalClass {
   void instanceMemberSet(dynamic instance, String id, dynamic value) {
     (instance as ImageFilterLayer).htAssign(id, value);
   }
-
-
 }
 
 extension ImageFilterLayerBinding on ImageFilterLayer {
@@ -1154,8 +1291,6 @@ extension ImageFilterLayerBinding on ImageFilterLayer {
         return hasChildren;
       case 'parent':
         return parent;
-      case 'debugSubtreeNeedsAddToScene':
-        return debugSubtreeNeedsAddToScene;
       case 'nextSibling':
         return nextSibling;
       case 'previousSibling':
@@ -1167,47 +1302,62 @@ extension ImageFilterLayerBinding on ImageFilterLayer {
       case 'attached':
         return attached;
       case 'addToScene':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.addToScene(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : Offset.zero);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            addToScene(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : Offset.zero);
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
       case 'buildScene':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.buildScene(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => buildScene(positionalArgs[0]);
       case 'updateSubtreeNeedsAddToScene':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.updateSubtreeNeedsAddToScene();
+        return ({positionalArgs, namedArgs, typeArgs}) => updateSubtreeNeedsAddToScene();
       case 'findAnnotations':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.findAnnotations(positionalArgs[0], positionalArgs[1], onlyFirst : namedArgs.containsKey('onlyFirst') ? namedArgs['onlyFirst'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => findAnnotations(positionalArgs[0], positionalArgs[1],
+            onlyFirst: namedArgs.containsKey('onlyFirst') ? namedArgs['onlyFirst'] : null);
       case 'attach':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.attach(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => attach(positionalArgs[0]);
       case 'detach':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.detach();
+        return ({positionalArgs, namedArgs, typeArgs}) => detach();
       case 'append':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.append(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => append(positionalArgs[0]);
       case 'removeAllChildren':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.removeAllChildren();
+        return ({positionalArgs, namedArgs, typeArgs}) => removeAllChildren();
       case 'addChildrenToScene':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.addChildrenToScene(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : Offset.zero);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            addChildrenToScene(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : Offset.zero);
       case 'applyTransform':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.applyTransform(positionalArgs[0], positionalArgs[1]);
-      case 'depthFirstIterateChildren':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.depthFirstIterateChildren();
+        return ({positionalArgs, namedArgs, typeArgs}) => applyTransform(positionalArgs[0], positionalArgs[1]);
       case 'debugDescribeChildren':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugDescribeChildren();
-      case 'debugMarkClean':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugMarkClean();
+        return ({positionalArgs, namedArgs, typeArgs}) => debugDescribeChildren();
       case 'dropChild':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.dropChild(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => dropChild(positionalArgs[0]);
       case 'adoptChild':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.adoptChild(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => adoptChild(positionalArgs[0]);
       case 'remove':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.remove();
+        return ({positionalArgs, namedArgs, typeArgs}) => remove();
       case 'find':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.find(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => find(positionalArgs[0]);
       case 'findAllAnnotations':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.findAllAnnotations(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => findAllAnnotations(positionalArgs[0]);
       case 'toStringShort':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toStringShort();
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+      case 'toStringShallow':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
+            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toStringDeep':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
+            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'redepthChildren':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.redepthChildren();
+        return ({positionalArgs, namedArgs, typeArgs}) => redepthChildren();
       default:
         throw HTErrorUndefined(varName);
     }
@@ -1216,10 +1366,10 @@ extension ImageFilterLayerBinding on ImageFilterLayer {
   void htAssign(String varName, dynamic value) {
     switch (varName) {
       case 'debugCreator':
-        this.debugCreator = value;
+        debugCreator = value;
         break;
       case 'imageFilter':
-        this.imageFilter = value;
+        imageFilter = value;
         break;
       default:
         throw HTErrorUndefined(varName);
@@ -1234,7 +1384,9 @@ class TransformLayerAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'TransformLayer':
-        return ({positionalArgs, namedArgs, typeArgs}) => TransformLayer(transform : namedArgs.containsKey('transform') ? namedArgs['transform'] : null, offset : namedArgs.containsKey('offset') ? namedArgs['offset'] : Offset.zero);
+        return ({positionalArgs, namedArgs, typeArgs}) => TransformLayer(
+            transform: namedArgs.containsKey('transform') ? namedArgs['transform'] : null,
+            offset: namedArgs.containsKey('offset') ? namedArgs['offset'] : Offset.zero);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -1249,8 +1401,6 @@ class TransformLayerAutoBinding extends HTExternalClass {
   void instanceMemberSet(dynamic instance, String id, dynamic value) {
     (instance as TransformLayer).htAssign(id, value);
   }
-
-
 }
 
 extension TransformLayerBinding on TransformLayer {
@@ -1272,8 +1422,6 @@ extension TransformLayerBinding on TransformLayer {
         return hasChildren;
       case 'parent':
         return parent;
-      case 'debugSubtreeNeedsAddToScene':
-        return debugSubtreeNeedsAddToScene;
       case 'nextSibling':
         return nextSibling;
       case 'previousSibling':
@@ -1285,49 +1433,65 @@ extension TransformLayerBinding on TransformLayer {
       case 'attached':
         return attached;
       case 'addToScene':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.addToScene(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : Offset.zero);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            addToScene(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : Offset.zero);
       case 'findAnnotations':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.findAnnotations(positionalArgs[0], positionalArgs[1], onlyFirst : namedArgs.containsKey('onlyFirst') ? namedArgs['onlyFirst'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => findAnnotations(positionalArgs[0], positionalArgs[1],
+            onlyFirst: namedArgs.containsKey('onlyFirst') ? namedArgs['onlyFirst'] : null);
       case 'applyTransform':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.applyTransform(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => applyTransform(positionalArgs[0], positionalArgs[1]);
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
       case 'toImage':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toImage(positionalArgs[0], pixelRatio : namedArgs.containsKey('pixelRatio') ? namedArgs['pixelRatio'] : 1.0);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toImage(positionalArgs[0], pixelRatio: namedArgs.containsKey('pixelRatio') ? namedArgs['pixelRatio'] : 1.0);
       case 'buildScene':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.buildScene(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => buildScene(positionalArgs[0]);
       case 'updateSubtreeNeedsAddToScene':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.updateSubtreeNeedsAddToScene();
+        return ({positionalArgs, namedArgs, typeArgs}) => updateSubtreeNeedsAddToScene();
       case 'attach':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.attach(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => attach(positionalArgs[0]);
       case 'detach':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.detach();
+        return ({positionalArgs, namedArgs, typeArgs}) => detach();
       case 'append':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.append(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => append(positionalArgs[0]);
       case 'removeAllChildren':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.removeAllChildren();
+        return ({positionalArgs, namedArgs, typeArgs}) => removeAllChildren();
       case 'addChildrenToScene':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.addChildrenToScene(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : Offset.zero);
-      case 'depthFirstIterateChildren':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.depthFirstIterateChildren();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            addChildrenToScene(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : Offset.zero);
       case 'debugDescribeChildren':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugDescribeChildren();
-      case 'debugMarkClean':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugMarkClean();
+        return ({positionalArgs, namedArgs, typeArgs}) => debugDescribeChildren();
       case 'dropChild':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.dropChild(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => dropChild(positionalArgs[0]);
       case 'adoptChild':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.adoptChild(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => adoptChild(positionalArgs[0]);
       case 'remove':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.remove();
+        return ({positionalArgs, namedArgs, typeArgs}) => remove();
       case 'find':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.find(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => find(positionalArgs[0]);
       case 'findAllAnnotations':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.findAllAnnotations(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => findAllAnnotations(positionalArgs[0]);
       case 'toStringShort':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toStringShort();
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+      case 'toStringShallow':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
+            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toStringDeep':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
+            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'redepthChildren':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.redepthChildren();
+        return ({positionalArgs, namedArgs, typeArgs}) => redepthChildren();
       default:
         throw HTErrorUndefined(varName);
     }
@@ -1336,10 +1500,10 @@ extension TransformLayerBinding on TransformLayer {
   void htAssign(String varName, dynamic value) {
     switch (varName) {
       case 'debugCreator':
-        this.debugCreator = value;
+        debugCreator = value;
         break;
       case 'transform':
-        this.transform = value;
+        transform = value;
         break;
       default:
         throw HTErrorUndefined(varName);
@@ -1354,7 +1518,9 @@ class OpacityLayerAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'OpacityLayer':
-        return ({positionalArgs, namedArgs, typeArgs}) => OpacityLayer(alpha : namedArgs.containsKey('alpha') ? namedArgs['alpha'] : null, offset : namedArgs.containsKey('offset') ? namedArgs['offset'] : Offset.zero);
+        return ({positionalArgs, namedArgs, typeArgs}) => OpacityLayer(
+            alpha: namedArgs.containsKey('alpha') ? namedArgs['alpha'] : null,
+            offset: namedArgs.containsKey('offset') ? namedArgs['offset'] : Offset.zero);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -1369,8 +1535,6 @@ class OpacityLayerAutoBinding extends HTExternalClass {
   void instanceMemberSet(dynamic instance, String id, dynamic value) {
     (instance as OpacityLayer).htAssign(id, value);
   }
-
-
 }
 
 extension OpacityLayerBinding on OpacityLayer {
@@ -1392,8 +1556,6 @@ extension OpacityLayerBinding on OpacityLayer {
         return hasChildren;
       case 'parent':
         return parent;
-      case 'debugSubtreeNeedsAddToScene':
-        return debugSubtreeNeedsAddToScene;
       case 'nextSibling':
         return nextSibling;
       case 'previousSibling':
@@ -1405,47 +1567,62 @@ extension OpacityLayerBinding on OpacityLayer {
       case 'attached':
         return attached;
       case 'applyTransform':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.applyTransform(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => applyTransform(positionalArgs[0], positionalArgs[1]);
       case 'addToScene':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.addToScene(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : Offset.zero);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            addToScene(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : Offset.zero);
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
       case 'buildScene':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.buildScene(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => buildScene(positionalArgs[0]);
       case 'updateSubtreeNeedsAddToScene':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.updateSubtreeNeedsAddToScene();
+        return ({positionalArgs, namedArgs, typeArgs}) => updateSubtreeNeedsAddToScene();
       case 'findAnnotations':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.findAnnotations(positionalArgs[0], positionalArgs[1], onlyFirst : namedArgs.containsKey('onlyFirst') ? namedArgs['onlyFirst'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => findAnnotations(positionalArgs[0], positionalArgs[1],
+            onlyFirst: namedArgs.containsKey('onlyFirst') ? namedArgs['onlyFirst'] : null);
       case 'attach':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.attach(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => attach(positionalArgs[0]);
       case 'detach':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.detach();
+        return ({positionalArgs, namedArgs, typeArgs}) => detach();
       case 'append':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.append(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => append(positionalArgs[0]);
       case 'removeAllChildren':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.removeAllChildren();
+        return ({positionalArgs, namedArgs, typeArgs}) => removeAllChildren();
       case 'addChildrenToScene':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.addChildrenToScene(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : Offset.zero);
-      case 'depthFirstIterateChildren':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.depthFirstIterateChildren();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            addChildrenToScene(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : Offset.zero);
       case 'debugDescribeChildren':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugDescribeChildren();
-      case 'debugMarkClean':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugMarkClean();
+        return ({positionalArgs, namedArgs, typeArgs}) => debugDescribeChildren();
       case 'dropChild':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.dropChild(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => dropChild(positionalArgs[0]);
       case 'adoptChild':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.adoptChild(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => adoptChild(positionalArgs[0]);
       case 'remove':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.remove();
+        return ({positionalArgs, namedArgs, typeArgs}) => remove();
       case 'find':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.find(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => find(positionalArgs[0]);
       case 'findAllAnnotations':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.findAllAnnotations(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => findAllAnnotations(positionalArgs[0]);
       case 'toStringShort':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toStringShort();
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+      case 'toStringShallow':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
+            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toStringDeep':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
+            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'redepthChildren':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.redepthChildren();
+        return ({positionalArgs, namedArgs, typeArgs}) => redepthChildren();
       default:
         throw HTErrorUndefined(varName);
     }
@@ -1454,13 +1631,13 @@ extension OpacityLayerBinding on OpacityLayer {
   void htAssign(String varName, dynamic value) {
     switch (varName) {
       case 'debugCreator':
-        this.debugCreator = value;
+        debugCreator = value;
         break;
       case 'alpha':
-        this.alpha = value;
+        alpha = value;
         break;
       case 'offset':
-        this.offset = value;
+        offset = value;
         break;
       default:
         throw HTErrorUndefined(varName);
@@ -1475,7 +1652,10 @@ class ShaderMaskLayerAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'ShaderMaskLayer':
-        return ({positionalArgs, namedArgs, typeArgs}) => ShaderMaskLayer(shader : namedArgs.containsKey('shader') ? namedArgs['shader'] : null, maskRect : namedArgs.containsKey('maskRect') ? namedArgs['maskRect'] : null, blendMode : namedArgs.containsKey('blendMode') ? namedArgs['blendMode'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => ShaderMaskLayer(
+            shader: namedArgs.containsKey('shader') ? namedArgs['shader'] : null,
+            maskRect: namedArgs.containsKey('maskRect') ? namedArgs['maskRect'] : null,
+            blendMode: namedArgs.containsKey('blendMode') ? namedArgs['blendMode'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -1490,8 +1670,6 @@ class ShaderMaskLayerAutoBinding extends HTExternalClass {
   void instanceMemberSet(dynamic instance, String id, dynamic value) {
     (instance as ShaderMaskLayer).htAssign(id, value);
   }
-
-
 }
 
 extension ShaderMaskLayerBinding on ShaderMaskLayer {
@@ -1515,8 +1693,6 @@ extension ShaderMaskLayerBinding on ShaderMaskLayer {
         return hasChildren;
       case 'parent':
         return parent;
-      case 'debugSubtreeNeedsAddToScene':
-        return debugSubtreeNeedsAddToScene;
       case 'nextSibling':
         return nextSibling;
       case 'previousSibling':
@@ -1528,47 +1704,62 @@ extension ShaderMaskLayerBinding on ShaderMaskLayer {
       case 'attached':
         return attached;
       case 'addToScene':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.addToScene(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : Offset.zero);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            addToScene(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : Offset.zero);
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
       case 'buildScene':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.buildScene(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => buildScene(positionalArgs[0]);
       case 'updateSubtreeNeedsAddToScene':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.updateSubtreeNeedsAddToScene();
+        return ({positionalArgs, namedArgs, typeArgs}) => updateSubtreeNeedsAddToScene();
       case 'findAnnotations':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.findAnnotations(positionalArgs[0], positionalArgs[1], onlyFirst : namedArgs.containsKey('onlyFirst') ? namedArgs['onlyFirst'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => findAnnotations(positionalArgs[0], positionalArgs[1],
+            onlyFirst: namedArgs.containsKey('onlyFirst') ? namedArgs['onlyFirst'] : null);
       case 'attach':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.attach(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => attach(positionalArgs[0]);
       case 'detach':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.detach();
+        return ({positionalArgs, namedArgs, typeArgs}) => detach();
       case 'append':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.append(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => append(positionalArgs[0]);
       case 'removeAllChildren':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.removeAllChildren();
+        return ({positionalArgs, namedArgs, typeArgs}) => removeAllChildren();
       case 'addChildrenToScene':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.addChildrenToScene(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : Offset.zero);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            addChildrenToScene(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : Offset.zero);
       case 'applyTransform':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.applyTransform(positionalArgs[0], positionalArgs[1]);
-      case 'depthFirstIterateChildren':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.depthFirstIterateChildren();
+        return ({positionalArgs, namedArgs, typeArgs}) => applyTransform(positionalArgs[0], positionalArgs[1]);
       case 'debugDescribeChildren':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugDescribeChildren();
-      case 'debugMarkClean':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugMarkClean();
+        return ({positionalArgs, namedArgs, typeArgs}) => debugDescribeChildren();
       case 'dropChild':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.dropChild(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => dropChild(positionalArgs[0]);
       case 'adoptChild':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.adoptChild(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => adoptChild(positionalArgs[0]);
       case 'remove':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.remove();
+        return ({positionalArgs, namedArgs, typeArgs}) => remove();
       case 'find':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.find(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => find(positionalArgs[0]);
       case 'findAllAnnotations':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.findAllAnnotations(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => findAllAnnotations(positionalArgs[0]);
       case 'toStringShort':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toStringShort();
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+      case 'toStringShallow':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
+            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toStringDeep':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
+            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'redepthChildren':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.redepthChildren();
+        return ({positionalArgs, namedArgs, typeArgs}) => redepthChildren();
       default:
         throw HTErrorUndefined(varName);
     }
@@ -1577,16 +1768,16 @@ extension ShaderMaskLayerBinding on ShaderMaskLayer {
   void htAssign(String varName, dynamic value) {
     switch (varName) {
       case 'debugCreator':
-        this.debugCreator = value;
+        debugCreator = value;
         break;
       case 'shader':
-        this.shader = value;
+        shader = value;
         break;
       case 'maskRect':
-        this.maskRect = value;
+        maskRect = value;
         break;
       case 'blendMode':
-        this.blendMode = value;
+        blendMode = value;
         break;
       default:
         throw HTErrorUndefined(varName);
@@ -1601,7 +1792,8 @@ class BackdropFilterLayerAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'BackdropFilterLayer':
-        return ({positionalArgs, namedArgs, typeArgs}) => BackdropFilterLayer(filter : namedArgs.containsKey('filter') ? namedArgs['filter'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            BackdropFilterLayer(filter: namedArgs.containsKey('filter') ? namedArgs['filter'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -1616,8 +1808,6 @@ class BackdropFilterLayerAutoBinding extends HTExternalClass {
   void instanceMemberSet(dynamic instance, String id, dynamic value) {
     (instance as BackdropFilterLayer).htAssign(id, value);
   }
-
-
 }
 
 extension BackdropFilterLayerBinding on BackdropFilterLayer {
@@ -1637,8 +1827,6 @@ extension BackdropFilterLayerBinding on BackdropFilterLayer {
         return hasChildren;
       case 'parent':
         return parent;
-      case 'debugSubtreeNeedsAddToScene':
-        return debugSubtreeNeedsAddToScene;
       case 'nextSibling':
         return nextSibling;
       case 'previousSibling':
@@ -1650,47 +1838,62 @@ extension BackdropFilterLayerBinding on BackdropFilterLayer {
       case 'attached':
         return attached;
       case 'addToScene':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.addToScene(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : Offset.zero);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            addToScene(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : Offset.zero);
       case 'buildScene':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.buildScene(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => buildScene(positionalArgs[0]);
       case 'updateSubtreeNeedsAddToScene':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.updateSubtreeNeedsAddToScene();
+        return ({positionalArgs, namedArgs, typeArgs}) => updateSubtreeNeedsAddToScene();
       case 'findAnnotations':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.findAnnotations(positionalArgs[0], positionalArgs[1], onlyFirst : namedArgs.containsKey('onlyFirst') ? namedArgs['onlyFirst'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => findAnnotations(positionalArgs[0], positionalArgs[1],
+            onlyFirst: namedArgs.containsKey('onlyFirst') ? namedArgs['onlyFirst'] : null);
       case 'attach':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.attach(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => attach(positionalArgs[0]);
       case 'detach':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.detach();
+        return ({positionalArgs, namedArgs, typeArgs}) => detach();
       case 'append':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.append(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => append(positionalArgs[0]);
       case 'removeAllChildren':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.removeAllChildren();
+        return ({positionalArgs, namedArgs, typeArgs}) => removeAllChildren();
       case 'addChildrenToScene':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.addChildrenToScene(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : Offset.zero);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            addChildrenToScene(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : Offset.zero);
       case 'applyTransform':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.applyTransform(positionalArgs[0], positionalArgs[1]);
-      case 'depthFirstIterateChildren':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.depthFirstIterateChildren();
+        return ({positionalArgs, namedArgs, typeArgs}) => applyTransform(positionalArgs[0], positionalArgs[1]);
       case 'debugDescribeChildren':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugDescribeChildren();
-      case 'debugMarkClean':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugMarkClean();
+        return ({positionalArgs, namedArgs, typeArgs}) => debugDescribeChildren();
       case 'dropChild':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.dropChild(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => dropChild(positionalArgs[0]);
       case 'adoptChild':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.adoptChild(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => adoptChild(positionalArgs[0]);
       case 'remove':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.remove();
+        return ({positionalArgs, namedArgs, typeArgs}) => remove();
       case 'find':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.find(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => find(positionalArgs[0]);
       case 'findAllAnnotations':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.findAllAnnotations(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => findAllAnnotations(positionalArgs[0]);
       case 'toStringShort':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toStringShort();
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+      case 'toStringShallow':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
+            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toStringDeep':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
+            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'redepthChildren':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.redepthChildren();
+        return ({positionalArgs, namedArgs, typeArgs}) => redepthChildren();
       default:
         throw HTErrorUndefined(varName);
     }
@@ -1699,10 +1902,10 @@ extension BackdropFilterLayerBinding on BackdropFilterLayer {
   void htAssign(String varName, dynamic value) {
     switch (varName) {
       case 'debugCreator':
-        this.debugCreator = value;
+        debugCreator = value;
         break;
       case 'filter':
-        this.filter = value;
+        filter = value;
         break;
       default:
         throw HTErrorUndefined(varName);
@@ -1717,7 +1920,12 @@ class PhysicalModelLayerAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'PhysicalModelLayer':
-        return ({positionalArgs, namedArgs, typeArgs}) => PhysicalModelLayer(clipPath : namedArgs.containsKey('clipPath') ? namedArgs['clipPath'] : null, clipBehavior : namedArgs.containsKey('clipBehavior') ? namedArgs['clipBehavior'] : Clip.none, elevation : namedArgs.containsKey('elevation') ? namedArgs['elevation'] : null, color : namedArgs.containsKey('color') ? namedArgs['color'] : null, shadowColor : namedArgs.containsKey('shadowColor') ? namedArgs['shadowColor'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => PhysicalModelLayer(
+            clipPath: namedArgs.containsKey('clipPath') ? namedArgs['clipPath'] : null,
+            clipBehavior: namedArgs.containsKey('clipBehavior') ? namedArgs['clipBehavior'] : Clip.none,
+            elevation: namedArgs.containsKey('elevation') ? namedArgs['elevation'] : null,
+            color: namedArgs.containsKey('color') ? namedArgs['color'] : null,
+            shadowColor: namedArgs.containsKey('shadowColor') ? namedArgs['shadowColor'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -1732,8 +1940,6 @@ class PhysicalModelLayerAutoBinding extends HTExternalClass {
   void instanceMemberSet(dynamic instance, String id, dynamic value) {
     (instance as PhysicalModelLayer).htAssign(id, value);
   }
-
-
 }
 
 extension PhysicalModelLayerBinding on PhysicalModelLayer {
@@ -1761,8 +1967,6 @@ extension PhysicalModelLayerBinding on PhysicalModelLayer {
         return hasChildren;
       case 'parent':
         return parent;
-      case 'debugSubtreeNeedsAddToScene':
-        return debugSubtreeNeedsAddToScene;
       case 'nextSibling':
         return nextSibling;
       case 'previousSibling':
@@ -1774,47 +1978,62 @@ extension PhysicalModelLayerBinding on PhysicalModelLayer {
       case 'attached':
         return attached;
       case 'findAnnotations':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.findAnnotations(positionalArgs[0], positionalArgs[1], onlyFirst : namedArgs.containsKey('onlyFirst') ? namedArgs['onlyFirst'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => findAnnotations(positionalArgs[0], positionalArgs[1],
+            onlyFirst: namedArgs.containsKey('onlyFirst') ? namedArgs['onlyFirst'] : null);
       case 'addToScene':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.addToScene(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : Offset.zero);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            addToScene(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : Offset.zero);
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
       case 'buildScene':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.buildScene(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => buildScene(positionalArgs[0]);
       case 'updateSubtreeNeedsAddToScene':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.updateSubtreeNeedsAddToScene();
+        return ({positionalArgs, namedArgs, typeArgs}) => updateSubtreeNeedsAddToScene();
       case 'attach':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.attach(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => attach(positionalArgs[0]);
       case 'detach':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.detach();
+        return ({positionalArgs, namedArgs, typeArgs}) => detach();
       case 'append':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.append(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => append(positionalArgs[0]);
       case 'removeAllChildren':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.removeAllChildren();
+        return ({positionalArgs, namedArgs, typeArgs}) => removeAllChildren();
       case 'addChildrenToScene':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.addChildrenToScene(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : Offset.zero);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            addChildrenToScene(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : Offset.zero);
       case 'applyTransform':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.applyTransform(positionalArgs[0], positionalArgs[1]);
-      case 'depthFirstIterateChildren':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.depthFirstIterateChildren();
+        return ({positionalArgs, namedArgs, typeArgs}) => applyTransform(positionalArgs[0], positionalArgs[1]);
       case 'debugDescribeChildren':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugDescribeChildren();
-      case 'debugMarkClean':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugMarkClean();
+        return ({positionalArgs, namedArgs, typeArgs}) => debugDescribeChildren();
       case 'dropChild':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.dropChild(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => dropChild(positionalArgs[0]);
       case 'adoptChild':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.adoptChild(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => adoptChild(positionalArgs[0]);
       case 'remove':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.remove();
+        return ({positionalArgs, namedArgs, typeArgs}) => remove();
       case 'find':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.find(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => find(positionalArgs[0]);
       case 'findAllAnnotations':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.findAllAnnotations(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => findAllAnnotations(positionalArgs[0]);
       case 'toStringShort':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toStringShort();
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+      case 'toStringShallow':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
+            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toStringDeep':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
+            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'redepthChildren':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.redepthChildren();
+        return ({positionalArgs, namedArgs, typeArgs}) => redepthChildren();
       default:
         throw HTErrorUndefined(varName);
     }
@@ -1823,22 +2042,22 @@ extension PhysicalModelLayerBinding on PhysicalModelLayer {
   void htAssign(String varName, dynamic value) {
     switch (varName) {
       case 'debugCreator':
-        this.debugCreator = value;
+        debugCreator = value;
         break;
       case 'clipPath':
-        this.clipPath = value;
+        clipPath = value;
         break;
       case 'clipBehavior':
-        this.clipBehavior = value;
+        clipBehavior = value;
         break;
       case 'elevation':
-        this.elevation = value;
+        elevation = value;
         break;
       case 'color':
-        this.color = value;
+        color = value;
         break;
       case 'shadowColor':
-        this.shadowColor = value;
+        shadowColor = value;
         break;
       default:
         throw HTErrorUndefined(varName);
@@ -1868,8 +2087,6 @@ class LayerLinkAutoBinding extends HTExternalClass {
   void instanceMemberSet(dynamic instance, String id, dynamic value) {
     (instance as LayerLink).htAssign(id, value);
   }
-
-
 }
 
 extension LayerLinkBinding on LayerLink {
@@ -1882,7 +2099,7 @@ extension LayerLinkBinding on LayerLink {
       case 'leader':
         return leader;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
         throw HTErrorUndefined(varName);
     }
@@ -1891,7 +2108,7 @@ extension LayerLinkBinding on LayerLink {
   void htAssign(String varName, dynamic value) {
     switch (varName) {
       case 'leaderSize':
-        this.leaderSize = value;
+        leaderSize = value;
         break;
       default:
         throw HTErrorUndefined(varName);
@@ -1906,7 +2123,8 @@ class LeaderLayerAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'LeaderLayer':
-        return ({positionalArgs, namedArgs, typeArgs}) => LeaderLayer(link : namedArgs['link'], offset : namedArgs.containsKey('offset') ? namedArgs['offset'] : Offset.zero);
+        return ({positionalArgs, namedArgs, typeArgs}) => LeaderLayer(
+            link: namedArgs['link'], offset: namedArgs.containsKey('offset') ? namedArgs['offset'] : Offset.zero);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -1921,8 +2139,6 @@ class LeaderLayerAutoBinding extends HTExternalClass {
   void instanceMemberSet(dynamic instance, String id, dynamic value) {
     (instance as LeaderLayer).htAssign(id, value);
   }
-
-
 }
 
 extension LeaderLayerBinding on LeaderLayer {
@@ -1946,8 +2162,6 @@ extension LeaderLayerBinding on LeaderLayer {
         return hasChildren;
       case 'parent':
         return parent;
-      case 'debugSubtreeNeedsAddToScene':
-        return debugSubtreeNeedsAddToScene;
       case 'nextSibling':
         return nextSibling;
       case 'previousSibling':
@@ -1959,47 +2173,62 @@ extension LeaderLayerBinding on LeaderLayer {
       case 'attached':
         return attached;
       case 'attach':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.attach(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => attach(positionalArgs[0]);
       case 'detach':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.detach();
+        return ({positionalArgs, namedArgs, typeArgs}) => detach();
       case 'findAnnotations':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.findAnnotations(positionalArgs[0], positionalArgs[1], onlyFirst : namedArgs.containsKey('onlyFirst') ? namedArgs['onlyFirst'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => findAnnotations(positionalArgs[0], positionalArgs[1],
+            onlyFirst: namedArgs.containsKey('onlyFirst') ? namedArgs['onlyFirst'] : null);
       case 'addToScene':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.addToScene(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : Offset.zero);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            addToScene(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : Offset.zero);
       case 'applyTransform':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.applyTransform(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => applyTransform(positionalArgs[0], positionalArgs[1]);
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
       case 'buildScene':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.buildScene(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => buildScene(positionalArgs[0]);
       case 'updateSubtreeNeedsAddToScene':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.updateSubtreeNeedsAddToScene();
+        return ({positionalArgs, namedArgs, typeArgs}) => updateSubtreeNeedsAddToScene();
       case 'append':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.append(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => append(positionalArgs[0]);
       case 'removeAllChildren':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.removeAllChildren();
+        return ({positionalArgs, namedArgs, typeArgs}) => removeAllChildren();
       case 'addChildrenToScene':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.addChildrenToScene(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : Offset.zero);
-      case 'depthFirstIterateChildren':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.depthFirstIterateChildren();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            addChildrenToScene(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : Offset.zero);
       case 'debugDescribeChildren':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugDescribeChildren();
-      case 'debugMarkClean':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugMarkClean();
+        return ({positionalArgs, namedArgs, typeArgs}) => debugDescribeChildren();
       case 'dropChild':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.dropChild(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => dropChild(positionalArgs[0]);
       case 'adoptChild':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.adoptChild(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => adoptChild(positionalArgs[0]);
       case 'remove':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.remove();
+        return ({positionalArgs, namedArgs, typeArgs}) => remove();
       case 'find':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.find(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => find(positionalArgs[0]);
       case 'findAllAnnotations':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.findAllAnnotations(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => findAllAnnotations(positionalArgs[0]);
       case 'toStringShort':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toStringShort();
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+      case 'toStringShallow':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
+            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toStringDeep':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
+            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'redepthChildren':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.redepthChildren();
+        return ({positionalArgs, namedArgs, typeArgs}) => redepthChildren();
       default:
         throw HTErrorUndefined(varName);
     }
@@ -2008,13 +2237,13 @@ extension LeaderLayerBinding on LeaderLayer {
   void htAssign(String varName, dynamic value) {
     switch (varName) {
       case 'offset':
-        this.offset = value;
+        offset = value;
         break;
       case 'debugCreator':
-        this.debugCreator = value;
+        debugCreator = value;
         break;
       case 'link':
-        this.link = value;
+        link = value;
         break;
       default:
         throw HTErrorUndefined(varName);
@@ -2029,7 +2258,11 @@ class FollowerLayerAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'FollowerLayer':
-        return ({positionalArgs, namedArgs, typeArgs}) => FollowerLayer(link : namedArgs['link'], showWhenUnlinked : namedArgs.containsKey('showWhenUnlinked') ? namedArgs['showWhenUnlinked'] : true, unlinkedOffset : namedArgs.containsKey('unlinkedOffset') ? namedArgs['unlinkedOffset'] : Offset.zero, linkedOffset : namedArgs.containsKey('linkedOffset') ? namedArgs['linkedOffset'] : Offset.zero);
+        return ({positionalArgs, namedArgs, typeArgs}) => FollowerLayer(
+            link: namedArgs['link'],
+            showWhenUnlinked: namedArgs.containsKey('showWhenUnlinked') ? namedArgs['showWhenUnlinked'] : true,
+            unlinkedOffset: namedArgs.containsKey('unlinkedOffset') ? namedArgs['unlinkedOffset'] : Offset.zero,
+            linkedOffset: namedArgs.containsKey('linkedOffset') ? namedArgs['linkedOffset'] : Offset.zero);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -2044,8 +2277,6 @@ class FollowerLayerAutoBinding extends HTExternalClass {
   void instanceMemberSet(dynamic instance, String id, dynamic value) {
     (instance as FollowerLayer).htAssign(id, value);
   }
-
-
 }
 
 extension FollowerLayerBinding on FollowerLayer {
@@ -2073,8 +2304,6 @@ extension FollowerLayerBinding on FollowerLayer {
         return hasChildren;
       case 'parent':
         return parent;
-      case 'debugSubtreeNeedsAddToScene':
-        return debugSubtreeNeedsAddToScene;
       case 'nextSibling':
         return nextSibling;
       case 'previousSibling':
@@ -2086,49 +2315,64 @@ extension FollowerLayerBinding on FollowerLayer {
       case 'attached':
         return attached;
       case 'findAnnotations':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.findAnnotations(positionalArgs[0], positionalArgs[1], onlyFirst : namedArgs.containsKey('onlyFirst') ? namedArgs['onlyFirst'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => findAnnotations(positionalArgs[0], positionalArgs[1],
+            onlyFirst: namedArgs.containsKey('onlyFirst') ? namedArgs['onlyFirst'] : null);
       case 'getLastTransform':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.getLastTransform();
+        return ({positionalArgs, namedArgs, typeArgs}) => getLastTransform();
       case 'addToScene':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.addToScene(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : Offset.zero);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            addToScene(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : Offset.zero);
       case 'applyTransform':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.applyTransform(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => applyTransform(positionalArgs[0], positionalArgs[1]);
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
       case 'buildScene':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.buildScene(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => buildScene(positionalArgs[0]);
       case 'updateSubtreeNeedsAddToScene':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.updateSubtreeNeedsAddToScene();
+        return ({positionalArgs, namedArgs, typeArgs}) => updateSubtreeNeedsAddToScene();
       case 'attach':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.attach(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => attach(positionalArgs[0]);
       case 'detach':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.detach();
+        return ({positionalArgs, namedArgs, typeArgs}) => detach();
       case 'append':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.append(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => append(positionalArgs[0]);
       case 'removeAllChildren':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.removeAllChildren();
+        return ({positionalArgs, namedArgs, typeArgs}) => removeAllChildren();
       case 'addChildrenToScene':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.addChildrenToScene(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : Offset.zero);
-      case 'depthFirstIterateChildren':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.depthFirstIterateChildren();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            addChildrenToScene(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : Offset.zero);
       case 'debugDescribeChildren':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugDescribeChildren();
-      case 'debugMarkClean':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugMarkClean();
+        return ({positionalArgs, namedArgs, typeArgs}) => debugDescribeChildren();
       case 'dropChild':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.dropChild(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => dropChild(positionalArgs[0]);
       case 'adoptChild':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.adoptChild(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => adoptChild(positionalArgs[0]);
       case 'remove':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.remove();
+        return ({positionalArgs, namedArgs, typeArgs}) => remove();
       case 'find':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.find(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => find(positionalArgs[0]);
       case 'findAllAnnotations':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.findAllAnnotations(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => findAllAnnotations(positionalArgs[0]);
       case 'toStringShort':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toStringShort();
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+      case 'toStringShallow':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
+            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toStringDeep':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
+            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'redepthChildren':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.redepthChildren();
+        return ({positionalArgs, namedArgs, typeArgs}) => redepthChildren();
       default:
         throw HTErrorUndefined(varName);
     }
@@ -2137,23 +2381,22 @@ extension FollowerLayerBinding on FollowerLayer {
   void htAssign(String varName, dynamic value) {
     switch (varName) {
       case 'showWhenUnlinked':
-        this.showWhenUnlinked = value;
+        showWhenUnlinked = value;
         break;
       case 'unlinkedOffset':
-        this.unlinkedOffset = value;
+        unlinkedOffset = value;
         break;
       case 'linkedOffset':
-        this.linkedOffset = value;
+        linkedOffset = value;
         break;
       case 'debugCreator':
-        this.debugCreator = value;
+        debugCreator = value;
         break;
       case 'link':
-        this.link = value;
+        link = value;
         break;
       default:
         throw HTErrorUndefined(varName);
     }
   }
 }
-

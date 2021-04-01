@@ -1,0 +1,39 @@
+external class IconData {
+    construct 
+    get codePoint
+    get fontFamily
+    get fontPackage
+    get matchTextDirection
+    get hashCode
+    fun toString
+}
+external class IconDataProperty {
+    construct 
+    get expandableValue
+    get allowWrap
+    get allowNameWrap
+    get ifNull
+    get ifEmpty
+    get tooltip
+    get missingIfNull
+    get defaultValue
+    get name
+    get showSeparator
+    get showName
+    get linePrefix
+    get style
+    fun toJsonMap
+    fun valueToString
+    fun toDescription
+    get propertyType
+    get value
+    get exception
+    get level
+    fun getProperties
+    fun getChildren
+    fun isFiltered
+    get emptyBodyDescription
+    get allowTruncate
+    fun toString
+    fun toStringDeep
+}

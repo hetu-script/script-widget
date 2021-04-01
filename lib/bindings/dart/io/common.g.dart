@@ -1,13 +1,5 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'dart:io';
-import 'dart:async';
-import 'dart:collection';
-import 'dart:convert';
-import 'dart:developer';
-import 'dart:isolate';
-import 'dart:math';
-import 'dart:typed_data';
-
 
 class OSErrorAutoBinding extends HTExternalClass {
   OSErrorAutoBinding() : super('OSError');
@@ -16,7 +8,8 @@ class OSErrorAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'OSError':
-        return ({positionalArgs, namedArgs, typeArgs}) => OSError(positionalArgs.length > 0 ? positionalArgs[0] : "", positionalArgs.length > 1 ? positionalArgs[1] : noErrorCode);
+        return ({positionalArgs, namedArgs, typeArgs}) => OSError(positionalArgs.length > 0 ? positionalArgs[0] : '',
+            positionalArgs.length > 1 ? positionalArgs[1] : noErrorCode);
       case 'OSError.noErrorCode':
         return OSError.noErrorCode;
       default:
@@ -28,8 +21,6 @@ class OSErrorAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as OSError).htFetch(id);
   }
-
-
 
   static const noErrorCode = -1;
 }
@@ -44,11 +35,9 @@ extension OSErrorBinding on OSError {
       case 'errorCode':
         return errorCode;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
-

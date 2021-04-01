@@ -1,6 +1,5 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/painting.dart';
-import 'dart:ui';
 
 class RenderComparisonAutoBinding extends HTExternalClass {
   RenderComparisonAutoBinding() : super('RenderComparison');
@@ -23,7 +22,6 @@ class RenderComparisonAutoBinding extends HTExternalClass {
     }
   }
 
-
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
@@ -38,6 +36,7 @@ class RenderComparisonAutoBinding extends HTExternalClass {
     }
   }
 }
+
 class AxisAutoBinding extends HTExternalClass {
   AxisAutoBinding() : super('Axis');
 
@@ -55,7 +54,6 @@ class AxisAutoBinding extends HTExternalClass {
     }
   }
 
-
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
@@ -70,6 +68,7 @@ class AxisAutoBinding extends HTExternalClass {
     }
   }
 }
+
 class VerticalDirectionAutoBinding extends HTExternalClass {
   VerticalDirectionAutoBinding() : super('VerticalDirection');
 
@@ -87,7 +86,6 @@ class VerticalDirectionAutoBinding extends HTExternalClass {
     }
   }
 
-
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
@@ -102,6 +100,7 @@ class VerticalDirectionAutoBinding extends HTExternalClass {
     }
   }
 }
+
 class AxisDirectionAutoBinding extends HTExternalClass {
   AxisDirectionAutoBinding() : super('AxisDirection');
 
@@ -123,7 +122,6 @@ class AxisDirectionAutoBinding extends HTExternalClass {
     }
   }
 
-
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
@@ -138,4 +136,3 @@ class AxisDirectionAutoBinding extends HTExternalClass {
     }
   }
 }
-

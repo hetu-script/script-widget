@@ -1,7 +1,5 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/material.dart';
-import 'dart:ui';
-import 'package:flutter/widgets.dart';
 
 class DayPeriodAutoBinding extends HTExternalClass {
   DayPeriodAutoBinding() : super('DayPeriod');
@@ -20,7 +18,6 @@ class DayPeriodAutoBinding extends HTExternalClass {
     }
   }
 
-
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
@@ -35,6 +32,7 @@ class DayPeriodAutoBinding extends HTExternalClass {
     }
   }
 }
+
 class TimeOfDayFormatAutoBinding extends HTExternalClass {
   TimeOfDayFormatAutoBinding() : super('TimeOfDayFormat');
 
@@ -60,7 +58,6 @@ class TimeOfDayFormatAutoBinding extends HTExternalClass {
     }
   }
 
-
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
@@ -75,6 +72,7 @@ class TimeOfDayFormatAutoBinding extends HTExternalClass {
     }
   }
 }
+
 class HourFormatAutoBinding extends HTExternalClass {
   HourFormatAutoBinding() : super('HourFormat');
 
@@ -93,7 +91,6 @@ class HourFormatAutoBinding extends HTExternalClass {
         throw HTErrorUndefined(varName);
     }
   }
-
 
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
@@ -117,7 +114,8 @@ class TimeOfDayAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'TimeOfDay':
-        return ({positionalArgs, namedArgs, typeArgs}) => TimeOfDay(hour : namedArgs['hour'], minute : namedArgs['minute']);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            TimeOfDay(hour: namedArgs['hour'], minute: namedArgs['minute']);
       case 'TimeOfDay.fromDateTime':
         return ({positionalArgs, namedArgs, typeArgs}) => TimeOfDay.fromDateTime(positionalArgs[0]);
       case 'TimeOfDay.now':
@@ -137,9 +135,6 @@ class TimeOfDayAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as TimeOfDay).htFetch(id);
   }
-
-
-
 }
 
 extension TimeOfDayBinding on TimeOfDay {
@@ -160,15 +155,15 @@ extension TimeOfDayBinding on TimeOfDay {
       case 'hashCode':
         return hashCode;
       case 'replacing':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.replacing(hour : namedArgs.containsKey('hour') ? namedArgs['hour'] : null, minute : namedArgs.containsKey('minute') ? namedArgs['minute'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => replacing(
+            hour: namedArgs.containsKey('hour') ? namedArgs['hour'] : null,
+            minute: namedArgs.containsKey('minute') ? namedArgs['minute'] : null);
       case 'format':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.format(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => format(positionalArgs[0]);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
-

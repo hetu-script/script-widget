@@ -1,8 +1,5 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'dart:convert';
-import 'dart:async';
-import 'dart:typed_data';
-
 
 class StringConversionSinkAutoBinding extends HTExternalClass {
   StringConversionSinkAutoBinding() : super('StringConversionSink');
@@ -25,9 +22,6 @@ class StringConversionSinkAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as StringConversionSink).htFetch(id);
   }
-
-
-
 }
 
 extension StringConversionSinkBinding on StringConversionSink {
@@ -36,20 +30,20 @@ extension StringConversionSinkBinding on StringConversionSink {
       case 'typeid':
         return HTTypeId('StringConversionSink');
       case 'addSlice':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.addSlice(positionalArgs[0], positionalArgs[1], positionalArgs[2], positionalArgs[3]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            addSlice(positionalArgs[0], positionalArgs[1], positionalArgs[2], positionalArgs[3]);
       case 'asUtf8Sink':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.asUtf8Sink(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => asUtf8Sink(positionalArgs[0]);
       case 'asStringSink':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.asStringSink();
+        return ({positionalArgs, namedArgs, typeArgs}) => asStringSink();
       case 'add':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.add(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => add(positionalArgs[0]);
       case 'close':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.close();
+        return ({positionalArgs, namedArgs, typeArgs}) => close();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class ClosableStringSinkAutoBinding extends HTExternalClass {
@@ -59,7 +53,8 @@ class ClosableStringSinkAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'ClosableStringSink.fromStringSink':
-        return ({positionalArgs, namedArgs, typeArgs}) => ClosableStringSink.fromStringSink(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            ClosableStringSink.fromStringSink(positionalArgs[0], positionalArgs[1]);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -69,9 +64,6 @@ class ClosableStringSinkAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as ClosableStringSink).htFetch(id);
   }
-
-
-
 }
 
 extension ClosableStringSinkBinding on ClosableStringSink {
@@ -80,19 +72,18 @@ extension ClosableStringSinkBinding on ClosableStringSink {
       case 'typeid':
         return HTTypeId('ClosableStringSink');
       case 'close':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.close();
+        return ({positionalArgs, namedArgs, typeArgs}) => close();
       case 'write':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.write(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => write(positionalArgs[0]);
       case 'writeAll':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.writeAll(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : "");
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            writeAll(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : '');
       case 'writeln':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.writeln(positionalArgs.length > 0 ? positionalArgs[0] : "");
+        return ({positionalArgs, namedArgs, typeArgs}) => writeln(positionalArgs.length > 0 ? positionalArgs[0] : '');
       case 'writeCharCode':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.writeCharCode(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => writeCharCode(positionalArgs[0]);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
-

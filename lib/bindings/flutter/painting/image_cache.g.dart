@@ -1,10 +1,5 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/painting.dart';
-import 'dart:developer';
-import 'dart:ui';
-import 'package:flutter/foundation.dart';
-import 'package:flutter/scheduler.dart';
-
 
 class ImageCacheAutoBinding extends HTExternalClass {
   ImageCacheAutoBinding() : super('ImageCache');
@@ -31,10 +26,10 @@ class ImageCacheAutoBinding extends HTExternalClass {
 
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'ImageErrorListener': (HTFunction function) => (exception, stackTrace) => function.call(positionalArgs: [exception, stackTrace], namedArgs: const {}),
+      'ImageErrorListener': (HTFunction function) =>
+          (exception, stackTrace) => function.call(positionalArgs: [exception, stackTrace], namedArgs: const {}),
     };
   }
-
 }
 
 extension ImageCacheBinding on ImageCache {
@@ -55,17 +50,19 @@ extension ImageCacheBinding on ImageCache {
       case 'pendingImageCount':
         return pendingImageCount;
       case 'clear':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.clear();
+        return ({positionalArgs, namedArgs, typeArgs}) => clear();
       case 'evict':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.evict(positionalArgs[0], includeLive : namedArgs.containsKey('includeLive') ? namedArgs['includeLive'] : true);
+        return ({positionalArgs, namedArgs, typeArgs}) => evict(positionalArgs[0],
+            includeLive: namedArgs.containsKey('includeLive') ? namedArgs['includeLive'] : true);
       case 'putIfAbsent':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.putIfAbsent(positionalArgs[0], positionalArgs[1], onError : namedArgs.containsKey('onError') ? namedArgs['onError'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => putIfAbsent(positionalArgs[0], positionalArgs[1],
+            onError: namedArgs.containsKey('onError') ? namedArgs['onError'] : null);
       case 'statusForKey':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.statusForKey(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => statusForKey(positionalArgs[0]);
       case 'containsKey':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.containsKey(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => containsKey(positionalArgs[0]);
       case 'clearLiveImages':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.clearLiveImages();
+        return ({positionalArgs, namedArgs, typeArgs}) => clearLiveImages();
       default:
         throw HTErrorUndefined(varName);
     }
@@ -74,14 +71,13 @@ extension ImageCacheBinding on ImageCache {
   void htAssign(String varName, dynamic value) {
     switch (varName) {
       case 'maximumSize':
-        this.maximumSize = value;
+        maximumSize = value;
         break;
       case 'maximumSizeBytes':
-        this.maximumSizeBytes = value;
+        maximumSizeBytes = value;
         break;
       default:
         throw HTErrorUndefined(varName);
     }
   }
 }
-

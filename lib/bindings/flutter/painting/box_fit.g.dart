@@ -1,7 +1,5 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/painting.dart';
-import 'dart:math'as math;
-import 'package:flutter/foundation.dart';
 
 class BoxFitAutoBinding extends HTExternalClass {
   BoxFitAutoBinding() : super('BoxFit');
@@ -29,7 +27,6 @@ class BoxFitAutoBinding extends HTExternalClass {
         throw HTErrorUndefined(varName);
     }
   }
-
 
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
@@ -63,9 +60,6 @@ class FittedSizesAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as FittedSizes).htFetch(id);
   }
-
-
-
 }
 
 extension FittedSizesBinding on FittedSizes {
@@ -81,6 +75,4 @@ extension FittedSizesBinding on FittedSizes {
         throw HTErrorUndefined(varName);
     }
   }
-
 }
-

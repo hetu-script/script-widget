@@ -1,0 +1,153 @@
+external class FlexFit {
+    static const tight
+    static const loose
+}
+external class MainAxisSize {
+    static const min
+    static const max
+}
+external class MainAxisAlignment {
+    static const start
+    static const end
+    static const center
+    static const spaceBetween
+    static const spaceAround
+    static const spaceEvenly
+}
+external class CrossAxisAlignment {
+    static const start
+    static const end
+    static const center
+    static const stretch
+    static const baseline
+}
+external class FlexParentData {
+    construct
+    var flex
+    var fit
+    var offset
+    fun toString
+    fun detach
+}
+external class RenderFlex {
+    construct 
+    var parentData
+    var debugCreator
+    get direction
+    set direction(value)
+    get mainAxisAlignment
+    set mainAxisAlignment(value)
+    get mainAxisSize
+    set mainAxisSize(value)
+    get crossAxisAlignment
+    set crossAxisAlignment(value)
+    get textDirection
+    set textDirection(value)
+    get verticalDirection
+    set verticalDirection(value)
+    get textBaseline
+    set textBaseline(value)
+    get clipBehavior
+    set clipBehavior(value)
+    fun setupParentData
+    fun computeMinIntrinsicWidth
+    fun computeMaxIntrinsicWidth
+    fun computeMinIntrinsicHeight
+    fun computeMaxIntrinsicHeight
+    fun computeDistanceToActualBaseline
+    fun computeDryLayout
+    fun performLayout
+    fun hitTestChildren
+    fun paint
+    fun describeApproximatePaintClip
+    fun toStringShort
+    fun debugFillProperties
+    get childCount
+    fun debugValidateChild
+    fun insert
+    fun add
+    fun addAll
+    fun remove
+    fun removeAll
+    fun move
+    fun attach
+    fun detach
+    fun redepthChildren
+    fun visitChildren
+    get firstChild
+    get lastChild
+    fun childBefore
+    fun childAfter
+    fun debugDescribeChildren
+    fun defaultComputeDistanceToFirstActualBaseline
+    fun defaultComputeDistanceToHighestActualBaseline
+    fun defaultHitTestChildren
+    fun defaultPaint
+    fun getChildrenAsList
+    fun paintOverflowIndicator
+    fun reassemble
+    fun getMinIntrinsicWidth
+    fun getMaxIntrinsicWidth
+    fun getMinIntrinsicHeight
+    fun getMaxIntrinsicHeight
+    fun getDryLayout
+    fun debugCannotComputeDryLayout
+    get hasSize
+    get size
+    fun debugAdoptSize
+    get semanticBounds
+    fun debugResetSize
+    fun getDistanceToBaseline
+    get constraints
+    fun debugAssertDoesMeetConstraints
+    fun markNeedsLayout
+    fun performResize
+    fun hitTest
+    fun applyPaintTransform
+    fun globalToLocal
+    fun localToGlobal
+    get paintBounds
+    fun handleEvent
+    fun debugHandleEvent
+    fun debugPaint
+    fun adoptChild
+    fun dropChild
+    get debugDoingThisResize
+    get debugDoingThisLayout
+    get debugCanParentUseSize
+    get owner
+    get debugNeedsLayout
+    get debugDoingThisLayoutWithCallback
+    fun markNeedsLayoutForSizedByParentChange
+    fun scheduleInitialLayout
+    fun layout
+    fun rotate
+    get debugDoingThisPaint
+    get isRepaintBoundary
+    fun debugRegisterRepaintBoundaryPaint
+    get debugLayer
+    fun markNeedsCompositingBitsUpdate
+    get needsCompositing
+    get debugNeedsPaint
+    fun markNeedsPaint
+    fun scheduleInitialPaint
+    fun replaceRootLayer
+    fun getTransformTo
+    fun describeSemanticsClip
+    fun scheduleInitialSemantics
+    fun sendSemanticsEvent
+    get debugSemantics
+    fun clearSemantics
+    fun markNeedsSemanticsUpdate
+    fun visitChildrenForSemantics
+    fun assembleSemanticsNode
+    fun toString
+    fun toStringDeep
+    fun toStringShallow
+    fun showOnScreen
+    fun describeForError
+    fun toDiagnosticsNode
+    get depth
+    get attached
+    get parent
+}

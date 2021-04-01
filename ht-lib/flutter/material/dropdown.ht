@@ -1,5 +1,0 @@
-external class DropdownButtonHideUnderline {
-    construct 
-    fun updateShouldNotify
-    static fun at (context)
-}

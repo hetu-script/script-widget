@@ -1,0 +1,47 @@
+external class PaginatedDataTable {
+    construct 
+    get header
+    get actions
+    get columns
+    get sortColumnIndex
+    get sortAscending
+    get onSelectAll
+    get dataRowHeight
+    get headingRowHeight
+    get horizontalMargin
+    get columnSpacing
+    get showCheckboxColumn
+    get initialFirstRowIndex
+    get onPageChanged
+    get rowsPerPage
+    get availableRowsPerPage
+    get onRowsPerPageChanged
+    get source
+    get dragStartBehavior
+    get key
+    fun createState
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+    static const defaultRowsPerPage
+}
+external class PaginatedDataTableState {
+    construct
+    fun initState
+    fun didUpdateWidget
+    fun dispose
+    fun pageTo
+    fun build
+    get widget
+    get context
+    get mounted
+    fun debugFillProperties
+    fun toStringShort
+    fun toString
+    fun toDiagnosticsNode
+}

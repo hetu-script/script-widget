@@ -1,6 +1,5 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/animation.dart';
-import 'package:flutter/foundation.dart';
 
 class AnimationStatusAutoBinding extends HTExternalClass {
   AnimationStatusAutoBinding() : super('AnimationStatus');
@@ -23,7 +22,6 @@ class AnimationStatusAutoBinding extends HTExternalClass {
     }
   }
 
-
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
@@ -38,4 +36,3 @@ class AnimationStatusAutoBinding extends HTExternalClass {
     }
   }
 }
-

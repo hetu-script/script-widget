@@ -1,0 +1,22 @@
+external class Card {
+    construct 
+    get color
+    get shadowColor
+    get elevation
+    get shape
+    get borderOnForeground
+    get clipBehavior
+    get margin
+    get semanticContainer
+    get child
+    get key
+    fun build
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}

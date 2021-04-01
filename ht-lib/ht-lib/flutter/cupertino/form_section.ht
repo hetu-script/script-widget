@@ -1,0 +1,21 @@
+external class CupertinoFormSection {
+    construct 
+    construct insetGrouped
+    get header
+    get footer
+    get margin
+    get children
+    get decoration
+    get backgroundColor
+    get clipBehavior
+    get key
+    fun build
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}

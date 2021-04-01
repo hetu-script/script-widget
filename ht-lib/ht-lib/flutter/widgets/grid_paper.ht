@@ -1,0 +1,18 @@
+external class GridPaper {
+    construct 
+    get color
+    get interval
+    get divisions
+    get subdivisions
+    get child
+    get key
+    fun build
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}

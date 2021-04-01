@@ -1,8 +1,5 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'dart:convert';
-import 'dart:async';
-import 'dart:typed_data';
-
 
 class ByteConversionSinkAutoBinding extends HTExternalClass {
   ByteConversionSinkAutoBinding() : super('ByteConversionSink');
@@ -23,9 +20,6 @@ class ByteConversionSinkAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as ByteConversionSink).htFetch(id);
   }
-
-
-
 }
 
 extension ByteConversionSinkBinding on ByteConversionSink {
@@ -34,15 +28,14 @@ extension ByteConversionSinkBinding on ByteConversionSink {
       case 'typeid':
         return HTTypeId('ByteConversionSink');
       case 'addSlice':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.addSlice(List<int>.from(positionalArgs[0]), positionalArgs[1], positionalArgs[2], positionalArgs[3]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            addSlice(List<int>.from(positionalArgs[0]), positionalArgs[1], positionalArgs[2], positionalArgs[3]);
       case 'add':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.add(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => add(positionalArgs[0]);
       case 'close':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.close();
+        return ({positionalArgs, namedArgs, typeArgs}) => close();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
-

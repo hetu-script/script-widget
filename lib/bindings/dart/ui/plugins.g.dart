@@ -1,15 +1,5 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'dart:ui';
-import 'dart:async';
-import 'dart:collection'as collection;
-import 'dart:convert';
-import 'dart:developer'as developer;
-import 'dart:io';
-import 'dart:isolate';
-import 'dart:math'as math;
-import 'dart:nativewrappers';
-import 'dart:typed_data';
-
 
 class CallbackHandleAutoBinding extends HTExternalClass {
   CallbackHandleAutoBinding() : super('CallbackHandle');
@@ -28,9 +18,6 @@ class CallbackHandleAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as CallbackHandle).htFetch(id);
   }
-
-
-
 }
 
 extension CallbackHandleBinding on CallbackHandle {
@@ -41,12 +28,11 @@ extension CallbackHandleBinding on CallbackHandle {
       case 'hashCode':
         return hashCode;
       case 'toRawHandle':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toRawHandle();
+        return ({positionalArgs, namedArgs, typeArgs}) => toRawHandle();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class PluginUtilitiesAutoBinding extends HTExternalClass {
@@ -63,10 +49,4 @@ class PluginUtilitiesAutoBinding extends HTExternalClass {
         throw HTErrorUndefined(varName);
     }
   }
-
-
-
-
 }
-
-

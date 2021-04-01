@@ -1,14 +1,5 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'dart:ui';
-import 'dart:async';
-import 'dart:collection'as collection;
-import 'dart:convert';
-import 'dart:developer'as developer;
-import 'dart:io';
-import 'dart:isolate';
-import 'dart:math'as math;
-import 'dart:nativewrappers';
-import 'dart:typed_data';
 
 class PointerChangeAutoBinding extends HTExternalClass {
   PointerChangeAutoBinding() : super('PointerChange');
@@ -37,7 +28,6 @@ class PointerChangeAutoBinding extends HTExternalClass {
     }
   }
 
-
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
@@ -52,6 +42,7 @@ class PointerChangeAutoBinding extends HTExternalClass {
     }
   }
 }
+
 class PointerDeviceKindAutoBinding extends HTExternalClass {
   PointerDeviceKindAutoBinding() : super('PointerDeviceKind');
 
@@ -75,7 +66,6 @@ class PointerDeviceKindAutoBinding extends HTExternalClass {
     }
   }
 
-
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
@@ -90,6 +80,7 @@ class PointerDeviceKindAutoBinding extends HTExternalClass {
     }
   }
 }
+
 class PointerSignalKindAutoBinding extends HTExternalClass {
   PointerSignalKindAutoBinding() : super('PointerSignalKind');
 
@@ -108,7 +99,6 @@ class PointerSignalKindAutoBinding extends HTExternalClass {
         throw HTErrorUndefined(varName);
     }
   }
-
 
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
@@ -132,7 +122,36 @@ class PointerDataAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'PointerData':
-        return ({positionalArgs, namedArgs, typeArgs}) => PointerData(embedderId : namedArgs.containsKey('embedderId') ? namedArgs['embedderId'] : 0, timeStamp : namedArgs.containsKey('timeStamp') ? namedArgs['timeStamp'] : Duration.zero, change : namedArgs.containsKey('change') ? namedArgs['change'] : PointerChange.cancel, kind : namedArgs.containsKey('kind') ? namedArgs['kind'] : PointerDeviceKind.touch, signalKind : namedArgs.containsKey('signalKind') ? namedArgs['signalKind'] : null, device : namedArgs.containsKey('device') ? namedArgs['device'] : 0, pointerIdentifier : namedArgs.containsKey('pointerIdentifier') ? namedArgs['pointerIdentifier'] : 0, physicalX : namedArgs.containsKey('physicalX') ? namedArgs['physicalX'] : 0.0, physicalY : namedArgs.containsKey('physicalY') ? namedArgs['physicalY'] : 0.0, physicalDeltaX : namedArgs.containsKey('physicalDeltaX') ? namedArgs['physicalDeltaX'] : 0.0, physicalDeltaY : namedArgs.containsKey('physicalDeltaY') ? namedArgs['physicalDeltaY'] : 0.0, buttons : namedArgs.containsKey('buttons') ? namedArgs['buttons'] : 0, obscured : namedArgs.containsKey('obscured') ? namedArgs['obscured'] : false, synthesized : namedArgs.containsKey('synthesized') ? namedArgs['synthesized'] : false, pressure : namedArgs.containsKey('pressure') ? namedArgs['pressure'] : 0.0, pressureMin : namedArgs.containsKey('pressureMin') ? namedArgs['pressureMin'] : 0.0, pressureMax : namedArgs.containsKey('pressureMax') ? namedArgs['pressureMax'] : 0.0, distance : namedArgs.containsKey('distance') ? namedArgs['distance'] : 0.0, distanceMax : namedArgs.containsKey('distanceMax') ? namedArgs['distanceMax'] : 0.0, size : namedArgs.containsKey('size') ? namedArgs['size'] : 0.0, radiusMajor : namedArgs.containsKey('radiusMajor') ? namedArgs['radiusMajor'] : 0.0, radiusMinor : namedArgs.containsKey('radiusMinor') ? namedArgs['radiusMinor'] : 0.0, radiusMin : namedArgs.containsKey('radiusMin') ? namedArgs['radiusMin'] : 0.0, radiusMax : namedArgs.containsKey('radiusMax') ? namedArgs['radiusMax'] : 0.0, orientation : namedArgs.containsKey('orientation') ? namedArgs['orientation'] : 0.0, tilt : namedArgs.containsKey('tilt') ? namedArgs['tilt'] : 0.0, platformData : namedArgs.containsKey('platformData') ? namedArgs['platformData'] : 0, scrollDeltaX : namedArgs.containsKey('scrollDeltaX') ? namedArgs['scrollDeltaX'] : 0.0, scrollDeltaY : namedArgs.containsKey('scrollDeltaY') ? namedArgs['scrollDeltaY'] : 0.0);
+        return ({positionalArgs, namedArgs, typeArgs}) => PointerData(
+            embedderId: namedArgs.containsKey('embedderId') ? namedArgs['embedderId'] : 0,
+            timeStamp: namedArgs.containsKey('timeStamp') ? namedArgs['timeStamp'] : Duration.zero,
+            change: namedArgs.containsKey('change') ? namedArgs['change'] : PointerChange.cancel,
+            kind: namedArgs.containsKey('kind') ? namedArgs['kind'] : PointerDeviceKind.touch,
+            signalKind: namedArgs.containsKey('signalKind') ? namedArgs['signalKind'] : null,
+            device: namedArgs.containsKey('device') ? namedArgs['device'] : 0,
+            pointerIdentifier: namedArgs.containsKey('pointerIdentifier') ? namedArgs['pointerIdentifier'] : 0,
+            physicalX: namedArgs.containsKey('physicalX') ? namedArgs['physicalX'] : 0.0,
+            physicalY: namedArgs.containsKey('physicalY') ? namedArgs['physicalY'] : 0.0,
+            physicalDeltaX: namedArgs.containsKey('physicalDeltaX') ? namedArgs['physicalDeltaX'] : 0.0,
+            physicalDeltaY: namedArgs.containsKey('physicalDeltaY') ? namedArgs['physicalDeltaY'] : 0.0,
+            buttons: namedArgs.containsKey('buttons') ? namedArgs['buttons'] : 0,
+            obscured: namedArgs.containsKey('obscured') ? namedArgs['obscured'] : false,
+            synthesized: namedArgs.containsKey('synthesized') ? namedArgs['synthesized'] : false,
+            pressure: namedArgs.containsKey('pressure') ? namedArgs['pressure'] : 0.0,
+            pressureMin: namedArgs.containsKey('pressureMin') ? namedArgs['pressureMin'] : 0.0,
+            pressureMax: namedArgs.containsKey('pressureMax') ? namedArgs['pressureMax'] : 0.0,
+            distance: namedArgs.containsKey('distance') ? namedArgs['distance'] : 0.0,
+            distanceMax: namedArgs.containsKey('distanceMax') ? namedArgs['distanceMax'] : 0.0,
+            size: namedArgs.containsKey('size') ? namedArgs['size'] : 0.0,
+            radiusMajor: namedArgs.containsKey('radiusMajor') ? namedArgs['radiusMajor'] : 0.0,
+            radiusMinor: namedArgs.containsKey('radiusMinor') ? namedArgs['radiusMinor'] : 0.0,
+            radiusMin: namedArgs.containsKey('radiusMin') ? namedArgs['radiusMin'] : 0.0,
+            radiusMax: namedArgs.containsKey('radiusMax') ? namedArgs['radiusMax'] : 0.0,
+            orientation: namedArgs.containsKey('orientation') ? namedArgs['orientation'] : 0.0,
+            tilt: namedArgs.containsKey('tilt') ? namedArgs['tilt'] : 0.0,
+            platformData: namedArgs.containsKey('platformData') ? namedArgs['platformData'] : 0,
+            scrollDeltaX: namedArgs.containsKey('scrollDeltaX') ? namedArgs['scrollDeltaX'] : 0.0,
+            scrollDeltaY: namedArgs.containsKey('scrollDeltaY') ? namedArgs['scrollDeltaY'] : 0.0);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -142,9 +161,6 @@ class PointerDataAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as PointerData).htFetch(id);
   }
-
-
-
 }
 
 extension PointerDataBinding on PointerData {
@@ -211,14 +227,13 @@ extension PointerDataBinding on PointerData {
       case 'scrollDeltaY':
         return scrollDeltaY;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       case 'toStringFull':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toStringFull();
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringFull();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class PointerDataPacketAutoBinding extends HTExternalClass {
@@ -228,7 +243,8 @@ class PointerDataPacketAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'PointerDataPacket':
-        return ({positionalArgs, namedArgs, typeArgs}) => PointerDataPacket(data : namedArgs.containsKey('data') ? List<PointerData>.from(namedArgs['data']) : const <PointerData>[]);
+        return ({positionalArgs, namedArgs, typeArgs}) => PointerDataPacket(
+            data: namedArgs.containsKey('data') ? List<PointerData>.from(namedArgs['data']) : const <PointerData>[]);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -238,9 +254,6 @@ class PointerDataPacketAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as PointerDataPacket).htFetch(id);
   }
-
-
-
 }
 
 extension PointerDataPacketBinding on PointerDataPacket {
@@ -254,6 +267,4 @@ extension PointerDataPacketBinding on PointerDataPacket {
         throw HTErrorUndefined(varName);
     }
   }
-
 }
-

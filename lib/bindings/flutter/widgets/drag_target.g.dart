@@ -1,9 +1,5 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/widgets.dart';
-import 'package:flutter/foundation.dart';
-import 'package:flutter/gestures.dart';
-import 'package:flutter/rendering.dart';
-import 'package:flutter/services.dart';
 
 class DragAnchorAutoBinding extends HTExternalClass {
   DragAnchorAutoBinding() : super('DragAnchor');
@@ -21,7 +17,6 @@ class DragAnchorAutoBinding extends HTExternalClass {
         throw HTErrorUndefined(varName);
     }
   }
-
 
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
@@ -45,7 +40,10 @@ class DraggableDetailsAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'DraggableDetails':
-        return ({positionalArgs, namedArgs, typeArgs}) => DraggableDetails(wasAccepted : namedArgs.containsKey('wasAccepted') ? namedArgs['wasAccepted'] : false, velocity : namedArgs['velocity'], offset : namedArgs['offset']);
+        return ({positionalArgs, namedArgs, typeArgs}) => DraggableDetails(
+            wasAccepted: namedArgs.containsKey('wasAccepted') ? namedArgs['wasAccepted'] : false,
+            velocity: namedArgs['velocity'],
+            offset: namedArgs['offset']);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -55,9 +53,6 @@ class DraggableDetailsAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as DraggableDetails).htFetch(id);
   }
-
-
-
 }
 
 extension DraggableDetailsBinding on DraggableDetails {
@@ -75,6 +70,4 @@ extension DraggableDetailsBinding on DraggableDetails {
         throw HTErrorUndefined(varName);
     }
   }
-
 }
-

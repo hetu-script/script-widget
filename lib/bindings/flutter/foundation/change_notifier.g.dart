@@ -1,8 +1,5 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/foundation.dart';
-import 'dart:collection';
-import 'package:meta/meta.dart';
-
 
 class ListenableAutoBinding extends HTExternalClass {
   ListenableAutoBinding() : super('Listenable');
@@ -22,13 +19,11 @@ class ListenableAutoBinding extends HTExternalClass {
     return (instance as Listenable).htFetch(id);
   }
 
-
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
       'VoidCallback': (HTFunction function) => () => function.call(positionalArgs: const [], namedArgs: const {}),
     };
   }
-
 }
 
 extension ListenableBinding on Listenable {
@@ -37,14 +32,13 @@ extension ListenableBinding on Listenable {
       case 'typeid':
         return HTTypeId('Listenable');
       case 'addListener':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.addListener(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => addListener(positionalArgs[0]);
       case 'removeListener':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.removeListener(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => removeListener(positionalArgs[0]);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class ChangeNotifierAutoBinding extends HTExternalClass {
@@ -65,13 +59,11 @@ class ChangeNotifierAutoBinding extends HTExternalClass {
     return (instance as ChangeNotifier).htFetch(id);
   }
 
-
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
       'VoidCallback': (HTFunction function) => () => function.call(positionalArgs: const [], namedArgs: const {}),
     };
   }
-
 }
 
 extension ChangeNotifierBinding on ChangeNotifier {
@@ -80,15 +72,13 @@ extension ChangeNotifierBinding on ChangeNotifier {
       case 'typeid':
         return HTTypeId('ChangeNotifier');
       case 'addListener':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.addListener(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => addListener(positionalArgs[0]);
       case 'removeListener':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.removeListener(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => removeListener(positionalArgs[0]);
       case 'dispose':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.dispose();
+        return ({positionalArgs, namedArgs, typeArgs}) => dispose();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
-

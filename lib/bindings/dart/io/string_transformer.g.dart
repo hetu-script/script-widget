@@ -1,13 +1,5 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'dart:io';
-import 'dart:async';
-import 'dart:collection';
-import 'dart:convert';
-import 'dart:developer';
-import 'dart:isolate';
-import 'dart:math';
-import 'dart:typed_data';
-
 
 class SystemEncodingAutoBinding extends HTExternalClass {
   SystemEncodingAutoBinding() : super('SystemEncoding');
@@ -26,9 +18,6 @@ class SystemEncodingAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as SystemEncoding).htFetch(id);
   }
-
-
-
 }
 
 extension SystemEncodingBinding on SystemEncoding {
@@ -43,15 +32,13 @@ extension SystemEncodingBinding on SystemEncoding {
       case 'decoder':
         return decoder;
       case 'encode':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.encode(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => encode(positionalArgs[0]);
       case 'decode':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.decode(List<int>.from(positionalArgs[0]));
+        return ({positionalArgs, namedArgs, typeArgs}) => decode(List<int>.from(positionalArgs[0]));
       case 'decodeStream':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.decodeStream(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => decodeStream(positionalArgs[0]);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
-

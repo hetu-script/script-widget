@@ -1,0 +1,165 @@
+external class GrowthDirection {
+    static const forward
+    static const reverse
+}
+external class SliverConstraints {
+    construct 
+    get axisDirection
+    get growthDirection
+    get userScrollDirection
+    get scrollOffset
+    get precedingScrollExtent
+    get overlap
+    get remainingPaintExtent
+    get crossAxisExtent
+    get crossAxisDirection
+    get viewportMainAxisExtent
+    get cacheOrigin
+    get remainingCacheExtent
+    fun copyWith
+    get axis
+    get normalizedGrowthDirection
+    get isTight
+    get isNormalized
+    fun asBoxConstraints
+    fun debugAssertIsValid
+    get hashCode
+    fun toString
+}
+external class SliverGeometry {
+    construct 
+    get scrollExtent
+    get paintOrigin
+    get paintExtent
+    get layoutExtent
+    get maxPaintExtent
+    get maxScrollObstructionExtent
+    get hitTestExtent
+    get visible
+    get hasVisualOverflow
+    get scrollOffsetCorrection
+    get cacheExtent
+    fun debugAssertIsValid
+    fun toStringShort
+    fun debugFillProperties
+    fun toString
+    fun toDiagnosticsNode
+    static const zero
+}
+external class SliverHitTestResult {
+    construct 
+    construct wrap
+    fun addWithAxisOffset
+    get path
+    fun add
+    fun toString
+}
+external class SliverHitTestEntry {
+    construct 
+    get mainAxisPosition
+    get crossAxisPosition
+    get target
+    fun toString
+    get transform
+}
+external class SliverLogicalParentData {
+    construct
+    var layoutOffset
+    fun toString
+}
+external class SliverLogicalContainerParentData {
+    construct
+    var layoutOffset
+    fun detach
+    fun toString
+}
+external class SliverPhysicalParentData {
+    construct
+    var paintOffset
+    fun applyPaintTransform
+    fun toString
+}
+external class SliverPhysicalContainerParentData {
+    construct
+    var paintOffset
+    fun detach
+    fun applyPaintTransform
+    fun toString
+}
+external class RenderSliverToBoxAdapter {
+    construct 
+    var parentData
+    var debugCreator
+    fun performLayout
+    fun setupParentData
+    fun hitTestChildren
+    fun childMainAxisPosition
+    fun applyPaintTransform
+    fun paint
+    fun debugValidateChild
+    get child
+    fun attach
+    fun detach
+    fun redepthChildren
+    fun visitChildren
+    fun debugDescribeChildren
+    get constraints
+    get geometry
+    get semanticBounds
+    get paintBounds
+    fun debugResetSize
+    fun debugAssertDoesMeetConstraints
+    fun performResize
+    get centerOffsetAdjustment
+    fun hitTest
+    fun calculatePaintOffset
+    fun calculateCacheOffset
+    fun childScrollOffset
+    fun debugPaint
+    fun handleEvent
+    fun debugFillProperties
+    fun reassemble
+    fun adoptChild
+    fun dropChild
+    get debugDoingThisResize
+    get debugDoingThisLayout
+    get debugCanParentUseSize
+    get owner
+    get debugNeedsLayout
+    get debugDoingThisLayoutWithCallback
+    fun markNeedsLayout
+    fun markNeedsLayoutForSizedByParentChange
+    fun scheduleInitialLayout
+    fun layout
+    fun rotate
+    get debugDoingThisPaint
+    get isRepaintBoundary
+    fun debugRegisterRepaintBoundaryPaint
+    get debugLayer
+    fun markNeedsCompositingBitsUpdate
+    get needsCompositing
+    get debugNeedsPaint
+    fun markNeedsPaint
+    fun scheduleInitialPaint
+    fun replaceRootLayer
+    fun getTransformTo
+    fun describeApproximatePaintClip
+    fun describeSemanticsClip
+    fun scheduleInitialSemantics
+    fun sendSemanticsEvent
+    get debugSemantics
+    fun clearSemantics
+    fun markNeedsSemanticsUpdate
+    fun visitChildrenForSemantics
+    fun assembleSemanticsNode
+    fun toStringShort
+    fun toString
+    fun toStringDeep
+    fun toStringShallow
+    fun showOnScreen
+    fun describeForError
+    fun toDiagnosticsNode
+    get depth
+    get attached
+    get parent
+}

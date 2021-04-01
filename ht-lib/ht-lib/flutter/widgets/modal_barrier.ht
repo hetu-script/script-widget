@@ -1,0 +1,36 @@
+external class ModalBarrier {
+    construct 
+    get color
+    get dismissible
+    get barrierSemanticsDismissible
+    get semanticsLabel
+    get key
+    fun build
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class AnimatedModalBarrier {
+    construct 
+    get dismissible
+    get semanticsLabel
+    get barrierSemanticsDismissible
+    get listenable
+    get key
+    get color
+    fun build
+    fun createState
+    fun debugFillProperties
+    fun createElement
+    fun toStringShort
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}

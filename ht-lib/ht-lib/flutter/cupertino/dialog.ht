@@ -1,0 +1,54 @@
+external class CupertinoAlertDialog {
+    construct 
+    get title
+    get content
+    get actions
+    get scrollController
+    get actionScrollController
+    get insetAnimationDuration
+    get insetAnimationCurve
+    get key
+    fun build
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class CupertinoPopupSurface {
+    construct 
+    get isSurfacePainted
+    get child
+    get key
+    fun build
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class CupertinoDialogAction {
+    construct 
+    get onPressed
+    get isDefaultAction
+    get isDestructiveAction
+    get textStyle
+    get child
+    get key
+    get enabled
+    fun build
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}

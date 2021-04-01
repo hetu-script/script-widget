@@ -1,7 +1,5 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/physics.dart';
-import 'dart:math'as math;
-
 
 class FrictionSimulationAutoBinding extends HTExternalClass {
   FrictionSimulationAutoBinding() : super('FrictionSimulation');
@@ -10,9 +8,12 @@ class FrictionSimulationAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'FrictionSimulation':
-        return ({positionalArgs, namedArgs, typeArgs}) => FrictionSimulation(positionalArgs[0], positionalArgs[1], positionalArgs[2], tolerance : namedArgs.containsKey('tolerance') ? namedArgs['tolerance'] : Tolerance.defaultTolerance);
+        return ({positionalArgs, namedArgs, typeArgs}) => FrictionSimulation(
+            positionalArgs[0], positionalArgs[1], positionalArgs[2],
+            tolerance: namedArgs.containsKey('tolerance') ? namedArgs['tolerance'] : Tolerance.defaultTolerance);
       case 'FrictionSimulation.through':
-        return ({positionalArgs, namedArgs, typeArgs}) => FrictionSimulation.through(positionalArgs[0], positionalArgs[1], positionalArgs[2], positionalArgs[3]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            FrictionSimulation.through(positionalArgs[0], positionalArgs[1], positionalArgs[2], positionalArgs[3]);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -27,8 +28,6 @@ class FrictionSimulationAutoBinding extends HTExternalClass {
   void instanceMemberSet(dynamic instance, String id, dynamic value) {
     (instance as FrictionSimulation).htAssign(id, value);
   }
-
-
 }
 
 extension FrictionSimulationBinding on FrictionSimulation {
@@ -41,15 +40,15 @@ extension FrictionSimulationBinding on FrictionSimulation {
       case 'finalX':
         return finalX;
       case 'x':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.x(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => x(positionalArgs[0]);
       case 'dx':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.dx(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => dx(positionalArgs[0]);
       case 'timeAtX':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.timeAtX(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => timeAtX(positionalArgs[0]);
       case 'isDone':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.isDone(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => isDone(positionalArgs[0]);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
         throw HTErrorUndefined(varName);
     }
@@ -58,7 +57,7 @@ extension FrictionSimulationBinding on FrictionSimulation {
   void htAssign(String varName, dynamic value) {
     switch (varName) {
       case 'tolerance':
-        this.tolerance = value;
+        tolerance = value;
         break;
       default:
         throw HTErrorUndefined(varName);
@@ -73,7 +72,8 @@ class BoundedFrictionSimulationAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'BoundedFrictionSimulation':
-        return ({positionalArgs, namedArgs, typeArgs}) => BoundedFrictionSimulation(positionalArgs[0], positionalArgs[1], positionalArgs[2], positionalArgs[3], positionalArgs[4]);
+        return ({positionalArgs, namedArgs, typeArgs}) => BoundedFrictionSimulation(
+            positionalArgs[0], positionalArgs[1], positionalArgs[2], positionalArgs[3], positionalArgs[4]);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -88,8 +88,6 @@ class BoundedFrictionSimulationAutoBinding extends HTExternalClass {
   void instanceMemberSet(dynamic instance, String id, dynamic value) {
     (instance as BoundedFrictionSimulation).htAssign(id, value);
   }
-
-
 }
 
 extension BoundedFrictionSimulationBinding on BoundedFrictionSimulation {
@@ -102,15 +100,15 @@ extension BoundedFrictionSimulationBinding on BoundedFrictionSimulation {
       case 'finalX':
         return finalX;
       case 'x':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.x(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => x(positionalArgs[0]);
       case 'isDone':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.isDone(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => isDone(positionalArgs[0]);
       case 'dx':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.dx(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => dx(positionalArgs[0]);
       case 'timeAtX':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.timeAtX(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => timeAtX(positionalArgs[0]);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
         throw HTErrorUndefined(varName);
     }
@@ -119,11 +117,10 @@ extension BoundedFrictionSimulationBinding on BoundedFrictionSimulation {
   void htAssign(String varName, dynamic value) {
     switch (varName) {
       case 'tolerance':
-        this.tolerance = value;
+        tolerance = value;
         break;
       default:
         throw HTErrorUndefined(varName);
     }
   }
 }
-

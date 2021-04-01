@@ -1,0 +1,46 @@
+external class DraggableScrollableSheet {
+    construct 
+    get initialChildSize
+    get minChildSize
+    get maxChildSize
+    get expand
+    get builder
+    get key
+    fun createState
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class DraggableScrollableNotification {
+    construct 
+    get extent
+    get minExtent
+    get maxExtent
+    get initialExtent
+    get context
+    fun debugFillDescription
+    get depth
+    fun visitAncestor
+    fun dispatch
+    fun toString
+}
+external class DraggableScrollableActuator {
+    construct 
+    get child
+    get key
+    fun build
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+    static fun reset (context)
+}

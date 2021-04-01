@@ -1,0 +1,18 @@
+external class CupertinoContextMenuAction {
+    construct 
+    get child
+    get isDefaultAction
+    get isDestructiveAction
+    get onPressed
+    get trailingIcon
+    get key
+    fun createState
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}

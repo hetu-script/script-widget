@@ -1,0 +1,21 @@
+external class SnackBarBehavior {
+    static const fixed
+    static const floating
+}
+external class SnackBarThemeData {
+    construct 
+    get backgroundColor
+    get actionTextColor
+    get disabledActionTextColor
+    get contentTextStyle
+    get elevation
+    get shape
+    get behavior
+    fun copyWith
+    get hashCode
+    fun debugFillProperties
+    fun toStringShort
+    fun toString
+    fun toDiagnosticsNode
+    static fun lerp (a, b, t)
+}

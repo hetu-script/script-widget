@@ -1,0 +1,15 @@
+external class PopupMenuDivider {
+    construct 
+    get height
+    get key
+    fun represents
+    fun createState
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}

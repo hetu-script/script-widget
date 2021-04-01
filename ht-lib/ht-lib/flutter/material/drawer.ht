@@ -1,0 +1,59 @@
+external class DrawerAlignment {
+    static const start
+    static const end
+}
+external class Drawer {
+    construct 
+    get elevation
+    get child
+    get semanticLabel
+    get key
+    fun build
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class DrawerController {
+    construct 
+    get child
+    get alignment
+    get drawerCallback
+    get dragStartBehavior
+    get scrimColor
+    get enableOpenDragGesture
+    get edgeDragWidth
+    get isDrawerOpen
+    get key
+    fun createState
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class DrawerControllerState {
+    construct
+    fun initState
+    fun dispose
+    fun didUpdateWidget
+    fun open
+    fun close
+    fun build
+    fun createTicker
+    fun didChangeDependencies
+    fun debugFillProperties
+    get widget
+    get context
+    get mounted
+    fun toStringShort
+    fun toString
+    fun toDiagnosticsNode
+}

@@ -1,7 +1,5 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'dart:async';
-import "dart:collection";
-
 
 class AsyncErrorAutoBinding extends HTExternalClass {
   AsyncErrorAutoBinding() : super('AsyncError');
@@ -22,9 +20,6 @@ class AsyncErrorAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as AsyncError).htFetch(id);
   }
-
-
-
 }
 
 extension AsyncErrorBinding on AsyncError {
@@ -37,11 +32,9 @@ extension AsyncErrorBinding on AsyncError {
       case 'stackTrace':
         return stackTrace;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
-

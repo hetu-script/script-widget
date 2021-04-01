@@ -1,0 +1,17 @@
+external class PrimaryScrollController {
+    construct 
+    construct none
+    get controller
+    get child
+    get key
+    fun updateShouldNotify
+    fun debugFillProperties
+    fun createElement
+    fun toStringShort
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+    static fun of (context)
+}

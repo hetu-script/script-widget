@@ -1,0 +1,29 @@
+external class Checkbox {
+    construct 
+    get value
+    get onChanged
+    get mouseCursor
+    get activeColor
+    get fillColor
+    get checkColor
+    get tristate
+    get materialTapTargetSize
+    get visualDensity
+    get focusColor
+    get hoverColor
+    get overlayColor
+    get splashRadius
+    get focusNode
+    get autofocus
+    get key
+    fun createState
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+    static const width
+}

@@ -1,13 +1,5 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'dart:io';
-import 'dart:async';
-import 'dart:collection';
-import 'dart:convert';
-import 'dart:developer';
-import 'dart:isolate';
-import 'dart:math';
-import 'dart:typed_data';
-
 
 class FileSystemEntityTypeAutoBinding extends HTExternalClass {
   FileSystemEntityTypeAutoBinding() : super('FileSystemEntityType');
@@ -27,12 +19,7 @@ class FileSystemEntityTypeAutoBinding extends HTExternalClass {
         throw HTErrorUndefined(varName);
     }
   }
-
-
-
-
 }
-
 
 class FileStatAutoBinding extends HTExternalClass {
   FileStatAutoBinding() : super('FileStat');
@@ -48,12 +35,7 @@ class FileStatAutoBinding extends HTExternalClass {
         throw HTErrorUndefined(varName);
     }
   }
-
-
-
-
 }
-
 
 class FileSystemEntityAutoBinding extends HTExternalClass {
   FileSystemEntityAutoBinding() : super('FileSystemEntity');
@@ -62,13 +44,17 @@ class FileSystemEntityAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'FileSystemEntity.identical':
-        return ({positionalArgs, namedArgs, typeArgs}) => FileSystemEntity.identical(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            FileSystemEntity.identical(positionalArgs[0], positionalArgs[1]);
       case 'FileSystemEntity.identicalSync':
-        return ({positionalArgs, namedArgs, typeArgs}) => FileSystemEntity.identicalSync(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            FileSystemEntity.identicalSync(positionalArgs[0], positionalArgs[1]);
       case 'FileSystemEntity.type':
-        return ({positionalArgs, namedArgs, typeArgs}) => FileSystemEntity.type(positionalArgs[0], followLinks : namedArgs.containsKey('followLinks') ? namedArgs['followLinks'] : true);
+        return ({positionalArgs, namedArgs, typeArgs}) => FileSystemEntity.type(positionalArgs[0],
+            followLinks: namedArgs.containsKey('followLinks') ? namedArgs['followLinks'] : true);
       case 'FileSystemEntity.typeSync':
-        return ({positionalArgs, namedArgs, typeArgs}) => FileSystemEntity.typeSync(positionalArgs[0], followLinks : namedArgs.containsKey('followLinks') ? namedArgs['followLinks'] : true);
+        return ({positionalArgs, namedArgs, typeArgs}) => FileSystemEntity.typeSync(positionalArgs[0],
+            followLinks: namedArgs.containsKey('followLinks') ? namedArgs['followLinks'] : true);
       case 'FileSystemEntity.isLink':
         return ({positionalArgs, namedArgs, typeArgs}) => FileSystemEntity.isLink(positionalArgs[0]);
       case 'FileSystemEntity.isFile':
@@ -89,12 +75,7 @@ class FileSystemEntityAutoBinding extends HTExternalClass {
         throw HTErrorUndefined(varName);
     }
   }
-
-
-
-
 }
-
 
 class FileSystemEventAutoBinding extends HTExternalClass {
   FileSystemEventAutoBinding() : super('FileSystemEvent');
@@ -116,10 +97,4 @@ class FileSystemEventAutoBinding extends HTExternalClass {
         throw HTErrorUndefined(varName);
     }
   }
-
-
-
-
 }
-
-

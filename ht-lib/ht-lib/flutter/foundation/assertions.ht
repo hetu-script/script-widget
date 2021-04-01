@@ -1,0 +1,197 @@
+external class PartialStackFrame {
+    construct 
+    get package
+    get className
+    get method
+    fun matches
+    static const asynchronousSuspension
+}
+external class RepetitiveStackFrameFilter {
+    construct 
+    get frames
+    get replacement
+    get numFrames
+    fun filter
+}
+external class ErrorDescription {
+    construct 
+    get expandableValue
+    get allowWrap
+    get allowNameWrap
+    get ifNull
+    get ifEmpty
+    get tooltip
+    get missingIfNull
+    get defaultValue
+    get name
+    get showSeparator
+    get showName
+    get linePrefix
+    get style
+    get value
+    fun valueToString
+    fun toJsonMap
+    fun toDescription
+    get propertyType
+    get exception
+    get level
+    fun getProperties
+    fun getChildren
+    fun isFiltered
+    get emptyBodyDescription
+    get allowTruncate
+    fun toString
+    fun toStringDeep
+}
+external class ErrorSummary {
+    construct 
+    get expandableValue
+    get allowWrap
+    get allowNameWrap
+    get ifNull
+    get ifEmpty
+    get tooltip
+    get missingIfNull
+    get defaultValue
+    get name
+    get showSeparator
+    get showName
+    get linePrefix
+    get style
+    get value
+    fun valueToString
+    fun toJsonMap
+    fun toDescription
+    get propertyType
+    get exception
+    get level
+    fun getProperties
+    fun getChildren
+    fun isFiltered
+    get emptyBodyDescription
+    get allowTruncate
+    fun toString
+    fun toStringDeep
+}
+external class ErrorHint {
+    construct 
+    get expandableValue
+    get allowWrap
+    get allowNameWrap
+    get ifNull
+    get ifEmpty
+    get tooltip
+    get missingIfNull
+    get defaultValue
+    get name
+    get showSeparator
+    get showName
+    get linePrefix
+    get style
+    get value
+    fun valueToString
+    fun toJsonMap
+    fun toDescription
+    get propertyType
+    get exception
+    get level
+    fun getProperties
+    fun getChildren
+    fun isFiltered
+    get emptyBodyDescription
+    get allowTruncate
+    fun toString
+    fun toStringDeep
+}
+external class ErrorSpacer {
+    construct 
+    get expandableValue
+    get allowWrap
+    get allowNameWrap
+    get ifNull
+    get ifEmpty
+    get tooltip
+    get missingIfNull
+    get defaultValue
+    get name
+    get showSeparator
+    get showName
+    get linePrefix
+    get style
+    fun toJsonMap
+    fun valueToString
+    fun toDescription
+    get propertyType
+    get value
+    get exception
+    get level
+    fun getProperties
+    fun getChildren
+    fun isFiltered
+    get emptyBodyDescription
+    get allowTruncate
+    fun toString
+    fun toStringDeep
+}
+external class FlutterErrorDetails {
+    construct 
+    get exception
+    get stack
+    get library
+    get context
+    get stackFilter
+    get informationCollector
+    get silent
+    fun copyWith
+    fun exceptionAsString
+    get summary
+    fun debugFillProperties
+    fun toStringShort
+    fun toString
+    fun toDiagnosticsNode
+    static const propertiesTransformers
+}
+external class FlutterError {
+    construct 
+    construct fromParts
+    get diagnostics
+    get message
+    fun debugFillProperties
+    fun toStringShort
+    fun toString
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun debugDescribeChildren
+    static fun resetErrorCount
+    static fun dumpErrorToConsole (details, {forceReport})
+    static fun addDefaultStackFilter (filter)
+    static fun defaultStackFilter (frames)
+    static fun reportError (details)
+    static var onError
+    static var demangleStackTrace
+    static var presentError
+    static const wrapWidth
+}
+external class DiagnosticsStackTrace {
+    construct 
+    construct singleFrame
+    get level
+    get value
+    get allowTruncate
+    get name
+    get showSeparator
+    get showName
+    get linePrefix
+    get style
+    fun getChildren
+    fun getProperties
+    fun toDescription
+    fun isFiltered
+    get emptyBodyDescription
+    get allowWrap
+    get allowNameWrap
+    fun toJsonMap
+    fun toString
+    fun toStringDeep
+}

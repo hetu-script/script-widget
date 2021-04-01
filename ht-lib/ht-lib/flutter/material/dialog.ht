@@ -1,0 +1,91 @@
+external class Dialog {
+    construct 
+    get backgroundColor
+    get elevation
+    get insetAnimationDuration
+    get insetAnimationCurve
+    get insetPadding
+    get clipBehavior
+    get shape
+    get child
+    get key
+    fun build
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class AlertDialog {
+    construct 
+    get title
+    get titlePadding
+    get titleTextStyle
+    get content
+    get contentPadding
+    get contentTextStyle
+    get actions
+    get actionsPadding
+    get actionsOverflowDirection
+    get actionsOverflowButtonSpacing
+    get buttonPadding
+    get backgroundColor
+    get elevation
+    get semanticLabel
+    get insetPadding
+    get clipBehavior
+    get shape
+    get key
+    fun build
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class SimpleDialogOption {
+    construct 
+    get onPressed
+    get child
+    get padding
+    get key
+    fun build
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class SimpleDialog {
+    construct 
+    get title
+    get titlePadding
+    get titleTextStyle
+    get children
+    get contentPadding
+    get backgroundColor
+    get elevation
+    get semanticLabel
+    get insetPadding
+    get clipBehavior
+    get shape
+    get key
+    fun build
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}

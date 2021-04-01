@@ -1,10 +1,8 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/material.dart';
-import 'dart:ui';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
-
 
 class ChipThemeAutoBinding extends HTExternalClass {
   ChipThemeAutoBinding() : super('ChipTheme');
@@ -13,7 +11,10 @@ class ChipThemeAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'ChipTheme':
-        return ({positionalArgs, namedArgs, typeArgs}) => ChipTheme(key : namedArgs.containsKey('key') ? namedArgs['key'] : null, data : namedArgs['data'], child : namedArgs['child']);
+        return ({positionalArgs, namedArgs, typeArgs}) => ChipTheme(
+            key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
+            data: namedArgs['data'],
+            child: namedArgs['child']);
       case 'ChipTheme.of':
         return ({positionalArgs, namedArgs, typeArgs}) => ChipTheme.of(positionalArgs[0]);
       default:
@@ -25,9 +26,6 @@ class ChipThemeAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as ChipTheme).htFetch(id);
   }
-
-
-
 }
 
 extension ChipThemeBinding on ChipTheme {
@@ -37,15 +35,42 @@ extension ChipThemeBinding on ChipTheme {
         return HTTypeId('ChipTheme');
       case 'data':
         return data;
+      case 'child':
+        return child;
+      case 'key':
+        return key;
+      case 'hashCode':
+        return hashCode;
       case 'wrap':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.wrap(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => wrap(positionalArgs[0], positionalArgs[1]);
       case 'updateShouldNotify':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.updateShouldNotify(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => updateShouldNotify(positionalArgs[0]);
+      case 'createElement':
+        return ({positionalArgs, namedArgs, typeArgs}) => createElement();
+      case 'toStringShort':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'debugFillProperties':
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+      case 'toStringShallow':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
+            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toStringDeep':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
+            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class ChipThemeDataAutoBinding extends HTExternalClass {
@@ -55,11 +80,34 @@ class ChipThemeDataAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'ChipThemeData':
-        return ({positionalArgs, namedArgs, typeArgs}) => ChipThemeData(backgroundColor : namedArgs['backgroundColor'], deleteIconColor : namedArgs.containsKey('deleteIconColor') ? namedArgs['deleteIconColor'] : null, disabledColor : namedArgs['disabledColor'], selectedColor : namedArgs['selectedColor'], secondarySelectedColor : namedArgs['secondarySelectedColor'], shadowColor : namedArgs.containsKey('shadowColor') ? namedArgs['shadowColor'] : null, selectedShadowColor : namedArgs.containsKey('selectedShadowColor') ? namedArgs['selectedShadowColor'] : null, showCheckmark : namedArgs.containsKey('showCheckmark') ? namedArgs['showCheckmark'] : null, checkmarkColor : namedArgs.containsKey('checkmarkColor') ? namedArgs['checkmarkColor'] : null, labelPadding : namedArgs.containsKey('labelPadding') ? namedArgs['labelPadding'] : null, padding : namedArgs['padding'], side : namedArgs.containsKey('side') ? namedArgs['side'] : null, shape : namedArgs.containsKey('shape') ? namedArgs['shape'] : null, labelStyle : namedArgs['labelStyle'], secondaryLabelStyle : namedArgs['secondaryLabelStyle'], brightness : namedArgs['brightness'], elevation : namedArgs.containsKey('elevation') ? namedArgs['elevation'] : null, pressElevation : namedArgs.containsKey('pressElevation') ? namedArgs['pressElevation'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => ChipThemeData(
+            backgroundColor: namedArgs['backgroundColor'],
+            deleteIconColor: namedArgs.containsKey('deleteIconColor') ? namedArgs['deleteIconColor'] : null,
+            disabledColor: namedArgs['disabledColor'],
+            selectedColor: namedArgs['selectedColor'],
+            secondarySelectedColor: namedArgs['secondarySelectedColor'],
+            shadowColor: namedArgs.containsKey('shadowColor') ? namedArgs['shadowColor'] : null,
+            selectedShadowColor: namedArgs.containsKey('selectedShadowColor') ? namedArgs['selectedShadowColor'] : null,
+            showCheckmark: namedArgs.containsKey('showCheckmark') ? namedArgs['showCheckmark'] : null,
+            checkmarkColor: namedArgs.containsKey('checkmarkColor') ? namedArgs['checkmarkColor'] : null,
+            labelPadding: namedArgs.containsKey('labelPadding') ? namedArgs['labelPadding'] : null,
+            padding: namedArgs['padding'],
+            side: namedArgs.containsKey('side') ? namedArgs['side'] : null,
+            shape: namedArgs.containsKey('shape') ? namedArgs['shape'] : null,
+            labelStyle: namedArgs['labelStyle'],
+            secondaryLabelStyle: namedArgs['secondaryLabelStyle'],
+            brightness: namedArgs['brightness'],
+            elevation: namedArgs.containsKey('elevation') ? namedArgs['elevation'] : null,
+            pressElevation: namedArgs.containsKey('pressElevation') ? namedArgs['pressElevation'] : null);
       case 'ChipThemeData.fromDefaults':
-        return ({positionalArgs, namedArgs, typeArgs}) => ChipThemeData.fromDefaults(brightness : namedArgs.containsKey('brightness') ? namedArgs['brightness'] : null, primaryColor : namedArgs.containsKey('primaryColor') ? namedArgs['primaryColor'] : null, secondaryColor : namedArgs['secondaryColor'], labelStyle : namedArgs['labelStyle']);
+        return ({positionalArgs, namedArgs, typeArgs}) => ChipThemeData.fromDefaults(
+            brightness: namedArgs.containsKey('brightness') ? namedArgs['brightness'] : null,
+            primaryColor: namedArgs.containsKey('primaryColor') ? namedArgs['primaryColor'] : null,
+            secondaryColor: namedArgs['secondaryColor'],
+            labelStyle: namedArgs['labelStyle']);
       case 'ChipThemeData.lerp':
-        return ({positionalArgs, namedArgs, typeArgs}) => ChipThemeData.lerp(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            ChipThemeData.lerp(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -69,9 +117,6 @@ class ChipThemeDataAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as ChipThemeData).htFetch(id);
   }
-
-
-
 }
 
 extension ChipThemeDataBinding on ChipThemeData {
@@ -118,13 +163,38 @@ extension ChipThemeDataBinding on ChipThemeData {
       case 'hashCode':
         return hashCode;
       case 'copyWith':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.copyWith(backgroundColor : namedArgs.containsKey('backgroundColor') ? namedArgs['backgroundColor'] : null, deleteIconColor : namedArgs.containsKey('deleteIconColor') ? namedArgs['deleteIconColor'] : null, disabledColor : namedArgs.containsKey('disabledColor') ? namedArgs['disabledColor'] : null, selectedColor : namedArgs.containsKey('selectedColor') ? namedArgs['selectedColor'] : null, secondarySelectedColor : namedArgs.containsKey('secondarySelectedColor') ? namedArgs['secondarySelectedColor'] : null, shadowColor : namedArgs.containsKey('shadowColor') ? namedArgs['shadowColor'] : null, selectedShadowColor : namedArgs.containsKey('selectedShadowColor') ? namedArgs['selectedShadowColor'] : null, checkmarkColor : namedArgs.containsKey('checkmarkColor') ? namedArgs['checkmarkColor'] : null, labelPadding : namedArgs.containsKey('labelPadding') ? namedArgs['labelPadding'] : null, padding : namedArgs.containsKey('padding') ? namedArgs['padding'] : null, side : namedArgs.containsKey('side') ? namedArgs['side'] : null, shape : namedArgs.containsKey('shape') ? namedArgs['shape'] : null, labelStyle : namedArgs.containsKey('labelStyle') ? namedArgs['labelStyle'] : null, secondaryLabelStyle : namedArgs.containsKey('secondaryLabelStyle') ? namedArgs['secondaryLabelStyle'] : null, brightness : namedArgs.containsKey('brightness') ? namedArgs['brightness'] : null, elevation : namedArgs.containsKey('elevation') ? namedArgs['elevation'] : null, pressElevation : namedArgs.containsKey('pressElevation') ? namedArgs['pressElevation'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => copyWith(
+            backgroundColor: namedArgs.containsKey('backgroundColor') ? namedArgs['backgroundColor'] : null,
+            deleteIconColor: namedArgs.containsKey('deleteIconColor') ? namedArgs['deleteIconColor'] : null,
+            disabledColor: namedArgs.containsKey('disabledColor') ? namedArgs['disabledColor'] : null,
+            selectedColor: namedArgs.containsKey('selectedColor') ? namedArgs['selectedColor'] : null,
+            secondarySelectedColor:
+                namedArgs.containsKey('secondarySelectedColor') ? namedArgs['secondarySelectedColor'] : null,
+            shadowColor: namedArgs.containsKey('shadowColor') ? namedArgs['shadowColor'] : null,
+            selectedShadowColor: namedArgs.containsKey('selectedShadowColor') ? namedArgs['selectedShadowColor'] : null,
+            checkmarkColor: namedArgs.containsKey('checkmarkColor') ? namedArgs['checkmarkColor'] : null,
+            labelPadding: namedArgs.containsKey('labelPadding') ? namedArgs['labelPadding'] : null,
+            padding: namedArgs.containsKey('padding') ? namedArgs['padding'] : null,
+            side: namedArgs.containsKey('side') ? namedArgs['side'] : null,
+            shape: namedArgs.containsKey('shape') ? namedArgs['shape'] : null,
+            labelStyle: namedArgs.containsKey('labelStyle') ? namedArgs['labelStyle'] : null,
+            secondaryLabelStyle: namedArgs.containsKey('secondaryLabelStyle') ? namedArgs['secondaryLabelStyle'] : null,
+            brightness: namedArgs.containsKey('brightness') ? namedArgs['brightness'] : null,
+            elevation: namedArgs.containsKey('elevation') ? namedArgs['elevation'] : null,
+            pressElevation: namedArgs.containsKey('pressElevation') ? namedArgs['pressElevation'] : null);
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+      case 'toStringShort':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
-

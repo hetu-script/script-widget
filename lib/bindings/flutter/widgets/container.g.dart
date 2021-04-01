@@ -3,7 +3,6 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/rendering.dart';
 
-
 class DecoratedBoxAutoBinding extends HTExternalClass {
   DecoratedBoxAutoBinding() : super('DecoratedBox');
 
@@ -11,7 +10,11 @@ class DecoratedBoxAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'DecoratedBox':
-        return ({positionalArgs, namedArgs, typeArgs}) => DecoratedBox(key : namedArgs.containsKey('key') ? namedArgs['key'] : null, decoration : namedArgs['decoration'], position : namedArgs.containsKey('position') ? namedArgs['position'] : DecorationPosition.background, child : namedArgs.containsKey('child') ? namedArgs['child'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => DecoratedBox(
+            key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
+            decoration: namedArgs['decoration'],
+            position: namedArgs.containsKey('position') ? namedArgs['position'] : DecorationPosition.background,
+            child: namedArgs.containsKey('child') ? namedArgs['child'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -21,9 +24,6 @@ class DecoratedBoxAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as DecoratedBox).htFetch(id);
   }
-
-
-
 }
 
 extension DecoratedBoxBinding on DecoratedBox {
@@ -35,17 +35,42 @@ extension DecoratedBoxBinding on DecoratedBox {
         return decoration;
       case 'position':
         return position;
+      case 'child':
+        return child;
+      case 'key':
+        return key;
+      case 'hashCode':
+        return hashCode;
       case 'createRenderObject':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.createRenderObject(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => createRenderObject(positionalArgs[0]);
       case 'updateRenderObject':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.updateRenderObject(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => updateRenderObject(positionalArgs[0], positionalArgs[1]);
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+      case 'createElement':
+        return ({positionalArgs, namedArgs, typeArgs}) => createElement();
+      case 'toStringShort':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'toStringShallow':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
+            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toStringDeep':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
+            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class ContainerAutoBinding extends HTExternalClass {
@@ -55,7 +80,22 @@ class ContainerAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'Container':
-        return ({positionalArgs, namedArgs, typeArgs}) => Container(key : namedArgs.containsKey('key') ? namedArgs['key'] : null, alignment : namedArgs.containsKey('alignment') ? namedArgs['alignment'] : null, padding : namedArgs.containsKey('padding') ? namedArgs['padding'] : null, color : namedArgs.containsKey('color') ? namedArgs['color'] : null, decoration : namedArgs.containsKey('decoration') ? namedArgs['decoration'] : null, foregroundDecoration : namedArgs.containsKey('foregroundDecoration') ? namedArgs['foregroundDecoration'] : null, width : namedArgs.containsKey('width') ? namedArgs['width'] : null, height : namedArgs.containsKey('height') ? namedArgs['height'] : null, constraints : namedArgs.containsKey('constraints') ? namedArgs['constraints'] : null, margin : namedArgs.containsKey('margin') ? namedArgs['margin'] : null, transform : namedArgs.containsKey('transform') ? namedArgs['transform'] : null, transformAlignment : namedArgs.containsKey('transformAlignment') ? namedArgs['transformAlignment'] : null, child : namedArgs.containsKey('child') ? namedArgs['child'] : null, clipBehavior : namedArgs.containsKey('clipBehavior') ? namedArgs['clipBehavior'] : Clip.none);
+        return ({positionalArgs, namedArgs, typeArgs}) => Container(
+            key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
+            alignment: namedArgs.containsKey('alignment') ? namedArgs['alignment'] : null,
+            padding: namedArgs.containsKey('padding') ? namedArgs['padding'] : null,
+            color: namedArgs.containsKey('color') ? namedArgs['color'] : null,
+            decoration: namedArgs.containsKey('decoration') ? namedArgs['decoration'] : null,
+            foregroundDecoration:
+                namedArgs.containsKey('foregroundDecoration') ? namedArgs['foregroundDecoration'] : null,
+            width: namedArgs.containsKey('width') ? namedArgs['width'] : null,
+            height: namedArgs.containsKey('height') ? namedArgs['height'] : null,
+            constraints: namedArgs.containsKey('constraints') ? namedArgs['constraints'] : null,
+            margin: namedArgs.containsKey('margin') ? namedArgs['margin'] : null,
+            transform: namedArgs.containsKey('transform') ? namedArgs['transform'] : null,
+            transformAlignment: namedArgs.containsKey('transformAlignment') ? namedArgs['transformAlignment'] : null,
+            child: namedArgs.containsKey('child') ? namedArgs['child'] : null,
+            clipBehavior: namedArgs.containsKey('clipBehavior') ? namedArgs['clipBehavior'] : Clip.none);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -65,9 +105,6 @@ class ContainerAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as Container).htFetch(id);
   }
-
-
-
 }
 
 extension ContainerBinding on Container {
@@ -97,14 +134,36 @@ extension ContainerBinding on Container {
         return transformAlignment;
       case 'clipBehavior':
         return clipBehavior;
+      case 'key':
+        return key;
+      case 'hashCode':
+        return hashCode;
       case 'build':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.build(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => build(positionalArgs[0]);
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+      case 'createElement':
+        return ({positionalArgs, namedArgs, typeArgs}) => createElement();
+      case 'toStringShort':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'toStringShallow':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
+            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toStringDeep':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
+            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
-

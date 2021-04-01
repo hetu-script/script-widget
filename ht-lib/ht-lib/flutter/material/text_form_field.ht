@@ -1,0 +1,20 @@
+external class TextFormField {
+    construct 
+    get controller
+    get onSaved
+    get validator
+    get builder
+    get initialValue
+    get enabled
+    get autovalidateMode
+    get key
+    fun createState
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}

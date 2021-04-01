@@ -1,7 +1,5 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'dart:async';
-import "dart:collection";
-
 
 class TimeoutExceptionAutoBinding extends HTExternalClass {
   TimeoutExceptionAutoBinding() : super('TimeoutException');
@@ -10,7 +8,8 @@ class TimeoutExceptionAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'TimeoutException':
-        return ({positionalArgs, namedArgs, typeArgs}) => TimeoutException(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            TimeoutException(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : null);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -20,9 +19,6 @@ class TimeoutExceptionAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as TimeoutException).htFetch(id);
   }
-
-
-
 }
 
 extension TimeoutExceptionBinding on TimeoutException {
@@ -35,11 +31,9 @@ extension TimeoutExceptionBinding on TimeoutException {
       case 'duration':
         return duration;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
-

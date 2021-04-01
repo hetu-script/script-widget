@@ -1,7 +1,5 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:flutter/foundation.dart';
-
 
 class PriorityAutoBinding extends HTExternalClass {
   PriorityAutoBinding() : super('Priority');
@@ -21,10 +19,4 @@ class PriorityAutoBinding extends HTExternalClass {
         throw HTErrorUndefined(varName);
     }
   }
-
-
-
-
 }
-
-

@@ -1,10 +1,5 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'dart:core';
-import "dart:collection";
-import "dart:convert";
-import "dart:math";
-import "dart:typed_data";
-
 
 class StopwatchAutoBinding extends HTExternalClass {
   StopwatchAutoBinding() : super('Stopwatch');
@@ -23,9 +18,6 @@ class StopwatchAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as Stopwatch).htFetch(id);
   }
-
-
-
 }
 
 extension StopwatchBinding on Stopwatch {
@@ -46,15 +38,13 @@ extension StopwatchBinding on Stopwatch {
       case 'isRunning':
         return isRunning;
       case 'start':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.start();
+        return ({positionalArgs, namedArgs, typeArgs}) => start();
       case 'stop':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.stop();
+        return ({positionalArgs, namedArgs, typeArgs}) => stop();
       case 'reset':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.reset();
+        return ({positionalArgs, namedArgs, typeArgs}) => reset();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
-

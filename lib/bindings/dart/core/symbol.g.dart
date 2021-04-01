@@ -1,10 +1,5 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'dart:core';
-import "dart:collection";
-import "dart:convert";
-import "dart:math";
-import "dart:typed_data";
-
 
 class SymbolAutoBinding extends HTExternalClass {
   SymbolAutoBinding() : super('Symbol');
@@ -27,9 +22,6 @@ class SymbolAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as Symbol).htFetch(id);
   }
-
-
-
 }
 
 extension SymbolBinding on Symbol {
@@ -43,6 +35,4 @@ extension SymbolBinding on Symbol {
         throw HTErrorUndefined(varName);
     }
   }
-
 }
-

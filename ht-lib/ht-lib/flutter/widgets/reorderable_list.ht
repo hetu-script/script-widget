@@ -1,0 +1,112 @@
+external class ReorderableList {
+    construct 
+    get itemBuilder
+    get itemCount
+    get onReorder
+    get proxyDecorator
+    get padding
+    get scrollDirection
+    get reverse
+    get controller
+    get primary
+    get physics
+    get shrinkWrap
+    get anchor
+    get cacheExtent
+    get dragStartBehavior
+    get keyboardDismissBehavior
+    get restorationId
+    get clipBehavior
+    get key
+    fun createState
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+    static fun of (context)
+    static fun maybeOf (context)
+}
+external class ReorderableListState {
+    construct
+    fun startItemDragReorder
+    fun cancelReorder
+    fun build
+    get widget
+    get context
+    get mounted
+    fun debugFillProperties
+    fun toStringShort
+    fun toString
+    fun toDiagnosticsNode
+}
+external class SliverReorderableList {
+    construct 
+    get itemBuilder
+    get itemCount
+    get onReorder
+    get proxyDecorator
+    get key
+    fun createState
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+    static fun of (context)
+    static fun maybeOf (context)
+}
+external class SliverReorderableListState {
+    construct
+    fun didChangeDependencies
+    fun didUpdateWidget
+    fun dispose
+    fun startItemDragReorder
+    fun cancelReorder
+    fun build
+    fun createTicker
+    fun debugFillProperties
+    get widget
+    get context
+    get mounted
+    fun toStringShort
+    fun toString
+    fun toDiagnosticsNode
+}
+external class ReorderableDragStartListener {
+    construct 
+    get child
+    get index
+    get key
+    fun build
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class ReorderableDelayedDragStartListener {
+    construct 
+    get child
+    get index
+    get key
+    fun createRecognizer
+    fun build
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}

@@ -1,16 +1,37 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/cupertino.dart';
-import 'dart:math'as math;
 import 'dart:ui';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/rendering.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
-const _kDefaultNavBarBorderColor = Color(0x4D000000);
-const _kDefaultNavBarBorder = Border(bottom: BorderSide(color: _kDefaultNavBarBorderColor, width: 0.0, style: BorderStyle.solid));
-const _defaultHeroTag = _HeroTag(null);
-@immutable class _HeroTag {const _HeroTag(this.navigator); final NavigatorState? navigator; @override String toString() => 'Default Hero tag for Cupertino navigation bars with navigator $navigator'; @override bool operator ==(Object other) {if (identical(this, other)) {return true;} if (other.runtimeType != runtimeType) {return false;} return other is _HeroTag && other.navigator == navigator;} @override int get hashCode {return identityHashCode(navigator);}}
 
+const _kDefaultNavBarBorderColor = Color(0x4D000000);
+const _kDefaultNavBarBorder =
+    Border(bottom: BorderSide(color: _kDefaultNavBarBorderColor, width: 0.0, style: BorderStyle.solid));
+const _defaultHeroTag = _HeroTag(null);
+
+@immutable
+class _HeroTag {
+  const _HeroTag(this.navigator);
+  final NavigatorState? navigator;
+  @override
+  String toString() => 'Default Hero tag for Cupertino navigation bars with navigator $navigator';
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (other.runtimeType != runtimeType) {
+      return false;
+    }
+    return other is _HeroTag && other.navigator == navigator;
+  }
+
+  @override
+  int get hashCode {
+    return identityHashCode(navigator);
+  }
+}
 
 class CupertinoNavigationBarAutoBinding extends HTExternalClass {
   CupertinoNavigationBarAutoBinding() : super('CupertinoNavigationBar');
@@ -19,7 +40,23 @@ class CupertinoNavigationBarAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'CupertinoNavigationBar':
-        return ({positionalArgs, namedArgs, typeArgs}) => CupertinoNavigationBar(key : namedArgs.containsKey('key') ? namedArgs['key'] : null, leading : namedArgs.containsKey('leading') ? namedArgs['leading'] : null, automaticallyImplyLeading : namedArgs.containsKey('automaticallyImplyLeading') ? namedArgs['automaticallyImplyLeading'] : true, automaticallyImplyMiddle : namedArgs.containsKey('automaticallyImplyMiddle') ? namedArgs['automaticallyImplyMiddle'] : true, previousPageTitle : namedArgs.containsKey('previousPageTitle') ? namedArgs['previousPageTitle'] : null, middle : namedArgs.containsKey('middle') ? namedArgs['middle'] : null, trailing : namedArgs.containsKey('trailing') ? namedArgs['trailing'] : null, border : namedArgs.containsKey('border') ? namedArgs['border'] : _kDefaultNavBarBorder, backgroundColor : namedArgs.containsKey('backgroundColor') ? namedArgs['backgroundColor'] : null, brightness : namedArgs.containsKey('brightness') ? namedArgs['brightness'] : null, padding : namedArgs.containsKey('padding') ? namedArgs['padding'] : null, transitionBetweenRoutes : namedArgs.containsKey('transitionBetweenRoutes') ? namedArgs['transitionBetweenRoutes'] : true, heroTag : namedArgs.containsKey('heroTag') ? namedArgs['heroTag'] : _defaultHeroTag);
+        return ({positionalArgs, namedArgs, typeArgs}) => CupertinoNavigationBar(
+            key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
+            leading: namedArgs.containsKey('leading') ? namedArgs['leading'] : null,
+            automaticallyImplyLeading:
+                namedArgs.containsKey('automaticallyImplyLeading') ? namedArgs['automaticallyImplyLeading'] : true,
+            automaticallyImplyMiddle:
+                namedArgs.containsKey('automaticallyImplyMiddle') ? namedArgs['automaticallyImplyMiddle'] : true,
+            previousPageTitle: namedArgs.containsKey('previousPageTitle') ? namedArgs['previousPageTitle'] : null,
+            middle: namedArgs.containsKey('middle') ? namedArgs['middle'] : null,
+            trailing: namedArgs.containsKey('trailing') ? namedArgs['trailing'] : null,
+            border: namedArgs.containsKey('border') ? namedArgs['border'] : _kDefaultNavBarBorder,
+            backgroundColor: namedArgs.containsKey('backgroundColor') ? namedArgs['backgroundColor'] : null,
+            brightness: namedArgs.containsKey('brightness') ? namedArgs['brightness'] : null,
+            padding: namedArgs.containsKey('padding') ? namedArgs['padding'] : null,
+            transitionBetweenRoutes:
+                namedArgs.containsKey('transitionBetweenRoutes') ? namedArgs['transitionBetweenRoutes'] : true,
+            heroTag: namedArgs.containsKey('heroTag') ? namedArgs['heroTag'] : _defaultHeroTag);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -29,9 +66,6 @@ class CupertinoNavigationBarAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as CupertinoNavigationBar).htFetch(id);
   }
-
-
-
 }
 
 extension CupertinoNavigationBarBinding on CupertinoNavigationBar {
@@ -63,17 +97,42 @@ extension CupertinoNavigationBarBinding on CupertinoNavigationBar {
         return transitionBetweenRoutes;
       case 'heroTag':
         return heroTag;
+      case 'key':
+        return key;
       case 'preferredSize':
         return preferredSize;
+      case 'hashCode':
+        return hashCode;
       case 'shouldFullyObstruct':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.shouldFullyObstruct(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => shouldFullyObstruct(positionalArgs[0]);
       case 'createState':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.createState();
+        return ({positionalArgs, namedArgs, typeArgs}) => createState();
+      case 'createElement':
+        return ({positionalArgs, namedArgs, typeArgs}) => createElement();
+      case 'toStringShort':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'debugFillProperties':
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+      case 'toStringShallow':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
+            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toStringDeep':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
+            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class CupertinoSliverNavigationBarAutoBinding extends HTExternalClass {
@@ -83,7 +142,25 @@ class CupertinoSliverNavigationBarAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'CupertinoSliverNavigationBar':
-        return ({positionalArgs, namedArgs, typeArgs}) => CupertinoSliverNavigationBar(key : namedArgs.containsKey('key') ? namedArgs['key'] : null, largeTitle : namedArgs.containsKey('largeTitle') ? namedArgs['largeTitle'] : null, leading : namedArgs.containsKey('leading') ? namedArgs['leading'] : null, automaticallyImplyLeading : namedArgs.containsKey('automaticallyImplyLeading') ? namedArgs['automaticallyImplyLeading'] : true, automaticallyImplyTitle : namedArgs.containsKey('automaticallyImplyTitle') ? namedArgs['automaticallyImplyTitle'] : true, previousPageTitle : namedArgs.containsKey('previousPageTitle') ? namedArgs['previousPageTitle'] : null, middle : namedArgs.containsKey('middle') ? namedArgs['middle'] : null, trailing : namedArgs.containsKey('trailing') ? namedArgs['trailing'] : null, border : namedArgs.containsKey('border') ? namedArgs['border'] : _kDefaultNavBarBorder, backgroundColor : namedArgs.containsKey('backgroundColor') ? namedArgs['backgroundColor'] : null, brightness : namedArgs.containsKey('brightness') ? namedArgs['brightness'] : null, padding : namedArgs.containsKey('padding') ? namedArgs['padding'] : null, transitionBetweenRoutes : namedArgs.containsKey('transitionBetweenRoutes') ? namedArgs['transitionBetweenRoutes'] : true, heroTag : namedArgs.containsKey('heroTag') ? namedArgs['heroTag'] : _defaultHeroTag, stretch : namedArgs.containsKey('stretch') ? namedArgs['stretch'] : false);
+        return ({positionalArgs, namedArgs, typeArgs}) => CupertinoSliverNavigationBar(
+            key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
+            largeTitle: namedArgs.containsKey('largeTitle') ? namedArgs['largeTitle'] : null,
+            leading: namedArgs.containsKey('leading') ? namedArgs['leading'] : null,
+            automaticallyImplyLeading:
+                namedArgs.containsKey('automaticallyImplyLeading') ? namedArgs['automaticallyImplyLeading'] : true,
+            automaticallyImplyTitle:
+                namedArgs.containsKey('automaticallyImplyTitle') ? namedArgs['automaticallyImplyTitle'] : true,
+            previousPageTitle: namedArgs.containsKey('previousPageTitle') ? namedArgs['previousPageTitle'] : null,
+            middle: namedArgs.containsKey('middle') ? namedArgs['middle'] : null,
+            trailing: namedArgs.containsKey('trailing') ? namedArgs['trailing'] : null,
+            border: namedArgs.containsKey('border') ? namedArgs['border'] : _kDefaultNavBarBorder,
+            backgroundColor: namedArgs.containsKey('backgroundColor') ? namedArgs['backgroundColor'] : null,
+            brightness: namedArgs.containsKey('brightness') ? namedArgs['brightness'] : null,
+            padding: namedArgs.containsKey('padding') ? namedArgs['padding'] : null,
+            transitionBetweenRoutes:
+                namedArgs.containsKey('transitionBetweenRoutes') ? namedArgs['transitionBetweenRoutes'] : true,
+            heroTag: namedArgs.containsKey('heroTag') ? namedArgs['heroTag'] : _defaultHeroTag,
+            stretch: namedArgs.containsKey('stretch') ? namedArgs['stretch'] : false);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -93,9 +170,6 @@ class CupertinoSliverNavigationBarAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as CupertinoSliverNavigationBar).htFetch(id);
   }
-
-
-
 }
 
 extension CupertinoSliverNavigationBarBinding on CupertinoSliverNavigationBar {
@@ -131,15 +205,40 @@ extension CupertinoSliverNavigationBarBinding on CupertinoSliverNavigationBar {
         return heroTag;
       case 'stretch':
         return stretch;
+      case 'key':
+        return key;
       case 'opaque':
         return opaque;
+      case 'hashCode':
+        return hashCode;
       case 'createState':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.createState();
+        return ({positionalArgs, namedArgs, typeArgs}) => createState();
+      case 'createElement':
+        return ({positionalArgs, namedArgs, typeArgs}) => createElement();
+      case 'toStringShort':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'debugFillProperties':
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+      case 'toStringShallow':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
+            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toStringDeep':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
+            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class CupertinoNavigationBarBackButtonAutoBinding extends HTExternalClass {
@@ -149,7 +248,11 @@ class CupertinoNavigationBarBackButtonAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'CupertinoNavigationBarBackButton':
-        return ({positionalArgs, namedArgs, typeArgs}) => CupertinoNavigationBarBackButton(key : namedArgs.containsKey('key') ? namedArgs['key'] : null, color : namedArgs.containsKey('color') ? namedArgs['color'] : null, previousPageTitle : namedArgs.containsKey('previousPageTitle') ? namedArgs['previousPageTitle'] : null, onPressed : namedArgs.containsKey('onPressed') ? namedArgs['onPressed'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => CupertinoNavigationBarBackButton(
+            key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
+            color: namedArgs.containsKey('color') ? namedArgs['color'] : null,
+            previousPageTitle: namedArgs.containsKey('previousPageTitle') ? namedArgs['previousPageTitle'] : null,
+            onPressed: namedArgs.containsKey('onPressed') ? namedArgs['onPressed'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -160,13 +263,11 @@ class CupertinoNavigationBarBackButtonAutoBinding extends HTExternalClass {
     return (instance as CupertinoNavigationBarBackButton).htFetch(id);
   }
 
-
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
       'VoidCallback': (HTFunction function) => () => function.call(positionalArgs: const [], namedArgs: const {}),
     };
   }
-
 }
 
 extension CupertinoNavigationBarBackButtonBinding on CupertinoNavigationBarBackButton {
@@ -180,12 +281,36 @@ extension CupertinoNavigationBarBackButtonBinding on CupertinoNavigationBarBackB
         return previousPageTitle;
       case 'onPressed':
         return onPressed;
+      case 'key':
+        return key;
+      case 'hashCode':
+        return hashCode;
       case 'build':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.build(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => build(positionalArgs[0]);
+      case 'createElement':
+        return ({positionalArgs, namedArgs, typeArgs}) => createElement();
+      case 'toStringShort':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'debugFillProperties':
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+      case 'toStringShallow':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
+            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toStringDeep':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
+            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
-

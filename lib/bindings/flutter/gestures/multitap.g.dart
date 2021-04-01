@@ -1,8 +1,6 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/gestures.dart';
-import 'dart:async';
-import 'package:vector_math/vector_math_64.dart';
-
+import 'package:flutter/foundation.dart';
 
 class DoubleTapGestureRecognizerAutoBinding extends HTExternalClass {
   DoubleTapGestureRecognizerAutoBinding() : super('DoubleTapGestureRecognizer');
@@ -11,7 +9,9 @@ class DoubleTapGestureRecognizerAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'DoubleTapGestureRecognizer':
-        return ({positionalArgs, namedArgs, typeArgs}) => DoubleTapGestureRecognizer(debugOwner : namedArgs.containsKey('debugOwner') ? namedArgs['debugOwner'] : null, kind : namedArgs.containsKey('kind') ? namedArgs['kind'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => DoubleTapGestureRecognizer(
+            debugOwner: namedArgs.containsKey('debugOwner') ? namedArgs['debugOwner'] : null,
+            kind: namedArgs.containsKey('kind') ? namedArgs['kind'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -26,8 +26,6 @@ class DoubleTapGestureRecognizerAutoBinding extends HTExternalClass {
   void instanceMemberSet(dynamic instance, String id, dynamic value) {
     (instance as DoubleTapGestureRecognizer).htAssign(id, value);
   }
-
-
 }
 
 extension DoubleTapGestureRecognizerBinding on DoubleTapGestureRecognizer {
@@ -46,19 +44,39 @@ extension DoubleTapGestureRecognizerBinding on DoubleTapGestureRecognizer {
       case 'debugDescription':
         return debugDescription;
       case 'isPointerAllowed':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.isPointerAllowed(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => isPointerAllowed(positionalArgs[0]);
       case 'addAllowedPointer':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.addAllowedPointer(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => addAllowedPointer(positionalArgs[0]);
       case 'acceptGesture':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.acceptGesture(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => acceptGesture(positionalArgs[0]);
       case 'rejectGesture':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.rejectGesture(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => rejectGesture(positionalArgs[0]);
       case 'dispose':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.dispose();
+        return ({positionalArgs, namedArgs, typeArgs}) => dispose();
       case 'addPointer':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.addPointer(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => addPointer(positionalArgs[0]);
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+      case 'toStringShallow':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
+            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toStringDeep':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
+            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toStringShort':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
+      case 'debugDescribeChildren':
+        return ({positionalArgs, namedArgs, typeArgs}) => debugDescribeChildren();
       default:
         throw HTErrorUndefined(varName);
     }
@@ -67,13 +85,13 @@ extension DoubleTapGestureRecognizerBinding on DoubleTapGestureRecognizer {
   void htAssign(String varName, dynamic value) {
     switch (varName) {
       case 'onDoubleTapDown':
-        this.onDoubleTapDown = value;
+        onDoubleTapDown = value;
         break;
       case 'onDoubleTap':
-        this.onDoubleTap = value;
+        onDoubleTap = value;
         break;
       case 'onDoubleTapCancel':
-        this.onDoubleTapCancel = value;
+        onDoubleTapCancel = value;
         break;
       default:
         throw HTErrorUndefined(varName);
@@ -88,7 +106,10 @@ class MultiTapGestureRecognizerAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'MultiTapGestureRecognizer':
-        return ({positionalArgs, namedArgs, typeArgs}) => MultiTapGestureRecognizer(longTapDelay : namedArgs.containsKey('longTapDelay') ? namedArgs['longTapDelay'] : Duration.zero, debugOwner : namedArgs.containsKey('debugOwner') ? namedArgs['debugOwner'] : null, kind : namedArgs.containsKey('kind') ? namedArgs['kind'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => MultiTapGestureRecognizer(
+            longTapDelay: namedArgs.containsKey('longTapDelay') ? namedArgs['longTapDelay'] : Duration.zero,
+            debugOwner: namedArgs.containsKey('debugOwner') ? namedArgs['debugOwner'] : null,
+            kind: namedArgs.containsKey('kind') ? namedArgs['kind'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -103,8 +124,6 @@ class MultiTapGestureRecognizerAutoBinding extends HTExternalClass {
   void instanceMemberSet(dynamic instance, String id, dynamic value) {
     (instance as MultiTapGestureRecognizer).htAssign(id, value);
   }
-
-
 }
 
 extension MultiTapGestureRecognizerBinding on MultiTapGestureRecognizer {
@@ -129,17 +148,37 @@ extension MultiTapGestureRecognizerBinding on MultiTapGestureRecognizer {
       case 'debugDescription':
         return debugDescription;
       case 'addAllowedPointer':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.addAllowedPointer(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => addAllowedPointer(positionalArgs[0]);
       case 'acceptGesture':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.acceptGesture(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => acceptGesture(positionalArgs[0]);
       case 'rejectGesture':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.rejectGesture(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => rejectGesture(positionalArgs[0]);
       case 'dispose':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.dispose();
+        return ({positionalArgs, namedArgs, typeArgs}) => dispose();
       case 'addPointer':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.addPointer(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => addPointer(positionalArgs[0]);
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+      case 'toStringShallow':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
+            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toStringDeep':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
+            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toStringShort':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
+      case 'debugDescribeChildren':
+        return ({positionalArgs, namedArgs, typeArgs}) => debugDescribeChildren();
       default:
         throw HTErrorUndefined(varName);
     }
@@ -148,26 +187,25 @@ extension MultiTapGestureRecognizerBinding on MultiTapGestureRecognizer {
   void htAssign(String varName, dynamic value) {
     switch (varName) {
       case 'onTapDown':
-        this.onTapDown = value;
+        onTapDown = value;
         break;
       case 'onTapUp':
-        this.onTapUp = value;
+        onTapUp = value;
         break;
       case 'onTap':
-        this.onTap = value;
+        onTap = value;
         break;
       case 'onTapCancel':
-        this.onTapCancel = value;
+        onTapCancel = value;
         break;
       case 'longTapDelay':
-        this.longTapDelay = value;
+        longTapDelay = value;
         break;
       case 'onLongTapDown':
-        this.onLongTapDown = value;
+        onLongTapDown = value;
         break;
       default:
         throw HTErrorUndefined(varName);
     }
   }
 }
-

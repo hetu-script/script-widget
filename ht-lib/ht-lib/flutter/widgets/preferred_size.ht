@@ -1,0 +1,15 @@
+external class PreferredSize {
+    construct 
+    get child
+    get preferredSize
+    get key
+    fun build
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}

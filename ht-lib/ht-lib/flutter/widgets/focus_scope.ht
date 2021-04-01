@@ -1,0 +1,65 @@
+external class Focus {
+    construct 
+    get debugLabel
+    get child
+    get onKey
+    get onFocusChange
+    get autofocus
+    get focusNode
+    get skipTraversal
+    get includeSemantics
+    get canRequestFocus
+    get descendantsAreFocusable
+    get key
+    fun debugFillProperties
+    fun createState
+    fun createElement
+    fun toStringShort
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+    static fun of (context, {scopeOk})
+    static fun maybeOf (context, {scopeOk})
+    static fun isAt (context)
+}
+external class FocusScope {
+    construct 
+    get debugLabel
+    get child
+    get onKey
+    get onFocusChange
+    get autofocus
+    get focusNode
+    get skipTraversal
+    get includeSemantics
+    get canRequestFocus
+    get descendantsAreFocusable
+    get key
+    fun createState
+    fun debugFillProperties
+    fun createElement
+    fun toStringShort
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+    static fun of (context)
+}
+external class ExcludeFocus {
+    construct 
+    get excluding
+    get child
+    get key
+    fun build
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}

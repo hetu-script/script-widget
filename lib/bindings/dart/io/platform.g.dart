@@ -1,13 +1,5 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'dart:io';
-import 'dart:async';
-import 'dart:collection';
-import 'dart:convert';
-import 'dart:developer';
-import 'dart:isolate';
-import 'dart:math';
-import 'dart:typed_data';
-
 
 class PlatformAutoBinding extends HTExternalClass {
   PlatformAutoBinding() : super('Platform');
@@ -59,13 +51,6 @@ class PlatformAutoBinding extends HTExternalClass {
         throw HTErrorUndefined(varName);
     }
   }
-
-
-
-
 }
 
-extension PlatformBinding on Platform {
-
-}
-
+extension PlatformBinding on Platform {}

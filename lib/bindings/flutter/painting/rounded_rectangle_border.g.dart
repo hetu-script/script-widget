@@ -1,8 +1,5 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/painting.dart';
-import 'dart:ui'as ui;
-import 'package:flutter/foundation.dart';
-
 
 class RoundedRectangleBorderAutoBinding extends HTExternalClass {
   RoundedRectangleBorderAutoBinding() : super('RoundedRectangleBorder');
@@ -11,7 +8,9 @@ class RoundedRectangleBorderAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'RoundedRectangleBorder':
-        return ({positionalArgs, namedArgs, typeArgs}) => RoundedRectangleBorder(side : namedArgs.containsKey('side') ? namedArgs['side'] : BorderSide.none, borderRadius : namedArgs.containsKey('borderRadius') ? namedArgs['borderRadius'] : BorderRadius.zero);
+        return ({positionalArgs, namedArgs, typeArgs}) => RoundedRectangleBorder(
+            side: namedArgs.containsKey('side') ? namedArgs['side'] : BorderSide.none,
+            borderRadius: namedArgs.containsKey('borderRadius') ? namedArgs['borderRadius'] : BorderRadius.zero);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -21,9 +20,6 @@ class RoundedRectangleBorderAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as RoundedRectangleBorder).htFetch(id);
   }
-
-
-
 }
 
 extension RoundedRectangleBorderBinding on RoundedRectangleBorder {
@@ -40,25 +36,28 @@ extension RoundedRectangleBorderBinding on RoundedRectangleBorder {
       case 'hashCode':
         return hashCode;
       case 'scale':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.scale(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => scale(positionalArgs[0]);
       case 'lerpFrom':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.lerpFrom(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => lerpFrom(positionalArgs[0], positionalArgs[1]);
       case 'lerpTo':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.lerpTo(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => lerpTo(positionalArgs[0], positionalArgs[1]);
       case 'copyWith':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.copyWith(side : namedArgs.containsKey('side') ? namedArgs['side'] : null, borderRadius : namedArgs.containsKey('borderRadius') ? namedArgs['borderRadius'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => copyWith(
+            side: namedArgs.containsKey('side') ? namedArgs['side'] : null,
+            borderRadius: namedArgs.containsKey('borderRadius') ? namedArgs['borderRadius'] : null);
       case 'getInnerPath':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.getInnerPath(positionalArgs[0], textDirection : namedArgs.containsKey('textDirection') ? namedArgs['textDirection'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => getInnerPath(positionalArgs[0],
+            textDirection: namedArgs.containsKey('textDirection') ? namedArgs['textDirection'] : null);
       case 'getOuterPath':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.getOuterPath(positionalArgs[0], textDirection : namedArgs.containsKey('textDirection') ? namedArgs['textDirection'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => getOuterPath(positionalArgs[0],
+            textDirection: namedArgs.containsKey('textDirection') ? namedArgs['textDirection'] : null);
       case 'paint':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.paint(positionalArgs[0], positionalArgs[1], textDirection : namedArgs.containsKey('textDirection') ? namedArgs['textDirection'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => paint(positionalArgs[0], positionalArgs[1],
+            textDirection: namedArgs.containsKey('textDirection') ? namedArgs['textDirection'] : null);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
-

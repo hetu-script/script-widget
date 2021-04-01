@@ -1,7 +1,6 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart';
-import 'package:flutter/painting.dart';
 
 class ScriptCategoryAutoBinding extends HTExternalClass {
   ScriptCategoryAutoBinding() : super('ScriptCategory');
@@ -21,7 +20,6 @@ class ScriptCategoryAutoBinding extends HTExternalClass {
         throw HTErrorUndefined(varName);
     }
   }
-
 
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
@@ -45,11 +43,24 @@ class TypographyAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'Typography.material2014':
-        return ({positionalArgs, namedArgs, typeArgs}) => Typography.material2014(platform : namedArgs.containsKey('platform') ? namedArgs['platform'] : TargetPlatform.android, black : namedArgs.containsKey('black') ? namedArgs['black'] : null, white : namedArgs.containsKey('white') ? namedArgs['white'] : null, englishLike : namedArgs.containsKey('englishLike') ? namedArgs['englishLike'] : null, dense : namedArgs.containsKey('dense') ? namedArgs['dense'] : null, tall : namedArgs.containsKey('tall') ? namedArgs['tall'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => Typography.material2014(
+            platform: namedArgs.containsKey('platform') ? namedArgs['platform'] : TargetPlatform.android,
+            black: namedArgs.containsKey('black') ? namedArgs['black'] : null,
+            white: namedArgs.containsKey('white') ? namedArgs['white'] : null,
+            englishLike: namedArgs.containsKey('englishLike') ? namedArgs['englishLike'] : null,
+            dense: namedArgs.containsKey('dense') ? namedArgs['dense'] : null,
+            tall: namedArgs.containsKey('tall') ? namedArgs['tall'] : null);
       case 'Typography.material2018':
-        return ({positionalArgs, namedArgs, typeArgs}) => Typography.material2018(platform : namedArgs.containsKey('platform') ? namedArgs['platform'] : TargetPlatform.android, black : namedArgs.containsKey('black') ? namedArgs['black'] : null, white : namedArgs.containsKey('white') ? namedArgs['white'] : null, englishLike : namedArgs.containsKey('englishLike') ? namedArgs['englishLike'] : null, dense : namedArgs.containsKey('dense') ? namedArgs['dense'] : null, tall : namedArgs.containsKey('tall') ? namedArgs['tall'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => Typography.material2018(
+            platform: namedArgs.containsKey('platform') ? namedArgs['platform'] : TargetPlatform.android,
+            black: namedArgs.containsKey('black') ? namedArgs['black'] : null,
+            white: namedArgs.containsKey('white') ? namedArgs['white'] : null,
+            englishLike: namedArgs.containsKey('englishLike') ? namedArgs['englishLike'] : null,
+            dense: namedArgs.containsKey('dense') ? namedArgs['dense'] : null,
+            tall: namedArgs.containsKey('tall') ? namedArgs['tall'] : null);
       case 'Typography.lerp':
-        return ({positionalArgs, namedArgs, typeArgs}) => Typography.lerp(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            Typography.lerp(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
       case 'Typography.blackMountainView':
         return Typography.blackMountainView;
       case 'Typography.whiteMountainView':
@@ -91,9 +102,6 @@ class TypographyAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as Typography).htFetch(id);
   }
-
-
-
 }
 
 extension TypographyBinding on Typography {
@@ -114,15 +122,27 @@ extension TypographyBinding on Typography {
       case 'hashCode':
         return hashCode;
       case 'geometryThemeFor':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.geometryThemeFor(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => geometryThemeFor(positionalArgs[0]);
       case 'copyWith':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.copyWith(black : namedArgs.containsKey('black') ? namedArgs['black'] : null, white : namedArgs.containsKey('white') ? namedArgs['white'] : null, englishLike : namedArgs.containsKey('englishLike') ? namedArgs['englishLike'] : null, dense : namedArgs.containsKey('dense') ? namedArgs['dense'] : null, tall : namedArgs.containsKey('tall') ? namedArgs['tall'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => copyWith(
+            black: namedArgs.containsKey('black') ? namedArgs['black'] : null,
+            white: namedArgs.containsKey('white') ? namedArgs['white'] : null,
+            englishLike: namedArgs.containsKey('englishLike') ? namedArgs['englishLike'] : null,
+            dense: namedArgs.containsKey('dense') ? namedArgs['dense'] : null,
+            tall: namedArgs.containsKey('tall') ? namedArgs['tall'] : null);
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+      case 'toStringShort':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
-

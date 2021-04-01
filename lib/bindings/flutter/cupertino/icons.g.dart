@@ -1,7 +1,5 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/widgets.dart';
-
 
 class CupertinoIconsAutoBinding extends HTExternalClass {
   CupertinoIconsAutoBinding() : super('CupertinoIcons');
@@ -2661,10 +2659,4 @@ class CupertinoIconsAutoBinding extends HTExternalClass {
         throw HTErrorUndefined(varName);
     }
   }
-
-
-
-
 }
-
-

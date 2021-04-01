@@ -1,10 +1,7 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/material.dart';
-import 'dart:collection';
-import 'dart:math'as math;
 import 'package:flutter/widgets.dart';
 import 'package:flutter/rendering.dart';
-import 'package:vector_math/vector_math_64.dart';
 
 class BottomNavigationBarTypeAutoBinding extends HTExternalClass {
   BottomNavigationBarTypeAutoBinding() : super('BottomNavigationBarType');
@@ -22,7 +19,6 @@ class BottomNavigationBarTypeAutoBinding extends HTExternalClass {
         throw HTErrorUndefined(varName);
     }
   }
-
 
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
@@ -46,7 +42,29 @@ class BottomNavigationBarAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'BottomNavigationBar':
-        return ({positionalArgs, namedArgs, typeArgs}) => BottomNavigationBar(key : namedArgs.containsKey('key') ? namedArgs['key'] : null, items : List<BottomNavigationBarItem>.from(namedArgs['items']), onTap : namedArgs.containsKey('onTap') ? namedArgs['onTap'] : null, currentIndex : namedArgs.containsKey('currentIndex') ? namedArgs['currentIndex'] : 0, elevation : namedArgs.containsKey('elevation') ? namedArgs['elevation'] : null, type : namedArgs.containsKey('type') ? namedArgs['type'] : null, fixedColor : namedArgs.containsKey('fixedColor') ? namedArgs['fixedColor'] : null, backgroundColor : namedArgs.containsKey('backgroundColor') ? namedArgs['backgroundColor'] : null, iconSize : namedArgs.containsKey('iconSize') ? namedArgs['iconSize'] : 24.0, selectedItemColor : namedArgs.containsKey('selectedItemColor') ? namedArgs['selectedItemColor'] : null, unselectedItemColor : namedArgs.containsKey('unselectedItemColor') ? namedArgs['unselectedItemColor'] : null, selectedIconTheme : namedArgs.containsKey('selectedIconTheme') ? namedArgs['selectedIconTheme'] : null, unselectedIconTheme : namedArgs.containsKey('unselectedIconTheme') ? namedArgs['unselectedIconTheme'] : null, selectedFontSize : namedArgs.containsKey('selectedFontSize') ? namedArgs['selectedFontSize'] : 14.0, unselectedFontSize : namedArgs.containsKey('unselectedFontSize') ? namedArgs['unselectedFontSize'] : 12.0, selectedLabelStyle : namedArgs.containsKey('selectedLabelStyle') ? namedArgs['selectedLabelStyle'] : null, unselectedLabelStyle : namedArgs.containsKey('unselectedLabelStyle') ? namedArgs['unselectedLabelStyle'] : null, showSelectedLabels : namedArgs.containsKey('showSelectedLabels') ? namedArgs['showSelectedLabels'] : null, showUnselectedLabels : namedArgs.containsKey('showUnselectedLabels') ? namedArgs['showUnselectedLabels'] : null, mouseCursor : namedArgs.containsKey('mouseCursor') ? namedArgs['mouseCursor'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => BottomNavigationBar(
+            key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
+            items: List<BottomNavigationBarItem>.from(namedArgs['items']),
+            onTap: namedArgs.containsKey('onTap') ? namedArgs['onTap'] : null,
+            currentIndex: namedArgs.containsKey('currentIndex') ? namedArgs['currentIndex'] : 0,
+            elevation: namedArgs.containsKey('elevation') ? namedArgs['elevation'] : null,
+            type: namedArgs.containsKey('type') ? namedArgs['type'] : null,
+            fixedColor: namedArgs.containsKey('fixedColor') ? namedArgs['fixedColor'] : null,
+            backgroundColor: namedArgs.containsKey('backgroundColor') ? namedArgs['backgroundColor'] : null,
+            iconSize: namedArgs.containsKey('iconSize') ? namedArgs['iconSize'] : 24.0,
+            selectedItemColor: namedArgs.containsKey('selectedItemColor') ? namedArgs['selectedItemColor'] : null,
+            unselectedItemColor: namedArgs.containsKey('unselectedItemColor') ? namedArgs['unselectedItemColor'] : null,
+            selectedIconTheme: namedArgs.containsKey('selectedIconTheme') ? namedArgs['selectedIconTheme'] : null,
+            unselectedIconTheme: namedArgs.containsKey('unselectedIconTheme') ? namedArgs['unselectedIconTheme'] : null,
+            selectedFontSize: namedArgs.containsKey('selectedFontSize') ? namedArgs['selectedFontSize'] : 14.0,
+            unselectedFontSize: namedArgs.containsKey('unselectedFontSize') ? namedArgs['unselectedFontSize'] : 12.0,
+            selectedLabelStyle: namedArgs.containsKey('selectedLabelStyle') ? namedArgs['selectedLabelStyle'] : null,
+            unselectedLabelStyle:
+                namedArgs.containsKey('unselectedLabelStyle') ? namedArgs['unselectedLabelStyle'] : null,
+            showSelectedLabels: namedArgs.containsKey('showSelectedLabels') ? namedArgs['showSelectedLabels'] : null,
+            showUnselectedLabels:
+                namedArgs.containsKey('showUnselectedLabels') ? namedArgs['showUnselectedLabels'] : null,
+            mouseCursor: namedArgs.containsKey('mouseCursor') ? namedArgs['mouseCursor'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -56,9 +74,6 @@ class BottomNavigationBarAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as BottomNavigationBar).htFetch(id);
   }
-
-
-
 }
 
 extension BottomNavigationBarBinding on BottomNavigationBar {
@@ -102,14 +117,38 @@ extension BottomNavigationBarBinding on BottomNavigationBar {
         return showSelectedLabels;
       case 'mouseCursor':
         return mouseCursor;
+      case 'key':
+        return key;
       case 'fixedColor':
         return fixedColor;
+      case 'hashCode':
+        return hashCode;
       case 'createState':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.createState();
+        return ({positionalArgs, namedArgs, typeArgs}) => createState();
+      case 'createElement':
+        return ({positionalArgs, namedArgs, typeArgs}) => createElement();
+      case 'toStringShort':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'debugFillProperties':
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+      case 'toStringShallow':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
+            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toStringDeep':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
+            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
-

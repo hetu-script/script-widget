@@ -1,11 +1,6 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/widgets.dart';
-import 'dart:async';
-import 'dart:ui';
 import 'package:flutter/foundation.dart';
-import 'package:flutter/gestures.dart';
-import 'package:flutter/painting.dart';
-import 'package:flutter/services.dart';
 
 class KeyEventResultAutoBinding extends HTExternalClass {
   KeyEventResultAutoBinding() : super('KeyEventResult');
@@ -26,7 +21,6 @@ class KeyEventResultAutoBinding extends HTExternalClass {
     }
   }
 
-
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
@@ -41,6 +35,7 @@ class KeyEventResultAutoBinding extends HTExternalClass {
     }
   }
 }
+
 class UnfocusDispositionAutoBinding extends HTExternalClass {
   UnfocusDispositionAutoBinding() : super('UnfocusDisposition');
 
@@ -58,7 +53,6 @@ class UnfocusDispositionAutoBinding extends HTExternalClass {
     }
   }
 
-
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
@@ -73,6 +67,7 @@ class UnfocusDispositionAutoBinding extends HTExternalClass {
     }
   }
 }
+
 class FocusHighlightModeAutoBinding extends HTExternalClass {
   FocusHighlightModeAutoBinding() : super('FocusHighlightMode');
 
@@ -90,7 +85,6 @@ class FocusHighlightModeAutoBinding extends HTExternalClass {
     }
   }
 
-
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
@@ -105,6 +99,7 @@ class FocusHighlightModeAutoBinding extends HTExternalClass {
     }
   }
 }
+
 class FocusHighlightStrategyAutoBinding extends HTExternalClass {
   FocusHighlightStrategyAutoBinding() : super('FocusHighlightStrategy');
 
@@ -123,7 +118,6 @@ class FocusHighlightStrategyAutoBinding extends HTExternalClass {
         throw HTErrorUndefined(varName);
     }
   }
-
 
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
@@ -147,7 +141,13 @@ class FocusNodeAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'FocusNode':
-        return ({positionalArgs, namedArgs, typeArgs}) => FocusNode(debugLabel : namedArgs.containsKey('debugLabel') ? namedArgs['debugLabel'] : null, onKey : namedArgs.containsKey('onKey') ? namedArgs['onKey'] : null, skipTraversal : namedArgs.containsKey('skipTraversal') ? namedArgs['skipTraversal'] : false, canRequestFocus : namedArgs.containsKey('canRequestFocus') ? namedArgs['canRequestFocus'] : true, descendantsAreFocusable : namedArgs.containsKey('descendantsAreFocusable') ? namedArgs['descendantsAreFocusable'] : true);
+        return ({positionalArgs, namedArgs, typeArgs}) => FocusNode(
+            debugLabel: namedArgs.containsKey('debugLabel') ? namedArgs['debugLabel'] : null,
+            onKey: namedArgs.containsKey('onKey') ? namedArgs['onKey'] : null,
+            skipTraversal: namedArgs.containsKey('skipTraversal') ? namedArgs['skipTraversal'] : false,
+            canRequestFocus: namedArgs.containsKey('canRequestFocus') ? namedArgs['canRequestFocus'] : true,
+            descendantsAreFocusable:
+                namedArgs.containsKey('descendantsAreFocusable') ? namedArgs['descendantsAreFocusable'] : true);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -165,10 +165,10 @@ class FocusNodeAutoBinding extends HTExternalClass {
 
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'FocusOnKeyCallback': (HTFunction function) => (node, event) => function.call(positionalArgs: [node, event], namedArgs: const {}) as dynamic,
+      'FocusOnKeyCallback': (HTFunction function) =>
+          (node, event) => function.call(positionalArgs: [node, event], namedArgs: const {}) as dynamic,
     };
   }
-
 }
 
 extension FocusNodeBinding on FocusNode {
@@ -217,27 +217,46 @@ extension FocusNodeBinding on FocusNode {
       case 'rect':
         return rect;
       case 'unfocus':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.unfocus(disposition : namedArgs.containsKey('disposition') ? namedArgs['disposition'] : UnfocusDisposition.scope);
+        return ({positionalArgs, namedArgs, typeArgs}) => unfocus(
+            disposition: namedArgs.containsKey('disposition') ? namedArgs['disposition'] : UnfocusDisposition.scope);
       case 'consumeKeyboardToken':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.consumeKeyboardToken();
+        return ({positionalArgs, namedArgs, typeArgs}) => consumeKeyboardToken();
       case 'attach':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.attach(positionalArgs[0], onKey : namedArgs.containsKey('onKey') ? namedArgs['onKey'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            attach(positionalArgs[0], onKey: namedArgs.containsKey('onKey') ? namedArgs['onKey'] : null);
       case 'dispose':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.dispose();
+        return ({positionalArgs, namedArgs, typeArgs}) => dispose();
       case 'requestFocus':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.requestFocus(positionalArgs.length > 0 ? positionalArgs[0] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            requestFocus(positionalArgs.length > 0 ? positionalArgs[0] : null);
       case 'nextFocus':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.nextFocus();
+        return ({positionalArgs, namedArgs, typeArgs}) => nextFocus();
       case 'previousFocus':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.previousFocus();
+        return ({positionalArgs, namedArgs, typeArgs}) => previousFocus();
       case 'focusInDirection':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.focusInDirection(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => focusInDirection(positionalArgs[0]);
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
       case 'debugDescribeChildren':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugDescribeChildren();
+        return ({positionalArgs, namedArgs, typeArgs}) => debugDescribeChildren();
       case 'toStringShort':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toStringShort();
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+      case 'toStringShallow':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
+            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toStringDeep':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
+            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -246,16 +265,16 @@ extension FocusNodeBinding on FocusNode {
   void htAssign(String varName, dynamic value) {
     switch (varName) {
       case 'skipTraversal':
-        this.skipTraversal = value;
+        skipTraversal = value;
         break;
       case 'canRequestFocus':
-        this.canRequestFocus = value;
+        canRequestFocus = value;
         break;
       case 'descendantsAreFocusable':
-        this.descendantsAreFocusable = value;
+        descendantsAreFocusable = value;
         break;
       case 'debugLabel':
-        this.debugLabel = value;
+        debugLabel = value;
         break;
       default:
         throw HTErrorUndefined(varName);
@@ -270,7 +289,11 @@ class FocusScopeNodeAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'FocusScopeNode':
-        return ({positionalArgs, namedArgs, typeArgs}) => FocusScopeNode(debugLabel : namedArgs.containsKey('debugLabel') ? namedArgs['debugLabel'] : null, onKey : namedArgs.containsKey('onKey') ? namedArgs['onKey'] : null, skipTraversal : namedArgs.containsKey('skipTraversal') ? namedArgs['skipTraversal'] : false, canRequestFocus : namedArgs.containsKey('canRequestFocus') ? namedArgs['canRequestFocus'] : true);
+        return ({positionalArgs, namedArgs, typeArgs}) => FocusScopeNode(
+            debugLabel: namedArgs.containsKey('debugLabel') ? namedArgs['debugLabel'] : null,
+            onKey: namedArgs.containsKey('onKey') ? namedArgs['onKey'] : null,
+            skipTraversal: namedArgs.containsKey('skipTraversal') ? namedArgs['skipTraversal'] : false,
+            canRequestFocus: namedArgs.containsKey('canRequestFocus') ? namedArgs['canRequestFocus'] : true);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -281,13 +304,12 @@ class FocusScopeNodeAutoBinding extends HTExternalClass {
     return (instance as FocusScopeNode).htFetch(id);
   }
 
-
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'FocusOnKeyCallback': (HTFunction function) => (node, event) => function.call(positionalArgs: [node, event], namedArgs: const {}) as dynamic,
+      'FocusOnKeyCallback': (HTFunction function) =>
+          (node, event) => function.call(positionalArgs: [node, event], namedArgs: const {}) as dynamic,
     };
   }
-
 }
 
 extension FocusScopeNodeBinding on FocusScopeNode {
@@ -340,36 +362,54 @@ extension FocusScopeNodeBinding on FocusScopeNode {
       case 'rect':
         return rect;
       case 'setFirstFocus':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.setFirstFocus(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => setFirstFocus(positionalArgs[0]);
       case 'autofocus':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.autofocus(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => autofocus(positionalArgs[0]);
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
       case 'unfocus':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.unfocus(disposition : namedArgs.containsKey('disposition') ? namedArgs['disposition'] : UnfocusDisposition.scope);
+        return ({positionalArgs, namedArgs, typeArgs}) => unfocus(
+            disposition: namedArgs.containsKey('disposition') ? namedArgs['disposition'] : UnfocusDisposition.scope);
       case 'consumeKeyboardToken':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.consumeKeyboardToken();
+        return ({positionalArgs, namedArgs, typeArgs}) => consumeKeyboardToken();
       case 'attach':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.attach(positionalArgs[0], onKey : namedArgs.containsKey('onKey') ? namedArgs['onKey'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            attach(positionalArgs[0], onKey: namedArgs.containsKey('onKey') ? namedArgs['onKey'] : null);
       case 'dispose':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.dispose();
+        return ({positionalArgs, namedArgs, typeArgs}) => dispose();
       case 'requestFocus':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.requestFocus(positionalArgs.length > 0 ? positionalArgs[0] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            requestFocus(positionalArgs.length > 0 ? positionalArgs[0] : null);
       case 'nextFocus':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.nextFocus();
+        return ({positionalArgs, namedArgs, typeArgs}) => nextFocus();
       case 'previousFocus':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.previousFocus();
+        return ({positionalArgs, namedArgs, typeArgs}) => previousFocus();
       case 'focusInDirection':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.focusInDirection(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => focusInDirection(positionalArgs[0]);
       case 'debugDescribeChildren':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugDescribeChildren();
+        return ({positionalArgs, namedArgs, typeArgs}) => debugDescribeChildren();
       case 'toStringShort':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toStringShort();
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+      case 'toStringShallow':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
+            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toStringDeep':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
+            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class FocusManagerAutoBinding extends HTExternalClass {
@@ -396,8 +436,6 @@ class FocusManagerAutoBinding extends HTExternalClass {
   void instanceMemberSet(dynamic instance, String id, dynamic value) {
     (instance as FocusManager).htAssign(id, value);
   }
-
-
 }
 
 extension FocusManagerBinding on FocusManager {
@@ -414,13 +452,31 @@ extension FocusManagerBinding on FocusManager {
       case 'primaryFocus':
         return primaryFocus;
       case 'addHighlightModeListener':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.addHighlightModeListener(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => addHighlightModeListener(positionalArgs[0]);
       case 'removeHighlightModeListener':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.removeHighlightModeListener(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => removeHighlightModeListener(positionalArgs[0]);
       case 'debugDescribeChildren':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugDescribeChildren();
+        return ({positionalArgs, namedArgs, typeArgs}) => debugDescribeChildren();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+      case 'toStringShallow':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
+            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toStringDeep':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
+            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toStringShort':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -429,11 +485,10 @@ extension FocusManagerBinding on FocusManager {
   void htAssign(String varName, dynamic value) {
     switch (varName) {
       case 'highlightStrategy':
-        this.highlightStrategy = value;
+        highlightStrategy = value;
         break;
       default:
         throw HTErrorUndefined(varName);
     }
   }
 }
-

@@ -1,7 +1,6 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/gestures.dart';
 
-
 class GestureArenaTeamAutoBinding extends HTExternalClass {
   GestureArenaTeamAutoBinding() : super('GestureArenaTeam');
 
@@ -24,8 +23,6 @@ class GestureArenaTeamAutoBinding extends HTExternalClass {
   void instanceMemberSet(dynamic instance, String id, dynamic value) {
     (instance as GestureArenaTeam).htAssign(id, value);
   }
-
-
 }
 
 extension GestureArenaTeamBinding on GestureArenaTeam {
@@ -36,7 +33,7 @@ extension GestureArenaTeamBinding on GestureArenaTeam {
       case 'captain':
         return captain;
       case 'add':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.add(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => add(positionalArgs[0], positionalArgs[1]);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -45,11 +42,10 @@ extension GestureArenaTeamBinding on GestureArenaTeam {
   void htAssign(String varName, dynamic value) {
     switch (varName) {
       case 'captain':
-        this.captain = value;
+        captain = value;
         break;
       default:
         throw HTErrorUndefined(varName);
     }
   }
 }
-

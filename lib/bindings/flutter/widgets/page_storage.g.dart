@@ -2,7 +2,6 @@ import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter/foundation.dart';
 
-
 class PageStorageBucketAutoBinding extends HTExternalClass {
   PageStorageBucketAutoBinding() : super('PageStorageBucket');
 
@@ -20,9 +19,6 @@ class PageStorageBucketAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as PageStorageBucket).htFetch(id);
   }
-
-
-
 }
 
 extension PageStorageBucketBinding on PageStorageBucket {
@@ -31,14 +27,15 @@ extension PageStorageBucketBinding on PageStorageBucket {
       case 'typeid':
         return HTTypeId('PageStorageBucket');
       case 'writeState':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.writeState(positionalArgs[0], positionalArgs[1], identifier : namedArgs.containsKey('identifier') ? namedArgs['identifier'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => writeState(positionalArgs[0], positionalArgs[1],
+            identifier: namedArgs.containsKey('identifier') ? namedArgs['identifier'] : null);
       case 'readState':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.readState(positionalArgs[0], identifier : namedArgs.containsKey('identifier') ? namedArgs['identifier'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => readState(positionalArgs[0],
+            identifier: namedArgs.containsKey('identifier') ? namedArgs['identifier'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class PageStorageAutoBinding extends HTExternalClass {
@@ -48,7 +45,10 @@ class PageStorageAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'PageStorage':
-        return ({positionalArgs, namedArgs, typeArgs}) => PageStorage(key : namedArgs.containsKey('key') ? namedArgs['key'] : null, bucket : namedArgs['bucket'], child : namedArgs['child']);
+        return ({positionalArgs, namedArgs, typeArgs}) => PageStorage(
+            key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
+            bucket: namedArgs['bucket'],
+            child: namedArgs['child']);
       case 'PageStorage.of':
         return ({positionalArgs, namedArgs, typeArgs}) => PageStorage.of(positionalArgs[0]);
       default:
@@ -60,9 +60,6 @@ class PageStorageAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as PageStorage).htFetch(id);
   }
-
-
-
 }
 
 extension PageStorageBinding on PageStorage {
@@ -74,12 +71,36 @@ extension PageStorageBinding on PageStorage {
         return child;
       case 'bucket':
         return bucket;
+      case 'key':
+        return key;
+      case 'hashCode':
+        return hashCode;
       case 'build':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.build(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => build(positionalArgs[0]);
+      case 'createElement':
+        return ({positionalArgs, namedArgs, typeArgs}) => createElement();
+      case 'toStringShort':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'debugFillProperties':
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+      case 'toStringShallow':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
+            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toStringDeep':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
+            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
-

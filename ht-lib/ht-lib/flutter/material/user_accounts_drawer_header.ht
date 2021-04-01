@@ -1,0 +1,21 @@
+external class UserAccountsDrawerHeader {
+    construct 
+    get decoration
+    get margin
+    get currentAccountPicture
+    get otherAccountsPictures
+    get accountName
+    get accountEmail
+    get onDetailsPressed
+    get arrowColor
+    get key
+    fun createState
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}

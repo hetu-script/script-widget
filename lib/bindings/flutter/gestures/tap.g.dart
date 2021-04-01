@@ -1,8 +1,6 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/gestures.dart';
-import 'package:vector_math/vector_math_64.dart';
 import 'package:flutter/foundation.dart';
-
 
 class TapDownDetailsAutoBinding extends HTExternalClass {
   TapDownDetailsAutoBinding() : super('TapDownDetails');
@@ -11,7 +9,10 @@ class TapDownDetailsAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'TapDownDetails':
-        return ({positionalArgs, namedArgs, typeArgs}) => TapDownDetails(globalPosition : namedArgs.containsKey('globalPosition') ? namedArgs['globalPosition'] : Offset.zero, localPosition : namedArgs.containsKey('localPosition') ? namedArgs['localPosition'] : null, kind : namedArgs.containsKey('kind') ? namedArgs['kind'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => TapDownDetails(
+            globalPosition: namedArgs.containsKey('globalPosition') ? namedArgs['globalPosition'] : Offset.zero,
+            localPosition: namedArgs.containsKey('localPosition') ? namedArgs['localPosition'] : null,
+            kind: namedArgs.containsKey('kind') ? namedArgs['kind'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -21,9 +22,6 @@ class TapDownDetailsAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as TapDownDetails).htFetch(id);
   }
-
-
-
 }
 
 extension TapDownDetailsBinding on TapDownDetails {
@@ -41,7 +39,6 @@ extension TapDownDetailsBinding on TapDownDetails {
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class TapUpDetailsAutoBinding extends HTExternalClass {
@@ -51,7 +48,10 @@ class TapUpDetailsAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'TapUpDetails':
-        return ({positionalArgs, namedArgs, typeArgs}) => TapUpDetails(kind : namedArgs['kind'], globalPosition : namedArgs.containsKey('globalPosition') ? namedArgs['globalPosition'] : Offset.zero, localPosition : namedArgs.containsKey('localPosition') ? namedArgs['localPosition'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => TapUpDetails(
+            kind: namedArgs['kind'],
+            globalPosition: namedArgs.containsKey('globalPosition') ? namedArgs['globalPosition'] : Offset.zero,
+            localPosition: namedArgs.containsKey('localPosition') ? namedArgs['localPosition'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -61,9 +61,6 @@ class TapUpDetailsAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as TapUpDetails).htFetch(id);
   }
-
-
-
 }
 
 extension TapUpDetailsBinding on TapUpDetails {
@@ -81,7 +78,6 @@ extension TapUpDetailsBinding on TapUpDetails {
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class TapGestureRecognizerAutoBinding extends HTExternalClass {
@@ -91,7 +87,8 @@ class TapGestureRecognizerAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'TapGestureRecognizer':
-        return ({positionalArgs, namedArgs, typeArgs}) => TapGestureRecognizer(debugOwner : namedArgs.containsKey('debugOwner') ? namedArgs['debugOwner'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            TapGestureRecognizer(debugOwner: namedArgs.containsKey('debugOwner') ? namedArgs['debugOwner'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -106,8 +103,6 @@ class TapGestureRecognizerAutoBinding extends HTExternalClass {
   void instanceMemberSet(dynamic instance, String id, dynamic value) {
     (instance as TapGestureRecognizer).htAssign(id, value);
   }
-
-
 }
 
 extension TapGestureRecognizerBinding on TapGestureRecognizer {
@@ -156,31 +151,51 @@ extension TapGestureRecognizerBinding on TapGestureRecognizer {
       case 'team':
         return team;
       case 'isPointerAllowed':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.isPointerAllowed(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => isPointerAllowed(positionalArgs[0]);
       case 'addAllowedPointer':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.addAllowedPointer(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => addAllowedPointer(positionalArgs[0]);
       case 'handlePrimaryPointer':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.handlePrimaryPointer(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => handlePrimaryPointer(positionalArgs[0]);
       case 'resolve':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.resolve(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => resolve(positionalArgs[0]);
       case 'didExceedDeadline':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.didExceedDeadline();
+        return ({positionalArgs, namedArgs, typeArgs}) => didExceedDeadline();
       case 'acceptGesture':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.acceptGesture(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => acceptGesture(positionalArgs[0]);
       case 'rejectGesture':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.rejectGesture(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => rejectGesture(positionalArgs[0]);
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
       case 'handleEvent':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.handleEvent(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => handleEvent(positionalArgs[0]);
       case 'didStopTrackingLastPointer':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.didStopTrackingLastPointer(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => didStopTrackingLastPointer(positionalArgs[0]);
       case 'dispose':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.dispose();
+        return ({positionalArgs, namedArgs, typeArgs}) => dispose();
       case 'handleNonAllowedPointer':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.handleNonAllowedPointer(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => handleNonAllowedPointer(positionalArgs[0]);
       case 'addPointer':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.addPointer(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => addPointer(positionalArgs[0]);
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+      case 'toStringShallow':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
+            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toStringDeep':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
+            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toStringShort':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
+      case 'debugDescribeChildren':
+        return ({positionalArgs, namedArgs, typeArgs}) => debugDescribeChildren();
       default:
         throw HTErrorUndefined(varName);
     }
@@ -189,50 +204,49 @@ extension TapGestureRecognizerBinding on TapGestureRecognizer {
   void htAssign(String varName, dynamic value) {
     switch (varName) {
       case 'onTapDown':
-        this.onTapDown = value;
+        onTapDown = value;
         break;
       case 'onTapUp':
-        this.onTapUp = value;
+        onTapUp = value;
         break;
       case 'onTap':
-        this.onTap = value;
+        onTap = value;
         break;
       case 'onTapCancel':
-        this.onTapCancel = value;
+        onTapCancel = value;
         break;
       case 'onSecondaryTap':
-        this.onSecondaryTap = value;
+        onSecondaryTap = value;
         break;
       case 'onSecondaryTapDown':
-        this.onSecondaryTapDown = value;
+        onSecondaryTapDown = value;
         break;
       case 'onSecondaryTapUp':
-        this.onSecondaryTapUp = value;
+        onSecondaryTapUp = value;
         break;
       case 'onSecondaryTapCancel':
-        this.onSecondaryTapCancel = value;
+        onSecondaryTapCancel = value;
         break;
       case 'onTertiaryTapDown':
-        this.onTertiaryTapDown = value;
+        onTertiaryTapDown = value;
         break;
       case 'onTertiaryTapUp':
-        this.onTertiaryTapUp = value;
+        onTertiaryTapUp = value;
         break;
       case 'onTertiaryTapCancel':
-        this.onTertiaryTapCancel = value;
+        onTertiaryTapCancel = value;
         break;
       case 'state':
-        this.state = value;
+        state = value;
         break;
       case 'primaryPointer':
-        this.primaryPointer = value;
+        primaryPointer = value;
         break;
       case 'initialPosition':
-        this.initialPosition = value;
+        initialPosition = value;
         break;
       default:
         throw HTErrorUndefined(varName);
     }
   }
 }
-

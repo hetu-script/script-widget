@@ -1,0 +1,92 @@
+external class RenderErrorBox {
+    construct 
+    get message
+    var parentData
+    var debugCreator
+    fun computeMaxIntrinsicWidth
+    fun computeMaxIntrinsicHeight
+    get sizedByParent
+    fun hitTestSelf
+    fun computeDryLayout
+    fun paint
+    fun setupParentData
+    fun getMinIntrinsicWidth
+    fun getMaxIntrinsicWidth
+    fun getMinIntrinsicHeight
+    fun getMaxIntrinsicHeight
+    fun getDryLayout
+    fun debugCannotComputeDryLayout
+    get hasSize
+    get size
+    fun debugAdoptSize
+    get semanticBounds
+    fun debugResetSize
+    fun getDistanceToBaseline
+    get constraints
+    fun debugAssertDoesMeetConstraints
+    fun markNeedsLayout
+    fun performResize
+    fun performLayout
+    fun hitTest
+    fun applyPaintTransform
+    fun globalToLocal
+    fun localToGlobal
+    get paintBounds
+    fun handleEvent
+    fun debugHandleEvent
+    fun debugPaint
+    fun debugFillProperties
+    fun reassemble
+    fun adoptChild
+    fun dropChild
+    fun visitChildren
+    get debugDoingThisResize
+    get debugDoingThisLayout
+    get debugCanParentUseSize
+    get owner
+    fun attach
+    get debugNeedsLayout
+    get debugDoingThisLayoutWithCallback
+    fun markNeedsLayoutForSizedByParentChange
+    fun scheduleInitialLayout
+    fun layout
+    fun rotate
+    get debugDoingThisPaint
+    get isRepaintBoundary
+    fun debugRegisterRepaintBoundaryPaint
+    get debugLayer
+    fun markNeedsCompositingBitsUpdate
+    get needsCompositing
+    get debugNeedsPaint
+    fun markNeedsPaint
+    fun scheduleInitialPaint
+    fun replaceRootLayer
+    fun getTransformTo
+    fun describeApproximatePaintClip
+    fun describeSemanticsClip
+    fun scheduleInitialSemantics
+    fun sendSemanticsEvent
+    get debugSemantics
+    fun clearSemantics
+    fun markNeedsSemanticsUpdate
+    fun visitChildrenForSemantics
+    fun assembleSemanticsNode
+    fun toStringShort
+    fun toString
+    fun toStringDeep
+    fun toStringShallow
+    fun debugDescribeChildren
+    fun showOnScreen
+    fun describeForError
+    fun toDiagnosticsNode
+    get depth
+    fun redepthChildren
+    get attached
+    fun detach
+    get parent
+    static var padding
+    static var minimumWidth
+    static var backgroundColor
+    static var textStyle
+    static var paragraphStyle
+}

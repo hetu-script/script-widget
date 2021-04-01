@@ -1,11 +1,12 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart';
 import 'package:hetu_script/hetu_script.dart';
+import 'package:flutter/material.dart';
 
 @HTAutoBinding()
 class ScriptApp {
   //future回调处理
-  static handleFuture(Future future, HTFunction function) {
+  static void handleFuture(Future future, HTFunction function) {
     future.then((value) {
       function.call(positionalArgs: [value]);
     });
@@ -87,23 +88,22 @@ class _ScriptWidgetState extends State<ScriptWidget> {
 
   @override
   void didChangeDependencies() {
-    // print('didUpdateDependencies: ${widget.hashCode} ${this.hashCode}');
+    // print('didUpdateDependencies: ${widget.hashCode} ${hashCode}');
     debug('change');
     super.didChangeDependencies();
   }
 }
 
-import 'package:flutter/material.dart';
+class ScriptWidgetContainer extends StatefulWidget {
+  final Hetu interpreter;
 
-import '../../example/main.dart';
+  ScriptWidgetContainer(this.interpreter);
 
-class ScriptRootWidget extends StatefulWidget {
   @override
-  _ScriptRootWidgetState createState() => _ScriptRootWidgetState();
+  _ScriptWidgetContainerState createState() => _ScriptWidgetContainerState();
 }
 
-class _ScriptRootWidgetState extends State<ScriptRootWidget>
-    with TickerProviderStateMixin {
+class _ScriptWidgetContainerState extends State<ScriptWidgetContainer> with TickerProviderStateMixin {
   bool scriptLoading = false;
   var _script;
 
@@ -117,8 +117,8 @@ class _ScriptRootWidgetState extends State<ScriptRootWidget>
   Widget build(BuildContext context) {
     if (!scriptLoading) {
       print('[启动检查] 正在加载脚本RootWidget');
-      _script = hetu.import('assets/script_root.ht',
-          invokeFunc: 'buildRoot', positionalArgs: [context, this]);
+      _script =
+          widget.interpreter.import('assets/script_root.ht', invokeFunc: 'buildRoot', positionalArgs: [context, this]);
       scriptLoading = true;
     }
     print('[启动检查] 必须在Init执行之后');
@@ -132,7 +132,7 @@ class _ScriptRootWidgetState extends State<ScriptRootWidget>
             if (snapshot.hasError) {
 // 请求失败，显示错误
               print('${snapshot.error} ${snapshot.stackTrace}');
-              return Text("Error!");
+              return Text('Error!');
             } else {
 // 请求成功，显示数据
               print('[build done] ${snapshot.data} !!!!');

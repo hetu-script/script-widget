@@ -1,0 +1,62 @@
+external class HSVColor {
+    construct fromAHSV
+    construct fromColor
+    get alpha
+    get hue
+    get saturation
+    get value
+    fun withAlpha
+    fun withHue
+    fun withSaturation
+    fun withValue
+    fun toColor
+    get hashCode
+    fun toString
+    static fun lerp (a, b, t)
+}
+external class HSLColor {
+    construct fromAHSL
+    construct fromColor
+    get alpha
+    get hue
+    get saturation
+    get lightness
+    fun withAlpha
+    fun withHue
+    fun withSaturation
+    fun withLightness
+    fun toColor
+    get hashCode
+    fun toString
+    static fun lerp (a, b, t)
+}
+external class ColorProperty {
+    construct 
+    get expandableValue
+    get allowWrap
+    get allowNameWrap
+    get ifNull
+    get ifEmpty
+    get tooltip
+    get missingIfNull
+    get defaultValue
+    get name
+    get showSeparator
+    get showName
+    get linePrefix
+    get style
+    fun toJsonMap
+    fun valueToString
+    fun toDescription
+    get propertyType
+    get value
+    get exception
+    get level
+    fun getProperties
+    fun getChildren
+    fun isFiltered
+    get emptyBodyDescription
+    get allowTruncate
+    fun toString
+    fun toStringDeep
+}

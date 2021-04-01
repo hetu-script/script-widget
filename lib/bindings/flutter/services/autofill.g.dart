@@ -1,7 +1,5 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter/foundation.dart';
-
 
 class AutofillHintsAutoBinding extends HTExternalClass {
   AutofillHintsAutoBinding() : super('AutofillHints');
@@ -145,12 +143,7 @@ class AutofillHintsAutoBinding extends HTExternalClass {
         throw HTErrorUndefined(varName);
     }
   }
-
-
-
-
 }
-
 
 class AutofillConfigurationAutoBinding extends HTExternalClass {
   AutofillConfigurationAutoBinding() : super('AutofillConfiguration');
@@ -159,7 +152,10 @@ class AutofillConfigurationAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'AutofillConfiguration':
-        return ({positionalArgs, namedArgs, typeArgs}) => AutofillConfiguration(uniqueIdentifier : namedArgs['uniqueIdentifier'], autofillHints : List<String>.from(namedArgs['autofillHints']), currentEditingValue : namedArgs['currentEditingValue']);
+        return ({positionalArgs, namedArgs, typeArgs}) => AutofillConfiguration(
+            uniqueIdentifier: namedArgs['uniqueIdentifier'],
+            autofillHints: List<String>.from(namedArgs['autofillHints']),
+            currentEditingValue: namedArgs['currentEditingValue']);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -169,9 +165,6 @@ class AutofillConfigurationAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as AutofillConfiguration).htFetch(id);
   }
-
-
-
 }
 
 extension AutofillConfigurationBinding on AutofillConfiguration {
@@ -186,11 +179,9 @@ extension AutofillConfigurationBinding on AutofillConfiguration {
       case 'currentEditingValue':
         return currentEditingValue;
       case 'toJson':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toJson();
+        return ({positionalArgs, namedArgs, typeArgs}) => toJson();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
-

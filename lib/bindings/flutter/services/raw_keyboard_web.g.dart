@@ -1,7 +1,5 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter/foundation.dart';
-
 
 class RawKeyEventDataWebAutoBinding extends HTExternalClass {
   RawKeyEventDataWebAutoBinding() : super('RawKeyEventDataWeb');
@@ -10,7 +8,10 @@ class RawKeyEventDataWebAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'RawKeyEventDataWeb':
-        return ({positionalArgs, namedArgs, typeArgs}) => RawKeyEventDataWeb(code : namedArgs['code'], key : namedArgs['key'], metaState : namedArgs.containsKey('metaState') ? namedArgs['metaState'] : modifierNone);
+        return ({positionalArgs, namedArgs, typeArgs}) => RawKeyEventDataWeb(
+            code: namedArgs['code'],
+            key: namedArgs['key'],
+            metaState: namedArgs.containsKey('metaState') ? namedArgs['metaState'] : modifierNone);
       case 'RawKeyEventDataWeb.modifierNone':
         return RawKeyEventDataWeb.modifierNone;
       case 'RawKeyEventDataWeb.modifierShift':
@@ -36,8 +37,6 @@ class RawKeyEventDataWebAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as RawKeyEventDataWeb).htFetch(id);
   }
-
-
 
   static const modifierNone = 0;
 }
@@ -70,15 +69,14 @@ extension RawKeyEventDataWebBinding on RawKeyEventDataWeb {
       case 'modifiersPressed':
         return modifiersPressed;
       case 'isModifierPressed':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.isModifierPressed(positionalArgs[0], side : namedArgs.containsKey('side') ? namedArgs['side'] : KeyboardSide.any);
+        return ({positionalArgs, namedArgs, typeArgs}) => isModifierPressed(positionalArgs[0],
+            side: namedArgs.containsKey('side') ? namedArgs['side'] : KeyboardSide.any);
       case 'getModifierSide':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.getModifierSide(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => getModifierSide(positionalArgs[0]);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
-

@@ -1,7 +1,5 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/gestures.dart';
-import 'package:flutter/foundation.dart';
-
 
 class VelocityAutoBinding extends HTExternalClass {
   VelocityAutoBinding() : super('Velocity');
@@ -10,7 +8,7 @@ class VelocityAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'Velocity':
-        return ({positionalArgs, namedArgs, typeArgs}) => Velocity(pixelsPerSecond : namedArgs['pixelsPerSecond']);
+        return ({positionalArgs, namedArgs, typeArgs}) => Velocity(pixelsPerSecond: namedArgs['pixelsPerSecond']);
       case 'Velocity.zero':
         return Velocity.zero;
       default:
@@ -22,9 +20,6 @@ class VelocityAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as Velocity).htFetch(id);
   }
-
-
-
 }
 
 extension VelocityBinding on Velocity {
@@ -37,14 +32,13 @@ extension VelocityBinding on Velocity {
       case 'hashCode':
         return hashCode;
       case 'clampMagnitude':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.clampMagnitude(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => clampMagnitude(positionalArgs[0], positionalArgs[1]);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class VelocityEstimateAutoBinding extends HTExternalClass {
@@ -54,7 +48,11 @@ class VelocityEstimateAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'VelocityEstimate':
-        return ({positionalArgs, namedArgs, typeArgs}) => VelocityEstimate(pixelsPerSecond : namedArgs['pixelsPerSecond'], confidence : namedArgs['confidence'], duration : namedArgs['duration'], offset : namedArgs['offset']);
+        return ({positionalArgs, namedArgs, typeArgs}) => VelocityEstimate(
+            pixelsPerSecond: namedArgs['pixelsPerSecond'],
+            confidence: namedArgs['confidence'],
+            duration: namedArgs['duration'],
+            offset: namedArgs['offset']);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -64,9 +62,6 @@ class VelocityEstimateAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as VelocityEstimate).htFetch(id);
   }
-
-
-
 }
 
 extension VelocityEstimateBinding on VelocityEstimate {
@@ -83,12 +78,11 @@ extension VelocityEstimateBinding on VelocityEstimate {
       case 'offset':
         return offset;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class VelocityTrackerAutoBinding extends HTExternalClass {
@@ -108,9 +102,6 @@ class VelocityTrackerAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as VelocityTracker).htFetch(id);
   }
-
-
-
 }
 
 extension VelocityTrackerBinding on VelocityTracker {
@@ -121,16 +112,15 @@ extension VelocityTrackerBinding on VelocityTracker {
       case 'kind':
         return kind;
       case 'addPosition':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.addPosition(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => addPosition(positionalArgs[0], positionalArgs[1]);
       case 'getVelocityEstimate':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.getVelocityEstimate();
+        return ({positionalArgs, namedArgs, typeArgs}) => getVelocityEstimate();
       case 'getVelocity':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.getVelocity();
+        return ({positionalArgs, namedArgs, typeArgs}) => getVelocity();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class IOSScrollViewFlingVelocityTrackerAutoBinding extends HTExternalClass {
@@ -150,9 +140,6 @@ class IOSScrollViewFlingVelocityTrackerAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as IOSScrollViewFlingVelocityTracker).htFetch(id);
   }
-
-
-
 }
 
 extension IOSScrollViewFlingVelocityTrackerBinding on IOSScrollViewFlingVelocityTracker {
@@ -163,15 +150,13 @@ extension IOSScrollViewFlingVelocityTrackerBinding on IOSScrollViewFlingVelocity
       case 'kind':
         return kind;
       case 'addPosition':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.addPosition(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => addPosition(positionalArgs[0], positionalArgs[1]);
       case 'getVelocityEstimate':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.getVelocityEstimate();
+        return ({positionalArgs, namedArgs, typeArgs}) => getVelocityEstimate();
       case 'getVelocity':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.getVelocity();
+        return ({positionalArgs, namedArgs, typeArgs}) => getVelocity();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
-

@@ -1,0 +1,32 @@
+external class TabController {
+    construct 
+    get length
+    get animation
+    get index
+    set index(value)
+    get previousIndex
+    get indexIsChanging
+    fun animateTo
+    get offset
+    set offset(value)
+    fun dispose
+    fun addListener
+    fun removeListener
+}
+external class DefaultTabController {
+    construct 
+    get length
+    get initialIndex
+    get child
+    get key
+    fun createState
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+    static fun of (context)
+}

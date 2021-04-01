@@ -1,10 +1,6 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/services.dart';
-import 'dart:async';
-import 'dart:io';
 import 'dart:ui';
-import 'package:flutter/foundation.dart';
-import 'package:vector_math/vector_math_64.dart';
 
 class SmartDashesTypeAutoBinding extends HTExternalClass {
   SmartDashesTypeAutoBinding() : super('SmartDashesType');
@@ -23,7 +19,6 @@ class SmartDashesTypeAutoBinding extends HTExternalClass {
     }
   }
 
-
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
@@ -38,6 +33,7 @@ class SmartDashesTypeAutoBinding extends HTExternalClass {
     }
   }
 }
+
 class SmartQuotesTypeAutoBinding extends HTExternalClass {
   SmartQuotesTypeAutoBinding() : super('SmartQuotesType');
 
@@ -55,7 +51,6 @@ class SmartQuotesTypeAutoBinding extends HTExternalClass {
     }
   }
 
-
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
@@ -70,6 +65,7 @@ class SmartQuotesTypeAutoBinding extends HTExternalClass {
     }
   }
 }
+
 class TextInputActionAutoBinding extends HTExternalClass {
   TextInputActionAutoBinding() : super('TextInputAction');
 
@@ -109,7 +105,6 @@ class TextInputActionAutoBinding extends HTExternalClass {
     }
   }
 
-
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
@@ -124,6 +119,7 @@ class TextInputActionAutoBinding extends HTExternalClass {
     }
   }
 }
+
 class TextCapitalizationAutoBinding extends HTExternalClass {
   TextCapitalizationAutoBinding() : super('TextCapitalization');
 
@@ -145,7 +141,6 @@ class TextCapitalizationAutoBinding extends HTExternalClass {
     }
   }
 
-
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
@@ -160,6 +155,7 @@ class TextCapitalizationAutoBinding extends HTExternalClass {
     }
   }
 }
+
 class FloatingCursorDragStateAutoBinding extends HTExternalClass {
   FloatingCursorDragStateAutoBinding() : super('FloatingCursorDragState');
 
@@ -178,7 +174,6 @@ class FloatingCursorDragStateAutoBinding extends HTExternalClass {
         throw HTErrorUndefined(varName);
     }
   }
-
 
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
@@ -202,7 +197,9 @@ class TextInputTypeAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'TextInputType.numberWithOptions':
-        return ({positionalArgs, namedArgs, typeArgs}) => TextInputType.numberWithOptions(signed : namedArgs.containsKey('signed') ? namedArgs['signed'] : false, decimal : namedArgs.containsKey('decimal') ? namedArgs['decimal'] : false);
+        return ({positionalArgs, namedArgs, typeArgs}) => TextInputType.numberWithOptions(
+            signed: namedArgs.containsKey('signed') ? namedArgs['signed'] : false,
+            decimal: namedArgs.containsKey('decimal') ? namedArgs['decimal'] : false);
       case 'TextInputType.text':
         return TextInputType.text;
       case 'TextInputType.multiline':
@@ -234,9 +231,6 @@ class TextInputTypeAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as TextInputType).htFetch(id);
   }
-
-
-
 }
 
 extension TextInputTypeBinding on TextInputType {
@@ -253,14 +247,13 @@ extension TextInputTypeBinding on TextInputType {
       case 'hashCode':
         return hashCode;
       case 'toJson':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toJson();
+        return ({positionalArgs, namedArgs, typeArgs}) => toJson();
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class TextInputConfigurationAutoBinding extends HTExternalClass {
@@ -270,7 +263,22 @@ class TextInputConfigurationAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'TextInputConfiguration':
-        return ({positionalArgs, namedArgs, typeArgs}) => TextInputConfiguration(inputType : namedArgs.containsKey('inputType') ? namedArgs['inputType'] : TextInputType.text, readOnly : namedArgs.containsKey('readOnly') ? namedArgs['readOnly'] : false, obscureText : namedArgs.containsKey('obscureText') ? namedArgs['obscureText'] : false, autocorrect : namedArgs.containsKey('autocorrect') ? namedArgs['autocorrect'] : true, smartDashesType : namedArgs.containsKey('smartDashesType') ? namedArgs['smartDashesType'] : null, smartQuotesType : namedArgs.containsKey('smartQuotesType') ? namedArgs['smartQuotesType'] : null, enableSuggestions : namedArgs.containsKey('enableSuggestions') ? namedArgs['enableSuggestions'] : true, actionLabel : namedArgs.containsKey('actionLabel') ? namedArgs['actionLabel'] : null, inputAction : namedArgs.containsKey('inputAction') ? namedArgs['inputAction'] : TextInputAction.done, keyboardAppearance : namedArgs.containsKey('keyboardAppearance') ? namedArgs['keyboardAppearance'] : Brightness.light, textCapitalization : namedArgs.containsKey('textCapitalization') ? namedArgs['textCapitalization'] : TextCapitalization.none, autofillConfiguration : namedArgs.containsKey('autofillConfiguration') ? namedArgs['autofillConfiguration'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => TextInputConfiguration(
+            inputType: namedArgs.containsKey('inputType') ? namedArgs['inputType'] : TextInputType.text,
+            readOnly: namedArgs.containsKey('readOnly') ? namedArgs['readOnly'] : false,
+            obscureText: namedArgs.containsKey('obscureText') ? namedArgs['obscureText'] : false,
+            autocorrect: namedArgs.containsKey('autocorrect') ? namedArgs['autocorrect'] : true,
+            smartDashesType: namedArgs.containsKey('smartDashesType') ? namedArgs['smartDashesType'] : null,
+            smartQuotesType: namedArgs.containsKey('smartQuotesType') ? namedArgs['smartQuotesType'] : null,
+            enableSuggestions: namedArgs.containsKey('enableSuggestions') ? namedArgs['enableSuggestions'] : true,
+            actionLabel: namedArgs.containsKey('actionLabel') ? namedArgs['actionLabel'] : null,
+            inputAction: namedArgs.containsKey('inputAction') ? namedArgs['inputAction'] : TextInputAction.done,
+            keyboardAppearance:
+                namedArgs.containsKey('keyboardAppearance') ? namedArgs['keyboardAppearance'] : Brightness.light,
+            textCapitalization:
+                namedArgs.containsKey('textCapitalization') ? namedArgs['textCapitalization'] : TextCapitalization.none,
+            autofillConfiguration:
+                namedArgs.containsKey('autofillConfiguration') ? namedArgs['autofillConfiguration'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -280,9 +288,6 @@ class TextInputConfigurationAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as TextInputConfiguration).htFetch(id);
   }
-
-
-
 }
 
 extension TextInputConfigurationBinding on TextInputConfiguration {
@@ -315,12 +320,11 @@ extension TextInputConfigurationBinding on TextInputConfiguration {
       case 'keyboardAppearance':
         return keyboardAppearance;
       case 'toJson':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toJson();
+        return ({positionalArgs, namedArgs, typeArgs}) => toJson();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class RawFloatingCursorPointAutoBinding extends HTExternalClass {
@@ -330,7 +334,8 @@ class RawFloatingCursorPointAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'RawFloatingCursorPoint':
-        return ({positionalArgs, namedArgs, typeArgs}) => RawFloatingCursorPoint(offset : namedArgs.containsKey('offset') ? namedArgs['offset'] : null, state : namedArgs['state']);
+        return ({positionalArgs, namedArgs, typeArgs}) => RawFloatingCursorPoint(
+            offset: namedArgs.containsKey('offset') ? namedArgs['offset'] : null, state: namedArgs['state']);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -340,9 +345,6 @@ class RawFloatingCursorPointAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as RawFloatingCursorPoint).htFetch(id);
   }
-
-
-
 }
 
 extension RawFloatingCursorPointBinding on RawFloatingCursorPoint {
@@ -358,7 +360,6 @@ extension RawFloatingCursorPointBinding on RawFloatingCursorPoint {
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class TextEditingValueAutoBinding extends HTExternalClass {
@@ -368,7 +369,11 @@ class TextEditingValueAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'TextEditingValue':
-        return ({positionalArgs, namedArgs, typeArgs}) => TextEditingValue(text : namedArgs.containsKey('text') ? namedArgs['text'] : '', selection : namedArgs.containsKey('selection') ? namedArgs['selection'] : const TextSelection.collapsed(offset: -1), composing : namedArgs.containsKey('composing') ? namedArgs['composing'] : TextRange.empty);
+        return ({positionalArgs, namedArgs, typeArgs}) => TextEditingValue(
+            text: namedArgs.containsKey('text') ? namedArgs['text'] : '',
+            selection:
+                namedArgs.containsKey('selection') ? namedArgs['selection'] : const TextSelection.collapsed(offset: -1),
+            composing: namedArgs.containsKey('composing') ? namedArgs['composing'] : TextRange.empty);
       case 'TextEditingValue.fromJSON':
         return ({positionalArgs, namedArgs, typeArgs}) => TextEditingValue.fromJSON(positionalArgs[0]);
       case 'TextEditingValue.empty':
@@ -382,9 +387,6 @@ class TextEditingValueAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as TextEditingValue).htFetch(id);
   }
-
-
-
 }
 
 extension TextEditingValueBinding on TextEditingValue {
@@ -403,16 +405,18 @@ extension TextEditingValueBinding on TextEditingValue {
       case 'hashCode':
         return hashCode;
       case 'toJSON':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toJSON();
+        return ({positionalArgs, namedArgs, typeArgs}) => toJSON();
       case 'copyWith':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.copyWith(text : namedArgs.containsKey('text') ? namedArgs['text'] : null, selection : namedArgs.containsKey('selection') ? namedArgs['selection'] : null, composing : namedArgs.containsKey('composing') ? namedArgs['composing'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => copyWith(
+            text: namedArgs.containsKey('text') ? namedArgs['text'] : null,
+            selection: namedArgs.containsKey('selection') ? namedArgs['selection'] : null,
+            composing: namedArgs.containsKey('composing') ? namedArgs['composing'] : null);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class TextInputAutoBinding extends HTExternalClass {
@@ -424,15 +428,10 @@ class TextInputAutoBinding extends HTExternalClass {
       case 'TextInput.attach':
         return ({positionalArgs, namedArgs, typeArgs}) => TextInput.attach(positionalArgs[0], positionalArgs[1]);
       case 'TextInput.finishAutofillContext':
-        return ({positionalArgs, namedArgs, typeArgs}) => TextInput.finishAutofillContext(shouldSave : namedArgs.containsKey('shouldSave') ? namedArgs['shouldSave'] : true);
+        return ({positionalArgs, namedArgs, typeArgs}) => TextInput.finishAutofillContext(
+            shouldSave: namedArgs.containsKey('shouldSave') ? namedArgs['shouldSave'] : true);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
-
-
-
 }
-
-

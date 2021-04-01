@@ -1,0 +1,30 @@
+external class CheckboxListTile {
+    construct 
+    get value
+    get onChanged
+    get activeColor
+    get checkColor
+    get tileColor
+    get title
+    get subtitle
+    get secondary
+    get isThreeLine
+    get dense
+    get selected
+    get controlAffinity
+    get autofocus
+    get contentPadding
+    get tristate
+    get shape
+    get selectedTileColor
+    get key
+    fun build
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}

@@ -1,8 +1,5 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/foundation.dart';
-import 'dart:ui';
-import 'package:meta/meta.dart';
-
 
 class StackFrameAutoBinding extends HTExternalClass {
   StackFrameAutoBinding() : super('StackFrame');
@@ -11,7 +8,17 @@ class StackFrameAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'StackFrame':
-        return ({positionalArgs, namedArgs, typeArgs}) => StackFrame(number : namedArgs['number'], column : namedArgs['column'], line : namedArgs['line'], packageScheme : namedArgs['packageScheme'], package : namedArgs['package'], packagePath : namedArgs['packagePath'], className : namedArgs.containsKey('className') ? namedArgs['className'] : '', method : namedArgs['method'], isConstructor : namedArgs.containsKey('isConstructor') ? namedArgs['isConstructor'] : false, source : namedArgs['source']);
+        return ({positionalArgs, namedArgs, typeArgs}) => StackFrame(
+            number: namedArgs['number'],
+            column: namedArgs['column'],
+            line: namedArgs['line'],
+            packageScheme: namedArgs['packageScheme'],
+            package: namedArgs['package'],
+            packagePath: namedArgs['packagePath'],
+            className: namedArgs.containsKey('className') ? namedArgs['className'] : '',
+            method: namedArgs['method'],
+            isConstructor: namedArgs.containsKey('isConstructor') ? namedArgs['isConstructor'] : false,
+            source: namedArgs['source']);
       case 'StackFrame.fromStackTrace':
         return ({positionalArgs, namedArgs, typeArgs}) => StackFrame.fromStackTrace(positionalArgs[0]);
       case 'StackFrame.fromStackString':
@@ -31,9 +38,6 @@ class StackFrameAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as StackFrame).htFetch(id);
   }
-
-
-
 }
 
 extension StackFrameBinding on StackFrame {
@@ -64,11 +68,9 @@ extension StackFrameBinding on StackFrame {
       case 'hashCode':
         return hashCode;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
-

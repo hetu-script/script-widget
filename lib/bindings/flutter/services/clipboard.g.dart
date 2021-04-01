@@ -1,7 +1,5 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter/foundation.dart';
-
 
 class ClipboardDataAutoBinding extends HTExternalClass {
   ClipboardDataAutoBinding() : super('ClipboardData');
@@ -10,7 +8,8 @@ class ClipboardDataAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'ClipboardData':
-        return ({positionalArgs, namedArgs, typeArgs}) => ClipboardData(text : namedArgs.containsKey('text') ? namedArgs['text'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            ClipboardData(text: namedArgs.containsKey('text') ? namedArgs['text'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -20,9 +19,6 @@ class ClipboardDataAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as ClipboardData).htFetch(id);
   }
-
-
-
 }
 
 extension ClipboardDataBinding on ClipboardData {
@@ -36,7 +32,6 @@ extension ClipboardDataBinding on ClipboardData {
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class ClipboardAutoBinding extends HTExternalClass {
@@ -55,10 +50,4 @@ class ClipboardAutoBinding extends HTExternalClass {
         throw HTErrorUndefined(varName);
     }
   }
-
-
-
-
 }
-
-

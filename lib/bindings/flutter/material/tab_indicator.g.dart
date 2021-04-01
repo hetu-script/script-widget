@@ -2,7 +2,6 @@ import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
-
 class UnderlineTabIndicatorAutoBinding extends HTExternalClass {
   UnderlineTabIndicatorAutoBinding() : super('UnderlineTabIndicator');
 
@@ -10,7 +9,11 @@ class UnderlineTabIndicatorAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'UnderlineTabIndicator':
-        return ({positionalArgs, namedArgs, typeArgs}) => UnderlineTabIndicator(borderSide : namedArgs.containsKey('borderSide') ? namedArgs['borderSide'] : const BorderSide(width: 2.0, color: Colors.white), insets : namedArgs.containsKey('insets') ? namedArgs['insets'] : EdgeInsets.zero);
+        return ({positionalArgs, namedArgs, typeArgs}) => UnderlineTabIndicator(
+            borderSide: namedArgs.containsKey('borderSide')
+                ? namedArgs['borderSide']
+                : const BorderSide(width: 2.0, color: Colors.white),
+            insets: namedArgs.containsKey('insets') ? namedArgs['insets'] : EdgeInsets.zero);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -21,13 +24,11 @@ class UnderlineTabIndicatorAutoBinding extends HTExternalClass {
     return (instance as UnderlineTabIndicator).htFetch(id);
   }
 
-
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
       'VoidCallback': (HTFunction function) => () => function.call(positionalArgs: const [], namedArgs: const {}),
     };
   }
-
 }
 
 extension UnderlineTabIndicatorBinding on UnderlineTabIndicator {
@@ -44,23 +45,30 @@ extension UnderlineTabIndicatorBinding on UnderlineTabIndicator {
       case 'isComplex':
         return isComplex;
       case 'lerpFrom':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.lerpFrom(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => lerpFrom(positionalArgs[0], positionalArgs[1]);
       case 'lerpTo':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.lerpTo(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => lerpTo(positionalArgs[0], positionalArgs[1]);
       case 'createBoxPainter':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.createBoxPainter(positionalArgs.length > 0 ? positionalArgs[0] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            createBoxPainter(positionalArgs.length > 0 ? positionalArgs[0] : null);
       case 'getClipPath':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.getClipPath(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => getClipPath(positionalArgs[0], positionalArgs[1]);
       case 'toStringShort':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toStringShort();
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'debugAssertIsValid':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugAssertIsValid();
+        return ({positionalArgs, namedArgs, typeArgs}) => debugAssertIsValid();
       case 'hitTest':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.hitTest(positionalArgs[0], positionalArgs[1], textDirection : namedArgs.containsKey('textDirection') ? namedArgs['textDirection'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => hitTest(positionalArgs[0], positionalArgs[1],
+            textDirection: namedArgs.containsKey('textDirection') ? namedArgs['textDirection'] : null);
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
-

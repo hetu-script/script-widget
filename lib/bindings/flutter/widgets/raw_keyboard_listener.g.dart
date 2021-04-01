@@ -1,8 +1,6 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter/foundation.dart';
-import 'package:flutter/services.dart';
-
 
 class RawKeyboardListenerAutoBinding extends HTExternalClass {
   RawKeyboardListenerAutoBinding() : super('RawKeyboardListener');
@@ -11,7 +9,13 @@ class RawKeyboardListenerAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'RawKeyboardListener':
-        return ({positionalArgs, namedArgs, typeArgs}) => RawKeyboardListener(key : namedArgs.containsKey('key') ? namedArgs['key'] : null, focusNode : namedArgs['focusNode'], autofocus : namedArgs.containsKey('autofocus') ? namedArgs['autofocus'] : false, includeSemantics : namedArgs.containsKey('includeSemantics') ? namedArgs['includeSemantics'] : true, onKey : namedArgs.containsKey('onKey') ? namedArgs['onKey'] : null, child : namedArgs['child']);
+        return ({positionalArgs, namedArgs, typeArgs}) => RawKeyboardListener(
+            key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
+            focusNode: namedArgs['focusNode'],
+            autofocus: namedArgs.containsKey('autofocus') ? namedArgs['autofocus'] : false,
+            includeSemantics: namedArgs.containsKey('includeSemantics') ? namedArgs['includeSemantics'] : true,
+            onKey: namedArgs.containsKey('onKey') ? namedArgs['onKey'] : null,
+            child: namedArgs['child']);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -21,9 +25,6 @@ class RawKeyboardListenerAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as RawKeyboardListener).htFetch(id);
   }
-
-
-
 }
 
 extension RawKeyboardListenerBinding on RawKeyboardListener {
@@ -41,14 +42,36 @@ extension RawKeyboardListenerBinding on RawKeyboardListener {
         return onKey;
       case 'child':
         return child;
+      case 'key':
+        return key;
+      case 'hashCode':
+        return hashCode;
       case 'createState':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.createState();
+        return ({positionalArgs, namedArgs, typeArgs}) => createState();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+      case 'createElement':
+        return ({positionalArgs, namedArgs, typeArgs}) => createElement();
+      case 'toStringShort':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'toStringShallow':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
+            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toStringDeep':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
+            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
-

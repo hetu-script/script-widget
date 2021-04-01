@@ -1,0 +1,19 @@
+external class SizeChangedLayoutNotification {
+    construct
+    fun dispatch
+    fun toString
+}
+external class SizeChangedLayoutNotifier {
+    construct 
+    get child
+    get key
+    fun createRenderObject
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}

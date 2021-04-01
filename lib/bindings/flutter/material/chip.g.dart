@@ -1,11 +1,8 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/material.dart';
-import 'dart:math'as math;
-import 'package:flutter/gestures.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
-
 
 class ChipAutoBinding extends HTExternalClass {
   ChipAutoBinding() : super('Chip');
@@ -14,7 +11,31 @@ class ChipAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'Chip':
-        return ({positionalArgs, namedArgs, typeArgs}) => Chip(key : namedArgs.containsKey('key') ? namedArgs['key'] : null, avatar : namedArgs.containsKey('avatar') ? namedArgs['avatar'] : null, label : namedArgs['label'], labelStyle : namedArgs.containsKey('labelStyle') ? namedArgs['labelStyle'] : null, labelPadding : namedArgs.containsKey('labelPadding') ? namedArgs['labelPadding'] : null, deleteIcon : namedArgs.containsKey('deleteIcon') ? namedArgs['deleteIcon'] : null, onDeleted : namedArgs.containsKey('onDeleted') ? namedArgs['onDeleted'] : null, deleteIconColor : namedArgs.containsKey('deleteIconColor') ? namedArgs['deleteIconColor'] : null, useDeleteButtonTooltip : namedArgs.containsKey('useDeleteButtonTooltip') ? namedArgs['useDeleteButtonTooltip'] : true, deleteButtonTooltipMessage : namedArgs.containsKey('deleteButtonTooltipMessage') ? namedArgs['deleteButtonTooltipMessage'] : null, side : namedArgs.containsKey('side') ? namedArgs['side'] : null, shape : namedArgs.containsKey('shape') ? namedArgs['shape'] : null, clipBehavior : namedArgs.containsKey('clipBehavior') ? namedArgs['clipBehavior'] : Clip.none, focusNode : namedArgs.containsKey('focusNode') ? namedArgs['focusNode'] : null, autofocus : namedArgs.containsKey('autofocus') ? namedArgs['autofocus'] : false, backgroundColor : namedArgs.containsKey('backgroundColor') ? namedArgs['backgroundColor'] : null, padding : namedArgs.containsKey('padding') ? namedArgs['padding'] : null, visualDensity : namedArgs.containsKey('visualDensity') ? namedArgs['visualDensity'] : null, materialTapTargetSize : namedArgs.containsKey('materialTapTargetSize') ? namedArgs['materialTapTargetSize'] : null, elevation : namedArgs.containsKey('elevation') ? namedArgs['elevation'] : null, shadowColor : namedArgs.containsKey('shadowColor') ? namedArgs['shadowColor'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => Chip(
+            key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
+            avatar: namedArgs.containsKey('avatar') ? namedArgs['avatar'] : null,
+            label: namedArgs['label'],
+            labelStyle: namedArgs.containsKey('labelStyle') ? namedArgs['labelStyle'] : null,
+            labelPadding: namedArgs.containsKey('labelPadding') ? namedArgs['labelPadding'] : null,
+            deleteIcon: namedArgs.containsKey('deleteIcon') ? namedArgs['deleteIcon'] : null,
+            onDeleted: namedArgs.containsKey('onDeleted') ? namedArgs['onDeleted'] : null,
+            deleteIconColor: namedArgs.containsKey('deleteIconColor') ? namedArgs['deleteIconColor'] : null,
+            useDeleteButtonTooltip:
+                namedArgs.containsKey('useDeleteButtonTooltip') ? namedArgs['useDeleteButtonTooltip'] : true,
+            deleteButtonTooltipMessage:
+                namedArgs.containsKey('deleteButtonTooltipMessage') ? namedArgs['deleteButtonTooltipMessage'] : null,
+            side: namedArgs.containsKey('side') ? namedArgs['side'] : null,
+            shape: namedArgs.containsKey('shape') ? namedArgs['shape'] : null,
+            clipBehavior: namedArgs.containsKey('clipBehavior') ? namedArgs['clipBehavior'] : Clip.none,
+            focusNode: namedArgs.containsKey('focusNode') ? namedArgs['focusNode'] : null,
+            autofocus: namedArgs.containsKey('autofocus') ? namedArgs['autofocus'] : false,
+            backgroundColor: namedArgs.containsKey('backgroundColor') ? namedArgs['backgroundColor'] : null,
+            padding: namedArgs.containsKey('padding') ? namedArgs['padding'] : null,
+            visualDensity: namedArgs.containsKey('visualDensity') ? namedArgs['visualDensity'] : null,
+            materialTapTargetSize:
+                namedArgs.containsKey('materialTapTargetSize') ? namedArgs['materialTapTargetSize'] : null,
+            elevation: namedArgs.containsKey('elevation') ? namedArgs['elevation'] : null,
+            shadowColor: namedArgs.containsKey('shadowColor') ? namedArgs['shadowColor'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -25,13 +46,11 @@ class ChipAutoBinding extends HTExternalClass {
     return (instance as Chip).htFetch(id);
   }
 
-
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
       'VoidCallback': (HTFunction function) => () => function.call(positionalArgs: const [], namedArgs: const {}),
     };
   }
-
 }
 
 extension ChipBinding on Chip {
@@ -79,13 +98,38 @@ extension ChipBinding on Chip {
         return elevation;
       case 'shadowColor':
         return shadowColor;
+      case 'key':
+        return key;
+      case 'hashCode':
+        return hashCode;
       case 'build':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.build(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => build(positionalArgs[0]);
+      case 'createElement':
+        return ({positionalArgs, namedArgs, typeArgs}) => createElement();
+      case 'toStringShort':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'debugFillProperties':
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+      case 'toStringShallow':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
+            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toStringDeep':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
+            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class InputChipAutoBinding extends HTExternalClass {
@@ -95,7 +139,43 @@ class InputChipAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'InputChip':
-        return ({positionalArgs, namedArgs, typeArgs}) => InputChip(key : namedArgs.containsKey('key') ? namedArgs['key'] : null, avatar : namedArgs.containsKey('avatar') ? namedArgs['avatar'] : null, label : namedArgs['label'], labelStyle : namedArgs.containsKey('labelStyle') ? namedArgs['labelStyle'] : null, labelPadding : namedArgs.containsKey('labelPadding') ? namedArgs['labelPadding'] : null, selected : namedArgs.containsKey('selected') ? namedArgs['selected'] : false, isEnabled : namedArgs.containsKey('isEnabled') ? namedArgs['isEnabled'] : true, onSelected : namedArgs.containsKey('onSelected') ? namedArgs['onSelected'] : null, deleteIcon : namedArgs.containsKey('deleteIcon') ? namedArgs['deleteIcon'] : null, onDeleted : namedArgs.containsKey('onDeleted') ? namedArgs['onDeleted'] : null, deleteIconColor : namedArgs.containsKey('deleteIconColor') ? namedArgs['deleteIconColor'] : null, useDeleteButtonTooltip : namedArgs.containsKey('useDeleteButtonTooltip') ? namedArgs['useDeleteButtonTooltip'] : true, deleteButtonTooltipMessage : namedArgs.containsKey('deleteButtonTooltipMessage') ? namedArgs['deleteButtonTooltipMessage'] : null, onPressed : namedArgs.containsKey('onPressed') ? namedArgs['onPressed'] : null, pressElevation : namedArgs.containsKey('pressElevation') ? namedArgs['pressElevation'] : null, disabledColor : namedArgs.containsKey('disabledColor') ? namedArgs['disabledColor'] : null, selectedColor : namedArgs.containsKey('selectedColor') ? namedArgs['selectedColor'] : null, tooltip : namedArgs.containsKey('tooltip') ? namedArgs['tooltip'] : null, side : namedArgs.containsKey('side') ? namedArgs['side'] : null, shape : namedArgs.containsKey('shape') ? namedArgs['shape'] : null, clipBehavior : namedArgs.containsKey('clipBehavior') ? namedArgs['clipBehavior'] : Clip.none, focusNode : namedArgs.containsKey('focusNode') ? namedArgs['focusNode'] : null, autofocus : namedArgs.containsKey('autofocus') ? namedArgs['autofocus'] : false, backgroundColor : namedArgs.containsKey('backgroundColor') ? namedArgs['backgroundColor'] : null, padding : namedArgs.containsKey('padding') ? namedArgs['padding'] : null, visualDensity : namedArgs.containsKey('visualDensity') ? namedArgs['visualDensity'] : null, materialTapTargetSize : namedArgs.containsKey('materialTapTargetSize') ? namedArgs['materialTapTargetSize'] : null, elevation : namedArgs.containsKey('elevation') ? namedArgs['elevation'] : null, shadowColor : namedArgs.containsKey('shadowColor') ? namedArgs['shadowColor'] : null, selectedShadowColor : namedArgs.containsKey('selectedShadowColor') ? namedArgs['selectedShadowColor'] : null, showCheckmark : namedArgs.containsKey('showCheckmark') ? namedArgs['showCheckmark'] : null, checkmarkColor : namedArgs.containsKey('checkmarkColor') ? namedArgs['checkmarkColor'] : null, avatarBorder : namedArgs.containsKey('avatarBorder') ? namedArgs['avatarBorder'] : const CircleBorder());
+        return ({positionalArgs, namedArgs, typeArgs}) => InputChip(
+            key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
+            avatar: namedArgs.containsKey('avatar') ? namedArgs['avatar'] : null,
+            label: namedArgs['label'],
+            labelStyle: namedArgs.containsKey('labelStyle') ? namedArgs['labelStyle'] : null,
+            labelPadding: namedArgs.containsKey('labelPadding') ? namedArgs['labelPadding'] : null,
+            selected: namedArgs.containsKey('selected') ? namedArgs['selected'] : false,
+            isEnabled: namedArgs.containsKey('isEnabled') ? namedArgs['isEnabled'] : true,
+            onSelected: namedArgs.containsKey('onSelected') ? namedArgs['onSelected'] : null,
+            deleteIcon: namedArgs.containsKey('deleteIcon') ? namedArgs['deleteIcon'] : null,
+            onDeleted: namedArgs.containsKey('onDeleted') ? namedArgs['onDeleted'] : null,
+            deleteIconColor: namedArgs.containsKey('deleteIconColor') ? namedArgs['deleteIconColor'] : null,
+            useDeleteButtonTooltip:
+                namedArgs.containsKey('useDeleteButtonTooltip') ? namedArgs['useDeleteButtonTooltip'] : true,
+            deleteButtonTooltipMessage:
+                namedArgs.containsKey('deleteButtonTooltipMessage') ? namedArgs['deleteButtonTooltipMessage'] : null,
+            onPressed: namedArgs.containsKey('onPressed') ? namedArgs['onPressed'] : null,
+            pressElevation: namedArgs.containsKey('pressElevation') ? namedArgs['pressElevation'] : null,
+            disabledColor: namedArgs.containsKey('disabledColor') ? namedArgs['disabledColor'] : null,
+            selectedColor: namedArgs.containsKey('selectedColor') ? namedArgs['selectedColor'] : null,
+            tooltip: namedArgs.containsKey('tooltip') ? namedArgs['tooltip'] : null,
+            side: namedArgs.containsKey('side') ? namedArgs['side'] : null,
+            shape: namedArgs.containsKey('shape') ? namedArgs['shape'] : null,
+            clipBehavior: namedArgs.containsKey('clipBehavior') ? namedArgs['clipBehavior'] : Clip.none,
+            focusNode: namedArgs.containsKey('focusNode') ? namedArgs['focusNode'] : null,
+            autofocus: namedArgs.containsKey('autofocus') ? namedArgs['autofocus'] : false,
+            backgroundColor: namedArgs.containsKey('backgroundColor') ? namedArgs['backgroundColor'] : null,
+            padding: namedArgs.containsKey('padding') ? namedArgs['padding'] : null,
+            visualDensity: namedArgs.containsKey('visualDensity') ? namedArgs['visualDensity'] : null,
+            materialTapTargetSize:
+                namedArgs.containsKey('materialTapTargetSize') ? namedArgs['materialTapTargetSize'] : null,
+            elevation: namedArgs.containsKey('elevation') ? namedArgs['elevation'] : null,
+            shadowColor: namedArgs.containsKey('shadowColor') ? namedArgs['shadowColor'] : null,
+            selectedShadowColor: namedArgs.containsKey('selectedShadowColor') ? namedArgs['selectedShadowColor'] : null,
+            showCheckmark: namedArgs.containsKey('showCheckmark') ? namedArgs['showCheckmark'] : null,
+            checkmarkColor: namedArgs.containsKey('checkmarkColor') ? namedArgs['checkmarkColor'] : null,
+            avatarBorder: namedArgs.containsKey('avatarBorder') ? namedArgs['avatarBorder'] : const CircleBorder());
       default:
         throw HTErrorUndefined(varName);
     }
@@ -106,13 +186,11 @@ class InputChipAutoBinding extends HTExternalClass {
     return (instance as InputChip).htFetch(id);
   }
 
-
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
       'VoidCallback': (HTFunction function) => () => function.call(positionalArgs: const [], namedArgs: const {}),
     };
   }
-
 }
 
 extension InputChipBinding on InputChip {
@@ -184,13 +262,38 @@ extension InputChipBinding on InputChip {
         return checkmarkColor;
       case 'avatarBorder':
         return avatarBorder;
+      case 'key':
+        return key;
+      case 'hashCode':
+        return hashCode;
       case 'build':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.build(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => build(positionalArgs[0]);
+      case 'createElement':
+        return ({positionalArgs, namedArgs, typeArgs}) => createElement();
+      case 'toStringShort':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'debugFillProperties':
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+      case 'toStringShallow':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
+            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toStringDeep':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
+            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class ChoiceChipAutoBinding extends HTExternalClass {
@@ -200,7 +303,32 @@ class ChoiceChipAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'ChoiceChip':
-        return ({positionalArgs, namedArgs, typeArgs}) => ChoiceChip(key : namedArgs.containsKey('key') ? namedArgs['key'] : null, avatar : namedArgs.containsKey('avatar') ? namedArgs['avatar'] : null, label : namedArgs['label'], labelStyle : namedArgs.containsKey('labelStyle') ? namedArgs['labelStyle'] : null, labelPadding : namedArgs.containsKey('labelPadding') ? namedArgs['labelPadding'] : null, onSelected : namedArgs.containsKey('onSelected') ? namedArgs['onSelected'] : null, pressElevation : namedArgs.containsKey('pressElevation') ? namedArgs['pressElevation'] : null, selected : namedArgs['selected'], selectedColor : namedArgs.containsKey('selectedColor') ? namedArgs['selectedColor'] : null, disabledColor : namedArgs.containsKey('disabledColor') ? namedArgs['disabledColor'] : null, tooltip : namedArgs.containsKey('tooltip') ? namedArgs['tooltip'] : null, side : namedArgs.containsKey('side') ? namedArgs['side'] : null, shape : namedArgs.containsKey('shape') ? namedArgs['shape'] : null, clipBehavior : namedArgs.containsKey('clipBehavior') ? namedArgs['clipBehavior'] : Clip.none, focusNode : namedArgs.containsKey('focusNode') ? namedArgs['focusNode'] : null, autofocus : namedArgs.containsKey('autofocus') ? namedArgs['autofocus'] : false, backgroundColor : namedArgs.containsKey('backgroundColor') ? namedArgs['backgroundColor'] : null, padding : namedArgs.containsKey('padding') ? namedArgs['padding'] : null, visualDensity : namedArgs.containsKey('visualDensity') ? namedArgs['visualDensity'] : null, materialTapTargetSize : namedArgs.containsKey('materialTapTargetSize') ? namedArgs['materialTapTargetSize'] : null, elevation : namedArgs.containsKey('elevation') ? namedArgs['elevation'] : null, shadowColor : namedArgs.containsKey('shadowColor') ? namedArgs['shadowColor'] : null, selectedShadowColor : namedArgs.containsKey('selectedShadowColor') ? namedArgs['selectedShadowColor'] : null, avatarBorder : namedArgs.containsKey('avatarBorder') ? namedArgs['avatarBorder'] : const CircleBorder());
+        return ({positionalArgs, namedArgs, typeArgs}) => ChoiceChip(
+            key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
+            avatar: namedArgs.containsKey('avatar') ? namedArgs['avatar'] : null,
+            label: namedArgs['label'],
+            labelStyle: namedArgs.containsKey('labelStyle') ? namedArgs['labelStyle'] : null,
+            labelPadding: namedArgs.containsKey('labelPadding') ? namedArgs['labelPadding'] : null,
+            onSelected: namedArgs.containsKey('onSelected') ? namedArgs['onSelected'] : null,
+            pressElevation: namedArgs.containsKey('pressElevation') ? namedArgs['pressElevation'] : null,
+            selected: namedArgs['selected'],
+            selectedColor: namedArgs.containsKey('selectedColor') ? namedArgs['selectedColor'] : null,
+            disabledColor: namedArgs.containsKey('disabledColor') ? namedArgs['disabledColor'] : null,
+            tooltip: namedArgs.containsKey('tooltip') ? namedArgs['tooltip'] : null,
+            side: namedArgs.containsKey('side') ? namedArgs['side'] : null,
+            shape: namedArgs.containsKey('shape') ? namedArgs['shape'] : null,
+            clipBehavior: namedArgs.containsKey('clipBehavior') ? namedArgs['clipBehavior'] : Clip.none,
+            focusNode: namedArgs.containsKey('focusNode') ? namedArgs['focusNode'] : null,
+            autofocus: namedArgs.containsKey('autofocus') ? namedArgs['autofocus'] : false,
+            backgroundColor: namedArgs.containsKey('backgroundColor') ? namedArgs['backgroundColor'] : null,
+            padding: namedArgs.containsKey('padding') ? namedArgs['padding'] : null,
+            visualDensity: namedArgs.containsKey('visualDensity') ? namedArgs['visualDensity'] : null,
+            materialTapTargetSize:
+                namedArgs.containsKey('materialTapTargetSize') ? namedArgs['materialTapTargetSize'] : null,
+            elevation: namedArgs.containsKey('elevation') ? namedArgs['elevation'] : null,
+            shadowColor: namedArgs.containsKey('shadowColor') ? namedArgs['shadowColor'] : null,
+            selectedShadowColor: namedArgs.containsKey('selectedShadowColor') ? namedArgs['selectedShadowColor'] : null,
+            avatarBorder: namedArgs.containsKey('avatarBorder') ? namedArgs['avatarBorder'] : const CircleBorder());
       default:
         throw HTErrorUndefined(varName);
     }
@@ -210,9 +338,6 @@ class ChoiceChipAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as ChoiceChip).htFetch(id);
   }
-
-
-
 }
 
 extension ChoiceChipBinding on ChoiceChip {
@@ -266,15 +391,40 @@ extension ChoiceChipBinding on ChoiceChip {
         return selectedShadowColor;
       case 'avatarBorder':
         return avatarBorder;
+      case 'key':
+        return key;
       case 'isEnabled':
         return isEnabled;
+      case 'hashCode':
+        return hashCode;
       case 'build':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.build(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => build(positionalArgs[0]);
+      case 'createElement':
+        return ({positionalArgs, namedArgs, typeArgs}) => createElement();
+      case 'toStringShort':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'debugFillProperties':
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+      case 'toStringShallow':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
+            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toStringDeep':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
+            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class FilterChipAutoBinding extends HTExternalClass {
@@ -284,7 +434,34 @@ class FilterChipAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'FilterChip':
-        return ({positionalArgs, namedArgs, typeArgs}) => FilterChip(key : namedArgs.containsKey('key') ? namedArgs['key'] : null, avatar : namedArgs.containsKey('avatar') ? namedArgs['avatar'] : null, label : namedArgs['label'], labelStyle : namedArgs.containsKey('labelStyle') ? namedArgs['labelStyle'] : null, labelPadding : namedArgs.containsKey('labelPadding') ? namedArgs['labelPadding'] : null, selected : namedArgs.containsKey('selected') ? namedArgs['selected'] : false, onSelected : namedArgs['onSelected'], pressElevation : namedArgs.containsKey('pressElevation') ? namedArgs['pressElevation'] : null, disabledColor : namedArgs.containsKey('disabledColor') ? namedArgs['disabledColor'] : null, selectedColor : namedArgs.containsKey('selectedColor') ? namedArgs['selectedColor'] : null, tooltip : namedArgs.containsKey('tooltip') ? namedArgs['tooltip'] : null, side : namedArgs.containsKey('side') ? namedArgs['side'] : null, shape : namedArgs.containsKey('shape') ? namedArgs['shape'] : null, clipBehavior : namedArgs.containsKey('clipBehavior') ? namedArgs['clipBehavior'] : Clip.none, focusNode : namedArgs.containsKey('focusNode') ? namedArgs['focusNode'] : null, autofocus : namedArgs.containsKey('autofocus') ? namedArgs['autofocus'] : false, backgroundColor : namedArgs.containsKey('backgroundColor') ? namedArgs['backgroundColor'] : null, padding : namedArgs.containsKey('padding') ? namedArgs['padding'] : null, visualDensity : namedArgs.containsKey('visualDensity') ? namedArgs['visualDensity'] : null, materialTapTargetSize : namedArgs.containsKey('materialTapTargetSize') ? namedArgs['materialTapTargetSize'] : null, elevation : namedArgs.containsKey('elevation') ? namedArgs['elevation'] : null, shadowColor : namedArgs.containsKey('shadowColor') ? namedArgs['shadowColor'] : null, selectedShadowColor : namedArgs.containsKey('selectedShadowColor') ? namedArgs['selectedShadowColor'] : null, showCheckmark : namedArgs.containsKey('showCheckmark') ? namedArgs['showCheckmark'] : null, checkmarkColor : namedArgs.containsKey('checkmarkColor') ? namedArgs['checkmarkColor'] : null, avatarBorder : namedArgs.containsKey('avatarBorder') ? namedArgs['avatarBorder'] : const CircleBorder());
+        return ({positionalArgs, namedArgs, typeArgs}) => FilterChip(
+            key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
+            avatar: namedArgs.containsKey('avatar') ? namedArgs['avatar'] : null,
+            label: namedArgs['label'],
+            labelStyle: namedArgs.containsKey('labelStyle') ? namedArgs['labelStyle'] : null,
+            labelPadding: namedArgs.containsKey('labelPadding') ? namedArgs['labelPadding'] : null,
+            selected: namedArgs.containsKey('selected') ? namedArgs['selected'] : false,
+            onSelected: namedArgs['onSelected'],
+            pressElevation: namedArgs.containsKey('pressElevation') ? namedArgs['pressElevation'] : null,
+            disabledColor: namedArgs.containsKey('disabledColor') ? namedArgs['disabledColor'] : null,
+            selectedColor: namedArgs.containsKey('selectedColor') ? namedArgs['selectedColor'] : null,
+            tooltip: namedArgs.containsKey('tooltip') ? namedArgs['tooltip'] : null,
+            side: namedArgs.containsKey('side') ? namedArgs['side'] : null,
+            shape: namedArgs.containsKey('shape') ? namedArgs['shape'] : null,
+            clipBehavior: namedArgs.containsKey('clipBehavior') ? namedArgs['clipBehavior'] : Clip.none,
+            focusNode: namedArgs.containsKey('focusNode') ? namedArgs['focusNode'] : null,
+            autofocus: namedArgs.containsKey('autofocus') ? namedArgs['autofocus'] : false,
+            backgroundColor: namedArgs.containsKey('backgroundColor') ? namedArgs['backgroundColor'] : null,
+            padding: namedArgs.containsKey('padding') ? namedArgs['padding'] : null,
+            visualDensity: namedArgs.containsKey('visualDensity') ? namedArgs['visualDensity'] : null,
+            materialTapTargetSize:
+                namedArgs.containsKey('materialTapTargetSize') ? namedArgs['materialTapTargetSize'] : null,
+            elevation: namedArgs.containsKey('elevation') ? namedArgs['elevation'] : null,
+            shadowColor: namedArgs.containsKey('shadowColor') ? namedArgs['shadowColor'] : null,
+            selectedShadowColor: namedArgs.containsKey('selectedShadowColor') ? namedArgs['selectedShadowColor'] : null,
+            showCheckmark: namedArgs.containsKey('showCheckmark') ? namedArgs['showCheckmark'] : null,
+            checkmarkColor: namedArgs.containsKey('checkmarkColor') ? namedArgs['checkmarkColor'] : null,
+            avatarBorder: namedArgs.containsKey('avatarBorder') ? namedArgs['avatarBorder'] : const CircleBorder());
       default:
         throw HTErrorUndefined(varName);
     }
@@ -294,9 +471,6 @@ class FilterChipAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as FilterChip).htFetch(id);
   }
-
-
-
 }
 
 extension FilterChipBinding on FilterChip {
@@ -354,15 +528,40 @@ extension FilterChipBinding on FilterChip {
         return checkmarkColor;
       case 'avatarBorder':
         return avatarBorder;
+      case 'key':
+        return key;
       case 'isEnabled':
         return isEnabled;
+      case 'hashCode':
+        return hashCode;
       case 'build':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.build(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => build(positionalArgs[0]);
+      case 'createElement':
+        return ({positionalArgs, namedArgs, typeArgs}) => createElement();
+      case 'toStringShort':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'debugFillProperties':
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+      case 'toStringShallow':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
+            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toStringDeep':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
+            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class ActionChipAutoBinding extends HTExternalClass {
@@ -372,7 +571,27 @@ class ActionChipAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'ActionChip':
-        return ({positionalArgs, namedArgs, typeArgs}) => ActionChip(key : namedArgs.containsKey('key') ? namedArgs['key'] : null, avatar : namedArgs.containsKey('avatar') ? namedArgs['avatar'] : null, label : namedArgs['label'], labelStyle : namedArgs.containsKey('labelStyle') ? namedArgs['labelStyle'] : null, labelPadding : namedArgs.containsKey('labelPadding') ? namedArgs['labelPadding'] : null, onPressed : namedArgs['onPressed'], pressElevation : namedArgs.containsKey('pressElevation') ? namedArgs['pressElevation'] : null, tooltip : namedArgs.containsKey('tooltip') ? namedArgs['tooltip'] : null, side : namedArgs.containsKey('side') ? namedArgs['side'] : null, shape : namedArgs.containsKey('shape') ? namedArgs['shape'] : null, clipBehavior : namedArgs.containsKey('clipBehavior') ? namedArgs['clipBehavior'] : Clip.none, focusNode : namedArgs.containsKey('focusNode') ? namedArgs['focusNode'] : null, autofocus : namedArgs.containsKey('autofocus') ? namedArgs['autofocus'] : false, backgroundColor : namedArgs.containsKey('backgroundColor') ? namedArgs['backgroundColor'] : null, padding : namedArgs.containsKey('padding') ? namedArgs['padding'] : null, visualDensity : namedArgs.containsKey('visualDensity') ? namedArgs['visualDensity'] : null, materialTapTargetSize : namedArgs.containsKey('materialTapTargetSize') ? namedArgs['materialTapTargetSize'] : null, elevation : namedArgs.containsKey('elevation') ? namedArgs['elevation'] : null, shadowColor : namedArgs.containsKey('shadowColor') ? namedArgs['shadowColor'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => ActionChip(
+            key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
+            avatar: namedArgs.containsKey('avatar') ? namedArgs['avatar'] : null,
+            label: namedArgs['label'],
+            labelStyle: namedArgs.containsKey('labelStyle') ? namedArgs['labelStyle'] : null,
+            labelPadding: namedArgs.containsKey('labelPadding') ? namedArgs['labelPadding'] : null,
+            onPressed: namedArgs['onPressed'],
+            pressElevation: namedArgs.containsKey('pressElevation') ? namedArgs['pressElevation'] : null,
+            tooltip: namedArgs.containsKey('tooltip') ? namedArgs['tooltip'] : null,
+            side: namedArgs.containsKey('side') ? namedArgs['side'] : null,
+            shape: namedArgs.containsKey('shape') ? namedArgs['shape'] : null,
+            clipBehavior: namedArgs.containsKey('clipBehavior') ? namedArgs['clipBehavior'] : Clip.none,
+            focusNode: namedArgs.containsKey('focusNode') ? namedArgs['focusNode'] : null,
+            autofocus: namedArgs.containsKey('autofocus') ? namedArgs['autofocus'] : false,
+            backgroundColor: namedArgs.containsKey('backgroundColor') ? namedArgs['backgroundColor'] : null,
+            padding: namedArgs.containsKey('padding') ? namedArgs['padding'] : null,
+            visualDensity: namedArgs.containsKey('visualDensity') ? namedArgs['visualDensity'] : null,
+            materialTapTargetSize:
+                namedArgs.containsKey('materialTapTargetSize') ? namedArgs['materialTapTargetSize'] : null,
+            elevation: namedArgs.containsKey('elevation') ? namedArgs['elevation'] : null,
+            shadowColor: namedArgs.containsKey('shadowColor') ? namedArgs['shadowColor'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -383,13 +602,11 @@ class ActionChipAutoBinding extends HTExternalClass {
     return (instance as ActionChip).htFetch(id);
   }
 
-
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
       'VoidCallback': (HTFunction function) => () => function.call(positionalArgs: const [], namedArgs: const {}),
     };
   }
-
 }
 
 extension ActionChipBinding on ActionChip {
@@ -433,13 +650,38 @@ extension ActionChipBinding on ActionChip {
         return elevation;
       case 'shadowColor':
         return shadowColor;
+      case 'key':
+        return key;
+      case 'hashCode':
+        return hashCode;
       case 'build':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.build(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => build(positionalArgs[0]);
+      case 'createElement':
+        return ({positionalArgs, namedArgs, typeArgs}) => createElement();
+      case 'toStringShort':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'debugFillProperties':
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+      case 'toStringShallow':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
+            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toStringDeep':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
+            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class RawChipAutoBinding extends HTExternalClass {
@@ -449,7 +691,44 @@ class RawChipAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'RawChip':
-        return ({positionalArgs, namedArgs, typeArgs}) => RawChip(key : namedArgs.containsKey('key') ? namedArgs['key'] : null, avatar : namedArgs.containsKey('avatar') ? namedArgs['avatar'] : null, label : namedArgs['label'], labelStyle : namedArgs.containsKey('labelStyle') ? namedArgs['labelStyle'] : null, padding : namedArgs.containsKey('padding') ? namedArgs['padding'] : null, visualDensity : namedArgs.containsKey('visualDensity') ? namedArgs['visualDensity'] : null, labelPadding : namedArgs.containsKey('labelPadding') ? namedArgs['labelPadding'] : null, deleteIcon : namedArgs.containsKey('deleteIcon') ? namedArgs['deleteIcon'] : null, onDeleted : namedArgs.containsKey('onDeleted') ? namedArgs['onDeleted'] : null, deleteIconColor : namedArgs.containsKey('deleteIconColor') ? namedArgs['deleteIconColor'] : null, useDeleteButtonTooltip : namedArgs.containsKey('useDeleteButtonTooltip') ? namedArgs['useDeleteButtonTooltip'] : true, deleteButtonTooltipMessage : namedArgs.containsKey('deleteButtonTooltipMessage') ? namedArgs['deleteButtonTooltipMessage'] : null, onPressed : namedArgs.containsKey('onPressed') ? namedArgs['onPressed'] : null, onSelected : namedArgs.containsKey('onSelected') ? namedArgs['onSelected'] : null, pressElevation : namedArgs.containsKey('pressElevation') ? namedArgs['pressElevation'] : null, tapEnabled : namedArgs.containsKey('tapEnabled') ? namedArgs['tapEnabled'] : true, selected : namedArgs.containsKey('selected') ? namedArgs['selected'] : false, isEnabled : namedArgs.containsKey('isEnabled') ? namedArgs['isEnabled'] : true, disabledColor : namedArgs.containsKey('disabledColor') ? namedArgs['disabledColor'] : null, selectedColor : namedArgs.containsKey('selectedColor') ? namedArgs['selectedColor'] : null, tooltip : namedArgs.containsKey('tooltip') ? namedArgs['tooltip'] : null, side : namedArgs.containsKey('side') ? namedArgs['side'] : null, shape : namedArgs.containsKey('shape') ? namedArgs['shape'] : null, clipBehavior : namedArgs.containsKey('clipBehavior') ? namedArgs['clipBehavior'] : Clip.none, focusNode : namedArgs.containsKey('focusNode') ? namedArgs['focusNode'] : null, autofocus : namedArgs.containsKey('autofocus') ? namedArgs['autofocus'] : false, backgroundColor : namedArgs.containsKey('backgroundColor') ? namedArgs['backgroundColor'] : null, materialTapTargetSize : namedArgs.containsKey('materialTapTargetSize') ? namedArgs['materialTapTargetSize'] : null, elevation : namedArgs.containsKey('elevation') ? namedArgs['elevation'] : null, shadowColor : namedArgs.containsKey('shadowColor') ? namedArgs['shadowColor'] : null, selectedShadowColor : namedArgs.containsKey('selectedShadowColor') ? namedArgs['selectedShadowColor'] : null, showCheckmark : namedArgs.containsKey('showCheckmark') ? namedArgs['showCheckmark'] : true, checkmarkColor : namedArgs.containsKey('checkmarkColor') ? namedArgs['checkmarkColor'] : null, avatarBorder : namedArgs.containsKey('avatarBorder') ? namedArgs['avatarBorder'] : const CircleBorder());
+        return ({positionalArgs, namedArgs, typeArgs}) => RawChip(
+            key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
+            avatar: namedArgs.containsKey('avatar') ? namedArgs['avatar'] : null,
+            label: namedArgs['label'],
+            labelStyle: namedArgs.containsKey('labelStyle') ? namedArgs['labelStyle'] : null,
+            padding: namedArgs.containsKey('padding') ? namedArgs['padding'] : null,
+            visualDensity: namedArgs.containsKey('visualDensity') ? namedArgs['visualDensity'] : null,
+            labelPadding: namedArgs.containsKey('labelPadding') ? namedArgs['labelPadding'] : null,
+            deleteIcon: namedArgs.containsKey('deleteIcon') ? namedArgs['deleteIcon'] : null,
+            onDeleted: namedArgs.containsKey('onDeleted') ? namedArgs['onDeleted'] : null,
+            deleteIconColor: namedArgs.containsKey('deleteIconColor') ? namedArgs['deleteIconColor'] : null,
+            useDeleteButtonTooltip:
+                namedArgs.containsKey('useDeleteButtonTooltip') ? namedArgs['useDeleteButtonTooltip'] : true,
+            deleteButtonTooltipMessage:
+                namedArgs.containsKey('deleteButtonTooltipMessage') ? namedArgs['deleteButtonTooltipMessage'] : null,
+            onPressed: namedArgs.containsKey('onPressed') ? namedArgs['onPressed'] : null,
+            onSelected: namedArgs.containsKey('onSelected') ? namedArgs['onSelected'] : null,
+            pressElevation: namedArgs.containsKey('pressElevation') ? namedArgs['pressElevation'] : null,
+            tapEnabled: namedArgs.containsKey('tapEnabled') ? namedArgs['tapEnabled'] : true,
+            selected: namedArgs.containsKey('selected') ? namedArgs['selected'] : false,
+            isEnabled: namedArgs.containsKey('isEnabled') ? namedArgs['isEnabled'] : true,
+            disabledColor: namedArgs.containsKey('disabledColor') ? namedArgs['disabledColor'] : null,
+            selectedColor: namedArgs.containsKey('selectedColor') ? namedArgs['selectedColor'] : null,
+            tooltip: namedArgs.containsKey('tooltip') ? namedArgs['tooltip'] : null,
+            side: namedArgs.containsKey('side') ? namedArgs['side'] : null,
+            shape: namedArgs.containsKey('shape') ? namedArgs['shape'] : null,
+            clipBehavior: namedArgs.containsKey('clipBehavior') ? namedArgs['clipBehavior'] : Clip.none,
+            focusNode: namedArgs.containsKey('focusNode') ? namedArgs['focusNode'] : null,
+            autofocus: namedArgs.containsKey('autofocus') ? namedArgs['autofocus'] : false,
+            backgroundColor: namedArgs.containsKey('backgroundColor') ? namedArgs['backgroundColor'] : null,
+            materialTapTargetSize:
+                namedArgs.containsKey('materialTapTargetSize') ? namedArgs['materialTapTargetSize'] : null,
+            elevation: namedArgs.containsKey('elevation') ? namedArgs['elevation'] : null,
+            shadowColor: namedArgs.containsKey('shadowColor') ? namedArgs['shadowColor'] : null,
+            selectedShadowColor: namedArgs.containsKey('selectedShadowColor') ? namedArgs['selectedShadowColor'] : null,
+            showCheckmark: namedArgs.containsKey('showCheckmark') ? namedArgs['showCheckmark'] : true,
+            checkmarkColor: namedArgs.containsKey('checkmarkColor') ? namedArgs['checkmarkColor'] : null,
+            avatarBorder: namedArgs.containsKey('avatarBorder') ? namedArgs['avatarBorder'] : const CircleBorder());
       default:
         throw HTErrorUndefined(varName);
     }
@@ -460,13 +739,11 @@ class RawChipAutoBinding extends HTExternalClass {
     return (instance as RawChip).htFetch(id);
   }
 
-
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
       'VoidCallback': (HTFunction function) => () => function.call(positionalArgs: const [], namedArgs: const {}),
     };
   }
-
 }
 
 extension RawChipBinding on RawChip {
@@ -540,12 +817,36 @@ extension RawChipBinding on RawChip {
         return avatarBorder;
       case 'tapEnabled':
         return tapEnabled;
+      case 'key':
+        return key;
+      case 'hashCode':
+        return hashCode;
       case 'createState':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.createState();
+        return ({positionalArgs, namedArgs, typeArgs}) => createState();
+      case 'createElement':
+        return ({positionalArgs, namedArgs, typeArgs}) => createElement();
+      case 'toStringShort':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'debugFillProperties':
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+      case 'toStringShallow':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
+            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toStringDeep':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
+            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
-

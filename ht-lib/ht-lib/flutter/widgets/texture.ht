@@ -1,0 +1,16 @@
+external class Texture {
+    construct 
+    get textureId
+    get filterQuality
+    get key
+    fun createRenderObject
+    fun updateRenderObject
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}

@@ -1,8 +1,5 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/foundation.dart';
-import 'dart:ui';
-import 'package:meta/meta.dart';
-
 
 class KeyAutoBinding extends HTExternalClass {
   KeyAutoBinding() : super('Key');
@@ -16,13 +13,6 @@ class KeyAutoBinding extends HTExternalClass {
         throw HTErrorUndefined(varName);
     }
   }
-
-
-
-
 }
 
-extension KeyBinding on Key {
-
-}
-
+extension KeyBinding on Key {}

@@ -1,8 +1,6 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter/foundation.dart';
-import 'package:flutter/gestures.dart';
-
 
 class DraggableScrollableSheetAutoBinding extends HTExternalClass {
   DraggableScrollableSheetAutoBinding() : super('DraggableScrollableSheet');
@@ -11,7 +9,13 @@ class DraggableScrollableSheetAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'DraggableScrollableSheet':
-        return ({positionalArgs, namedArgs, typeArgs}) => DraggableScrollableSheet(key : namedArgs.containsKey('key') ? namedArgs['key'] : null, initialChildSize : namedArgs.containsKey('initialChildSize') ? namedArgs['initialChildSize'] : 0.5, minChildSize : namedArgs.containsKey('minChildSize') ? namedArgs['minChildSize'] : 0.25, maxChildSize : namedArgs.containsKey('maxChildSize') ? namedArgs['maxChildSize'] : 1.0, expand : namedArgs.containsKey('expand') ? namedArgs['expand'] : true, builder : namedArgs['builder']);
+        return ({positionalArgs, namedArgs, typeArgs}) => DraggableScrollableSheet(
+            key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
+            initialChildSize: namedArgs.containsKey('initialChildSize') ? namedArgs['initialChildSize'] : 0.5,
+            minChildSize: namedArgs.containsKey('minChildSize') ? namedArgs['minChildSize'] : 0.25,
+            maxChildSize: namedArgs.containsKey('maxChildSize') ? namedArgs['maxChildSize'] : 1.0,
+            expand: namedArgs.containsKey('expand') ? namedArgs['expand'] : true,
+            builder: namedArgs['builder']);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -22,13 +26,12 @@ class DraggableScrollableSheetAutoBinding extends HTExternalClass {
     return (instance as DraggableScrollableSheet).htFetch(id);
   }
 
-
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'ScrollableWidgetBuilder': (HTFunction function) => (context, scrollController) => function.call(positionalArgs: [context, scrollController], namedArgs: const {}) as Widget,
+      'ScrollableWidgetBuilder': (HTFunction function) => (context, scrollController) =>
+          function.call(positionalArgs: [context, scrollController], namedArgs: const {}) as Widget,
     };
   }
-
 }
 
 extension DraggableScrollableSheetBinding on DraggableScrollableSheet {
@@ -46,13 +49,38 @@ extension DraggableScrollableSheetBinding on DraggableScrollableSheet {
         return expand;
       case 'builder':
         return builder;
+      case 'key':
+        return key;
+      case 'hashCode':
+        return hashCode;
       case 'createState':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.createState();
+        return ({positionalArgs, namedArgs, typeArgs}) => createState();
+      case 'createElement':
+        return ({positionalArgs, namedArgs, typeArgs}) => createElement();
+      case 'toStringShort':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'debugFillProperties':
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+      case 'toStringShallow':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
+            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toStringDeep':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
+            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class DraggableScrollableNotificationAutoBinding extends HTExternalClass {
@@ -62,7 +90,12 @@ class DraggableScrollableNotificationAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'DraggableScrollableNotification':
-        return ({positionalArgs, namedArgs, typeArgs}) => DraggableScrollableNotification(extent : namedArgs['extent'], minExtent : namedArgs['minExtent'], maxExtent : namedArgs['maxExtent'], initialExtent : namedArgs['initialExtent'], context : namedArgs['context']);
+        return ({positionalArgs, namedArgs, typeArgs}) => DraggableScrollableNotification(
+            extent: namedArgs['extent'],
+            minExtent: namedArgs['minExtent'],
+            maxExtent: namedArgs['maxExtent'],
+            initialExtent: namedArgs['initialExtent'],
+            context: namedArgs['context']);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -72,9 +105,6 @@ class DraggableScrollableNotificationAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as DraggableScrollableNotification).htFetch(id);
   }
-
-
-
 }
 
 extension DraggableScrollableNotificationBinding on DraggableScrollableNotification {
@@ -95,18 +125,17 @@ extension DraggableScrollableNotificationBinding on DraggableScrollableNotificat
       case 'depth':
         return depth;
       case 'debugFillDescription':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugFillDescription(List<String>.from(positionalArgs[0]));
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillDescription(List<String>.from(positionalArgs[0]));
       case 'visitAncestor':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.visitAncestor(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => visitAncestor(positionalArgs[0]);
       case 'dispatch':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.dispatch(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => dispatch(positionalArgs[0]);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class DraggableScrollableActuatorAutoBinding extends HTExternalClass {
@@ -116,7 +145,8 @@ class DraggableScrollableActuatorAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'DraggableScrollableActuator':
-        return ({positionalArgs, namedArgs, typeArgs}) => DraggableScrollableActuator(key : namedArgs.containsKey('key') ? namedArgs['key'] : null, child : namedArgs['child']);
+        return ({positionalArgs, namedArgs, typeArgs}) => DraggableScrollableActuator(
+            key: namedArgs.containsKey('key') ? namedArgs['key'] : null, child: namedArgs['child']);
       case 'DraggableScrollableActuator.reset':
         return ({positionalArgs, namedArgs, typeArgs}) => DraggableScrollableActuator.reset(positionalArgs[0]);
       default:
@@ -128,9 +158,6 @@ class DraggableScrollableActuatorAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as DraggableScrollableActuator).htFetch(id);
   }
-
-
-
 }
 
 extension DraggableScrollableActuatorBinding on DraggableScrollableActuator {
@@ -140,12 +167,36 @@ extension DraggableScrollableActuatorBinding on DraggableScrollableActuator {
         return HTTypeId('DraggableScrollableActuator');
       case 'child':
         return child;
+      case 'key':
+        return key;
+      case 'hashCode':
+        return hashCode;
       case 'build':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.build(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => build(positionalArgs[0]);
+      case 'createElement':
+        return ({positionalArgs, namedArgs, typeArgs}) => createElement();
+      case 'toStringShort':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'debugFillProperties':
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+      case 'toStringShallow':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
+            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toStringDeep':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
+            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
-

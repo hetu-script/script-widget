@@ -1,7 +1,5 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/services.dart';
-import 'dart:ui';
-
 
 class SystemChannelsAutoBinding extends HTExternalClass {
   SystemChannelsAutoBinding() : super('SystemChannels');
@@ -37,10 +35,4 @@ class SystemChannelsAutoBinding extends HTExternalClass {
         throw HTErrorUndefined(varName);
     }
   }
-
-
-
-
 }
-
-

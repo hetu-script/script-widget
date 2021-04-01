@@ -1,7 +1,6 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'dart:math';
 
-
 class RandomAutoBinding extends HTExternalClass {
   RandomAutoBinding() : super('Random');
 
@@ -21,9 +20,6 @@ class RandomAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as Random).htFetch(id);
   }
-
-
-
 }
 
 extension RandomBinding on Random {
@@ -32,15 +28,13 @@ extension RandomBinding on Random {
       case 'typeid':
         return HTTypeId('Random');
       case 'nextInt':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.nextInt(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => nextInt(positionalArgs[0]);
       case 'nextDouble':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.nextDouble();
+        return ({positionalArgs, namedArgs, typeArgs}) => nextDouble();
       case 'nextBool':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.nextBool();
+        return ({positionalArgs, namedArgs, typeArgs}) => nextBool();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
-

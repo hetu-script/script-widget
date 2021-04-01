@@ -1,0 +1,74 @@
+external class AnimatedList {
+    construct 
+    get itemBuilder
+    get initialItemCount
+    get scrollDirection
+    get reverse
+    get controller
+    get primary
+    get physics
+    get shrinkWrap
+    get padding
+    get key
+    fun createState
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+    static fun of (context)
+    static fun maybeOf (context)
+}
+external class AnimatedListState {
+    construct
+    fun insertItem
+    fun removeItem
+    fun build
+    fun createTicker
+    fun dispose
+    fun didChangeDependencies
+    fun debugFillProperties
+    get widget
+    get context
+    get mounted
+    fun toStringShort
+    fun toString
+    fun toDiagnosticsNode
+}
+external class SliverAnimatedList {
+    construct 
+    get itemBuilder
+    get initialItemCount
+    get key
+    fun createState
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+    static fun of (context)
+    static fun maybeOf (context)
+}
+external class SliverAnimatedListState {
+    construct
+    fun initState
+    fun dispose
+    fun insertItem
+    fun removeItem
+    fun build
+    fun createTicker
+    fun didChangeDependencies
+    fun debugFillProperties
+    get widget
+    get context
+    get mounted
+    fun toStringShort
+    fun toString
+    fun toDiagnosticsNode
+}

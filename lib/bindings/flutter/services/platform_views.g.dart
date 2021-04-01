@@ -1,9 +1,5 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/services.dart';
-import 'dart:typed_data';
-import 'dart:ui';
-import 'package:flutter/gestures.dart';
-
 
 class PlatformViewsServiceAutoBinding extends HTExternalClass {
   PlatformViewsServiceAutoBinding() : super('PlatformViewsService');
@@ -12,26 +8,40 @@ class PlatformViewsServiceAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'PlatformViewsService.initAndroidView':
-        return ({positionalArgs, namedArgs, typeArgs}) => PlatformViewsService.initAndroidView(id : namedArgs.containsKey('id') ? namedArgs['id'] : null, viewType : namedArgs.containsKey('viewType') ? namedArgs['viewType'] : null, layoutDirection : namedArgs.containsKey('layoutDirection') ? namedArgs['layoutDirection'] : null, creationParams : namedArgs.containsKey('creationParams') ? namedArgs['creationParams'] : null, creationParamsCodec : namedArgs.containsKey('creationParamsCodec') ? namedArgs['creationParamsCodec'] : null, onFocus : namedArgs.containsKey('onFocus') ? namedArgs['onFocus'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => PlatformViewsService.initAndroidView(
+            id: namedArgs.containsKey('id') ? namedArgs['id'] : null,
+            viewType: namedArgs.containsKey('viewType') ? namedArgs['viewType'] : null,
+            layoutDirection: namedArgs.containsKey('layoutDirection') ? namedArgs['layoutDirection'] : null,
+            creationParams: namedArgs.containsKey('creationParams') ? namedArgs['creationParams'] : null,
+            creationParamsCodec: namedArgs.containsKey('creationParamsCodec') ? namedArgs['creationParamsCodec'] : null,
+            onFocus: namedArgs.containsKey('onFocus') ? namedArgs['onFocus'] : null);
       case 'PlatformViewsService.initSurfaceAndroidView':
-        return ({positionalArgs, namedArgs, typeArgs}) => PlatformViewsService.initSurfaceAndroidView(id : namedArgs.containsKey('id') ? namedArgs['id'] : null, viewType : namedArgs.containsKey('viewType') ? namedArgs['viewType'] : null, layoutDirection : namedArgs.containsKey('layoutDirection') ? namedArgs['layoutDirection'] : null, creationParams : namedArgs.containsKey('creationParams') ? namedArgs['creationParams'] : null, creationParamsCodec : namedArgs.containsKey('creationParamsCodec') ? namedArgs['creationParamsCodec'] : null, onFocus : namedArgs.containsKey('onFocus') ? namedArgs['onFocus'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => PlatformViewsService.initSurfaceAndroidView(
+            id: namedArgs.containsKey('id') ? namedArgs['id'] : null,
+            viewType: namedArgs.containsKey('viewType') ? namedArgs['viewType'] : null,
+            layoutDirection: namedArgs.containsKey('layoutDirection') ? namedArgs['layoutDirection'] : null,
+            creationParams: namedArgs.containsKey('creationParams') ? namedArgs['creationParams'] : null,
+            creationParamsCodec: namedArgs.containsKey('creationParamsCodec') ? namedArgs['creationParamsCodec'] : null,
+            onFocus: namedArgs.containsKey('onFocus') ? namedArgs['onFocus'] : null);
       case 'PlatformViewsService.initUiKitView':
-        return ({positionalArgs, namedArgs, typeArgs}) => PlatformViewsService.initUiKitView(id : namedArgs.containsKey('id') ? namedArgs['id'] : null, viewType : namedArgs.containsKey('viewType') ? namedArgs['viewType'] : null, layoutDirection : namedArgs.containsKey('layoutDirection') ? namedArgs['layoutDirection'] : null, creationParams : namedArgs.containsKey('creationParams') ? namedArgs['creationParams'] : null, creationParamsCodec : namedArgs.containsKey('creationParamsCodec') ? namedArgs['creationParamsCodec'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => PlatformViewsService.initUiKitView(
+            id: namedArgs.containsKey('id') ? namedArgs['id'] : null,
+            viewType: namedArgs.containsKey('viewType') ? namedArgs['viewType'] : null,
+            layoutDirection: namedArgs.containsKey('layoutDirection') ? namedArgs['layoutDirection'] : null,
+            creationParams: namedArgs.containsKey('creationParams') ? namedArgs['creationParams'] : null,
+            creationParamsCodec:
+                namedArgs.containsKey('creationParamsCodec') ? namedArgs['creationParamsCodec'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
-
 
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
       'VoidCallback': (HTFunction function) => () => function.call(positionalArgs: const [], namedArgs: const {}),
     };
   }
-
 }
-
 
 class AndroidPointerPropertiesAutoBinding extends HTExternalClass {
   AndroidPointerPropertiesAutoBinding() : super('AndroidPointerProperties');
@@ -40,7 +50,8 @@ class AndroidPointerPropertiesAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'AndroidPointerProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => AndroidPointerProperties(id : namedArgs['id'], toolType : namedArgs['toolType']);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            AndroidPointerProperties(id: namedArgs['id'], toolType: namedArgs['toolType']);
       case 'AndroidPointerProperties.kToolTypeUnknown':
         return AndroidPointerProperties.kToolTypeUnknown;
       case 'AndroidPointerProperties.kToolTypeFinger':
@@ -60,9 +71,6 @@ class AndroidPointerPropertiesAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as AndroidPointerProperties).htFetch(id);
   }
-
-
-
 }
 
 extension AndroidPointerPropertiesBinding on AndroidPointerProperties {
@@ -75,12 +83,11 @@ extension AndroidPointerPropertiesBinding on AndroidPointerProperties {
       case 'toolType':
         return toolType;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class AndroidPointerCoordsAutoBinding extends HTExternalClass {
@@ -90,7 +97,16 @@ class AndroidPointerCoordsAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'AndroidPointerCoords':
-        return ({positionalArgs, namedArgs, typeArgs}) => AndroidPointerCoords(orientation : namedArgs['orientation'], pressure : namedArgs['pressure'], size : namedArgs['size'], toolMajor : namedArgs['toolMajor'], toolMinor : namedArgs['toolMinor'], touchMajor : namedArgs['touchMajor'], touchMinor : namedArgs['touchMinor'], x : namedArgs['x'], y : namedArgs['y']);
+        return ({positionalArgs, namedArgs, typeArgs}) => AndroidPointerCoords(
+            orientation: namedArgs['orientation'],
+            pressure: namedArgs['pressure'],
+            size: namedArgs['size'],
+            toolMajor: namedArgs['toolMajor'],
+            toolMinor: namedArgs['toolMinor'],
+            touchMajor: namedArgs['touchMajor'],
+            touchMinor: namedArgs['touchMinor'],
+            x: namedArgs['x'],
+            y: namedArgs['y']);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -100,9 +116,6 @@ class AndroidPointerCoordsAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as AndroidPointerCoords).htFetch(id);
   }
-
-
-
 }
 
 extension AndroidPointerCoordsBinding on AndroidPointerCoords {
@@ -129,12 +142,11 @@ extension AndroidPointerCoordsBinding on AndroidPointerCoords {
       case 'y':
         return y;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class AndroidMotionEventAutoBinding extends HTExternalClass {
@@ -144,7 +156,22 @@ class AndroidMotionEventAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'AndroidMotionEvent':
-        return ({positionalArgs, namedArgs, typeArgs}) => AndroidMotionEvent(downTime : namedArgs['downTime'], eventTime : namedArgs['eventTime'], action : namedArgs['action'], pointerCount : namedArgs['pointerCount'], pointerProperties : List<AndroidPointerProperties>.from(namedArgs['pointerProperties']), pointerCoords : List<AndroidPointerCoords>.from(namedArgs['pointerCoords']), metaState : namedArgs['metaState'], buttonState : namedArgs['buttonState'], xPrecision : namedArgs['xPrecision'], yPrecision : namedArgs['yPrecision'], deviceId : namedArgs['deviceId'], edgeFlags : namedArgs['edgeFlags'], source : namedArgs['source'], flags : namedArgs['flags'], motionEventId : namedArgs['motionEventId']);
+        return ({positionalArgs, namedArgs, typeArgs}) => AndroidMotionEvent(
+            downTime: namedArgs['downTime'],
+            eventTime: namedArgs['eventTime'],
+            action: namedArgs['action'],
+            pointerCount: namedArgs['pointerCount'],
+            pointerProperties: List<AndroidPointerProperties>.from(namedArgs['pointerProperties']),
+            pointerCoords: List<AndroidPointerCoords>.from(namedArgs['pointerCoords']),
+            metaState: namedArgs['metaState'],
+            buttonState: namedArgs['buttonState'],
+            xPrecision: namedArgs['xPrecision'],
+            yPrecision: namedArgs['yPrecision'],
+            deviceId: namedArgs['deviceId'],
+            edgeFlags: namedArgs['edgeFlags'],
+            source: namedArgs['source'],
+            flags: namedArgs['flags'],
+            motionEventId: namedArgs['motionEventId']);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -154,9 +181,6 @@ class AndroidMotionEventAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as AndroidMotionEvent).htFetch(id);
   }
-
-
-
 }
 
 extension AndroidMotionEventBinding on AndroidMotionEvent {
@@ -195,12 +219,11 @@ extension AndroidMotionEventBinding on AndroidMotionEvent {
       case 'motionEventId':
         return motionEventId;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class AndroidViewControllerAutoBinding extends HTExternalClass {
@@ -210,7 +233,8 @@ class AndroidViewControllerAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'AndroidViewController.pointerAction':
-        return ({positionalArgs, namedArgs, typeArgs}) => AndroidViewController.pointerAction(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            AndroidViewController.pointerAction(positionalArgs[0], positionalArgs[1]);
       case 'AndroidViewController.kActionDown':
         return AndroidViewController.kActionDown;
       case 'AndroidViewController.kActionUp':
@@ -231,10 +255,4 @@ class AndroidViewControllerAutoBinding extends HTExternalClass {
         throw HTErrorUndefined(varName);
     }
   }
-
-
-
-
 }
-
-

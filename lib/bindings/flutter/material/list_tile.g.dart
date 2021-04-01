@@ -1,6 +1,5 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/material.dart';
-import 'dart:math'as math;
 import 'package:flutter/widgets.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/rendering.dart';
@@ -22,7 +21,6 @@ class ListTileStyleAutoBinding extends HTExternalClass {
     }
   }
 
-
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
@@ -37,6 +35,7 @@ class ListTileStyleAutoBinding extends HTExternalClass {
     }
   }
 }
+
 class ListTileControlAffinityAutoBinding extends HTExternalClass {
   ListTileControlAffinityAutoBinding() : super('ListTileControlAffinity');
 
@@ -55,7 +54,6 @@ class ListTileControlAffinityAutoBinding extends HTExternalClass {
         throw HTErrorUndefined(varName);
     }
   }
-
 
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
@@ -79,9 +77,39 @@ class ListTileThemeAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'ListTileTheme':
-        return ({positionalArgs, namedArgs, typeArgs}) => ListTileTheme(key : namedArgs.containsKey('key') ? namedArgs['key'] : null, dense : namedArgs.containsKey('dense') ? namedArgs['dense'] : false, shape : namedArgs.containsKey('shape') ? namedArgs['shape'] : null, style : namedArgs.containsKey('style') ? namedArgs['style'] : ListTileStyle.list, selectedColor : namedArgs.containsKey('selectedColor') ? namedArgs['selectedColor'] : null, iconColor : namedArgs.containsKey('iconColor') ? namedArgs['iconColor'] : null, textColor : namedArgs.containsKey('textColor') ? namedArgs['textColor'] : null, contentPadding : namedArgs.containsKey('contentPadding') ? namedArgs['contentPadding'] : null, tileColor : namedArgs.containsKey('tileColor') ? namedArgs['tileColor'] : null, selectedTileColor : namedArgs.containsKey('selectedTileColor') ? namedArgs['selectedTileColor'] : null, enableFeedback : namedArgs.containsKey('enableFeedback') ? namedArgs['enableFeedback'] : null, horizontalTitleGap : namedArgs.containsKey('horizontalTitleGap') ? namedArgs['horizontalTitleGap'] : null, minVerticalPadding : namedArgs.containsKey('minVerticalPadding') ? namedArgs['minVerticalPadding'] : null, minLeadingWidth : namedArgs.containsKey('minLeadingWidth') ? namedArgs['minLeadingWidth'] : null, child : namedArgs['child']);
+        return ({positionalArgs, namedArgs, typeArgs}) => ListTileTheme(
+            key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
+            dense: namedArgs.containsKey('dense') ? namedArgs['dense'] : false,
+            shape: namedArgs.containsKey('shape') ? namedArgs['shape'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : ListTileStyle.list,
+            selectedColor: namedArgs.containsKey('selectedColor') ? namedArgs['selectedColor'] : null,
+            iconColor: namedArgs.containsKey('iconColor') ? namedArgs['iconColor'] : null,
+            textColor: namedArgs.containsKey('textColor') ? namedArgs['textColor'] : null,
+            contentPadding: namedArgs.containsKey('contentPadding') ? namedArgs['contentPadding'] : null,
+            tileColor: namedArgs.containsKey('tileColor') ? namedArgs['tileColor'] : null,
+            selectedTileColor: namedArgs.containsKey('selectedTileColor') ? namedArgs['selectedTileColor'] : null,
+            enableFeedback: namedArgs.containsKey('enableFeedback') ? namedArgs['enableFeedback'] : null,
+            horizontalTitleGap: namedArgs.containsKey('horizontalTitleGap') ? namedArgs['horizontalTitleGap'] : null,
+            minVerticalPadding: namedArgs.containsKey('minVerticalPadding') ? namedArgs['minVerticalPadding'] : null,
+            minLeadingWidth: namedArgs.containsKey('minLeadingWidth') ? namedArgs['minLeadingWidth'] : null,
+            child: namedArgs['child']);
       case 'ListTileTheme.merge':
-        return ({positionalArgs, namedArgs, typeArgs}) => ListTileTheme.merge(key : namedArgs.containsKey('key') ? namedArgs['key'] : null, dense : namedArgs.containsKey('dense') ? namedArgs['dense'] : null, shape : namedArgs.containsKey('shape') ? namedArgs['shape'] : null, style : namedArgs.containsKey('style') ? namedArgs['style'] : null, selectedColor : namedArgs.containsKey('selectedColor') ? namedArgs['selectedColor'] : null, iconColor : namedArgs.containsKey('iconColor') ? namedArgs['iconColor'] : null, textColor : namedArgs.containsKey('textColor') ? namedArgs['textColor'] : null, contentPadding : namedArgs.containsKey('contentPadding') ? namedArgs['contentPadding'] : null, tileColor : namedArgs.containsKey('tileColor') ? namedArgs['tileColor'] : null, selectedTileColor : namedArgs.containsKey('selectedTileColor') ? namedArgs['selectedTileColor'] : null, enableFeedback : namedArgs.containsKey('enableFeedback') ? namedArgs['enableFeedback'] : null, horizontalTitleGap : namedArgs.containsKey('horizontalTitleGap') ? namedArgs['horizontalTitleGap'] : null, minVerticalPadding : namedArgs.containsKey('minVerticalPadding') ? namedArgs['minVerticalPadding'] : null, minLeadingWidth : namedArgs.containsKey('minLeadingWidth') ? namedArgs['minLeadingWidth'] : null, child : namedArgs.containsKey('child') ? namedArgs['child'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => ListTileTheme.merge(
+            key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
+            dense: namedArgs.containsKey('dense') ? namedArgs['dense'] : null,
+            shape: namedArgs.containsKey('shape') ? namedArgs['shape'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null,
+            selectedColor: namedArgs.containsKey('selectedColor') ? namedArgs['selectedColor'] : null,
+            iconColor: namedArgs.containsKey('iconColor') ? namedArgs['iconColor'] : null,
+            textColor: namedArgs.containsKey('textColor') ? namedArgs['textColor'] : null,
+            contentPadding: namedArgs.containsKey('contentPadding') ? namedArgs['contentPadding'] : null,
+            tileColor: namedArgs.containsKey('tileColor') ? namedArgs['tileColor'] : null,
+            selectedTileColor: namedArgs.containsKey('selectedTileColor') ? namedArgs['selectedTileColor'] : null,
+            enableFeedback: namedArgs.containsKey('enableFeedback') ? namedArgs['enableFeedback'] : null,
+            horizontalTitleGap: namedArgs.containsKey('horizontalTitleGap') ? namedArgs['horizontalTitleGap'] : null,
+            minVerticalPadding: namedArgs.containsKey('minVerticalPadding') ? namedArgs['minVerticalPadding'] : null,
+            minLeadingWidth: namedArgs.containsKey('minLeadingWidth') ? namedArgs['minLeadingWidth'] : null,
+            child: namedArgs.containsKey('child') ? namedArgs['child'] : null);
       case 'ListTileTheme.of':
         return ({positionalArgs, namedArgs, typeArgs}) => ListTileTheme.of(positionalArgs[0]);
       default:
@@ -93,9 +121,6 @@ class ListTileThemeAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as ListTileTheme).htFetch(id);
   }
-
-
-
 }
 
 extension ListTileThemeBinding on ListTileTheme {
@@ -129,15 +154,42 @@ extension ListTileThemeBinding on ListTileTheme {
         return minLeadingWidth;
       case 'enableFeedback':
         return enableFeedback;
+      case 'child':
+        return child;
+      case 'key':
+        return key;
+      case 'hashCode':
+        return hashCode;
       case 'wrap':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.wrap(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => wrap(positionalArgs[0], positionalArgs[1]);
       case 'updateShouldNotify':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.updateShouldNotify(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => updateShouldNotify(positionalArgs[0]);
+      case 'createElement':
+        return ({positionalArgs, namedArgs, typeArgs}) => createElement();
+      case 'toStringShort':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'debugFillProperties':
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+      case 'toStringShallow':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
+            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toStringDeep':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
+            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class ListTileAutoBinding extends HTExternalClass {
@@ -147,9 +199,37 @@ class ListTileAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'ListTile':
-        return ({positionalArgs, namedArgs, typeArgs}) => ListTile(key : namedArgs.containsKey('key') ? namedArgs['key'] : null, leading : namedArgs.containsKey('leading') ? namedArgs['leading'] : null, title : namedArgs.containsKey('title') ? namedArgs['title'] : null, subtitle : namedArgs.containsKey('subtitle') ? namedArgs['subtitle'] : null, trailing : namedArgs.containsKey('trailing') ? namedArgs['trailing'] : null, isThreeLine : namedArgs.containsKey('isThreeLine') ? namedArgs['isThreeLine'] : false, dense : namedArgs.containsKey('dense') ? namedArgs['dense'] : null, visualDensity : namedArgs.containsKey('visualDensity') ? namedArgs['visualDensity'] : null, shape : namedArgs.containsKey('shape') ? namedArgs['shape'] : null, contentPadding : namedArgs.containsKey('contentPadding') ? namedArgs['contentPadding'] : null, enabled : namedArgs.containsKey('enabled') ? namedArgs['enabled'] : true, onTap : namedArgs.containsKey('onTap') ? namedArgs['onTap'] : null, onLongPress : namedArgs.containsKey('onLongPress') ? namedArgs['onLongPress'] : null, mouseCursor : namedArgs.containsKey('mouseCursor') ? namedArgs['mouseCursor'] : null, selected : namedArgs.containsKey('selected') ? namedArgs['selected'] : false, focusColor : namedArgs.containsKey('focusColor') ? namedArgs['focusColor'] : null, hoverColor : namedArgs.containsKey('hoverColor') ? namedArgs['hoverColor'] : null, focusNode : namedArgs.containsKey('focusNode') ? namedArgs['focusNode'] : null, autofocus : namedArgs.containsKey('autofocus') ? namedArgs['autofocus'] : false, tileColor : namedArgs.containsKey('tileColor') ? namedArgs['tileColor'] : null, selectedTileColor : namedArgs.containsKey('selectedTileColor') ? namedArgs['selectedTileColor'] : null, enableFeedback : namedArgs.containsKey('enableFeedback') ? namedArgs['enableFeedback'] : null, horizontalTitleGap : namedArgs.containsKey('horizontalTitleGap') ? namedArgs['horizontalTitleGap'] : null, minVerticalPadding : namedArgs.containsKey('minVerticalPadding') ? namedArgs['minVerticalPadding'] : null, minLeadingWidth : namedArgs.containsKey('minLeadingWidth') ? namedArgs['minLeadingWidth'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => ListTile(
+            key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
+            leading: namedArgs.containsKey('leading') ? namedArgs['leading'] : null,
+            title: namedArgs.containsKey('title') ? namedArgs['title'] : null,
+            subtitle: namedArgs.containsKey('subtitle') ? namedArgs['subtitle'] : null,
+            trailing: namedArgs.containsKey('trailing') ? namedArgs['trailing'] : null,
+            isThreeLine: namedArgs.containsKey('isThreeLine') ? namedArgs['isThreeLine'] : false,
+            dense: namedArgs.containsKey('dense') ? namedArgs['dense'] : null,
+            visualDensity: namedArgs.containsKey('visualDensity') ? namedArgs['visualDensity'] : null,
+            shape: namedArgs.containsKey('shape') ? namedArgs['shape'] : null,
+            contentPadding: namedArgs.containsKey('contentPadding') ? namedArgs['contentPadding'] : null,
+            enabled: namedArgs.containsKey('enabled') ? namedArgs['enabled'] : true,
+            onTap: namedArgs.containsKey('onTap') ? namedArgs['onTap'] : null,
+            onLongPress: namedArgs.containsKey('onLongPress') ? namedArgs['onLongPress'] : null,
+            mouseCursor: namedArgs.containsKey('mouseCursor') ? namedArgs['mouseCursor'] : null,
+            selected: namedArgs.containsKey('selected') ? namedArgs['selected'] : false,
+            focusColor: namedArgs.containsKey('focusColor') ? namedArgs['focusColor'] : null,
+            hoverColor: namedArgs.containsKey('hoverColor') ? namedArgs['hoverColor'] : null,
+            focusNode: namedArgs.containsKey('focusNode') ? namedArgs['focusNode'] : null,
+            autofocus: namedArgs.containsKey('autofocus') ? namedArgs['autofocus'] : false,
+            tileColor: namedArgs.containsKey('tileColor') ? namedArgs['tileColor'] : null,
+            selectedTileColor: namedArgs.containsKey('selectedTileColor') ? namedArgs['selectedTileColor'] : null,
+            enableFeedback: namedArgs.containsKey('enableFeedback') ? namedArgs['enableFeedback'] : null,
+            horizontalTitleGap: namedArgs.containsKey('horizontalTitleGap') ? namedArgs['horizontalTitleGap'] : null,
+            minVerticalPadding: namedArgs.containsKey('minVerticalPadding') ? namedArgs['minVerticalPadding'] : null,
+            minLeadingWidth: namedArgs.containsKey('minLeadingWidth') ? namedArgs['minLeadingWidth'] : null);
       case 'ListTile.divideTiles':
-        return ({positionalArgs, namedArgs, typeArgs}) => ListTile.divideTiles(context : namedArgs.containsKey('context') ? namedArgs['context'] : null, tiles : namedArgs.containsKey('tiles') ? namedArgs['tiles'] : null, color : namedArgs.containsKey('color') ? namedArgs['color'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => ListTile.divideTiles(
+            context: namedArgs.containsKey('context') ? namedArgs['context'] : null,
+            tiles: namedArgs.containsKey('tiles') ? namedArgs['tiles'] : null,
+            color: namedArgs.containsKey('color') ? namedArgs['color'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -160,14 +240,13 @@ class ListTileAutoBinding extends HTExternalClass {
     return (instance as ListTile).htFetch(id);
   }
 
-
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
       'GestureTapCallback': (HTFunction function) => () => function.call(positionalArgs: const [], namedArgs: const {}),
-      'GestureLongPressCallback': (HTFunction function) => () => function.call(positionalArgs: const [], namedArgs: const {}),
+      'GestureLongPressCallback': (HTFunction function) =>
+          () => function.call(positionalArgs: const [], namedArgs: const {}),
     };
   }
-
 }
 
 extension ListTileBinding on ListTile {
@@ -223,12 +302,36 @@ extension ListTileBinding on ListTile {
         return minVerticalPadding;
       case 'minLeadingWidth':
         return minLeadingWidth;
+      case 'key':
+        return key;
+      case 'hashCode':
+        return hashCode;
       case 'build':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.build(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => build(positionalArgs[0]);
+      case 'createElement':
+        return ({positionalArgs, namedArgs, typeArgs}) => createElement();
+      case 'toStringShort':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'debugFillProperties':
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+      case 'toStringShallow':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
+            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toStringDeep':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
+            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
-

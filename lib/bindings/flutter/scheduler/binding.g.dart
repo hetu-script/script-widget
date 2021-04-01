@@ -1,11 +1,5 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/scheduler.dart';
-import 'dart:async';
-import 'dart:collection';
-import 'dart:developer';
-import 'dart:ui';
-import 'package:collection/collection.dart';
-import 'package:flutter/foundation.dart';
 
 class SchedulerPhaseAutoBinding extends HTExternalClass {
   SchedulerPhaseAutoBinding() : super('SchedulerPhase');
@@ -30,7 +24,6 @@ class SchedulerPhaseAutoBinding extends HTExternalClass {
     }
   }
 
-
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
@@ -45,4 +38,3 @@ class SchedulerPhaseAutoBinding extends HTExternalClass {
     }
   }
 }
-

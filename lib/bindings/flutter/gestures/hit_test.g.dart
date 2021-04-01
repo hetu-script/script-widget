@@ -1,8 +1,5 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/gestures.dart';
-import 'package:flutter/foundation.dart';
-import 'package:vector_math/vector_math_64.dart';
-
 
 class HitTestEntryAutoBinding extends HTExternalClass {
   HitTestEntryAutoBinding() : super('HitTestEntry');
@@ -21,9 +18,6 @@ class HitTestEntryAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as HitTestEntry).htFetch(id);
   }
-
-
-
 }
 
 extension HitTestEntryBinding on HitTestEntry {
@@ -36,12 +30,11 @@ extension HitTestEntryBinding on HitTestEntry {
       case 'transform':
         return transform;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class HitTestResultAutoBinding extends HTExternalClass {
@@ -63,9 +56,6 @@ class HitTestResultAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as HitTestResult).htFetch(id);
   }
-
-
-
 }
 
 extension HitTestResultBinding on HitTestResult {
@@ -76,13 +66,11 @@ extension HitTestResultBinding on HitTestResult {
       case 'path':
         return path;
       case 'add':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.add(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => add(positionalArgs[0]);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
-

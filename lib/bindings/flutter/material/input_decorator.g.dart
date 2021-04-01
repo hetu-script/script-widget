@@ -1,7 +1,5 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/material.dart';
-import 'dart:math'as math;
-import 'dart:ui';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
@@ -25,7 +23,6 @@ class FloatingLabelBehaviorAutoBinding extends HTExternalClass {
     }
   }
 
-
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
@@ -48,7 +45,17 @@ class InputDecoratorAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'InputDecorator':
-        return ({positionalArgs, namedArgs, typeArgs}) => InputDecorator(key : namedArgs.containsKey('key') ? namedArgs['key'] : null, decoration : namedArgs['decoration'], baseStyle : namedArgs.containsKey('baseStyle') ? namedArgs['baseStyle'] : null, textAlign : namedArgs.containsKey('textAlign') ? namedArgs['textAlign'] : null, textAlignVertical : namedArgs.containsKey('textAlignVertical') ? namedArgs['textAlignVertical'] : null, isFocused : namedArgs.containsKey('isFocused') ? namedArgs['isFocused'] : false, isHovering : namedArgs.containsKey('isHovering') ? namedArgs['isHovering'] : false, expands : namedArgs.containsKey('expands') ? namedArgs['expands'] : false, isEmpty : namedArgs.containsKey('isEmpty') ? namedArgs['isEmpty'] : false, child : namedArgs.containsKey('child') ? namedArgs['child'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => InputDecorator(
+            key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
+            decoration: namedArgs['decoration'],
+            baseStyle: namedArgs.containsKey('baseStyle') ? namedArgs['baseStyle'] : null,
+            textAlign: namedArgs.containsKey('textAlign') ? namedArgs['textAlign'] : null,
+            textAlignVertical: namedArgs.containsKey('textAlignVertical') ? namedArgs['textAlignVertical'] : null,
+            isFocused: namedArgs.containsKey('isFocused') ? namedArgs['isFocused'] : false,
+            isHovering: namedArgs.containsKey('isHovering') ? namedArgs['isHovering'] : false,
+            expands: namedArgs.containsKey('expands') ? namedArgs['expands'] : false,
+            isEmpty: namedArgs.containsKey('isEmpty') ? namedArgs['isEmpty'] : false,
+            child: namedArgs.containsKey('child') ? namedArgs['child'] : null);
       case 'InputDecorator.containerOf':
         return ({positionalArgs, namedArgs, typeArgs}) => InputDecorator.containerOf(positionalArgs[0]);
       default:
@@ -60,9 +67,6 @@ class InputDecoratorAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as InputDecorator).htFetch(id);
   }
-
-
-
 }
 
 extension InputDecoratorBinding on InputDecorator {
@@ -88,15 +92,38 @@ extension InputDecoratorBinding on InputDecorator {
         return isEmpty;
       case 'child':
         return child;
+      case 'key':
+        return key;
+      case 'hashCode':
+        return hashCode;
       case 'createState':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.createState();
+        return ({positionalArgs, namedArgs, typeArgs}) => createState();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+      case 'createElement':
+        return ({positionalArgs, namedArgs, typeArgs}) => createElement();
+      case 'toStringShort':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'toStringShallow':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
+            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toStringDeep':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
+            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class InputDecorationAutoBinding extends HTExternalClass {
@@ -106,9 +133,66 @@ class InputDecorationAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'InputDecoration':
-        return ({positionalArgs, namedArgs, typeArgs}) => InputDecoration(icon : namedArgs.containsKey('icon') ? namedArgs['icon'] : null, labelText : namedArgs.containsKey('labelText') ? namedArgs['labelText'] : null, labelStyle : namedArgs.containsKey('labelStyle') ? namedArgs['labelStyle'] : null, helperText : namedArgs.containsKey('helperText') ? namedArgs['helperText'] : null, helperStyle : namedArgs.containsKey('helperStyle') ? namedArgs['helperStyle'] : null, helperMaxLines : namedArgs.containsKey('helperMaxLines') ? namedArgs['helperMaxLines'] : null, hintText : namedArgs.containsKey('hintText') ? namedArgs['hintText'] : null, hintStyle : namedArgs.containsKey('hintStyle') ? namedArgs['hintStyle'] : null, hintTextDirection : namedArgs.containsKey('hintTextDirection') ? namedArgs['hintTextDirection'] : null, hintMaxLines : namedArgs.containsKey('hintMaxLines') ? namedArgs['hintMaxLines'] : null, errorText : namedArgs.containsKey('errorText') ? namedArgs['errorText'] : null, errorStyle : namedArgs.containsKey('errorStyle') ? namedArgs['errorStyle'] : null, errorMaxLines : namedArgs.containsKey('errorMaxLines') ? namedArgs['errorMaxLines'] : null, hasFloatingPlaceholder : namedArgs.containsKey('hasFloatingPlaceholder') ? namedArgs['hasFloatingPlaceholder'] : true, floatingLabelBehavior : namedArgs.containsKey('floatingLabelBehavior') ? namedArgs['floatingLabelBehavior'] : null, isCollapsed : namedArgs.containsKey('isCollapsed') ? namedArgs['isCollapsed'] : false, isDense : namedArgs.containsKey('isDense') ? namedArgs['isDense'] : null, contentPadding : namedArgs.containsKey('contentPadding') ? namedArgs['contentPadding'] : null, prefixIcon : namedArgs.containsKey('prefixIcon') ? namedArgs['prefixIcon'] : null, prefixIconConstraints : namedArgs.containsKey('prefixIconConstraints') ? namedArgs['prefixIconConstraints'] : null, prefix : namedArgs.containsKey('prefix') ? namedArgs['prefix'] : null, prefixText : namedArgs.containsKey('prefixText') ? namedArgs['prefixText'] : null, prefixStyle : namedArgs.containsKey('prefixStyle') ? namedArgs['prefixStyle'] : null, suffixIcon : namedArgs.containsKey('suffixIcon') ? namedArgs['suffixIcon'] : null, suffix : namedArgs.containsKey('suffix') ? namedArgs['suffix'] : null, suffixText : namedArgs.containsKey('suffixText') ? namedArgs['suffixText'] : null, suffixStyle : namedArgs.containsKey('suffixStyle') ? namedArgs['suffixStyle'] : null, suffixIconConstraints : namedArgs.containsKey('suffixIconConstraints') ? namedArgs['suffixIconConstraints'] : null, counter : namedArgs.containsKey('counter') ? namedArgs['counter'] : null, counterText : namedArgs.containsKey('counterText') ? namedArgs['counterText'] : null, counterStyle : namedArgs.containsKey('counterStyle') ? namedArgs['counterStyle'] : null, filled : namedArgs.containsKey('filled') ? namedArgs['filled'] : null, fillColor : namedArgs.containsKey('fillColor') ? namedArgs['fillColor'] : null, focusColor : namedArgs.containsKey('focusColor') ? namedArgs['focusColor'] : null, hoverColor : namedArgs.containsKey('hoverColor') ? namedArgs['hoverColor'] : null, errorBorder : namedArgs.containsKey('errorBorder') ? namedArgs['errorBorder'] : null, focusedBorder : namedArgs.containsKey('focusedBorder') ? namedArgs['focusedBorder'] : null, focusedErrorBorder : namedArgs.containsKey('focusedErrorBorder') ? namedArgs['focusedErrorBorder'] : null, disabledBorder : namedArgs.containsKey('disabledBorder') ? namedArgs['disabledBorder'] : null, enabledBorder : namedArgs.containsKey('enabledBorder') ? namedArgs['enabledBorder'] : null, border : namedArgs.containsKey('border') ? namedArgs['border'] : null, enabled : namedArgs.containsKey('enabled') ? namedArgs['enabled'] : true, semanticCounterText : namedArgs.containsKey('semanticCounterText') ? namedArgs['semanticCounterText'] : null, alignLabelWithHint : namedArgs.containsKey('alignLabelWithHint') ? namedArgs['alignLabelWithHint'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => InputDecoration(
+            icon: namedArgs.containsKey('icon') ? namedArgs['icon'] : null,
+            labelText: namedArgs.containsKey('labelText') ? namedArgs['labelText'] : null,
+            labelStyle: namedArgs.containsKey('labelStyle') ? namedArgs['labelStyle'] : null,
+            helperText: namedArgs.containsKey('helperText') ? namedArgs['helperText'] : null,
+            helperStyle: namedArgs.containsKey('helperStyle') ? namedArgs['helperStyle'] : null,
+            helperMaxLines: namedArgs.containsKey('helperMaxLines') ? namedArgs['helperMaxLines'] : null,
+            hintText: namedArgs.containsKey('hintText') ? namedArgs['hintText'] : null,
+            hintStyle: namedArgs.containsKey('hintStyle') ? namedArgs['hintStyle'] : null,
+            hintTextDirection: namedArgs.containsKey('hintTextDirection') ? namedArgs['hintTextDirection'] : null,
+            hintMaxLines: namedArgs.containsKey('hintMaxLines') ? namedArgs['hintMaxLines'] : null,
+            errorText: namedArgs.containsKey('errorText') ? namedArgs['errorText'] : null,
+            errorStyle: namedArgs.containsKey('errorStyle') ? namedArgs['errorStyle'] : null,
+            errorMaxLines: namedArgs.containsKey('errorMaxLines') ? namedArgs['errorMaxLines'] : null,
+            floatingLabelBehavior:
+                namedArgs.containsKey('floatingLabelBehavior') ? namedArgs['floatingLabelBehavior'] : null,
+            isCollapsed: namedArgs.containsKey('isCollapsed') ? namedArgs['isCollapsed'] : false,
+            isDense: namedArgs.containsKey('isDense') ? namedArgs['isDense'] : null,
+            contentPadding: namedArgs.containsKey('contentPadding') ? namedArgs['contentPadding'] : null,
+            prefixIcon: namedArgs.containsKey('prefixIcon') ? namedArgs['prefixIcon'] : null,
+            prefixIconConstraints:
+                namedArgs.containsKey('prefixIconConstraints') ? namedArgs['prefixIconConstraints'] : null,
+            prefix: namedArgs.containsKey('prefix') ? namedArgs['prefix'] : null,
+            prefixText: namedArgs.containsKey('prefixText') ? namedArgs['prefixText'] : null,
+            prefixStyle: namedArgs.containsKey('prefixStyle') ? namedArgs['prefixStyle'] : null,
+            suffixIcon: namedArgs.containsKey('suffixIcon') ? namedArgs['suffixIcon'] : null,
+            suffix: namedArgs.containsKey('suffix') ? namedArgs['suffix'] : null,
+            suffixText: namedArgs.containsKey('suffixText') ? namedArgs['suffixText'] : null,
+            suffixStyle: namedArgs.containsKey('suffixStyle') ? namedArgs['suffixStyle'] : null,
+            suffixIconConstraints:
+                namedArgs.containsKey('suffixIconConstraints') ? namedArgs['suffixIconConstraints'] : null,
+            counter: namedArgs.containsKey('counter') ? namedArgs['counter'] : null,
+            counterText: namedArgs.containsKey('counterText') ? namedArgs['counterText'] : null,
+            counterStyle: namedArgs.containsKey('counterStyle') ? namedArgs['counterStyle'] : null,
+            filled: namedArgs.containsKey('filled') ? namedArgs['filled'] : null,
+            fillColor: namedArgs.containsKey('fillColor') ? namedArgs['fillColor'] : null,
+            focusColor: namedArgs.containsKey('focusColor') ? namedArgs['focusColor'] : null,
+            hoverColor: namedArgs.containsKey('hoverColor') ? namedArgs['hoverColor'] : null,
+            errorBorder: namedArgs.containsKey('errorBorder') ? namedArgs['errorBorder'] : null,
+            focusedBorder: namedArgs.containsKey('focusedBorder') ? namedArgs['focusedBorder'] : null,
+            focusedErrorBorder: namedArgs.containsKey('focusedErrorBorder') ? namedArgs['focusedErrorBorder'] : null,
+            disabledBorder: namedArgs.containsKey('disabledBorder') ? namedArgs['disabledBorder'] : null,
+            enabledBorder: namedArgs.containsKey('enabledBorder') ? namedArgs['enabledBorder'] : null,
+            border: namedArgs.containsKey('border') ? namedArgs['border'] : null,
+            enabled: namedArgs.containsKey('enabled') ? namedArgs['enabled'] : true,
+            semanticCounterText: namedArgs.containsKey('semanticCounterText') ? namedArgs['semanticCounterText'] : null,
+            alignLabelWithHint: namedArgs.containsKey('alignLabelWithHint') ? namedArgs['alignLabelWithHint'] : null);
       case 'InputDecoration.collapsed':
-        return ({positionalArgs, namedArgs, typeArgs}) => InputDecoration.collapsed(hintText : namedArgs['hintText'], hasFloatingPlaceholder : namedArgs.containsKey('hasFloatingPlaceholder') ? namedArgs['hasFloatingPlaceholder'] : true, floatingLabelBehavior : namedArgs.containsKey('floatingLabelBehavior') ? namedArgs['floatingLabelBehavior'] : null, hintStyle : namedArgs.containsKey('hintStyle') ? namedArgs['hintStyle'] : null, hintTextDirection : namedArgs.containsKey('hintTextDirection') ? namedArgs['hintTextDirection'] : null, filled : namedArgs.containsKey('filled') ? namedArgs['filled'] : false, fillColor : namedArgs.containsKey('fillColor') ? namedArgs['fillColor'] : null, focusColor : namedArgs.containsKey('focusColor') ? namedArgs['focusColor'] : null, hoverColor : namedArgs.containsKey('hoverColor') ? namedArgs['hoverColor'] : null, border : namedArgs.containsKey('border') ? namedArgs['border'] : InputBorder.none, enabled : namedArgs.containsKey('enabled') ? namedArgs['enabled'] : true);
+        return ({positionalArgs, namedArgs, typeArgs}) => InputDecoration.collapsed(
+            hintText: namedArgs['hintText'],
+            floatingLabelBehavior:
+                namedArgs.containsKey('floatingLabelBehavior') ? namedArgs['floatingLabelBehavior'] : null,
+            hintStyle: namedArgs.containsKey('hintStyle') ? namedArgs['hintStyle'] : null,
+            hintTextDirection: namedArgs.containsKey('hintTextDirection') ? namedArgs['hintTextDirection'] : null,
+            filled: namedArgs.containsKey('filled') ? namedArgs['filled'] : false,
+            fillColor: namedArgs.containsKey('fillColor') ? namedArgs['fillColor'] : null,
+            focusColor: namedArgs.containsKey('focusColor') ? namedArgs['focusColor'] : null,
+            hoverColor: namedArgs.containsKey('hoverColor') ? namedArgs['hoverColor'] : null,
+            border: namedArgs.containsKey('border') ? namedArgs['border'] : InputBorder.none,
+            enabled: namedArgs.containsKey('enabled') ? namedArgs['enabled'] : true);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -118,9 +202,6 @@ class InputDecorationAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as InputDecoration).htFetch(id);
   }
-
-
-
 }
 
 extension InputDecorationBinding on InputDecoration {
@@ -217,16 +298,63 @@ extension InputDecorationBinding on InputDecoration {
       case 'hashCode':
         return hashCode;
       case 'copyWith':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.copyWith(icon : namedArgs.containsKey('icon') ? namedArgs['icon'] : null, labelText : namedArgs.containsKey('labelText') ? namedArgs['labelText'] : null, labelStyle : namedArgs.containsKey('labelStyle') ? namedArgs['labelStyle'] : null, helperText : namedArgs.containsKey('helperText') ? namedArgs['helperText'] : null, helperStyle : namedArgs.containsKey('helperStyle') ? namedArgs['helperStyle'] : null, helperMaxLines : namedArgs.containsKey('helperMaxLines') ? namedArgs['helperMaxLines'] : null, hintText : namedArgs.containsKey('hintText') ? namedArgs['hintText'] : null, hintStyle : namedArgs.containsKey('hintStyle') ? namedArgs['hintStyle'] : null, hintTextDirection : namedArgs.containsKey('hintTextDirection') ? namedArgs['hintTextDirection'] : null, hintMaxLines : namedArgs.containsKey('hintMaxLines') ? namedArgs['hintMaxLines'] : null, errorText : namedArgs.containsKey('errorText') ? namedArgs['errorText'] : null, errorStyle : namedArgs.containsKey('errorStyle') ? namedArgs['errorStyle'] : null, errorMaxLines : namedArgs.containsKey('errorMaxLines') ? namedArgs['errorMaxLines'] : null, hasFloatingPlaceholder : namedArgs.containsKey('hasFloatingPlaceholder') ? namedArgs['hasFloatingPlaceholder'] : null, floatingLabelBehavior : namedArgs.containsKey('floatingLabelBehavior') ? namedArgs['floatingLabelBehavior'] : null, isCollapsed : namedArgs.containsKey('isCollapsed') ? namedArgs['isCollapsed'] : null, isDense : namedArgs.containsKey('isDense') ? namedArgs['isDense'] : null, contentPadding : namedArgs.containsKey('contentPadding') ? namedArgs['contentPadding'] : null, prefixIcon : namedArgs.containsKey('prefixIcon') ? namedArgs['prefixIcon'] : null, prefix : namedArgs.containsKey('prefix') ? namedArgs['prefix'] : null, prefixText : namedArgs.containsKey('prefixText') ? namedArgs['prefixText'] : null, prefixIconConstraints : namedArgs.containsKey('prefixIconConstraints') ? namedArgs['prefixIconConstraints'] : null, prefixStyle : namedArgs.containsKey('prefixStyle') ? namedArgs['prefixStyle'] : null, suffixIcon : namedArgs.containsKey('suffixIcon') ? namedArgs['suffixIcon'] : null, suffix : namedArgs.containsKey('suffix') ? namedArgs['suffix'] : null, suffixText : namedArgs.containsKey('suffixText') ? namedArgs['suffixText'] : null, suffixStyle : namedArgs.containsKey('suffixStyle') ? namedArgs['suffixStyle'] : null, suffixIconConstraints : namedArgs.containsKey('suffixIconConstraints') ? namedArgs['suffixIconConstraints'] : null, counter : namedArgs.containsKey('counter') ? namedArgs['counter'] : null, counterText : namedArgs.containsKey('counterText') ? namedArgs['counterText'] : null, counterStyle : namedArgs.containsKey('counterStyle') ? namedArgs['counterStyle'] : null, filled : namedArgs.containsKey('filled') ? namedArgs['filled'] : null, fillColor : namedArgs.containsKey('fillColor') ? namedArgs['fillColor'] : null, focusColor : namedArgs.containsKey('focusColor') ? namedArgs['focusColor'] : null, hoverColor : namedArgs.containsKey('hoverColor') ? namedArgs['hoverColor'] : null, errorBorder : namedArgs.containsKey('errorBorder') ? namedArgs['errorBorder'] : null, focusedBorder : namedArgs.containsKey('focusedBorder') ? namedArgs['focusedBorder'] : null, focusedErrorBorder : namedArgs.containsKey('focusedErrorBorder') ? namedArgs['focusedErrorBorder'] : null, disabledBorder : namedArgs.containsKey('disabledBorder') ? namedArgs['disabledBorder'] : null, enabledBorder : namedArgs.containsKey('enabledBorder') ? namedArgs['enabledBorder'] : null, border : namedArgs.containsKey('border') ? namedArgs['border'] : null, enabled : namedArgs.containsKey('enabled') ? namedArgs['enabled'] : null, semanticCounterText : namedArgs.containsKey('semanticCounterText') ? namedArgs['semanticCounterText'] : null, alignLabelWithHint : namedArgs.containsKey('alignLabelWithHint') ? namedArgs['alignLabelWithHint'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => copyWith(
+            icon: namedArgs.containsKey('icon') ? namedArgs['icon'] : null,
+            labelText: namedArgs.containsKey('labelText') ? namedArgs['labelText'] : null,
+            labelStyle: namedArgs.containsKey('labelStyle') ? namedArgs['labelStyle'] : null,
+            helperText: namedArgs.containsKey('helperText') ? namedArgs['helperText'] : null,
+            helperStyle: namedArgs.containsKey('helperStyle') ? namedArgs['helperStyle'] : null,
+            helperMaxLines: namedArgs.containsKey('helperMaxLines') ? namedArgs['helperMaxLines'] : null,
+            hintText: namedArgs.containsKey('hintText') ? namedArgs['hintText'] : null,
+            hintStyle: namedArgs.containsKey('hintStyle') ? namedArgs['hintStyle'] : null,
+            hintTextDirection: namedArgs.containsKey('hintTextDirection') ? namedArgs['hintTextDirection'] : null,
+            hintMaxLines: namedArgs.containsKey('hintMaxLines') ? namedArgs['hintMaxLines'] : null,
+            errorText: namedArgs.containsKey('errorText') ? namedArgs['errorText'] : null,
+            errorStyle: namedArgs.containsKey('errorStyle') ? namedArgs['errorStyle'] : null,
+            errorMaxLines: namedArgs.containsKey('errorMaxLines') ? namedArgs['errorMaxLines'] : null,
+            hasFloatingPlaceholder:
+                namedArgs.containsKey('hasFloatingPlaceholder') ? namedArgs['hasFloatingPlaceholder'] : null,
+            floatingLabelBehavior:
+                namedArgs.containsKey('floatingLabelBehavior') ? namedArgs['floatingLabelBehavior'] : null,
+            isCollapsed: namedArgs.containsKey('isCollapsed') ? namedArgs['isCollapsed'] : null,
+            isDense: namedArgs.containsKey('isDense') ? namedArgs['isDense'] : null,
+            contentPadding: namedArgs.containsKey('contentPadding') ? namedArgs['contentPadding'] : null,
+            prefixIcon: namedArgs.containsKey('prefixIcon') ? namedArgs['prefixIcon'] : null,
+            prefix: namedArgs.containsKey('prefix') ? namedArgs['prefix'] : null,
+            prefixText: namedArgs.containsKey('prefixText') ? namedArgs['prefixText'] : null,
+            prefixIconConstraints:
+                namedArgs.containsKey('prefixIconConstraints') ? namedArgs['prefixIconConstraints'] : null,
+            prefixStyle: namedArgs.containsKey('prefixStyle') ? namedArgs['prefixStyle'] : null,
+            suffixIcon: namedArgs.containsKey('suffixIcon') ? namedArgs['suffixIcon'] : null,
+            suffix: namedArgs.containsKey('suffix') ? namedArgs['suffix'] : null,
+            suffixText: namedArgs.containsKey('suffixText') ? namedArgs['suffixText'] : null,
+            suffixStyle: namedArgs.containsKey('suffixStyle') ? namedArgs['suffixStyle'] : null,
+            suffixIconConstraints:
+                namedArgs.containsKey('suffixIconConstraints') ? namedArgs['suffixIconConstraints'] : null,
+            counter: namedArgs.containsKey('counter') ? namedArgs['counter'] : null,
+            counterText: namedArgs.containsKey('counterText') ? namedArgs['counterText'] : null,
+            counterStyle: namedArgs.containsKey('counterStyle') ? namedArgs['counterStyle'] : null,
+            filled: namedArgs.containsKey('filled') ? namedArgs['filled'] : null,
+            fillColor: namedArgs.containsKey('fillColor') ? namedArgs['fillColor'] : null,
+            focusColor: namedArgs.containsKey('focusColor') ? namedArgs['focusColor'] : null,
+            hoverColor: namedArgs.containsKey('hoverColor') ? namedArgs['hoverColor'] : null,
+            errorBorder: namedArgs.containsKey('errorBorder') ? namedArgs['errorBorder'] : null,
+            focusedBorder: namedArgs.containsKey('focusedBorder') ? namedArgs['focusedBorder'] : null,
+            focusedErrorBorder: namedArgs.containsKey('focusedErrorBorder') ? namedArgs['focusedErrorBorder'] : null,
+            disabledBorder: namedArgs.containsKey('disabledBorder') ? namedArgs['disabledBorder'] : null,
+            enabledBorder: namedArgs.containsKey('enabledBorder') ? namedArgs['enabledBorder'] : null,
+            border: namedArgs.containsKey('border') ? namedArgs['border'] : null,
+            enabled: namedArgs.containsKey('enabled') ? namedArgs['enabled'] : null,
+            semanticCounterText: namedArgs.containsKey('semanticCounterText') ? namedArgs['semanticCounterText'] : null,
+            alignLabelWithHint: namedArgs.containsKey('alignLabelWithHint') ? namedArgs['alignLabelWithHint'] : null);
       case 'applyDefaults':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.applyDefaults(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => applyDefaults(positionalArgs[0]);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class InputDecorationThemeAutoBinding extends HTExternalClass {
@@ -236,7 +364,33 @@ class InputDecorationThemeAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'InputDecorationTheme':
-        return ({positionalArgs, namedArgs, typeArgs}) => InputDecorationTheme(labelStyle : namedArgs.containsKey('labelStyle') ? namedArgs['labelStyle'] : null, helperStyle : namedArgs.containsKey('helperStyle') ? namedArgs['helperStyle'] : null, helperMaxLines : namedArgs.containsKey('helperMaxLines') ? namedArgs['helperMaxLines'] : null, hintStyle : namedArgs.containsKey('hintStyle') ? namedArgs['hintStyle'] : null, errorStyle : namedArgs.containsKey('errorStyle') ? namedArgs['errorStyle'] : null, errorMaxLines : namedArgs.containsKey('errorMaxLines') ? namedArgs['errorMaxLines'] : null, hasFloatingPlaceholder : namedArgs.containsKey('hasFloatingPlaceholder') ? namedArgs['hasFloatingPlaceholder'] : true, floatingLabelBehavior : namedArgs.containsKey('floatingLabelBehavior') ? namedArgs['floatingLabelBehavior'] : FloatingLabelBehavior.auto, isDense : namedArgs.containsKey('isDense') ? namedArgs['isDense'] : false, contentPadding : namedArgs.containsKey('contentPadding') ? namedArgs['contentPadding'] : null, isCollapsed : namedArgs.containsKey('isCollapsed') ? namedArgs['isCollapsed'] : false, prefixStyle : namedArgs.containsKey('prefixStyle') ? namedArgs['prefixStyle'] : null, suffixStyle : namedArgs.containsKey('suffixStyle') ? namedArgs['suffixStyle'] : null, counterStyle : namedArgs.containsKey('counterStyle') ? namedArgs['counterStyle'] : null, filled : namedArgs.containsKey('filled') ? namedArgs['filled'] : false, fillColor : namedArgs.containsKey('fillColor') ? namedArgs['fillColor'] : null, focusColor : namedArgs.containsKey('focusColor') ? namedArgs['focusColor'] : null, hoverColor : namedArgs.containsKey('hoverColor') ? namedArgs['hoverColor'] : null, errorBorder : namedArgs.containsKey('errorBorder') ? namedArgs['errorBorder'] : null, focusedBorder : namedArgs.containsKey('focusedBorder') ? namedArgs['focusedBorder'] : null, focusedErrorBorder : namedArgs.containsKey('focusedErrorBorder') ? namedArgs['focusedErrorBorder'] : null, disabledBorder : namedArgs.containsKey('disabledBorder') ? namedArgs['disabledBorder'] : null, enabledBorder : namedArgs.containsKey('enabledBorder') ? namedArgs['enabledBorder'] : null, border : namedArgs.containsKey('border') ? namedArgs['border'] : null, alignLabelWithHint : namedArgs.containsKey('alignLabelWithHint') ? namedArgs['alignLabelWithHint'] : false);
+        return ({positionalArgs, namedArgs, typeArgs}) => InputDecorationTheme(
+            labelStyle: namedArgs.containsKey('labelStyle') ? namedArgs['labelStyle'] : null,
+            helperStyle: namedArgs.containsKey('helperStyle') ? namedArgs['helperStyle'] : null,
+            helperMaxLines: namedArgs.containsKey('helperMaxLines') ? namedArgs['helperMaxLines'] : null,
+            hintStyle: namedArgs.containsKey('hintStyle') ? namedArgs['hintStyle'] : null,
+            errorStyle: namedArgs.containsKey('errorStyle') ? namedArgs['errorStyle'] : null,
+            errorMaxLines: namedArgs.containsKey('errorMaxLines') ? namedArgs['errorMaxLines'] : null,
+            floatingLabelBehavior: namedArgs.containsKey('floatingLabelBehavior')
+                ? namedArgs['floatingLabelBehavior']
+                : FloatingLabelBehavior.auto,
+            isDense: namedArgs.containsKey('isDense') ? namedArgs['isDense'] : false,
+            contentPadding: namedArgs.containsKey('contentPadding') ? namedArgs['contentPadding'] : null,
+            isCollapsed: namedArgs.containsKey('isCollapsed') ? namedArgs['isCollapsed'] : false,
+            prefixStyle: namedArgs.containsKey('prefixStyle') ? namedArgs['prefixStyle'] : null,
+            suffixStyle: namedArgs.containsKey('suffixStyle') ? namedArgs['suffixStyle'] : null,
+            counterStyle: namedArgs.containsKey('counterStyle') ? namedArgs['counterStyle'] : null,
+            filled: namedArgs.containsKey('filled') ? namedArgs['filled'] : false,
+            fillColor: namedArgs.containsKey('fillColor') ? namedArgs['fillColor'] : null,
+            focusColor: namedArgs.containsKey('focusColor') ? namedArgs['focusColor'] : null,
+            hoverColor: namedArgs.containsKey('hoverColor') ? namedArgs['hoverColor'] : null,
+            errorBorder: namedArgs.containsKey('errorBorder') ? namedArgs['errorBorder'] : null,
+            focusedBorder: namedArgs.containsKey('focusedBorder') ? namedArgs['focusedBorder'] : null,
+            focusedErrorBorder: namedArgs.containsKey('focusedErrorBorder') ? namedArgs['focusedErrorBorder'] : null,
+            disabledBorder: namedArgs.containsKey('disabledBorder') ? namedArgs['disabledBorder'] : null,
+            enabledBorder: namedArgs.containsKey('enabledBorder') ? namedArgs['enabledBorder'] : null,
+            border: namedArgs.containsKey('border') ? namedArgs['border'] : null,
+            alignLabelWithHint: namedArgs.containsKey('alignLabelWithHint') ? namedArgs['alignLabelWithHint'] : false);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -246,9 +400,6 @@ class InputDecorationThemeAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as InputDecorationTheme).htFetch(id);
   }
-
-
-
 }
 
 extension InputDecorationThemeBinding on InputDecorationTheme {
@@ -307,13 +458,45 @@ extension InputDecorationThemeBinding on InputDecorationTheme {
       case 'hashCode':
         return hashCode;
       case 'copyWith':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.copyWith(labelStyle : namedArgs.containsKey('labelStyle') ? namedArgs['labelStyle'] : null, helperStyle : namedArgs.containsKey('helperStyle') ? namedArgs['helperStyle'] : null, helperMaxLines : namedArgs.containsKey('helperMaxLines') ? namedArgs['helperMaxLines'] : null, hintStyle : namedArgs.containsKey('hintStyle') ? namedArgs['hintStyle'] : null, errorStyle : namedArgs.containsKey('errorStyle') ? namedArgs['errorStyle'] : null, errorMaxLines : namedArgs.containsKey('errorMaxLines') ? namedArgs['errorMaxLines'] : null, hasFloatingPlaceholder : namedArgs.containsKey('hasFloatingPlaceholder') ? namedArgs['hasFloatingPlaceholder'] : null, floatingLabelBehavior : namedArgs.containsKey('floatingLabelBehavior') ? namedArgs['floatingLabelBehavior'] : null, isDense : namedArgs.containsKey('isDense') ? namedArgs['isDense'] : null, contentPadding : namedArgs.containsKey('contentPadding') ? namedArgs['contentPadding'] : null, isCollapsed : namedArgs.containsKey('isCollapsed') ? namedArgs['isCollapsed'] : null, prefixStyle : namedArgs.containsKey('prefixStyle') ? namedArgs['prefixStyle'] : null, suffixStyle : namedArgs.containsKey('suffixStyle') ? namedArgs['suffixStyle'] : null, counterStyle : namedArgs.containsKey('counterStyle') ? namedArgs['counterStyle'] : null, filled : namedArgs.containsKey('filled') ? namedArgs['filled'] : null, fillColor : namedArgs.containsKey('fillColor') ? namedArgs['fillColor'] : null, focusColor : namedArgs.containsKey('focusColor') ? namedArgs['focusColor'] : null, hoverColor : namedArgs.containsKey('hoverColor') ? namedArgs['hoverColor'] : null, errorBorder : namedArgs.containsKey('errorBorder') ? namedArgs['errorBorder'] : null, focusedBorder : namedArgs.containsKey('focusedBorder') ? namedArgs['focusedBorder'] : null, focusedErrorBorder : namedArgs.containsKey('focusedErrorBorder') ? namedArgs['focusedErrorBorder'] : null, disabledBorder : namedArgs.containsKey('disabledBorder') ? namedArgs['disabledBorder'] : null, enabledBorder : namedArgs.containsKey('enabledBorder') ? namedArgs['enabledBorder'] : null, border : namedArgs.containsKey('border') ? namedArgs['border'] : null, alignLabelWithHint : namedArgs.containsKey('alignLabelWithHint') ? namedArgs['alignLabelWithHint'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => copyWith(
+            labelStyle: namedArgs.containsKey('labelStyle') ? namedArgs['labelStyle'] : null,
+            helperStyle: namedArgs.containsKey('helperStyle') ? namedArgs['helperStyle'] : null,
+            helperMaxLines: namedArgs.containsKey('helperMaxLines') ? namedArgs['helperMaxLines'] : null,
+            hintStyle: namedArgs.containsKey('hintStyle') ? namedArgs['hintStyle'] : null,
+            errorStyle: namedArgs.containsKey('errorStyle') ? namedArgs['errorStyle'] : null,
+            errorMaxLines: namedArgs.containsKey('errorMaxLines') ? namedArgs['errorMaxLines'] : null,
+            floatingLabelBehavior:
+                namedArgs.containsKey('floatingLabelBehavior') ? namedArgs['floatingLabelBehavior'] : null,
+            isDense: namedArgs.containsKey('isDense') ? namedArgs['isDense'] : null,
+            contentPadding: namedArgs.containsKey('contentPadding') ? namedArgs['contentPadding'] : null,
+            isCollapsed: namedArgs.containsKey('isCollapsed') ? namedArgs['isCollapsed'] : null,
+            prefixStyle: namedArgs.containsKey('prefixStyle') ? namedArgs['prefixStyle'] : null,
+            suffixStyle: namedArgs.containsKey('suffixStyle') ? namedArgs['suffixStyle'] : null,
+            counterStyle: namedArgs.containsKey('counterStyle') ? namedArgs['counterStyle'] : null,
+            filled: namedArgs.containsKey('filled') ? namedArgs['filled'] : null,
+            fillColor: namedArgs.containsKey('fillColor') ? namedArgs['fillColor'] : null,
+            focusColor: namedArgs.containsKey('focusColor') ? namedArgs['focusColor'] : null,
+            hoverColor: namedArgs.containsKey('hoverColor') ? namedArgs['hoverColor'] : null,
+            errorBorder: namedArgs.containsKey('errorBorder') ? namedArgs['errorBorder'] : null,
+            focusedBorder: namedArgs.containsKey('focusedBorder') ? namedArgs['focusedBorder'] : null,
+            focusedErrorBorder: namedArgs.containsKey('focusedErrorBorder') ? namedArgs['focusedErrorBorder'] : null,
+            disabledBorder: namedArgs.containsKey('disabledBorder') ? namedArgs['disabledBorder'] : null,
+            enabledBorder: namedArgs.containsKey('enabledBorder') ? namedArgs['enabledBorder'] : null,
+            border: namedArgs.containsKey('border') ? namedArgs['border'] : null,
+            alignLabelWithHint: namedArgs.containsKey('alignLabelWithHint') ? namedArgs['alignLabelWithHint'] : null);
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+      case 'toStringShort':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
-

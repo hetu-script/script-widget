@@ -1,8 +1,5 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/services.dart';
-import 'dart:async';
-import 'dart:ui';
-import 'package:flutter/foundation.dart';
 
 class DeviceOrientationAutoBinding extends HTExternalClass {
   DeviceOrientationAutoBinding() : super('DeviceOrientation');
@@ -25,7 +22,6 @@ class DeviceOrientationAutoBinding extends HTExternalClass {
     }
   }
 
-
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
@@ -40,6 +36,7 @@ class DeviceOrientationAutoBinding extends HTExternalClass {
     }
   }
 }
+
 class SystemUiOverlayAutoBinding extends HTExternalClass {
   SystemUiOverlayAutoBinding() : super('SystemUiOverlay');
 
@@ -56,7 +53,6 @@ class SystemUiOverlayAutoBinding extends HTExternalClass {
         throw HTErrorUndefined(varName);
     }
   }
-
 
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
@@ -80,7 +76,9 @@ class ApplicationSwitcherDescriptionAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'ApplicationSwitcherDescription':
-        return ({positionalArgs, namedArgs, typeArgs}) => ApplicationSwitcherDescription(label : namedArgs.containsKey('label') ? namedArgs['label'] : null, primaryColor : namedArgs.containsKey('primaryColor') ? namedArgs['primaryColor'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => ApplicationSwitcherDescription(
+            label: namedArgs.containsKey('label') ? namedArgs['label'] : null,
+            primaryColor: namedArgs.containsKey('primaryColor') ? namedArgs['primaryColor'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -90,9 +88,6 @@ class ApplicationSwitcherDescriptionAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as ApplicationSwitcherDescription).htFetch(id);
   }
-
-
-
 }
 
 extension ApplicationSwitcherDescriptionBinding on ApplicationSwitcherDescription {
@@ -108,7 +103,6 @@ extension ApplicationSwitcherDescriptionBinding on ApplicationSwitcherDescriptio
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class SystemUiOverlayStyleAutoBinding extends HTExternalClass {
@@ -118,7 +112,19 @@ class SystemUiOverlayStyleAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'SystemUiOverlayStyle':
-        return ({positionalArgs, namedArgs, typeArgs}) => SystemUiOverlayStyle(systemNavigationBarColor : namedArgs.containsKey('systemNavigationBarColor') ? namedArgs['systemNavigationBarColor'] : null, systemNavigationBarDividerColor : namedArgs.containsKey('systemNavigationBarDividerColor') ? namedArgs['systemNavigationBarDividerColor'] : null, systemNavigationBarIconBrightness : namedArgs.containsKey('systemNavigationBarIconBrightness') ? namedArgs['systemNavigationBarIconBrightness'] : null, statusBarColor : namedArgs.containsKey('statusBarColor') ? namedArgs['statusBarColor'] : null, statusBarBrightness : namedArgs.containsKey('statusBarBrightness') ? namedArgs['statusBarBrightness'] : null, statusBarIconBrightness : namedArgs.containsKey('statusBarIconBrightness') ? namedArgs['statusBarIconBrightness'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => SystemUiOverlayStyle(
+            systemNavigationBarColor:
+                namedArgs.containsKey('systemNavigationBarColor') ? namedArgs['systemNavigationBarColor'] : null,
+            systemNavigationBarDividerColor: namedArgs.containsKey('systemNavigationBarDividerColor')
+                ? namedArgs['systemNavigationBarDividerColor']
+                : null,
+            systemNavigationBarIconBrightness: namedArgs.containsKey('systemNavigationBarIconBrightness')
+                ? namedArgs['systemNavigationBarIconBrightness']
+                : null,
+            statusBarColor: namedArgs.containsKey('statusBarColor') ? namedArgs['statusBarColor'] : null,
+            statusBarBrightness: namedArgs.containsKey('statusBarBrightness') ? namedArgs['statusBarBrightness'] : null,
+            statusBarIconBrightness:
+                namedArgs.containsKey('statusBarIconBrightness') ? namedArgs['statusBarIconBrightness'] : null);
       case 'SystemUiOverlayStyle.light':
         return SystemUiOverlayStyle.light;
       case 'SystemUiOverlayStyle.dark':
@@ -132,9 +138,6 @@ class SystemUiOverlayStyleAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as SystemUiOverlayStyle).htFetch(id);
   }
-
-
-
 }
 
 extension SystemUiOverlayStyleBinding on SystemUiOverlayStyle {
@@ -157,14 +160,25 @@ extension SystemUiOverlayStyleBinding on SystemUiOverlayStyle {
       case 'hashCode':
         return hashCode;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       case 'copyWith':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.copyWith(systemNavigationBarColor : namedArgs.containsKey('systemNavigationBarColor') ? namedArgs['systemNavigationBarColor'] : null, systemNavigationBarDividerColor : namedArgs.containsKey('systemNavigationBarDividerColor') ? namedArgs['systemNavigationBarDividerColor'] : null, statusBarColor : namedArgs.containsKey('statusBarColor') ? namedArgs['statusBarColor'] : null, statusBarBrightness : namedArgs.containsKey('statusBarBrightness') ? namedArgs['statusBarBrightness'] : null, statusBarIconBrightness : namedArgs.containsKey('statusBarIconBrightness') ? namedArgs['statusBarIconBrightness'] : null, systemNavigationBarIconBrightness : namedArgs.containsKey('systemNavigationBarIconBrightness') ? namedArgs['systemNavigationBarIconBrightness'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => copyWith(
+            systemNavigationBarColor:
+                namedArgs.containsKey('systemNavigationBarColor') ? namedArgs['systemNavigationBarColor'] : null,
+            systemNavigationBarDividerColor: namedArgs.containsKey('systemNavigationBarDividerColor')
+                ? namedArgs['systemNavigationBarDividerColor']
+                : null,
+            statusBarColor: namedArgs.containsKey('statusBarColor') ? namedArgs['statusBarColor'] : null,
+            statusBarBrightness: namedArgs.containsKey('statusBarBrightness') ? namedArgs['statusBarBrightness'] : null,
+            statusBarIconBrightness:
+                namedArgs.containsKey('statusBarIconBrightness') ? namedArgs['statusBarIconBrightness'] : null,
+            systemNavigationBarIconBrightness: namedArgs.containsKey('systemNavigationBarIconBrightness')
+                ? namedArgs['systemNavigationBarIconBrightness']
+                : null);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class SystemChromeAutoBinding extends HTExternalClass {
@@ -174,11 +188,14 @@ class SystemChromeAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'SystemChrome.setPreferredOrientations':
-        return ({positionalArgs, namedArgs, typeArgs}) => SystemChrome.setPreferredOrientations(List<DeviceOrientation>.from(positionalArgs[0]));
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            SystemChrome.setPreferredOrientations(List<DeviceOrientation>.from(positionalArgs[0]));
       case 'SystemChrome.setApplicationSwitcherDescription':
-        return ({positionalArgs, namedArgs, typeArgs}) => SystemChrome.setApplicationSwitcherDescription(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            SystemChrome.setApplicationSwitcherDescription(positionalArgs[0]);
       case 'SystemChrome.setEnabledSystemUIOverlays':
-        return ({positionalArgs, namedArgs, typeArgs}) => SystemChrome.setEnabledSystemUIOverlays(List<SystemUiOverlay>.from(positionalArgs[0]));
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            SystemChrome.setEnabledSystemUIOverlays(List<SystemUiOverlay>.from(positionalArgs[0]));
       case 'SystemChrome.restoreSystemUIOverlays':
         return ({positionalArgs, namedArgs, typeArgs}) => SystemChrome.restoreSystemUIOverlays();
       case 'SystemChrome.setSystemUIOverlayStyle':
@@ -187,10 +204,4 @@ class SystemChromeAutoBinding extends HTExternalClass {
         throw HTErrorUndefined(varName);
     }
   }
-
-
-
-
 }
-
-

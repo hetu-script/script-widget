@@ -1,0 +1,41 @@
+external class DayPicker {
+    construct 
+    get selectedDate
+    get currentDate
+    get onChanged
+    get firstDate
+    get lastDate
+    get displayedMonth
+    get selectableDayPredicate
+    get dragStartBehavior
+    get key
+    fun build
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+    static fun getDaysInMonth (year, month)
+}
+external class MonthPicker {
+    construct 
+    get selectedDate
+    get onChanged
+    get firstDate
+    get lastDate
+    get selectableDayPredicate
+    get dragStartBehavior
+    get key
+    fun createState
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}

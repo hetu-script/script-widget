@@ -1,0 +1,19 @@
+external class FlutterErrorDetailsForPointerEventDispatcher {
+    construct 
+    get event
+    get hitTestEntry
+    get exception
+    get stack
+    get library
+    get context
+    get stackFilter
+    get informationCollector
+    get silent
+    fun copyWith
+    fun exceptionAsString
+    get summary
+    fun debugFillProperties
+    fun toStringShort
+    fun toString
+    fun toDiagnosticsNode
+}

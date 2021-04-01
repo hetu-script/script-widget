@@ -1,11 +1,6 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/rendering.dart';
-import 'dart:math'as math;
-import 'dart:ui'as ui;
 import 'package:flutter/foundation.dart';
-import 'package:flutter/gestures.dart';
-import 'package:vector_math/vector_math_64.dart';
-
 
 class BoxConstraintsAutoBinding extends HTExternalClass {
   BoxConstraintsAutoBinding() : super('BoxConstraints');
@@ -14,19 +9,30 @@ class BoxConstraintsAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'BoxConstraints':
-        return ({positionalArgs, namedArgs, typeArgs}) => BoxConstraints(minWidth : namedArgs.containsKey('minWidth') ? namedArgs['minWidth'] : 0.0, maxWidth : namedArgs.containsKey('maxWidth') ? namedArgs['maxWidth'] : double.infinity, minHeight : namedArgs.containsKey('minHeight') ? namedArgs['minHeight'] : 0.0, maxHeight : namedArgs.containsKey('maxHeight') ? namedArgs['maxHeight'] : double.infinity);
+        return ({positionalArgs, namedArgs, typeArgs}) => BoxConstraints(
+            minWidth: namedArgs.containsKey('minWidth') ? namedArgs['minWidth'] : 0.0,
+            maxWidth: namedArgs.containsKey('maxWidth') ? namedArgs['maxWidth'] : double.infinity,
+            minHeight: namedArgs.containsKey('minHeight') ? namedArgs['minHeight'] : 0.0,
+            maxHeight: namedArgs.containsKey('maxHeight') ? namedArgs['maxHeight'] : double.infinity);
       case 'BoxConstraints.tight':
         return ({positionalArgs, namedArgs, typeArgs}) => BoxConstraints.tight(positionalArgs[0]);
       case 'BoxConstraints.tightFor':
-        return ({positionalArgs, namedArgs, typeArgs}) => BoxConstraints.tightFor(width : namedArgs.containsKey('width') ? namedArgs['width'] : null, height : namedArgs.containsKey('height') ? namedArgs['height'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => BoxConstraints.tightFor(
+            width: namedArgs.containsKey('width') ? namedArgs['width'] : null,
+            height: namedArgs.containsKey('height') ? namedArgs['height'] : null);
       case 'BoxConstraints.tightForFinite':
-        return ({positionalArgs, namedArgs, typeArgs}) => BoxConstraints.tightForFinite(width : namedArgs.containsKey('width') ? namedArgs['width'] : double.infinity, height : namedArgs.containsKey('height') ? namedArgs['height'] : double.infinity);
+        return ({positionalArgs, namedArgs, typeArgs}) => BoxConstraints.tightForFinite(
+            width: namedArgs.containsKey('width') ? namedArgs['width'] : double.infinity,
+            height: namedArgs.containsKey('height') ? namedArgs['height'] : double.infinity);
       case 'BoxConstraints.loose':
         return ({positionalArgs, namedArgs, typeArgs}) => BoxConstraints.loose(positionalArgs[0]);
       case 'BoxConstraints.expand':
-        return ({positionalArgs, namedArgs, typeArgs}) => BoxConstraints.expand(width : namedArgs.containsKey('width') ? namedArgs['width'] : null, height : namedArgs.containsKey('height') ? namedArgs['height'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => BoxConstraints.expand(
+            width: namedArgs.containsKey('width') ? namedArgs['width'] : null,
+            height: namedArgs.containsKey('height') ? namedArgs['height'] : null);
       case 'BoxConstraints.lerp':
-        return ({positionalArgs, namedArgs, typeArgs}) => BoxConstraints.lerp(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            BoxConstraints.lerp(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -37,13 +43,12 @@ class BoxConstraintsAutoBinding extends HTExternalClass {
     return (instance as BoxConstraints).htFetch(id);
   }
 
-
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'InformationCollector': (HTFunction function) => () => function.call(positionalArgs: const [], namedArgs: const {}) as Iterable<DiagnosticsNode>,
+      'InformationCollector': (HTFunction function) =>
+          () => function.call(positionalArgs: const [], namedArgs: const {}) as Iterable<DiagnosticsNode>,
     };
   }
-
 }
 
 extension BoxConstraintsBinding on BoxConstraints {
@@ -84,42 +89,54 @@ extension BoxConstraintsBinding on BoxConstraints {
       case 'hashCode':
         return hashCode;
       case 'copyWith':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.copyWith(minWidth : namedArgs.containsKey('minWidth') ? namedArgs['minWidth'] : null, maxWidth : namedArgs.containsKey('maxWidth') ? namedArgs['maxWidth'] : null, minHeight : namedArgs.containsKey('minHeight') ? namedArgs['minHeight'] : null, maxHeight : namedArgs.containsKey('maxHeight') ? namedArgs['maxHeight'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => copyWith(
+            minWidth: namedArgs.containsKey('minWidth') ? namedArgs['minWidth'] : null,
+            maxWidth: namedArgs.containsKey('maxWidth') ? namedArgs['maxWidth'] : null,
+            minHeight: namedArgs.containsKey('minHeight') ? namedArgs['minHeight'] : null,
+            maxHeight: namedArgs.containsKey('maxHeight') ? namedArgs['maxHeight'] : null);
       case 'deflate':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.deflate(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => deflate(positionalArgs[0]);
       case 'loosen':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.loosen();
+        return ({positionalArgs, namedArgs, typeArgs}) => loosen();
       case 'enforce':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.enforce(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => enforce(positionalArgs[0]);
       case 'tighten':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.tighten(width : namedArgs.containsKey('width') ? namedArgs['width'] : null, height : namedArgs.containsKey('height') ? namedArgs['height'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => tighten(
+            width: namedArgs.containsKey('width') ? namedArgs['width'] : null,
+            height: namedArgs.containsKey('height') ? namedArgs['height'] : null);
       case 'widthConstraints':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.widthConstraints();
+        return ({positionalArgs, namedArgs, typeArgs}) => widthConstraints();
       case 'heightConstraints':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.heightConstraints();
+        return ({positionalArgs, namedArgs, typeArgs}) => heightConstraints();
       case 'constrainWidth':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.constrainWidth(positionalArgs.length > 0 ? positionalArgs[0] : double.infinity);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            constrainWidth(positionalArgs.length > 0 ? positionalArgs[0] : double.infinity);
       case 'constrainHeight':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.constrainHeight(positionalArgs.length > 0 ? positionalArgs[0] : double.infinity);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            constrainHeight(positionalArgs.length > 0 ? positionalArgs[0] : double.infinity);
       case 'constrain':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.constrain(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => constrain(positionalArgs[0]);
       case 'constrainDimensions':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.constrainDimensions(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => constrainDimensions(positionalArgs[0], positionalArgs[1]);
       case 'constrainSizeAndAttemptToPreserveAspectRatio':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.constrainSizeAndAttemptToPreserveAspectRatio(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            constrainSizeAndAttemptToPreserveAspectRatio(positionalArgs[0]);
       case 'isSatisfiedBy':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.isSatisfiedBy(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => isSatisfiedBy(positionalArgs[0]);
       case 'debugAssertIsValid':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugAssertIsValid(isAppliedConstraint : namedArgs.containsKey('isAppliedConstraint') ? namedArgs['isAppliedConstraint'] : false, informationCollector : namedArgs.containsKey('informationCollector') ? namedArgs['informationCollector'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugAssertIsValid(
+            isAppliedConstraint:
+                namedArgs.containsKey('isAppliedConstraint') ? namedArgs['isAppliedConstraint'] : false,
+            informationCollector:
+                namedArgs.containsKey('informationCollector') ? namedArgs['informationCollector'] : null);
       case 'normalize':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.normalize();
+        return ({positionalArgs, namedArgs, typeArgs}) => normalize();
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class BoxHitTestResultAutoBinding extends HTExternalClass {
@@ -142,14 +159,14 @@ class BoxHitTestResultAutoBinding extends HTExternalClass {
     return (instance as BoxHitTestResult).htFetch(id);
   }
 
-
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'BoxHitTest': (HTFunction function) => (result, position) => function.call(positionalArgs: [result, position], namedArgs: const {}) as bool,
-      'BoxHitTestWithOutOfBandPosition': (HTFunction function) => (result) => function.call(positionalArgs: [result], namedArgs: const {}) as bool,
+      'BoxHitTest': (HTFunction function) =>
+          (result, position) => function.call(positionalArgs: [result, position], namedArgs: const {}) as bool,
+      'BoxHitTestWithOutOfBandPosition': (HTFunction function) =>
+          (result) => function.call(positionalArgs: [result], namedArgs: const {}) as bool,
     };
   }
-
 }
 
 extension BoxHitTestResultBinding on BoxHitTestResult {
@@ -160,22 +177,34 @@ extension BoxHitTestResultBinding on BoxHitTestResult {
       case 'path':
         return path;
       case 'addWithPaintTransform':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.addWithPaintTransform(transform : namedArgs.containsKey('transform') ? namedArgs['transform'] : null, position : namedArgs.containsKey('position') ? namedArgs['position'] : null, hitTest : namedArgs.containsKey('hitTest') ? namedArgs['hitTest'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => addWithPaintTransform(
+            transform: namedArgs.containsKey('transform') ? namedArgs['transform'] : null,
+            position: namedArgs.containsKey('position') ? namedArgs['position'] : null,
+            hitTest: namedArgs.containsKey('hitTest') ? namedArgs['hitTest'] : null);
       case 'addWithPaintOffset':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.addWithPaintOffset(offset : namedArgs.containsKey('offset') ? namedArgs['offset'] : null, position : namedArgs.containsKey('position') ? namedArgs['position'] : null, hitTest : namedArgs.containsKey('hitTest') ? namedArgs['hitTest'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => addWithPaintOffset(
+            offset: namedArgs.containsKey('offset') ? namedArgs['offset'] : null,
+            position: namedArgs.containsKey('position') ? namedArgs['position'] : null,
+            hitTest: namedArgs.containsKey('hitTest') ? namedArgs['hitTest'] : null);
       case 'addWithRawTransform':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.addWithRawTransform(transform : namedArgs.containsKey('transform') ? namedArgs['transform'] : null, position : namedArgs.containsKey('position') ? namedArgs['position'] : null, hitTest : namedArgs.containsKey('hitTest') ? namedArgs['hitTest'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => addWithRawTransform(
+            transform: namedArgs.containsKey('transform') ? namedArgs['transform'] : null,
+            position: namedArgs.containsKey('position') ? namedArgs['position'] : null,
+            hitTest: namedArgs.containsKey('hitTest') ? namedArgs['hitTest'] : null);
       case 'addWithOutOfBandPosition':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.addWithOutOfBandPosition(paintOffset : namedArgs.containsKey('paintOffset') ? namedArgs['paintOffset'] : null, paintTransform : namedArgs.containsKey('paintTransform') ? namedArgs['paintTransform'] : null, rawTransform : namedArgs.containsKey('rawTransform') ? namedArgs['rawTransform'] : null, hitTest : namedArgs.containsKey('hitTest') ? namedArgs['hitTest'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => addWithOutOfBandPosition(
+            paintOffset: namedArgs.containsKey('paintOffset') ? namedArgs['paintOffset'] : null,
+            paintTransform: namedArgs.containsKey('paintTransform') ? namedArgs['paintTransform'] : null,
+            rawTransform: namedArgs.containsKey('rawTransform') ? namedArgs['rawTransform'] : null,
+            hitTest: namedArgs.containsKey('hitTest') ? namedArgs['hitTest'] : null);
       case 'add':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.add(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => add(positionalArgs[0]);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class BoxHitTestEntryAutoBinding extends HTExternalClass {
@@ -195,9 +224,6 @@ class BoxHitTestEntryAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as BoxHitTestEntry).htFetch(id);
   }
-
-
-
 }
 
 extension BoxHitTestEntryBinding on BoxHitTestEntry {
@@ -212,12 +238,11 @@ extension BoxHitTestEntryBinding on BoxHitTestEntry {
       case 'transform':
         return transform;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class BoxParentDataAutoBinding extends HTExternalClass {
@@ -242,8 +267,6 @@ class BoxParentDataAutoBinding extends HTExternalClass {
   void instanceMemberSet(dynamic instance, String id, dynamic value) {
     (instance as BoxParentData).htAssign(id, value);
   }
-
-
 }
 
 extension BoxParentDataBinding on BoxParentData {
@@ -254,7 +277,7 @@ extension BoxParentDataBinding on BoxParentData {
       case 'offset':
         return offset;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
         throw HTErrorUndefined(varName);
     }
@@ -263,11 +286,10 @@ extension BoxParentDataBinding on BoxParentData {
   void htAssign(String varName, dynamic value) {
     switch (varName) {
       case 'offset':
-        this.offset = value;
+        offset = value;
         break;
       default:
         throw HTErrorUndefined(varName);
     }
   }
 }
-

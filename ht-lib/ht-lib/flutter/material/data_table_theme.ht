@@ -1,0 +1,36 @@
+external class DataTableThemeData {
+    construct 
+    get decoration
+    get dataRowColor
+    get dataRowHeight
+    get dataTextStyle
+    get headingRowColor
+    get headingRowHeight
+    get headingTextStyle
+    get horizontalMargin
+    get columnSpacing
+    get dividerThickness
+    fun copyWith
+    get hashCode
+    fun debugFillProperties
+    fun toStringShort
+    fun toString
+    fun toDiagnosticsNode
+    static fun lerp (a, b, t)
+}
+external class DataTableTheme {
+    construct 
+    get data
+    get child
+    get key
+    fun updateShouldNotify
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+    static fun of (context)
+}

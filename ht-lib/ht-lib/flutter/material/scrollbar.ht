@@ -1,0 +1,21 @@
+external class Scrollbar {
+    construct 
+    get child
+    get controller
+    get isAlwaysShown
+    get showTrackOnHover
+    get hoverThickness
+    get thickness
+    get radius
+    get notificationPredicate
+    get key
+    fun createState
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}

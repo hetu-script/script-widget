@@ -27,7 +27,6 @@ class MaterialTypeAutoBinding extends HTExternalClass {
     }
   }
 
-
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
@@ -50,7 +49,20 @@ class MaterialAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'Material':
-        return ({positionalArgs, namedArgs, typeArgs}) => Material(key : namedArgs.containsKey('key') ? namedArgs['key'] : null, type : namedArgs.containsKey('type') ? namedArgs['type'] : MaterialType.canvas, elevation : namedArgs.containsKey('elevation') ? namedArgs['elevation'] : 0.0, color : namedArgs.containsKey('color') ? namedArgs['color'] : null, shadowColor : namedArgs.containsKey('shadowColor') ? namedArgs['shadowColor'] : null, textStyle : namedArgs.containsKey('textStyle') ? namedArgs['textStyle'] : null, borderRadius : namedArgs.containsKey('borderRadius') ? namedArgs['borderRadius'] : null, shape : namedArgs.containsKey('shape') ? namedArgs['shape'] : null, borderOnForeground : namedArgs.containsKey('borderOnForeground') ? namedArgs['borderOnForeground'] : true, clipBehavior : namedArgs.containsKey('clipBehavior') ? namedArgs['clipBehavior'] : Clip.none, animationDuration : namedArgs.containsKey('animationDuration') ? namedArgs['animationDuration'] : kThemeChangeDuration, child : namedArgs.containsKey('child') ? namedArgs['child'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => Material(
+            key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
+            type: namedArgs.containsKey('type') ? namedArgs['type'] : MaterialType.canvas,
+            elevation: namedArgs.containsKey('elevation') ? namedArgs['elevation'] : 0.0,
+            color: namedArgs.containsKey('color') ? namedArgs['color'] : null,
+            shadowColor: namedArgs.containsKey('shadowColor') ? namedArgs['shadowColor'] : null,
+            textStyle: namedArgs.containsKey('textStyle') ? namedArgs['textStyle'] : null,
+            borderRadius: namedArgs.containsKey('borderRadius') ? namedArgs['borderRadius'] : null,
+            shape: namedArgs.containsKey('shape') ? namedArgs['shape'] : null,
+            borderOnForeground: namedArgs.containsKey('borderOnForeground') ? namedArgs['borderOnForeground'] : true,
+            clipBehavior: namedArgs.containsKey('clipBehavior') ? namedArgs['clipBehavior'] : Clip.none,
+            animationDuration:
+                namedArgs.containsKey('animationDuration') ? namedArgs['animationDuration'] : kThemeChangeDuration,
+            child: namedArgs.containsKey('child') ? namedArgs['child'] : null);
       case 'Material.of':
         return ({positionalArgs, namedArgs, typeArgs}) => Material.of(positionalArgs[0]);
       case 'Material.defaultSplashRadius':
@@ -64,9 +76,6 @@ class MaterialAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as Material).htFetch(id);
   }
-
-
-
 }
 
 extension MaterialBinding on Material {
@@ -96,15 +105,38 @@ extension MaterialBinding on Material {
         return animationDuration;
       case 'borderRadius':
         return borderRadius;
+      case 'key':
+        return key;
+      case 'hashCode':
+        return hashCode;
       case 'createState':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.createState();
+        return ({positionalArgs, namedArgs, typeArgs}) => createState();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+      case 'createElement':
+        return ({positionalArgs, namedArgs, typeArgs}) => createElement();
+      case 'toStringShort':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'toStringShallow':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
+            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toStringDeep':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
+            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class ShapeBorderTweenAutoBinding extends HTExternalClass {
@@ -114,7 +146,9 @@ class ShapeBorderTweenAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'ShapeBorderTween':
-        return ({positionalArgs, namedArgs, typeArgs}) => ShapeBorderTween(begin : namedArgs.containsKey('begin') ? namedArgs['begin'] : null, end : namedArgs.containsKey('end') ? namedArgs['end'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => ShapeBorderTween(
+            begin: namedArgs.containsKey('begin') ? namedArgs['begin'] : null,
+            end: namedArgs.containsKey('end') ? namedArgs['end'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -129,8 +163,6 @@ class ShapeBorderTweenAutoBinding extends HTExternalClass {
   void instanceMemberSet(dynamic instance, String id, dynamic value) {
     (instance as ShapeBorderTween).htAssign(id, value);
   }
-
-
 }
 
 extension ShapeBorderTweenBinding on ShapeBorderTween {
@@ -143,17 +175,17 @@ extension ShapeBorderTweenBinding on ShapeBorderTween {
       case 'end':
         return end;
       case 'lerp':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.lerp(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => lerp(positionalArgs[0]);
       case 'transform':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.transform(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => transform(positionalArgs[0]);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       case 'evaluate':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.evaluate(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => evaluate(positionalArgs[0]);
       case 'animate':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.animate(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => animate(positionalArgs[0]);
       case 'chain':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.chain(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => chain(positionalArgs[0]);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -162,14 +194,13 @@ extension ShapeBorderTweenBinding on ShapeBorderTween {
   void htAssign(String varName, dynamic value) {
     switch (varName) {
       case 'begin':
-        this.begin = value;
+        begin = value;
         break;
       case 'end':
-        this.end = value;
+        end = value;
         break;
       default:
         throw HTErrorUndefined(varName);
     }
   }
 }
-

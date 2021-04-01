@@ -1,7 +1,5 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'dart:async';
-import "dart:collection";
-
 
 class TimerAutoBinding extends HTExternalClass {
   TimerAutoBinding() : super('Timer');
@@ -24,9 +22,6 @@ class TimerAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as Timer).htFetch(id);
   }
-
-
-
 }
 
 extension TimerBinding on Timer {
@@ -39,11 +34,9 @@ extension TimerBinding on Timer {
       case 'isActive':
         return isActive;
       case 'cancel':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.cancel();
+        return ({positionalArgs, namedArgs, typeArgs}) => cancel();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
-

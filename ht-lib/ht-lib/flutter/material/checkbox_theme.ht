@@ -1,0 +1,33 @@
+external class CheckboxThemeData {
+    construct 
+    get mouseCursor
+    get fillColor
+    get checkColor
+    get overlayColor
+    get splashRadius
+    get materialTapTargetSize
+    get visualDensity
+    fun copyWith
+    get hashCode
+    fun debugFillProperties
+    fun toStringShort
+    fun toString
+    fun toDiagnosticsNode
+    static fun lerp (a, b, t)
+}
+external class CheckboxTheme {
+    construct 
+    get data
+    get child
+    get key
+    fun updateShouldNotify
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+    static fun of (context)
+}

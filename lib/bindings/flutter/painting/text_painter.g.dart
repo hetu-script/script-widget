@@ -1,9 +1,6 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/painting.dart';
-import 'dart:math';
-import 'dart:ui'as ui;
-import 'package:flutter/foundation.dart';
-import 'package:flutter/services.dart';
+import 'dart:ui' as ui;
 
 class TextWidthBasisAutoBinding extends HTExternalClass {
   TextWidthBasisAutoBinding() : super('TextWidthBasis');
@@ -21,7 +18,6 @@ class TextWidthBasisAutoBinding extends HTExternalClass {
         throw HTErrorUndefined(varName);
     }
   }
-
 
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
@@ -45,7 +41,11 @@ class PlaceholderDimensionsAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'PlaceholderDimensions':
-        return ({positionalArgs, namedArgs, typeArgs}) => PlaceholderDimensions(size : namedArgs['size'], alignment : namedArgs['alignment'], baseline : namedArgs.containsKey('baseline') ? namedArgs['baseline'] : null, baselineOffset : namedArgs.containsKey('baselineOffset') ? namedArgs['baselineOffset'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => PlaceholderDimensions(
+            size: namedArgs['size'],
+            alignment: namedArgs['alignment'],
+            baseline: namedArgs.containsKey('baseline') ? namedArgs['baseline'] : null,
+            baselineOffset: namedArgs.containsKey('baselineOffset') ? namedArgs['baselineOffset'] : null);
       case 'PlaceholderDimensions.empty':
         return PlaceholderDimensions.empty;
       default:
@@ -57,9 +57,6 @@ class PlaceholderDimensionsAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as PlaceholderDimensions).htFetch(id);
   }
-
-
-
 }
 
 extension PlaceholderDimensionsBinding on PlaceholderDimensions {
@@ -76,12 +73,11 @@ extension PlaceholderDimensionsBinding on PlaceholderDimensions {
       case 'baseline':
         return baseline;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class TextPainterAutoBinding extends HTExternalClass {
@@ -91,7 +87,18 @@ class TextPainterAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'TextPainter':
-        return ({positionalArgs, namedArgs, typeArgs}) => TextPainter(text : namedArgs.containsKey('text') ? namedArgs['text'] : null, textAlign : namedArgs.containsKey('textAlign') ? namedArgs['textAlign'] : TextAlign.start, textDirection : namedArgs.containsKey('textDirection') ? namedArgs['textDirection'] : null, textScaleFactor : namedArgs.containsKey('textScaleFactor') ? namedArgs['textScaleFactor'] : 1.0, maxLines : namedArgs.containsKey('maxLines') ? namedArgs['maxLines'] : null, ellipsis : namedArgs.containsKey('ellipsis') ? namedArgs['ellipsis'] : null, locale : namedArgs.containsKey('locale') ? namedArgs['locale'] : null, strutStyle : namedArgs.containsKey('strutStyle') ? namedArgs['strutStyle'] : null, textWidthBasis : namedArgs.containsKey('textWidthBasis') ? namedArgs['textWidthBasis'] : TextWidthBasis.parent, textHeightBehavior : namedArgs.containsKey('textHeightBehavior') ? namedArgs['textHeightBehavior'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => TextPainter(
+            text: namedArgs.containsKey('text') ? namedArgs['text'] : null,
+            textAlign: namedArgs.containsKey('textAlign') ? namedArgs['textAlign'] : TextAlign.start,
+            textDirection: namedArgs.containsKey('textDirection') ? namedArgs['textDirection'] : null,
+            textScaleFactor: namedArgs.containsKey('textScaleFactor') ? namedArgs['textScaleFactor'] : 1.0,
+            maxLines: namedArgs.containsKey('maxLines') ? namedArgs['maxLines'] : null,
+            ellipsis: namedArgs.containsKey('ellipsis') ? namedArgs['ellipsis'] : null,
+            locale: namedArgs.containsKey('locale') ? namedArgs['locale'] : null,
+            strutStyle: namedArgs.containsKey('strutStyle') ? namedArgs['strutStyle'] : null,
+            textWidthBasis:
+                namedArgs.containsKey('textWidthBasis') ? namedArgs['textWidthBasis'] : TextWidthBasis.parent,
+            textHeightBehavior: namedArgs.containsKey('textHeightBehavior') ? namedArgs['textHeightBehavior'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -106,8 +113,6 @@ class TextPainterAutoBinding extends HTExternalClass {
   void instanceMemberSet(dynamic instance, String id, dynamic value) {
     (instance as TextPainter).htAssign(id, value);
   }
-
-
 }
 
 extension TextPainterBinding on TextPainter {
@@ -154,33 +159,40 @@ extension TextPainterBinding on TextPainter {
       case 'didExceedMaxLines':
         return didExceedMaxLines;
       case 'markNeedsLayout':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.markNeedsLayout();
+        return ({positionalArgs, namedArgs, typeArgs}) => markNeedsLayout();
       case 'setPlaceholderDimensions':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.setPlaceholderDimensions(List<PlaceholderDimensions>.from(positionalArgs[0]));
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            setPlaceholderDimensions(List<PlaceholderDimensions>.from(positionalArgs[0]));
       case 'computeDistanceToActualBaseline':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.computeDistanceToActualBaseline(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => computeDistanceToActualBaseline(positionalArgs[0]);
       case 'layout':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.layout(minWidth : namedArgs.containsKey('minWidth') ? namedArgs['minWidth'] : 0.0, maxWidth : namedArgs.containsKey('maxWidth') ? namedArgs['maxWidth'] : double.infinity);
+        return ({positionalArgs, namedArgs, typeArgs}) => layout(
+            minWidth: namedArgs.containsKey('minWidth') ? namedArgs['minWidth'] : 0.0,
+            maxWidth: namedArgs.containsKey('maxWidth') ? namedArgs['maxWidth'] : double.infinity);
       case 'paint':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.paint(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => paint(positionalArgs[0], positionalArgs[1]);
       case 'getOffsetAfter':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.getOffsetAfter(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => getOffsetAfter(positionalArgs[0]);
       case 'getOffsetBefore':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.getOffsetBefore(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => getOffsetBefore(positionalArgs[0]);
       case 'getOffsetForCaret':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.getOffsetForCaret(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => getOffsetForCaret(positionalArgs[0], positionalArgs[1]);
       case 'getFullHeightForCaret':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.getFullHeightForCaret(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => getFullHeightForCaret(positionalArgs[0], positionalArgs[1]);
       case 'getBoxesForSelection':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.getBoxesForSelection(positionalArgs[0], boxHeightStyle : namedArgs.containsKey('boxHeightStyle') ? namedArgs['boxHeightStyle'] : ui.BoxHeightStyle.tight, boxWidthStyle : namedArgs.containsKey('boxWidthStyle') ? namedArgs['boxWidthStyle'] : ui.BoxWidthStyle.tight);
+        return ({positionalArgs, namedArgs, typeArgs}) => getBoxesForSelection(positionalArgs[0],
+            boxHeightStyle:
+                namedArgs.containsKey('boxHeightStyle') ? namedArgs['boxHeightStyle'] : ui.BoxHeightStyle.tight,
+            boxWidthStyle:
+                namedArgs.containsKey('boxWidthStyle') ? namedArgs['boxWidthStyle'] : ui.BoxWidthStyle.tight);
       case 'getPositionForOffset':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.getPositionForOffset(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => getPositionForOffset(positionalArgs[0]);
       case 'getWordBoundary':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.getWordBoundary(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => getWordBoundary(positionalArgs[0]);
       case 'getLineBoundary':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.getLineBoundary(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => getLineBoundary(positionalArgs[0]);
       case 'computeLineMetrics':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.computeLineMetrics();
+        return ({positionalArgs, namedArgs, typeArgs}) => computeLineMetrics();
       default:
         throw HTErrorUndefined(varName);
     }
@@ -189,38 +201,37 @@ extension TextPainterBinding on TextPainter {
   void htAssign(String varName, dynamic value) {
     switch (varName) {
       case 'text':
-        this.text = value;
+        text = value;
         break;
       case 'textAlign':
-        this.textAlign = value;
+        textAlign = value;
         break;
       case 'textDirection':
-        this.textDirection = value;
+        textDirection = value;
         break;
       case 'textScaleFactor':
-        this.textScaleFactor = value;
+        textScaleFactor = value;
         break;
       case 'ellipsis':
-        this.ellipsis = value;
+        ellipsis = value;
         break;
       case 'locale':
-        this.locale = value;
+        locale = value;
         break;
       case 'maxLines':
-        this.maxLines = value;
+        maxLines = value;
         break;
       case 'strutStyle':
-        this.strutStyle = value;
+        strutStyle = value;
         break;
       case 'textWidthBasis':
-        this.textWidthBasis = value;
+        textWidthBasis = value;
         break;
       case 'textHeightBehavior':
-        this.textHeightBehavior = value;
+        textHeightBehavior = value;
         break;
       default:
         throw HTErrorUndefined(varName);
     }
   }
 }
-

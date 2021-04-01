@@ -1,7 +1,5 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/foundation.dart';
-import 'package:meta/meta.dart';
-
 
 class LicenseParagraphAutoBinding extends HTExternalClass {
   LicenseParagraphAutoBinding() : super('LicenseParagraph');
@@ -22,9 +20,6 @@ class LicenseParagraphAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as LicenseParagraph).htFetch(id);
   }
-
-
-
 }
 
 extension LicenseParagraphBinding on LicenseParagraph {
@@ -40,7 +35,6 @@ extension LicenseParagraphBinding on LicenseParagraph {
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class LicenseEntryWithLineBreaksAutoBinding extends HTExternalClass {
@@ -50,7 +44,8 @@ class LicenseEntryWithLineBreaksAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'LicenseEntryWithLineBreaks':
-        return ({positionalArgs, namedArgs, typeArgs}) => LicenseEntryWithLineBreaks(List<String>.from(positionalArgs[0]), positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            LicenseEntryWithLineBreaks(List<String>.from(positionalArgs[0]), positionalArgs[1]);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -60,9 +55,6 @@ class LicenseEntryWithLineBreaksAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as LicenseEntryWithLineBreaks).htFetch(id);
   }
-
-
-
 }
 
 extension LicenseEntryWithLineBreaksBinding on LicenseEntryWithLineBreaks {
@@ -80,7 +72,6 @@ extension LicenseEntryWithLineBreaksBinding on LicenseEntryWithLineBreaks {
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class LicenseRegistryAutoBinding extends HTExternalClass {
@@ -98,14 +89,10 @@ class LicenseRegistryAutoBinding extends HTExternalClass {
     }
   }
 
-
-
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'LicenseEntryCollector': (HTFunction function) => () => function.call(positionalArgs: const [], namedArgs: const {}) as Stream<LicenseEntry>,
+      'LicenseEntryCollector': (HTFunction function) =>
+          () => function.call(positionalArgs: const [], namedArgs: const {}) as Stream<LicenseEntry>,
     };
   }
-
 }
-
-

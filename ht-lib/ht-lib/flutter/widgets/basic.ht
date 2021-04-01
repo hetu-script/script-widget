@@ -1,0 +1,1236 @@
+external class Directionality {
+    construct 
+    get textDirection
+    get child
+    get key
+    fun updateShouldNotify
+    fun debugFillProperties
+    fun createElement
+    fun toStringShort
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+    static fun of (context)
+    static fun maybeOf (context)
+}
+external class Opacity {
+    construct 
+    get opacity
+    get alwaysIncludeSemantics
+    get child
+    get key
+    fun createRenderObject
+    fun updateRenderObject
+    fun debugFillProperties
+    fun createElement
+    fun toStringShort
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class ShaderMask {
+    construct 
+    get shaderCallback
+    get blendMode
+    get child
+    get key
+    fun createRenderObject
+    fun updateRenderObject
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class BackdropFilter {
+    construct 
+    get filter
+    get child
+    get key
+    fun createRenderObject
+    fun updateRenderObject
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class CustomPaint {
+    construct 
+    get painter
+    get foregroundPainter
+    get size
+    get isComplex
+    get willChange
+    get child
+    get key
+    fun createRenderObject
+    fun updateRenderObject
+    fun didUnmountRenderObject
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class ClipRect {
+    construct 
+    get clipper
+    get clipBehavior
+    get child
+    get key
+    fun createRenderObject
+    fun updateRenderObject
+    fun didUnmountRenderObject
+    fun debugFillProperties
+    fun createElement
+    fun toStringShort
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class ClipRRect {
+    construct 
+    get borderRadius
+    get clipper
+    get clipBehavior
+    get child
+    get key
+    fun createRenderObject
+    fun updateRenderObject
+    fun debugFillProperties
+    fun createElement
+    fun toStringShort
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class ClipOval {
+    construct 
+    get clipper
+    get clipBehavior
+    get child
+    get key
+    fun createRenderObject
+    fun updateRenderObject
+    fun didUnmountRenderObject
+    fun debugFillProperties
+    fun createElement
+    fun toStringShort
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class ClipPath {
+    construct 
+    get clipper
+    get clipBehavior
+    get child
+    get key
+    fun createRenderObject
+    fun updateRenderObject
+    fun didUnmountRenderObject
+    fun debugFillProperties
+    fun createElement
+    fun toStringShort
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+    static fun shape ({key, shape, clipBehavior, child})
+}
+external class PhysicalModel {
+    construct 
+    get shape
+    get clipBehavior
+    get borderRadius
+    get elevation
+    get color
+    get shadowColor
+    get child
+    get key
+    fun createRenderObject
+    fun updateRenderObject
+    fun debugFillProperties
+    fun createElement
+    fun toStringShort
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class PhysicalShape {
+    construct 
+    get clipper
+    get clipBehavior
+    get elevation
+    get color
+    get shadowColor
+    get child
+    get key
+    fun createRenderObject
+    fun updateRenderObject
+    fun debugFillProperties
+    fun createElement
+    fun toStringShort
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class Transform {
+    construct 
+    construct rotate
+    construct translate
+    construct scale
+    get transform
+    get origin
+    get alignment
+    get transformHitTests
+    get child
+    get key
+    fun createRenderObject
+    fun updateRenderObject
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class CompositedTransformTarget {
+    construct 
+    get link
+    get child
+    get key
+    fun createRenderObject
+    fun updateRenderObject
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class CompositedTransformFollower {
+    construct 
+    get link
+    get showWhenUnlinked
+    get targetAnchor
+    get followerAnchor
+    get offset
+    get child
+    get key
+    fun createRenderObject
+    fun updateRenderObject
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class FittedBox {
+    construct 
+    get fit
+    get alignment
+    get clipBehavior
+    get child
+    get key
+    fun createRenderObject
+    fun updateRenderObject
+    fun debugFillProperties
+    fun createElement
+    fun toStringShort
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class FractionalTranslation {
+    construct 
+    get translation
+    get transformHitTests
+    get child
+    get key
+    fun createRenderObject
+    fun updateRenderObject
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class RotatedBox {
+    construct 
+    get quarterTurns
+    get child
+    get key
+    fun createRenderObject
+    fun updateRenderObject
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class Padding {
+    construct 
+    get padding
+    get child
+    get key
+    fun createRenderObject
+    fun updateRenderObject
+    fun debugFillProperties
+    fun createElement
+    fun toStringShort
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class Align {
+    construct 
+    get alignment
+    get widthFactor
+    get heightFactor
+    get child
+    get key
+    fun createRenderObject
+    fun updateRenderObject
+    fun debugFillProperties
+    fun createElement
+    fun toStringShort
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class Center {
+    construct 
+    get alignment
+    get widthFactor
+    get heightFactor
+    get child
+    get key
+    fun createRenderObject
+    fun updateRenderObject
+    fun debugFillProperties
+    fun createElement
+    fun toStringShort
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class CustomSingleChildLayout {
+    construct 
+    get delegate
+    get child
+    get key
+    fun createRenderObject
+    fun updateRenderObject
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class LayoutId {
+    construct 
+    get id
+    get child
+    get key
+    fun applyParentData
+    get debugTypicalAncestorWidgetClass
+    fun debugFillProperties
+    fun createElement
+    fun debugIsValidRenderObject
+    fun toStringShort
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class CustomMultiChildLayout {
+    construct 
+    get delegate
+    get children
+    get key
+    fun createRenderObject
+    fun updateRenderObject
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class SizedBox {
+    construct 
+    construct expand
+    construct shrink
+    construct fromSize
+    get width
+    get height
+    get child
+    get key
+    fun createRenderObject
+    fun updateRenderObject
+    fun toStringShort
+    fun debugFillProperties
+    fun createElement
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class ConstrainedBox {
+    construct 
+    get constraints
+    get child
+    get key
+    fun createRenderObject
+    fun updateRenderObject
+    fun debugFillProperties
+    fun createElement
+    fun toStringShort
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class UnconstrainedBox {
+    construct 
+    get textDirection
+    get alignment
+    get constrainedAxis
+    get clipBehavior
+    get child
+    get key
+    fun updateRenderObject
+    fun createRenderObject
+    fun debugFillProperties
+    fun createElement
+    fun toStringShort
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class FractionallySizedBox {
+    construct 
+    get widthFactor
+    get heightFactor
+    get alignment
+    get child
+    get key
+    fun createRenderObject
+    fun updateRenderObject
+    fun debugFillProperties
+    fun createElement
+    fun toStringShort
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class LimitedBox {
+    construct 
+    get maxWidth
+    get maxHeight
+    get child
+    get key
+    fun createRenderObject
+    fun updateRenderObject
+    fun debugFillProperties
+    fun createElement
+    fun toStringShort
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class OverflowBox {
+    construct 
+    get alignment
+    get minWidth
+    get maxWidth
+    get minHeight
+    get maxHeight
+    get child
+    get key
+    fun createRenderObject
+    fun updateRenderObject
+    fun debugFillProperties
+    fun createElement
+    fun toStringShort
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class SizedOverflowBox {
+    construct 
+    get alignment
+    get size
+    get child
+    get key
+    fun createRenderObject
+    fun updateRenderObject
+    fun debugFillProperties
+    fun createElement
+    fun toStringShort
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class Offstage {
+    construct 
+    get offstage
+    get child
+    get key
+    fun createRenderObject
+    fun updateRenderObject
+    fun debugFillProperties
+    fun createElement
+    fun toStringShort
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class AspectRatio {
+    construct 
+    get aspectRatio
+    get child
+    get key
+    fun createRenderObject
+    fun updateRenderObject
+    fun debugFillProperties
+    fun createElement
+    fun toStringShort
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class IntrinsicWidth {
+    construct 
+    get stepWidth
+    get stepHeight
+    get child
+    get key
+    fun createRenderObject
+    fun updateRenderObject
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class IntrinsicHeight {
+    construct 
+    get child
+    get key
+    fun createRenderObject
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class Baseline {
+    construct 
+    get baseline
+    get baselineType
+    get child
+    get key
+    fun createRenderObject
+    fun updateRenderObject
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class SliverToBoxAdapter {
+    construct 
+    get child
+    get key
+    fun createRenderObject
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class SliverPadding {
+    construct 
+    get padding
+    get child
+    get key
+    fun createRenderObject
+    fun updateRenderObject
+    fun debugFillProperties
+    fun createElement
+    fun toStringShort
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class ListBody {
+    construct 
+    get mainAxis
+    get reverse
+    get children
+    get key
+    fun createRenderObject
+    fun updateRenderObject
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class Stack {
+    construct 
+    get alignment
+    get textDirection
+    get fit
+    get clipBehavior
+    get children
+    get key
+    fun createRenderObject
+    fun updateRenderObject
+    fun debugFillProperties
+    fun createElement
+    fun toStringShort
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class IndexedStack {
+    construct 
+    get index
+    get alignment
+    get textDirection
+    get fit
+    get clipBehavior
+    get children
+    get key
+    fun createRenderObject
+    fun updateRenderObject
+    fun debugFillProperties
+    fun createElement
+    fun toStringShort
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class Positioned {
+    construct 
+    construct fromRect
+    construct fromRelativeRect
+    construct fill
+    construct directional
+    get left
+    get top
+    get right
+    get bottom
+    get width
+    get height
+    get child
+    get key
+    fun applyParentData
+    get debugTypicalAncestorWidgetClass
+    fun debugFillProperties
+    fun createElement
+    fun debugIsValidRenderObject
+    fun toStringShort
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class PositionedDirectional {
+    construct 
+    get start
+    get top
+    get end
+    get bottom
+    get width
+    get height
+    get child
+    get key
+    fun build
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class Flex {
+    construct 
+    get direction
+    get mainAxisAlignment
+    get mainAxisSize
+    get crossAxisAlignment
+    get textDirection
+    get verticalDirection
+    get textBaseline
+    get clipBehavior
+    get children
+    get key
+    fun createRenderObject
+    fun updateRenderObject
+    fun debugFillProperties
+    fun createElement
+    fun toStringShort
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class Row {
+    construct 
+    get direction
+    get mainAxisAlignment
+    get mainAxisSize
+    get crossAxisAlignment
+    get textDirection
+    get verticalDirection
+    get textBaseline
+    get clipBehavior
+    get children
+    get key
+    fun createRenderObject
+    fun updateRenderObject
+    fun debugFillProperties
+    fun createElement
+    fun toStringShort
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class Column {
+    construct 
+    get direction
+    get mainAxisAlignment
+    get mainAxisSize
+    get crossAxisAlignment
+    get textDirection
+    get verticalDirection
+    get textBaseline
+    get clipBehavior
+    get children
+    get key
+    fun createRenderObject
+    fun updateRenderObject
+    fun debugFillProperties
+    fun createElement
+    fun toStringShort
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class Flexible {
+    construct 
+    get flex
+    get fit
+    get child
+    get key
+    fun applyParentData
+    get debugTypicalAncestorWidgetClass
+    fun debugFillProperties
+    fun createElement
+    fun debugIsValidRenderObject
+    fun toStringShort
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class Expanded {
+    construct 
+    get flex
+    get fit
+    get child
+    get key
+    fun applyParentData
+    get debugTypicalAncestorWidgetClass
+    fun debugFillProperties
+    fun createElement
+    fun debugIsValidRenderObject
+    fun toStringShort
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class Wrap {
+    construct 
+    get direction
+    get alignment
+    get spacing
+    get runAlignment
+    get runSpacing
+    get crossAxisAlignment
+    get textDirection
+    get verticalDirection
+    get clipBehavior
+    get children
+    get key
+    fun createRenderObject
+    fun updateRenderObject
+    fun debugFillProperties
+    fun createElement
+    fun toStringShort
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class Flow {
+    construct 
+    construct unwrapped
+    get delegate
+    get clipBehavior
+    get children
+    get key
+    fun createRenderObject
+    fun updateRenderObject
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class RichText {
+    construct 
+    get text
+    get textAlign
+    get textDirection
+    get softWrap
+    get overflow
+    get textScaleFactor
+    get maxLines
+    get locale
+    get strutStyle
+    get textWidthBasis
+    get textHeightBehavior
+    get children
+    get key
+    fun createRenderObject
+    fun updateRenderObject
+    fun debugFillProperties
+    fun createElement
+    fun toStringShort
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class RawImage {
+    construct 
+    get image
+    get debugImageLabel
+    get width
+    get height
+    get scale
+    get color
+    get filterQuality
+    get colorBlendMode
+    get fit
+    get alignment
+    get repeat
+    get centerSlice
+    get matchTextDirection
+    get invertColors
+    get isAntiAlias
+    get key
+    fun createRenderObject
+    fun updateRenderObject
+    fun didUnmountRenderObject
+    fun debugFillProperties
+    fun createElement
+    fun toStringShort
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class DefaultAssetBundle {
+    construct 
+    get bundle
+    get child
+    get key
+    fun updateShouldNotify
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+    static fun of (context)
+}
+external class WidgetToRenderBoxAdapter {
+    construct 
+    get renderBox
+    get onBuild
+    get key
+    fun createRenderObject
+    fun updateRenderObject
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class Listener {
+    construct 
+    get onPointerDown
+    get onPointerMove
+    get onPointerUp
+    get onPointerHover
+    get onPointerCancel
+    get onPointerSignal
+    get behavior
+    get child
+    get key
+    fun createRenderObject
+    fun updateRenderObject
+    fun debugFillProperties
+    fun createElement
+    fun toStringShort
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class MouseRegion {
+    construct 
+    get onEnter
+    get onHover
+    get onExit
+    get cursor
+    get opaque
+    get child
+    get key
+    fun createState
+    fun debugFillProperties
+    fun createElement
+    fun toStringShort
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class RepaintBoundary {
+    construct 
+    construct wrap
+    get child
+    get key
+    fun createRenderObject
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+    static fun wrapAll (widgets)
+}
+external class IgnorePointer {
+    construct 
+    get ignoring
+    get ignoringSemantics
+    get child
+    get key
+    fun createRenderObject
+    fun updateRenderObject
+    fun debugFillProperties
+    fun createElement
+    fun toStringShort
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class AbsorbPointer {
+    construct 
+    get absorbing
+    get ignoringSemantics
+    get child
+    get key
+    fun createRenderObject
+    fun updateRenderObject
+    fun debugFillProperties
+    fun createElement
+    fun toStringShort
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class MetaData {
+    construct 
+    get metaData
+    get behavior
+    get child
+    get key
+    fun createRenderObject
+    fun updateRenderObject
+    fun debugFillProperties
+    fun createElement
+    fun toStringShort
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class Semantics {
+    construct 
+    construct fromProperties
+    get properties
+    get container
+    get explicitChildNodes
+    get excludeSemantics
+    get child
+    get key
+    fun createRenderObject
+    fun updateRenderObject
+    fun debugFillProperties
+    fun createElement
+    fun toStringShort
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class MergeSemantics {
+    construct 
+    get child
+    get key
+    fun createRenderObject
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class BlockSemantics {
+    construct 
+    get blocking
+    get child
+    get key
+    fun createRenderObject
+    fun updateRenderObject
+    fun debugFillProperties
+    fun createElement
+    fun toStringShort
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class ExcludeSemantics {
+    construct 
+    get excluding
+    get child
+    get key
+    fun createRenderObject
+    fun updateRenderObject
+    fun debugFillProperties
+    fun createElement
+    fun toStringShort
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class IndexedSemantics {
+    construct 
+    get index
+    get child
+    get key
+    fun createRenderObject
+    fun updateRenderObject
+    fun debugFillProperties
+    fun createElement
+    fun toStringShort
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class KeyedSubtree {
+    construct 
+    construct wrap
+    get child
+    get key
+    fun build
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+    static fun ensureUniqueKeysForList (items, {baseIndex})
+}
+external class Builder {
+    construct 
+    get builder
+    get key
+    fun build
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class StatefulBuilder {
+    construct 
+    get builder
+    get key
+    fun createState
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class ColoredBox {
+    construct 
+    get color
+    get child
+    get key
+    fun createRenderObject
+    fun updateRenderObject
+    fun debugFillProperties
+    fun createElement
+    fun toStringShort
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}

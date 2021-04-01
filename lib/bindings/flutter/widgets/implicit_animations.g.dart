@@ -1,10 +1,7 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/widgets.dart';
-import 'dart:ui'as ui;
 import 'package:flutter/foundation.dart';
 import 'package:flutter/rendering.dart';
-import 'package:vector_math/vector_math_64.dart';
-
 
 class BoxConstraintsTweenAutoBinding extends HTExternalClass {
   BoxConstraintsTweenAutoBinding() : super('BoxConstraintsTween');
@@ -13,7 +10,9 @@ class BoxConstraintsTweenAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'BoxConstraintsTween':
-        return ({positionalArgs, namedArgs, typeArgs}) => BoxConstraintsTween(begin : namedArgs.containsKey('begin') ? namedArgs['begin'] : null, end : namedArgs.containsKey('end') ? namedArgs['end'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => BoxConstraintsTween(
+            begin: namedArgs.containsKey('begin') ? namedArgs['begin'] : null,
+            end: namedArgs.containsKey('end') ? namedArgs['end'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -28,8 +27,6 @@ class BoxConstraintsTweenAutoBinding extends HTExternalClass {
   void instanceMemberSet(dynamic instance, String id, dynamic value) {
     (instance as BoxConstraintsTween).htAssign(id, value);
   }
-
-
 }
 
 extension BoxConstraintsTweenBinding on BoxConstraintsTween {
@@ -42,17 +39,17 @@ extension BoxConstraintsTweenBinding on BoxConstraintsTween {
       case 'end':
         return end;
       case 'lerp':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.lerp(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => lerp(positionalArgs[0]);
       case 'transform':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.transform(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => transform(positionalArgs[0]);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       case 'evaluate':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.evaluate(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => evaluate(positionalArgs[0]);
       case 'animate':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.animate(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => animate(positionalArgs[0]);
       case 'chain':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.chain(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => chain(positionalArgs[0]);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -61,10 +58,10 @@ extension BoxConstraintsTweenBinding on BoxConstraintsTween {
   void htAssign(String varName, dynamic value) {
     switch (varName) {
       case 'begin':
-        this.begin = value;
+        begin = value;
         break;
       case 'end':
-        this.end = value;
+        end = value;
         break;
       default:
         throw HTErrorUndefined(varName);
@@ -79,7 +76,9 @@ class DecorationTweenAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'DecorationTween':
-        return ({positionalArgs, namedArgs, typeArgs}) => DecorationTween(begin : namedArgs.containsKey('begin') ? namedArgs['begin'] : null, end : namedArgs.containsKey('end') ? namedArgs['end'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => DecorationTween(
+            begin: namedArgs.containsKey('begin') ? namedArgs['begin'] : null,
+            end: namedArgs.containsKey('end') ? namedArgs['end'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -94,8 +93,6 @@ class DecorationTweenAutoBinding extends HTExternalClass {
   void instanceMemberSet(dynamic instance, String id, dynamic value) {
     (instance as DecorationTween).htAssign(id, value);
   }
-
-
 }
 
 extension DecorationTweenBinding on DecorationTween {
@@ -108,17 +105,17 @@ extension DecorationTweenBinding on DecorationTween {
       case 'end':
         return end;
       case 'lerp':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.lerp(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => lerp(positionalArgs[0]);
       case 'transform':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.transform(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => transform(positionalArgs[0]);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       case 'evaluate':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.evaluate(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => evaluate(positionalArgs[0]);
       case 'animate':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.animate(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => animate(positionalArgs[0]);
       case 'chain':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.chain(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => chain(positionalArgs[0]);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -127,10 +124,10 @@ extension DecorationTweenBinding on DecorationTween {
   void htAssign(String varName, dynamic value) {
     switch (varName) {
       case 'begin':
-        this.begin = value;
+        begin = value;
         break;
       case 'end':
-        this.end = value;
+        end = value;
         break;
       default:
         throw HTErrorUndefined(varName);
@@ -145,7 +142,9 @@ class EdgeInsetsTweenAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'EdgeInsetsTween':
-        return ({positionalArgs, namedArgs, typeArgs}) => EdgeInsetsTween(begin : namedArgs.containsKey('begin') ? namedArgs['begin'] : null, end : namedArgs.containsKey('end') ? namedArgs['end'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => EdgeInsetsTween(
+            begin: namedArgs.containsKey('begin') ? namedArgs['begin'] : null,
+            end: namedArgs.containsKey('end') ? namedArgs['end'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -160,8 +159,6 @@ class EdgeInsetsTweenAutoBinding extends HTExternalClass {
   void instanceMemberSet(dynamic instance, String id, dynamic value) {
     (instance as EdgeInsetsTween).htAssign(id, value);
   }
-
-
 }
 
 extension EdgeInsetsTweenBinding on EdgeInsetsTween {
@@ -174,17 +171,17 @@ extension EdgeInsetsTweenBinding on EdgeInsetsTween {
       case 'end':
         return end;
       case 'lerp':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.lerp(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => lerp(positionalArgs[0]);
       case 'transform':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.transform(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => transform(positionalArgs[0]);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       case 'evaluate':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.evaluate(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => evaluate(positionalArgs[0]);
       case 'animate':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.animate(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => animate(positionalArgs[0]);
       case 'chain':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.chain(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => chain(positionalArgs[0]);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -193,10 +190,10 @@ extension EdgeInsetsTweenBinding on EdgeInsetsTween {
   void htAssign(String varName, dynamic value) {
     switch (varName) {
       case 'begin':
-        this.begin = value;
+        begin = value;
         break;
       case 'end':
-        this.end = value;
+        end = value;
         break;
       default:
         throw HTErrorUndefined(varName);
@@ -211,7 +208,9 @@ class EdgeInsetsGeometryTweenAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'EdgeInsetsGeometryTween':
-        return ({positionalArgs, namedArgs, typeArgs}) => EdgeInsetsGeometryTween(begin : namedArgs.containsKey('begin') ? namedArgs['begin'] : null, end : namedArgs.containsKey('end') ? namedArgs['end'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => EdgeInsetsGeometryTween(
+            begin: namedArgs.containsKey('begin') ? namedArgs['begin'] : null,
+            end: namedArgs.containsKey('end') ? namedArgs['end'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -226,8 +225,6 @@ class EdgeInsetsGeometryTweenAutoBinding extends HTExternalClass {
   void instanceMemberSet(dynamic instance, String id, dynamic value) {
     (instance as EdgeInsetsGeometryTween).htAssign(id, value);
   }
-
-
 }
 
 extension EdgeInsetsGeometryTweenBinding on EdgeInsetsGeometryTween {
@@ -240,17 +237,17 @@ extension EdgeInsetsGeometryTweenBinding on EdgeInsetsGeometryTween {
       case 'end':
         return end;
       case 'lerp':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.lerp(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => lerp(positionalArgs[0]);
       case 'transform':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.transform(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => transform(positionalArgs[0]);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       case 'evaluate':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.evaluate(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => evaluate(positionalArgs[0]);
       case 'animate':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.animate(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => animate(positionalArgs[0]);
       case 'chain':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.chain(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => chain(positionalArgs[0]);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -259,10 +256,10 @@ extension EdgeInsetsGeometryTweenBinding on EdgeInsetsGeometryTween {
   void htAssign(String varName, dynamic value) {
     switch (varName) {
       case 'begin':
-        this.begin = value;
+        begin = value;
         break;
       case 'end':
-        this.end = value;
+        end = value;
         break;
       default:
         throw HTErrorUndefined(varName);
@@ -277,7 +274,9 @@ class BorderRadiusTweenAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'BorderRadiusTween':
-        return ({positionalArgs, namedArgs, typeArgs}) => BorderRadiusTween(begin : namedArgs.containsKey('begin') ? namedArgs['begin'] : null, end : namedArgs.containsKey('end') ? namedArgs['end'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => BorderRadiusTween(
+            begin: namedArgs.containsKey('begin') ? namedArgs['begin'] : null,
+            end: namedArgs.containsKey('end') ? namedArgs['end'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -292,8 +291,6 @@ class BorderRadiusTweenAutoBinding extends HTExternalClass {
   void instanceMemberSet(dynamic instance, String id, dynamic value) {
     (instance as BorderRadiusTween).htAssign(id, value);
   }
-
-
 }
 
 extension BorderRadiusTweenBinding on BorderRadiusTween {
@@ -306,17 +303,17 @@ extension BorderRadiusTweenBinding on BorderRadiusTween {
       case 'end':
         return end;
       case 'lerp':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.lerp(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => lerp(positionalArgs[0]);
       case 'transform':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.transform(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => transform(positionalArgs[0]);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       case 'evaluate':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.evaluate(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => evaluate(positionalArgs[0]);
       case 'animate':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.animate(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => animate(positionalArgs[0]);
       case 'chain':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.chain(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => chain(positionalArgs[0]);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -325,10 +322,10 @@ extension BorderRadiusTweenBinding on BorderRadiusTween {
   void htAssign(String varName, dynamic value) {
     switch (varName) {
       case 'begin':
-        this.begin = value;
+        begin = value;
         break;
       case 'end':
-        this.end = value;
+        end = value;
         break;
       default:
         throw HTErrorUndefined(varName);
@@ -343,7 +340,9 @@ class BorderTweenAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'BorderTween':
-        return ({positionalArgs, namedArgs, typeArgs}) => BorderTween(begin : namedArgs.containsKey('begin') ? namedArgs['begin'] : null, end : namedArgs.containsKey('end') ? namedArgs['end'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => BorderTween(
+            begin: namedArgs.containsKey('begin') ? namedArgs['begin'] : null,
+            end: namedArgs.containsKey('end') ? namedArgs['end'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -358,8 +357,6 @@ class BorderTweenAutoBinding extends HTExternalClass {
   void instanceMemberSet(dynamic instance, String id, dynamic value) {
     (instance as BorderTween).htAssign(id, value);
   }
-
-
 }
 
 extension BorderTweenBinding on BorderTween {
@@ -372,17 +369,17 @@ extension BorderTweenBinding on BorderTween {
       case 'end':
         return end;
       case 'lerp':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.lerp(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => lerp(positionalArgs[0]);
       case 'transform':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.transform(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => transform(positionalArgs[0]);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       case 'evaluate':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.evaluate(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => evaluate(positionalArgs[0]);
       case 'animate':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.animate(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => animate(positionalArgs[0]);
       case 'chain':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.chain(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => chain(positionalArgs[0]);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -391,10 +388,10 @@ extension BorderTweenBinding on BorderTween {
   void htAssign(String varName, dynamic value) {
     switch (varName) {
       case 'begin':
-        this.begin = value;
+        begin = value;
         break;
       case 'end':
-        this.end = value;
+        end = value;
         break;
       default:
         throw HTErrorUndefined(varName);
@@ -409,7 +406,9 @@ class Matrix4TweenAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'Matrix4Tween':
-        return ({positionalArgs, namedArgs, typeArgs}) => Matrix4Tween(begin : namedArgs.containsKey('begin') ? namedArgs['begin'] : null, end : namedArgs.containsKey('end') ? namedArgs['end'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => Matrix4Tween(
+            begin: namedArgs.containsKey('begin') ? namedArgs['begin'] : null,
+            end: namedArgs.containsKey('end') ? namedArgs['end'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -424,8 +423,6 @@ class Matrix4TweenAutoBinding extends HTExternalClass {
   void instanceMemberSet(dynamic instance, String id, dynamic value) {
     (instance as Matrix4Tween).htAssign(id, value);
   }
-
-
 }
 
 extension Matrix4TweenBinding on Matrix4Tween {
@@ -438,17 +435,17 @@ extension Matrix4TweenBinding on Matrix4Tween {
       case 'end':
         return end;
       case 'lerp':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.lerp(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => lerp(positionalArgs[0]);
       case 'transform':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.transform(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => transform(positionalArgs[0]);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       case 'evaluate':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.evaluate(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => evaluate(positionalArgs[0]);
       case 'animate':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.animate(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => animate(positionalArgs[0]);
       case 'chain':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.chain(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => chain(positionalArgs[0]);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -457,10 +454,10 @@ extension Matrix4TweenBinding on Matrix4Tween {
   void htAssign(String varName, dynamic value) {
     switch (varName) {
       case 'begin':
-        this.begin = value;
+        begin = value;
         break;
       case 'end':
-        this.end = value;
+        end = value;
         break;
       default:
         throw HTErrorUndefined(varName);
@@ -475,7 +472,9 @@ class TextStyleTweenAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'TextStyleTween':
-        return ({positionalArgs, namedArgs, typeArgs}) => TextStyleTween(begin : namedArgs.containsKey('begin') ? namedArgs['begin'] : null, end : namedArgs.containsKey('end') ? namedArgs['end'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => TextStyleTween(
+            begin: namedArgs.containsKey('begin') ? namedArgs['begin'] : null,
+            end: namedArgs.containsKey('end') ? namedArgs['end'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -490,8 +489,6 @@ class TextStyleTweenAutoBinding extends HTExternalClass {
   void instanceMemberSet(dynamic instance, String id, dynamic value) {
     (instance as TextStyleTween).htAssign(id, value);
   }
-
-
 }
 
 extension TextStyleTweenBinding on TextStyleTween {
@@ -504,17 +501,17 @@ extension TextStyleTweenBinding on TextStyleTween {
       case 'end':
         return end;
       case 'lerp':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.lerp(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => lerp(positionalArgs[0]);
       case 'transform':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.transform(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => transform(positionalArgs[0]);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       case 'evaluate':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.evaluate(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => evaluate(positionalArgs[0]);
       case 'animate':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.animate(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => animate(positionalArgs[0]);
       case 'chain':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.chain(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => chain(positionalArgs[0]);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -523,10 +520,10 @@ extension TextStyleTweenBinding on TextStyleTween {
   void htAssign(String varName, dynamic value) {
     switch (varName) {
       case 'begin':
-        this.begin = value;
+        begin = value;
         break;
       case 'end':
-        this.end = value;
+        end = value;
         break;
       default:
         throw HTErrorUndefined(varName);
@@ -541,7 +538,25 @@ class AnimatedContainerAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'AnimatedContainer':
-        return ({positionalArgs, namedArgs, typeArgs}) => AnimatedContainer(key : namedArgs.containsKey('key') ? namedArgs['key'] : null, alignment : namedArgs.containsKey('alignment') ? namedArgs['alignment'] : null, padding : namedArgs.containsKey('padding') ? namedArgs['padding'] : null, color : namedArgs.containsKey('color') ? namedArgs['color'] : null, decoration : namedArgs.containsKey('decoration') ? namedArgs['decoration'] : null, foregroundDecoration : namedArgs.containsKey('foregroundDecoration') ? namedArgs['foregroundDecoration'] : null, width : namedArgs.containsKey('width') ? namedArgs['width'] : null, height : namedArgs.containsKey('height') ? namedArgs['height'] : null, constraints : namedArgs.containsKey('constraints') ? namedArgs['constraints'] : null, margin : namedArgs.containsKey('margin') ? namedArgs['margin'] : null, transform : namedArgs.containsKey('transform') ? namedArgs['transform'] : null, transformAlignment : namedArgs.containsKey('transformAlignment') ? namedArgs['transformAlignment'] : null, child : namedArgs.containsKey('child') ? namedArgs['child'] : null, clipBehavior : namedArgs.containsKey('clipBehavior') ? namedArgs['clipBehavior'] : Clip.none, curve : namedArgs.containsKey('curve') ? namedArgs['curve'] : Curves.linear, duration : namedArgs['duration'], onEnd : namedArgs.containsKey('onEnd') ? namedArgs['onEnd'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => AnimatedContainer(
+            key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
+            alignment: namedArgs.containsKey('alignment') ? namedArgs['alignment'] : null,
+            padding: namedArgs.containsKey('padding') ? namedArgs['padding'] : null,
+            color: namedArgs.containsKey('color') ? namedArgs['color'] : null,
+            decoration: namedArgs.containsKey('decoration') ? namedArgs['decoration'] : null,
+            foregroundDecoration:
+                namedArgs.containsKey('foregroundDecoration') ? namedArgs['foregroundDecoration'] : null,
+            width: namedArgs.containsKey('width') ? namedArgs['width'] : null,
+            height: namedArgs.containsKey('height') ? namedArgs['height'] : null,
+            constraints: namedArgs.containsKey('constraints') ? namedArgs['constraints'] : null,
+            margin: namedArgs.containsKey('margin') ? namedArgs['margin'] : null,
+            transform: namedArgs.containsKey('transform') ? namedArgs['transform'] : null,
+            transformAlignment: namedArgs.containsKey('transformAlignment') ? namedArgs['transformAlignment'] : null,
+            child: namedArgs.containsKey('child') ? namedArgs['child'] : null,
+            clipBehavior: namedArgs.containsKey('clipBehavior') ? namedArgs['clipBehavior'] : Clip.none,
+            curve: namedArgs.containsKey('curve') ? namedArgs['curve'] : Curves.linear,
+            duration: namedArgs['duration'],
+            onEnd: namedArgs.containsKey('onEnd') ? namedArgs['onEnd'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -552,13 +567,11 @@ class AnimatedContainerAutoBinding extends HTExternalClass {
     return (instance as AnimatedContainer).htFetch(id);
   }
 
-
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
       'VoidCallback': (HTFunction function) => () => function.call(positionalArgs: const [], namedArgs: const {}),
     };
   }
-
 }
 
 extension AnimatedContainerBinding on AnimatedContainer {
@@ -592,15 +605,38 @@ extension AnimatedContainerBinding on AnimatedContainer {
         return duration;
       case 'onEnd':
         return onEnd;
+      case 'key':
+        return key;
+      case 'hashCode':
+        return hashCode;
       case 'createState':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.createState();
+        return ({positionalArgs, namedArgs, typeArgs}) => createState();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+      case 'createElement':
+        return ({positionalArgs, namedArgs, typeArgs}) => createElement();
+      case 'toStringShort':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'toStringShallow':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
+            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toStringDeep':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
+            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class AnimatedPaddingAutoBinding extends HTExternalClass {
@@ -610,7 +646,13 @@ class AnimatedPaddingAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'AnimatedPadding':
-        return ({positionalArgs, namedArgs, typeArgs}) => AnimatedPadding(key : namedArgs.containsKey('key') ? namedArgs['key'] : null, padding : namedArgs['padding'], child : namedArgs.containsKey('child') ? namedArgs['child'] : null, curve : namedArgs.containsKey('curve') ? namedArgs['curve'] : Curves.linear, duration : namedArgs['duration'], onEnd : namedArgs.containsKey('onEnd') ? namedArgs['onEnd'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => AnimatedPadding(
+            key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
+            padding: namedArgs['padding'],
+            child: namedArgs.containsKey('child') ? namedArgs['child'] : null,
+            curve: namedArgs.containsKey('curve') ? namedArgs['curve'] : Curves.linear,
+            duration: namedArgs['duration'],
+            onEnd: namedArgs.containsKey('onEnd') ? namedArgs['onEnd'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -621,13 +663,11 @@ class AnimatedPaddingAutoBinding extends HTExternalClass {
     return (instance as AnimatedPadding).htFetch(id);
   }
 
-
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
       'VoidCallback': (HTFunction function) => () => function.call(positionalArgs: const [], namedArgs: const {}),
     };
   }
-
 }
 
 extension AnimatedPaddingBinding on AnimatedPadding {
@@ -645,15 +685,38 @@ extension AnimatedPaddingBinding on AnimatedPadding {
         return duration;
       case 'onEnd':
         return onEnd;
+      case 'key':
+        return key;
+      case 'hashCode':
+        return hashCode;
       case 'createState':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.createState();
+        return ({positionalArgs, namedArgs, typeArgs}) => createState();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+      case 'createElement':
+        return ({positionalArgs, namedArgs, typeArgs}) => createElement();
+      case 'toStringShort':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'toStringShallow':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
+            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toStringDeep':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
+            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class AnimatedAlignAutoBinding extends HTExternalClass {
@@ -663,7 +726,15 @@ class AnimatedAlignAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'AnimatedAlign':
-        return ({positionalArgs, namedArgs, typeArgs}) => AnimatedAlign(key : namedArgs.containsKey('key') ? namedArgs['key'] : null, alignment : namedArgs['alignment'], child : namedArgs.containsKey('child') ? namedArgs['child'] : null, heightFactor : namedArgs.containsKey('heightFactor') ? namedArgs['heightFactor'] : null, widthFactor : namedArgs.containsKey('widthFactor') ? namedArgs['widthFactor'] : null, curve : namedArgs.containsKey('curve') ? namedArgs['curve'] : Curves.linear, duration : namedArgs['duration'], onEnd : namedArgs.containsKey('onEnd') ? namedArgs['onEnd'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => AnimatedAlign(
+            key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
+            alignment: namedArgs['alignment'],
+            child: namedArgs.containsKey('child') ? namedArgs['child'] : null,
+            heightFactor: namedArgs.containsKey('heightFactor') ? namedArgs['heightFactor'] : null,
+            widthFactor: namedArgs.containsKey('widthFactor') ? namedArgs['widthFactor'] : null,
+            curve: namedArgs.containsKey('curve') ? namedArgs['curve'] : Curves.linear,
+            duration: namedArgs['duration'],
+            onEnd: namedArgs.containsKey('onEnd') ? namedArgs['onEnd'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -674,13 +745,11 @@ class AnimatedAlignAutoBinding extends HTExternalClass {
     return (instance as AnimatedAlign).htFetch(id);
   }
 
-
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
       'VoidCallback': (HTFunction function) => () => function.call(positionalArgs: const [], namedArgs: const {}),
     };
   }
-
 }
 
 extension AnimatedAlignBinding on AnimatedAlign {
@@ -702,15 +771,38 @@ extension AnimatedAlignBinding on AnimatedAlign {
         return duration;
       case 'onEnd':
         return onEnd;
+      case 'key':
+        return key;
+      case 'hashCode':
+        return hashCode;
       case 'createState':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.createState();
+        return ({positionalArgs, namedArgs, typeArgs}) => createState();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+      case 'createElement':
+        return ({positionalArgs, namedArgs, typeArgs}) => createElement();
+      case 'toStringShort':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'toStringShallow':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
+            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toStringDeep':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
+            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class AnimatedPositionedAutoBinding extends HTExternalClass {
@@ -720,9 +812,26 @@ class AnimatedPositionedAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'AnimatedPositioned':
-        return ({positionalArgs, namedArgs, typeArgs}) => AnimatedPositioned(key : namedArgs.containsKey('key') ? namedArgs['key'] : null, child : namedArgs['child'], left : namedArgs.containsKey('left') ? namedArgs['left'] : null, top : namedArgs.containsKey('top') ? namedArgs['top'] : null, right : namedArgs.containsKey('right') ? namedArgs['right'] : null, bottom : namedArgs.containsKey('bottom') ? namedArgs['bottom'] : null, width : namedArgs.containsKey('width') ? namedArgs['width'] : null, height : namedArgs.containsKey('height') ? namedArgs['height'] : null, curve : namedArgs.containsKey('curve') ? namedArgs['curve'] : Curves.linear, duration : namedArgs['duration'], onEnd : namedArgs.containsKey('onEnd') ? namedArgs['onEnd'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => AnimatedPositioned(
+            key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
+            child: namedArgs['child'],
+            left: namedArgs.containsKey('left') ? namedArgs['left'] : null,
+            top: namedArgs.containsKey('top') ? namedArgs['top'] : null,
+            right: namedArgs.containsKey('right') ? namedArgs['right'] : null,
+            bottom: namedArgs.containsKey('bottom') ? namedArgs['bottom'] : null,
+            width: namedArgs.containsKey('width') ? namedArgs['width'] : null,
+            height: namedArgs.containsKey('height') ? namedArgs['height'] : null,
+            curve: namedArgs.containsKey('curve') ? namedArgs['curve'] : Curves.linear,
+            duration: namedArgs['duration'],
+            onEnd: namedArgs.containsKey('onEnd') ? namedArgs['onEnd'] : null);
       case 'AnimatedPositioned.fromRect':
-        return ({positionalArgs, namedArgs, typeArgs}) => AnimatedPositioned.fromRect(key : namedArgs.containsKey('key') ? namedArgs['key'] : null, child : namedArgs['child'], rect : namedArgs['rect'], curve : namedArgs.containsKey('curve') ? namedArgs['curve'] : Curves.linear, duration : namedArgs['duration'], onEnd : namedArgs.containsKey('onEnd') ? namedArgs['onEnd'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => AnimatedPositioned.fromRect(
+            key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
+            child: namedArgs['child'],
+            rect: namedArgs['rect'],
+            curve: namedArgs.containsKey('curve') ? namedArgs['curve'] : Curves.linear,
+            duration: namedArgs['duration'],
+            onEnd: namedArgs.containsKey('onEnd') ? namedArgs['onEnd'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -733,13 +842,11 @@ class AnimatedPositionedAutoBinding extends HTExternalClass {
     return (instance as AnimatedPositioned).htFetch(id);
   }
 
-
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
       'VoidCallback': (HTFunction function) => () => function.call(positionalArgs: const [], namedArgs: const {}),
     };
   }
-
 }
 
 extension AnimatedPositionedBinding on AnimatedPositioned {
@@ -767,15 +874,38 @@ extension AnimatedPositionedBinding on AnimatedPositioned {
         return duration;
       case 'onEnd':
         return onEnd;
+      case 'key':
+        return key;
+      case 'hashCode':
+        return hashCode;
       case 'createState':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.createState();
+        return ({positionalArgs, namedArgs, typeArgs}) => createState();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+      case 'createElement':
+        return ({positionalArgs, namedArgs, typeArgs}) => createElement();
+      case 'toStringShort':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'toStringShallow':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
+            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toStringDeep':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
+            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class AnimatedPositionedDirectionalAutoBinding extends HTExternalClass {
@@ -785,7 +915,18 @@ class AnimatedPositionedDirectionalAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'AnimatedPositionedDirectional':
-        return ({positionalArgs, namedArgs, typeArgs}) => AnimatedPositionedDirectional(key : namedArgs.containsKey('key') ? namedArgs['key'] : null, child : namedArgs['child'], start : namedArgs.containsKey('start') ? namedArgs['start'] : null, top : namedArgs.containsKey('top') ? namedArgs['top'] : null, end : namedArgs.containsKey('end') ? namedArgs['end'] : null, bottom : namedArgs.containsKey('bottom') ? namedArgs['bottom'] : null, width : namedArgs.containsKey('width') ? namedArgs['width'] : null, height : namedArgs.containsKey('height') ? namedArgs['height'] : null, curve : namedArgs.containsKey('curve') ? namedArgs['curve'] : Curves.linear, duration : namedArgs['duration'], onEnd : namedArgs.containsKey('onEnd') ? namedArgs['onEnd'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => AnimatedPositionedDirectional(
+            key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
+            child: namedArgs['child'],
+            start: namedArgs.containsKey('start') ? namedArgs['start'] : null,
+            top: namedArgs.containsKey('top') ? namedArgs['top'] : null,
+            end: namedArgs.containsKey('end') ? namedArgs['end'] : null,
+            bottom: namedArgs.containsKey('bottom') ? namedArgs['bottom'] : null,
+            width: namedArgs.containsKey('width') ? namedArgs['width'] : null,
+            height: namedArgs.containsKey('height') ? namedArgs['height'] : null,
+            curve: namedArgs.containsKey('curve') ? namedArgs['curve'] : Curves.linear,
+            duration: namedArgs['duration'],
+            onEnd: namedArgs.containsKey('onEnd') ? namedArgs['onEnd'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -796,13 +937,11 @@ class AnimatedPositionedDirectionalAutoBinding extends HTExternalClass {
     return (instance as AnimatedPositionedDirectional).htFetch(id);
   }
 
-
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
       'VoidCallback': (HTFunction function) => () => function.call(positionalArgs: const [], namedArgs: const {}),
     };
   }
-
 }
 
 extension AnimatedPositionedDirectionalBinding on AnimatedPositionedDirectional {
@@ -830,15 +969,38 @@ extension AnimatedPositionedDirectionalBinding on AnimatedPositionedDirectional 
         return duration;
       case 'onEnd':
         return onEnd;
+      case 'key':
+        return key;
+      case 'hashCode':
+        return hashCode;
       case 'createState':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.createState();
+        return ({positionalArgs, namedArgs, typeArgs}) => createState();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+      case 'createElement':
+        return ({positionalArgs, namedArgs, typeArgs}) => createElement();
+      case 'toStringShort':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'toStringShallow':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
+            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toStringDeep':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
+            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class AnimatedOpacityAutoBinding extends HTExternalClass {
@@ -848,7 +1010,15 @@ class AnimatedOpacityAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'AnimatedOpacity':
-        return ({positionalArgs, namedArgs, typeArgs}) => AnimatedOpacity(key : namedArgs.containsKey('key') ? namedArgs['key'] : null, child : namedArgs.containsKey('child') ? namedArgs['child'] : null, opacity : namedArgs['opacity'], curve : namedArgs.containsKey('curve') ? namedArgs['curve'] : Curves.linear, duration : namedArgs['duration'], onEnd : namedArgs.containsKey('onEnd') ? namedArgs['onEnd'] : null, alwaysIncludeSemantics : namedArgs.containsKey('alwaysIncludeSemantics') ? namedArgs['alwaysIncludeSemantics'] : false);
+        return ({positionalArgs, namedArgs, typeArgs}) => AnimatedOpacity(
+            key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
+            child: namedArgs.containsKey('child') ? namedArgs['child'] : null,
+            opacity: namedArgs['opacity'],
+            curve: namedArgs.containsKey('curve') ? namedArgs['curve'] : Curves.linear,
+            duration: namedArgs['duration'],
+            onEnd: namedArgs.containsKey('onEnd') ? namedArgs['onEnd'] : null,
+            alwaysIncludeSemantics:
+                namedArgs.containsKey('alwaysIncludeSemantics') ? namedArgs['alwaysIncludeSemantics'] : false);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -859,13 +1029,11 @@ class AnimatedOpacityAutoBinding extends HTExternalClass {
     return (instance as AnimatedOpacity).htFetch(id);
   }
 
-
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
       'VoidCallback': (HTFunction function) => () => function.call(positionalArgs: const [], namedArgs: const {}),
     };
   }
-
 }
 
 extension AnimatedOpacityBinding on AnimatedOpacity {
@@ -885,15 +1053,38 @@ extension AnimatedOpacityBinding on AnimatedOpacity {
         return duration;
       case 'onEnd':
         return onEnd;
+      case 'key':
+        return key;
+      case 'hashCode':
+        return hashCode;
       case 'createState':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.createState();
+        return ({positionalArgs, namedArgs, typeArgs}) => createState();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+      case 'createElement':
+        return ({positionalArgs, namedArgs, typeArgs}) => createElement();
+      case 'toStringShort':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'toStringShallow':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
+            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toStringDeep':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
+            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class SliverAnimatedOpacityAutoBinding extends HTExternalClass {
@@ -903,7 +1094,15 @@ class SliverAnimatedOpacityAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'SliverAnimatedOpacity':
-        return ({positionalArgs, namedArgs, typeArgs}) => SliverAnimatedOpacity(key : namedArgs.containsKey('key') ? namedArgs['key'] : null, sliver : namedArgs.containsKey('sliver') ? namedArgs['sliver'] : null, opacity : namedArgs['opacity'], curve : namedArgs.containsKey('curve') ? namedArgs['curve'] : Curves.linear, duration : namedArgs['duration'], onEnd : namedArgs.containsKey('onEnd') ? namedArgs['onEnd'] : null, alwaysIncludeSemantics : namedArgs.containsKey('alwaysIncludeSemantics') ? namedArgs['alwaysIncludeSemantics'] : false);
+        return ({positionalArgs, namedArgs, typeArgs}) => SliverAnimatedOpacity(
+            key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
+            sliver: namedArgs.containsKey('sliver') ? namedArgs['sliver'] : null,
+            opacity: namedArgs['opacity'],
+            curve: namedArgs.containsKey('curve') ? namedArgs['curve'] : Curves.linear,
+            duration: namedArgs['duration'],
+            onEnd: namedArgs.containsKey('onEnd') ? namedArgs['onEnd'] : null,
+            alwaysIncludeSemantics:
+                namedArgs.containsKey('alwaysIncludeSemantics') ? namedArgs['alwaysIncludeSemantics'] : false);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -914,13 +1113,11 @@ class SliverAnimatedOpacityAutoBinding extends HTExternalClass {
     return (instance as SliverAnimatedOpacity).htFetch(id);
   }
 
-
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
       'VoidCallback': (HTFunction function) => () => function.call(positionalArgs: const [], namedArgs: const {}),
     };
   }
-
 }
 
 extension SliverAnimatedOpacityBinding on SliverAnimatedOpacity {
@@ -940,15 +1137,38 @@ extension SliverAnimatedOpacityBinding on SliverAnimatedOpacity {
         return duration;
       case 'onEnd':
         return onEnd;
+      case 'key':
+        return key;
+      case 'hashCode':
+        return hashCode;
       case 'createState':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.createState();
+        return ({positionalArgs, namedArgs, typeArgs}) => createState();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+      case 'createElement':
+        return ({positionalArgs, namedArgs, typeArgs}) => createElement();
+      case 'toStringShort':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'toStringShallow':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
+            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toStringDeep':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
+            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class AnimatedDefaultTextStyleAutoBinding extends HTExternalClass {
@@ -958,7 +1178,20 @@ class AnimatedDefaultTextStyleAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'AnimatedDefaultTextStyle':
-        return ({positionalArgs, namedArgs, typeArgs}) => AnimatedDefaultTextStyle(key : namedArgs.containsKey('key') ? namedArgs['key'] : null, child : namedArgs['child'], style : namedArgs['style'], textAlign : namedArgs.containsKey('textAlign') ? namedArgs['textAlign'] : null, softWrap : namedArgs.containsKey('softWrap') ? namedArgs['softWrap'] : true, overflow : namedArgs.containsKey('overflow') ? namedArgs['overflow'] : TextOverflow.clip, maxLines : namedArgs.containsKey('maxLines') ? namedArgs['maxLines'] : null, textWidthBasis : namedArgs.containsKey('textWidthBasis') ? namedArgs['textWidthBasis'] : TextWidthBasis.parent, textHeightBehavior : namedArgs.containsKey('textHeightBehavior') ? namedArgs['textHeightBehavior'] : null, curve : namedArgs.containsKey('curve') ? namedArgs['curve'] : Curves.linear, duration : namedArgs['duration'], onEnd : namedArgs.containsKey('onEnd') ? namedArgs['onEnd'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => AnimatedDefaultTextStyle(
+            key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
+            child: namedArgs['child'],
+            style: namedArgs['style'],
+            textAlign: namedArgs.containsKey('textAlign') ? namedArgs['textAlign'] : null,
+            softWrap: namedArgs.containsKey('softWrap') ? namedArgs['softWrap'] : true,
+            overflow: namedArgs.containsKey('overflow') ? namedArgs['overflow'] : TextOverflow.clip,
+            maxLines: namedArgs.containsKey('maxLines') ? namedArgs['maxLines'] : null,
+            textWidthBasis:
+                namedArgs.containsKey('textWidthBasis') ? namedArgs['textWidthBasis'] : TextWidthBasis.parent,
+            textHeightBehavior: namedArgs.containsKey('textHeightBehavior') ? namedArgs['textHeightBehavior'] : null,
+            curve: namedArgs.containsKey('curve') ? namedArgs['curve'] : Curves.linear,
+            duration: namedArgs['duration'],
+            onEnd: namedArgs.containsKey('onEnd') ? namedArgs['onEnd'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -969,13 +1202,11 @@ class AnimatedDefaultTextStyleAutoBinding extends HTExternalClass {
     return (instance as AnimatedDefaultTextStyle).htFetch(id);
   }
 
-
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
       'VoidCallback': (HTFunction function) => () => function.call(positionalArgs: const [], namedArgs: const {}),
     };
   }
-
 }
 
 extension AnimatedDefaultTextStyleBinding on AnimatedDefaultTextStyle {
@@ -1005,15 +1236,38 @@ extension AnimatedDefaultTextStyleBinding on AnimatedDefaultTextStyle {
         return duration;
       case 'onEnd':
         return onEnd;
+      case 'key':
+        return key;
+      case 'hashCode':
+        return hashCode;
       case 'createState':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.createState();
+        return ({positionalArgs, namedArgs, typeArgs}) => createState();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+      case 'createElement':
+        return ({positionalArgs, namedArgs, typeArgs}) => createElement();
+      case 'toStringShort':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'toStringShallow':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
+            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toStringDeep':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
+            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class AnimatedPhysicalModelAutoBinding extends HTExternalClass {
@@ -1023,7 +1277,20 @@ class AnimatedPhysicalModelAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'AnimatedPhysicalModel':
-        return ({positionalArgs, namedArgs, typeArgs}) => AnimatedPhysicalModel(key : namedArgs.containsKey('key') ? namedArgs['key'] : null, child : namedArgs['child'], shape : namedArgs['shape'], clipBehavior : namedArgs.containsKey('clipBehavior') ? namedArgs['clipBehavior'] : Clip.none, borderRadius : namedArgs.containsKey('borderRadius') ? namedArgs['borderRadius'] : BorderRadius.zero, elevation : namedArgs['elevation'], color : namedArgs['color'], animateColor : namedArgs.containsKey('animateColor') ? namedArgs['animateColor'] : true, shadowColor : namedArgs['shadowColor'], animateShadowColor : namedArgs.containsKey('animateShadowColor') ? namedArgs['animateShadowColor'] : true, curve : namedArgs.containsKey('curve') ? namedArgs['curve'] : Curves.linear, duration : namedArgs['duration'], onEnd : namedArgs.containsKey('onEnd') ? namedArgs['onEnd'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => AnimatedPhysicalModel(
+            key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
+            child: namedArgs['child'],
+            shape: namedArgs['shape'],
+            clipBehavior: namedArgs.containsKey('clipBehavior') ? namedArgs['clipBehavior'] : Clip.none,
+            borderRadius: namedArgs.containsKey('borderRadius') ? namedArgs['borderRadius'] : BorderRadius.zero,
+            elevation: namedArgs['elevation'],
+            color: namedArgs['color'],
+            animateColor: namedArgs.containsKey('animateColor') ? namedArgs['animateColor'] : true,
+            shadowColor: namedArgs['shadowColor'],
+            animateShadowColor: namedArgs.containsKey('animateShadowColor') ? namedArgs['animateShadowColor'] : true,
+            curve: namedArgs.containsKey('curve') ? namedArgs['curve'] : Curves.linear,
+            duration: namedArgs['duration'],
+            onEnd: namedArgs.containsKey('onEnd') ? namedArgs['onEnd'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -1034,13 +1301,11 @@ class AnimatedPhysicalModelAutoBinding extends HTExternalClass {
     return (instance as AnimatedPhysicalModel).htFetch(id);
   }
 
-
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
       'VoidCallback': (HTFunction function) => () => function.call(positionalArgs: const [], namedArgs: const {}),
     };
   }
-
 }
 
 extension AnimatedPhysicalModelBinding on AnimatedPhysicalModel {
@@ -1072,14 +1337,36 @@ extension AnimatedPhysicalModelBinding on AnimatedPhysicalModel {
         return duration;
       case 'onEnd':
         return onEnd;
+      case 'key':
+        return key;
+      case 'hashCode':
+        return hashCode;
       case 'createState':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.createState();
+        return ({positionalArgs, namedArgs, typeArgs}) => createState();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+      case 'createElement':
+        return ({positionalArgs, namedArgs, typeArgs}) => createElement();
+      case 'toStringShort':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'toStringShallow':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
+            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toStringDeep':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
+            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
-

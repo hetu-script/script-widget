@@ -1,0 +1,41 @@
+external class DecoratedBox {
+    construct 
+    get decoration
+    get position
+    get child
+    get key
+    fun createRenderObject
+    fun updateRenderObject
+    fun debugFillProperties
+    fun createElement
+    fun toStringShort
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class Container {
+    construct 
+    get child
+    get alignment
+    get padding
+    get color
+    get decoration
+    get foregroundDecoration
+    get constraints
+    get margin
+    get transform
+    get transformAlignment
+    get clipBehavior
+    get key
+    fun build
+    fun debugFillProperties
+    fun createElement
+    fun toStringShort
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}

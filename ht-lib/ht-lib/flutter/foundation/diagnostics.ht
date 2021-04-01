@@ -1,0 +1,333 @@
+external class DiagnosticLevel {
+    static const hidden
+    static const fine
+    static const debug
+    static const info
+    static const warning
+    static const hint
+    static const summary
+    static const error
+    static const off
+}
+external class DiagnosticsTreeStyle {
+    static const none
+    static const sparse
+    static const offstage
+    static const dense
+    static const transition
+    static const error
+    static const whitespace
+    static const flat
+    static const singleLine
+    static const errorProperty
+    static const shallow
+    static const truncateChildren
+}
+external class TextTreeConfiguration {
+    construct 
+    get prefixLineOne
+    get suffixLineOne
+    get prefixOtherLines
+    get prefixLastChildLineOne
+    get prefixOtherLinesRootNode
+    get propertyPrefixIfChildren
+    get propertyPrefixNoChildren
+    get linkCharacter
+    get childLinkSpace
+    get lineBreak
+    get lineBreakProperties
+    get beforeName
+    get afterName
+    get afterDescriptionIfBody
+    get afterDescription
+    get beforeProperties
+    get afterProperties
+    get mandatoryAfterProperties
+    get propertySeparator
+    get bodyIndent
+    get showChildren
+    get addBlankLineIfNoChildren
+    get isNameOnOwnLine
+    get footer
+    get mandatoryFooter
+    get isBlankLineBetweenPropertiesAndChildren
+}
+external class TextTreeRenderer {
+    construct 
+    fun render
+}
+external class DiagnosticsNode {
+    construct message
+    get name
+    get showSeparator
+    get showName
+    get linePrefix
+    get style
+    fun toDescription
+    fun isFiltered
+    get level
+    get emptyBodyDescription
+    get value
+    get allowWrap
+    get allowNameWrap
+    get allowTruncate
+    fun getProperties
+    fun getChildren
+    fun toJsonMap
+    fun toString
+    fun toStringDeep
+    static fun toJsonList (nodes, parent, delegate)
+}
+external class MessageProperty {
+    construct 
+    get expandableValue
+    get allowWrap
+    get allowNameWrap
+    get ifNull
+    get ifEmpty
+    get tooltip
+    get missingIfNull
+    get defaultValue
+    get name
+    get showSeparator
+    get showName
+    get linePrefix
+    get style
+    fun toJsonMap
+    fun valueToString
+    fun toDescription
+    get propertyType
+    get value
+    get exception
+    get level
+    fun getProperties
+    fun getChildren
+    fun isFiltered
+    get emptyBodyDescription
+    get allowTruncate
+    fun toString
+    fun toStringDeep
+}
+external class StringProperty {
+    construct 
+    get quoted
+    get expandableValue
+    get allowWrap
+    get allowNameWrap
+    get ifNull
+    get ifEmpty
+    get tooltip
+    get missingIfNull
+    get defaultValue
+    get name
+    get showSeparator
+    get showName
+    get linePrefix
+    get style
+    fun toJsonMap
+    fun valueToString
+    fun toDescription
+    get propertyType
+    get value
+    get exception
+    get level
+    fun getProperties
+    fun getChildren
+    fun isFiltered
+    get emptyBodyDescription
+    get allowTruncate
+    fun toString
+    fun toStringDeep
+}
+external class DoubleProperty {
+    construct 
+    construct lazy
+    get unit
+    get expandableValue
+    get allowWrap
+    get allowNameWrap
+    get ifNull
+    get ifEmpty
+    get tooltip
+    get missingIfNull
+    get defaultValue
+    get name
+    get showSeparator
+    get showName
+    get linePrefix
+    get style
+    fun numberToString
+    fun toJsonMap
+    fun valueToString
+    fun toDescription
+    get propertyType
+    get value
+    get exception
+    get level
+    fun getProperties
+    fun getChildren
+    fun isFiltered
+    get emptyBodyDescription
+    get allowTruncate
+    fun toString
+    fun toStringDeep
+}
+external class IntProperty {
+    construct 
+    get unit
+    get expandableValue
+    get allowWrap
+    get allowNameWrap
+    get ifNull
+    get ifEmpty
+    get tooltip
+    get missingIfNull
+    get defaultValue
+    get name
+    get showSeparator
+    get showName
+    get linePrefix
+    get style
+    fun numberToString
+    fun toJsonMap
+    fun valueToString
+    fun toDescription
+    get propertyType
+    get value
+    get exception
+    get level
+    fun getProperties
+    fun getChildren
+    fun isFiltered
+    get emptyBodyDescription
+    get allowTruncate
+    fun toString
+    fun toStringDeep
+}
+external class PercentProperty {
+    construct 
+    get unit
+    get expandableValue
+    get allowWrap
+    get allowNameWrap
+    get ifNull
+    get ifEmpty
+    get tooltip
+    get missingIfNull
+    get defaultValue
+    get name
+    get showSeparator
+    get showName
+    get linePrefix
+    get style
+    fun valueToString
+    fun numberToString
+    fun toJsonMap
+    fun toDescription
+    get propertyType
+    get value
+    get exception
+    get level
+    fun getProperties
+    fun getChildren
+    fun isFiltered
+    get emptyBodyDescription
+    get allowTruncate
+    fun toString
+    fun toStringDeep
+}
+external class FlagProperty {
+    construct 
+    get ifTrue
+    get ifFalse
+    get expandableValue
+    get allowWrap
+    get allowNameWrap
+    get ifNull
+    get ifEmpty
+    get tooltip
+    get missingIfNull
+    get defaultValue
+    get name
+    get showSeparator
+    get linePrefix
+    get style
+    fun toJsonMap
+    fun valueToString
+    get showName
+    get level
+    fun toDescription
+    get propertyType
+    get value
+    get exception
+    fun getProperties
+    fun getChildren
+    fun isFiltered
+    get emptyBodyDescription
+    get allowTruncate
+    fun toString
+    fun toStringDeep
+}
+external class DiagnosticableTreeNode {
+    construct 
+    get value
+    get name
+    get showSeparator
+    get showName
+    get linePrefix
+    fun getChildren
+    get builder
+    get style
+    get emptyBodyDescription
+    fun getProperties
+    fun toDescription
+    fun isFiltered
+    get level
+    get allowWrap
+    get allowNameWrap
+    get allowTruncate
+    fun toJsonMap
+    fun toString
+    fun toStringDeep
+}
+external class DiagnosticPropertiesBuilder {
+    construct 
+    construct fromProperties
+    get properties
+    var defaultDiagnosticsTreeStyle
+    var emptyBodyDescription
+    fun add
+}
+external class DiagnosticsBlock {
+    construct 
+    get level
+    get value
+    get allowTruncate
+    get name
+    get showSeparator
+    get showName
+    get linePrefix
+    get style
+    fun getChildren
+    fun getProperties
+    fun toDescription
+    fun isFiltered
+    get emptyBodyDescription
+    get allowWrap
+    get allowNameWrap
+    fun toJsonMap
+    fun toString
+    fun toStringDeep
+}
+external class DiagnosticsSerializationDelegate {
+    construct 
+    fun additionalNodeProperties
+    fun filterChildren
+    fun filterProperties
+    fun truncateNodesList
+    fun delegateForNode
+    get subtreeDepth
+    get includeProperties
+    get expandPropertyValues
+    fun copyWith
+}

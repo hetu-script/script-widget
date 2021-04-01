@@ -1,8 +1,5 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/semantics.dart';
-import 'package:flutter/foundation.dart';
-import 'package:flutter/painting.dart';
-
 
 class AnnounceSemanticsEventAutoBinding extends HTExternalClass {
   AnnounceSemanticsEventAutoBinding() : super('AnnounceSemanticsEvent');
@@ -21,9 +18,6 @@ class AnnounceSemanticsEventAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as AnnounceSemanticsEvent).htFetch(id);
   }
-
-
-
 }
 
 extension AnnounceSemanticsEventBinding on AnnounceSemanticsEvent {
@@ -38,16 +32,16 @@ extension AnnounceSemanticsEventBinding on AnnounceSemanticsEvent {
       case 'type':
         return type;
       case 'getDataMap':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.getDataMap();
+        return ({positionalArgs, namedArgs, typeArgs}) => getDataMap();
       case 'toMap':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toMap(nodeId : namedArgs.containsKey('nodeId') ? namedArgs['nodeId'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toMap(nodeId: namedArgs.containsKey('nodeId') ? namedArgs['nodeId'] : null);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class TooltipSemanticsEventAutoBinding extends HTExternalClass {
@@ -67,9 +61,6 @@ class TooltipSemanticsEventAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as TooltipSemanticsEvent).htFetch(id);
   }
-
-
-
 }
 
 extension TooltipSemanticsEventBinding on TooltipSemanticsEvent {
@@ -82,16 +73,16 @@ extension TooltipSemanticsEventBinding on TooltipSemanticsEvent {
       case 'type':
         return type;
       case 'getDataMap':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.getDataMap();
+        return ({positionalArgs, namedArgs, typeArgs}) => getDataMap();
       case 'toMap':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toMap(nodeId : namedArgs.containsKey('nodeId') ? namedArgs['nodeId'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toMap(nodeId: namedArgs.containsKey('nodeId') ? namedArgs['nodeId'] : null);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class LongPressSemanticsEventAutoBinding extends HTExternalClass {
@@ -111,9 +102,6 @@ class LongPressSemanticsEventAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as LongPressSemanticsEvent).htFetch(id);
   }
-
-
-
 }
 
 extension LongPressSemanticsEventBinding on LongPressSemanticsEvent {
@@ -124,16 +112,16 @@ extension LongPressSemanticsEventBinding on LongPressSemanticsEvent {
       case 'type':
         return type;
       case 'getDataMap':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.getDataMap();
+        return ({positionalArgs, namedArgs, typeArgs}) => getDataMap();
       case 'toMap':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toMap(nodeId : namedArgs.containsKey('nodeId') ? namedArgs['nodeId'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toMap(nodeId: namedArgs.containsKey('nodeId') ? namedArgs['nodeId'] : null);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class TapSemanticEventAutoBinding extends HTExternalClass {
@@ -153,9 +141,6 @@ class TapSemanticEventAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as TapSemanticEvent).htFetch(id);
   }
-
-
-
 }
 
 extension TapSemanticEventBinding on TapSemanticEvent {
@@ -166,57 +151,14 @@ extension TapSemanticEventBinding on TapSemanticEvent {
       case 'type':
         return type;
       case 'getDataMap':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.getDataMap();
+        return ({positionalArgs, namedArgs, typeArgs}) => getDataMap();
       case 'toMap':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toMap(nodeId : namedArgs.containsKey('nodeId') ? namedArgs['nodeId'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toMap(nodeId: namedArgs.containsKey('nodeId') ? namedArgs['nodeId'] : null);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
-
-class UpdateLiveRegionEventAutoBinding extends HTExternalClass {
-  UpdateLiveRegionEventAutoBinding() : super('UpdateLiveRegionEvent');
-
-  @override
-  dynamic memberGet(String varName, {String from = HTLexicon.global}) {
-    switch (varName) {
-      case 'UpdateLiveRegionEvent':
-        return ({positionalArgs, namedArgs, typeArgs}) => UpdateLiveRegionEvent();
-      default:
-        throw HTErrorUndefined(varName);
-    }
-  }
-
-  @override
-  dynamic instanceMemberGet(dynamic instance, String id) {
-    return (instance as UpdateLiveRegionEvent).htFetch(id);
-  }
-
-
-
-}
-
-extension UpdateLiveRegionEventBinding on UpdateLiveRegionEvent {
-  dynamic htFetch(String varName) {
-    switch (varName) {
-      case 'typeid':
-        return HTTypeId('UpdateLiveRegionEvent');
-      case 'type':
-        return type;
-      case 'getDataMap':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.getDataMap();
-      case 'toMap':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toMap(nodeId : namedArgs.containsKey('nodeId') ? namedArgs['nodeId'] : null);
-      case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
-      default:
-        throw HTErrorUndefined(varName);
-    }
-  }
-
-}
-

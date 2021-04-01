@@ -1,9 +1,5 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/widgets.dart';
-import 'dart:math'as math;
-import 'package:flutter/foundation.dart';
-import 'package:flutter/rendering.dart';
-
 
 class FixedScrollMetricsAutoBinding extends HTExternalClass {
   FixedScrollMetricsAutoBinding() : super('FixedScrollMetrics');
@@ -12,7 +8,12 @@ class FixedScrollMetricsAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'FixedScrollMetrics':
-        return ({positionalArgs, namedArgs, typeArgs}) => FixedScrollMetrics(minScrollExtent : namedArgs['minScrollExtent'], maxScrollExtent : namedArgs['maxScrollExtent'], pixels : namedArgs['pixels'], viewportDimension : namedArgs['viewportDimension'], axisDirection : namedArgs['axisDirection']);
+        return ({positionalArgs, namedArgs, typeArgs}) => FixedScrollMetrics(
+            minScrollExtent: namedArgs['minScrollExtent'],
+            maxScrollExtent: namedArgs['maxScrollExtent'],
+            pixels: namedArgs['pixels'],
+            viewportDimension: namedArgs['viewportDimension'],
+            axisDirection: namedArgs['axisDirection']);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -22,9 +23,6 @@ class FixedScrollMetricsAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as FixedScrollMetrics).htFetch(id);
   }
-
-
-
 }
 
 extension FixedScrollMetricsBinding on FixedScrollMetrics {
@@ -61,13 +59,16 @@ extension FixedScrollMetricsBinding on FixedScrollMetrics {
       case 'extentAfter':
         return extentAfter;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       case 'copyWith':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.copyWith(minScrollExtent : namedArgs.containsKey('minScrollExtent') ? namedArgs['minScrollExtent'] : null, maxScrollExtent : namedArgs.containsKey('maxScrollExtent') ? namedArgs['maxScrollExtent'] : null, pixels : namedArgs.containsKey('pixels') ? namedArgs['pixels'] : null, viewportDimension : namedArgs.containsKey('viewportDimension') ? namedArgs['viewportDimension'] : null, axisDirection : namedArgs.containsKey('axisDirection') ? namedArgs['axisDirection'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => copyWith(
+            minScrollExtent: namedArgs.containsKey('minScrollExtent') ? namedArgs['minScrollExtent'] : null,
+            maxScrollExtent: namedArgs.containsKey('maxScrollExtent') ? namedArgs['maxScrollExtent'] : null,
+            pixels: namedArgs.containsKey('pixels') ? namedArgs['pixels'] : null,
+            viewportDimension: namedArgs.containsKey('viewportDimension') ? namedArgs['viewportDimension'] : null,
+            axisDirection: namedArgs.containsKey('axisDirection') ? namedArgs['axisDirection'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
-

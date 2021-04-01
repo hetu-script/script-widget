@@ -1,8 +1,5 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/material.dart';
-import 'dart:ui';
-import 'package:flutter/foundation.dart';
-import 'package:flutter/rendering.dart';
 
 class MaterialStateAutoBinding extends HTExternalClass {
   MaterialStateAutoBinding() : super('MaterialState');
@@ -31,7 +28,6 @@ class MaterialStateAutoBinding extends HTExternalClass {
     }
   }
 
-
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
@@ -46,4 +42,3 @@ class MaterialStateAutoBinding extends HTExternalClass {
     }
   }
 }
-

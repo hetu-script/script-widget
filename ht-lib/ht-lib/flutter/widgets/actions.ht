@@ -1,0 +1,130 @@
+external class ActionListener {
+    construct 
+    get listener
+    get action
+    get child
+    get key
+    fun createState
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class ActionDispatcher {
+    construct 
+    fun invokeAction
+    fun toStringShort
+    fun toString
+    fun toDiagnosticsNode
+}
+external class Actions {
+    construct 
+    get dispatcher
+    get actions
+    get child
+    get key
+    fun createState
+    fun debugFillProperties
+    fun createElement
+    fun toStringShort
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+    static fun of (context)
+}
+external class FocusableActionDetector {
+    construct 
+    get enabled
+    get focusNode
+    get autofocus
+    get actions
+    get shortcuts
+    get onShowFocusHighlight
+    get onShowHoverHighlight
+    get onFocusChange
+    get mouseCursor
+    get child
+    get key
+    fun createState
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class DoNothingIntent {
+    construct 
+    fun toStringShort
+    fun toString
+    fun toDiagnosticsNode
+}
+external class DoNothingAndStopPropagationIntent {
+    construct 
+    fun toStringShort
+    fun toString
+    fun toDiagnosticsNode
+}
+external class DoNothingAction {
+    construct 
+    fun consumesKey
+    fun invoke
+    get intentType
+    fun isEnabled
+    fun addActionListener
+    fun removeActionListener
+    fun toStringShort
+    fun toString
+    fun toDiagnosticsNode
+}
+external class ActivateIntent {
+    construct 
+    fun toStringShort
+    fun toString
+    fun toDiagnosticsNode
+}
+external class ButtonActivateIntent {
+    construct 
+    fun toStringShort
+    fun toString
+    fun toDiagnosticsNode
+}
+external class SelectIntent {
+    construct
+    fun toStringShort
+    fun toString
+    fun toDiagnosticsNode
+}
+external class DismissIntent {
+    construct 
+    fun toStringShort
+    fun toString
+    fun toDiagnosticsNode
+}
+external class PrioritizedIntents {
+    construct 
+    get orderedIntents
+    fun toStringShort
+    fun toString
+    fun toDiagnosticsNode
+}
+external class PrioritizedAction {
+    construct
+    fun isEnabled
+    fun invoke
+    get intentType
+    fun consumesKey
+    fun addActionListener
+    fun removeActionListener
+    fun toStringShort
+    fun toString
+    fun toDiagnosticsNode
+}

@@ -2,7 +2,6 @@ import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/foundation.dart';
 
-
 class ForcePressDetailsAutoBinding extends HTExternalClass {
   ForcePressDetailsAutoBinding() : super('ForcePressDetails');
 
@@ -10,7 +9,10 @@ class ForcePressDetailsAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'ForcePressDetails':
-        return ({positionalArgs, namedArgs, typeArgs}) => ForcePressDetails(globalPosition : namedArgs['globalPosition'], localPosition : namedArgs.containsKey('localPosition') ? namedArgs['localPosition'] : null, pressure : namedArgs['pressure']);
+        return ({positionalArgs, namedArgs, typeArgs}) => ForcePressDetails(
+            globalPosition: namedArgs['globalPosition'],
+            localPosition: namedArgs.containsKey('localPosition') ? namedArgs['localPosition'] : null,
+            pressure: namedArgs['pressure']);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -20,9 +22,6 @@ class ForcePressDetailsAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as ForcePressDetails).htFetch(id);
   }
-
-
-
 }
 
 extension ForcePressDetailsBinding on ForcePressDetails {
@@ -40,7 +39,6 @@ extension ForcePressDetailsBinding on ForcePressDetails {
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class ForcePressGestureRecognizerAutoBinding extends HTExternalClass {
@@ -50,7 +48,12 @@ class ForcePressGestureRecognizerAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'ForcePressGestureRecognizer':
-        return ({positionalArgs, namedArgs, typeArgs}) => ForcePressGestureRecognizer(startPressure : namedArgs.containsKey('startPressure') ? namedArgs['startPressure'] : 0.4, peakPressure : namedArgs.containsKey('peakPressure') ? namedArgs['peakPressure'] : 0.85, interpolation : namedArgs.containsKey('interpolation') ? namedArgs['interpolation'] : _inverseLerp, debugOwner : namedArgs.containsKey('debugOwner') ? namedArgs['debugOwner'] : null, kind : namedArgs.containsKey('kind') ? namedArgs['kind'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => ForcePressGestureRecognizer(
+            startPressure: namedArgs.containsKey('startPressure') ? namedArgs['startPressure'] : 0.4,
+            peakPressure: namedArgs.containsKey('peakPressure') ? namedArgs['peakPressure'] : 0.85,
+            interpolation: namedArgs.containsKey('interpolation') ? namedArgs['interpolation'] : _inverseLerp,
+            debugOwner: namedArgs.containsKey('debugOwner') ? namedArgs['debugOwner'] : null,
+            kind: namedArgs.containsKey('kind') ? namedArgs['kind'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -68,11 +71,17 @@ class ForcePressGestureRecognizerAutoBinding extends HTExternalClass {
 
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'GestureForceInterpolation': (HTFunction function) => (pressureMin, pressureMax, pressure) => function.call(positionalArgs: [pressureMin, pressureMax, pressure], namedArgs: const {}) as double,
+      'GestureForceInterpolation': (HTFunction function) => (pressureMin, pressureMax, pressure) =>
+          function.call(positionalArgs: [pressureMin, pressureMax, pressure], namedArgs: const {}) as double,
     };
   }
 
-  static double _inverseLerp(double min, double max, double t) {assert (min <= max); double value = (t - min) / (max - min); if (!value.isNaN) value = value.clamp(0.0, 1.0); return value;}
+  static double _inverseLerp(double min, double max, double t) {
+    assert(min <= max);
+    var value = (t - min) / (max - min);
+    if (!value.isNaN) value = value.clamp(0.0, 1.0);
+    return value;
+  }
 }
 
 extension ForcePressGestureRecognizerBinding on ForcePressGestureRecognizer {
@@ -101,23 +110,43 @@ extension ForcePressGestureRecognizerBinding on ForcePressGestureRecognizer {
       case 'team':
         return team;
       case 'addAllowedPointer':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.addAllowedPointer(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => addAllowedPointer(positionalArgs[0]);
       case 'handleEvent':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.handleEvent(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => handleEvent(positionalArgs[0]);
       case 'acceptGesture':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.acceptGesture(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => acceptGesture(positionalArgs[0]);
       case 'didStopTrackingLastPointer':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.didStopTrackingLastPointer(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => didStopTrackingLastPointer(positionalArgs[0]);
       case 'rejectGesture':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.rejectGesture(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => rejectGesture(positionalArgs[0]);
       case 'handleNonAllowedPointer':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.handleNonAllowedPointer(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => handleNonAllowedPointer(positionalArgs[0]);
       case 'dispose':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.dispose();
+        return ({positionalArgs, namedArgs, typeArgs}) => dispose();
       case 'addPointer':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.addPointer(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => addPointer(positionalArgs[0]);
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+      case 'toStringShallow':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
+            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toStringDeep':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
+            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toStringShort':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
+      case 'debugDescribeChildren':
+        return ({positionalArgs, namedArgs, typeArgs}) => debugDescribeChildren();
       default:
         throw HTErrorUndefined(varName);
     }
@@ -126,20 +155,19 @@ extension ForcePressGestureRecognizerBinding on ForcePressGestureRecognizer {
   void htAssign(String varName, dynamic value) {
     switch (varName) {
       case 'onStart':
-        this.onStart = value;
+        onStart = value;
         break;
       case 'onUpdate':
-        this.onUpdate = value;
+        onUpdate = value;
         break;
       case 'onPeak':
-        this.onPeak = value;
+        onPeak = value;
         break;
       case 'onEnd':
-        this.onEnd = value;
+        onEnd = value;
         break;
       default:
         throw HTErrorUndefined(varName);
     }
   }
 }
-

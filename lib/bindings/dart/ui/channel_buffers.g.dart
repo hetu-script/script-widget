@@ -1,15 +1,6 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'dart:ui';
 import 'dart:async';
-import 'dart:collection'as collection;
-import 'dart:convert';
-import 'dart:developer'as developer;
-import 'dart:io';
-import 'dart:isolate';
-import 'dart:math'as math;
-import 'dart:nativewrappers';
-import 'dart:typed_data';
-
 
 class ChannelBuffersAutoBinding extends HTExternalClass {
   ChannelBuffersAutoBinding() : super('ChannelBuffers');
@@ -33,15 +24,16 @@ class ChannelBuffersAutoBinding extends HTExternalClass {
     return (instance as ChannelBuffers).htFetch(id);
   }
 
-
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'PlatformMessageResponseCallback': (HTFunction function) => (data) => function.call(positionalArgs: [data], namedArgs: const {}),
-      'ChannelCallback': (HTFunction function) => (data, callback) => function.call(positionalArgs: [data, callback], namedArgs: const {}),
-      'DrainChannelCallback': (HTFunction function) => (data, callback) => function.call(positionalArgs: [data, callback], namedArgs: const {}) as Future<void>,
+      'PlatformMessageResponseCallback': (HTFunction function) =>
+          (data) => function.call(positionalArgs: [data], namedArgs: const {}),
+      'ChannelCallback': (HTFunction function) =>
+          (data, callback) => function.call(positionalArgs: [data, callback], namedArgs: const {}),
+      'DrainChannelCallback': (HTFunction function) =>
+          (data, callback) => function.call(positionalArgs: [data, callback], namedArgs: const {}) as Future<void>,
     };
   }
-
 }
 
 extension ChannelBuffersBinding on ChannelBuffers {
@@ -50,23 +42,21 @@ extension ChannelBuffersBinding on ChannelBuffers {
       case 'typeid':
         return HTTypeId('ChannelBuffers');
       case 'push':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.push(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
+        return ({positionalArgs, namedArgs, typeArgs}) => push(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
       case 'setListener':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.setListener(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => setListener(positionalArgs[0], positionalArgs[1]);
       case 'clearListener':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.clearListener(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => clearListener(positionalArgs[0]);
       case 'drain':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.drain(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => drain(positionalArgs[0], positionalArgs[1]);
       case 'handleMessage':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.handleMessage(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => handleMessage(positionalArgs[0]);
       case 'resize':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.resize(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => resize(positionalArgs[0], positionalArgs[1]);
       case 'allowOverflow':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.allowOverflow(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => allowOverflow(positionalArgs[0], positionalArgs[1]);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
-

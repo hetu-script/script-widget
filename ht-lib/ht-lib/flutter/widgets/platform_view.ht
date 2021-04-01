@@ -1,0 +1,103 @@
+external class AndroidView {
+    construct 
+    get viewType
+    get onPlatformViewCreated
+    get hitTestBehavior
+    get layoutDirection
+    get gestureRecognizers
+    get creationParams
+    get creationParamsCodec
+    get clipBehavior
+    get key
+    fun createState
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class UiKitView {
+    construct 
+    get viewType
+    get onPlatformViewCreated
+    get hitTestBehavior
+    get layoutDirection
+    get creationParams
+    get creationParamsCodec
+    get gestureRecognizers
+    get key
+    fun createState
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class HtmlElementView {
+    construct 
+    get viewType
+    get key
+    fun build
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class PlatformViewLink {
+    construct 
+    get viewType
+    get key
+    fun createState
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class PlatformViewSurface {
+    construct 
+    get controller
+    get gestureRecognizers
+    get hitTestBehavior
+    get key
+    fun createRenderObject
+    fun updateRenderObject
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class AndroidViewSurface {
+    construct 
+    get controller
+    get gestureRecognizers
+    get hitTestBehavior
+    get key
+    fun createRenderObject
+    fun updateRenderObject
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}

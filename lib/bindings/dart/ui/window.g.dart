@@ -1,14 +1,5 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'dart:ui';
-import 'dart:async';
-import 'dart:collection'as collection;
-import 'dart:convert';
-import 'dart:developer'as developer;
-import 'dart:io';
-import 'dart:isolate';
-import 'dart:math'as math;
-import 'dart:nativewrappers';
-import 'dart:typed_data';
 
 class BrightnessAutoBinding extends HTExternalClass {
   BrightnessAutoBinding() : super('Brightness');
@@ -27,7 +18,6 @@ class BrightnessAutoBinding extends HTExternalClass {
     }
   }
 
-
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
@@ -42,4 +32,3 @@ class BrightnessAutoBinding extends HTExternalClass {
     }
   }
 }
-

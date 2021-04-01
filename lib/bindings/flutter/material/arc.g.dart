@@ -1,11 +1,5 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/material.dart';
-import 'dart:math'as math;
-import 'dart:ui';
-import 'package:flutter/animation.dart';
-import 'package:flutter/foundation.dart';
-import 'package:flutter/painting.dart';
-
 
 class MaterialPointArcTweenAutoBinding extends HTExternalClass {
   MaterialPointArcTweenAutoBinding() : super('MaterialPointArcTween');
@@ -14,7 +8,9 @@ class MaterialPointArcTweenAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'MaterialPointArcTween':
-        return ({positionalArgs, namedArgs, typeArgs}) => MaterialPointArcTween(begin : namedArgs.containsKey('begin') ? namedArgs['begin'] : null, end : namedArgs.containsKey('end') ? namedArgs['end'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => MaterialPointArcTween(
+            begin: namedArgs.containsKey('begin') ? namedArgs['begin'] : null,
+            end: namedArgs.containsKey('end') ? namedArgs['end'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -29,8 +25,6 @@ class MaterialPointArcTweenAutoBinding extends HTExternalClass {
   void instanceMemberSet(dynamic instance, String id, dynamic value) {
     (instance as MaterialPointArcTween).htAssign(id, value);
   }
-
-
 }
 
 extension MaterialPointArcTweenBinding on MaterialPointArcTween {
@@ -47,17 +41,17 @@ extension MaterialPointArcTweenBinding on MaterialPointArcTween {
       case 'endAngle':
         return endAngle;
       case 'lerp':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.lerp(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => lerp(positionalArgs[0]);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       case 'transform':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.transform(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => transform(positionalArgs[0]);
       case 'evaluate':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.evaluate(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => evaluate(positionalArgs[0]);
       case 'animate':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.animate(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => animate(positionalArgs[0]);
       case 'chain':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.chain(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => chain(positionalArgs[0]);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -66,10 +60,10 @@ extension MaterialPointArcTweenBinding on MaterialPointArcTween {
   void htAssign(String varName, dynamic value) {
     switch (varName) {
       case 'begin':
-        this.begin = value;
+        begin = value;
         break;
       case 'end':
-        this.end = value;
+        end = value;
         break;
       default:
         throw HTErrorUndefined(varName);
@@ -84,7 +78,9 @@ class MaterialRectArcTweenAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'MaterialRectArcTween':
-        return ({positionalArgs, namedArgs, typeArgs}) => MaterialRectArcTween(begin : namedArgs.containsKey('begin') ? namedArgs['begin'] : null, end : namedArgs.containsKey('end') ? namedArgs['end'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => MaterialRectArcTween(
+            begin: namedArgs.containsKey('begin') ? namedArgs['begin'] : null,
+            end: namedArgs.containsKey('end') ? namedArgs['end'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -99,8 +95,6 @@ class MaterialRectArcTweenAutoBinding extends HTExternalClass {
   void instanceMemberSet(dynamic instance, String id, dynamic value) {
     (instance as MaterialRectArcTween).htAssign(id, value);
   }
-
-
 }
 
 extension MaterialRectArcTweenBinding on MaterialRectArcTween {
@@ -113,17 +107,17 @@ extension MaterialRectArcTweenBinding on MaterialRectArcTween {
       case 'endArc':
         return endArc;
       case 'lerp':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.lerp(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => lerp(positionalArgs[0]);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       case 'transform':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.transform(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => transform(positionalArgs[0]);
       case 'evaluate':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.evaluate(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => evaluate(positionalArgs[0]);
       case 'animate':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.animate(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => animate(positionalArgs[0]);
       case 'chain':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.chain(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => chain(positionalArgs[0]);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -132,10 +126,10 @@ extension MaterialRectArcTweenBinding on MaterialRectArcTween {
   void htAssign(String varName, dynamic value) {
     switch (varName) {
       case 'begin':
-        this.begin = value;
+        begin = value;
         break;
       case 'end':
-        this.end = value;
+        end = value;
         break;
       default:
         throw HTErrorUndefined(varName);
@@ -150,7 +144,9 @@ class MaterialRectCenterArcTweenAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'MaterialRectCenterArcTween':
-        return ({positionalArgs, namedArgs, typeArgs}) => MaterialRectCenterArcTween(begin : namedArgs.containsKey('begin') ? namedArgs['begin'] : null, end : namedArgs.containsKey('end') ? namedArgs['end'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => MaterialRectCenterArcTween(
+            begin: namedArgs.containsKey('begin') ? namedArgs['begin'] : null,
+            end: namedArgs.containsKey('end') ? namedArgs['end'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -165,8 +161,6 @@ class MaterialRectCenterArcTweenAutoBinding extends HTExternalClass {
   void instanceMemberSet(dynamic instance, String id, dynamic value) {
     (instance as MaterialRectCenterArcTween).htAssign(id, value);
   }
-
-
 }
 
 extension MaterialRectCenterArcTweenBinding on MaterialRectCenterArcTween {
@@ -177,17 +171,17 @@ extension MaterialRectCenterArcTweenBinding on MaterialRectCenterArcTween {
       case 'centerArc':
         return centerArc;
       case 'lerp':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.lerp(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => lerp(positionalArgs[0]);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       case 'transform':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.transform(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => transform(positionalArgs[0]);
       case 'evaluate':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.evaluate(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => evaluate(positionalArgs[0]);
       case 'animate':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.animate(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => animate(positionalArgs[0]);
       case 'chain':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.chain(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => chain(positionalArgs[0]);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -196,14 +190,13 @@ extension MaterialRectCenterArcTweenBinding on MaterialRectCenterArcTween {
   void htAssign(String varName, dynamic value) {
     switch (varName) {
       case 'begin':
-        this.begin = value;
+        begin = value;
         break;
       case 'end':
-        this.end = value;
+        end = value;
         break;
       default:
         throw HTErrorUndefined(varName);
     }
   }
 }
-

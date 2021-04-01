@@ -1,10 +1,5 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'dart:core';
-import "dart:collection";
-import "dart:convert";
-import "dart:math";
-import "dart:typed_data";
-
 
 class DurationAutoBinding extends HTExternalClass {
   DurationAutoBinding() : super('Duration');
@@ -13,7 +8,13 @@ class DurationAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'Duration':
-        return ({positionalArgs, namedArgs, typeArgs}) => Duration(days : namedArgs.containsKey('days') ? namedArgs['days'] : 0, hours : namedArgs.containsKey('hours') ? namedArgs['hours'] : 0, minutes : namedArgs.containsKey('minutes') ? namedArgs['minutes'] : 0, seconds : namedArgs.containsKey('seconds') ? namedArgs['seconds'] : 0, milliseconds : namedArgs.containsKey('milliseconds') ? namedArgs['milliseconds'] : 0, microseconds : namedArgs.containsKey('microseconds') ? namedArgs['microseconds'] : 0);
+        return ({positionalArgs, namedArgs, typeArgs}) => Duration(
+            days: namedArgs.containsKey('days') ? namedArgs['days'] : 0,
+            hours: namedArgs.containsKey('hours') ? namedArgs['hours'] : 0,
+            minutes: namedArgs.containsKey('minutes') ? namedArgs['minutes'] : 0,
+            seconds: namedArgs.containsKey('seconds') ? namedArgs['seconds'] : 0,
+            milliseconds: namedArgs.containsKey('milliseconds') ? namedArgs['milliseconds'] : 0,
+            microseconds: namedArgs.containsKey('microseconds') ? namedArgs['microseconds'] : 0);
       case 'Duration.microsecondsPerMillisecond':
         return Duration.microsecondsPerMillisecond;
       case 'Duration.millisecondsPerSecond':
@@ -55,9 +56,6 @@ class DurationAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as Duration).htFetch(id);
   }
-
-
-
 }
 
 extension DurationBinding on Duration {
@@ -82,15 +80,13 @@ extension DurationBinding on Duration {
       case 'isNegative':
         return isNegative;
       case 'compareTo':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.compareTo(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => compareTo(positionalArgs[0]);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       case 'abs':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.abs();
+        return ({positionalArgs, namedArgs, typeArgs}) => abs();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
-

@@ -1,0 +1,71 @@
+external class CupertinoNavigationBar {
+    construct 
+    get leading
+    get automaticallyImplyLeading
+    get automaticallyImplyMiddle
+    get previousPageTitle
+    get middle
+    get trailing
+    get backgroundColor
+    get brightness
+    get padding
+    get border
+    get transitionBetweenRoutes
+    get heroTag
+    get key
+    fun shouldFullyObstruct
+    get preferredSize
+    fun createState
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class CupertinoSliverNavigationBar {
+    construct 
+    get largeTitle
+    get leading
+    get automaticallyImplyLeading
+    get automaticallyImplyTitle
+    get previousPageTitle
+    get middle
+    get trailing
+    get backgroundColor
+    get brightness
+    get padding
+    get border
+    get transitionBetweenRoutes
+    get heroTag
+    get stretch
+    get key
+    get opaque
+    fun createState
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class CupertinoNavigationBarBackButton {
+    construct 
+    get color
+    get previousPageTitle
+    get onPressed
+    get key
+    fun build
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}

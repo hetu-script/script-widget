@@ -1,8 +1,5 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'dart:convert';
-import 'dart:async';
-import 'dart:typed_data';
-
 
 class Latin1CodecAutoBinding extends HTExternalClass {
   Latin1CodecAutoBinding() : super('Latin1Codec');
@@ -11,7 +8,8 @@ class Latin1CodecAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'Latin1Codec':
-        return ({positionalArgs, namedArgs, typeArgs}) => Latin1Codec(allowInvalid : namedArgs.containsKey('allowInvalid') ? namedArgs['allowInvalid'] : false);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            Latin1Codec(allowInvalid: namedArgs.containsKey('allowInvalid') ? namedArgs['allowInvalid'] : false);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -21,9 +19,6 @@ class Latin1CodecAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as Latin1Codec).htFetch(id);
   }
-
-
-
 }
 
 extension Latin1CodecBinding on Latin1Codec {
@@ -38,16 +33,16 @@ extension Latin1CodecBinding on Latin1Codec {
       case 'decoder':
         return decoder;
       case 'encode':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.encode(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => encode(positionalArgs[0]);
       case 'decode':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.decode(List<int>.from(positionalArgs[0]), allowInvalid : namedArgs.containsKey('allowInvalid') ? namedArgs['allowInvalid'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => decode(List<int>.from(positionalArgs[0]),
+            allowInvalid: namedArgs.containsKey('allowInvalid') ? namedArgs['allowInvalid'] : null);
       case 'decodeStream':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.decodeStream(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => decodeStream(positionalArgs[0]);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class Latin1EncoderAutoBinding extends HTExternalClass {
@@ -67,9 +62,6 @@ class Latin1EncoderAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as Latin1Encoder).htFetch(id);
   }
-
-
-
 }
 
 extension Latin1EncoderBinding on Latin1Encoder {
@@ -78,20 +70,20 @@ extension Latin1EncoderBinding on Latin1Encoder {
       case 'typeid':
         return HTTypeId('Latin1Encoder');
       case 'convert':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.convert(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : 0, positionalArgs.length > 2 ? positionalArgs[2] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => convert(positionalArgs[0],
+            positionalArgs.length > 1 ? positionalArgs[1] : 0, positionalArgs.length > 2 ? positionalArgs[2] : null);
       case 'startChunkedConversion':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.startChunkedConversion(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => startChunkedConversion(positionalArgs[0]);
       case 'bind':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.bind(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => bind(positionalArgs[0]);
       case 'fuse':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.fuse(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => fuse(positionalArgs[0]);
       case 'cast':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.cast();
+        return ({positionalArgs, namedArgs, typeArgs}) => cast();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class Latin1DecoderAutoBinding extends HTExternalClass {
@@ -101,7 +93,8 @@ class Latin1DecoderAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'Latin1Decoder':
-        return ({positionalArgs, namedArgs, typeArgs}) => Latin1Decoder(allowInvalid : namedArgs.containsKey('allowInvalid') ? namedArgs['allowInvalid'] : false);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            Latin1Decoder(allowInvalid: namedArgs.containsKey('allowInvalid') ? namedArgs['allowInvalid'] : false);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -111,9 +104,6 @@ class Latin1DecoderAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as Latin1Decoder).htFetch(id);
   }
-
-
-
 }
 
 extension Latin1DecoderBinding on Latin1Decoder {
@@ -122,19 +112,18 @@ extension Latin1DecoderBinding on Latin1Decoder {
       case 'typeid':
         return HTTypeId('Latin1Decoder');
       case 'startChunkedConversion':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.startChunkedConversion(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => startChunkedConversion(positionalArgs[0]);
       case 'convert':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.convert(List<int>.from(positionalArgs[0]), positionalArgs.length > 1 ? positionalArgs[1] : 0, positionalArgs.length > 2 ? positionalArgs[2] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => convert(List<int>.from(positionalArgs[0]),
+            positionalArgs.length > 1 ? positionalArgs[1] : 0, positionalArgs.length > 2 ? positionalArgs[2] : null);
       case 'bind':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.bind(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => bind(positionalArgs[0]);
       case 'fuse':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.fuse(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => fuse(positionalArgs[0]);
       case 'cast':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.cast();
+        return ({positionalArgs, namedArgs, typeArgs}) => cast();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
-

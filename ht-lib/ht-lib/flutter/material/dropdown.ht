@@ -1,0 +1,15 @@
+external class DropdownButtonHideUnderline {
+    construct 
+    get child
+    get key
+    fun updateShouldNotify
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+    static fun at (context)
+}

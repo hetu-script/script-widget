@@ -1,8 +1,5 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/foundation.dart';
-import 'package:flutter/widgets.dart';
-
 
 class IconsAutoBinding extends HTExternalClass {
   IconsAutoBinding() : super('Icons');
@@ -11324,10 +11321,4 @@ class IconsAutoBinding extends HTExternalClass {
         throw HTErrorUndefined(varName);
     }
   }
-
-
-
-
 }
-
-

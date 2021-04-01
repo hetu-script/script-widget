@@ -1,14 +1,5 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'dart:ui';
-import 'dart:async';
-import 'dart:collection'as collection;
-import 'dart:convert';
-import 'dart:developer'as developer;
-import 'dart:io';
-import 'dart:isolate';
-import 'dart:math'as math;
-import 'dart:nativewrappers';
-import 'dart:typed_data';
 
 class FontStyleAutoBinding extends HTExternalClass {
   FontStyleAutoBinding() : super('FontStyle');
@@ -27,7 +18,6 @@ class FontStyleAutoBinding extends HTExternalClass {
     }
   }
 
-
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
@@ -42,6 +32,7 @@ class FontStyleAutoBinding extends HTExternalClass {
     }
   }
 }
+
 class TextAlignAutoBinding extends HTExternalClass {
   TextAlignAutoBinding() : super('TextAlign');
 
@@ -67,7 +58,6 @@ class TextAlignAutoBinding extends HTExternalClass {
     }
   }
 
-
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
@@ -82,6 +72,7 @@ class TextAlignAutoBinding extends HTExternalClass {
     }
   }
 }
+
 class TextBaselineAutoBinding extends HTExternalClass {
   TextBaselineAutoBinding() : super('TextBaseline');
 
@@ -99,7 +90,6 @@ class TextBaselineAutoBinding extends HTExternalClass {
     }
   }
 
-
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
@@ -114,6 +104,7 @@ class TextBaselineAutoBinding extends HTExternalClass {
     }
   }
 }
+
 class TextDecorationStyleAutoBinding extends HTExternalClass {
   TextDecorationStyleAutoBinding() : super('TextDecorationStyle');
 
@@ -137,7 +128,6 @@ class TextDecorationStyleAutoBinding extends HTExternalClass {
     }
   }
 
-
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
@@ -152,6 +142,7 @@ class TextDecorationStyleAutoBinding extends HTExternalClass {
     }
   }
 }
+
 class TextDirectionAutoBinding extends HTExternalClass {
   TextDirectionAutoBinding() : super('TextDirection');
 
@@ -169,7 +160,6 @@ class TextDirectionAutoBinding extends HTExternalClass {
     }
   }
 
-
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
@@ -184,6 +174,7 @@ class TextDirectionAutoBinding extends HTExternalClass {
     }
   }
 }
+
 class TextAffinityAutoBinding extends HTExternalClass {
   TextAffinityAutoBinding() : super('TextAffinity');
 
@@ -201,7 +192,6 @@ class TextAffinityAutoBinding extends HTExternalClass {
     }
   }
 
-
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
@@ -216,6 +206,7 @@ class TextAffinityAutoBinding extends HTExternalClass {
     }
   }
 }
+
 class BoxHeightStyleAutoBinding extends HTExternalClass {
   BoxHeightStyleAutoBinding() : super('BoxHeightStyle');
 
@@ -241,7 +232,6 @@ class BoxHeightStyleAutoBinding extends HTExternalClass {
     }
   }
 
-
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
@@ -256,6 +246,7 @@ class BoxHeightStyleAutoBinding extends HTExternalClass {
     }
   }
 }
+
 class BoxWidthStyleAutoBinding extends HTExternalClass {
   BoxWidthStyleAutoBinding() : super('BoxWidthStyle');
 
@@ -273,7 +264,6 @@ class BoxWidthStyleAutoBinding extends HTExternalClass {
     }
   }
 
-
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
@@ -288,6 +278,7 @@ class BoxWidthStyleAutoBinding extends HTExternalClass {
     }
   }
 }
+
 class PlaceholderAlignmentAutoBinding extends HTExternalClass {
   PlaceholderAlignmentAutoBinding() : super('PlaceholderAlignment');
 
@@ -313,7 +304,6 @@ class PlaceholderAlignmentAutoBinding extends HTExternalClass {
     }
   }
 
-
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
@@ -336,7 +326,8 @@ class FontWeightAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'FontWeight.lerp':
-        return ({positionalArgs, namedArgs, typeArgs}) => FontWeight.lerp(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            FontWeight.lerp(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
       case 'FontWeight.w100':
         return FontWeight.w100;
       case 'FontWeight.w200':
@@ -365,12 +356,7 @@ class FontWeightAutoBinding extends HTExternalClass {
         throw HTErrorUndefined(varName);
     }
   }
-
-
-
-
 }
-
 
 class FontFeatureAutoBinding extends HTExternalClass {
   FontFeatureAutoBinding() : super('FontFeature');
@@ -379,7 +365,8 @@ class FontFeatureAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'FontFeature':
-        return ({positionalArgs, namedArgs, typeArgs}) => FontFeature(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : 1);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            FontFeature(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : 1);
       case 'FontFeature.enable':
         return ({positionalArgs, namedArgs, typeArgs}) => FontFeature.enable(positionalArgs[0]);
       case 'FontFeature.disable':
@@ -405,9 +392,6 @@ class FontFeatureAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as FontFeature).htFetch(id);
   }
-
-
-
 }
 
 extension FontFeatureBinding on FontFeature {
@@ -422,12 +406,11 @@ extension FontFeatureBinding on FontFeature {
       case 'hashCode':
         return hashCode;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class TextDecorationAutoBinding extends HTExternalClass {
@@ -437,7 +420,8 @@ class TextDecorationAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'TextDecoration.combine':
-        return ({positionalArgs, namedArgs, typeArgs}) => TextDecoration.combine(List<TextDecoration>.from(positionalArgs[0]));
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            TextDecoration.combine(List<TextDecoration>.from(positionalArgs[0]));
       case 'TextDecoration.none':
         return TextDecoration.none;
       case 'TextDecoration.underline':
@@ -455,9 +439,6 @@ class TextDecorationAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as TextDecoration).htFetch(id);
   }
-
-
-
 }
 
 extension TextDecorationBinding on TextDecoration {
@@ -468,14 +449,13 @@ extension TextDecorationBinding on TextDecoration {
       case 'hashCode':
         return hashCode;
       case 'contains':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.contains(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => contains(positionalArgs[0]);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class TextHeightBehaviorAutoBinding extends HTExternalClass {
@@ -485,7 +465,11 @@ class TextHeightBehaviorAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'TextHeightBehavior':
-        return ({positionalArgs, namedArgs, typeArgs}) => TextHeightBehavior(applyHeightToFirstAscent : namedArgs.containsKey('applyHeightToFirstAscent') ? namedArgs['applyHeightToFirstAscent'] : true, applyHeightToLastDescent : namedArgs.containsKey('applyHeightToLastDescent') ? namedArgs['applyHeightToLastDescent'] : true);
+        return ({positionalArgs, namedArgs, typeArgs}) => TextHeightBehavior(
+            applyHeightToFirstAscent:
+                namedArgs.containsKey('applyHeightToFirstAscent') ? namedArgs['applyHeightToFirstAscent'] : true,
+            applyHeightToLastDescent:
+                namedArgs.containsKey('applyHeightToLastDescent') ? namedArgs['applyHeightToLastDescent'] : true);
       case 'TextHeightBehavior.fromEncoded':
         return ({positionalArgs, namedArgs, typeArgs}) => TextHeightBehavior.fromEncoded(positionalArgs[0]);
       default:
@@ -497,9 +481,6 @@ class TextHeightBehaviorAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as TextHeightBehavior).htFetch(id);
   }
-
-
-
 }
 
 extension TextHeightBehaviorBinding on TextHeightBehavior {
@@ -514,14 +495,13 @@ extension TextHeightBehaviorBinding on TextHeightBehavior {
       case 'hashCode':
         return hashCode;
       case 'encode':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.encode();
+        return ({positionalArgs, namedArgs, typeArgs}) => encode();
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class ParagraphStyleAutoBinding extends HTExternalClass {
@@ -531,7 +511,19 @@ class ParagraphStyleAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'ParagraphStyle':
-        return ({positionalArgs, namedArgs, typeArgs}) => ParagraphStyle(textAlign : namedArgs.containsKey('textAlign') ? namedArgs['textAlign'] : null, textDirection : namedArgs.containsKey('textDirection') ? namedArgs['textDirection'] : null, maxLines : namedArgs.containsKey('maxLines') ? namedArgs['maxLines'] : null, fontFamily : namedArgs.containsKey('fontFamily') ? namedArgs['fontFamily'] : null, fontSize : namedArgs.containsKey('fontSize') ? namedArgs['fontSize'] : null, height : namedArgs.containsKey('height') ? namedArgs['height'] : null, textHeightBehavior : namedArgs.containsKey('textHeightBehavior') ? namedArgs['textHeightBehavior'] : null, fontWeight : namedArgs.containsKey('fontWeight') ? namedArgs['fontWeight'] : null, fontStyle : namedArgs.containsKey('fontStyle') ? namedArgs['fontStyle'] : null, strutStyle : namedArgs.containsKey('strutStyle') ? namedArgs['strutStyle'] : null, ellipsis : namedArgs.containsKey('ellipsis') ? namedArgs['ellipsis'] : null, locale : namedArgs.containsKey('locale') ? namedArgs['locale'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => ParagraphStyle(
+            textAlign: namedArgs.containsKey('textAlign') ? namedArgs['textAlign'] : null,
+            textDirection: namedArgs.containsKey('textDirection') ? namedArgs['textDirection'] : null,
+            maxLines: namedArgs.containsKey('maxLines') ? namedArgs['maxLines'] : null,
+            fontFamily: namedArgs.containsKey('fontFamily') ? namedArgs['fontFamily'] : null,
+            fontSize: namedArgs.containsKey('fontSize') ? namedArgs['fontSize'] : null,
+            height: namedArgs.containsKey('height') ? namedArgs['height'] : null,
+            textHeightBehavior: namedArgs.containsKey('textHeightBehavior') ? namedArgs['textHeightBehavior'] : null,
+            fontWeight: namedArgs.containsKey('fontWeight') ? namedArgs['fontWeight'] : null,
+            fontStyle: namedArgs.containsKey('fontStyle') ? namedArgs['fontStyle'] : null,
+            strutStyle: namedArgs.containsKey('strutStyle') ? namedArgs['strutStyle'] : null,
+            ellipsis: namedArgs.containsKey('ellipsis') ? namedArgs['ellipsis'] : null,
+            locale: namedArgs.containsKey('locale') ? namedArgs['locale'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -541,9 +533,6 @@ class ParagraphStyleAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as ParagraphStyle).htFetch(id);
   }
-
-
-
 }
 
 extension ParagraphStyleBinding on ParagraphStyle {
@@ -554,12 +543,11 @@ extension ParagraphStyleBinding on ParagraphStyle {
       case 'hashCode':
         return hashCode;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class TextBoxAutoBinding extends HTExternalClass {
@@ -569,7 +557,8 @@ class TextBoxAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'TextBox.fromLTRBD':
-        return ({positionalArgs, namedArgs, typeArgs}) => TextBox.fromLTRBD(positionalArgs[0], positionalArgs[1], positionalArgs[2], positionalArgs[3], positionalArgs[4]);
+        return ({positionalArgs, namedArgs, typeArgs}) => TextBox.fromLTRBD(
+            positionalArgs[0], positionalArgs[1], positionalArgs[2], positionalArgs[3], positionalArgs[4]);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -579,9 +568,6 @@ class TextBoxAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as TextBox).htFetch(id);
   }
-
-
-
 }
 
 extension TextBoxBinding on TextBox {
@@ -606,14 +592,13 @@ extension TextBoxBinding on TextBox {
       case 'hashCode':
         return hashCode;
       case 'toRect':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toRect();
+        return ({positionalArgs, namedArgs, typeArgs}) => toRect();
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class TextPositionAutoBinding extends HTExternalClass {
@@ -623,7 +608,9 @@ class TextPositionAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'TextPosition':
-        return ({positionalArgs, namedArgs, typeArgs}) => TextPosition(offset : namedArgs['offset'], affinity : namedArgs.containsKey('affinity') ? namedArgs['affinity'] : TextAffinity.downstream);
+        return ({positionalArgs, namedArgs, typeArgs}) => TextPosition(
+            offset: namedArgs['offset'],
+            affinity: namedArgs.containsKey('affinity') ? namedArgs['affinity'] : TextAffinity.downstream);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -633,9 +620,6 @@ class TextPositionAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as TextPosition).htFetch(id);
   }
-
-
-
 }
 
 extension TextPositionBinding on TextPosition {
@@ -650,12 +634,11 @@ extension TextPositionBinding on TextPosition {
       case 'hashCode':
         return hashCode;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class TextRangeAutoBinding extends HTExternalClass {
@@ -665,7 +648,7 @@ class TextRangeAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'TextRange':
-        return ({positionalArgs, namedArgs, typeArgs}) => TextRange(start : namedArgs['start'], end : namedArgs['end']);
+        return ({positionalArgs, namedArgs, typeArgs}) => TextRange(start: namedArgs['start'], end: namedArgs['end']);
       case 'TextRange.collapsed':
         return ({positionalArgs, namedArgs, typeArgs}) => TextRange.collapsed(positionalArgs[0]);
       case 'TextRange.empty':
@@ -679,9 +662,6 @@ class TextRangeAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as TextRange).htFetch(id);
   }
-
-
-
 }
 
 extension TextRangeBinding on TextRange {
@@ -702,18 +682,17 @@ extension TextRangeBinding on TextRange {
       case 'hashCode':
         return hashCode;
       case 'textBefore':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.textBefore(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => textBefore(positionalArgs[0]);
       case 'textAfter':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.textAfter(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => textAfter(positionalArgs[0]);
       case 'textInside':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.textInside(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => textInside(positionalArgs[0]);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class ParagraphConstraintsAutoBinding extends HTExternalClass {
@@ -723,7 +702,7 @@ class ParagraphConstraintsAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'ParagraphConstraints':
-        return ({positionalArgs, namedArgs, typeArgs}) => ParagraphConstraints(width : namedArgs['width']);
+        return ({positionalArgs, namedArgs, typeArgs}) => ParagraphConstraints(width: namedArgs['width']);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -733,9 +712,6 @@ class ParagraphConstraintsAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as ParagraphConstraints).htFetch(id);
   }
-
-
-
 }
 
 extension ParagraphConstraintsBinding on ParagraphConstraints {
@@ -748,12 +724,11 @@ extension ParagraphConstraintsBinding on ParagraphConstraints {
       case 'hashCode':
         return hashCode;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class LineMetricsAutoBinding extends HTExternalClass {
@@ -763,7 +738,16 @@ class LineMetricsAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'LineMetrics':
-        return ({positionalArgs, namedArgs, typeArgs}) => LineMetrics(hardBreak : namedArgs['hardBreak'], ascent : namedArgs['ascent'], descent : namedArgs['descent'], unscaledAscent : namedArgs['unscaledAscent'], height : namedArgs['height'], width : namedArgs['width'], left : namedArgs['left'], baseline : namedArgs['baseline'], lineNumber : namedArgs['lineNumber']);
+        return ({positionalArgs, namedArgs, typeArgs}) => LineMetrics(
+            hardBreak: namedArgs['hardBreak'],
+            ascent: namedArgs['ascent'],
+            descent: namedArgs['descent'],
+            unscaledAscent: namedArgs['unscaledAscent'],
+            height: namedArgs['height'],
+            width: namedArgs['width'],
+            left: namedArgs['left'],
+            baseline: namedArgs['baseline'],
+            lineNumber: namedArgs['lineNumber']);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -773,9 +757,6 @@ class LineMetricsAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as LineMetrics).htFetch(id);
   }
-
-
-
 }
 
 extension LineMetricsBinding on LineMetrics {
@@ -804,12 +785,11 @@ extension LineMetricsBinding on LineMetrics {
       case 'hashCode':
         return hashCode;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class ParagraphBuilderAutoBinding extends HTExternalClass {
@@ -829,9 +809,6 @@ class ParagraphBuilderAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as ParagraphBuilder).htFetch(id);
   }
-
-
-
 }
 
 extension ParagraphBuilderBinding on ParagraphBuilder {
@@ -844,19 +821,21 @@ extension ParagraphBuilderBinding on ParagraphBuilder {
       case 'placeholderScales':
         return placeholderScales;
       case 'pushStyle':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.pushStyle(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => pushStyle(positionalArgs[0]);
       case 'pop':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.pop();
+        return ({positionalArgs, namedArgs, typeArgs}) => pop();
       case 'addText':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.addText(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => addText(positionalArgs[0]);
       case 'addPlaceholder':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.addPlaceholder(positionalArgs[0], positionalArgs[1], positionalArgs[2], scale : namedArgs.containsKey('scale') ? namedArgs['scale'] : 1.0, baselineOffset : namedArgs.containsKey('baselineOffset') ? namedArgs['baselineOffset'] : null, baseline : namedArgs.containsKey('baseline') ? namedArgs['baseline'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => addPlaceholder(
+            positionalArgs[0], positionalArgs[1], positionalArgs[2],
+            scale: namedArgs.containsKey('scale') ? namedArgs['scale'] : 1.0,
+            baselineOffset: namedArgs.containsKey('baselineOffset') ? namedArgs['baselineOffset'] : null,
+            baseline: namedArgs.containsKey('baseline') ? namedArgs['baseline'] : null);
       case 'build':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.build();
+        return ({positionalArgs, namedArgs, typeArgs}) => build();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
-

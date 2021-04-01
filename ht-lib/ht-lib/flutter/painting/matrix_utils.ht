@@ -1,0 +1,41 @@
+external class MatrixUtils {
+    static fun getAsTranslation (transform)
+    static fun getAsScale (transform)
+    static fun matrixEquals (a, b)
+    static fun isIdentity (a)
+    static fun transformPoint (transform, point)
+    static fun transformRect (transform, rect)
+    static fun inverseTransformRect (transform, rect)
+    static fun createCylindricalProjectionTransform ({radius, angle, perspective, orientation})
+    static fun forceToPoint (offset)
+}
+external class TransformProperty {
+    construct 
+    get expandableValue
+    get allowWrap
+    get allowNameWrap
+    get ifNull
+    get ifEmpty
+    get tooltip
+    get missingIfNull
+    get defaultValue
+    get name
+    get showSeparator
+    get showName
+    get linePrefix
+    get style
+    fun valueToString
+    fun toJsonMap
+    fun toDescription
+    get propertyType
+    get value
+    get exception
+    get level
+    fun getProperties
+    fun getChildren
+    fun isFiltered
+    get emptyBodyDescription
+    get allowTruncate
+    fun toString
+    fun toStringDeep
+}

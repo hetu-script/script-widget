@@ -1,9 +1,6 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/animation.dart';
-import 'dart:math'as math;
 import 'dart:ui';
-import 'package:flutter/foundation.dart';
-
 
 class SawToothAutoBinding extends HTExternalClass {
   SawToothAutoBinding() : super('SawTooth');
@@ -22,9 +19,6 @@ class SawToothAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as SawTooth).htFetch(id);
   }
-
-
-
 }
 
 extension SawToothBinding on SawTooth {
@@ -37,16 +31,15 @@ extension SawToothBinding on SawTooth {
       case 'flipped':
         return flipped;
       case 'transformInternal':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.transformInternal(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => transformInternal(positionalArgs[0]);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       case 'transform':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.transform(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => transform(positionalArgs[0]);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class IntervalAutoBinding extends HTExternalClass {
@@ -56,7 +49,8 @@ class IntervalAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'Interval':
-        return ({positionalArgs, namedArgs, typeArgs}) => Interval(positionalArgs[0], positionalArgs[1], curve : namedArgs.containsKey('curve') ? namedArgs['curve'] : Curves.linear);
+        return ({positionalArgs, namedArgs, typeArgs}) => Interval(positionalArgs[0], positionalArgs[1],
+            curve: namedArgs.containsKey('curve') ? namedArgs['curve'] : Curves.linear);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -66,9 +60,6 @@ class IntervalAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as Interval).htFetch(id);
   }
-
-
-
 }
 
 extension IntervalBinding on Interval {
@@ -85,16 +76,15 @@ extension IntervalBinding on Interval {
       case 'flipped':
         return flipped;
       case 'transformInternal':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.transformInternal(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => transformInternal(positionalArgs[0]);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       case 'transform':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.transform(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => transform(positionalArgs[0]);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class ThresholdAutoBinding extends HTExternalClass {
@@ -114,9 +104,6 @@ class ThresholdAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as Threshold).htFetch(id);
   }
-
-
-
 }
 
 extension ThresholdBinding on Threshold {
@@ -129,16 +116,15 @@ extension ThresholdBinding on Threshold {
       case 'flipped':
         return flipped;
       case 'transformInternal':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.transformInternal(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => transformInternal(positionalArgs[0]);
       case 'transform':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.transform(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => transform(positionalArgs[0]);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class CubicAutoBinding extends HTExternalClass {
@@ -148,7 +134,8 @@ class CubicAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'Cubic':
-        return ({positionalArgs, namedArgs, typeArgs}) => Cubic(positionalArgs[0], positionalArgs[1], positionalArgs[2], positionalArgs[3]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            Cubic(positionalArgs[0], positionalArgs[1], positionalArgs[2], positionalArgs[3]);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -158,9 +145,6 @@ class CubicAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as Cubic).htFetch(id);
   }
-
-
-
 }
 
 extension CubicBinding on Cubic {
@@ -179,16 +163,15 @@ extension CubicBinding on Cubic {
       case 'flipped':
         return flipped;
       case 'transformInternal':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.transformInternal(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => transformInternal(positionalArgs[0]);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       case 'transform':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.transform(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => transform(positionalArgs[0]);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class Curve2DSampleAutoBinding extends HTExternalClass {
@@ -208,9 +191,6 @@ class Curve2DSampleAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as Curve2DSample).htFetch(id);
   }
-
-
-
 }
 
 extension Curve2DSampleBinding on Curve2DSample {
@@ -223,12 +203,11 @@ extension Curve2DSampleBinding on Curve2DSample {
       case 'value':
         return value;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class CatmullRomSplineAutoBinding extends HTExternalClass {
@@ -238,9 +217,16 @@ class CatmullRomSplineAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'CatmullRomSpline':
-        return ({positionalArgs, namedArgs, typeArgs}) => CatmullRomSpline(List<Offset>.from(positionalArgs[0]), tension : namedArgs.containsKey('tension') ? namedArgs['tension'] : 0.0, startHandle : namedArgs.containsKey('startHandle') ? namedArgs['startHandle'] : null, endHandle : namedArgs.containsKey('endHandle') ? namedArgs['endHandle'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => CatmullRomSpline(List<Offset>.from(positionalArgs[0]),
+            tension: namedArgs.containsKey('tension') ? namedArgs['tension'] : 0.0,
+            startHandle: namedArgs.containsKey('startHandle') ? namedArgs['startHandle'] : null,
+            endHandle: namedArgs.containsKey('endHandle') ? namedArgs['endHandle'] : null);
       case 'CatmullRomSpline.precompute':
-        return ({positionalArgs, namedArgs, typeArgs}) => CatmullRomSpline.precompute(List<Offset>.from(positionalArgs[0]), tension : namedArgs.containsKey('tension') ? namedArgs['tension'] : 0.0, startHandle : namedArgs.containsKey('startHandle') ? namedArgs['startHandle'] : null, endHandle : namedArgs.containsKey('endHandle') ? namedArgs['endHandle'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => CatmullRomSpline.precompute(
+            List<Offset>.from(positionalArgs[0]),
+            tension: namedArgs.containsKey('tension') ? namedArgs['tension'] : 0.0,
+            startHandle: namedArgs.containsKey('startHandle') ? namedArgs['startHandle'] : null,
+            endHandle: namedArgs.containsKey('endHandle') ? namedArgs['endHandle'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -250,9 +236,6 @@ class CatmullRomSplineAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as CatmullRomSpline).htFetch(id);
   }
-
-
-
 }
 
 extension CatmullRomSplineBinding on CatmullRomSpline {
@@ -261,20 +244,22 @@ extension CatmullRomSplineBinding on CatmullRomSpline {
       case 'typeid':
         return HTTypeId('CatmullRomSpline');
       case 'transformInternal':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.transformInternal(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => transformInternal(positionalArgs[0]);
       case 'generateSamples':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.generateSamples(start : namedArgs.containsKey('start') ? namedArgs['start'] : 0.0, end : namedArgs.containsKey('end') ? namedArgs['end'] : 1.0, tolerance : namedArgs.containsKey('tolerance') ? namedArgs['tolerance'] : 1e-10);
+        return ({positionalArgs, namedArgs, typeArgs}) => generateSamples(
+            start: namedArgs.containsKey('start') ? namedArgs['start'] : 0.0,
+            end: namedArgs.containsKey('end') ? namedArgs['end'] : 1.0,
+            tolerance: namedArgs.containsKey('tolerance') ? namedArgs['tolerance'] : 1e-10);
       case 'findInverse':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.findInverse(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => findInverse(positionalArgs[0]);
       case 'transform':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.transform(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => transform(positionalArgs[0]);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class CatmullRomCurveAutoBinding extends HTExternalClass {
@@ -284,11 +269,17 @@ class CatmullRomCurveAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'CatmullRomCurve':
-        return ({positionalArgs, namedArgs, typeArgs}) => CatmullRomCurve(List<Offset>.from(positionalArgs[0]), tension : namedArgs.containsKey('tension') ? namedArgs['tension'] : 0.0);
+        return ({positionalArgs, namedArgs, typeArgs}) => CatmullRomCurve(List<Offset>.from(positionalArgs[0]),
+            tension: namedArgs.containsKey('tension') ? namedArgs['tension'] : 0.0);
       case 'CatmullRomCurve.precompute':
-        return ({positionalArgs, namedArgs, typeArgs}) => CatmullRomCurve.precompute(List<Offset>.from(positionalArgs[0]), tension : namedArgs.containsKey('tension') ? namedArgs['tension'] : 0.0);
+        return ({positionalArgs, namedArgs, typeArgs}) => CatmullRomCurve.precompute(
+            List<Offset>.from(positionalArgs[0]),
+            tension: namedArgs.containsKey('tension') ? namedArgs['tension'] : 0.0);
       case 'CatmullRomCurve.validateControlPoints':
-        return ({positionalArgs, namedArgs, typeArgs}) => CatmullRomCurve.validateControlPoints(List<Offset>.from(positionalArgs[0]), tension : namedArgs.containsKey('tension') ? namedArgs['tension'] : 0.0, reasons : namedArgs.containsKey('reasons') ? List<String>.from(namedArgs['reasons']) : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => CatmullRomCurve.validateControlPoints(
+            List<Offset>.from(positionalArgs[0]),
+            tension: namedArgs.containsKey('tension') ? namedArgs['tension'] : 0.0,
+            reasons: namedArgs.containsKey('reasons') ? List<String>.from(namedArgs['reasons']) : null);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -298,9 +289,6 @@ class CatmullRomCurveAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as CatmullRomCurve).htFetch(id);
   }
-
-
-
 }
 
 extension CatmullRomCurveBinding on CatmullRomCurve {
@@ -315,16 +303,15 @@ extension CatmullRomCurveBinding on CatmullRomCurve {
       case 'flipped':
         return flipped;
       case 'transformInternal':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.transformInternal(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => transformInternal(positionalArgs[0]);
       case 'transform':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.transform(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => transform(positionalArgs[0]);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class FlippedCurveAutoBinding extends HTExternalClass {
@@ -344,9 +331,6 @@ class FlippedCurveAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as FlippedCurve).htFetch(id);
   }
-
-
-
 }
 
 extension FlippedCurveBinding on FlippedCurve {
@@ -359,16 +343,15 @@ extension FlippedCurveBinding on FlippedCurve {
       case 'flipped':
         return flipped;
       case 'transformInternal':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.transformInternal(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => transformInternal(positionalArgs[0]);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       case 'transform':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.transform(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => transform(positionalArgs[0]);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class ElasticInCurveAutoBinding extends HTExternalClass {
@@ -378,7 +361,8 @@ class ElasticInCurveAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'ElasticInCurve':
-        return ({positionalArgs, namedArgs, typeArgs}) => ElasticInCurve(positionalArgs.length > 0 ? positionalArgs[0] : 0.4);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            ElasticInCurve(positionalArgs.length > 0 ? positionalArgs[0] : 0.4);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -388,9 +372,6 @@ class ElasticInCurveAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as ElasticInCurve).htFetch(id);
   }
-
-
-
 }
 
 extension ElasticInCurveBinding on ElasticInCurve {
@@ -403,16 +384,15 @@ extension ElasticInCurveBinding on ElasticInCurve {
       case 'flipped':
         return flipped;
       case 'transformInternal':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.transformInternal(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => transformInternal(positionalArgs[0]);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       case 'transform':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.transform(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => transform(positionalArgs[0]);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class ElasticOutCurveAutoBinding extends HTExternalClass {
@@ -422,7 +402,8 @@ class ElasticOutCurveAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'ElasticOutCurve':
-        return ({positionalArgs, namedArgs, typeArgs}) => ElasticOutCurve(positionalArgs.length > 0 ? positionalArgs[0] : 0.4);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            ElasticOutCurve(positionalArgs.length > 0 ? positionalArgs[0] : 0.4);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -432,9 +413,6 @@ class ElasticOutCurveAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as ElasticOutCurve).htFetch(id);
   }
-
-
-
 }
 
 extension ElasticOutCurveBinding on ElasticOutCurve {
@@ -447,16 +425,15 @@ extension ElasticOutCurveBinding on ElasticOutCurve {
       case 'flipped':
         return flipped;
       case 'transformInternal':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.transformInternal(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => transformInternal(positionalArgs[0]);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       case 'transform':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.transform(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => transform(positionalArgs[0]);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class ElasticInOutCurveAutoBinding extends HTExternalClass {
@@ -466,7 +443,8 @@ class ElasticInOutCurveAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'ElasticInOutCurve':
-        return ({positionalArgs, namedArgs, typeArgs}) => ElasticInOutCurve(positionalArgs.length > 0 ? positionalArgs[0] : 0.4);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            ElasticInOutCurve(positionalArgs.length > 0 ? positionalArgs[0] : 0.4);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -476,9 +454,6 @@ class ElasticInOutCurveAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as ElasticInOutCurve).htFetch(id);
   }
-
-
-
 }
 
 extension ElasticInOutCurveBinding on ElasticInOutCurve {
@@ -491,16 +466,15 @@ extension ElasticInOutCurveBinding on ElasticInOutCurve {
       case 'flipped':
         return flipped;
       case 'transformInternal':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.transformInternal(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => transformInternal(positionalArgs[0]);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       case 'transform':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.transform(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => transform(positionalArgs[0]);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class CurvesAutoBinding extends HTExternalClass {
@@ -595,10 +569,4 @@ class CurvesAutoBinding extends HTExternalClass {
         throw HTErrorUndefined(varName);
     }
   }
-
-
-
-
 }
-
-

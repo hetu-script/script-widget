@@ -1,10 +1,5 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/material.dart';
-import 'dart:math'as math;
-import 'dart:ui'as ui;
-import 'dart:ui';
-import 'package:flutter/widgets.dart';
-
 
 class AnimatedIconsAutoBinding extends HTExternalClass {
   AnimatedIconsAutoBinding() : super('AnimatedIcons');
@@ -44,10 +39,4 @@ class AnimatedIconsAutoBinding extends HTExternalClass {
         throw HTErrorUndefined(varName);
     }
   }
-
-
-
-
 }
-
-

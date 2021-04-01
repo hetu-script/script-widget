@@ -1,7 +1,5 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter/foundation.dart';
-
 
 class RawKeyEventDataAndroidAutoBinding extends HTExternalClass {
   RawKeyEventDataAndroidAutoBinding() : super('RawKeyEventDataAndroid');
@@ -10,7 +8,18 @@ class RawKeyEventDataAndroidAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'RawKeyEventDataAndroid':
-        return ({positionalArgs, namedArgs, typeArgs}) => RawKeyEventDataAndroid(flags : namedArgs.containsKey('flags') ? namedArgs['flags'] : 0, codePoint : namedArgs.containsKey('codePoint') ? namedArgs['codePoint'] : 0, plainCodePoint : namedArgs.containsKey('plainCodePoint') ? namedArgs['plainCodePoint'] : 0, keyCode : namedArgs.containsKey('keyCode') ? namedArgs['keyCode'] : 0, scanCode : namedArgs.containsKey('scanCode') ? namedArgs['scanCode'] : 0, metaState : namedArgs.containsKey('metaState') ? namedArgs['metaState'] : 0, eventSource : namedArgs.containsKey('eventSource') ? namedArgs['eventSource'] : 0, vendorId : namedArgs.containsKey('vendorId') ? namedArgs['vendorId'] : 0, productId : namedArgs.containsKey('productId') ? namedArgs['productId'] : 0, deviceId : namedArgs.containsKey('deviceId') ? namedArgs['deviceId'] : 0, repeatCount : namedArgs.containsKey('repeatCount') ? namedArgs['repeatCount'] : 0);
+        return ({positionalArgs, namedArgs, typeArgs}) => RawKeyEventDataAndroid(
+            flags: namedArgs.containsKey('flags') ? namedArgs['flags'] : 0,
+            codePoint: namedArgs.containsKey('codePoint') ? namedArgs['codePoint'] : 0,
+            plainCodePoint: namedArgs.containsKey('plainCodePoint') ? namedArgs['plainCodePoint'] : 0,
+            keyCode: namedArgs.containsKey('keyCode') ? namedArgs['keyCode'] : 0,
+            scanCode: namedArgs.containsKey('scanCode') ? namedArgs['scanCode'] : 0,
+            metaState: namedArgs.containsKey('metaState') ? namedArgs['metaState'] : 0,
+            eventSource: namedArgs.containsKey('eventSource') ? namedArgs['eventSource'] : 0,
+            vendorId: namedArgs.containsKey('vendorId') ? namedArgs['vendorId'] : 0,
+            productId: namedArgs.containsKey('productId') ? namedArgs['productId'] : 0,
+            deviceId: namedArgs.containsKey('deviceId') ? namedArgs['deviceId'] : 0,
+            repeatCount: namedArgs.containsKey('repeatCount') ? namedArgs['repeatCount'] : 0);
       case 'RawKeyEventDataAndroid.modifierNone':
         return RawKeyEventDataAndroid.modifierNone;
       case 'RawKeyEventDataAndroid.modifierAlt':
@@ -56,9 +65,6 @@ class RawKeyEventDataAndroidAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as RawKeyEventDataAndroid).htFetch(id);
   }
-
-
-
 }
 
 extension RawKeyEventDataAndroidBinding on RawKeyEventDataAndroid {
@@ -105,15 +111,14 @@ extension RawKeyEventDataAndroidBinding on RawKeyEventDataAndroid {
       case 'modifiersPressed':
         return modifiersPressed;
       case 'isModifierPressed':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.isModifierPressed(positionalArgs[0], side : namedArgs.containsKey('side') ? namedArgs['side'] : KeyboardSide.any);
+        return ({positionalArgs, namedArgs, typeArgs}) => isModifierPressed(positionalArgs[0],
+            side: namedArgs.containsKey('side') ? namedArgs['side'] : KeyboardSide.any);
       case 'getModifierSide':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.getModifierSide(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => getModifierSide(positionalArgs[0]);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
-

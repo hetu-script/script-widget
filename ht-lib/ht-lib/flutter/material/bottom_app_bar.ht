@@ -1,0 +1,19 @@
+external class BottomAppBar {
+    construct 
+    get child
+    get color
+    get elevation
+    get shape
+    get clipBehavior
+    get notchMargin
+    get key
+    fun createState
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}

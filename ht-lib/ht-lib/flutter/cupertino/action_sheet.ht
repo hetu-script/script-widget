@@ -1,0 +1,36 @@
+external class CupertinoActionSheet {
+    construct 
+    get title
+    get message
+    get actions
+    get messageScrollController
+    get actionScrollController
+    get cancelButton
+    get key
+    fun build
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class CupertinoActionSheetAction {
+    construct 
+    get onPressed
+    get isDefaultAction
+    get isDestructiveAction
+    get child
+    get key
+    fun build
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}

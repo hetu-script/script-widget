@@ -1,0 +1,19 @@
+external class AnimatedIcon {
+    construct 
+    get progress
+    get color
+    get size
+    get icon
+    get semanticLabel
+    get textDirection
+    get key
+    fun build
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}

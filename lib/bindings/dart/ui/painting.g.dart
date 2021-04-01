@@ -1,14 +1,5 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'dart:ui';
-import 'dart:async';
-import 'dart:collection'as collection;
-import 'dart:convert';
-import 'dart:developer'as developer;
-import 'dart:io';
-import 'dart:isolate';
-import 'dart:math'as math;
-import 'dart:nativewrappers';
-import 'dart:typed_data';
 
 class BlendModeAutoBinding extends HTExternalClass {
   BlendModeAutoBinding() : super('BlendMode');
@@ -81,7 +72,6 @@ class BlendModeAutoBinding extends HTExternalClass {
     }
   }
 
-
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
@@ -96,6 +86,7 @@ class BlendModeAutoBinding extends HTExternalClass {
     }
   }
 }
+
 class FilterQualityAutoBinding extends HTExternalClass {
   FilterQualityAutoBinding() : super('FilterQuality');
 
@@ -117,7 +108,6 @@ class FilterQualityAutoBinding extends HTExternalClass {
     }
   }
 
-
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
@@ -132,6 +122,7 @@ class FilterQualityAutoBinding extends HTExternalClass {
     }
   }
 }
+
 class StrokeCapAutoBinding extends HTExternalClass {
   StrokeCapAutoBinding() : super('StrokeCap');
 
@@ -151,7 +142,6 @@ class StrokeCapAutoBinding extends HTExternalClass {
     }
   }
 
-
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
@@ -166,6 +156,7 @@ class StrokeCapAutoBinding extends HTExternalClass {
     }
   }
 }
+
 class StrokeJoinAutoBinding extends HTExternalClass {
   StrokeJoinAutoBinding() : super('StrokeJoin');
 
@@ -185,7 +176,6 @@ class StrokeJoinAutoBinding extends HTExternalClass {
     }
   }
 
-
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
@@ -200,6 +190,7 @@ class StrokeJoinAutoBinding extends HTExternalClass {
     }
   }
 }
+
 class PaintingStyleAutoBinding extends HTExternalClass {
   PaintingStyleAutoBinding() : super('PaintingStyle');
 
@@ -217,7 +208,6 @@ class PaintingStyleAutoBinding extends HTExternalClass {
     }
   }
 
-
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
@@ -232,6 +222,7 @@ class PaintingStyleAutoBinding extends HTExternalClass {
     }
   }
 }
+
 class ClipAutoBinding extends HTExternalClass {
   ClipAutoBinding() : super('Clip');
 
@@ -253,7 +244,6 @@ class ClipAutoBinding extends HTExternalClass {
     }
   }
 
-
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
@@ -268,6 +258,7 @@ class ClipAutoBinding extends HTExternalClass {
     }
   }
 }
+
 class ImageByteFormatAutoBinding extends HTExternalClass {
   ImageByteFormatAutoBinding() : super('ImageByteFormat');
 
@@ -287,7 +278,6 @@ class ImageByteFormatAutoBinding extends HTExternalClass {
     }
   }
 
-
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
@@ -302,6 +292,7 @@ class ImageByteFormatAutoBinding extends HTExternalClass {
     }
   }
 }
+
 class PixelFormatAutoBinding extends HTExternalClass {
   PixelFormatAutoBinding() : super('PixelFormat');
 
@@ -319,7 +310,6 @@ class PixelFormatAutoBinding extends HTExternalClass {
     }
   }
 
-
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
@@ -334,6 +324,7 @@ class PixelFormatAutoBinding extends HTExternalClass {
     }
   }
 }
+
 class PathFillTypeAutoBinding extends HTExternalClass {
   PathFillTypeAutoBinding() : super('PathFillType');
 
@@ -351,7 +342,6 @@ class PathFillTypeAutoBinding extends HTExternalClass {
     }
   }
 
-
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
@@ -366,6 +356,7 @@ class PathFillTypeAutoBinding extends HTExternalClass {
     }
   }
 }
+
 class PathOperationAutoBinding extends HTExternalClass {
   PathOperationAutoBinding() : super('PathOperation');
 
@@ -389,7 +380,6 @@ class PathOperationAutoBinding extends HTExternalClass {
     }
   }
 
-
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
@@ -404,6 +394,7 @@ class PathOperationAutoBinding extends HTExternalClass {
     }
   }
 }
+
 class BlurStyleAutoBinding extends HTExternalClass {
   BlurStyleAutoBinding() : super('BlurStyle');
 
@@ -425,7 +416,6 @@ class BlurStyleAutoBinding extends HTExternalClass {
     }
   }
 
-
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
@@ -440,6 +430,7 @@ class BlurStyleAutoBinding extends HTExternalClass {
     }
   }
 }
+
 class TileModeAutoBinding extends HTExternalClass {
   TileModeAutoBinding() : super('TileMode');
 
@@ -461,7 +452,6 @@ class TileModeAutoBinding extends HTExternalClass {
     }
   }
 
-
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
@@ -476,6 +466,7 @@ class TileModeAutoBinding extends HTExternalClass {
     }
   }
 }
+
 class VertexModeAutoBinding extends HTExternalClass {
   VertexModeAutoBinding() : super('VertexMode');
 
@@ -495,7 +486,6 @@ class VertexModeAutoBinding extends HTExternalClass {
     }
   }
 
-
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
@@ -510,6 +500,7 @@ class VertexModeAutoBinding extends HTExternalClass {
     }
   }
 }
+
 class PointModeAutoBinding extends HTExternalClass {
   PointModeAutoBinding() : super('PointMode');
 
@@ -529,7 +520,6 @@ class PointModeAutoBinding extends HTExternalClass {
     }
   }
 
-
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
@@ -544,6 +534,7 @@ class PointModeAutoBinding extends HTExternalClass {
     }
   }
 }
+
 class ClipOpAutoBinding extends HTExternalClass {
   ClipOpAutoBinding() : super('ClipOp');
 
@@ -560,7 +551,6 @@ class ClipOpAutoBinding extends HTExternalClass {
         throw HTErrorUndefined(varName);
     }
   }
-
 
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
@@ -586,11 +576,14 @@ class ColorAutoBinding extends HTExternalClass {
       case 'Color':
         return ({positionalArgs, namedArgs, typeArgs}) => Color(positionalArgs[0]);
       case 'Color.fromARGB':
-        return ({positionalArgs, namedArgs, typeArgs}) => Color.fromARGB(positionalArgs[0], positionalArgs[1], positionalArgs[2], positionalArgs[3]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            Color.fromARGB(positionalArgs[0], positionalArgs[1], positionalArgs[2], positionalArgs[3]);
       case 'Color.fromRGBO':
-        return ({positionalArgs, namedArgs, typeArgs}) => Color.fromRGBO(positionalArgs[0], positionalArgs[1], positionalArgs[2], positionalArgs[3]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            Color.fromRGBO(positionalArgs[0], positionalArgs[1], positionalArgs[2], positionalArgs[3]);
       case 'Color.lerp':
-        return ({positionalArgs, namedArgs, typeArgs}) => Color.lerp(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            Color.lerp(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
       case 'Color.alphaBlend':
         return ({positionalArgs, namedArgs, typeArgs}) => Color.alphaBlend(positionalArgs[0], positionalArgs[1]);
       case 'Color.getAlphaFromOpacity':
@@ -604,9 +597,6 @@ class ColorAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as Color).htFetch(id);
   }
-
-
-
 }
 
 extension ColorBinding on Color {
@@ -629,24 +619,23 @@ extension ColorBinding on Color {
       case 'hashCode':
         return hashCode;
       case 'withAlpha':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.withAlpha(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => withAlpha(positionalArgs[0]);
       case 'withOpacity':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.withOpacity(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => withOpacity(positionalArgs[0]);
       case 'withRed':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.withRed(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => withRed(positionalArgs[0]);
       case 'withGreen':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.withGreen(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => withGreen(positionalArgs[0]);
       case 'withBlue':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.withBlue(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => withBlue(positionalArgs[0]);
       case 'computeLuminance':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.computeLuminance();
+        return ({positionalArgs, namedArgs, typeArgs}) => computeLuminance();
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class PaintAutoBinding extends HTExternalClass {
@@ -663,6 +652,7 @@ class PaintAutoBinding extends HTExternalClass {
         throw HTErrorUndefined(varName);
     }
   }
+
   @override
   void memberSet(String varName, dynamic value, {String from = HTLexicon.global}) {
     switch (varName) {
@@ -682,8 +672,6 @@ class PaintAutoBinding extends HTExternalClass {
   void instanceMemberSet(dynamic instance, String id, dynamic value) {
     (instance as Paint).htAssign(id, value);
   }
-
-
 }
 
 extension PaintBinding on Paint {
@@ -720,7 +708,7 @@ extension PaintBinding on Paint {
       case 'invertColors':
         return invertColors;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
         throw HTErrorUndefined(varName);
     }
@@ -729,46 +717,46 @@ extension PaintBinding on Paint {
   void htAssign(String varName, dynamic value) {
     switch (varName) {
       case 'isAntiAlias':
-        this.isAntiAlias = value;
+        isAntiAlias = value;
         break;
       case 'color':
-        this.color = value;
+        color = value;
         break;
       case 'blendMode':
-        this.blendMode = value;
+        blendMode = value;
         break;
       case 'style':
-        this.style = value;
+        style = value;
         break;
       case 'strokeWidth':
-        this.strokeWidth = value;
+        strokeWidth = value;
         break;
       case 'strokeCap':
-        this.strokeCap = value;
+        strokeCap = value;
         break;
       case 'strokeJoin':
-        this.strokeJoin = value;
+        strokeJoin = value;
         break;
       case 'strokeMiterLimit':
-        this.strokeMiterLimit = value;
+        strokeMiterLimit = value;
         break;
       case 'maskFilter':
-        this.maskFilter = value;
+        maskFilter = value;
         break;
       case 'filterQuality':
-        this.filterQuality = value;
+        filterQuality = value;
         break;
       case 'shader':
-        this.shader = value;
+        shader = value;
         break;
       case 'colorFilter':
-        this.colorFilter = value;
+        colorFilter = value;
         break;
       case 'imageFilter':
-        this.imageFilter = value;
+        imageFilter = value;
         break;
       case 'invertColors':
-        this.invertColors = value;
+        invertColors = value;
         break;
       default:
         throw HTErrorUndefined(varName);
@@ -787,7 +775,8 @@ class PathAutoBinding extends HTExternalClass {
       case 'Path.from':
         return ({positionalArgs, namedArgs, typeArgs}) => Path.from(positionalArgs[0]);
       case 'Path.combine':
-        return ({positionalArgs, namedArgs, typeArgs}) => Path.combine(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            Path.combine(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -802,8 +791,6 @@ class PathAutoBinding extends HTExternalClass {
   void instanceMemberSet(dynamic instance, String id, dynamic value) {
     (instance as Path).htAssign(id, value);
   }
-
-
 }
 
 extension PathBinding on Path {
@@ -814,59 +801,79 @@ extension PathBinding on Path {
       case 'fillType':
         return fillType;
       case 'moveTo':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.moveTo(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => moveTo(positionalArgs[0], positionalArgs[1]);
       case 'relativeMoveTo':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.relativeMoveTo(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => relativeMoveTo(positionalArgs[0], positionalArgs[1]);
       case 'lineTo':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.lineTo(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => lineTo(positionalArgs[0], positionalArgs[1]);
       case 'relativeLineTo':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.relativeLineTo(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => relativeLineTo(positionalArgs[0], positionalArgs[1]);
       case 'quadraticBezierTo':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.quadraticBezierTo(positionalArgs[0], positionalArgs[1], positionalArgs[2], positionalArgs[3]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            quadraticBezierTo(positionalArgs[0], positionalArgs[1], positionalArgs[2], positionalArgs[3]);
       case 'relativeQuadraticBezierTo':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.relativeQuadraticBezierTo(positionalArgs[0], positionalArgs[1], positionalArgs[2], positionalArgs[3]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            relativeQuadraticBezierTo(positionalArgs[0], positionalArgs[1], positionalArgs[2], positionalArgs[3]);
       case 'cubicTo':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.cubicTo(positionalArgs[0], positionalArgs[1], positionalArgs[2], positionalArgs[3], positionalArgs[4], positionalArgs[5]);
+        return ({positionalArgs, namedArgs, typeArgs}) => cubicTo(positionalArgs[0], positionalArgs[1],
+            positionalArgs[2], positionalArgs[3], positionalArgs[4], positionalArgs[5]);
       case 'relativeCubicTo':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.relativeCubicTo(positionalArgs[0], positionalArgs[1], positionalArgs[2], positionalArgs[3], positionalArgs[4], positionalArgs[5]);
+        return ({positionalArgs, namedArgs, typeArgs}) => relativeCubicTo(positionalArgs[0], positionalArgs[1],
+            positionalArgs[2], positionalArgs[3], positionalArgs[4], positionalArgs[5]);
       case 'conicTo':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.conicTo(positionalArgs[0], positionalArgs[1], positionalArgs[2], positionalArgs[3], positionalArgs[4]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            conicTo(positionalArgs[0], positionalArgs[1], positionalArgs[2], positionalArgs[3], positionalArgs[4]);
       case 'relativeConicTo':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.relativeConicTo(positionalArgs[0], positionalArgs[1], positionalArgs[2], positionalArgs[3], positionalArgs[4]);
+        return ({positionalArgs, namedArgs, typeArgs}) => relativeConicTo(
+            positionalArgs[0], positionalArgs[1], positionalArgs[2], positionalArgs[3], positionalArgs[4]);
       case 'arcTo':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.arcTo(positionalArgs[0], positionalArgs[1], positionalArgs[2], positionalArgs[3]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            arcTo(positionalArgs[0], positionalArgs[1], positionalArgs[2], positionalArgs[3]);
       case 'arcToPoint':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.arcToPoint(positionalArgs[0], radius : namedArgs.containsKey('radius') ? namedArgs['radius'] : Radius.zero, rotation : namedArgs.containsKey('rotation') ? namedArgs['rotation'] : 0.0, largeArc : namedArgs.containsKey('largeArc') ? namedArgs['largeArc'] : false, clockwise : namedArgs.containsKey('clockwise') ? namedArgs['clockwise'] : true);
+        return ({positionalArgs, namedArgs, typeArgs}) => arcToPoint(positionalArgs[0],
+            radius: namedArgs.containsKey('radius') ? namedArgs['radius'] : Radius.zero,
+            rotation: namedArgs.containsKey('rotation') ? namedArgs['rotation'] : 0.0,
+            largeArc: namedArgs.containsKey('largeArc') ? namedArgs['largeArc'] : false,
+            clockwise: namedArgs.containsKey('clockwise') ? namedArgs['clockwise'] : true);
       case 'relativeArcToPoint':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.relativeArcToPoint(positionalArgs[0], radius : namedArgs.containsKey('radius') ? namedArgs['radius'] : Radius.zero, rotation : namedArgs.containsKey('rotation') ? namedArgs['rotation'] : 0.0, largeArc : namedArgs.containsKey('largeArc') ? namedArgs['largeArc'] : false, clockwise : namedArgs.containsKey('clockwise') ? namedArgs['clockwise'] : true);
+        return ({positionalArgs, namedArgs, typeArgs}) => relativeArcToPoint(positionalArgs[0],
+            radius: namedArgs.containsKey('radius') ? namedArgs['radius'] : Radius.zero,
+            rotation: namedArgs.containsKey('rotation') ? namedArgs['rotation'] : 0.0,
+            largeArc: namedArgs.containsKey('largeArc') ? namedArgs['largeArc'] : false,
+            clockwise: namedArgs.containsKey('clockwise') ? namedArgs['clockwise'] : true);
       case 'addRect':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.addRect(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => addRect(positionalArgs[0]);
       case 'addOval':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.addOval(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => addOval(positionalArgs[0]);
       case 'addArc':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.addArc(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            addArc(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
       case 'addPolygon':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.addPolygon(List<Offset>.from(positionalArgs[0]), positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            addPolygon(List<Offset>.from(positionalArgs[0]), positionalArgs[1]);
       case 'addRRect':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.addRRect(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => addRRect(positionalArgs[0]);
       case 'addPath':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.addPath(positionalArgs[0], positionalArgs[1], matrix4 : namedArgs.containsKey('matrix4') ? namedArgs['matrix4'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => addPath(positionalArgs[0], positionalArgs[1],
+            matrix4: namedArgs.containsKey('matrix4') ? namedArgs['matrix4'] : null);
       case 'extendWithPath':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.extendWithPath(positionalArgs[0], positionalArgs[1], matrix4 : namedArgs.containsKey('matrix4') ? namedArgs['matrix4'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => extendWithPath(positionalArgs[0], positionalArgs[1],
+            matrix4: namedArgs.containsKey('matrix4') ? namedArgs['matrix4'] : null);
       case 'close':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.close();
+        return ({positionalArgs, namedArgs, typeArgs}) => close();
       case 'reset':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.reset();
+        return ({positionalArgs, namedArgs, typeArgs}) => reset();
       case 'contains':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.contains(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => contains(positionalArgs[0]);
       case 'shift':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.shift(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => shift(positionalArgs[0]);
       case 'transform':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.transform(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => transform(positionalArgs[0]);
       case 'getBounds':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.getBounds();
+        return ({positionalArgs, namedArgs, typeArgs}) => getBounds();
       case 'computeMetrics':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.computeMetrics(forceClosed : namedArgs.containsKey('forceClosed') ? namedArgs['forceClosed'] : false);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            computeMetrics(forceClosed: namedArgs.containsKey('forceClosed') ? namedArgs['forceClosed'] : false);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -875,7 +882,7 @@ extension PathBinding on Path {
   void htAssign(String varName, dynamic value) {
     switch (varName) {
       case 'fillType':
-        this.fillType = value;
+        fillType = value;
         break;
       default:
         throw HTErrorUndefined(varName);
@@ -902,9 +909,6 @@ class TangentAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as Tangent).htFetch(id);
   }
-
-
-
 }
 
 extension TangentBinding on Tangent {
@@ -922,7 +926,6 @@ extension TangentBinding on Tangent {
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class MaskFilterAutoBinding extends HTExternalClass {
@@ -942,9 +945,6 @@ class MaskFilterAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as MaskFilter).htFetch(id);
   }
-
-
-
 }
 
 extension MaskFilterBinding on MaskFilter {
@@ -955,12 +955,11 @@ extension MaskFilterBinding on MaskFilter {
       case 'hashCode':
         return hashCode;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class ColorFilterAutoBinding extends HTExternalClass {
@@ -986,9 +985,6 @@ class ColorFilterAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as ColorFilter).htFetch(id);
   }
-
-
-
 }
 
 extension ColorFilterBinding on ColorFilter {
@@ -999,12 +995,11 @@ extension ColorFilterBinding on ColorFilter {
       case 'hashCode':
         return hashCode;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class ImageFilterAutoBinding extends HTExternalClass {
@@ -1014,24 +1009,23 @@ class ImageFilterAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'ImageFilter.blur':
-        return ({positionalArgs, namedArgs, typeArgs}) => ImageFilter.blur(sigmaX : namedArgs.containsKey('sigmaX') ? namedArgs['sigmaX'] : 0.0, sigmaY : namedArgs.containsKey('sigmaY') ? namedArgs['sigmaY'] : 0.0, tileMode : namedArgs.containsKey('tileMode') ? namedArgs['tileMode'] : TileMode.clamp);
+        return ({positionalArgs, namedArgs, typeArgs}) => ImageFilter.blur(
+            sigmaX: namedArgs.containsKey('sigmaX') ? namedArgs['sigmaX'] : 0.0,
+            sigmaY: namedArgs.containsKey('sigmaY') ? namedArgs['sigmaY'] : 0.0,
+            tileMode: namedArgs.containsKey('tileMode') ? namedArgs['tileMode'] : TileMode.clamp);
       case 'ImageFilter.matrix':
-        return ({positionalArgs, namedArgs, typeArgs}) => ImageFilter.matrix(positionalArgs[0], filterQuality : namedArgs.containsKey('filterQuality') ? namedArgs['filterQuality'] : FilterQuality.low);
+        return ({positionalArgs, namedArgs, typeArgs}) => ImageFilter.matrix(positionalArgs[0],
+            filterQuality: namedArgs.containsKey('filterQuality') ? namedArgs['filterQuality'] : FilterQuality.low);
       case 'ImageFilter.compose':
-        return ({positionalArgs, namedArgs, typeArgs}) => ImageFilter.compose(outer : namedArgs['outer'], inner : namedArgs['inner']);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            ImageFilter.compose(outer: namedArgs['outer'], inner: namedArgs['inner']);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
-
-
-
 }
 
-extension ImageFilterBinding on ImageFilter {
-
-}
+extension ImageFilterBinding on ImageFilter {}
 
 class ImageShaderAutoBinding extends HTExternalClass {
   ImageShaderAutoBinding() : super('ImageShader');
@@ -1040,20 +1034,15 @@ class ImageShaderAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'ImageShader':
-        return ({positionalArgs, namedArgs, typeArgs}) => ImageShader(positionalArgs[0], positionalArgs[1], positionalArgs[2], positionalArgs[3]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            ImageShader(positionalArgs[0], positionalArgs[1], positionalArgs[2], positionalArgs[3]);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
-
-
-
 }
 
-extension ImageShaderBinding on ImageShader {
-
-}
+extension ImageShaderBinding on ImageShader {}
 
 class VerticesAutoBinding extends HTExternalClass {
   VerticesAutoBinding() : super('Vertices');
@@ -1062,22 +1051,24 @@ class VerticesAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'Vertices':
-        return ({positionalArgs, namedArgs, typeArgs}) => Vertices(positionalArgs[0], List<Offset>.from(positionalArgs[1]), textureCoordinates : namedArgs.containsKey('textureCoordinates') ? List<Offset>.from(namedArgs['textureCoordinates']) : null, colors : namedArgs.containsKey('colors') ? List<Color>.from(namedArgs['colors']) : null, indices : namedArgs.containsKey('indices') ? List<int>.from(namedArgs['indices']) : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => Vertices(
+            positionalArgs[0], List<Offset>.from(positionalArgs[1]),
+            textureCoordinates:
+                namedArgs.containsKey('textureCoordinates') ? List<Offset>.from(namedArgs['textureCoordinates']) : null,
+            colors: namedArgs.containsKey('colors') ? List<Color>.from(namedArgs['colors']) : null,
+            indices: namedArgs.containsKey('indices') ? List<int>.from(namedArgs['indices']) : null);
       case 'Vertices.raw':
-        return ({positionalArgs, namedArgs, typeArgs}) => Vertices.raw(positionalArgs[0], positionalArgs[1], textureCoordinates : namedArgs.containsKey('textureCoordinates') ? namedArgs['textureCoordinates'] : null, colors : namedArgs.containsKey('colors') ? namedArgs['colors'] : null, indices : namedArgs.containsKey('indices') ? namedArgs['indices'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => Vertices.raw(positionalArgs[0], positionalArgs[1],
+            textureCoordinates: namedArgs.containsKey('textureCoordinates') ? namedArgs['textureCoordinates'] : null,
+            colors: namedArgs.containsKey('colors') ? namedArgs['colors'] : null,
+            indices: namedArgs.containsKey('indices') ? namedArgs['indices'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
-
-
-
 }
 
-extension VerticesBinding on Vertices {
-
-}
+extension VerticesBinding on Vertices {}
 
 class CanvasAutoBinding extends HTExternalClass {
   CanvasAutoBinding() : super('Canvas');
@@ -1086,7 +1077,8 @@ class CanvasAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'Canvas':
-        return ({positionalArgs, namedArgs, typeArgs}) => Canvas(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            Canvas(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : null);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -1096,9 +1088,6 @@ class CanvasAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as Canvas).htFetch(id);
   }
-
-
-
 }
 
 extension CanvasBinding on Canvas {
@@ -1107,76 +1096,99 @@ extension CanvasBinding on Canvas {
       case 'typeid':
         return HTTypeId('Canvas');
       case 'save':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.save();
+        return ({positionalArgs, namedArgs, typeArgs}) => save();
       case 'saveLayer':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.saveLayer(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => saveLayer(positionalArgs[0], positionalArgs[1]);
       case 'restore':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.restore();
+        return ({positionalArgs, namedArgs, typeArgs}) => restore();
       case 'getSaveCount':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.getSaveCount();
+        return ({positionalArgs, namedArgs, typeArgs}) => getSaveCount();
       case 'translate':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.translate(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => translate(positionalArgs[0], positionalArgs[1]);
       case 'scale':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.scale(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            scale(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : null);
       case 'rotate':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.rotate(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => rotate(positionalArgs[0]);
       case 'skew':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.skew(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => skew(positionalArgs[0], positionalArgs[1]);
       case 'transform':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.transform(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => transform(positionalArgs[0]);
       case 'clipRect':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.clipRect(positionalArgs[0], clipOp : namedArgs.containsKey('clipOp') ? namedArgs['clipOp'] : ClipOp.intersect, doAntiAlias : namedArgs.containsKey('doAntiAlias') ? namedArgs['doAntiAlias'] : true);
+        return ({positionalArgs, namedArgs, typeArgs}) => clipRect(positionalArgs[0],
+            clipOp: namedArgs.containsKey('clipOp') ? namedArgs['clipOp'] : ClipOp.intersect,
+            doAntiAlias: namedArgs.containsKey('doAntiAlias') ? namedArgs['doAntiAlias'] : true);
       case 'clipRRect':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.clipRRect(positionalArgs[0], doAntiAlias : namedArgs.containsKey('doAntiAlias') ? namedArgs['doAntiAlias'] : true);
+        return ({positionalArgs, namedArgs, typeArgs}) => clipRRect(positionalArgs[0],
+            doAntiAlias: namedArgs.containsKey('doAntiAlias') ? namedArgs['doAntiAlias'] : true);
       case 'clipPath':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.clipPath(positionalArgs[0], doAntiAlias : namedArgs.containsKey('doAntiAlias') ? namedArgs['doAntiAlias'] : true);
+        return ({positionalArgs, namedArgs, typeArgs}) => clipPath(positionalArgs[0],
+            doAntiAlias: namedArgs.containsKey('doAntiAlias') ? namedArgs['doAntiAlias'] : true);
       case 'drawColor':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.drawColor(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => drawColor(positionalArgs[0], positionalArgs[1]);
       case 'drawLine':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.drawLine(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            drawLine(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
       case 'drawPaint':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.drawPaint(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => drawPaint(positionalArgs[0]);
       case 'drawRect':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.drawRect(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => drawRect(positionalArgs[0], positionalArgs[1]);
       case 'drawRRect':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.drawRRect(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => drawRRect(positionalArgs[0], positionalArgs[1]);
       case 'drawDRRect':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.drawDRRect(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            drawDRRect(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
       case 'drawOval':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.drawOval(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => drawOval(positionalArgs[0], positionalArgs[1]);
       case 'drawCircle':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.drawCircle(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            drawCircle(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
       case 'drawArc':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.drawArc(positionalArgs[0], positionalArgs[1], positionalArgs[2], positionalArgs[3], positionalArgs[4]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            drawArc(positionalArgs[0], positionalArgs[1], positionalArgs[2], positionalArgs[3], positionalArgs[4]);
       case 'drawPath':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.drawPath(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => drawPath(positionalArgs[0], positionalArgs[1]);
       case 'drawImage':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.drawImage(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            drawImage(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
       case 'drawImageRect':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.drawImageRect(positionalArgs[0], positionalArgs[1], positionalArgs[2], positionalArgs[3]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            drawImageRect(positionalArgs[0], positionalArgs[1], positionalArgs[2], positionalArgs[3]);
       case 'drawImageNine':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.drawImageNine(positionalArgs[0], positionalArgs[1], positionalArgs[2], positionalArgs[3]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            drawImageNine(positionalArgs[0], positionalArgs[1], positionalArgs[2], positionalArgs[3]);
       case 'drawPicture':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.drawPicture(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => drawPicture(positionalArgs[0]);
       case 'drawParagraph':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.drawParagraph(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => drawParagraph(positionalArgs[0], positionalArgs[1]);
       case 'drawPoints':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.drawPoints(positionalArgs[0], List<Offset>.from(positionalArgs[1]), positionalArgs[2]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            drawPoints(positionalArgs[0], List<Offset>.from(positionalArgs[1]), positionalArgs[2]);
       case 'drawRawPoints':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.drawRawPoints(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            drawRawPoints(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
       case 'drawVertices':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.drawVertices(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            drawVertices(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
       case 'drawAtlas':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.drawAtlas(positionalArgs[0], List<RSTransform>.from(positionalArgs[1]), List<Rect>.from(positionalArgs[2]), List<Color>.from(positionalArgs[3]), positionalArgs[4], positionalArgs[5], positionalArgs[6]);
+        return ({positionalArgs, namedArgs, typeArgs}) => drawAtlas(
+            positionalArgs[0],
+            List<RSTransform>.from(positionalArgs[1]),
+            List<Rect>.from(positionalArgs[2]),
+            List<Color>.from(positionalArgs[3]),
+            positionalArgs[4],
+            positionalArgs[5],
+            positionalArgs[6]);
       case 'drawRawAtlas':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.drawRawAtlas(positionalArgs[0], positionalArgs[1], positionalArgs[2], positionalArgs[3], positionalArgs[4], positionalArgs[5], positionalArgs[6]);
+        return ({positionalArgs, namedArgs, typeArgs}) => drawRawAtlas(positionalArgs[0], positionalArgs[1],
+            positionalArgs[2], positionalArgs[3], positionalArgs[4], positionalArgs[5], positionalArgs[6]);
       case 'drawShadow':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.drawShadow(positionalArgs[0], positionalArgs[1], positionalArgs[2], positionalArgs[3]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            drawShadow(positionalArgs[0], positionalArgs[1], positionalArgs[2], positionalArgs[3]);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class PictureRecorderAutoBinding extends HTExternalClass {
@@ -1196,9 +1208,6 @@ class PictureRecorderAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as PictureRecorder).htFetch(id);
   }
-
-
-
 }
 
 extension PictureRecorderBinding on PictureRecorder {
@@ -1209,12 +1218,11 @@ extension PictureRecorderBinding on PictureRecorder {
       case 'isRecording':
         return isRecording;
       case 'endRecording':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.endRecording();
+        return ({positionalArgs, namedArgs, typeArgs}) => endRecording();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class ShadowAutoBinding extends HTExternalClass {
@@ -1224,13 +1232,18 @@ class ShadowAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'Shadow':
-        return ({positionalArgs, namedArgs, typeArgs}) => Shadow(color : namedArgs.containsKey('color') ? namedArgs['color'] : const Color(_kColorDefault), offset : namedArgs.containsKey('offset') ? namedArgs['offset'] : Offset.zero, blurRadius : namedArgs.containsKey('blurRadius') ? namedArgs['blurRadius'] : 0.0);
+        return ({positionalArgs, namedArgs, typeArgs}) => Shadow(
+            color: namedArgs.containsKey('color') ? namedArgs['color'] : const Color(_kColorDefault),
+            offset: namedArgs.containsKey('offset') ? namedArgs['offset'] : Offset.zero,
+            blurRadius: namedArgs.containsKey('blurRadius') ? namedArgs['blurRadius'] : 0.0);
       case 'Shadow.convertRadiusToSigma':
         return ({positionalArgs, namedArgs, typeArgs}) => Shadow.convertRadiusToSigma(positionalArgs[0]);
       case 'Shadow.lerp':
-        return ({positionalArgs, namedArgs, typeArgs}) => Shadow.lerp(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            Shadow.lerp(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
       case 'Shadow.lerpList':
-        return ({positionalArgs, namedArgs, typeArgs}) => Shadow.lerpList(List<Shadow>.from(positionalArgs[0]), List<Shadow>.from(positionalArgs[1]), positionalArgs[2]);
+        return ({positionalArgs, namedArgs, typeArgs}) => Shadow.lerpList(
+            List<Shadow>.from(positionalArgs[0]), List<Shadow>.from(positionalArgs[1]), positionalArgs[2]);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -1240,8 +1253,6 @@ class ShadowAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as Shadow).htFetch(id);
   }
-
-
 
   static const _kColorDefault = 0xFF000000;
 }
@@ -1262,16 +1273,15 @@ extension ShadowBinding on Shadow {
       case 'hashCode':
         return hashCode;
       case 'toPaint':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toPaint();
+        return ({positionalArgs, namedArgs, typeArgs}) => toPaint();
       case 'scale':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.scale(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => scale(positionalArgs[0]);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class ImmutableBufferAutoBinding extends HTExternalClass {
@@ -1286,12 +1296,7 @@ class ImmutableBufferAutoBinding extends HTExternalClass {
         throw HTErrorUndefined(varName);
     }
   }
-
-
-
-
 }
-
 
 class ImageDescriptorAutoBinding extends HTExternalClass {
   ImageDescriptorAutoBinding() : super('ImageDescriptor');
@@ -1300,7 +1305,11 @@ class ImageDescriptorAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'ImageDescriptor.raw':
-        return ({positionalArgs, namedArgs, typeArgs}) => ImageDescriptor.raw(positionalArgs[0], width : namedArgs['width'], height : namedArgs['height'], rowBytes : namedArgs.containsKey('rowBytes') ? namedArgs['rowBytes'] : null, pixelFormat : namedArgs['pixelFormat']);
+        return ({positionalArgs, namedArgs, typeArgs}) => ImageDescriptor.raw(positionalArgs[0],
+            width: namedArgs['width'],
+            height: namedArgs['height'],
+            rowBytes: namedArgs.containsKey('rowBytes') ? namedArgs['rowBytes'] : null,
+            pixelFormat: namedArgs['pixelFormat']);
       case 'ImageDescriptor.encoded':
         return ({positionalArgs, namedArgs, typeArgs}) => ImageDescriptor.encoded(positionalArgs[0]);
       default:
@@ -1312,9 +1321,6 @@ class ImageDescriptorAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as ImageDescriptor).htFetch(id);
   }
-
-
-
 }
 
 extension ImageDescriptorBinding on ImageDescriptor {
@@ -1329,13 +1335,13 @@ extension ImageDescriptorBinding on ImageDescriptor {
       case 'bytesPerPixel':
         return bytesPerPixel;
       case 'dispose':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.dispose();
+        return ({positionalArgs, namedArgs, typeArgs}) => dispose();
       case 'instantiateCodec':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.instantiateCodec(targetWidth : namedArgs.containsKey('targetWidth') ? namedArgs['targetWidth'] : null, targetHeight : namedArgs.containsKey('targetHeight') ? namedArgs['targetHeight'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => instantiateCodec(
+            targetWidth: namedArgs.containsKey('targetWidth') ? namedArgs['targetWidth'] : null,
+            targetHeight: namedArgs.containsKey('targetHeight') ? namedArgs['targetHeight'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
-

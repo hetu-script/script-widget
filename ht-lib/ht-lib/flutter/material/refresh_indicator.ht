@@ -1,0 +1,44 @@
+external class RefreshIndicatorTriggerMode {
+    static const anywhere
+    static const onEdge
+}
+external class RefreshIndicator {
+    construct 
+    get child
+    get displacement
+    get onRefresh
+    get color
+    get backgroundColor
+    get notificationPredicate
+    get semanticsLabel
+    get semanticsValue
+    get strokeWidth
+    get triggerMode
+    get key
+    fun createState
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class RefreshIndicatorState {
+    construct
+    fun initState
+    fun didChangeDependencies
+    fun didUpdateWidget
+    fun dispose
+    fun show
+    fun build
+    fun createTicker
+    fun debugFillProperties
+    get widget
+    get context
+    get mounted
+    fun toStringShort
+    fun toString
+    fun toDiagnosticsNode
+}

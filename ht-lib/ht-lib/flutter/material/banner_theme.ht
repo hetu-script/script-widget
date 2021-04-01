@@ -1,0 +1,31 @@
+external class MaterialBannerThemeData {
+    construct 
+    get backgroundColor
+    get contentTextStyle
+    get padding
+    get leadingPadding
+    fun copyWith
+    get hashCode
+    fun debugFillProperties
+    fun toStringShort
+    fun toString
+    fun toDiagnosticsNode
+    static fun lerp (a, b, t)
+}
+external class MaterialBannerTheme {
+    construct 
+    get data
+    get child
+    get key
+    fun wrap
+    fun updateShouldNotify
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+    static fun of (context)
+}

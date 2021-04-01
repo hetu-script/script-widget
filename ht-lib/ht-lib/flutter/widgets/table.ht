@@ -1,0 +1,45 @@
+external class TableRow {
+    construct 
+    get key
+    get decoration
+    get children
+    fun toString
+}
+external class Table {
+    construct 
+    get children
+    get columnWidths
+    get defaultColumnWidth
+    get textDirection
+    get border
+    get defaultVerticalAlignment
+    get textBaseline
+    get key
+    fun createElement
+    fun createRenderObject
+    fun updateRenderObject
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class TableCell {
+    construct 
+    get verticalAlignment
+    get child
+    get key
+    fun applyParentData
+    get debugTypicalAncestorWidgetClass
+    fun debugFillProperties
+    fun createElement
+    fun debugIsValidRenderObject
+    fun toStringShort
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}

@@ -1,7 +1,6 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/physics.dart';
 
-
 class ClampedSimulationAutoBinding extends HTExternalClass {
   ClampedSimulationAutoBinding() : super('ClampedSimulation');
 
@@ -9,7 +8,11 @@ class ClampedSimulationAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'ClampedSimulation':
-        return ({positionalArgs, namedArgs, typeArgs}) => ClampedSimulation(positionalArgs[0], xMin : namedArgs.containsKey('xMin') ? namedArgs['xMin'] : double.negativeInfinity, xMax : namedArgs.containsKey('xMax') ? namedArgs['xMax'] : double.infinity, dxMin : namedArgs.containsKey('dxMin') ? namedArgs['dxMin'] : double.negativeInfinity, dxMax : namedArgs.containsKey('dxMax') ? namedArgs['dxMax'] : double.infinity);
+        return ({positionalArgs, namedArgs, typeArgs}) => ClampedSimulation(positionalArgs[0],
+            xMin: namedArgs.containsKey('xMin') ? namedArgs['xMin'] : double.negativeInfinity,
+            xMax: namedArgs.containsKey('xMax') ? namedArgs['xMax'] : double.infinity,
+            dxMin: namedArgs.containsKey('dxMin') ? namedArgs['dxMin'] : double.negativeInfinity,
+            dxMax: namedArgs.containsKey('dxMax') ? namedArgs['dxMax'] : double.infinity);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -24,8 +27,6 @@ class ClampedSimulationAutoBinding extends HTExternalClass {
   void instanceMemberSet(dynamic instance, String id, dynamic value) {
     (instance as ClampedSimulation).htAssign(id, value);
   }
-
-
 }
 
 extension ClampedSimulationBinding on ClampedSimulation {
@@ -46,13 +47,13 @@ extension ClampedSimulationBinding on ClampedSimulation {
       case 'tolerance':
         return tolerance;
       case 'x':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.x(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => x(positionalArgs[0]);
       case 'dx':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.dx(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => dx(positionalArgs[0]);
       case 'isDone':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.isDone(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => isDone(positionalArgs[0]);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
         throw HTErrorUndefined(varName);
     }
@@ -61,11 +62,10 @@ extension ClampedSimulationBinding on ClampedSimulation {
   void htAssign(String varName, dynamic value) {
     switch (varName) {
       case 'tolerance':
-        this.tolerance = value;
+        tolerance = value;
         break;
       default:
         throw HTErrorUndefined(varName);
     }
   }
 }
-

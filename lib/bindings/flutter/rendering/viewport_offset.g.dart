@@ -1,7 +1,5 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/rendering.dart';
-import 'package:flutter/animation.dart';
-import 'package:flutter/foundation.dart';
 
 class ScrollDirectionAutoBinding extends HTExternalClass {
   ScrollDirectionAutoBinding() : super('ScrollDirection');
@@ -21,7 +19,6 @@ class ScrollDirectionAutoBinding extends HTExternalClass {
         throw HTErrorUndefined(varName);
     }
   }
-
 
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
@@ -58,13 +55,11 @@ class ViewportOffsetAutoBinding extends HTExternalClass {
     return (instance as ViewportOffset).htFetch(id);
   }
 
-
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
       'VoidCallback': (HTFunction function) => () => function.call(positionalArgs: const [], namedArgs: const {}),
     };
   }
-
 }
 
 extension ViewportOffsetBinding on ViewportOffset {
@@ -81,31 +76,34 @@ extension ViewportOffsetBinding on ViewportOffset {
       case 'allowImplicitScrolling':
         return allowImplicitScrolling;
       case 'applyViewportDimension':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.applyViewportDimension(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => applyViewportDimension(positionalArgs[0]);
       case 'applyContentDimensions':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.applyContentDimensions(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => applyContentDimensions(positionalArgs[0], positionalArgs[1]);
       case 'correctBy':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.correctBy(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => correctBy(positionalArgs[0]);
       case 'jumpTo':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.jumpTo(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => jumpTo(positionalArgs[0]);
       case 'animateTo':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.animateTo(positionalArgs[0], duration : namedArgs.containsKey('duration') ? namedArgs['duration'] : null, curve : namedArgs.containsKey('curve') ? namedArgs['curve'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => animateTo(positionalArgs[0],
+            duration: namedArgs.containsKey('duration') ? namedArgs['duration'] : null,
+            curve: namedArgs.containsKey('curve') ? namedArgs['curve'] : null);
       case 'moveTo':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.moveTo(positionalArgs[0], duration : namedArgs.containsKey('duration') ? namedArgs['duration'] : null, curve : namedArgs.containsKey('curve') ? namedArgs['curve'] : null, clamp : namedArgs.containsKey('clamp') ? namedArgs['clamp'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => moveTo(positionalArgs[0],
+            duration: namedArgs.containsKey('duration') ? namedArgs['duration'] : null,
+            curve: namedArgs.containsKey('curve') ? namedArgs['curve'] : null,
+            clamp: namedArgs.containsKey('clamp') ? namedArgs['clamp'] : null);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       case 'debugFillDescription':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugFillDescription(List<String>.from(positionalArgs[0]));
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillDescription(List<String>.from(positionalArgs[0]));
       case 'addListener':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.addListener(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => addListener(positionalArgs[0]);
       case 'removeListener':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.removeListener(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => removeListener(positionalArgs[0]);
       case 'dispose':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.dispose();
+        return ({positionalArgs, namedArgs, typeArgs}) => dispose();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
-

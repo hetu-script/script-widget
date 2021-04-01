@@ -1,6 +1,6 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/gestures.dart';
-
+import 'package:flutter/foundation.dart';
 
 class LongPressStartDetailsAutoBinding extends HTExternalClass {
   LongPressStartDetailsAutoBinding() : super('LongPressStartDetails');
@@ -9,7 +9,9 @@ class LongPressStartDetailsAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'LongPressStartDetails':
-        return ({positionalArgs, namedArgs, typeArgs}) => LongPressStartDetails(globalPosition : namedArgs.containsKey('globalPosition') ? namedArgs['globalPosition'] : Offset.zero, localPosition : namedArgs.containsKey('localPosition') ? namedArgs['localPosition'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => LongPressStartDetails(
+            globalPosition: namedArgs.containsKey('globalPosition') ? namedArgs['globalPosition'] : Offset.zero,
+            localPosition: namedArgs.containsKey('localPosition') ? namedArgs['localPosition'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -19,9 +21,6 @@ class LongPressStartDetailsAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as LongPressStartDetails).htFetch(id);
   }
-
-
-
 }
 
 extension LongPressStartDetailsBinding on LongPressStartDetails {
@@ -37,7 +36,6 @@ extension LongPressStartDetailsBinding on LongPressStartDetails {
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class LongPressMoveUpdateDetailsAutoBinding extends HTExternalClass {
@@ -47,7 +45,12 @@ class LongPressMoveUpdateDetailsAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'LongPressMoveUpdateDetails':
-        return ({positionalArgs, namedArgs, typeArgs}) => LongPressMoveUpdateDetails(globalPosition : namedArgs.containsKey('globalPosition') ? namedArgs['globalPosition'] : Offset.zero, localPosition : namedArgs.containsKey('localPosition') ? namedArgs['localPosition'] : null, offsetFromOrigin : namedArgs.containsKey('offsetFromOrigin') ? namedArgs['offsetFromOrigin'] : Offset.zero, localOffsetFromOrigin : namedArgs.containsKey('localOffsetFromOrigin') ? namedArgs['localOffsetFromOrigin'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => LongPressMoveUpdateDetails(
+            globalPosition: namedArgs.containsKey('globalPosition') ? namedArgs['globalPosition'] : Offset.zero,
+            localPosition: namedArgs.containsKey('localPosition') ? namedArgs['localPosition'] : null,
+            offsetFromOrigin: namedArgs.containsKey('offsetFromOrigin') ? namedArgs['offsetFromOrigin'] : Offset.zero,
+            localOffsetFromOrigin:
+                namedArgs.containsKey('localOffsetFromOrigin') ? namedArgs['localOffsetFromOrigin'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -57,9 +60,6 @@ class LongPressMoveUpdateDetailsAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as LongPressMoveUpdateDetails).htFetch(id);
   }
-
-
-
 }
 
 extension LongPressMoveUpdateDetailsBinding on LongPressMoveUpdateDetails {
@@ -79,7 +79,6 @@ extension LongPressMoveUpdateDetailsBinding on LongPressMoveUpdateDetails {
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class LongPressEndDetailsAutoBinding extends HTExternalClass {
@@ -89,7 +88,10 @@ class LongPressEndDetailsAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'LongPressEndDetails':
-        return ({positionalArgs, namedArgs, typeArgs}) => LongPressEndDetails(globalPosition : namedArgs.containsKey('globalPosition') ? namedArgs['globalPosition'] : Offset.zero, localPosition : namedArgs.containsKey('localPosition') ? namedArgs['localPosition'] : null, velocity : namedArgs.containsKey('velocity') ? namedArgs['velocity'] : Velocity.zero);
+        return ({positionalArgs, namedArgs, typeArgs}) => LongPressEndDetails(
+            globalPosition: namedArgs.containsKey('globalPosition') ? namedArgs['globalPosition'] : Offset.zero,
+            localPosition: namedArgs.containsKey('localPosition') ? namedArgs['localPosition'] : null,
+            velocity: namedArgs.containsKey('velocity') ? namedArgs['velocity'] : Velocity.zero);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -99,9 +101,6 @@ class LongPressEndDetailsAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as LongPressEndDetails).htFetch(id);
   }
-
-
-
 }
 
 extension LongPressEndDetailsBinding on LongPressEndDetails {
@@ -119,7 +118,6 @@ extension LongPressEndDetailsBinding on LongPressEndDetails {
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class LongPressGestureRecognizerAutoBinding extends HTExternalClass {
@@ -129,7 +127,12 @@ class LongPressGestureRecognizerAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'LongPressGestureRecognizer':
-        return ({positionalArgs, namedArgs, typeArgs}) => LongPressGestureRecognizer(duration : namedArgs.containsKey('duration') ? namedArgs['duration'] : null, postAcceptSlopTolerance : namedArgs.containsKey('postAcceptSlopTolerance') ? namedArgs['postAcceptSlopTolerance'] : null, kind : namedArgs.containsKey('kind') ? namedArgs['kind'] : null, debugOwner : namedArgs.containsKey('debugOwner') ? namedArgs['debugOwner'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => LongPressGestureRecognizer(
+            duration: namedArgs.containsKey('duration') ? namedArgs['duration'] : null,
+            postAcceptSlopTolerance:
+                namedArgs.containsKey('postAcceptSlopTolerance') ? namedArgs['postAcceptSlopTolerance'] : null,
+            kind: namedArgs.containsKey('kind') ? namedArgs['kind'] : null,
+            debugOwner: namedArgs.containsKey('debugOwner') ? namedArgs['debugOwner'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -144,8 +147,6 @@ class LongPressGestureRecognizerAutoBinding extends HTExternalClass {
   void instanceMemberSet(dynamic instance, String id, dynamic value) {
     (instance as LongPressGestureRecognizer).htAssign(id, value);
   }
-
-
 }
 
 extension LongPressGestureRecognizerBinding on LongPressGestureRecognizer {
@@ -202,31 +203,51 @@ extension LongPressGestureRecognizerBinding on LongPressGestureRecognizer {
       case 'team':
         return team;
       case 'isPointerAllowed':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.isPointerAllowed(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => isPointerAllowed(positionalArgs[0]);
       case 'didExceedDeadline':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.didExceedDeadline();
+        return ({positionalArgs, namedArgs, typeArgs}) => didExceedDeadline();
       case 'handlePrimaryPointer':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.handlePrimaryPointer(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => handlePrimaryPointer(positionalArgs[0]);
       case 'resolve':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.resolve(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => resolve(positionalArgs[0]);
       case 'acceptGesture':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.acceptGesture(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => acceptGesture(positionalArgs[0]);
       case 'addAllowedPointer':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.addAllowedPointer(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => addAllowedPointer(positionalArgs[0]);
       case 'handleEvent':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.handleEvent(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => handleEvent(positionalArgs[0]);
       case 'rejectGesture':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.rejectGesture(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => rejectGesture(positionalArgs[0]);
       case 'didStopTrackingLastPointer':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.didStopTrackingLastPointer(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => didStopTrackingLastPointer(positionalArgs[0]);
       case 'dispose':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.dispose();
+        return ({positionalArgs, namedArgs, typeArgs}) => dispose();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
       case 'handleNonAllowedPointer':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.handleNonAllowedPointer(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => handleNonAllowedPointer(positionalArgs[0]);
       case 'addPointer':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.addPointer(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => addPointer(positionalArgs[0]);
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+      case 'toStringShallow':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
+            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toStringDeep':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
+            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toStringShort':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
+      case 'debugDescribeChildren':
+        return ({positionalArgs, namedArgs, typeArgs}) => debugDescribeChildren();
       default:
         throw HTErrorUndefined(varName);
     }
@@ -235,62 +256,61 @@ extension LongPressGestureRecognizerBinding on LongPressGestureRecognizer {
   void htAssign(String varName, dynamic value) {
     switch (varName) {
       case 'onLongPress':
-        this.onLongPress = value;
+        onLongPress = value;
         break;
       case 'onLongPressStart':
-        this.onLongPressStart = value;
+        onLongPressStart = value;
         break;
       case 'onLongPressMoveUpdate':
-        this.onLongPressMoveUpdate = value;
+        onLongPressMoveUpdate = value;
         break;
       case 'onLongPressUp':
-        this.onLongPressUp = value;
+        onLongPressUp = value;
         break;
       case 'onLongPressEnd':
-        this.onLongPressEnd = value;
+        onLongPressEnd = value;
         break;
       case 'onSecondaryLongPress':
-        this.onSecondaryLongPress = value;
+        onSecondaryLongPress = value;
         break;
       case 'onSecondaryLongPressStart':
-        this.onSecondaryLongPressStart = value;
+        onSecondaryLongPressStart = value;
         break;
       case 'onSecondaryLongPressMoveUpdate':
-        this.onSecondaryLongPressMoveUpdate = value;
+        onSecondaryLongPressMoveUpdate = value;
         break;
       case 'onSecondaryLongPressUp':
-        this.onSecondaryLongPressUp = value;
+        onSecondaryLongPressUp = value;
         break;
       case 'onSecondaryLongPressEnd':
-        this.onSecondaryLongPressEnd = value;
+        onSecondaryLongPressEnd = value;
         break;
       case 'onTertiaryLongPress':
-        this.onTertiaryLongPress = value;
+        onTertiaryLongPress = value;
         break;
       case 'onTertiaryLongPressStart':
-        this.onTertiaryLongPressStart = value;
+        onTertiaryLongPressStart = value;
         break;
       case 'onTertiaryLongPressMoveUpdate':
-        this.onTertiaryLongPressMoveUpdate = value;
+        onTertiaryLongPressMoveUpdate = value;
         break;
       case 'onTertiaryLongPressUp':
-        this.onTertiaryLongPressUp = value;
+        onTertiaryLongPressUp = value;
         break;
       case 'onTertiaryLongPressEnd':
-        this.onTertiaryLongPressEnd = value;
+        onTertiaryLongPressEnd = value;
         break;
       case 'state':
-        this.state = value;
+        state = value;
         break;
       case 'primaryPointer':
-        this.primaryPointer = value;
+        primaryPointer = value;
         break;
       case 'initialPosition':
-        this.initialPosition = value;
+        initialPosition = value;
         break;
       default:
         throw HTErrorUndefined(varName);
     }
   }
 }
-

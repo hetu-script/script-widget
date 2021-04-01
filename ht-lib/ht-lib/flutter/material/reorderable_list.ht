@@ -1,0 +1,33 @@
+external class ReorderableListView {
+    construct 
+    construct builder
+    get itemBuilder
+    get itemCount
+    get onReorder
+    get proxyDecorator
+    get buildDefaultDragHandles
+    get padding
+    get header
+    get scrollDirection
+    get reverse
+    get scrollController
+    get primary
+    get physics
+    get shrinkWrap
+    get anchor
+    get cacheExtent
+    get dragStartBehavior
+    get keyboardDismissBehavior
+    get restorationId
+    get clipBehavior
+    get key
+    fun createState
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}

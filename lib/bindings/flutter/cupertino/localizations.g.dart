@@ -1,7 +1,5 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/foundation.dart';
-import 'package:flutter/widgets.dart';
 
 class DatePickerDateTimeOrderAutoBinding extends HTExternalClass {
   DatePickerDateTimeOrderAutoBinding() : super('DatePickerDateTimeOrder');
@@ -24,7 +22,6 @@ class DatePickerDateTimeOrderAutoBinding extends HTExternalClass {
     }
   }
 
-
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
@@ -39,6 +36,7 @@ class DatePickerDateTimeOrderAutoBinding extends HTExternalClass {
     }
   }
 }
+
 class DatePickerDateOrderAutoBinding extends HTExternalClass {
   DatePickerDateOrderAutoBinding() : super('DatePickerDateOrder');
 
@@ -59,7 +57,6 @@ class DatePickerDateOrderAutoBinding extends HTExternalClass {
         throw HTErrorUndefined(varName);
     }
   }
-
 
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
@@ -88,12 +85,7 @@ class CupertinoLocalizationsAutoBinding extends HTExternalClass {
         throw HTErrorUndefined(varName);
     }
   }
-
-
-
-
 }
-
 
 class DefaultCupertinoLocalizationsAutoBinding extends HTExternalClass {
   DefaultCupertinoLocalizationsAutoBinding() : super('DefaultCupertinoLocalizations');
@@ -116,9 +108,6 @@ class DefaultCupertinoLocalizationsAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as DefaultCupertinoLocalizations).htFetch(id);
   }
-
-
-
 }
 
 extension DefaultCupertinoLocalizationsBinding on DefaultCupertinoLocalizations {
@@ -157,39 +146,39 @@ extension DefaultCupertinoLocalizationsBinding on DefaultCupertinoLocalizations 
       case 'modalBarrierDismissLabel':
         return modalBarrierDismissLabel;
       case 'datePickerYear':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.datePickerYear(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => datePickerYear(positionalArgs[0]);
       case 'datePickerMonth':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.datePickerMonth(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => datePickerMonth(positionalArgs[0]);
       case 'datePickerDayOfMonth':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.datePickerDayOfMonth(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => datePickerDayOfMonth(positionalArgs[0]);
       case 'datePickerHour':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.datePickerHour(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => datePickerHour(positionalArgs[0]);
       case 'datePickerHourSemanticsLabel':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.datePickerHourSemanticsLabel(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => datePickerHourSemanticsLabel(positionalArgs[0]);
       case 'datePickerMinute':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.datePickerMinute(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => datePickerMinute(positionalArgs[0]);
       case 'datePickerMinuteSemanticsLabel':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.datePickerMinuteSemanticsLabel(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => datePickerMinuteSemanticsLabel(positionalArgs[0]);
       case 'datePickerMediumDate':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.datePickerMediumDate(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => datePickerMediumDate(positionalArgs[0]);
       case 'tabSemanticsLabel':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.tabSemanticsLabel(tabIndex : namedArgs.containsKey('tabIndex') ? namedArgs['tabIndex'] : null, tabCount : namedArgs.containsKey('tabCount') ? namedArgs['tabCount'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => tabSemanticsLabel(
+            tabIndex: namedArgs.containsKey('tabIndex') ? namedArgs['tabIndex'] : null,
+            tabCount: namedArgs.containsKey('tabCount') ? namedArgs['tabCount'] : null);
       case 'timerPickerHour':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.timerPickerHour(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => timerPickerHour(positionalArgs[0]);
       case 'timerPickerMinute':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.timerPickerMinute(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => timerPickerMinute(positionalArgs[0]);
       case 'timerPickerSecond':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.timerPickerSecond(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => timerPickerSecond(positionalArgs[0]);
       case 'timerPickerHourLabel':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.timerPickerHourLabel(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => timerPickerHourLabel(positionalArgs[0]);
       case 'timerPickerMinuteLabel':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.timerPickerMinuteLabel(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => timerPickerMinuteLabel(positionalArgs[0]);
       case 'timerPickerSecondLabel':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.timerPickerSecondLabel(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => timerPickerSecondLabel(positionalArgs[0]);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
-

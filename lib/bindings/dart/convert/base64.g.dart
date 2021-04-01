@@ -1,8 +1,5 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'dart:convert';
-import 'dart:async';
-import 'dart:typed_data';
-
 
 class Base64CodecAutoBinding extends HTExternalClass {
   Base64CodecAutoBinding() : super('Base64Codec');
@@ -23,9 +20,6 @@ class Base64CodecAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as Base64Codec).htFetch(id);
   }
-
-
-
 }
 
 extension Base64CodecBinding on Base64Codec {
@@ -38,14 +32,14 @@ extension Base64CodecBinding on Base64Codec {
       case 'decoder':
         return decoder;
       case 'decode':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.decode(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => decode(positionalArgs[0]);
       case 'normalize':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.normalize(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : 0, positionalArgs.length > 2 ? positionalArgs[2] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => normalize(positionalArgs[0],
+            positionalArgs.length > 1 ? positionalArgs[1] : 0, positionalArgs.length > 2 ? positionalArgs[2] : null);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class Base64EncoderAutoBinding extends HTExternalClass {
@@ -67,9 +61,6 @@ class Base64EncoderAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as Base64Encoder).htFetch(id);
   }
-
-
-
 }
 
 extension Base64EncoderBinding on Base64Encoder {
@@ -78,20 +69,19 @@ extension Base64EncoderBinding on Base64Encoder {
       case 'typeid':
         return HTTypeId('Base64Encoder');
       case 'convert':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.convert(List<int>.from(positionalArgs[0]));
+        return ({positionalArgs, namedArgs, typeArgs}) => convert(List<int>.from(positionalArgs[0]));
       case 'startChunkedConversion':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.startChunkedConversion(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => startChunkedConversion(positionalArgs[0]);
       case 'fuse':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.fuse(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => fuse(positionalArgs[0]);
       case 'bind':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.bind(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => bind(positionalArgs[0]);
       case 'cast':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.cast();
+        return ({positionalArgs, namedArgs, typeArgs}) => cast();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class Base64DecoderAutoBinding extends HTExternalClass {
@@ -111,9 +101,6 @@ class Base64DecoderAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as Base64Decoder).htFetch(id);
   }
-
-
-
 }
 
 extension Base64DecoderBinding on Base64Decoder {
@@ -122,19 +109,18 @@ extension Base64DecoderBinding on Base64Decoder {
       case 'typeid':
         return HTTypeId('Base64Decoder');
       case 'convert':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.convert(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : 0, positionalArgs.length > 2 ? positionalArgs[2] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => convert(positionalArgs[0],
+            positionalArgs.length > 1 ? positionalArgs[1] : 0, positionalArgs.length > 2 ? positionalArgs[2] : null);
       case 'startChunkedConversion':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.startChunkedConversion(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => startChunkedConversion(positionalArgs[0]);
       case 'fuse':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.fuse(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => fuse(positionalArgs[0]);
       case 'bind':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.bind(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => bind(positionalArgs[0]);
       case 'cast':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.cast();
+        return ({positionalArgs, namedArgs, typeArgs}) => cast();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
-

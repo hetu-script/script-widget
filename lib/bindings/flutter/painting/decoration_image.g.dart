@@ -1,9 +1,5 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/painting.dart';
-import 'dart:developer'as developer;
-import 'dart:ui'as ui;
-import 'package:flutter/foundation.dart';
-import 'package:flutter/scheduler.dart';
 
 class ImageRepeatAutoBinding extends HTExternalClass {
   ImageRepeatAutoBinding() : super('ImageRepeat');
@@ -25,7 +21,6 @@ class ImageRepeatAutoBinding extends HTExternalClass {
         throw HTErrorUndefined(varName);
     }
   }
-
 
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
@@ -49,7 +44,16 @@ class DecorationImageAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'DecorationImage':
-        return ({positionalArgs, namedArgs, typeArgs}) => DecorationImage(image : namedArgs['image'], onError : namedArgs.containsKey('onError') ? namedArgs['onError'] : null, colorFilter : namedArgs.containsKey('colorFilter') ? namedArgs['colorFilter'] : null, fit : namedArgs.containsKey('fit') ? namedArgs['fit'] : null, alignment : namedArgs.containsKey('alignment') ? namedArgs['alignment'] : Alignment.center, centerSlice : namedArgs.containsKey('centerSlice') ? namedArgs['centerSlice'] : null, repeat : namedArgs.containsKey('repeat') ? namedArgs['repeat'] : ImageRepeat.noRepeat, matchTextDirection : namedArgs.containsKey('matchTextDirection') ? namedArgs['matchTextDirection'] : false, scale : namedArgs.containsKey('scale') ? namedArgs['scale'] : 1.0);
+        return ({positionalArgs, namedArgs, typeArgs}) => DecorationImage(
+            image: namedArgs['image'],
+            onError: namedArgs.containsKey('onError') ? namedArgs['onError'] : null,
+            colorFilter: namedArgs.containsKey('colorFilter') ? namedArgs['colorFilter'] : null,
+            fit: namedArgs.containsKey('fit') ? namedArgs['fit'] : null,
+            alignment: namedArgs.containsKey('alignment') ? namedArgs['alignment'] : Alignment.center,
+            centerSlice: namedArgs.containsKey('centerSlice') ? namedArgs['centerSlice'] : null,
+            repeat: namedArgs.containsKey('repeat') ? namedArgs['repeat'] : ImageRepeat.noRepeat,
+            matchTextDirection: namedArgs.containsKey('matchTextDirection') ? namedArgs['matchTextDirection'] : false,
+            scale: namedArgs.containsKey('scale') ? namedArgs['scale'] : 1.0);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -60,14 +64,13 @@ class DecorationImageAutoBinding extends HTExternalClass {
     return (instance as DecorationImage).htFetch(id);
   }
 
-
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'ImageErrorListener': (HTFunction function) => (exception, stackTrace) => function.call(positionalArgs: [exception, stackTrace], namedArgs: const {}),
+      'ImageErrorListener': (HTFunction function) =>
+          (exception, stackTrace) => function.call(positionalArgs: [exception, stackTrace], namedArgs: const {}),
       'VoidCallback': (HTFunction function) => () => function.call(positionalArgs: const [], namedArgs: const {}),
     };
   }
-
 }
 
 extension DecorationImageBinding on DecorationImage {
@@ -96,13 +99,11 @@ extension DecorationImageBinding on DecorationImage {
       case 'hashCode':
         return hashCode;
       case 'createPainter':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.createPainter(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => createPainter(positionalArgs[0]);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
-

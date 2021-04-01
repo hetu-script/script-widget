@@ -1,7 +1,5 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/gestures.dart';
-import 'dart:async';
-import 'package:flutter/foundation.dart';
 
 class GestureDispositionAutoBinding extends HTExternalClass {
   GestureDispositionAutoBinding() : super('GestureDisposition');
@@ -19,7 +17,6 @@ class GestureDispositionAutoBinding extends HTExternalClass {
         throw HTErrorUndefined(varName);
     }
   }
-
 
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
@@ -53,9 +50,6 @@ class GestureArenaManagerAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as GestureArenaManager).htFetch(id);
   }
-
-
-
 }
 
 extension GestureArenaManagerBinding on GestureArenaManager {
@@ -64,19 +58,17 @@ extension GestureArenaManagerBinding on GestureArenaManager {
       case 'typeid':
         return HTTypeId('GestureArenaManager');
       case 'add':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.add(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => add(positionalArgs[0], positionalArgs[1]);
       case 'close':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.close(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => close(positionalArgs[0]);
       case 'sweep':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.sweep(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => sweep(positionalArgs[0]);
       case 'hold':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.hold(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => hold(positionalArgs[0]);
       case 'release':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.release(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => release(positionalArgs[0]);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
-

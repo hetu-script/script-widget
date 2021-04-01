@@ -1,9 +1,5 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/rendering.dart';
-import 'package:flutter/foundation.dart';
-import 'package:flutter/gestures.dart';
-import 'package:flutter/services.dart';
-
 
 class SystemMouseCursorsAutoBinding extends HTExternalClass {
   SystemMouseCursorsAutoBinding() : super('SystemMouseCursors');
@@ -87,10 +83,4 @@ class SystemMouseCursorsAutoBinding extends HTExternalClass {
         throw HTErrorUndefined(varName);
     }
   }
-
-
-
-
 }
-
-

@@ -1,10 +1,8 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter/foundation.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
-
 
 class AndroidViewAutoBinding extends HTExternalClass {
   AndroidViewAutoBinding() : super('AndroidView');
@@ -13,7 +11,19 @@ class AndroidViewAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'AndroidView':
-        return ({positionalArgs, namedArgs, typeArgs}) => AndroidView(key : namedArgs.containsKey('key') ? namedArgs['key'] : null, viewType : namedArgs['viewType'], onPlatformViewCreated : namedArgs.containsKey('onPlatformViewCreated') ? namedArgs['onPlatformViewCreated'] : null, hitTestBehavior : namedArgs.containsKey('hitTestBehavior') ? namedArgs['hitTestBehavior'] : PlatformViewHitTestBehavior.opaque, layoutDirection : namedArgs.containsKey('layoutDirection') ? namedArgs['layoutDirection'] : null, gestureRecognizers : namedArgs.containsKey('gestureRecognizers') ? namedArgs['gestureRecognizers'] : null, creationParams : namedArgs.containsKey('creationParams') ? namedArgs['creationParams'] : null, creationParamsCodec : namedArgs.containsKey('creationParamsCodec') ? namedArgs['creationParamsCodec'] : null, clipBehavior : namedArgs.containsKey('clipBehavior') ? namedArgs['clipBehavior'] : Clip.hardEdge);
+        return ({positionalArgs, namedArgs, typeArgs}) => AndroidView(
+            key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
+            viewType: namedArgs['viewType'],
+            onPlatformViewCreated:
+                namedArgs.containsKey('onPlatformViewCreated') ? namedArgs['onPlatformViewCreated'] : null,
+            hitTestBehavior: namedArgs.containsKey('hitTestBehavior')
+                ? namedArgs['hitTestBehavior']
+                : PlatformViewHitTestBehavior.opaque,
+            layoutDirection: namedArgs.containsKey('layoutDirection') ? namedArgs['layoutDirection'] : null,
+            gestureRecognizers: namedArgs.containsKey('gestureRecognizers') ? namedArgs['gestureRecognizers'] : null,
+            creationParams: namedArgs.containsKey('creationParams') ? namedArgs['creationParams'] : null,
+            creationParamsCodec: namedArgs.containsKey('creationParamsCodec') ? namedArgs['creationParamsCodec'] : null,
+            clipBehavior: namedArgs.containsKey('clipBehavior') ? namedArgs['clipBehavior'] : Clip.hardEdge);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -24,13 +34,12 @@ class AndroidViewAutoBinding extends HTExternalClass {
     return (instance as AndroidView).htFetch(id);
   }
 
-
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'PlatformViewCreatedCallback': (HTFunction function) => (id) => function.call(positionalArgs: [id], namedArgs: const {}),
+      'PlatformViewCreatedCallback': (HTFunction function) =>
+          (id) => function.call(positionalArgs: [id], namedArgs: const {}),
     };
   }
-
 }
 
 extension AndroidViewBinding on AndroidView {
@@ -54,13 +63,38 @@ extension AndroidViewBinding on AndroidView {
         return creationParamsCodec;
       case 'clipBehavior':
         return clipBehavior;
+      case 'key':
+        return key;
+      case 'hashCode':
+        return hashCode;
       case 'createState':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.createState();
+        return ({positionalArgs, namedArgs, typeArgs}) => createState();
+      case 'createElement':
+        return ({positionalArgs, namedArgs, typeArgs}) => createElement();
+      case 'toStringShort':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'debugFillProperties':
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+      case 'toStringShallow':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
+            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toStringDeep':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
+            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class UiKitViewAutoBinding extends HTExternalClass {
@@ -70,7 +104,18 @@ class UiKitViewAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'UiKitView':
-        return ({positionalArgs, namedArgs, typeArgs}) => UiKitView(key : namedArgs.containsKey('key') ? namedArgs['key'] : null, viewType : namedArgs['viewType'], onPlatformViewCreated : namedArgs.containsKey('onPlatformViewCreated') ? namedArgs['onPlatformViewCreated'] : null, hitTestBehavior : namedArgs.containsKey('hitTestBehavior') ? namedArgs['hitTestBehavior'] : PlatformViewHitTestBehavior.opaque, layoutDirection : namedArgs.containsKey('layoutDirection') ? namedArgs['layoutDirection'] : null, creationParams : namedArgs.containsKey('creationParams') ? namedArgs['creationParams'] : null, creationParamsCodec : namedArgs.containsKey('creationParamsCodec') ? namedArgs['creationParamsCodec'] : null, gestureRecognizers : namedArgs.containsKey('gestureRecognizers') ? namedArgs['gestureRecognizers'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => UiKitView(
+            key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
+            viewType: namedArgs['viewType'],
+            onPlatformViewCreated:
+                namedArgs.containsKey('onPlatformViewCreated') ? namedArgs['onPlatformViewCreated'] : null,
+            hitTestBehavior: namedArgs.containsKey('hitTestBehavior')
+                ? namedArgs['hitTestBehavior']
+                : PlatformViewHitTestBehavior.opaque,
+            layoutDirection: namedArgs.containsKey('layoutDirection') ? namedArgs['layoutDirection'] : null,
+            creationParams: namedArgs.containsKey('creationParams') ? namedArgs['creationParams'] : null,
+            creationParamsCodec: namedArgs.containsKey('creationParamsCodec') ? namedArgs['creationParamsCodec'] : null,
+            gestureRecognizers: namedArgs.containsKey('gestureRecognizers') ? namedArgs['gestureRecognizers'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -81,13 +126,12 @@ class UiKitViewAutoBinding extends HTExternalClass {
     return (instance as UiKitView).htFetch(id);
   }
 
-
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'PlatformViewCreatedCallback': (HTFunction function) => (id) => function.call(positionalArgs: [id], namedArgs: const {}),
+      'PlatformViewCreatedCallback': (HTFunction function) =>
+          (id) => function.call(positionalArgs: [id], namedArgs: const {}),
     };
   }
-
 }
 
 extension UiKitViewBinding on UiKitView {
@@ -109,13 +153,38 @@ extension UiKitViewBinding on UiKitView {
         return creationParamsCodec;
       case 'gestureRecognizers':
         return gestureRecognizers;
+      case 'key':
+        return key;
+      case 'hashCode':
+        return hashCode;
       case 'createState':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.createState();
+        return ({positionalArgs, namedArgs, typeArgs}) => createState();
+      case 'createElement':
+        return ({positionalArgs, namedArgs, typeArgs}) => createElement();
+      case 'toStringShort':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'debugFillProperties':
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+      case 'toStringShallow':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
+            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toStringDeep':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
+            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class HtmlElementViewAutoBinding extends HTExternalClass {
@@ -125,7 +194,8 @@ class HtmlElementViewAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'HtmlElementView':
-        return ({positionalArgs, namedArgs, typeArgs}) => HtmlElementView(key : namedArgs.containsKey('key') ? namedArgs['key'] : null, viewType : namedArgs['viewType']);
+        return ({positionalArgs, namedArgs, typeArgs}) => HtmlElementView(
+            key: namedArgs.containsKey('key') ? namedArgs['key'] : null, viewType: namedArgs['viewType']);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -135,9 +205,6 @@ class HtmlElementViewAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as HtmlElementView).htFetch(id);
   }
-
-
-
 }
 
 extension HtmlElementViewBinding on HtmlElementView {
@@ -147,13 +214,38 @@ extension HtmlElementViewBinding on HtmlElementView {
         return HTTypeId('HtmlElementView');
       case 'viewType':
         return viewType;
+      case 'key':
+        return key;
+      case 'hashCode':
+        return hashCode;
       case 'build':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.build(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => build(positionalArgs[0]);
+      case 'createElement':
+        return ({positionalArgs, namedArgs, typeArgs}) => createElement();
+      case 'toStringShort':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'debugFillProperties':
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+      case 'toStringShallow':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
+            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toStringDeep':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
+            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class PlatformViewLinkAutoBinding extends HTExternalClass {
@@ -163,7 +255,11 @@ class PlatformViewLinkAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'PlatformViewLink':
-        return ({positionalArgs, namedArgs, typeArgs}) => PlatformViewLink(key : namedArgs.containsKey('key') ? namedArgs['key'] : null, surfaceFactory : namedArgs['surfaceFactory'], onCreatePlatformView : namedArgs['onCreatePlatformView'], viewType : namedArgs['viewType']);
+        return ({positionalArgs, namedArgs, typeArgs}) => PlatformViewLink(
+            key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
+            surfaceFactory: namedArgs['surfaceFactory'],
+            onCreatePlatformView: namedArgs['onCreatePlatformView'],
+            viewType: namedArgs['viewType']);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -174,14 +270,14 @@ class PlatformViewLinkAutoBinding extends HTExternalClass {
     return (instance as PlatformViewLink).htFetch(id);
   }
 
-
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'PlatformViewSurfaceFactory': (HTFunction function) => (context, controller) => function.call(positionalArgs: [context, controller], namedArgs: const {}) as Widget,
-      'CreatePlatformViewCallback': (HTFunction function) => (params) => function.call(positionalArgs: [params], namedArgs: const {}) as PlatformViewController,
+      'PlatformViewSurfaceFactory': (HTFunction function) =>
+          (context, controller) => function.call(positionalArgs: [context, controller], namedArgs: const {}) as Widget,
+      'CreatePlatformViewCallback': (HTFunction function) =>
+          (params) => function.call(positionalArgs: [params], namedArgs: const {}) as PlatformViewController,
     };
   }
-
 }
 
 extension PlatformViewLinkBinding on PlatformViewLink {
@@ -191,13 +287,38 @@ extension PlatformViewLinkBinding on PlatformViewLink {
         return HTTypeId('PlatformViewLink');
       case 'viewType':
         return viewType;
+      case 'key':
+        return key;
+      case 'hashCode':
+        return hashCode;
       case 'createState':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.createState();
+        return ({positionalArgs, namedArgs, typeArgs}) => createState();
+      case 'createElement':
+        return ({positionalArgs, namedArgs, typeArgs}) => createElement();
+      case 'toStringShort':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'debugFillProperties':
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+      case 'toStringShallow':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
+            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toStringDeep':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
+            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class PlatformViewSurfaceAutoBinding extends HTExternalClass {
@@ -207,7 +328,11 @@ class PlatformViewSurfaceAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'PlatformViewSurface':
-        return ({positionalArgs, namedArgs, typeArgs}) => PlatformViewSurface(key : namedArgs.containsKey('key') ? namedArgs['key'] : null, controller : namedArgs['controller'], hitTestBehavior : namedArgs['hitTestBehavior'], gestureRecognizers : namedArgs['gestureRecognizers']);
+        return ({positionalArgs, namedArgs, typeArgs}) => PlatformViewSurface(
+            key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
+            controller: namedArgs['controller'],
+            hitTestBehavior: namedArgs['hitTestBehavior'],
+            gestureRecognizers: namedArgs['gestureRecognizers']);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -217,9 +342,6 @@ class PlatformViewSurfaceAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as PlatformViewSurface).htFetch(id);
   }
-
-
-
 }
 
 extension PlatformViewSurfaceBinding on PlatformViewSurface {
@@ -233,15 +355,40 @@ extension PlatformViewSurfaceBinding on PlatformViewSurface {
         return gestureRecognizers;
       case 'hitTestBehavior':
         return hitTestBehavior;
+      case 'key':
+        return key;
+      case 'hashCode':
+        return hashCode;
       case 'createRenderObject':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.createRenderObject(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => createRenderObject(positionalArgs[0]);
       case 'updateRenderObject':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.updateRenderObject(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => updateRenderObject(positionalArgs[0], positionalArgs[1]);
+      case 'createElement':
+        return ({positionalArgs, namedArgs, typeArgs}) => createElement();
+      case 'toStringShort':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'debugFillProperties':
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+      case 'toStringShallow':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
+            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toStringDeep':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
+            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class AndroidViewSurfaceAutoBinding extends HTExternalClass {
@@ -251,7 +398,11 @@ class AndroidViewSurfaceAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'AndroidViewSurface':
-        return ({positionalArgs, namedArgs, typeArgs}) => AndroidViewSurface(key : namedArgs.containsKey('key') ? namedArgs['key'] : null, controller : namedArgs['controller'], hitTestBehavior : namedArgs['hitTestBehavior'], gestureRecognizers : namedArgs['gestureRecognizers']);
+        return ({positionalArgs, namedArgs, typeArgs}) => AndroidViewSurface(
+            key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
+            controller: namedArgs['controller'],
+            hitTestBehavior: namedArgs['hitTestBehavior'],
+            gestureRecognizers: namedArgs['gestureRecognizers']);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -261,9 +412,6 @@ class AndroidViewSurfaceAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as AndroidViewSurface).htFetch(id);
   }
-
-
-
 }
 
 extension AndroidViewSurfaceBinding on AndroidViewSurface {
@@ -277,14 +425,38 @@ extension AndroidViewSurfaceBinding on AndroidViewSurface {
         return gestureRecognizers;
       case 'hitTestBehavior':
         return hitTestBehavior;
+      case 'key':
+        return key;
+      case 'hashCode':
+        return hashCode;
       case 'createRenderObject':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.createRenderObject(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => createRenderObject(positionalArgs[0]);
       case 'updateRenderObject':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.updateRenderObject(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => updateRenderObject(positionalArgs[0], positionalArgs[1]);
+      case 'createElement':
+        return ({positionalArgs, namedArgs, typeArgs}) => createElement();
+      case 'toStringShort':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'debugFillProperties':
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+      case 'toStringShallow':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
+            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toStringDeep':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
+            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
-

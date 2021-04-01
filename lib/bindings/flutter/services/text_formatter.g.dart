@@ -1,8 +1,5 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/services.dart';
-import 'dart:math'as math;
-import 'package:characters/characters.dart';
-import 'package:flutter/foundation.dart';
 
 class MaxLengthEnforcementAutoBinding extends HTExternalClass {
   MaxLengthEnforcementAutoBinding() : super('MaxLengthEnforcement');
@@ -22,7 +19,6 @@ class MaxLengthEnforcementAutoBinding extends HTExternalClass {
         throw HTErrorUndefined(varName);
     }
   }
-
 
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
@@ -52,16 +48,13 @@ class TextInputFormatterAutoBinding extends HTExternalClass {
     }
   }
 
-
-
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'TextInputFormatFunction': (HTFunction function) => (oldValue, newValue) => function.call(positionalArgs: [oldValue, newValue], namedArgs: const {}) as TextEditingValue,
+      'TextInputFormatFunction': (HTFunction function) => (oldValue, newValue) =>
+          function.call(positionalArgs: [oldValue, newValue], namedArgs: const {}) as TextEditingValue,
     };
   }
-
 }
-
 
 class FilteringTextInputFormatterAutoBinding extends HTExternalClass {
   FilteringTextInputFormatterAutoBinding() : super('FilteringTextInputFormatter');
@@ -70,11 +63,15 @@ class FilteringTextInputFormatterAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'FilteringTextInputFormatter':
-        return ({positionalArgs, namedArgs, typeArgs}) => FilteringTextInputFormatter(positionalArgs[0], allow : namedArgs['allow'], replacementString : namedArgs.containsKey('replacementString') ? namedArgs['replacementString'] : '');
+        return ({positionalArgs, namedArgs, typeArgs}) => FilteringTextInputFormatter(positionalArgs[0],
+            allow: namedArgs['allow'],
+            replacementString: namedArgs.containsKey('replacementString') ? namedArgs['replacementString'] : '');
       case 'FilteringTextInputFormatter.allow':
-        return ({positionalArgs, namedArgs, typeArgs}) => FilteringTextInputFormatter.allow(positionalArgs[0], replacementString : namedArgs.containsKey('replacementString') ? namedArgs['replacementString'] : '');
+        return ({positionalArgs, namedArgs, typeArgs}) => FilteringTextInputFormatter.allow(positionalArgs[0],
+            replacementString: namedArgs.containsKey('replacementString') ? namedArgs['replacementString'] : '');
       case 'FilteringTextInputFormatter.deny':
-        return ({positionalArgs, namedArgs, typeArgs}) => FilteringTextInputFormatter.deny(positionalArgs[0], replacementString : namedArgs.containsKey('replacementString') ? namedArgs['replacementString'] : '');
+        return ({positionalArgs, namedArgs, typeArgs}) => FilteringTextInputFormatter.deny(positionalArgs[0],
+            replacementString: namedArgs.containsKey('replacementString') ? namedArgs['replacementString'] : '');
       case 'FilteringTextInputFormatter.singleLineFormatter':
         return FilteringTextInputFormatter.singleLineFormatter;
       case 'FilteringTextInputFormatter.digitsOnly':
@@ -88,9 +85,6 @@ class FilteringTextInputFormatterAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as FilteringTextInputFormatter).htFetch(id);
   }
-
-
-
 }
 
 extension FilteringTextInputFormatterBinding on FilteringTextInputFormatter {
@@ -105,12 +99,11 @@ extension FilteringTextInputFormatterBinding on FilteringTextInputFormatter {
       case 'replacementString':
         return replacementString;
       case 'formatEditUpdate':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.formatEditUpdate(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => formatEditUpdate(positionalArgs[0], positionalArgs[1]);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class LengthLimitingTextInputFormatterAutoBinding extends HTExternalClass {
@@ -120,9 +113,13 @@ class LengthLimitingTextInputFormatterAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'LengthLimitingTextInputFormatter':
-        return ({positionalArgs, namedArgs, typeArgs}) => LengthLimitingTextInputFormatter(positionalArgs[0], maxLengthEnforcement : namedArgs.containsKey('maxLengthEnforcement') ? namedArgs['maxLengthEnforcement'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => LengthLimitingTextInputFormatter(positionalArgs[0],
+            maxLengthEnforcement:
+                namedArgs.containsKey('maxLengthEnforcement') ? namedArgs['maxLengthEnforcement'] : null);
       case 'LengthLimitingTextInputFormatter.getDefaultMaxLengthEnforcement':
-        return ({positionalArgs, namedArgs, typeArgs}) => LengthLimitingTextInputFormatter.getDefaultMaxLengthEnforcement(positionalArgs.length > 0 ? positionalArgs[0] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            LengthLimitingTextInputFormatter.getDefaultMaxLengthEnforcement(
+                positionalArgs.length > 0 ? positionalArgs[0] : null);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -132,9 +129,6 @@ class LengthLimitingTextInputFormatterAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as LengthLimitingTextInputFormatter).htFetch(id);
   }
-
-
-
 }
 
 extension LengthLimitingTextInputFormatterBinding on LengthLimitingTextInputFormatter {
@@ -147,11 +141,9 @@ extension LengthLimitingTextInputFormatterBinding on LengthLimitingTextInputForm
       case 'maxLengthEnforcement':
         return maxLengthEnforcement;
       case 'formatEditUpdate':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.formatEditUpdate(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => formatEditUpdate(positionalArgs[0], positionalArgs[1]);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
-

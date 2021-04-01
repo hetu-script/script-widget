@@ -1,0 +1,24 @@
+external class InputDatePickerFormField {
+    construct 
+    get initialDate
+    get firstDate
+    get lastDate
+    get onDateSubmitted
+    get onDateSaved
+    get selectableDayPredicate
+    get errorFormatText
+    get errorInvalidText
+    get fieldHintText
+    get fieldLabelText
+    get autofocus
+    get key
+    fun createState
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}

@@ -1,0 +1,24 @@
+external class ButtonBar {
+    construct 
+    get alignment
+    get mainAxisSize
+    get buttonTextTheme
+    get buttonMinWidth
+    get buttonHeight
+    get buttonPadding
+    get buttonAlignedDropdown
+    get layoutBehavior
+    get overflowDirection
+    get overflowButtonSpacing
+    get children
+    get key
+    fun build
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}

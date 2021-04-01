@@ -1,7 +1,5 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/material.dart';
-import 'dart:ui';
-import 'package:flutter/foundation.dart';
 
 class DatePickerEntryModeAutoBinding extends HTExternalClass {
   DatePickerEntryModeAutoBinding() : super('DatePickerEntryMode');
@@ -20,7 +18,6 @@ class DatePickerEntryModeAutoBinding extends HTExternalClass {
     }
   }
 
-
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
@@ -35,6 +32,7 @@ class DatePickerEntryModeAutoBinding extends HTExternalClass {
     }
   }
 }
+
 class DatePickerModeAutoBinding extends HTExternalClass {
   DatePickerModeAutoBinding() : super('DatePickerMode');
 
@@ -51,7 +49,6 @@ class DatePickerModeAutoBinding extends HTExternalClass {
         throw HTErrorUndefined(varName);
     }
   }
-
 
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
@@ -85,23 +82,21 @@ class DateUtilsAutoBinding extends HTExternalClass {
       case 'DateUtils.monthDelta':
         return ({positionalArgs, namedArgs, typeArgs}) => DateUtils.monthDelta(positionalArgs[0], positionalArgs[1]);
       case 'DateUtils.addMonthsToMonthDate':
-        return ({positionalArgs, namedArgs, typeArgs}) => DateUtils.addMonthsToMonthDate(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            DateUtils.addMonthsToMonthDate(positionalArgs[0], positionalArgs[1]);
       case 'DateUtils.addDaysToDate':
         return ({positionalArgs, namedArgs, typeArgs}) => DateUtils.addDaysToDate(positionalArgs[0], positionalArgs[1]);
       case 'DateUtils.firstDayOffset':
-        return ({positionalArgs, namedArgs, typeArgs}) => DateUtils.firstDayOffset(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            DateUtils.firstDayOffset(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
       case 'DateUtils.getDaysInMonth':
-        return ({positionalArgs, namedArgs, typeArgs}) => DateUtils.getDaysInMonth(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            DateUtils.getDaysInMonth(positionalArgs[0], positionalArgs[1]);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
-
-
-
 }
-
 
 class DateTimeRangeAutoBinding extends HTExternalClass {
   DateTimeRangeAutoBinding() : super('DateTimeRange');
@@ -110,7 +105,8 @@ class DateTimeRangeAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'DateTimeRange':
-        return ({positionalArgs, namedArgs, typeArgs}) => DateTimeRange(start : namedArgs['start'], end : namedArgs['end']);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            DateTimeRange(start: namedArgs['start'], end: namedArgs['end']);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -120,9 +116,6 @@ class DateTimeRangeAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as DateTimeRange).htFetch(id);
   }
-
-
-
 }
 
 extension DateTimeRangeBinding on DateTimeRange {
@@ -139,11 +132,9 @@ extension DateTimeRangeBinding on DateTimeRange {
       case 'hashCode':
         return hashCode;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
-

@@ -1,14 +1,7 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/widgets.dart';
-import 'dart:async';
-import 'dart:developer'as developer;
 import 'dart:ui';
-import 'package:flutter/foundation.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/rendering.dart';
-import 'package:flutter/scheduler.dart';
-import 'package:flutter/services.dart';
-
 
 class WidgetsFlutterBindingAutoBinding extends HTExternalClass {
   WidgetsFlutterBindingAutoBinding() : super('WidgetsFlutterBinding');
@@ -30,14 +23,14 @@ class WidgetsFlutterBindingAutoBinding extends HTExternalClass {
     return (instance as WidgetsFlutterBinding).htFetch(id);
   }
 
-
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'TimingsCallback': (HTFunction function) => (timings) => function.call(positionalArgs: [timings], namedArgs: const {}),
-      'FrameCallback': (HTFunction function) => (timeStamp) => function.call(positionalArgs: [timeStamp], namedArgs: const {}),
+      'TimingsCallback': (HTFunction function) =>
+          (timings) => function.call(positionalArgs: [timings], namedArgs: const {}),
+      'FrameCallback': (HTFunction function) =>
+          (timeStamp) => function.call(positionalArgs: [timeStamp], namedArgs: const {}),
     };
   }
-
 }
 
 extension WidgetsFlutterBindingBinding on WidgetsFlutterBinding {
@@ -61,8 +54,6 @@ extension WidgetsFlutterBindingBinding on WidgetsFlutterBinding {
         return currentFrameTimeStamp;
       case 'currentSystemFrameTimeStamp':
         return currentSystemFrameTimeStamp;
-      case 'defaultBinaryMessenger':
-        return defaultBinaryMessenger;
       case 'restorationManager':
         return restorationManager;
       case 'imageCache':
@@ -100,89 +91,90 @@ extension WidgetsFlutterBindingBinding on WidgetsFlutterBinding {
       case 'platformDispatcher':
         return platformDispatcher;
       case 'initInstances':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.initInstances();
+        return ({positionalArgs, namedArgs, typeArgs}) => initInstances();
       case 'unlocked':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.unlocked();
+        return ({positionalArgs, namedArgs, typeArgs}) => unlocked();
       case 'cancelPointer':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.cancelPointer(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => cancelPointer(positionalArgs[0]);
       case 'handlePointerEvent':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.handlePointerEvent(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => handlePointerEvent(positionalArgs[0]);
       case 'hitTest':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.hitTest(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => hitTest(positionalArgs[0], positionalArgs[1]);
       case 'dispatchEvent':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.dispatchEvent(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => dispatchEvent(positionalArgs[0], positionalArgs[1]);
       case 'handleEvent':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.handleEvent(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => handleEvent(positionalArgs[0], positionalArgs[1]);
       case 'addTimingsCallback':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.addTimingsCallback(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => addTimingsCallback(positionalArgs[0]);
       case 'removeTimingsCallback':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.removeTimingsCallback(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => removeTimingsCallback(positionalArgs[0]);
       case 'initServiceExtensions':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.initServiceExtensions();
+        return ({positionalArgs, namedArgs, typeArgs}) => initServiceExtensions();
       case 'scheduleTask':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.scheduleTask(positionalArgs[0], positionalArgs[1], debugLabel : namedArgs.containsKey('debugLabel') ? namedArgs['debugLabel'] : null, flow : namedArgs.containsKey('flow') ? namedArgs['flow'] : null);
-      case 'handleEventLoopCallback':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.handleEventLoopCallback();
+        return ({positionalArgs, namedArgs, typeArgs}) => scheduleTask(positionalArgs[0], positionalArgs[1],
+            debugLabel: namedArgs.containsKey('debugLabel') ? namedArgs['debugLabel'] : null,
+            flow: namedArgs.containsKey('flow') ? namedArgs['flow'] : null);
       case 'scheduleFrameCallback':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.scheduleFrameCallback(positionalArgs[0], rescheduling : namedArgs.containsKey('rescheduling') ? namedArgs['rescheduling'] : false);
+        return ({positionalArgs, namedArgs, typeArgs}) => scheduleFrameCallback(positionalArgs[0],
+            rescheduling: namedArgs.containsKey('rescheduling') ? namedArgs['rescheduling'] : false);
       case 'cancelFrameCallbackWithId':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.cancelFrameCallbackWithId(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => cancelFrameCallbackWithId(positionalArgs[0]);
       case 'debugAssertNoTransientCallbacks':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugAssertNoTransientCallbacks(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugAssertNoTransientCallbacks(positionalArgs[0]);
       case 'addPersistentFrameCallback':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.addPersistentFrameCallback(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => addPersistentFrameCallback(positionalArgs[0]);
       case 'addPostFrameCallback':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.addPostFrameCallback(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => addPostFrameCallback(positionalArgs[0]);
       case 'ensureVisualUpdate':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.ensureVisualUpdate();
+        return ({positionalArgs, namedArgs, typeArgs}) => ensureVisualUpdate();
       case 'scheduleFrame':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.scheduleFrame();
+        return ({positionalArgs, namedArgs, typeArgs}) => scheduleFrame();
       case 'scheduleForcedFrame':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.scheduleForcedFrame();
+        return ({positionalArgs, namedArgs, typeArgs}) => scheduleForcedFrame();
       case 'scheduleWarmUpFrame':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.scheduleWarmUpFrame();
+        return ({positionalArgs, namedArgs, typeArgs}) => scheduleWarmUpFrame();
       case 'resetEpoch':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.resetEpoch();
+        return ({positionalArgs, namedArgs, typeArgs}) => resetEpoch();
       case 'handleBeginFrame':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.handleBeginFrame(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => handleBeginFrame(positionalArgs[0]);
       case 'handleDrawFrame':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.handleDrawFrame();
+        return ({positionalArgs, namedArgs, typeArgs}) => handleDrawFrame();
       case 'instantiateImageCodec':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.instantiateImageCodec(positionalArgs[0], cacheWidth : namedArgs.containsKey('cacheWidth') ? namedArgs['cacheWidth'] : null, cacheHeight : namedArgs.containsKey('cacheHeight') ? namedArgs['cacheHeight'] : null, allowUpscaling : namedArgs.containsKey('allowUpscaling') ? namedArgs['allowUpscaling'] : false);
+        return ({positionalArgs, namedArgs, typeArgs}) => instantiateImageCodec(positionalArgs[0],
+            targetWidth: namedArgs.containsKey('cacheWidth') ? namedArgs['cacheWidth'] : null,
+            targetHeight: namedArgs.containsKey('cacheHeight') ? namedArgs['cacheHeight'] : null,
+            allowUpscaling: namedArgs.containsKey('allowUpscaling') ? namedArgs['allowUpscaling'] : false);
       case 'createSemanticsUpdateBuilder':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.createSemanticsUpdateBuilder();
+        return ({positionalArgs, namedArgs, typeArgs}) => createSemanticsUpdateBuilder();
       case 'initRenderView':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.initRenderView();
+        return ({positionalArgs, namedArgs, typeArgs}) => initRenderView();
       case 'createViewConfiguration':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.createViewConfiguration();
-      case 'initMouseTracker':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.initMouseTracker(positionalArgs.length > 0 ? positionalArgs[0] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => createViewConfiguration();
       case 'setSemanticsEnabled':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.setSemanticsEnabled(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => setSemanticsEnabled(positionalArgs[0]);
       case 'deferFirstFrame':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.deferFirstFrame();
+        return ({positionalArgs, namedArgs, typeArgs}) => deferFirstFrame();
       case 'allowFirstFrame':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.allowFirstFrame();
+        return ({positionalArgs, namedArgs, typeArgs}) => allowFirstFrame();
       case 'resetFirstFrameSent':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.resetFirstFrameSent();
+        return ({positionalArgs, namedArgs, typeArgs}) => resetFirstFrameSent();
       case 'performReassemble':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.performReassemble();
+        return ({positionalArgs, namedArgs, typeArgs}) => performReassemble();
       case 'addObserver':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.addObserver(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => addObserver(positionalArgs[0]);
       case 'removeObserver':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.removeObserver(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => removeObserver(positionalArgs[0]);
       case 'attachRootWidget':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.attachRootWidget(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => attachRootWidget(positionalArgs[0]);
       case 'computePlatformResolvedLocale':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.computePlatformResolvedLocale(List<Locale>.from(positionalArgs[0]));
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            computePlatformResolvedLocale(List<Locale>.from(positionalArgs[0]));
       case 'reassembleApplication':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.reassembleApplication();
+        return ({positionalArgs, namedArgs, typeArgs}) => reassembleApplication();
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
-

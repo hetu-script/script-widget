@@ -1,0 +1,31 @@
+external class FadeInImage {
+    construct 
+    construct memoryNetwork
+    construct assetNetwork
+    get placeholder
+    get placeholderErrorBuilder
+    get image
+    get imageErrorBuilder
+    get fadeOutDuration
+    get fadeOutCurve
+    get fadeInDuration
+    get fadeInCurve
+    get width
+    get height
+    get fit
+    get alignment
+    get repeat
+    get matchTextDirection
+    get excludeFromSemantics
+    get imageSemanticLabel
+    get key
+    fun build
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}

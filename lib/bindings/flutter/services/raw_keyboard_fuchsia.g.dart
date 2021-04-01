@@ -1,7 +1,5 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter/foundation.dart';
-
 
 class RawKeyEventDataFuchsiaAutoBinding extends HTExternalClass {
   RawKeyEventDataFuchsiaAutoBinding() : super('RawKeyEventDataFuchsia');
@@ -10,7 +8,10 @@ class RawKeyEventDataFuchsiaAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'RawKeyEventDataFuchsia':
-        return ({positionalArgs, namedArgs, typeArgs}) => RawKeyEventDataFuchsia(hidUsage : namedArgs.containsKey('hidUsage') ? namedArgs['hidUsage'] : 0, codePoint : namedArgs.containsKey('codePoint') ? namedArgs['codePoint'] : 0, modifiers : namedArgs.containsKey('modifiers') ? namedArgs['modifiers'] : 0);
+        return ({positionalArgs, namedArgs, typeArgs}) => RawKeyEventDataFuchsia(
+            hidUsage: namedArgs.containsKey('hidUsage') ? namedArgs['hidUsage'] : 0,
+            codePoint: namedArgs.containsKey('codePoint') ? namedArgs['codePoint'] : 0,
+            modifiers: namedArgs.containsKey('modifiers') ? namedArgs['modifiers'] : 0);
       case 'RawKeyEventDataFuchsia.modifierNone':
         return RawKeyEventDataFuchsia.modifierNone;
       case 'RawKeyEventDataFuchsia.modifierCapsLock':
@@ -48,9 +49,6 @@ class RawKeyEventDataFuchsiaAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as RawKeyEventDataFuchsia).htFetch(id);
   }
-
-
-
 }
 
 extension RawKeyEventDataFuchsiaBinding on RawKeyEventDataFuchsia {
@@ -81,15 +79,14 @@ extension RawKeyEventDataFuchsiaBinding on RawKeyEventDataFuchsia {
       case 'modifiersPressed':
         return modifiersPressed;
       case 'isModifierPressed':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.isModifierPressed(positionalArgs[0], side : namedArgs.containsKey('side') ? namedArgs['side'] : KeyboardSide.any);
+        return ({positionalArgs, namedArgs, typeArgs}) => isModifierPressed(positionalArgs[0],
+            side: namedArgs.containsKey('side') ? namedArgs['side'] : KeyboardSide.any);
       case 'getModifierSide':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.getModifierSide(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => getModifierSide(positionalArgs[0]);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
-

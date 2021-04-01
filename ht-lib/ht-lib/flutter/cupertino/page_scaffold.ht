@@ -1,0 +1,17 @@
+external class CupertinoPageScaffold {
+    construct 
+    get navigationBar
+    get child
+    get backgroundColor
+    get resizeToAvoidBottomInset
+    get key
+    fun createState
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}

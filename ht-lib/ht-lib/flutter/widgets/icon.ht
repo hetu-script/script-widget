@@ -1,0 +1,18 @@
+external class Icon {
+    construct 
+    get icon
+    get size
+    get color
+    get semanticLabel
+    get textDirection
+    get key
+    fun build
+    fun debugFillProperties
+    fun createElement
+    fun toStringShort
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}

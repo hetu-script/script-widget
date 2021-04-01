@@ -1,8 +1,5 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/painting.dart';
-import 'dart:ui'as ui;
-import 'package:flutter/foundation.dart';
-
 
 class FractionalOffsetAutoBinding extends HTExternalClass {
   FractionalOffsetAutoBinding() : super('FractionalOffset');
@@ -13,11 +10,14 @@ class FractionalOffsetAutoBinding extends HTExternalClass {
       case 'FractionalOffset':
         return ({positionalArgs, namedArgs, typeArgs}) => FractionalOffset(positionalArgs[0], positionalArgs[1]);
       case 'FractionalOffset.fromOffsetAndSize':
-        return ({positionalArgs, namedArgs, typeArgs}) => FractionalOffset.fromOffsetAndSize(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            FractionalOffset.fromOffsetAndSize(positionalArgs[0], positionalArgs[1]);
       case 'FractionalOffset.fromOffsetAndRect':
-        return ({positionalArgs, namedArgs, typeArgs}) => FractionalOffset.fromOffsetAndRect(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            FractionalOffset.fromOffsetAndRect(positionalArgs[0], positionalArgs[1]);
       case 'FractionalOffset.lerp':
-        return ({positionalArgs, namedArgs, typeArgs}) => FractionalOffset.lerp(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            FractionalOffset.lerp(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
       case 'FractionalOffset.topLeft':
         return FractionalOffset.topLeft;
       case 'FractionalOffset.topCenter':
@@ -45,9 +45,6 @@ class FractionalOffsetAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as FractionalOffset).htFetch(id);
   }
-
-
-
 }
 
 extension FractionalOffsetBinding on FractionalOffset {
@@ -66,23 +63,21 @@ extension FractionalOffsetBinding on FractionalOffset {
       case 'hashCode':
         return hashCode;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       case 'add':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.add(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => add(positionalArgs[0]);
       case 'alongOffset':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.alongOffset(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => alongOffset(positionalArgs[0]);
       case 'alongSize':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.alongSize(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => alongSize(positionalArgs[0]);
       case 'withinRect':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.withinRect(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => withinRect(positionalArgs[0]);
       case 'inscribe':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.inscribe(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => inscribe(positionalArgs[0], positionalArgs[1]);
       case 'resolve':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.resolve(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => resolve(positionalArgs[0]);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
-

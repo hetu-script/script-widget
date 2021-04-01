@@ -1,9 +1,6 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/widgets.dart';
-import 'dart:math'as math;
-import 'package:flutter/foundation.dart';
 import 'package:flutter/physics.dart';
-
 
 class BouncingScrollSimulationAutoBinding extends HTExternalClass {
   BouncingScrollSimulationAutoBinding() : super('BouncingScrollSimulation');
@@ -12,7 +9,13 @@ class BouncingScrollSimulationAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'BouncingScrollSimulation':
-        return ({positionalArgs, namedArgs, typeArgs}) => BouncingScrollSimulation(position : namedArgs['position'], velocity : namedArgs['velocity'], leadingExtent : namedArgs['leadingExtent'], trailingExtent : namedArgs['trailingExtent'], spring : namedArgs['spring'], tolerance : namedArgs.containsKey('tolerance') ? namedArgs['tolerance'] : Tolerance.defaultTolerance);
+        return ({positionalArgs, namedArgs, typeArgs}) => BouncingScrollSimulation(
+            position: namedArgs['position'],
+            velocity: namedArgs['velocity'],
+            leadingExtent: namedArgs['leadingExtent'],
+            trailingExtent: namedArgs['trailingExtent'],
+            spring: namedArgs['spring'],
+            tolerance: namedArgs.containsKey('tolerance') ? namedArgs['tolerance'] : Tolerance.defaultTolerance);
       case 'BouncingScrollSimulation.maxSpringTransferVelocity':
         return BouncingScrollSimulation.maxSpringTransferVelocity;
       default:
@@ -29,8 +32,6 @@ class BouncingScrollSimulationAutoBinding extends HTExternalClass {
   void instanceMemberSet(dynamic instance, String id, dynamic value) {
     (instance as BouncingScrollSimulation).htAssign(id, value);
   }
-
-
 }
 
 extension BouncingScrollSimulationBinding on BouncingScrollSimulation {
@@ -47,13 +48,13 @@ extension BouncingScrollSimulationBinding on BouncingScrollSimulation {
       case 'tolerance':
         return tolerance;
       case 'x':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.x(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => x(positionalArgs[0]);
       case 'dx':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.dx(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => dx(positionalArgs[0]);
       case 'isDone':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.isDone(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => isDone(positionalArgs[0]);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
         throw HTErrorUndefined(varName);
     }
@@ -62,7 +63,7 @@ extension BouncingScrollSimulationBinding on BouncingScrollSimulation {
   void htAssign(String varName, dynamic value) {
     switch (varName) {
       case 'tolerance':
-        this.tolerance = value;
+        tolerance = value;
         break;
       default:
         throw HTErrorUndefined(varName);
@@ -77,7 +78,11 @@ class ClampingScrollSimulationAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'ClampingScrollSimulation':
-        return ({positionalArgs, namedArgs, typeArgs}) => ClampingScrollSimulation(position : namedArgs['position'], velocity : namedArgs['velocity'], friction : namedArgs.containsKey('friction') ? namedArgs['friction'] : 0.015, tolerance : namedArgs.containsKey('tolerance') ? namedArgs['tolerance'] : Tolerance.defaultTolerance);
+        return ({positionalArgs, namedArgs, typeArgs}) => ClampingScrollSimulation(
+            position: namedArgs['position'],
+            velocity: namedArgs['velocity'],
+            friction: namedArgs.containsKey('friction') ? namedArgs['friction'] : 0.015,
+            tolerance: namedArgs.containsKey('tolerance') ? namedArgs['tolerance'] : Tolerance.defaultTolerance);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -92,8 +97,6 @@ class ClampingScrollSimulationAutoBinding extends HTExternalClass {
   void instanceMemberSet(dynamic instance, String id, dynamic value) {
     (instance as ClampingScrollSimulation).htAssign(id, value);
   }
-
-
 }
 
 extension ClampingScrollSimulationBinding on ClampingScrollSimulation {
@@ -110,13 +113,13 @@ extension ClampingScrollSimulationBinding on ClampingScrollSimulation {
       case 'tolerance':
         return tolerance;
       case 'x':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.x(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => x(positionalArgs[0]);
       case 'dx':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.dx(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => dx(positionalArgs[0]);
       case 'isDone':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.isDone(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => isDone(positionalArgs[0]);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
         throw HTErrorUndefined(varName);
     }
@@ -125,11 +128,10 @@ extension ClampingScrollSimulationBinding on ClampingScrollSimulation {
   void htAssign(String varName, dynamic value) {
     switch (varName) {
       case 'tolerance':
-        this.tolerance = value;
+        tolerance = value;
         break;
       default:
         throw HTErrorUndefined(varName);
     }
   }
 }
-

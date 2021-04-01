@@ -1,8 +1,5 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/gestures.dart';
-import 'package:flutter/foundation.dart';
-import 'package:vector_math/vector_math_64.dart';
-
 
 class PointerRouterAutoBinding extends HTExternalClass {
   PointerRouterAutoBinding() : super('PointerRouter');
@@ -22,13 +19,11 @@ class PointerRouterAutoBinding extends HTExternalClass {
     return (instance as PointerRouter).htFetch(id);
   }
 
-
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
       'PointerRoute': (HTFunction function) => (event) => function.call(positionalArgs: [event], namedArgs: const {}),
     };
   }
-
 }
 
 extension PointerRouterBinding on PointerRouter {
@@ -39,19 +34,19 @@ extension PointerRouterBinding on PointerRouter {
       case 'debugGlobalRouteCount':
         return debugGlobalRouteCount;
       case 'addRoute':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.addRoute(positionalArgs[0], positionalArgs[1], positionalArgs.length > 2 ? positionalArgs[2] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            addRoute(positionalArgs[0], positionalArgs[1], positionalArgs.length > 2 ? positionalArgs[2] : null);
       case 'removeRoute':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.removeRoute(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => removeRoute(positionalArgs[0], positionalArgs[1]);
       case 'addGlobalRoute':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.addGlobalRoute(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            addGlobalRoute(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : null);
       case 'removeGlobalRoute':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.removeGlobalRoute(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => removeGlobalRoute(positionalArgs[0]);
       case 'route':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.route(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => route(positionalArgs[0]);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
-

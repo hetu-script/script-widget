@@ -1,8 +1,5 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/animation.dart';
-import 'dart:ui';
-import 'package:flutter/foundation.dart';
-
 
 class ColorTweenAutoBinding extends HTExternalClass {
   ColorTweenAutoBinding() : super('ColorTween');
@@ -11,7 +8,9 @@ class ColorTweenAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'ColorTween':
-        return ({positionalArgs, namedArgs, typeArgs}) => ColorTween(begin : namedArgs.containsKey('begin') ? namedArgs['begin'] : null, end : namedArgs.containsKey('end') ? namedArgs['end'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => ColorTween(
+            begin: namedArgs.containsKey('begin') ? namedArgs['begin'] : null,
+            end: namedArgs.containsKey('end') ? namedArgs['end'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -26,8 +25,6 @@ class ColorTweenAutoBinding extends HTExternalClass {
   void instanceMemberSet(dynamic instance, String id, dynamic value) {
     (instance as ColorTween).htAssign(id, value);
   }
-
-
 }
 
 extension ColorTweenBinding on ColorTween {
@@ -40,17 +37,17 @@ extension ColorTweenBinding on ColorTween {
       case 'end':
         return end;
       case 'lerp':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.lerp(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => lerp(positionalArgs[0]);
       case 'transform':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.transform(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => transform(positionalArgs[0]);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       case 'evaluate':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.evaluate(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => evaluate(positionalArgs[0]);
       case 'animate':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.animate(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => animate(positionalArgs[0]);
       case 'chain':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.chain(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => chain(positionalArgs[0]);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -59,10 +56,10 @@ extension ColorTweenBinding on ColorTween {
   void htAssign(String varName, dynamic value) {
     switch (varName) {
       case 'begin':
-        this.begin = value;
+        begin = value;
         break;
       case 'end':
-        this.end = value;
+        end = value;
         break;
       default:
         throw HTErrorUndefined(varName);
@@ -77,7 +74,9 @@ class SizeTweenAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'SizeTween':
-        return ({positionalArgs, namedArgs, typeArgs}) => SizeTween(begin : namedArgs.containsKey('begin') ? namedArgs['begin'] : null, end : namedArgs.containsKey('end') ? namedArgs['end'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => SizeTween(
+            begin: namedArgs.containsKey('begin') ? namedArgs['begin'] : null,
+            end: namedArgs.containsKey('end') ? namedArgs['end'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -92,8 +91,6 @@ class SizeTweenAutoBinding extends HTExternalClass {
   void instanceMemberSet(dynamic instance, String id, dynamic value) {
     (instance as SizeTween).htAssign(id, value);
   }
-
-
 }
 
 extension SizeTweenBinding on SizeTween {
@@ -106,17 +103,17 @@ extension SizeTweenBinding on SizeTween {
       case 'end':
         return end;
       case 'lerp':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.lerp(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => lerp(positionalArgs[0]);
       case 'transform':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.transform(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => transform(positionalArgs[0]);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       case 'evaluate':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.evaluate(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => evaluate(positionalArgs[0]);
       case 'animate':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.animate(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => animate(positionalArgs[0]);
       case 'chain':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.chain(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => chain(positionalArgs[0]);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -125,10 +122,10 @@ extension SizeTweenBinding on SizeTween {
   void htAssign(String varName, dynamic value) {
     switch (varName) {
       case 'begin':
-        this.begin = value;
+        begin = value;
         break;
       case 'end':
-        this.end = value;
+        end = value;
         break;
       default:
         throw HTErrorUndefined(varName);
@@ -143,7 +140,9 @@ class RectTweenAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'RectTween':
-        return ({positionalArgs, namedArgs, typeArgs}) => RectTween(begin : namedArgs.containsKey('begin') ? namedArgs['begin'] : null, end : namedArgs.containsKey('end') ? namedArgs['end'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => RectTween(
+            begin: namedArgs.containsKey('begin') ? namedArgs['begin'] : null,
+            end: namedArgs.containsKey('end') ? namedArgs['end'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -158,8 +157,6 @@ class RectTweenAutoBinding extends HTExternalClass {
   void instanceMemberSet(dynamic instance, String id, dynamic value) {
     (instance as RectTween).htAssign(id, value);
   }
-
-
 }
 
 extension RectTweenBinding on RectTween {
@@ -172,17 +169,17 @@ extension RectTweenBinding on RectTween {
       case 'end':
         return end;
       case 'lerp':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.lerp(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => lerp(positionalArgs[0]);
       case 'transform':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.transform(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => transform(positionalArgs[0]);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       case 'evaluate':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.evaluate(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => evaluate(positionalArgs[0]);
       case 'animate':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.animate(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => animate(positionalArgs[0]);
       case 'chain':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.chain(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => chain(positionalArgs[0]);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -191,10 +188,10 @@ extension RectTweenBinding on RectTween {
   void htAssign(String varName, dynamic value) {
     switch (varName) {
       case 'begin':
-        this.begin = value;
+        begin = value;
         break;
       case 'end':
-        this.end = value;
+        end = value;
         break;
       default:
         throw HTErrorUndefined(varName);
@@ -209,7 +206,9 @@ class IntTweenAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'IntTween':
-        return ({positionalArgs, namedArgs, typeArgs}) => IntTween(begin : namedArgs.containsKey('begin') ? namedArgs['begin'] : null, end : namedArgs.containsKey('end') ? namedArgs['end'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => IntTween(
+            begin: namedArgs.containsKey('begin') ? namedArgs['begin'] : null,
+            end: namedArgs.containsKey('end') ? namedArgs['end'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -224,8 +223,6 @@ class IntTweenAutoBinding extends HTExternalClass {
   void instanceMemberSet(dynamic instance, String id, dynamic value) {
     (instance as IntTween).htAssign(id, value);
   }
-
-
 }
 
 extension IntTweenBinding on IntTween {
@@ -238,17 +235,17 @@ extension IntTweenBinding on IntTween {
       case 'end':
         return end;
       case 'lerp':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.lerp(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => lerp(positionalArgs[0]);
       case 'transform':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.transform(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => transform(positionalArgs[0]);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       case 'evaluate':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.evaluate(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => evaluate(positionalArgs[0]);
       case 'animate':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.animate(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => animate(positionalArgs[0]);
       case 'chain':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.chain(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => chain(positionalArgs[0]);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -257,10 +254,10 @@ extension IntTweenBinding on IntTween {
   void htAssign(String varName, dynamic value) {
     switch (varName) {
       case 'begin':
-        this.begin = value;
+        begin = value;
         break;
       case 'end':
-        this.end = value;
+        end = value;
         break;
       default:
         throw HTErrorUndefined(varName);
@@ -275,7 +272,9 @@ class StepTweenAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'StepTween':
-        return ({positionalArgs, namedArgs, typeArgs}) => StepTween(begin : namedArgs.containsKey('begin') ? namedArgs['begin'] : null, end : namedArgs.containsKey('end') ? namedArgs['end'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => StepTween(
+            begin: namedArgs.containsKey('begin') ? namedArgs['begin'] : null,
+            end: namedArgs.containsKey('end') ? namedArgs['end'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -290,8 +289,6 @@ class StepTweenAutoBinding extends HTExternalClass {
   void instanceMemberSet(dynamic instance, String id, dynamic value) {
     (instance as StepTween).htAssign(id, value);
   }
-
-
 }
 
 extension StepTweenBinding on StepTween {
@@ -304,17 +301,17 @@ extension StepTweenBinding on StepTween {
       case 'end':
         return end;
       case 'lerp':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.lerp(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => lerp(positionalArgs[0]);
       case 'transform':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.transform(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => transform(positionalArgs[0]);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       case 'evaluate':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.evaluate(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => evaluate(positionalArgs[0]);
       case 'animate':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.animate(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => animate(positionalArgs[0]);
       case 'chain':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.chain(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => chain(positionalArgs[0]);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -323,10 +320,10 @@ extension StepTweenBinding on StepTween {
   void htAssign(String varName, dynamic value) {
     switch (varName) {
       case 'begin':
-        this.begin = value;
+        begin = value;
         break;
       case 'end':
-        this.end = value;
+        end = value;
         break;
       default:
         throw HTErrorUndefined(varName);
@@ -341,7 +338,7 @@ class CurveTweenAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'CurveTween':
-        return ({positionalArgs, namedArgs, typeArgs}) => CurveTween(curve : namedArgs['curve']);
+        return ({positionalArgs, namedArgs, typeArgs}) => CurveTween(curve: namedArgs['curve']);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -356,8 +353,6 @@ class CurveTweenAutoBinding extends HTExternalClass {
   void instanceMemberSet(dynamic instance, String id, dynamic value) {
     (instance as CurveTween).htAssign(id, value);
   }
-
-
 }
 
 extension CurveTweenBinding on CurveTween {
@@ -368,15 +363,15 @@ extension CurveTweenBinding on CurveTween {
       case 'curve':
         return curve;
       case 'transform':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.transform(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => transform(positionalArgs[0]);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       case 'evaluate':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.evaluate(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => evaluate(positionalArgs[0]);
       case 'animate':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.animate(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => animate(positionalArgs[0]);
       case 'chain':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.chain(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => chain(positionalArgs[0]);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -385,11 +380,10 @@ extension CurveTweenBinding on CurveTween {
   void htAssign(String varName, dynamic value) {
     switch (varName) {
       case 'curve':
-        this.curve = value;
+        curve = value;
         break;
       default:
         throw HTErrorUndefined(varName);
     }
   }
 }
-

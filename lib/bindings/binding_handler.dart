@@ -5,5 +5,5 @@ abstract class BindingHandler {
 
   void loadExternalClasses(Hetu interpreter);
 
-  Future loadScripts(Hetu interpreter, String path);
+  Future importScripts(Hetu interpreter, String path);
 }

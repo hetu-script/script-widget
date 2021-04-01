@@ -1,10 +1,5 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'dart:core';
-import "dart:collection";
-import "dart:convert";
-import "dart:math";
-import "dart:typed_data";
-
 
 class InvocationAutoBinding extends HTExternalClass {
   InvocationAutoBinding() : super('Invocation');
@@ -13,9 +8,11 @@ class InvocationAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'Invocation.method':
-        return ({positionalArgs, namedArgs, typeArgs}) => Invocation.method(positionalArgs[0], positionalArgs[1], positionalArgs.length > 2 ? positionalArgs[2] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => Invocation.method(
+            positionalArgs[0], positionalArgs[1], positionalArgs.length > 2 ? positionalArgs[2] : null);
       case 'Invocation.genericMethod':
-        return ({positionalArgs, namedArgs, typeArgs}) => Invocation.genericMethod(positionalArgs[0], positionalArgs[1], positionalArgs[2], positionalArgs.length > 3 ? positionalArgs[3] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => Invocation.genericMethod(positionalArgs[0], positionalArgs[1],
+            positionalArgs[2], positionalArgs.length > 3 ? positionalArgs[3] : null);
       case 'Invocation.getter':
         return ({positionalArgs, namedArgs, typeArgs}) => Invocation.getter(positionalArgs[0]);
       case 'Invocation.setter':
@@ -29,9 +26,6 @@ class InvocationAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as Invocation).htFetch(id);
   }
-
-
-
 }
 
 extension InvocationBinding on Invocation {
@@ -59,6 +53,4 @@ extension InvocationBinding on Invocation {
         throw HTErrorUndefined(varName);
     }
   }
-
 }
-

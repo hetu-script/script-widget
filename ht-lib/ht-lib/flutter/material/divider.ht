@@ -1,0 +1,37 @@
+external class Divider {
+    construct 
+    get height
+    get thickness
+    get indent
+    get endIndent
+    get color
+    get key
+    fun build
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+    static fun createBorderSide (context, {color, width})
+}
+external class VerticalDivider {
+    construct 
+    get width
+    get thickness
+    get indent
+    get endIndent
+    get color
+    get key
+    fun build
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}

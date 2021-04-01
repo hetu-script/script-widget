@@ -1,15 +1,12 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/widgets.dart';
-import 'dart:async';
-import 'dart:math'as math;
 import 'package:flutter/foundation.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/rendering.dart';
+
 const _kScrollbarThickness = 6.0;
 const _kMinThumbExtent = 18.0;
 const _kScrollbarFadeDuration = Duration(milliseconds: 300);
 const _kScrollbarTimeToFade = Duration(milliseconds: 600);
-
 
 class ScrollbarPainterAutoBinding extends HTExternalClass {
   ScrollbarPainterAutoBinding() : super('ScrollbarPainter');
@@ -18,7 +15,21 @@ class ScrollbarPainterAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'ScrollbarPainter':
-        return ({positionalArgs, namedArgs, typeArgs}) => ScrollbarPainter(color : namedArgs['color'], fadeoutOpacityAnimation : namedArgs['fadeoutOpacityAnimation'], trackColor : namedArgs.containsKey('trackColor') ? namedArgs['trackColor'] : const Color(0x00000000), trackBorderColor : namedArgs.containsKey('trackBorderColor') ? namedArgs['trackBorderColor'] : const Color(0x00000000), textDirection : namedArgs.containsKey('textDirection') ? namedArgs['textDirection'] : null, thickness : namedArgs.containsKey('thickness') ? namedArgs['thickness'] : _kScrollbarThickness, padding : namedArgs.containsKey('padding') ? namedArgs['padding'] : EdgeInsets.zero, mainAxisMargin : namedArgs.containsKey('mainAxisMargin') ? namedArgs['mainAxisMargin'] : 0.0, crossAxisMargin : namedArgs.containsKey('crossAxisMargin') ? namedArgs['crossAxisMargin'] : 0.0, radius : namedArgs.containsKey('radius') ? namedArgs['radius'] : null, minLength : namedArgs.containsKey('minLength') ? namedArgs['minLength'] : _kMinThumbExtent, minOverscrollLength : namedArgs.containsKey('minOverscrollLength') ? namedArgs['minOverscrollLength'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => ScrollbarPainter(
+            color: namedArgs['color'],
+            fadeoutOpacityAnimation: namedArgs['fadeoutOpacityAnimation'],
+            trackColor: namedArgs.containsKey('trackColor') ? namedArgs['trackColor'] : const Color(0x00000000),
+            trackBorderColor:
+                namedArgs.containsKey('trackBorderColor') ? namedArgs['trackBorderColor'] : const Color(0x00000000),
+            textDirection: namedArgs.containsKey('textDirection') ? namedArgs['textDirection'] : null,
+            thickness: namedArgs.containsKey('thickness') ? namedArgs['thickness'] : _kScrollbarThickness,
+            padding: namedArgs.containsKey('padding') ? namedArgs['padding'] : EdgeInsets.zero,
+            mainAxisMargin: namedArgs.containsKey('mainAxisMargin') ? namedArgs['mainAxisMargin'] : 0.0,
+            crossAxisMargin: namedArgs.containsKey('crossAxisMargin') ? namedArgs['crossAxisMargin'] : 0.0,
+            radius: namedArgs.containsKey('radius') ? namedArgs['radius'] : null,
+            minLength: namedArgs.containsKey('minLength') ? namedArgs['minLength'] : _kMinThumbExtent,
+            minOverscrollLength:
+                namedArgs.containsKey('minOverscrollLength') ? namedArgs['minOverscrollLength'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -39,7 +50,6 @@ class ScrollbarPainterAutoBinding extends HTExternalClass {
       'VoidCallback': (HTFunction function) => () => function.call(positionalArgs: const [], namedArgs: const {}),
     };
   }
-
 }
 
 extension ScrollbarPainterBinding on ScrollbarPainter {
@@ -74,29 +84,29 @@ extension ScrollbarPainterBinding on ScrollbarPainter {
       case 'semanticsBuilder':
         return semanticsBuilder;
       case 'update':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.update(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => update(positionalArgs[0], positionalArgs[1]);
       case 'updateThickness':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.updateThickness(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => updateThickness(positionalArgs[0], positionalArgs[1]);
       case 'dispose':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.dispose();
+        return ({positionalArgs, namedArgs, typeArgs}) => dispose();
       case 'getTrackToScroll':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.getTrackToScroll(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => getTrackToScroll(positionalArgs[0]);
       case 'paint':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.paint(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => paint(positionalArgs[0], positionalArgs[1]);
       case 'hitTestInteractive':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.hitTestInteractive(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => hitTestInteractive(positionalArgs[0]);
       case 'hitTestOnlyThumbInteractive':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.hitTestOnlyThumbInteractive(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => hitTestOnlyThumbInteractive(positionalArgs[0]);
       case 'hitTest':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.hitTest(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => hitTest(positionalArgs[0]);
       case 'shouldRepaint':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.shouldRepaint(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => shouldRepaint(positionalArgs[0]);
       case 'shouldRebuildSemantics':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.shouldRebuildSemantics(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => shouldRebuildSemantics(positionalArgs[0]);
       case 'addListener':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.addListener(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => addListener(positionalArgs[0]);
       case 'removeListener':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.removeListener(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => removeListener(positionalArgs[0]);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -105,37 +115,37 @@ extension ScrollbarPainterBinding on ScrollbarPainter {
   void htAssign(String varName, dynamic value) {
     switch (varName) {
       case 'color':
-        this.color = value;
+        color = value;
         break;
       case 'trackColor':
-        this.trackColor = value;
+        trackColor = value;
         break;
       case 'trackBorderColor':
-        this.trackBorderColor = value;
+        trackBorderColor = value;
         break;
       case 'textDirection':
-        this.textDirection = value;
+        textDirection = value;
         break;
       case 'thickness':
-        this.thickness = value;
+        thickness = value;
         break;
       case 'mainAxisMargin':
-        this.mainAxisMargin = value;
+        mainAxisMargin = value;
         break;
       case 'crossAxisMargin':
-        this.crossAxisMargin = value;
+        crossAxisMargin = value;
         break;
       case 'radius':
-        this.radius = value;
+        radius = value;
         break;
       case 'padding':
-        this.padding = value;
+        padding = value;
         break;
       case 'minLength':
-        this.minLength = value;
+        minLength = value;
         break;
       case 'minOverscrollLength':
-        this.minOverscrollLength = value;
+        minOverscrollLength = value;
         break;
       default:
         throw HTErrorUndefined(varName);
@@ -150,7 +160,20 @@ class RawScrollbarAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'RawScrollbar':
-        return ({positionalArgs, namedArgs, typeArgs}) => RawScrollbar(key : namedArgs.containsKey('key') ? namedArgs['key'] : null, child : namedArgs['child'], controller : namedArgs.containsKey('controller') ? namedArgs['controller'] : null, isAlwaysShown : namedArgs.containsKey('isAlwaysShown') ? namedArgs['isAlwaysShown'] : null, radius : namedArgs.containsKey('radius') ? namedArgs['radius'] : null, thickness : namedArgs.containsKey('thickness') ? namedArgs['thickness'] : null, thumbColor : namedArgs.containsKey('thumbColor') ? namedArgs['thumbColor'] : null, fadeDuration : namedArgs.containsKey('fadeDuration') ? namedArgs['fadeDuration'] : _kScrollbarFadeDuration, timeToFade : namedArgs.containsKey('timeToFade') ? namedArgs['timeToFade'] : _kScrollbarTimeToFade, pressDuration : namedArgs.containsKey('pressDuration') ? namedArgs['pressDuration'] : Duration.zero, notificationPredicate : namedArgs.containsKey('notificationPredicate') ? namedArgs['notificationPredicate'] : defaultScrollNotificationPredicate);
+        return ({positionalArgs, namedArgs, typeArgs}) => RawScrollbar(
+            key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
+            child: namedArgs['child'],
+            controller: namedArgs.containsKey('controller') ? namedArgs['controller'] : null,
+            isAlwaysShown: namedArgs.containsKey('isAlwaysShown') ? namedArgs['isAlwaysShown'] : null,
+            radius: namedArgs.containsKey('radius') ? namedArgs['radius'] : null,
+            thickness: namedArgs.containsKey('thickness') ? namedArgs['thickness'] : null,
+            thumbColor: namedArgs.containsKey('thumbColor') ? namedArgs['thumbColor'] : null,
+            fadeDuration: namedArgs.containsKey('fadeDuration') ? namedArgs['fadeDuration'] : _kScrollbarFadeDuration,
+            timeToFade: namedArgs.containsKey('timeToFade') ? namedArgs['timeToFade'] : _kScrollbarTimeToFade,
+            pressDuration: namedArgs.containsKey('pressDuration') ? namedArgs['pressDuration'] : Duration.zero,
+            notificationPredicate: namedArgs.containsKey('notificationPredicate')
+                ? namedArgs['notificationPredicate']
+                : defaultScrollNotificationPredicate);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -161,13 +184,12 @@ class RawScrollbarAutoBinding extends HTExternalClass {
     return (instance as RawScrollbar).htFetch(id);
   }
 
-
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'ScrollNotificationPredicate': (HTFunction function) => (notification) => function.call(positionalArgs: [notification], namedArgs: const {}) as bool,
+      'ScrollNotificationPredicate': (HTFunction function) =>
+          (notification) => function.call(positionalArgs: [notification], namedArgs: const {}) as bool,
     };
   }
-
 }
 
 extension RawScrollbarBinding on RawScrollbar {
@@ -195,12 +217,36 @@ extension RawScrollbarBinding on RawScrollbar {
         return pressDuration;
       case 'notificationPredicate':
         return notificationPredicate;
+      case 'key':
+        return key;
+      case 'hashCode':
+        return hashCode;
       case 'createState':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.createState();
+        return ({positionalArgs, namedArgs, typeArgs}) => createState();
+      case 'createElement':
+        return ({positionalArgs, namedArgs, typeArgs}) => createElement();
+      case 'toStringShort':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'debugFillProperties':
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+      case 'toStringShallow':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
+            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toStringDeep':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
+            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
-

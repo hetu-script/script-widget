@@ -1,0 +1,56 @@
+external class AboutListTile {
+    construct 
+    get icon
+    get child
+    get applicationName
+    get applicationVersion
+    get applicationIcon
+    get applicationLegalese
+    get aboutBoxChildren
+    get dense
+    get key
+    fun build
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class AboutDialog {
+    construct 
+    get applicationName
+    get applicationVersion
+    get applicationIcon
+    get applicationLegalese
+    get children
+    get key
+    fun build
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class LicensePage {
+    construct 
+    get applicationName
+    get applicationVersion
+    get applicationIcon
+    get applicationLegalese
+    get key
+    fun createState
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}

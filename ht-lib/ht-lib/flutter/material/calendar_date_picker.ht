@@ -1,0 +1,41 @@
+external class CalendarDatePicker {
+    construct 
+    get initialDate
+    get firstDate
+    get lastDate
+    get currentDate
+    get onDateChanged
+    get onDisplayedMonthChanged
+    get initialCalendarMode
+    get selectableDayPredicate
+    get key
+    fun createState
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class YearPicker {
+    construct 
+    get currentDate
+    get firstDate
+    get lastDate
+    get initialDate
+    get selectedDate
+    get onChanged
+    get dragStartBehavior
+    get key
+    fun createState
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}

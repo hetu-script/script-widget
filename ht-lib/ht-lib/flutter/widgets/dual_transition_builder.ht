@@ -1,0 +1,17 @@
+external class DualTransitionBuilder {
+    construct 
+    get animation
+    get forwardBuilder
+    get reverseBuilder
+    get child
+    get key
+    fun createState
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}

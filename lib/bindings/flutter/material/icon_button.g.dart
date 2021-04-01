@@ -1,10 +1,8 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/material.dart';
-import 'dart:math'as math;
 import 'package:flutter/foundation.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
-
 
 class IconButtonAutoBinding extends HTExternalClass {
   IconButtonAutoBinding() : super('IconButton');
@@ -13,7 +11,27 @@ class IconButtonAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'IconButton':
-        return ({positionalArgs, namedArgs, typeArgs}) => IconButton(key : namedArgs.containsKey('key') ? namedArgs['key'] : null, iconSize : namedArgs.containsKey('iconSize') ? namedArgs['iconSize'] : 24.0, visualDensity : namedArgs.containsKey('visualDensity') ? namedArgs['visualDensity'] : null, padding : namedArgs.containsKey('padding') ? namedArgs['padding'] : const EdgeInsets.all(8.0), alignment : namedArgs.containsKey('alignment') ? namedArgs['alignment'] : Alignment.center, splashRadius : namedArgs.containsKey('splashRadius') ? namedArgs['splashRadius'] : null, icon : namedArgs['icon'], color : namedArgs.containsKey('color') ? namedArgs['color'] : null, focusColor : namedArgs.containsKey('focusColor') ? namedArgs['focusColor'] : null, hoverColor : namedArgs.containsKey('hoverColor') ? namedArgs['hoverColor'] : null, highlightColor : namedArgs.containsKey('highlightColor') ? namedArgs['highlightColor'] : null, splashColor : namedArgs.containsKey('splashColor') ? namedArgs['splashColor'] : null, disabledColor : namedArgs.containsKey('disabledColor') ? namedArgs['disabledColor'] : null, onPressed : namedArgs['onPressed'], mouseCursor : namedArgs.containsKey('mouseCursor') ? namedArgs['mouseCursor'] : SystemMouseCursors.click, focusNode : namedArgs.containsKey('focusNode') ? namedArgs['focusNode'] : null, autofocus : namedArgs.containsKey('autofocus') ? namedArgs['autofocus'] : false, tooltip : namedArgs.containsKey('tooltip') ? namedArgs['tooltip'] : null, enableFeedback : namedArgs.containsKey('enableFeedback') ? namedArgs['enableFeedback'] : true, constraints : namedArgs.containsKey('constraints') ? namedArgs['constraints'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => IconButton(
+            key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
+            iconSize: namedArgs.containsKey('iconSize') ? namedArgs['iconSize'] : 24.0,
+            visualDensity: namedArgs.containsKey('visualDensity') ? namedArgs['visualDensity'] : null,
+            padding: namedArgs.containsKey('padding') ? namedArgs['padding'] : const EdgeInsets.all(8.0),
+            alignment: namedArgs.containsKey('alignment') ? namedArgs['alignment'] : Alignment.center,
+            splashRadius: namedArgs.containsKey('splashRadius') ? namedArgs['splashRadius'] : null,
+            icon: namedArgs['icon'],
+            color: namedArgs.containsKey('color') ? namedArgs['color'] : null,
+            focusColor: namedArgs.containsKey('focusColor') ? namedArgs['focusColor'] : null,
+            hoverColor: namedArgs.containsKey('hoverColor') ? namedArgs['hoverColor'] : null,
+            highlightColor: namedArgs.containsKey('highlightColor') ? namedArgs['highlightColor'] : null,
+            splashColor: namedArgs.containsKey('splashColor') ? namedArgs['splashColor'] : null,
+            disabledColor: namedArgs.containsKey('disabledColor') ? namedArgs['disabledColor'] : null,
+            onPressed: namedArgs['onPressed'],
+            mouseCursor: namedArgs.containsKey('mouseCursor') ? namedArgs['mouseCursor'] : SystemMouseCursors.click,
+            focusNode: namedArgs.containsKey('focusNode') ? namedArgs['focusNode'] : null,
+            autofocus: namedArgs.containsKey('autofocus') ? namedArgs['autofocus'] : false,
+            tooltip: namedArgs.containsKey('tooltip') ? namedArgs['tooltip'] : null,
+            enableFeedback: namedArgs.containsKey('enableFeedback') ? namedArgs['enableFeedback'] : true,
+            constraints: namedArgs.containsKey('constraints') ? namedArgs['constraints'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -24,13 +42,11 @@ class IconButtonAutoBinding extends HTExternalClass {
     return (instance as IconButton).htFetch(id);
   }
 
-
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
       'VoidCallback': (HTFunction function) => () => function.call(positionalArgs: const [], namedArgs: const {}),
     };
   }
-
 }
 
 extension IconButtonBinding on IconButton {
@@ -76,14 +92,36 @@ extension IconButtonBinding on IconButton {
         return enableFeedback;
       case 'constraints':
         return constraints;
+      case 'key':
+        return key;
+      case 'hashCode':
+        return hashCode;
       case 'build':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.build(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => build(positionalArgs[0]);
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+      case 'createElement':
+        return ({positionalArgs, namedArgs, typeArgs}) => createElement();
+      case 'toStringShort':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'toStringShallow':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
+            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toStringDeep':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
+            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
-

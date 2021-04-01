@@ -1,0 +1,15 @@
+external class WillPopScope {
+    construct 
+    get child
+    get onWillPop
+    get key
+    fun createState
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}

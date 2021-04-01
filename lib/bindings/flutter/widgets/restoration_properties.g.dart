@@ -1,9 +1,5 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/widgets.dart';
-import 'dart:async';
-import 'package:flutter/foundation.dart';
-import 'package:flutter/services.dart';
-
 
 class RestorableDoubleAutoBinding extends HTExternalClass {
   RestorableDoubleAutoBinding() : super('RestorableDouble');
@@ -33,7 +29,6 @@ class RestorableDoubleAutoBinding extends HTExternalClass {
       'VoidCallback': (HTFunction function) => () => function.call(positionalArgs: const [], namedArgs: const {}),
     };
   }
-
 }
 
 extension RestorableDoubleBinding on RestorableDouble {
@@ -44,21 +39,21 @@ extension RestorableDoubleBinding on RestorableDouble {
       case 'enabled':
         return enabled;
       case 'fromPrimitives':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.fromPrimitives(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => fromPrimitives(positionalArgs[0]);
       case 'toPrimitives':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toPrimitives();
+        return ({positionalArgs, namedArgs, typeArgs}) => toPrimitives();
       case 'createDefaultValue':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.createDefaultValue();
+        return ({positionalArgs, namedArgs, typeArgs}) => createDefaultValue();
       case 'didUpdateValue':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.didUpdateValue(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => didUpdateValue(positionalArgs[0]);
       case 'initWithValue':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.initWithValue(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => initWithValue(positionalArgs[0]);
       case 'dispose':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.dispose();
+        return ({positionalArgs, namedArgs, typeArgs}) => dispose();
       case 'addListener':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.addListener(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => addListener(positionalArgs[0]);
       case 'removeListener':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.removeListener(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => removeListener(positionalArgs[0]);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -67,7 +62,7 @@ extension RestorableDoubleBinding on RestorableDouble {
   void htAssign(String varName, dynamic value) {
     switch (varName) {
       case 'value':
-        this.value = value;
+        value = value;
         break;
       default:
         throw HTErrorUndefined(varName);
@@ -103,7 +98,6 @@ class RestorableIntAutoBinding extends HTExternalClass {
       'VoidCallback': (HTFunction function) => () => function.call(positionalArgs: const [], namedArgs: const {}),
     };
   }
-
 }
 
 extension RestorableIntBinding on RestorableInt {
@@ -114,21 +108,21 @@ extension RestorableIntBinding on RestorableInt {
       case 'enabled':
         return enabled;
       case 'fromPrimitives':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.fromPrimitives(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => fromPrimitives(positionalArgs[0]);
       case 'toPrimitives':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toPrimitives();
+        return ({positionalArgs, namedArgs, typeArgs}) => toPrimitives();
       case 'createDefaultValue':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.createDefaultValue();
+        return ({positionalArgs, namedArgs, typeArgs}) => createDefaultValue();
       case 'didUpdateValue':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.didUpdateValue(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => didUpdateValue(positionalArgs[0]);
       case 'initWithValue':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.initWithValue(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => initWithValue(positionalArgs[0]);
       case 'dispose':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.dispose();
+        return ({positionalArgs, namedArgs, typeArgs}) => dispose();
       case 'addListener':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.addListener(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => addListener(positionalArgs[0]);
       case 'removeListener':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.removeListener(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => removeListener(positionalArgs[0]);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -137,7 +131,7 @@ extension RestorableIntBinding on RestorableInt {
   void htAssign(String varName, dynamic value) {
     switch (varName) {
       case 'value':
-        this.value = value;
+        value = value;
         break;
       default:
         throw HTErrorUndefined(varName);
@@ -173,7 +167,6 @@ class RestorableStringAutoBinding extends HTExternalClass {
       'VoidCallback': (HTFunction function) => () => function.call(positionalArgs: const [], namedArgs: const {}),
     };
   }
-
 }
 
 extension RestorableStringBinding on RestorableString {
@@ -184,21 +177,21 @@ extension RestorableStringBinding on RestorableString {
       case 'enabled':
         return enabled;
       case 'fromPrimitives':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.fromPrimitives(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => fromPrimitives(positionalArgs[0]);
       case 'toPrimitives':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toPrimitives();
+        return ({positionalArgs, namedArgs, typeArgs}) => toPrimitives();
       case 'createDefaultValue':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.createDefaultValue();
+        return ({positionalArgs, namedArgs, typeArgs}) => createDefaultValue();
       case 'didUpdateValue':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.didUpdateValue(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => didUpdateValue(positionalArgs[0]);
       case 'initWithValue':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.initWithValue(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => initWithValue(positionalArgs[0]);
       case 'dispose':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.dispose();
+        return ({positionalArgs, namedArgs, typeArgs}) => dispose();
       case 'addListener':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.addListener(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => addListener(positionalArgs[0]);
       case 'removeListener':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.removeListener(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => removeListener(positionalArgs[0]);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -207,7 +200,7 @@ extension RestorableStringBinding on RestorableString {
   void htAssign(String varName, dynamic value) {
     switch (varName) {
       case 'value':
-        this.value = value;
+        value = value;
         break;
       default:
         throw HTErrorUndefined(varName);
@@ -243,7 +236,6 @@ class RestorableBoolAutoBinding extends HTExternalClass {
       'VoidCallback': (HTFunction function) => () => function.call(positionalArgs: const [], namedArgs: const {}),
     };
   }
-
 }
 
 extension RestorableBoolBinding on RestorableBool {
@@ -254,21 +246,21 @@ extension RestorableBoolBinding on RestorableBool {
       case 'enabled':
         return enabled;
       case 'fromPrimitives':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.fromPrimitives(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => fromPrimitives(positionalArgs[0]);
       case 'toPrimitives':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toPrimitives();
+        return ({positionalArgs, namedArgs, typeArgs}) => toPrimitives();
       case 'createDefaultValue':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.createDefaultValue();
+        return ({positionalArgs, namedArgs, typeArgs}) => createDefaultValue();
       case 'didUpdateValue':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.didUpdateValue(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => didUpdateValue(positionalArgs[0]);
       case 'initWithValue':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.initWithValue(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => initWithValue(positionalArgs[0]);
       case 'dispose':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.dispose();
+        return ({positionalArgs, namedArgs, typeArgs}) => dispose();
       case 'addListener':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.addListener(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => addListener(positionalArgs[0]);
       case 'removeListener':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.removeListener(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => removeListener(positionalArgs[0]);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -277,7 +269,7 @@ extension RestorableBoolBinding on RestorableBool {
   void htAssign(String varName, dynamic value) {
     switch (varName) {
       case 'value':
-        this.value = value;
+        value = value;
         break;
       default:
         throw HTErrorUndefined(varName);
@@ -303,13 +295,11 @@ class RestorableBoolNAutoBinding extends HTExternalClass {
     return (instance as RestorableBoolN).htFetch(id);
   }
 
-
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
       'VoidCallback': (HTFunction function) => () => function.call(positionalArgs: const [], namedArgs: const {}),
     };
   }
-
 }
 
 extension RestorableBoolNBinding on RestorableBoolN {
@@ -322,26 +312,25 @@ extension RestorableBoolNBinding on RestorableBoolN {
       case 'enabled':
         return enabled;
       case 'createDefaultValue':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.createDefaultValue();
+        return ({positionalArgs, namedArgs, typeArgs}) => createDefaultValue();
       case 'didUpdateValue':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.didUpdateValue(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => didUpdateValue(positionalArgs[0]);
       case 'fromPrimitives':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.fromPrimitives(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => fromPrimitives(positionalArgs[0]);
       case 'toPrimitives':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toPrimitives();
+        return ({positionalArgs, namedArgs, typeArgs}) => toPrimitives();
       case 'initWithValue':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.initWithValue(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => initWithValue(positionalArgs[0]);
       case 'dispose':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.dispose();
+        return ({positionalArgs, namedArgs, typeArgs}) => dispose();
       case 'addListener':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.addListener(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => addListener(positionalArgs[0]);
       case 'removeListener':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.removeListener(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => removeListener(positionalArgs[0]);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class RestorableDoubleNAutoBinding extends HTExternalClass {
@@ -362,13 +351,11 @@ class RestorableDoubleNAutoBinding extends HTExternalClass {
     return (instance as RestorableDoubleN).htFetch(id);
   }
 
-
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
       'VoidCallback': (HTFunction function) => () => function.call(positionalArgs: const [], namedArgs: const {}),
     };
   }
-
 }
 
 extension RestorableDoubleNBinding on RestorableDoubleN {
@@ -381,26 +368,25 @@ extension RestorableDoubleNBinding on RestorableDoubleN {
       case 'enabled':
         return enabled;
       case 'createDefaultValue':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.createDefaultValue();
+        return ({positionalArgs, namedArgs, typeArgs}) => createDefaultValue();
       case 'didUpdateValue':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.didUpdateValue(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => didUpdateValue(positionalArgs[0]);
       case 'fromPrimitives':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.fromPrimitives(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => fromPrimitives(positionalArgs[0]);
       case 'toPrimitives':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toPrimitives();
+        return ({positionalArgs, namedArgs, typeArgs}) => toPrimitives();
       case 'initWithValue':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.initWithValue(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => initWithValue(positionalArgs[0]);
       case 'dispose':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.dispose();
+        return ({positionalArgs, namedArgs, typeArgs}) => dispose();
       case 'addListener':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.addListener(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => addListener(positionalArgs[0]);
       case 'removeListener':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.removeListener(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => removeListener(positionalArgs[0]);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class RestorableIntNAutoBinding extends HTExternalClass {
@@ -421,13 +407,11 @@ class RestorableIntNAutoBinding extends HTExternalClass {
     return (instance as RestorableIntN).htFetch(id);
   }
 
-
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
       'VoidCallback': (HTFunction function) => () => function.call(positionalArgs: const [], namedArgs: const {}),
     };
   }
-
 }
 
 extension RestorableIntNBinding on RestorableIntN {
@@ -440,26 +424,25 @@ extension RestorableIntNBinding on RestorableIntN {
       case 'enabled':
         return enabled;
       case 'createDefaultValue':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.createDefaultValue();
+        return ({positionalArgs, namedArgs, typeArgs}) => createDefaultValue();
       case 'didUpdateValue':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.didUpdateValue(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => didUpdateValue(positionalArgs[0]);
       case 'fromPrimitives':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.fromPrimitives(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => fromPrimitives(positionalArgs[0]);
       case 'toPrimitives':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toPrimitives();
+        return ({positionalArgs, namedArgs, typeArgs}) => toPrimitives();
       case 'initWithValue':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.initWithValue(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => initWithValue(positionalArgs[0]);
       case 'dispose':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.dispose();
+        return ({positionalArgs, namedArgs, typeArgs}) => dispose();
       case 'addListener':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.addListener(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => addListener(positionalArgs[0]);
       case 'removeListener':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.removeListener(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => removeListener(positionalArgs[0]);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class RestorableStringNAutoBinding extends HTExternalClass {
@@ -480,13 +463,11 @@ class RestorableStringNAutoBinding extends HTExternalClass {
     return (instance as RestorableStringN).htFetch(id);
   }
 
-
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
       'VoidCallback': (HTFunction function) => () => function.call(positionalArgs: const [], namedArgs: const {}),
     };
   }
-
 }
 
 extension RestorableStringNBinding on RestorableStringN {
@@ -499,26 +480,25 @@ extension RestorableStringNBinding on RestorableStringN {
       case 'enabled':
         return enabled;
       case 'createDefaultValue':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.createDefaultValue();
+        return ({positionalArgs, namedArgs, typeArgs}) => createDefaultValue();
       case 'didUpdateValue':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.didUpdateValue(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => didUpdateValue(positionalArgs[0]);
       case 'fromPrimitives':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.fromPrimitives(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => fromPrimitives(positionalArgs[0]);
       case 'toPrimitives':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toPrimitives();
+        return ({positionalArgs, namedArgs, typeArgs}) => toPrimitives();
       case 'initWithValue':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.initWithValue(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => initWithValue(positionalArgs[0]);
       case 'dispose':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.dispose();
+        return ({positionalArgs, namedArgs, typeArgs}) => dispose();
       case 'addListener':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.addListener(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => addListener(positionalArgs[0]);
       case 'removeListener':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.removeListener(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => removeListener(positionalArgs[0]);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class RestorableTextEditingControllerAutoBinding extends HTExternalClass {
@@ -528,7 +508,8 @@ class RestorableTextEditingControllerAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'RestorableTextEditingController':
-        return ({positionalArgs, namedArgs, typeArgs}) => RestorableTextEditingController(text : namedArgs.containsKey('text') ? namedArgs['text'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            RestorableTextEditingController(text: namedArgs.containsKey('text') ? namedArgs['text'] : null);
       case 'RestorableTextEditingController.fromValue':
         return ({positionalArgs, namedArgs, typeArgs}) => RestorableTextEditingController.fromValue(positionalArgs[0]);
       default:
@@ -541,13 +522,11 @@ class RestorableTextEditingControllerAutoBinding extends HTExternalClass {
     return (instance as RestorableTextEditingController).htFetch(id);
   }
 
-
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
       'VoidCallback': (HTFunction function) => () => function.call(positionalArgs: const [], namedArgs: const {}),
     };
   }
-
 }
 
 extension RestorableTextEditingControllerBinding on RestorableTextEditingController {
@@ -560,23 +539,21 @@ extension RestorableTextEditingControllerBinding on RestorableTextEditingControl
       case 'enabled':
         return enabled;
       case 'createDefaultValue':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.createDefaultValue();
+        return ({positionalArgs, namedArgs, typeArgs}) => createDefaultValue();
       case 'fromPrimitives':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.fromPrimitives(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => fromPrimitives(positionalArgs[0]);
       case 'toPrimitives':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toPrimitives();
+        return ({positionalArgs, namedArgs, typeArgs}) => toPrimitives();
       case 'initWithValue':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.initWithValue(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => initWithValue(positionalArgs[0]);
       case 'dispose':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.dispose();
+        return ({positionalArgs, namedArgs, typeArgs}) => dispose();
       case 'addListener':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.addListener(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => addListener(positionalArgs[0]);
       case 'removeListener':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.removeListener(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => removeListener(positionalArgs[0]);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
-

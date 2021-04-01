@@ -1,7 +1,5 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/physics.dart';
-import 'dart:math'as math;
-import 'package:flutter/foundation.dart';
 
 class SpringTypeAutoBinding extends HTExternalClass {
   SpringTypeAutoBinding() : super('SpringType');
@@ -21,7 +19,6 @@ class SpringTypeAutoBinding extends HTExternalClass {
         throw HTErrorUndefined(varName);
     }
   }
-
 
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
@@ -45,9 +42,13 @@ class SpringDescriptionAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'SpringDescription':
-        return ({positionalArgs, namedArgs, typeArgs}) => SpringDescription(mass : namedArgs['mass'], stiffness : namedArgs['stiffness'], damping : namedArgs['damping']);
+        return ({positionalArgs, namedArgs, typeArgs}) => SpringDescription(
+            mass: namedArgs['mass'], stiffness: namedArgs['stiffness'], damping: namedArgs['damping']);
       case 'SpringDescription.withDampingRatio':
-        return ({positionalArgs, namedArgs, typeArgs}) => SpringDescription.withDampingRatio(mass : namedArgs['mass'], stiffness : namedArgs['stiffness'], ratio : namedArgs.containsKey('ratio') ? namedArgs['ratio'] : 1.0);
+        return ({positionalArgs, namedArgs, typeArgs}) => SpringDescription.withDampingRatio(
+            mass: namedArgs['mass'],
+            stiffness: namedArgs['stiffness'],
+            ratio: namedArgs.containsKey('ratio') ? namedArgs['ratio'] : 1.0);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -57,9 +58,6 @@ class SpringDescriptionAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as SpringDescription).htFetch(id);
   }
-
-
-
 }
 
 extension SpringDescriptionBinding on SpringDescription {
@@ -74,12 +72,11 @@ extension SpringDescriptionBinding on SpringDescription {
       case 'damping':
         return damping;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class SpringSimulationAutoBinding extends HTExternalClass {
@@ -89,7 +86,9 @@ class SpringSimulationAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'SpringSimulation':
-        return ({positionalArgs, namedArgs, typeArgs}) => SpringSimulation(positionalArgs[0], positionalArgs[1], positionalArgs[2], positionalArgs[3], tolerance : namedArgs.containsKey('tolerance') ? namedArgs['tolerance'] : Tolerance.defaultTolerance);
+        return ({positionalArgs, namedArgs, typeArgs}) => SpringSimulation(
+            positionalArgs[0], positionalArgs[1], positionalArgs[2], positionalArgs[3],
+            tolerance: namedArgs.containsKey('tolerance') ? namedArgs['tolerance'] : Tolerance.defaultTolerance);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -104,8 +103,6 @@ class SpringSimulationAutoBinding extends HTExternalClass {
   void instanceMemberSet(dynamic instance, String id, dynamic value) {
     (instance as SpringSimulation).htAssign(id, value);
   }
-
-
 }
 
 extension SpringSimulationBinding on SpringSimulation {
@@ -118,13 +115,13 @@ extension SpringSimulationBinding on SpringSimulation {
       case 'type':
         return type;
       case 'x':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.x(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => x(positionalArgs[0]);
       case 'dx':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.dx(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => dx(positionalArgs[0]);
       case 'isDone':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.isDone(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => isDone(positionalArgs[0]);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
         throw HTErrorUndefined(varName);
     }
@@ -133,7 +130,7 @@ extension SpringSimulationBinding on SpringSimulation {
   void htAssign(String varName, dynamic value) {
     switch (varName) {
       case 'tolerance':
-        this.tolerance = value;
+        tolerance = value;
         break;
       default:
         throw HTErrorUndefined(varName);
@@ -148,7 +145,9 @@ class ScrollSpringSimulationAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'ScrollSpringSimulation':
-        return ({positionalArgs, namedArgs, typeArgs}) => ScrollSpringSimulation(positionalArgs[0], positionalArgs[1], positionalArgs[2], positionalArgs[3], tolerance : namedArgs.containsKey('tolerance') ? namedArgs['tolerance'] : Tolerance.defaultTolerance);
+        return ({positionalArgs, namedArgs, typeArgs}) => ScrollSpringSimulation(
+            positionalArgs[0], positionalArgs[1], positionalArgs[2], positionalArgs[3],
+            tolerance: namedArgs.containsKey('tolerance') ? namedArgs['tolerance'] : Tolerance.defaultTolerance);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -163,8 +162,6 @@ class ScrollSpringSimulationAutoBinding extends HTExternalClass {
   void instanceMemberSet(dynamic instance, String id, dynamic value) {
     (instance as ScrollSpringSimulation).htAssign(id, value);
   }
-
-
 }
 
 extension ScrollSpringSimulationBinding on ScrollSpringSimulation {
@@ -177,13 +174,13 @@ extension ScrollSpringSimulationBinding on ScrollSpringSimulation {
       case 'type':
         return type;
       case 'x':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.x(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => x(positionalArgs[0]);
       case 'dx':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.dx(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => dx(positionalArgs[0]);
       case 'isDone':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.isDone(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => isDone(positionalArgs[0]);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
         throw HTErrorUndefined(varName);
     }
@@ -192,11 +189,10 @@ extension ScrollSpringSimulationBinding on ScrollSpringSimulation {
   void htAssign(String varName, dynamic value) {
     switch (varName) {
       case 'tolerance':
-        this.tolerance = value;
+        tolerance = value;
         break;
       default:
         throw HTErrorUndefined(varName);
     }
   }
 }
-

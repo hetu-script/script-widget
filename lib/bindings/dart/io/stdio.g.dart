@@ -1,13 +1,5 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'dart:io';
-import 'dart:async';
-import 'dart:collection';
-import 'dart:convert';
-import 'dart:developer';
-import 'dart:isolate';
-import 'dart:math';
-import 'dart:typed_data';
-
 
 class StdoutExceptionAutoBinding extends HTExternalClass {
   StdoutExceptionAutoBinding() : super('StdoutException');
@@ -16,7 +8,8 @@ class StdoutExceptionAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'StdoutException':
-        return ({positionalArgs, namedArgs, typeArgs}) => StdoutException(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            StdoutException(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : null);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -26,9 +19,6 @@ class StdoutExceptionAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as StdoutException).htFetch(id);
   }
-
-
-
 }
 
 extension StdoutExceptionBinding on StdoutException {
@@ -41,12 +31,11 @@ extension StdoutExceptionBinding on StdoutException {
       case 'osError':
         return osError;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class StdinExceptionAutoBinding extends HTExternalClass {
@@ -56,7 +45,8 @@ class StdinExceptionAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'StdinException':
-        return ({positionalArgs, namedArgs, typeArgs}) => StdinException(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            StdinException(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : null);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -66,9 +56,6 @@ class StdinExceptionAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as StdinException).htFetch(id);
   }
-
-
-
 }
 
 extension StdinExceptionBinding on StdinException {
@@ -81,12 +68,11 @@ extension StdinExceptionBinding on StdinException {
       case 'osError':
         return osError;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class StdioTypeAutoBinding extends HTExternalClass {
@@ -107,10 +93,4 @@ class StdioTypeAutoBinding extends HTExternalClass {
         throw HTErrorUndefined(varName);
     }
   }
-
-
-
-
 }
-
-

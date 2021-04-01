@@ -1,10 +1,5 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/widgets.dart';
-import 'package:flutter/foundation.dart';
-import 'package:flutter/gestures.dart';
-import 'package:flutter/physics.dart';
-import 'package:flutter/rendering.dart';
-import 'package:flutter/scheduler.dart';
 
 class ScrollPositionAlignmentPolicyAutoBinding extends HTExternalClass {
   ScrollPositionAlignmentPolicyAutoBinding() : super('ScrollPositionAlignmentPolicy');
@@ -25,7 +20,6 @@ class ScrollPositionAlignmentPolicyAutoBinding extends HTExternalClass {
     }
   }
 
-
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
@@ -40,4 +34,3 @@ class ScrollPositionAlignmentPolicyAutoBinding extends HTExternalClass {
     }
   }
 }
-

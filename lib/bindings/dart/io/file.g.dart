@@ -1,13 +1,6 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'dart:io';
-import 'dart:async';
-import 'dart:collection';
 import 'dart:convert';
-import 'dart:developer';
-import 'dart:isolate';
-import 'dart:math';
-import 'dart:typed_data';
-
 
 class FileModeAutoBinding extends HTExternalClass {
   FileModeAutoBinding() : super('FileMode');
@@ -29,12 +22,7 @@ class FileModeAutoBinding extends HTExternalClass {
         throw HTErrorUndefined(varName);
     }
   }
-
-
-
-
 }
-
 
 class FileLockAutoBinding extends HTExternalClass {
   FileLockAutoBinding() : super('FileLock');
@@ -54,12 +42,7 @@ class FileLockAutoBinding extends HTExternalClass {
         throw HTErrorUndefined(varName);
     }
   }
-
-
-
-
 }
-
 
 class FileAutoBinding extends HTExternalClass {
   FileAutoBinding() : super('File');
@@ -82,9 +65,6 @@ class FileAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as File).htFetch(id);
   }
-
-
-
 }
 
 extension FileBinding on File {
@@ -97,70 +77,90 @@ extension FileBinding on File {
       case 'path':
         return path;
       case 'create':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.create(recursive : namedArgs.containsKey('recursive') ? namedArgs['recursive'] : false);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            create(recursive: namedArgs.containsKey('recursive') ? namedArgs['recursive'] : false);
       case 'createSync':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.createSync(recursive : namedArgs.containsKey('recursive') ? namedArgs['recursive'] : false);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            createSync(recursive: namedArgs.containsKey('recursive') ? namedArgs['recursive'] : false);
       case 'rename':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.rename(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => rename(positionalArgs[0]);
       case 'renameSync':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.renameSync(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => renameSync(positionalArgs[0]);
       case 'copy':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.copy(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => copy(positionalArgs[0]);
       case 'copySync':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.copySync(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => copySync(positionalArgs[0]);
       case 'length':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.length();
+        return ({positionalArgs, namedArgs, typeArgs}) => length();
       case 'lengthSync':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.lengthSync();
+        return ({positionalArgs, namedArgs, typeArgs}) => lengthSync();
       case 'lastAccessed':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.lastAccessed();
+        return ({positionalArgs, namedArgs, typeArgs}) => lastAccessed();
       case 'lastAccessedSync':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.lastAccessedSync();
+        return ({positionalArgs, namedArgs, typeArgs}) => lastAccessedSync();
       case 'setLastAccessed':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.setLastAccessed(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => setLastAccessed(positionalArgs[0]);
       case 'setLastAccessedSync':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.setLastAccessedSync(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => setLastAccessedSync(positionalArgs[0]);
       case 'lastModified':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.lastModified();
+        return ({positionalArgs, namedArgs, typeArgs}) => lastModified();
       case 'lastModifiedSync':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.lastModifiedSync();
+        return ({positionalArgs, namedArgs, typeArgs}) => lastModifiedSync();
       case 'setLastModified':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.setLastModified(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => setLastModified(positionalArgs[0]);
       case 'setLastModifiedSync':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.setLastModifiedSync(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => setLastModifiedSync(positionalArgs[0]);
       case 'open':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.open(mode : namedArgs.containsKey('mode') ? namedArgs['mode'] : FileMode.read);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            open(mode: namedArgs.containsKey('mode') ? namedArgs['mode'] : FileMode.read);
       case 'openSync':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.openSync(mode : namedArgs.containsKey('mode') ? namedArgs['mode'] : FileMode.read);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            openSync(mode: namedArgs.containsKey('mode') ? namedArgs['mode'] : FileMode.read);
       case 'openRead':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.openRead(positionalArgs.length > 0 ? positionalArgs[0] : null, positionalArgs.length > 1 ? positionalArgs[1] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => openRead(
+            positionalArgs.length > 0 ? positionalArgs[0] : null, positionalArgs.length > 1 ? positionalArgs[1] : null);
       case 'openWrite':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.openWrite(mode : namedArgs.containsKey('mode') ? namedArgs['mode'] : FileMode.write, encoding : namedArgs.containsKey('encoding') ? namedArgs['encoding'] : utf8);
+        return ({positionalArgs, namedArgs, typeArgs}) => openWrite(
+            mode: namedArgs.containsKey('mode') ? namedArgs['mode'] : FileMode.write,
+            encoding: namedArgs.containsKey('encoding') ? namedArgs['encoding'] : utf8);
       case 'readAsBytes':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.readAsBytes();
+        return ({positionalArgs, namedArgs, typeArgs}) => readAsBytes();
       case 'readAsBytesSync':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.readAsBytesSync();
+        return ({positionalArgs, namedArgs, typeArgs}) => readAsBytesSync();
       case 'readAsString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.readAsString(encoding : namedArgs.containsKey('encoding') ? namedArgs['encoding'] : utf8);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            readAsString(encoding: namedArgs.containsKey('encoding') ? namedArgs['encoding'] : utf8);
       case 'readAsStringSync':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.readAsStringSync(encoding : namedArgs.containsKey('encoding') ? namedArgs['encoding'] : utf8);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            readAsStringSync(encoding: namedArgs.containsKey('encoding') ? namedArgs['encoding'] : utf8);
       case 'readAsLines':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.readAsLines(encoding : namedArgs.containsKey('encoding') ? namedArgs['encoding'] : utf8);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            readAsLines(encoding: namedArgs.containsKey('encoding') ? namedArgs['encoding'] : utf8);
       case 'readAsLinesSync':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.readAsLinesSync(encoding : namedArgs.containsKey('encoding') ? namedArgs['encoding'] : utf8);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            readAsLinesSync(encoding: namedArgs.containsKey('encoding') ? namedArgs['encoding'] : utf8);
       case 'writeAsBytes':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.writeAsBytes(List<int>.from(positionalArgs[0]), mode : namedArgs.containsKey('mode') ? namedArgs['mode'] : FileMode.write, flush : namedArgs.containsKey('flush') ? namedArgs['flush'] : false);
+        return ({positionalArgs, namedArgs, typeArgs}) => writeAsBytes(List<int>.from(positionalArgs[0]),
+            mode: namedArgs.containsKey('mode') ? namedArgs['mode'] : FileMode.write,
+            flush: namedArgs.containsKey('flush') ? namedArgs['flush'] : false);
       case 'writeAsBytesSync':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.writeAsBytesSync(List<int>.from(positionalArgs[0]), mode : namedArgs.containsKey('mode') ? namedArgs['mode'] : FileMode.write, flush : namedArgs.containsKey('flush') ? namedArgs['flush'] : false);
+        return ({positionalArgs, namedArgs, typeArgs}) => writeAsBytesSync(List<int>.from(positionalArgs[0]),
+            mode: namedArgs.containsKey('mode') ? namedArgs['mode'] : FileMode.write,
+            flush: namedArgs.containsKey('flush') ? namedArgs['flush'] : false);
       case 'writeAsString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.writeAsString(positionalArgs[0], mode : namedArgs.containsKey('mode') ? namedArgs['mode'] : FileMode.write, encoding : namedArgs.containsKey('encoding') ? namedArgs['encoding'] : utf8, flush : namedArgs.containsKey('flush') ? namedArgs['flush'] : false);
+        return ({positionalArgs, namedArgs, typeArgs}) => writeAsString(positionalArgs[0],
+            mode: namedArgs.containsKey('mode') ? namedArgs['mode'] : FileMode.write,
+            encoding: namedArgs.containsKey('encoding') ? namedArgs['encoding'] : utf8,
+            flush: namedArgs.containsKey('flush') ? namedArgs['flush'] : false);
       case 'writeAsStringSync':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.writeAsStringSync(positionalArgs[0], mode : namedArgs.containsKey('mode') ? namedArgs['mode'] : FileMode.write, encoding : namedArgs.containsKey('encoding') ? namedArgs['encoding'] : utf8, flush : namedArgs.containsKey('flush') ? namedArgs['flush'] : false);
+        return ({positionalArgs, namedArgs, typeArgs}) => writeAsStringSync(positionalArgs[0],
+            mode: namedArgs.containsKey('mode') ? namedArgs['mode'] : FileMode.write,
+            encoding: namedArgs.containsKey('encoding') ? namedArgs['encoding'] : utf8,
+            flush: namedArgs.containsKey('flush') ? namedArgs['flush'] : false);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class FileSystemExceptionAutoBinding extends HTExternalClass {
@@ -170,7 +170,10 @@ class FileSystemExceptionAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'FileSystemException':
-        return ({positionalArgs, namedArgs, typeArgs}) => FileSystemException(positionalArgs.length > 0 ? positionalArgs[0] : "", positionalArgs.length > 1 ? positionalArgs[1] : "", positionalArgs.length > 2 ? positionalArgs[2] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => FileSystemException(
+            positionalArgs.length > 0 ? positionalArgs[0] : '',
+            positionalArgs.length > 1 ? positionalArgs[1] : '',
+            positionalArgs.length > 2 ? positionalArgs[2] : null);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -180,9 +183,6 @@ class FileSystemExceptionAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as FileSystemException).htFetch(id);
   }
-
-
-
 }
 
 extension FileSystemExceptionBinding on FileSystemException {
@@ -197,11 +197,9 @@ extension FileSystemExceptionBinding on FileSystemException {
       case 'osError':
         return osError;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
-

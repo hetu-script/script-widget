@@ -1,0 +1,25 @@
+external class RefreshIndicatorMode {
+    static const inactive
+    static const drag
+    static const armed
+    static const refresh
+    static const done
+}
+external class CupertinoSliverRefreshControl {
+    construct 
+    get refreshTriggerPullDistance
+    get refreshIndicatorExtent
+    get builder
+    get onRefresh
+    get key
+    fun createState
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+    static fun buildRefreshIndicator (context, refreshState, pulledExtent, refreshTriggerPullDistance, refreshIndicatorExtent)
+}

@@ -1,9 +1,5 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/services.dart';
-import 'dart:typed_data';
-import 'dart:ui';
-import 'package:flutter/foundation.dart';
-
 
 class FontLoaderAutoBinding extends HTExternalClass {
   FontLoaderAutoBinding() : super('FontLoader');
@@ -22,9 +18,6 @@ class FontLoaderAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as FontLoader).htFetch(id);
   }
-
-
-
 }
 
 extension FontLoaderBinding on FontLoader {
@@ -35,13 +28,11 @@ extension FontLoaderBinding on FontLoader {
       case 'family':
         return family;
       case 'addFont':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.addFont(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => addFont(positionalArgs[0]);
       case 'load':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.load();
+        return ({positionalArgs, namedArgs, typeArgs}) => load();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
-

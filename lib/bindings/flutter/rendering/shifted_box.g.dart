@@ -1,8 +1,7 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/rendering.dart';
-import 'dart:math'as math;
 import 'package:flutter/foundation.dart';
-
+import 'package:flutter/animation.dart';
 
 class RenderPaddingAutoBinding extends HTExternalClass {
   RenderPaddingAutoBinding() : super('RenderPadding');
@@ -11,7 +10,10 @@ class RenderPaddingAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'RenderPadding':
-        return ({positionalArgs, namedArgs, typeArgs}) => RenderPadding(padding : namedArgs['padding'], textDirection : namedArgs.containsKey('textDirection') ? namedArgs['textDirection'] : null, child : namedArgs.containsKey('child') ? namedArgs['child'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => RenderPadding(
+            padding: namedArgs['padding'],
+            textDirection: namedArgs.containsKey('textDirection') ? namedArgs['textDirection'] : null,
+            child: namedArgs.containsKey('child') ? namedArgs['child'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -27,7 +29,12 @@ class RenderPaddingAutoBinding extends HTExternalClass {
     (instance as RenderPadding).htAssign(id, value);
   }
 
-
+  static Map<String, HTExternalFunctionTypedef> functionWrapper() {
+    return <String, HTExternalFunctionTypedef>{
+      'RenderObjectVisitor': (HTFunction function) =>
+          (child) => function.call(positionalArgs: [child], namedArgs: const {}),
+    };
+  }
 }
 
 extension RenderPaddingBinding on RenderPadding {
@@ -35,10 +42,16 @@ extension RenderPaddingBinding on RenderPadding {
     switch (varName) {
       case 'typeid':
         return HTTypeId('RenderPadding');
+      case 'parentData':
+        return parentData;
+      case 'debugCreator':
+        return debugCreator;
       case 'padding':
         return padding;
       case 'textDirection':
         return textDirection;
+      case 'child':
+        return child;
       case 'hasSize':
         return hasSize;
       case 'size':
@@ -49,68 +62,193 @@ extension RenderPaddingBinding on RenderPadding {
         return constraints;
       case 'paintBounds':
         return paintBounds;
+      case 'debugDoingThisResize':
+        return debugDoingThisResize;
+      case 'debugDoingThisLayout':
+        return debugDoingThisLayout;
+      case 'debugCanParentUseSize':
+        return debugCanParentUseSize;
+      case 'owner':
+        return owner;
+      case 'debugNeedsLayout':
+        return debugNeedsLayout;
+      case 'debugDoingThisLayoutWithCallback':
+        return debugDoingThisLayoutWithCallback;
+      case 'debugDoingThisPaint':
+        return debugDoingThisPaint;
+      case 'isRepaintBoundary':
+        return isRepaintBoundary;
+      case 'debugLayer':
+        return debugLayer;
+      case 'needsCompositing':
+        return needsCompositing;
+      case 'debugNeedsPaint':
+        return debugNeedsPaint;
+      case 'debugSemantics':
+        return debugSemantics;
+      case 'depth':
+        return depth;
+      case 'attached':
+        return attached;
+      case 'parent':
+        return parent;
       case 'computeMinIntrinsicWidth':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.computeMinIntrinsicWidth(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => computeMinIntrinsicWidth(positionalArgs[0]);
       case 'computeMaxIntrinsicWidth':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.computeMaxIntrinsicWidth(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => computeMaxIntrinsicWidth(positionalArgs[0]);
       case 'computeMinIntrinsicHeight':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.computeMinIntrinsicHeight(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => computeMinIntrinsicHeight(positionalArgs[0]);
       case 'computeMaxIntrinsicHeight':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.computeMaxIntrinsicHeight(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => computeMaxIntrinsicHeight(positionalArgs[0]);
       case 'computeDryLayout':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.computeDryLayout(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => computeDryLayout(positionalArgs[0]);
       case 'performLayout':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.performLayout();
+        return ({positionalArgs, namedArgs, typeArgs}) => performLayout();
       case 'debugPaintSize':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugPaintSize(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugPaintSize(positionalArgs[0], positionalArgs[1]);
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
       case 'computeDistanceToActualBaseline':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.computeDistanceToActualBaseline(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => computeDistanceToActualBaseline(positionalArgs[0]);
       case 'paint':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.paint(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => paint(positionalArgs[0], positionalArgs[1]);
       case 'hitTestChildren':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.hitTestChildren(positionalArgs[0], position : namedArgs.containsKey('position') ? namedArgs['position'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => hitTestChildren(positionalArgs[0],
+            position: namedArgs.containsKey('position') ? namedArgs['position'] : null);
+      case 'debugValidateChild':
+        return ({positionalArgs, namedArgs, typeArgs}) => debugValidateChild(positionalArgs[0]);
+      case 'attach':
+        return ({positionalArgs, namedArgs, typeArgs}) => attach(positionalArgs[0]);
+      case 'detach':
+        return ({positionalArgs, namedArgs, typeArgs}) => detach();
+      case 'redepthChildren':
+        return ({positionalArgs, namedArgs, typeArgs}) => redepthChildren();
+      case 'visitChildren':
+        return ({positionalArgs, namedArgs, typeArgs}) => visitChildren(positionalArgs[0]);
+      case 'debugDescribeChildren':
+        return ({positionalArgs, namedArgs, typeArgs}) => debugDescribeChildren();
       case 'setupParentData':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.setupParentData(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => setupParentData(positionalArgs[0]);
       case 'getMinIntrinsicWidth':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.getMinIntrinsicWidth(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => getMinIntrinsicWidth(positionalArgs[0]);
       case 'getMaxIntrinsicWidth':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.getMaxIntrinsicWidth(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => getMaxIntrinsicWidth(positionalArgs[0]);
       case 'getMinIntrinsicHeight':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.getMinIntrinsicHeight(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => getMinIntrinsicHeight(positionalArgs[0]);
       case 'getMaxIntrinsicHeight':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.getMaxIntrinsicHeight(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => getMaxIntrinsicHeight(positionalArgs[0]);
       case 'getDryLayout':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.getDryLayout(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => getDryLayout(positionalArgs[0]);
       case 'debugCannotComputeDryLayout':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugCannotComputeDryLayout(reason : namedArgs.containsKey('reason') ? namedArgs['reason'] : null, error : namedArgs.containsKey('error') ? namedArgs['error'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugCannotComputeDryLayout(
+            reason: namedArgs.containsKey('reason') ? namedArgs['reason'] : null,
+            error: namedArgs.containsKey('error') ? namedArgs['error'] : null);
       case 'debugAdoptSize':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugAdoptSize(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugAdoptSize(positionalArgs[0]);
       case 'debugResetSize':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugResetSize();
+        return ({positionalArgs, namedArgs, typeArgs}) => debugResetSize();
       case 'getDistanceToBaseline':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.getDistanceToBaseline(positionalArgs[0], onlyReal : namedArgs.containsKey('onlyReal') ? namedArgs['onlyReal'] : false);
+        return ({positionalArgs, namedArgs, typeArgs}) => getDistanceToBaseline(positionalArgs[0],
+            onlyReal: namedArgs.containsKey('onlyReal') ? namedArgs['onlyReal'] : false);
       case 'debugAssertDoesMeetConstraints':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugAssertDoesMeetConstraints();
+        return ({positionalArgs, namedArgs, typeArgs}) => debugAssertDoesMeetConstraints();
       case 'markNeedsLayout':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.markNeedsLayout();
+        return ({positionalArgs, namedArgs, typeArgs}) => markNeedsLayout();
       case 'performResize':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.performResize();
+        return ({positionalArgs, namedArgs, typeArgs}) => performResize();
       case 'hitTest':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.hitTest(positionalArgs[0], position : namedArgs.containsKey('position') ? namedArgs['position'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            hitTest(positionalArgs[0], position: namedArgs.containsKey('position') ? namedArgs['position'] : null);
       case 'applyPaintTransform':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.applyPaintTransform(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => applyPaintTransform(positionalArgs[0], positionalArgs[1]);
       case 'globalToLocal':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.globalToLocal(positionalArgs[0], ancestor : namedArgs.containsKey('ancestor') ? namedArgs['ancestor'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => globalToLocal(positionalArgs[0],
+            ancestor: namedArgs.containsKey('ancestor') ? namedArgs['ancestor'] : null);
       case 'localToGlobal':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.localToGlobal(positionalArgs[0], ancestor : namedArgs.containsKey('ancestor') ? namedArgs['ancestor'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => localToGlobal(positionalArgs[0],
+            ancestor: namedArgs.containsKey('ancestor') ? namedArgs['ancestor'] : null);
       case 'handleEvent':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.handleEvent(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => handleEvent(positionalArgs[0], positionalArgs[1]);
       case 'debugHandleEvent':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugHandleEvent(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugHandleEvent(positionalArgs[0], positionalArgs[1]);
       case 'debugPaint':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugPaint(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugPaint(positionalArgs[0], positionalArgs[1]);
+      case 'reassemble':
+        return ({positionalArgs, namedArgs, typeArgs}) => reassemble();
+      case 'adoptChild':
+        return ({positionalArgs, namedArgs, typeArgs}) => adoptChild(positionalArgs[0]);
+      case 'dropChild':
+        return ({positionalArgs, namedArgs, typeArgs}) => dropChild(positionalArgs[0]);
+      case 'markNeedsLayoutForSizedByParentChange':
+        return ({positionalArgs, namedArgs, typeArgs}) => markNeedsLayoutForSizedByParentChange();
+      case 'scheduleInitialLayout':
+        return ({positionalArgs, namedArgs, typeArgs}) => scheduleInitialLayout();
+      case 'layout':
+        return ({positionalArgs, namedArgs, typeArgs}) => layout(positionalArgs[0],
+            parentUsesSize: namedArgs.containsKey('parentUsesSize') ? namedArgs['parentUsesSize'] : false);
+      case 'rotate':
+        return ({positionalArgs, namedArgs, typeArgs}) => rotate(
+            oldAngle: namedArgs.containsKey('oldAngle') ? namedArgs['oldAngle'] : null,
+            newAngle: namedArgs.containsKey('newAngle') ? namedArgs['newAngle'] : null,
+            time: namedArgs.containsKey('time') ? namedArgs['time'] : null);
+      case 'debugRegisterRepaintBoundaryPaint':
+        return ({positionalArgs, namedArgs, typeArgs}) => debugRegisterRepaintBoundaryPaint(
+            includedParent: namedArgs.containsKey('includedParent') ? namedArgs['includedParent'] : true,
+            includedChild: namedArgs.containsKey('includedChild') ? namedArgs['includedChild'] : false);
+      case 'markNeedsCompositingBitsUpdate':
+        return ({positionalArgs, namedArgs, typeArgs}) => markNeedsCompositingBitsUpdate();
+      case 'markNeedsPaint':
+        return ({positionalArgs, namedArgs, typeArgs}) => markNeedsPaint();
+      case 'scheduleInitialPaint':
+        return ({positionalArgs, namedArgs, typeArgs}) => scheduleInitialPaint(positionalArgs[0]);
+      case 'replaceRootLayer':
+        return ({positionalArgs, namedArgs, typeArgs}) => replaceRootLayer(positionalArgs[0]);
+      case 'getTransformTo':
+        return ({positionalArgs, namedArgs, typeArgs}) => getTransformTo(positionalArgs[0]);
+      case 'describeApproximatePaintClip':
+        return ({positionalArgs, namedArgs, typeArgs}) => describeApproximatePaintClip(positionalArgs[0]);
+      case 'describeSemanticsClip':
+        return ({positionalArgs, namedArgs, typeArgs}) => describeSemanticsClip(positionalArgs[0]);
+      case 'scheduleInitialSemantics':
+        return ({positionalArgs, namedArgs, typeArgs}) => scheduleInitialSemantics();
+      case 'sendSemanticsEvent':
+        return ({positionalArgs, namedArgs, typeArgs}) => sendSemanticsEvent(positionalArgs[0]);
+      case 'clearSemantics':
+        return ({positionalArgs, namedArgs, typeArgs}) => clearSemantics();
+      case 'markNeedsSemanticsUpdate':
+        return ({positionalArgs, namedArgs, typeArgs}) => markNeedsSemanticsUpdate();
+      case 'visitChildrenForSemantics':
+        return ({positionalArgs, namedArgs, typeArgs}) => visitChildrenForSemantics(positionalArgs[0]);
+      case 'assembleSemanticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            assembleSemanticsNode(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
+      case 'toStringShort':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+      case 'toStringDeep':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
+            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : '',
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toStringShallow':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
+            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'showOnScreen':
+        return ({positionalArgs, namedArgs, typeArgs}) => showOnScreen(
+            descendant: namedArgs.containsKey('descendant') ? namedArgs['descendant'] : null,
+            rect: namedArgs.containsKey('rect') ? namedArgs['rect'] : null,
+            duration: namedArgs.containsKey('duration') ? namedArgs['duration'] : Duration.zero,
+            curve: namedArgs.containsKey('curve') ? namedArgs['curve'] : Curves.ease);
+      case 'describeForError':
+        return ({positionalArgs, namedArgs, typeArgs}) => describeForError(positionalArgs[0],
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : DiagnosticsTreeStyle.shallow);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -118,11 +256,17 @@ extension RenderPaddingBinding on RenderPadding {
 
   void htAssign(String varName, dynamic value) {
     switch (varName) {
+      case 'parentData':
+        parentData = value;
+        break;
+      case 'debugCreator':
+        debugCreator = value;
+        break;
       case 'padding':
-        this.padding = value;
+        padding = value;
         break;
       case 'textDirection':
-        this.textDirection = value;
+        textDirection = value;
         break;
       default:
         throw HTErrorUndefined(varName);
@@ -137,7 +281,12 @@ class RenderPositionedBoxAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'RenderPositionedBox':
-        return ({positionalArgs, namedArgs, typeArgs}) => RenderPositionedBox(child : namedArgs.containsKey('child') ? namedArgs['child'] : null, widthFactor : namedArgs.containsKey('widthFactor') ? namedArgs['widthFactor'] : null, heightFactor : namedArgs.containsKey('heightFactor') ? namedArgs['heightFactor'] : null, alignment : namedArgs.containsKey('alignment') ? namedArgs['alignment'] : Alignment.center, textDirection : namedArgs.containsKey('textDirection') ? namedArgs['textDirection'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => RenderPositionedBox(
+            child: namedArgs.containsKey('child') ? namedArgs['child'] : null,
+            widthFactor: namedArgs.containsKey('widthFactor') ? namedArgs['widthFactor'] : null,
+            heightFactor: namedArgs.containsKey('heightFactor') ? namedArgs['heightFactor'] : null,
+            alignment: namedArgs.containsKey('alignment') ? namedArgs['alignment'] : Alignment.center,
+            textDirection: namedArgs.containsKey('textDirection') ? namedArgs['textDirection'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -153,7 +302,12 @@ class RenderPositionedBoxAutoBinding extends HTExternalClass {
     (instance as RenderPositionedBox).htAssign(id, value);
   }
 
-
+  static Map<String, HTExternalFunctionTypedef> functionWrapper() {
+    return <String, HTExternalFunctionTypedef>{
+      'RenderObjectVisitor': (HTFunction function) =>
+          (child) => function.call(positionalArgs: [child], namedArgs: const {}),
+    };
+  }
 }
 
 extension RenderPositionedBoxBinding on RenderPositionedBox {
@@ -161,6 +315,10 @@ extension RenderPositionedBoxBinding on RenderPositionedBox {
     switch (varName) {
       case 'typeid':
         return HTTypeId('RenderPositionedBox');
+      case 'parentData':
+        return parentData;
+      case 'debugCreator':
+        return debugCreator;
       case 'widthFactor':
         return widthFactor;
       case 'heightFactor':
@@ -169,6 +327,8 @@ extension RenderPositionedBoxBinding on RenderPositionedBox {
         return alignment;
       case 'textDirection':
         return textDirection;
+      case 'child':
+        return child;
       case 'hasSize':
         return hasSize;
       case 'size':
@@ -179,68 +339,193 @@ extension RenderPositionedBoxBinding on RenderPositionedBox {
         return constraints;
       case 'paintBounds':
         return paintBounds;
+      case 'debugDoingThisResize':
+        return debugDoingThisResize;
+      case 'debugDoingThisLayout':
+        return debugDoingThisLayout;
+      case 'debugCanParentUseSize':
+        return debugCanParentUseSize;
+      case 'owner':
+        return owner;
+      case 'debugNeedsLayout':
+        return debugNeedsLayout;
+      case 'debugDoingThisLayoutWithCallback':
+        return debugDoingThisLayoutWithCallback;
+      case 'debugDoingThisPaint':
+        return debugDoingThisPaint;
+      case 'isRepaintBoundary':
+        return isRepaintBoundary;
+      case 'debugLayer':
+        return debugLayer;
+      case 'needsCompositing':
+        return needsCompositing;
+      case 'debugNeedsPaint':
+        return debugNeedsPaint;
+      case 'debugSemantics':
+        return debugSemantics;
+      case 'depth':
+        return depth;
+      case 'attached':
+        return attached;
+      case 'parent':
+        return parent;
       case 'computeDryLayout':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.computeDryLayout(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => computeDryLayout(positionalArgs[0]);
       case 'performLayout':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.performLayout();
+        return ({positionalArgs, namedArgs, typeArgs}) => performLayout();
       case 'debugPaintSize':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugPaintSize(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugPaintSize(positionalArgs[0], positionalArgs[1]);
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
       case 'computeMinIntrinsicWidth':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.computeMinIntrinsicWidth(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => computeMinIntrinsicWidth(positionalArgs[0]);
       case 'computeMaxIntrinsicWidth':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.computeMaxIntrinsicWidth(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => computeMaxIntrinsicWidth(positionalArgs[0]);
       case 'computeMinIntrinsicHeight':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.computeMinIntrinsicHeight(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => computeMinIntrinsicHeight(positionalArgs[0]);
       case 'computeMaxIntrinsicHeight':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.computeMaxIntrinsicHeight(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => computeMaxIntrinsicHeight(positionalArgs[0]);
       case 'computeDistanceToActualBaseline':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.computeDistanceToActualBaseline(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => computeDistanceToActualBaseline(positionalArgs[0]);
       case 'paint':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.paint(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => paint(positionalArgs[0], positionalArgs[1]);
       case 'hitTestChildren':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.hitTestChildren(positionalArgs[0], position : namedArgs.containsKey('position') ? namedArgs['position'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => hitTestChildren(positionalArgs[0],
+            position: namedArgs.containsKey('position') ? namedArgs['position'] : null);
+      case 'debugValidateChild':
+        return ({positionalArgs, namedArgs, typeArgs}) => debugValidateChild(positionalArgs[0]);
+      case 'attach':
+        return ({positionalArgs, namedArgs, typeArgs}) => attach(positionalArgs[0]);
+      case 'detach':
+        return ({positionalArgs, namedArgs, typeArgs}) => detach();
+      case 'redepthChildren':
+        return ({positionalArgs, namedArgs, typeArgs}) => redepthChildren();
+      case 'visitChildren':
+        return ({positionalArgs, namedArgs, typeArgs}) => visitChildren(positionalArgs[0]);
+      case 'debugDescribeChildren':
+        return ({positionalArgs, namedArgs, typeArgs}) => debugDescribeChildren();
       case 'setupParentData':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.setupParentData(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => setupParentData(positionalArgs[0]);
       case 'getMinIntrinsicWidth':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.getMinIntrinsicWidth(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => getMinIntrinsicWidth(positionalArgs[0]);
       case 'getMaxIntrinsicWidth':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.getMaxIntrinsicWidth(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => getMaxIntrinsicWidth(positionalArgs[0]);
       case 'getMinIntrinsicHeight':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.getMinIntrinsicHeight(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => getMinIntrinsicHeight(positionalArgs[0]);
       case 'getMaxIntrinsicHeight':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.getMaxIntrinsicHeight(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => getMaxIntrinsicHeight(positionalArgs[0]);
       case 'getDryLayout':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.getDryLayout(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => getDryLayout(positionalArgs[0]);
       case 'debugCannotComputeDryLayout':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugCannotComputeDryLayout(reason : namedArgs.containsKey('reason') ? namedArgs['reason'] : null, error : namedArgs.containsKey('error') ? namedArgs['error'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugCannotComputeDryLayout(
+            reason: namedArgs.containsKey('reason') ? namedArgs['reason'] : null,
+            error: namedArgs.containsKey('error') ? namedArgs['error'] : null);
       case 'debugAdoptSize':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugAdoptSize(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugAdoptSize(positionalArgs[0]);
       case 'debugResetSize':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugResetSize();
+        return ({positionalArgs, namedArgs, typeArgs}) => debugResetSize();
       case 'getDistanceToBaseline':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.getDistanceToBaseline(positionalArgs[0], onlyReal : namedArgs.containsKey('onlyReal') ? namedArgs['onlyReal'] : false);
+        return ({positionalArgs, namedArgs, typeArgs}) => getDistanceToBaseline(positionalArgs[0],
+            onlyReal: namedArgs.containsKey('onlyReal') ? namedArgs['onlyReal'] : false);
       case 'debugAssertDoesMeetConstraints':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugAssertDoesMeetConstraints();
+        return ({positionalArgs, namedArgs, typeArgs}) => debugAssertDoesMeetConstraints();
       case 'markNeedsLayout':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.markNeedsLayout();
+        return ({positionalArgs, namedArgs, typeArgs}) => markNeedsLayout();
       case 'performResize':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.performResize();
+        return ({positionalArgs, namedArgs, typeArgs}) => performResize();
       case 'hitTest':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.hitTest(positionalArgs[0], position : namedArgs.containsKey('position') ? namedArgs['position'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            hitTest(positionalArgs[0], position: namedArgs.containsKey('position') ? namedArgs['position'] : null);
       case 'applyPaintTransform':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.applyPaintTransform(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => applyPaintTransform(positionalArgs[0], positionalArgs[1]);
       case 'globalToLocal':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.globalToLocal(positionalArgs[0], ancestor : namedArgs.containsKey('ancestor') ? namedArgs['ancestor'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => globalToLocal(positionalArgs[0],
+            ancestor: namedArgs.containsKey('ancestor') ? namedArgs['ancestor'] : null);
       case 'localToGlobal':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.localToGlobal(positionalArgs[0], ancestor : namedArgs.containsKey('ancestor') ? namedArgs['ancestor'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => localToGlobal(positionalArgs[0],
+            ancestor: namedArgs.containsKey('ancestor') ? namedArgs['ancestor'] : null);
       case 'handleEvent':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.handleEvent(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => handleEvent(positionalArgs[0], positionalArgs[1]);
       case 'debugHandleEvent':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugHandleEvent(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugHandleEvent(positionalArgs[0], positionalArgs[1]);
       case 'debugPaint':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugPaint(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugPaint(positionalArgs[0], positionalArgs[1]);
+      case 'reassemble':
+        return ({positionalArgs, namedArgs, typeArgs}) => reassemble();
+      case 'adoptChild':
+        return ({positionalArgs, namedArgs, typeArgs}) => adoptChild(positionalArgs[0]);
+      case 'dropChild':
+        return ({positionalArgs, namedArgs, typeArgs}) => dropChild(positionalArgs[0]);
+      case 'markNeedsLayoutForSizedByParentChange':
+        return ({positionalArgs, namedArgs, typeArgs}) => markNeedsLayoutForSizedByParentChange();
+      case 'scheduleInitialLayout':
+        return ({positionalArgs, namedArgs, typeArgs}) => scheduleInitialLayout();
+      case 'layout':
+        return ({positionalArgs, namedArgs, typeArgs}) => layout(positionalArgs[0],
+            parentUsesSize: namedArgs.containsKey('parentUsesSize') ? namedArgs['parentUsesSize'] : false);
+      case 'rotate':
+        return ({positionalArgs, namedArgs, typeArgs}) => rotate(
+            oldAngle: namedArgs.containsKey('oldAngle') ? namedArgs['oldAngle'] : null,
+            newAngle: namedArgs.containsKey('newAngle') ? namedArgs['newAngle'] : null,
+            time: namedArgs.containsKey('time') ? namedArgs['time'] : null);
+      case 'debugRegisterRepaintBoundaryPaint':
+        return ({positionalArgs, namedArgs, typeArgs}) => debugRegisterRepaintBoundaryPaint(
+            includedParent: namedArgs.containsKey('includedParent') ? namedArgs['includedParent'] : true,
+            includedChild: namedArgs.containsKey('includedChild') ? namedArgs['includedChild'] : false);
+      case 'markNeedsCompositingBitsUpdate':
+        return ({positionalArgs, namedArgs, typeArgs}) => markNeedsCompositingBitsUpdate();
+      case 'markNeedsPaint':
+        return ({positionalArgs, namedArgs, typeArgs}) => markNeedsPaint();
+      case 'scheduleInitialPaint':
+        return ({positionalArgs, namedArgs, typeArgs}) => scheduleInitialPaint(positionalArgs[0]);
+      case 'replaceRootLayer':
+        return ({positionalArgs, namedArgs, typeArgs}) => replaceRootLayer(positionalArgs[0]);
+      case 'getTransformTo':
+        return ({positionalArgs, namedArgs, typeArgs}) => getTransformTo(positionalArgs[0]);
+      case 'describeApproximatePaintClip':
+        return ({positionalArgs, namedArgs, typeArgs}) => describeApproximatePaintClip(positionalArgs[0]);
+      case 'describeSemanticsClip':
+        return ({positionalArgs, namedArgs, typeArgs}) => describeSemanticsClip(positionalArgs[0]);
+      case 'scheduleInitialSemantics':
+        return ({positionalArgs, namedArgs, typeArgs}) => scheduleInitialSemantics();
+      case 'sendSemanticsEvent':
+        return ({positionalArgs, namedArgs, typeArgs}) => sendSemanticsEvent(positionalArgs[0]);
+      case 'clearSemantics':
+        return ({positionalArgs, namedArgs, typeArgs}) => clearSemantics();
+      case 'markNeedsSemanticsUpdate':
+        return ({positionalArgs, namedArgs, typeArgs}) => markNeedsSemanticsUpdate();
+      case 'visitChildrenForSemantics':
+        return ({positionalArgs, namedArgs, typeArgs}) => visitChildrenForSemantics(positionalArgs[0]);
+      case 'assembleSemanticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            assembleSemanticsNode(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
+      case 'toStringShort':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+      case 'toStringDeep':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
+            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : '',
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toStringShallow':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
+            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'showOnScreen':
+        return ({positionalArgs, namedArgs, typeArgs}) => showOnScreen(
+            descendant: namedArgs.containsKey('descendant') ? namedArgs['descendant'] : null,
+            rect: namedArgs.containsKey('rect') ? namedArgs['rect'] : null,
+            duration: namedArgs.containsKey('duration') ? namedArgs['duration'] : Duration.zero,
+            curve: namedArgs.containsKey('curve') ? namedArgs['curve'] : Curves.ease);
+      case 'describeForError':
+        return ({positionalArgs, namedArgs, typeArgs}) => describeForError(positionalArgs[0],
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : DiagnosticsTreeStyle.shallow);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -248,11 +533,17 @@ extension RenderPositionedBoxBinding on RenderPositionedBox {
 
   void htAssign(String varName, dynamic value) {
     switch (varName) {
+      case 'parentData':
+        parentData = value;
+        break;
+      case 'debugCreator':
+        debugCreator = value;
+        break;
       case 'widthFactor':
-        this.widthFactor = value;
+        widthFactor = value;
         break;
       case 'heightFactor':
-        this.heightFactor = value;
+        heightFactor = value;
         break;
       default:
         throw HTErrorUndefined(varName);
@@ -267,7 +558,14 @@ class RenderConstrainedOverflowBoxAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'RenderConstrainedOverflowBox':
-        return ({positionalArgs, namedArgs, typeArgs}) => RenderConstrainedOverflowBox(child : namedArgs.containsKey('child') ? namedArgs['child'] : null, minWidth : namedArgs.containsKey('minWidth') ? namedArgs['minWidth'] : null, maxWidth : namedArgs.containsKey('maxWidth') ? namedArgs['maxWidth'] : null, minHeight : namedArgs.containsKey('minHeight') ? namedArgs['minHeight'] : null, maxHeight : namedArgs.containsKey('maxHeight') ? namedArgs['maxHeight'] : null, alignment : namedArgs.containsKey('alignment') ? namedArgs['alignment'] : Alignment.center, textDirection : namedArgs.containsKey('textDirection') ? namedArgs['textDirection'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => RenderConstrainedOverflowBox(
+            child: namedArgs.containsKey('child') ? namedArgs['child'] : null,
+            minWidth: namedArgs.containsKey('minWidth') ? namedArgs['minWidth'] : null,
+            maxWidth: namedArgs.containsKey('maxWidth') ? namedArgs['maxWidth'] : null,
+            minHeight: namedArgs.containsKey('minHeight') ? namedArgs['minHeight'] : null,
+            maxHeight: namedArgs.containsKey('maxHeight') ? namedArgs['maxHeight'] : null,
+            alignment: namedArgs.containsKey('alignment') ? namedArgs['alignment'] : Alignment.center,
+            textDirection: namedArgs.containsKey('textDirection') ? namedArgs['textDirection'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -283,7 +581,12 @@ class RenderConstrainedOverflowBoxAutoBinding extends HTExternalClass {
     (instance as RenderConstrainedOverflowBox).htAssign(id, value);
   }
 
-
+  static Map<String, HTExternalFunctionTypedef> functionWrapper() {
+    return <String, HTExternalFunctionTypedef>{
+      'RenderObjectVisitor': (HTFunction function) =>
+          (child) => function.call(positionalArgs: [child], namedArgs: const {}),
+    };
+  }
 }
 
 extension RenderConstrainedOverflowBoxBinding on RenderConstrainedOverflowBox {
@@ -291,6 +594,10 @@ extension RenderConstrainedOverflowBoxBinding on RenderConstrainedOverflowBox {
     switch (varName) {
       case 'typeid':
         return HTTypeId('RenderConstrainedOverflowBox');
+      case 'parentData':
+        return parentData;
+      case 'debugCreator':
+        return debugCreator;
       case 'minWidth':
         return minWidth;
       case 'maxWidth':
@@ -305,6 +612,8 @@ extension RenderConstrainedOverflowBoxBinding on RenderConstrainedOverflowBox {
         return alignment;
       case 'textDirection':
         return textDirection;
+      case 'child':
+        return child;
       case 'hasSize':
         return hasSize;
       case 'size':
@@ -315,66 +624,191 @@ extension RenderConstrainedOverflowBoxBinding on RenderConstrainedOverflowBox {
         return constraints;
       case 'paintBounds':
         return paintBounds;
+      case 'debugDoingThisResize':
+        return debugDoingThisResize;
+      case 'debugDoingThisLayout':
+        return debugDoingThisLayout;
+      case 'debugCanParentUseSize':
+        return debugCanParentUseSize;
+      case 'owner':
+        return owner;
+      case 'debugNeedsLayout':
+        return debugNeedsLayout;
+      case 'debugDoingThisLayoutWithCallback':
+        return debugDoingThisLayoutWithCallback;
+      case 'debugDoingThisPaint':
+        return debugDoingThisPaint;
+      case 'isRepaintBoundary':
+        return isRepaintBoundary;
+      case 'debugLayer':
+        return debugLayer;
+      case 'needsCompositing':
+        return needsCompositing;
+      case 'debugNeedsPaint':
+        return debugNeedsPaint;
+      case 'debugSemantics':
+        return debugSemantics;
+      case 'depth':
+        return depth;
+      case 'attached':
+        return attached;
+      case 'parent':
+        return parent;
       case 'computeDryLayout':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.computeDryLayout(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => computeDryLayout(positionalArgs[0]);
       case 'performLayout':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.performLayout();
+        return ({positionalArgs, namedArgs, typeArgs}) => performLayout();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
       case 'computeMinIntrinsicWidth':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.computeMinIntrinsicWidth(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => computeMinIntrinsicWidth(positionalArgs[0]);
       case 'computeMaxIntrinsicWidth':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.computeMaxIntrinsicWidth(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => computeMaxIntrinsicWidth(positionalArgs[0]);
       case 'computeMinIntrinsicHeight':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.computeMinIntrinsicHeight(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => computeMinIntrinsicHeight(positionalArgs[0]);
       case 'computeMaxIntrinsicHeight':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.computeMaxIntrinsicHeight(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => computeMaxIntrinsicHeight(positionalArgs[0]);
       case 'computeDistanceToActualBaseline':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.computeDistanceToActualBaseline(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => computeDistanceToActualBaseline(positionalArgs[0]);
       case 'paint':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.paint(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => paint(positionalArgs[0], positionalArgs[1]);
       case 'hitTestChildren':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.hitTestChildren(positionalArgs[0], position : namedArgs.containsKey('position') ? namedArgs['position'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => hitTestChildren(positionalArgs[0],
+            position: namedArgs.containsKey('position') ? namedArgs['position'] : null);
+      case 'debugValidateChild':
+        return ({positionalArgs, namedArgs, typeArgs}) => debugValidateChild(positionalArgs[0]);
+      case 'attach':
+        return ({positionalArgs, namedArgs, typeArgs}) => attach(positionalArgs[0]);
+      case 'detach':
+        return ({positionalArgs, namedArgs, typeArgs}) => detach();
+      case 'redepthChildren':
+        return ({positionalArgs, namedArgs, typeArgs}) => redepthChildren();
+      case 'visitChildren':
+        return ({positionalArgs, namedArgs, typeArgs}) => visitChildren(positionalArgs[0]);
+      case 'debugDescribeChildren':
+        return ({positionalArgs, namedArgs, typeArgs}) => debugDescribeChildren();
       case 'setupParentData':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.setupParentData(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => setupParentData(positionalArgs[0]);
       case 'getMinIntrinsicWidth':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.getMinIntrinsicWidth(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => getMinIntrinsicWidth(positionalArgs[0]);
       case 'getMaxIntrinsicWidth':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.getMaxIntrinsicWidth(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => getMaxIntrinsicWidth(positionalArgs[0]);
       case 'getMinIntrinsicHeight':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.getMinIntrinsicHeight(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => getMinIntrinsicHeight(positionalArgs[0]);
       case 'getMaxIntrinsicHeight':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.getMaxIntrinsicHeight(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => getMaxIntrinsicHeight(positionalArgs[0]);
       case 'getDryLayout':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.getDryLayout(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => getDryLayout(positionalArgs[0]);
       case 'debugCannotComputeDryLayout':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugCannotComputeDryLayout(reason : namedArgs.containsKey('reason') ? namedArgs['reason'] : null, error : namedArgs.containsKey('error') ? namedArgs['error'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugCannotComputeDryLayout(
+            reason: namedArgs.containsKey('reason') ? namedArgs['reason'] : null,
+            error: namedArgs.containsKey('error') ? namedArgs['error'] : null);
       case 'debugAdoptSize':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugAdoptSize(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugAdoptSize(positionalArgs[0]);
       case 'debugResetSize':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugResetSize();
+        return ({positionalArgs, namedArgs, typeArgs}) => debugResetSize();
       case 'getDistanceToBaseline':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.getDistanceToBaseline(positionalArgs[0], onlyReal : namedArgs.containsKey('onlyReal') ? namedArgs['onlyReal'] : false);
+        return ({positionalArgs, namedArgs, typeArgs}) => getDistanceToBaseline(positionalArgs[0],
+            onlyReal: namedArgs.containsKey('onlyReal') ? namedArgs['onlyReal'] : false);
       case 'debugAssertDoesMeetConstraints':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugAssertDoesMeetConstraints();
+        return ({positionalArgs, namedArgs, typeArgs}) => debugAssertDoesMeetConstraints();
       case 'markNeedsLayout':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.markNeedsLayout();
+        return ({positionalArgs, namedArgs, typeArgs}) => markNeedsLayout();
       case 'performResize':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.performResize();
+        return ({positionalArgs, namedArgs, typeArgs}) => performResize();
       case 'hitTest':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.hitTest(positionalArgs[0], position : namedArgs.containsKey('position') ? namedArgs['position'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            hitTest(positionalArgs[0], position: namedArgs.containsKey('position') ? namedArgs['position'] : null);
       case 'applyPaintTransform':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.applyPaintTransform(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => applyPaintTransform(positionalArgs[0], positionalArgs[1]);
       case 'globalToLocal':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.globalToLocal(positionalArgs[0], ancestor : namedArgs.containsKey('ancestor') ? namedArgs['ancestor'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => globalToLocal(positionalArgs[0],
+            ancestor: namedArgs.containsKey('ancestor') ? namedArgs['ancestor'] : null);
       case 'localToGlobal':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.localToGlobal(positionalArgs[0], ancestor : namedArgs.containsKey('ancestor') ? namedArgs['ancestor'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => localToGlobal(positionalArgs[0],
+            ancestor: namedArgs.containsKey('ancestor') ? namedArgs['ancestor'] : null);
       case 'handleEvent':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.handleEvent(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => handleEvent(positionalArgs[0], positionalArgs[1]);
       case 'debugHandleEvent':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugHandleEvent(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugHandleEvent(positionalArgs[0], positionalArgs[1]);
       case 'debugPaint':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugPaint(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugPaint(positionalArgs[0], positionalArgs[1]);
+      case 'reassemble':
+        return ({positionalArgs, namedArgs, typeArgs}) => reassemble();
+      case 'adoptChild':
+        return ({positionalArgs, namedArgs, typeArgs}) => adoptChild(positionalArgs[0]);
+      case 'dropChild':
+        return ({positionalArgs, namedArgs, typeArgs}) => dropChild(positionalArgs[0]);
+      case 'markNeedsLayoutForSizedByParentChange':
+        return ({positionalArgs, namedArgs, typeArgs}) => markNeedsLayoutForSizedByParentChange();
+      case 'scheduleInitialLayout':
+        return ({positionalArgs, namedArgs, typeArgs}) => scheduleInitialLayout();
+      case 'layout':
+        return ({positionalArgs, namedArgs, typeArgs}) => layout(positionalArgs[0],
+            parentUsesSize: namedArgs.containsKey('parentUsesSize') ? namedArgs['parentUsesSize'] : false);
+      case 'rotate':
+        return ({positionalArgs, namedArgs, typeArgs}) => rotate(
+            oldAngle: namedArgs.containsKey('oldAngle') ? namedArgs['oldAngle'] : null,
+            newAngle: namedArgs.containsKey('newAngle') ? namedArgs['newAngle'] : null,
+            time: namedArgs.containsKey('time') ? namedArgs['time'] : null);
+      case 'debugRegisterRepaintBoundaryPaint':
+        return ({positionalArgs, namedArgs, typeArgs}) => debugRegisterRepaintBoundaryPaint(
+            includedParent: namedArgs.containsKey('includedParent') ? namedArgs['includedParent'] : true,
+            includedChild: namedArgs.containsKey('includedChild') ? namedArgs['includedChild'] : false);
+      case 'markNeedsCompositingBitsUpdate':
+        return ({positionalArgs, namedArgs, typeArgs}) => markNeedsCompositingBitsUpdate();
+      case 'markNeedsPaint':
+        return ({positionalArgs, namedArgs, typeArgs}) => markNeedsPaint();
+      case 'scheduleInitialPaint':
+        return ({positionalArgs, namedArgs, typeArgs}) => scheduleInitialPaint(positionalArgs[0]);
+      case 'replaceRootLayer':
+        return ({positionalArgs, namedArgs, typeArgs}) => replaceRootLayer(positionalArgs[0]);
+      case 'getTransformTo':
+        return ({positionalArgs, namedArgs, typeArgs}) => getTransformTo(positionalArgs[0]);
+      case 'describeApproximatePaintClip':
+        return ({positionalArgs, namedArgs, typeArgs}) => describeApproximatePaintClip(positionalArgs[0]);
+      case 'describeSemanticsClip':
+        return ({positionalArgs, namedArgs, typeArgs}) => describeSemanticsClip(positionalArgs[0]);
+      case 'scheduleInitialSemantics':
+        return ({positionalArgs, namedArgs, typeArgs}) => scheduleInitialSemantics();
+      case 'sendSemanticsEvent':
+        return ({positionalArgs, namedArgs, typeArgs}) => sendSemanticsEvent(positionalArgs[0]);
+      case 'clearSemantics':
+        return ({positionalArgs, namedArgs, typeArgs}) => clearSemantics();
+      case 'markNeedsSemanticsUpdate':
+        return ({positionalArgs, namedArgs, typeArgs}) => markNeedsSemanticsUpdate();
+      case 'visitChildrenForSemantics':
+        return ({positionalArgs, namedArgs, typeArgs}) => visitChildrenForSemantics(positionalArgs[0]);
+      case 'assembleSemanticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            assembleSemanticsNode(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
+      case 'toStringShort':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+      case 'toStringDeep':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
+            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : '',
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toStringShallow':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
+            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'showOnScreen':
+        return ({positionalArgs, namedArgs, typeArgs}) => showOnScreen(
+            descendant: namedArgs.containsKey('descendant') ? namedArgs['descendant'] : null,
+            rect: namedArgs.containsKey('rect') ? namedArgs['rect'] : null,
+            duration: namedArgs.containsKey('duration') ? namedArgs['duration'] : Duration.zero,
+            curve: namedArgs.containsKey('curve') ? namedArgs['curve'] : Curves.ease);
+      case 'describeForError':
+        return ({positionalArgs, namedArgs, typeArgs}) => describeForError(positionalArgs[0],
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : DiagnosticsTreeStyle.shallow);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -382,17 +816,23 @@ extension RenderConstrainedOverflowBoxBinding on RenderConstrainedOverflowBox {
 
   void htAssign(String varName, dynamic value) {
     switch (varName) {
+      case 'parentData':
+        parentData = value;
+        break;
+      case 'debugCreator':
+        debugCreator = value;
+        break;
       case 'minWidth':
-        this.minWidth = value;
+        minWidth = value;
         break;
       case 'maxWidth':
-        this.maxWidth = value;
+        maxWidth = value;
         break;
       case 'minHeight':
-        this.minHeight = value;
+        minHeight = value;
         break;
       case 'maxHeight':
-        this.maxHeight = value;
+        maxHeight = value;
         break;
       default:
         throw HTErrorUndefined(varName);
@@ -407,7 +847,12 @@ class RenderUnconstrainedBoxAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'RenderUnconstrainedBox':
-        return ({positionalArgs, namedArgs, typeArgs}) => RenderUnconstrainedBox(alignment : namedArgs['alignment'], textDirection : namedArgs['textDirection'], constrainedAxis : namedArgs.containsKey('constrainedAxis') ? namedArgs['constrainedAxis'] : null, child : namedArgs.containsKey('child') ? namedArgs['child'] : null, clipBehavior : namedArgs.containsKey('clipBehavior') ? namedArgs['clipBehavior'] : Clip.none);
+        return ({positionalArgs, namedArgs, typeArgs}) => RenderUnconstrainedBox(
+            alignment: namedArgs['alignment'],
+            textDirection: namedArgs['textDirection'],
+            constrainedAxis: namedArgs.containsKey('constrainedAxis') ? namedArgs['constrainedAxis'] : null,
+            child: namedArgs.containsKey('child') ? namedArgs['child'] : null,
+            clipBehavior: namedArgs.containsKey('clipBehavior') ? namedArgs['clipBehavior'] : Clip.none);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -423,7 +868,12 @@ class RenderUnconstrainedBoxAutoBinding extends HTExternalClass {
     (instance as RenderUnconstrainedBox).htAssign(id, value);
   }
 
-
+  static Map<String, HTExternalFunctionTypedef> functionWrapper() {
+    return <String, HTExternalFunctionTypedef>{
+      'RenderObjectVisitor': (HTFunction function) =>
+          (child) => function.call(positionalArgs: [child], namedArgs: const {}),
+    };
+  }
 }
 
 extension RenderUnconstrainedBoxBinding on RenderUnconstrainedBox {
@@ -431,6 +881,10 @@ extension RenderUnconstrainedBoxBinding on RenderUnconstrainedBox {
     switch (varName) {
       case 'typeid':
         return HTTypeId('RenderUnconstrainedBox');
+      case 'parentData':
+        return parentData;
+      case 'debugCreator':
+        return debugCreator;
       case 'constrainedAxis':
         return constrainedAxis;
       case 'clipBehavior':
@@ -439,6 +893,8 @@ extension RenderUnconstrainedBoxBinding on RenderUnconstrainedBox {
         return alignment;
       case 'textDirection':
         return textDirection;
+      case 'child':
+        return child;
       case 'hasSize':
         return hasSize;
       case 'size':
@@ -449,74 +905,196 @@ extension RenderUnconstrainedBoxBinding on RenderUnconstrainedBox {
         return constraints;
       case 'paintBounds':
         return paintBounds;
+      case 'debugDoingThisResize':
+        return debugDoingThisResize;
+      case 'debugDoingThisLayout':
+        return debugDoingThisLayout;
+      case 'debugCanParentUseSize':
+        return debugCanParentUseSize;
+      case 'owner':
+        return owner;
+      case 'debugNeedsLayout':
+        return debugNeedsLayout;
+      case 'debugDoingThisLayoutWithCallback':
+        return debugDoingThisLayoutWithCallback;
+      case 'debugDoingThisPaint':
+        return debugDoingThisPaint;
+      case 'isRepaintBoundary':
+        return isRepaintBoundary;
+      case 'debugLayer':
+        return debugLayer;
+      case 'needsCompositing':
+        return needsCompositing;
+      case 'debugNeedsPaint':
+        return debugNeedsPaint;
+      case 'debugSemantics':
+        return debugSemantics;
+      case 'depth':
+        return depth;
+      case 'attached':
+        return attached;
+      case 'parent':
+        return parent;
       case 'computeDryLayout':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.computeDryLayout(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => computeDryLayout(positionalArgs[0]);
       case 'performLayout':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.performLayout();
+        return ({positionalArgs, namedArgs, typeArgs}) => performLayout();
       case 'paint':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.paint(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => paint(positionalArgs[0], positionalArgs[1]);
       case 'describeApproximatePaintClip':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.describeApproximatePaintClip(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => describeApproximatePaintClip(positionalArgs[0]);
       case 'toStringShort':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toStringShort();
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'paintOverflowIndicator':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.paintOverflowIndicator(positionalArgs[0], positionalArgs[1], positionalArgs[2], positionalArgs[3], overflowHints : namedArgs.containsKey('overflowHints') ? List<DiagnosticsNode>.from(namedArgs['overflowHints']) : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => paintOverflowIndicator(
+            positionalArgs[0], positionalArgs[1], positionalArgs[2], positionalArgs[3],
+            overflowHints:
+                namedArgs.containsKey('overflowHints') ? List<DiagnosticsNode>.from(namedArgs['overflowHints']) : null);
       case 'reassemble':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.reassemble();
+        return ({positionalArgs, namedArgs, typeArgs}) => reassemble();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
       case 'computeMinIntrinsicWidth':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.computeMinIntrinsicWidth(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => computeMinIntrinsicWidth(positionalArgs[0]);
       case 'computeMaxIntrinsicWidth':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.computeMaxIntrinsicWidth(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => computeMaxIntrinsicWidth(positionalArgs[0]);
       case 'computeMinIntrinsicHeight':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.computeMinIntrinsicHeight(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => computeMinIntrinsicHeight(positionalArgs[0]);
       case 'computeMaxIntrinsicHeight':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.computeMaxIntrinsicHeight(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => computeMaxIntrinsicHeight(positionalArgs[0]);
       case 'computeDistanceToActualBaseline':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.computeDistanceToActualBaseline(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => computeDistanceToActualBaseline(positionalArgs[0]);
       case 'hitTestChildren':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.hitTestChildren(positionalArgs[0], position : namedArgs.containsKey('position') ? namedArgs['position'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => hitTestChildren(positionalArgs[0],
+            position: namedArgs.containsKey('position') ? namedArgs['position'] : null);
+      case 'debugValidateChild':
+        return ({positionalArgs, namedArgs, typeArgs}) => debugValidateChild(positionalArgs[0]);
+      case 'attach':
+        return ({positionalArgs, namedArgs, typeArgs}) => attach(positionalArgs[0]);
+      case 'detach':
+        return ({positionalArgs, namedArgs, typeArgs}) => detach();
+      case 'redepthChildren':
+        return ({positionalArgs, namedArgs, typeArgs}) => redepthChildren();
+      case 'visitChildren':
+        return ({positionalArgs, namedArgs, typeArgs}) => visitChildren(positionalArgs[0]);
+      case 'debugDescribeChildren':
+        return ({positionalArgs, namedArgs, typeArgs}) => debugDescribeChildren();
       case 'setupParentData':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.setupParentData(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => setupParentData(positionalArgs[0]);
       case 'getMinIntrinsicWidth':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.getMinIntrinsicWidth(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => getMinIntrinsicWidth(positionalArgs[0]);
       case 'getMaxIntrinsicWidth':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.getMaxIntrinsicWidth(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => getMaxIntrinsicWidth(positionalArgs[0]);
       case 'getMinIntrinsicHeight':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.getMinIntrinsicHeight(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => getMinIntrinsicHeight(positionalArgs[0]);
       case 'getMaxIntrinsicHeight':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.getMaxIntrinsicHeight(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => getMaxIntrinsicHeight(positionalArgs[0]);
       case 'getDryLayout':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.getDryLayout(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => getDryLayout(positionalArgs[0]);
       case 'debugCannotComputeDryLayout':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugCannotComputeDryLayout(reason : namedArgs.containsKey('reason') ? namedArgs['reason'] : null, error : namedArgs.containsKey('error') ? namedArgs['error'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugCannotComputeDryLayout(
+            reason: namedArgs.containsKey('reason') ? namedArgs['reason'] : null,
+            error: namedArgs.containsKey('error') ? namedArgs['error'] : null);
       case 'debugAdoptSize':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugAdoptSize(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugAdoptSize(positionalArgs[0]);
       case 'debugResetSize':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugResetSize();
+        return ({positionalArgs, namedArgs, typeArgs}) => debugResetSize();
       case 'getDistanceToBaseline':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.getDistanceToBaseline(positionalArgs[0], onlyReal : namedArgs.containsKey('onlyReal') ? namedArgs['onlyReal'] : false);
+        return ({positionalArgs, namedArgs, typeArgs}) => getDistanceToBaseline(positionalArgs[0],
+            onlyReal: namedArgs.containsKey('onlyReal') ? namedArgs['onlyReal'] : false);
       case 'debugAssertDoesMeetConstraints':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugAssertDoesMeetConstraints();
+        return ({positionalArgs, namedArgs, typeArgs}) => debugAssertDoesMeetConstraints();
       case 'markNeedsLayout':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.markNeedsLayout();
+        return ({positionalArgs, namedArgs, typeArgs}) => markNeedsLayout();
       case 'performResize':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.performResize();
+        return ({positionalArgs, namedArgs, typeArgs}) => performResize();
       case 'hitTest':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.hitTest(positionalArgs[0], position : namedArgs.containsKey('position') ? namedArgs['position'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            hitTest(positionalArgs[0], position: namedArgs.containsKey('position') ? namedArgs['position'] : null);
       case 'applyPaintTransform':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.applyPaintTransform(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => applyPaintTransform(positionalArgs[0], positionalArgs[1]);
       case 'globalToLocal':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.globalToLocal(positionalArgs[0], ancestor : namedArgs.containsKey('ancestor') ? namedArgs['ancestor'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => globalToLocal(positionalArgs[0],
+            ancestor: namedArgs.containsKey('ancestor') ? namedArgs['ancestor'] : null);
       case 'localToGlobal':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.localToGlobal(positionalArgs[0], ancestor : namedArgs.containsKey('ancestor') ? namedArgs['ancestor'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => localToGlobal(positionalArgs[0],
+            ancestor: namedArgs.containsKey('ancestor') ? namedArgs['ancestor'] : null);
       case 'handleEvent':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.handleEvent(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => handleEvent(positionalArgs[0], positionalArgs[1]);
       case 'debugHandleEvent':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugHandleEvent(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugHandleEvent(positionalArgs[0], positionalArgs[1]);
       case 'debugPaint':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugPaint(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugPaint(positionalArgs[0], positionalArgs[1]);
+      case 'adoptChild':
+        return ({positionalArgs, namedArgs, typeArgs}) => adoptChild(positionalArgs[0]);
+      case 'dropChild':
+        return ({positionalArgs, namedArgs, typeArgs}) => dropChild(positionalArgs[0]);
+      case 'markNeedsLayoutForSizedByParentChange':
+        return ({positionalArgs, namedArgs, typeArgs}) => markNeedsLayoutForSizedByParentChange();
+      case 'scheduleInitialLayout':
+        return ({positionalArgs, namedArgs, typeArgs}) => scheduleInitialLayout();
+      case 'layout':
+        return ({positionalArgs, namedArgs, typeArgs}) => layout(positionalArgs[0],
+            parentUsesSize: namedArgs.containsKey('parentUsesSize') ? namedArgs['parentUsesSize'] : false);
+      case 'rotate':
+        return ({positionalArgs, namedArgs, typeArgs}) => rotate(
+            oldAngle: namedArgs.containsKey('oldAngle') ? namedArgs['oldAngle'] : null,
+            newAngle: namedArgs.containsKey('newAngle') ? namedArgs['newAngle'] : null,
+            time: namedArgs.containsKey('time') ? namedArgs['time'] : null);
+      case 'debugRegisterRepaintBoundaryPaint':
+        return ({positionalArgs, namedArgs, typeArgs}) => debugRegisterRepaintBoundaryPaint(
+            includedParent: namedArgs.containsKey('includedParent') ? namedArgs['includedParent'] : true,
+            includedChild: namedArgs.containsKey('includedChild') ? namedArgs['includedChild'] : false);
+      case 'markNeedsCompositingBitsUpdate':
+        return ({positionalArgs, namedArgs, typeArgs}) => markNeedsCompositingBitsUpdate();
+      case 'markNeedsPaint':
+        return ({positionalArgs, namedArgs, typeArgs}) => markNeedsPaint();
+      case 'scheduleInitialPaint':
+        return ({positionalArgs, namedArgs, typeArgs}) => scheduleInitialPaint(positionalArgs[0]);
+      case 'replaceRootLayer':
+        return ({positionalArgs, namedArgs, typeArgs}) => replaceRootLayer(positionalArgs[0]);
+      case 'getTransformTo':
+        return ({positionalArgs, namedArgs, typeArgs}) => getTransformTo(positionalArgs[0]);
+      case 'describeSemanticsClip':
+        return ({positionalArgs, namedArgs, typeArgs}) => describeSemanticsClip(positionalArgs[0]);
+      case 'scheduleInitialSemantics':
+        return ({positionalArgs, namedArgs, typeArgs}) => scheduleInitialSemantics();
+      case 'sendSemanticsEvent':
+        return ({positionalArgs, namedArgs, typeArgs}) => sendSemanticsEvent(positionalArgs[0]);
+      case 'clearSemantics':
+        return ({positionalArgs, namedArgs, typeArgs}) => clearSemantics();
+      case 'markNeedsSemanticsUpdate':
+        return ({positionalArgs, namedArgs, typeArgs}) => markNeedsSemanticsUpdate();
+      case 'visitChildrenForSemantics':
+        return ({positionalArgs, namedArgs, typeArgs}) => visitChildrenForSemantics(positionalArgs[0]);
+      case 'assembleSemanticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            assembleSemanticsNode(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+      case 'toStringDeep':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
+            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : '',
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toStringShallow':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
+            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'showOnScreen':
+        return ({positionalArgs, namedArgs, typeArgs}) => showOnScreen(
+            descendant: namedArgs.containsKey('descendant') ? namedArgs['descendant'] : null,
+            rect: namedArgs.containsKey('rect') ? namedArgs['rect'] : null,
+            duration: namedArgs.containsKey('duration') ? namedArgs['duration'] : Duration.zero,
+            curve: namedArgs.containsKey('curve') ? namedArgs['curve'] : Curves.ease);
+      case 'describeForError':
+        return ({positionalArgs, namedArgs, typeArgs}) => describeForError(positionalArgs[0],
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : DiagnosticsTreeStyle.shallow);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -524,11 +1102,17 @@ extension RenderUnconstrainedBoxBinding on RenderUnconstrainedBox {
 
   void htAssign(String varName, dynamic value) {
     switch (varName) {
+      case 'parentData':
+        parentData = value;
+        break;
+      case 'debugCreator':
+        debugCreator = value;
+        break;
       case 'constrainedAxis':
-        this.constrainedAxis = value;
+        constrainedAxis = value;
         break;
       case 'clipBehavior':
-        this.clipBehavior = value;
+        clipBehavior = value;
         break;
       default:
         throw HTErrorUndefined(varName);
@@ -543,7 +1127,11 @@ class RenderSizedOverflowBoxAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'RenderSizedOverflowBox':
-        return ({positionalArgs, namedArgs, typeArgs}) => RenderSizedOverflowBox(child : namedArgs.containsKey('child') ? namedArgs['child'] : null, requestedSize : namedArgs['requestedSize'], alignment : namedArgs.containsKey('alignment') ? namedArgs['alignment'] : Alignment.center, textDirection : namedArgs.containsKey('textDirection') ? namedArgs['textDirection'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => RenderSizedOverflowBox(
+            child: namedArgs.containsKey('child') ? namedArgs['child'] : null,
+            requestedSize: namedArgs['requestedSize'],
+            alignment: namedArgs.containsKey('alignment') ? namedArgs['alignment'] : Alignment.center,
+            textDirection: namedArgs.containsKey('textDirection') ? namedArgs['textDirection'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -559,7 +1147,12 @@ class RenderSizedOverflowBoxAutoBinding extends HTExternalClass {
     (instance as RenderSizedOverflowBox).htAssign(id, value);
   }
 
-
+  static Map<String, HTExternalFunctionTypedef> functionWrapper() {
+    return <String, HTExternalFunctionTypedef>{
+      'RenderObjectVisitor': (HTFunction function) =>
+          (child) => function.call(positionalArgs: [child], namedArgs: const {}),
+    };
+  }
 }
 
 extension RenderSizedOverflowBoxBinding on RenderSizedOverflowBox {
@@ -567,12 +1160,18 @@ extension RenderSizedOverflowBoxBinding on RenderSizedOverflowBox {
     switch (varName) {
       case 'typeid':
         return HTTypeId('RenderSizedOverflowBox');
+      case 'parentData':
+        return parentData;
+      case 'debugCreator':
+        return debugCreator;
       case 'requestedSize':
         return requestedSize;
       case 'alignment':
         return alignment;
       case 'textDirection':
         return textDirection;
+      case 'child':
+        return child;
       case 'hasSize':
         return hasSize;
       case 'size':
@@ -583,66 +1182,191 @@ extension RenderSizedOverflowBoxBinding on RenderSizedOverflowBox {
         return constraints;
       case 'paintBounds':
         return paintBounds;
+      case 'debugDoingThisResize':
+        return debugDoingThisResize;
+      case 'debugDoingThisLayout':
+        return debugDoingThisLayout;
+      case 'debugCanParentUseSize':
+        return debugCanParentUseSize;
+      case 'owner':
+        return owner;
+      case 'debugNeedsLayout':
+        return debugNeedsLayout;
+      case 'debugDoingThisLayoutWithCallback':
+        return debugDoingThisLayoutWithCallback;
+      case 'debugDoingThisPaint':
+        return debugDoingThisPaint;
+      case 'isRepaintBoundary':
+        return isRepaintBoundary;
+      case 'debugLayer':
+        return debugLayer;
+      case 'needsCompositing':
+        return needsCompositing;
+      case 'debugNeedsPaint':
+        return debugNeedsPaint;
+      case 'debugSemantics':
+        return debugSemantics;
+      case 'depth':
+        return depth;
+      case 'attached':
+        return attached;
+      case 'parent':
+        return parent;
       case 'computeMinIntrinsicWidth':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.computeMinIntrinsicWidth(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => computeMinIntrinsicWidth(positionalArgs[0]);
       case 'computeMaxIntrinsicWidth':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.computeMaxIntrinsicWidth(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => computeMaxIntrinsicWidth(positionalArgs[0]);
       case 'computeMinIntrinsicHeight':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.computeMinIntrinsicHeight(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => computeMinIntrinsicHeight(positionalArgs[0]);
       case 'computeMaxIntrinsicHeight':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.computeMaxIntrinsicHeight(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => computeMaxIntrinsicHeight(positionalArgs[0]);
       case 'computeDistanceToActualBaseline':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.computeDistanceToActualBaseline(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => computeDistanceToActualBaseline(positionalArgs[0]);
       case 'computeDryLayout':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.computeDryLayout(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => computeDryLayout(positionalArgs[0]);
       case 'performLayout':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.performLayout();
+        return ({positionalArgs, namedArgs, typeArgs}) => performLayout();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
       case 'paint':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.paint(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => paint(positionalArgs[0], positionalArgs[1]);
       case 'hitTestChildren':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.hitTestChildren(positionalArgs[0], position : namedArgs.containsKey('position') ? namedArgs['position'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => hitTestChildren(positionalArgs[0],
+            position: namedArgs.containsKey('position') ? namedArgs['position'] : null);
+      case 'debugValidateChild':
+        return ({positionalArgs, namedArgs, typeArgs}) => debugValidateChild(positionalArgs[0]);
+      case 'attach':
+        return ({positionalArgs, namedArgs, typeArgs}) => attach(positionalArgs[0]);
+      case 'detach':
+        return ({positionalArgs, namedArgs, typeArgs}) => detach();
+      case 'redepthChildren':
+        return ({positionalArgs, namedArgs, typeArgs}) => redepthChildren();
+      case 'visitChildren':
+        return ({positionalArgs, namedArgs, typeArgs}) => visitChildren(positionalArgs[0]);
+      case 'debugDescribeChildren':
+        return ({positionalArgs, namedArgs, typeArgs}) => debugDescribeChildren();
       case 'setupParentData':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.setupParentData(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => setupParentData(positionalArgs[0]);
       case 'getMinIntrinsicWidth':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.getMinIntrinsicWidth(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => getMinIntrinsicWidth(positionalArgs[0]);
       case 'getMaxIntrinsicWidth':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.getMaxIntrinsicWidth(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => getMaxIntrinsicWidth(positionalArgs[0]);
       case 'getMinIntrinsicHeight':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.getMinIntrinsicHeight(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => getMinIntrinsicHeight(positionalArgs[0]);
       case 'getMaxIntrinsicHeight':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.getMaxIntrinsicHeight(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => getMaxIntrinsicHeight(positionalArgs[0]);
       case 'getDryLayout':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.getDryLayout(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => getDryLayout(positionalArgs[0]);
       case 'debugCannotComputeDryLayout':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugCannotComputeDryLayout(reason : namedArgs.containsKey('reason') ? namedArgs['reason'] : null, error : namedArgs.containsKey('error') ? namedArgs['error'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugCannotComputeDryLayout(
+            reason: namedArgs.containsKey('reason') ? namedArgs['reason'] : null,
+            error: namedArgs.containsKey('error') ? namedArgs['error'] : null);
       case 'debugAdoptSize':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugAdoptSize(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugAdoptSize(positionalArgs[0]);
       case 'debugResetSize':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugResetSize();
+        return ({positionalArgs, namedArgs, typeArgs}) => debugResetSize();
       case 'getDistanceToBaseline':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.getDistanceToBaseline(positionalArgs[0], onlyReal : namedArgs.containsKey('onlyReal') ? namedArgs['onlyReal'] : false);
+        return ({positionalArgs, namedArgs, typeArgs}) => getDistanceToBaseline(positionalArgs[0],
+            onlyReal: namedArgs.containsKey('onlyReal') ? namedArgs['onlyReal'] : false);
       case 'debugAssertDoesMeetConstraints':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugAssertDoesMeetConstraints();
+        return ({positionalArgs, namedArgs, typeArgs}) => debugAssertDoesMeetConstraints();
       case 'markNeedsLayout':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.markNeedsLayout();
+        return ({positionalArgs, namedArgs, typeArgs}) => markNeedsLayout();
       case 'performResize':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.performResize();
+        return ({positionalArgs, namedArgs, typeArgs}) => performResize();
       case 'hitTest':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.hitTest(positionalArgs[0], position : namedArgs.containsKey('position') ? namedArgs['position'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            hitTest(positionalArgs[0], position: namedArgs.containsKey('position') ? namedArgs['position'] : null);
       case 'applyPaintTransform':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.applyPaintTransform(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => applyPaintTransform(positionalArgs[0], positionalArgs[1]);
       case 'globalToLocal':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.globalToLocal(positionalArgs[0], ancestor : namedArgs.containsKey('ancestor') ? namedArgs['ancestor'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => globalToLocal(positionalArgs[0],
+            ancestor: namedArgs.containsKey('ancestor') ? namedArgs['ancestor'] : null);
       case 'localToGlobal':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.localToGlobal(positionalArgs[0], ancestor : namedArgs.containsKey('ancestor') ? namedArgs['ancestor'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => localToGlobal(positionalArgs[0],
+            ancestor: namedArgs.containsKey('ancestor') ? namedArgs['ancestor'] : null);
       case 'handleEvent':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.handleEvent(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => handleEvent(positionalArgs[0], positionalArgs[1]);
       case 'debugHandleEvent':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugHandleEvent(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugHandleEvent(positionalArgs[0], positionalArgs[1]);
       case 'debugPaint':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugPaint(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugPaint(positionalArgs[0], positionalArgs[1]);
+      case 'reassemble':
+        return ({positionalArgs, namedArgs, typeArgs}) => reassemble();
+      case 'adoptChild':
+        return ({positionalArgs, namedArgs, typeArgs}) => adoptChild(positionalArgs[0]);
+      case 'dropChild':
+        return ({positionalArgs, namedArgs, typeArgs}) => dropChild(positionalArgs[0]);
+      case 'markNeedsLayoutForSizedByParentChange':
+        return ({positionalArgs, namedArgs, typeArgs}) => markNeedsLayoutForSizedByParentChange();
+      case 'scheduleInitialLayout':
+        return ({positionalArgs, namedArgs, typeArgs}) => scheduleInitialLayout();
+      case 'layout':
+        return ({positionalArgs, namedArgs, typeArgs}) => layout(positionalArgs[0],
+            parentUsesSize: namedArgs.containsKey('parentUsesSize') ? namedArgs['parentUsesSize'] : false);
+      case 'rotate':
+        return ({positionalArgs, namedArgs, typeArgs}) => rotate(
+            oldAngle: namedArgs.containsKey('oldAngle') ? namedArgs['oldAngle'] : null,
+            newAngle: namedArgs.containsKey('newAngle') ? namedArgs['newAngle'] : null,
+            time: namedArgs.containsKey('time') ? namedArgs['time'] : null);
+      case 'debugRegisterRepaintBoundaryPaint':
+        return ({positionalArgs, namedArgs, typeArgs}) => debugRegisterRepaintBoundaryPaint(
+            includedParent: namedArgs.containsKey('includedParent') ? namedArgs['includedParent'] : true,
+            includedChild: namedArgs.containsKey('includedChild') ? namedArgs['includedChild'] : false);
+      case 'markNeedsCompositingBitsUpdate':
+        return ({positionalArgs, namedArgs, typeArgs}) => markNeedsCompositingBitsUpdate();
+      case 'markNeedsPaint':
+        return ({positionalArgs, namedArgs, typeArgs}) => markNeedsPaint();
+      case 'scheduleInitialPaint':
+        return ({positionalArgs, namedArgs, typeArgs}) => scheduleInitialPaint(positionalArgs[0]);
+      case 'replaceRootLayer':
+        return ({positionalArgs, namedArgs, typeArgs}) => replaceRootLayer(positionalArgs[0]);
+      case 'getTransformTo':
+        return ({positionalArgs, namedArgs, typeArgs}) => getTransformTo(positionalArgs[0]);
+      case 'describeApproximatePaintClip':
+        return ({positionalArgs, namedArgs, typeArgs}) => describeApproximatePaintClip(positionalArgs[0]);
+      case 'describeSemanticsClip':
+        return ({positionalArgs, namedArgs, typeArgs}) => describeSemanticsClip(positionalArgs[0]);
+      case 'scheduleInitialSemantics':
+        return ({positionalArgs, namedArgs, typeArgs}) => scheduleInitialSemantics();
+      case 'sendSemanticsEvent':
+        return ({positionalArgs, namedArgs, typeArgs}) => sendSemanticsEvent(positionalArgs[0]);
+      case 'clearSemantics':
+        return ({positionalArgs, namedArgs, typeArgs}) => clearSemantics();
+      case 'markNeedsSemanticsUpdate':
+        return ({positionalArgs, namedArgs, typeArgs}) => markNeedsSemanticsUpdate();
+      case 'visitChildrenForSemantics':
+        return ({positionalArgs, namedArgs, typeArgs}) => visitChildrenForSemantics(positionalArgs[0]);
+      case 'assembleSemanticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            assembleSemanticsNode(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
+      case 'toStringShort':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+      case 'toStringDeep':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
+            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : '',
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toStringShallow':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
+            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'showOnScreen':
+        return ({positionalArgs, namedArgs, typeArgs}) => showOnScreen(
+            descendant: namedArgs.containsKey('descendant') ? namedArgs['descendant'] : null,
+            rect: namedArgs.containsKey('rect') ? namedArgs['rect'] : null,
+            duration: namedArgs.containsKey('duration') ? namedArgs['duration'] : Duration.zero,
+            curve: namedArgs.containsKey('curve') ? namedArgs['curve'] : Curves.ease);
+      case 'describeForError':
+        return ({positionalArgs, namedArgs, typeArgs}) => describeForError(positionalArgs[0],
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : DiagnosticsTreeStyle.shallow);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -650,8 +1374,14 @@ extension RenderSizedOverflowBoxBinding on RenderSizedOverflowBox {
 
   void htAssign(String varName, dynamic value) {
     switch (varName) {
+      case 'parentData':
+        parentData = value;
+        break;
+      case 'debugCreator':
+        debugCreator = value;
+        break;
       case 'requestedSize':
-        this.requestedSize = value;
+        requestedSize = value;
         break;
       default:
         throw HTErrorUndefined(varName);
@@ -666,7 +1396,12 @@ class RenderFractionallySizedOverflowBoxAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'RenderFractionallySizedOverflowBox':
-        return ({positionalArgs, namedArgs, typeArgs}) => RenderFractionallySizedOverflowBox(child : namedArgs.containsKey('child') ? namedArgs['child'] : null, widthFactor : namedArgs.containsKey('widthFactor') ? namedArgs['widthFactor'] : null, heightFactor : namedArgs.containsKey('heightFactor') ? namedArgs['heightFactor'] : null, alignment : namedArgs.containsKey('alignment') ? namedArgs['alignment'] : Alignment.center, textDirection : namedArgs.containsKey('textDirection') ? namedArgs['textDirection'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => RenderFractionallySizedOverflowBox(
+            child: namedArgs.containsKey('child') ? namedArgs['child'] : null,
+            widthFactor: namedArgs.containsKey('widthFactor') ? namedArgs['widthFactor'] : null,
+            heightFactor: namedArgs.containsKey('heightFactor') ? namedArgs['heightFactor'] : null,
+            alignment: namedArgs.containsKey('alignment') ? namedArgs['alignment'] : Alignment.center,
+            textDirection: namedArgs.containsKey('textDirection') ? namedArgs['textDirection'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -682,7 +1417,12 @@ class RenderFractionallySizedOverflowBoxAutoBinding extends HTExternalClass {
     (instance as RenderFractionallySizedOverflowBox).htAssign(id, value);
   }
 
-
+  static Map<String, HTExternalFunctionTypedef> functionWrapper() {
+    return <String, HTExternalFunctionTypedef>{
+      'RenderObjectVisitor': (HTFunction function) =>
+          (child) => function.call(positionalArgs: [child], namedArgs: const {}),
+    };
+  }
 }
 
 extension RenderFractionallySizedOverflowBoxBinding on RenderFractionallySizedOverflowBox {
@@ -690,6 +1430,10 @@ extension RenderFractionallySizedOverflowBoxBinding on RenderFractionallySizedOv
     switch (varName) {
       case 'typeid':
         return HTTypeId('RenderFractionallySizedOverflowBox');
+      case 'parentData':
+        return parentData;
+      case 'debugCreator':
+        return debugCreator;
       case 'widthFactor':
         return widthFactor;
       case 'heightFactor':
@@ -698,6 +1442,8 @@ extension RenderFractionallySizedOverflowBoxBinding on RenderFractionallySizedOv
         return alignment;
       case 'textDirection':
         return textDirection;
+      case 'child':
+        return child;
       case 'hasSize':
         return hasSize;
       case 'size':
@@ -708,66 +1454,191 @@ extension RenderFractionallySizedOverflowBoxBinding on RenderFractionallySizedOv
         return constraints;
       case 'paintBounds':
         return paintBounds;
+      case 'debugDoingThisResize':
+        return debugDoingThisResize;
+      case 'debugDoingThisLayout':
+        return debugDoingThisLayout;
+      case 'debugCanParentUseSize':
+        return debugCanParentUseSize;
+      case 'owner':
+        return owner;
+      case 'debugNeedsLayout':
+        return debugNeedsLayout;
+      case 'debugDoingThisLayoutWithCallback':
+        return debugDoingThisLayoutWithCallback;
+      case 'debugDoingThisPaint':
+        return debugDoingThisPaint;
+      case 'isRepaintBoundary':
+        return isRepaintBoundary;
+      case 'debugLayer':
+        return debugLayer;
+      case 'needsCompositing':
+        return needsCompositing;
+      case 'debugNeedsPaint':
+        return debugNeedsPaint;
+      case 'debugSemantics':
+        return debugSemantics;
+      case 'depth':
+        return depth;
+      case 'attached':
+        return attached;
+      case 'parent':
+        return parent;
       case 'computeMinIntrinsicWidth':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.computeMinIntrinsicWidth(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => computeMinIntrinsicWidth(positionalArgs[0]);
       case 'computeMaxIntrinsicWidth':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.computeMaxIntrinsicWidth(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => computeMaxIntrinsicWidth(positionalArgs[0]);
       case 'computeMinIntrinsicHeight':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.computeMinIntrinsicHeight(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => computeMinIntrinsicHeight(positionalArgs[0]);
       case 'computeMaxIntrinsicHeight':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.computeMaxIntrinsicHeight(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => computeMaxIntrinsicHeight(positionalArgs[0]);
       case 'computeDryLayout':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.computeDryLayout(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => computeDryLayout(positionalArgs[0]);
       case 'performLayout':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.performLayout();
+        return ({positionalArgs, namedArgs, typeArgs}) => performLayout();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
       case 'computeDistanceToActualBaseline':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.computeDistanceToActualBaseline(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => computeDistanceToActualBaseline(positionalArgs[0]);
       case 'paint':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.paint(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => paint(positionalArgs[0], positionalArgs[1]);
       case 'hitTestChildren':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.hitTestChildren(positionalArgs[0], position : namedArgs.containsKey('position') ? namedArgs['position'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => hitTestChildren(positionalArgs[0],
+            position: namedArgs.containsKey('position') ? namedArgs['position'] : null);
+      case 'debugValidateChild':
+        return ({positionalArgs, namedArgs, typeArgs}) => debugValidateChild(positionalArgs[0]);
+      case 'attach':
+        return ({positionalArgs, namedArgs, typeArgs}) => attach(positionalArgs[0]);
+      case 'detach':
+        return ({positionalArgs, namedArgs, typeArgs}) => detach();
+      case 'redepthChildren':
+        return ({positionalArgs, namedArgs, typeArgs}) => redepthChildren();
+      case 'visitChildren':
+        return ({positionalArgs, namedArgs, typeArgs}) => visitChildren(positionalArgs[0]);
+      case 'debugDescribeChildren':
+        return ({positionalArgs, namedArgs, typeArgs}) => debugDescribeChildren();
       case 'setupParentData':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.setupParentData(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => setupParentData(positionalArgs[0]);
       case 'getMinIntrinsicWidth':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.getMinIntrinsicWidth(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => getMinIntrinsicWidth(positionalArgs[0]);
       case 'getMaxIntrinsicWidth':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.getMaxIntrinsicWidth(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => getMaxIntrinsicWidth(positionalArgs[0]);
       case 'getMinIntrinsicHeight':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.getMinIntrinsicHeight(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => getMinIntrinsicHeight(positionalArgs[0]);
       case 'getMaxIntrinsicHeight':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.getMaxIntrinsicHeight(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => getMaxIntrinsicHeight(positionalArgs[0]);
       case 'getDryLayout':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.getDryLayout(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => getDryLayout(positionalArgs[0]);
       case 'debugCannotComputeDryLayout':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugCannotComputeDryLayout(reason : namedArgs.containsKey('reason') ? namedArgs['reason'] : null, error : namedArgs.containsKey('error') ? namedArgs['error'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugCannotComputeDryLayout(
+            reason: namedArgs.containsKey('reason') ? namedArgs['reason'] : null,
+            error: namedArgs.containsKey('error') ? namedArgs['error'] : null);
       case 'debugAdoptSize':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugAdoptSize(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugAdoptSize(positionalArgs[0]);
       case 'debugResetSize':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugResetSize();
+        return ({positionalArgs, namedArgs, typeArgs}) => debugResetSize();
       case 'getDistanceToBaseline':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.getDistanceToBaseline(positionalArgs[0], onlyReal : namedArgs.containsKey('onlyReal') ? namedArgs['onlyReal'] : false);
+        return ({positionalArgs, namedArgs, typeArgs}) => getDistanceToBaseline(positionalArgs[0],
+            onlyReal: namedArgs.containsKey('onlyReal') ? namedArgs['onlyReal'] : false);
       case 'debugAssertDoesMeetConstraints':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugAssertDoesMeetConstraints();
+        return ({positionalArgs, namedArgs, typeArgs}) => debugAssertDoesMeetConstraints();
       case 'markNeedsLayout':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.markNeedsLayout();
+        return ({positionalArgs, namedArgs, typeArgs}) => markNeedsLayout();
       case 'performResize':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.performResize();
+        return ({positionalArgs, namedArgs, typeArgs}) => performResize();
       case 'hitTest':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.hitTest(positionalArgs[0], position : namedArgs.containsKey('position') ? namedArgs['position'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            hitTest(positionalArgs[0], position: namedArgs.containsKey('position') ? namedArgs['position'] : null);
       case 'applyPaintTransform':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.applyPaintTransform(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => applyPaintTransform(positionalArgs[0], positionalArgs[1]);
       case 'globalToLocal':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.globalToLocal(positionalArgs[0], ancestor : namedArgs.containsKey('ancestor') ? namedArgs['ancestor'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => globalToLocal(positionalArgs[0],
+            ancestor: namedArgs.containsKey('ancestor') ? namedArgs['ancestor'] : null);
       case 'localToGlobal':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.localToGlobal(positionalArgs[0], ancestor : namedArgs.containsKey('ancestor') ? namedArgs['ancestor'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => localToGlobal(positionalArgs[0],
+            ancestor: namedArgs.containsKey('ancestor') ? namedArgs['ancestor'] : null);
       case 'handleEvent':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.handleEvent(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => handleEvent(positionalArgs[0], positionalArgs[1]);
       case 'debugHandleEvent':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugHandleEvent(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugHandleEvent(positionalArgs[0], positionalArgs[1]);
       case 'debugPaint':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugPaint(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugPaint(positionalArgs[0], positionalArgs[1]);
+      case 'reassemble':
+        return ({positionalArgs, namedArgs, typeArgs}) => reassemble();
+      case 'adoptChild':
+        return ({positionalArgs, namedArgs, typeArgs}) => adoptChild(positionalArgs[0]);
+      case 'dropChild':
+        return ({positionalArgs, namedArgs, typeArgs}) => dropChild(positionalArgs[0]);
+      case 'markNeedsLayoutForSizedByParentChange':
+        return ({positionalArgs, namedArgs, typeArgs}) => markNeedsLayoutForSizedByParentChange();
+      case 'scheduleInitialLayout':
+        return ({positionalArgs, namedArgs, typeArgs}) => scheduleInitialLayout();
+      case 'layout':
+        return ({positionalArgs, namedArgs, typeArgs}) => layout(positionalArgs[0],
+            parentUsesSize: namedArgs.containsKey('parentUsesSize') ? namedArgs['parentUsesSize'] : false);
+      case 'rotate':
+        return ({positionalArgs, namedArgs, typeArgs}) => rotate(
+            oldAngle: namedArgs.containsKey('oldAngle') ? namedArgs['oldAngle'] : null,
+            newAngle: namedArgs.containsKey('newAngle') ? namedArgs['newAngle'] : null,
+            time: namedArgs.containsKey('time') ? namedArgs['time'] : null);
+      case 'debugRegisterRepaintBoundaryPaint':
+        return ({positionalArgs, namedArgs, typeArgs}) => debugRegisterRepaintBoundaryPaint(
+            includedParent: namedArgs.containsKey('includedParent') ? namedArgs['includedParent'] : true,
+            includedChild: namedArgs.containsKey('includedChild') ? namedArgs['includedChild'] : false);
+      case 'markNeedsCompositingBitsUpdate':
+        return ({positionalArgs, namedArgs, typeArgs}) => markNeedsCompositingBitsUpdate();
+      case 'markNeedsPaint':
+        return ({positionalArgs, namedArgs, typeArgs}) => markNeedsPaint();
+      case 'scheduleInitialPaint':
+        return ({positionalArgs, namedArgs, typeArgs}) => scheduleInitialPaint(positionalArgs[0]);
+      case 'replaceRootLayer':
+        return ({positionalArgs, namedArgs, typeArgs}) => replaceRootLayer(positionalArgs[0]);
+      case 'getTransformTo':
+        return ({positionalArgs, namedArgs, typeArgs}) => getTransformTo(positionalArgs[0]);
+      case 'describeApproximatePaintClip':
+        return ({positionalArgs, namedArgs, typeArgs}) => describeApproximatePaintClip(positionalArgs[0]);
+      case 'describeSemanticsClip':
+        return ({positionalArgs, namedArgs, typeArgs}) => describeSemanticsClip(positionalArgs[0]);
+      case 'scheduleInitialSemantics':
+        return ({positionalArgs, namedArgs, typeArgs}) => scheduleInitialSemantics();
+      case 'sendSemanticsEvent':
+        return ({positionalArgs, namedArgs, typeArgs}) => sendSemanticsEvent(positionalArgs[0]);
+      case 'clearSemantics':
+        return ({positionalArgs, namedArgs, typeArgs}) => clearSemantics();
+      case 'markNeedsSemanticsUpdate':
+        return ({positionalArgs, namedArgs, typeArgs}) => markNeedsSemanticsUpdate();
+      case 'visitChildrenForSemantics':
+        return ({positionalArgs, namedArgs, typeArgs}) => visitChildrenForSemantics(positionalArgs[0]);
+      case 'assembleSemanticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            assembleSemanticsNode(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
+      case 'toStringShort':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+      case 'toStringDeep':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
+            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : '',
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toStringShallow':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
+            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'showOnScreen':
+        return ({positionalArgs, namedArgs, typeArgs}) => showOnScreen(
+            descendant: namedArgs.containsKey('descendant') ? namedArgs['descendant'] : null,
+            rect: namedArgs.containsKey('rect') ? namedArgs['rect'] : null,
+            duration: namedArgs.containsKey('duration') ? namedArgs['duration'] : Duration.zero,
+            curve: namedArgs.containsKey('curve') ? namedArgs['curve'] : Curves.ease);
+      case 'describeForError':
+        return ({positionalArgs, namedArgs, typeArgs}) => describeForError(positionalArgs[0],
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : DiagnosticsTreeStyle.shallow);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -775,11 +1646,17 @@ extension RenderFractionallySizedOverflowBoxBinding on RenderFractionallySizedOv
 
   void htAssign(String varName, dynamic value) {
     switch (varName) {
+      case 'parentData':
+        parentData = value;
+        break;
+      case 'debugCreator':
+        debugCreator = value;
+        break;
       case 'widthFactor':
-        this.widthFactor = value;
+        widthFactor = value;
         break;
       case 'heightFactor':
-        this.heightFactor = value;
+        heightFactor = value;
         break;
       default:
         throw HTErrorUndefined(varName);
@@ -794,7 +1671,8 @@ class RenderCustomSingleChildLayoutBoxAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'RenderCustomSingleChildLayoutBox':
-        return ({positionalArgs, namedArgs, typeArgs}) => RenderCustomSingleChildLayoutBox(child : namedArgs.containsKey('child') ? namedArgs['child'] : null, delegate : namedArgs['delegate']);
+        return ({positionalArgs, namedArgs, typeArgs}) => RenderCustomSingleChildLayoutBox(
+            child: namedArgs.containsKey('child') ? namedArgs['child'] : null, delegate: namedArgs['delegate']);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -810,7 +1688,12 @@ class RenderCustomSingleChildLayoutBoxAutoBinding extends HTExternalClass {
     (instance as RenderCustomSingleChildLayoutBox).htAssign(id, value);
   }
 
-
+  static Map<String, HTExternalFunctionTypedef> functionWrapper() {
+    return <String, HTExternalFunctionTypedef>{
+      'RenderObjectVisitor': (HTFunction function) =>
+          (child) => function.call(positionalArgs: [child], namedArgs: const {}),
+    };
+  }
 }
 
 extension RenderCustomSingleChildLayoutBoxBinding on RenderCustomSingleChildLayoutBox {
@@ -818,8 +1701,14 @@ extension RenderCustomSingleChildLayoutBoxBinding on RenderCustomSingleChildLayo
     switch (varName) {
       case 'typeid':
         return HTTypeId('RenderCustomSingleChildLayoutBox');
+      case 'parentData':
+        return parentData;
+      case 'debugCreator':
+        return debugCreator;
       case 'delegate':
         return delegate;
+      case 'child':
+        return child;
       case 'hasSize':
         return hasSize;
       case 'size':
@@ -830,70 +1719,191 @@ extension RenderCustomSingleChildLayoutBoxBinding on RenderCustomSingleChildLayo
         return constraints;
       case 'paintBounds':
         return paintBounds;
+      case 'debugDoingThisResize':
+        return debugDoingThisResize;
+      case 'debugDoingThisLayout':
+        return debugDoingThisLayout;
+      case 'debugCanParentUseSize':
+        return debugCanParentUseSize;
+      case 'owner':
+        return owner;
+      case 'debugNeedsLayout':
+        return debugNeedsLayout;
+      case 'debugDoingThisLayoutWithCallback':
+        return debugDoingThisLayoutWithCallback;
+      case 'debugDoingThisPaint':
+        return debugDoingThisPaint;
+      case 'isRepaintBoundary':
+        return isRepaintBoundary;
+      case 'debugLayer':
+        return debugLayer;
+      case 'needsCompositing':
+        return needsCompositing;
+      case 'debugNeedsPaint':
+        return debugNeedsPaint;
+      case 'debugSemantics':
+        return debugSemantics;
+      case 'depth':
+        return depth;
+      case 'attached':
+        return attached;
+      case 'parent':
+        return parent;
       case 'attach':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.attach(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => attach(positionalArgs[0]);
       case 'detach':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.detach();
+        return ({positionalArgs, namedArgs, typeArgs}) => detach();
       case 'computeMinIntrinsicWidth':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.computeMinIntrinsicWidth(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => computeMinIntrinsicWidth(positionalArgs[0]);
       case 'computeMaxIntrinsicWidth':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.computeMaxIntrinsicWidth(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => computeMaxIntrinsicWidth(positionalArgs[0]);
       case 'computeMinIntrinsicHeight':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.computeMinIntrinsicHeight(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => computeMinIntrinsicHeight(positionalArgs[0]);
       case 'computeMaxIntrinsicHeight':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.computeMaxIntrinsicHeight(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => computeMaxIntrinsicHeight(positionalArgs[0]);
       case 'computeDryLayout':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.computeDryLayout(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => computeDryLayout(positionalArgs[0]);
       case 'performLayout':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.performLayout();
+        return ({positionalArgs, namedArgs, typeArgs}) => performLayout();
       case 'computeDistanceToActualBaseline':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.computeDistanceToActualBaseline(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => computeDistanceToActualBaseline(positionalArgs[0]);
       case 'paint':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.paint(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => paint(positionalArgs[0], positionalArgs[1]);
       case 'hitTestChildren':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.hitTestChildren(positionalArgs[0], position : namedArgs.containsKey('position') ? namedArgs['position'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => hitTestChildren(positionalArgs[0],
+            position: namedArgs.containsKey('position') ? namedArgs['position'] : null);
+      case 'debugValidateChild':
+        return ({positionalArgs, namedArgs, typeArgs}) => debugValidateChild(positionalArgs[0]);
+      case 'redepthChildren':
+        return ({positionalArgs, namedArgs, typeArgs}) => redepthChildren();
+      case 'visitChildren':
+        return ({positionalArgs, namedArgs, typeArgs}) => visitChildren(positionalArgs[0]);
+      case 'debugDescribeChildren':
+        return ({positionalArgs, namedArgs, typeArgs}) => debugDescribeChildren();
       case 'setupParentData':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.setupParentData(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => setupParentData(positionalArgs[0]);
       case 'getMinIntrinsicWidth':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.getMinIntrinsicWidth(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => getMinIntrinsicWidth(positionalArgs[0]);
       case 'getMaxIntrinsicWidth':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.getMaxIntrinsicWidth(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => getMaxIntrinsicWidth(positionalArgs[0]);
       case 'getMinIntrinsicHeight':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.getMinIntrinsicHeight(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => getMinIntrinsicHeight(positionalArgs[0]);
       case 'getMaxIntrinsicHeight':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.getMaxIntrinsicHeight(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => getMaxIntrinsicHeight(positionalArgs[0]);
       case 'getDryLayout':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.getDryLayout(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => getDryLayout(positionalArgs[0]);
       case 'debugCannotComputeDryLayout':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugCannotComputeDryLayout(reason : namedArgs.containsKey('reason') ? namedArgs['reason'] : null, error : namedArgs.containsKey('error') ? namedArgs['error'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugCannotComputeDryLayout(
+            reason: namedArgs.containsKey('reason') ? namedArgs['reason'] : null,
+            error: namedArgs.containsKey('error') ? namedArgs['error'] : null);
       case 'debugAdoptSize':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugAdoptSize(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugAdoptSize(positionalArgs[0]);
       case 'debugResetSize':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugResetSize();
+        return ({positionalArgs, namedArgs, typeArgs}) => debugResetSize();
       case 'getDistanceToBaseline':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.getDistanceToBaseline(positionalArgs[0], onlyReal : namedArgs.containsKey('onlyReal') ? namedArgs['onlyReal'] : false);
+        return ({positionalArgs, namedArgs, typeArgs}) => getDistanceToBaseline(positionalArgs[0],
+            onlyReal: namedArgs.containsKey('onlyReal') ? namedArgs['onlyReal'] : false);
       case 'debugAssertDoesMeetConstraints':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugAssertDoesMeetConstraints();
+        return ({positionalArgs, namedArgs, typeArgs}) => debugAssertDoesMeetConstraints();
       case 'markNeedsLayout':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.markNeedsLayout();
+        return ({positionalArgs, namedArgs, typeArgs}) => markNeedsLayout();
       case 'performResize':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.performResize();
+        return ({positionalArgs, namedArgs, typeArgs}) => performResize();
       case 'hitTest':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.hitTest(positionalArgs[0], position : namedArgs.containsKey('position') ? namedArgs['position'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            hitTest(positionalArgs[0], position: namedArgs.containsKey('position') ? namedArgs['position'] : null);
       case 'applyPaintTransform':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.applyPaintTransform(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => applyPaintTransform(positionalArgs[0], positionalArgs[1]);
       case 'globalToLocal':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.globalToLocal(positionalArgs[0], ancestor : namedArgs.containsKey('ancestor') ? namedArgs['ancestor'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => globalToLocal(positionalArgs[0],
+            ancestor: namedArgs.containsKey('ancestor') ? namedArgs['ancestor'] : null);
       case 'localToGlobal':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.localToGlobal(positionalArgs[0], ancestor : namedArgs.containsKey('ancestor') ? namedArgs['ancestor'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => localToGlobal(positionalArgs[0],
+            ancestor: namedArgs.containsKey('ancestor') ? namedArgs['ancestor'] : null);
       case 'handleEvent':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.handleEvent(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => handleEvent(positionalArgs[0], positionalArgs[1]);
       case 'debugHandleEvent':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugHandleEvent(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugHandleEvent(positionalArgs[0], positionalArgs[1]);
       case 'debugPaint':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugPaint(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugPaint(positionalArgs[0], positionalArgs[1]);
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+      case 'reassemble':
+        return ({positionalArgs, namedArgs, typeArgs}) => reassemble();
+      case 'adoptChild':
+        return ({positionalArgs, namedArgs, typeArgs}) => adoptChild(positionalArgs[0]);
+      case 'dropChild':
+        return ({positionalArgs, namedArgs, typeArgs}) => dropChild(positionalArgs[0]);
+      case 'markNeedsLayoutForSizedByParentChange':
+        return ({positionalArgs, namedArgs, typeArgs}) => markNeedsLayoutForSizedByParentChange();
+      case 'scheduleInitialLayout':
+        return ({positionalArgs, namedArgs, typeArgs}) => scheduleInitialLayout();
+      case 'layout':
+        return ({positionalArgs, namedArgs, typeArgs}) => layout(positionalArgs[0],
+            parentUsesSize: namedArgs.containsKey('parentUsesSize') ? namedArgs['parentUsesSize'] : false);
+      case 'rotate':
+        return ({positionalArgs, namedArgs, typeArgs}) => rotate(
+            oldAngle: namedArgs.containsKey('oldAngle') ? namedArgs['oldAngle'] : null,
+            newAngle: namedArgs.containsKey('newAngle') ? namedArgs['newAngle'] : null,
+            time: namedArgs.containsKey('time') ? namedArgs['time'] : null);
+      case 'debugRegisterRepaintBoundaryPaint':
+        return ({positionalArgs, namedArgs, typeArgs}) => debugRegisterRepaintBoundaryPaint(
+            includedParent: namedArgs.containsKey('includedParent') ? namedArgs['includedParent'] : true,
+            includedChild: namedArgs.containsKey('includedChild') ? namedArgs['includedChild'] : false);
+      case 'markNeedsCompositingBitsUpdate':
+        return ({positionalArgs, namedArgs, typeArgs}) => markNeedsCompositingBitsUpdate();
+      case 'markNeedsPaint':
+        return ({positionalArgs, namedArgs, typeArgs}) => markNeedsPaint();
+      case 'scheduleInitialPaint':
+        return ({positionalArgs, namedArgs, typeArgs}) => scheduleInitialPaint(positionalArgs[0]);
+      case 'replaceRootLayer':
+        return ({positionalArgs, namedArgs, typeArgs}) => replaceRootLayer(positionalArgs[0]);
+      case 'getTransformTo':
+        return ({positionalArgs, namedArgs, typeArgs}) => getTransformTo(positionalArgs[0]);
+      case 'describeApproximatePaintClip':
+        return ({positionalArgs, namedArgs, typeArgs}) => describeApproximatePaintClip(positionalArgs[0]);
+      case 'describeSemanticsClip':
+        return ({positionalArgs, namedArgs, typeArgs}) => describeSemanticsClip(positionalArgs[0]);
+      case 'scheduleInitialSemantics':
+        return ({positionalArgs, namedArgs, typeArgs}) => scheduleInitialSemantics();
+      case 'sendSemanticsEvent':
+        return ({positionalArgs, namedArgs, typeArgs}) => sendSemanticsEvent(positionalArgs[0]);
+      case 'clearSemantics':
+        return ({positionalArgs, namedArgs, typeArgs}) => clearSemantics();
+      case 'markNeedsSemanticsUpdate':
+        return ({positionalArgs, namedArgs, typeArgs}) => markNeedsSemanticsUpdate();
+      case 'visitChildrenForSemantics':
+        return ({positionalArgs, namedArgs, typeArgs}) => visitChildrenForSemantics(positionalArgs[0]);
+      case 'assembleSemanticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            assembleSemanticsNode(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
+      case 'toStringShort':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+      case 'toStringDeep':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
+            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : '',
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toStringShallow':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
+            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'showOnScreen':
+        return ({positionalArgs, namedArgs, typeArgs}) => showOnScreen(
+            descendant: namedArgs.containsKey('descendant') ? namedArgs['descendant'] : null,
+            rect: namedArgs.containsKey('rect') ? namedArgs['rect'] : null,
+            duration: namedArgs.containsKey('duration') ? namedArgs['duration'] : Duration.zero,
+            curve: namedArgs.containsKey('curve') ? namedArgs['curve'] : Curves.ease);
+      case 'describeForError':
+        return ({positionalArgs, namedArgs, typeArgs}) => describeForError(positionalArgs[0],
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : DiagnosticsTreeStyle.shallow);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -901,8 +1911,14 @@ extension RenderCustomSingleChildLayoutBoxBinding on RenderCustomSingleChildLayo
 
   void htAssign(String varName, dynamic value) {
     switch (varName) {
+      case 'parentData':
+        parentData = value;
+        break;
+      case 'debugCreator':
+        debugCreator = value;
+        break;
       case 'delegate':
-        this.delegate = value;
+        delegate = value;
         break;
       default:
         throw HTErrorUndefined(varName);
@@ -917,7 +1933,10 @@ class RenderBaselineAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'RenderBaseline':
-        return ({positionalArgs, namedArgs, typeArgs}) => RenderBaseline(child : namedArgs.containsKey('child') ? namedArgs['child'] : null, baseline : namedArgs['baseline'], baselineType : namedArgs['baselineType']);
+        return ({positionalArgs, namedArgs, typeArgs}) => RenderBaseline(
+            child: namedArgs.containsKey('child') ? namedArgs['child'] : null,
+            baseline: namedArgs['baseline'],
+            baselineType: namedArgs['baselineType']);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -933,7 +1952,12 @@ class RenderBaselineAutoBinding extends HTExternalClass {
     (instance as RenderBaseline).htAssign(id, value);
   }
 
-
+  static Map<String, HTExternalFunctionTypedef> functionWrapper() {
+    return <String, HTExternalFunctionTypedef>{
+      'RenderObjectVisitor': (HTFunction function) =>
+          (child) => function.call(positionalArgs: [child], namedArgs: const {}),
+    };
+  }
 }
 
 extension RenderBaselineBinding on RenderBaseline {
@@ -941,10 +1965,16 @@ extension RenderBaselineBinding on RenderBaseline {
     switch (varName) {
       case 'typeid':
         return HTTypeId('RenderBaseline');
+      case 'parentData':
+        return parentData;
+      case 'debugCreator':
+        return debugCreator;
       case 'baseline':
         return baseline;
       case 'baselineType':
         return baselineType;
+      case 'child':
+        return child;
       case 'hasSize':
         return hasSize;
       case 'size':
@@ -955,66 +1985,191 @@ extension RenderBaselineBinding on RenderBaseline {
         return constraints;
       case 'paintBounds':
         return paintBounds;
+      case 'debugDoingThisResize':
+        return debugDoingThisResize;
+      case 'debugDoingThisLayout':
+        return debugDoingThisLayout;
+      case 'debugCanParentUseSize':
+        return debugCanParentUseSize;
+      case 'owner':
+        return owner;
+      case 'debugNeedsLayout':
+        return debugNeedsLayout;
+      case 'debugDoingThisLayoutWithCallback':
+        return debugDoingThisLayoutWithCallback;
+      case 'debugDoingThisPaint':
+        return debugDoingThisPaint;
+      case 'isRepaintBoundary':
+        return isRepaintBoundary;
+      case 'debugLayer':
+        return debugLayer;
+      case 'needsCompositing':
+        return needsCompositing;
+      case 'debugNeedsPaint':
+        return debugNeedsPaint;
+      case 'debugSemantics':
+        return debugSemantics;
+      case 'depth':
+        return depth;
+      case 'attached':
+        return attached;
+      case 'parent':
+        return parent;
       case 'computeDryLayout':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.computeDryLayout(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => computeDryLayout(positionalArgs[0]);
       case 'performLayout':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.performLayout();
+        return ({positionalArgs, namedArgs, typeArgs}) => performLayout();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
       case 'computeMinIntrinsicWidth':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.computeMinIntrinsicWidth(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => computeMinIntrinsicWidth(positionalArgs[0]);
       case 'computeMaxIntrinsicWidth':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.computeMaxIntrinsicWidth(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => computeMaxIntrinsicWidth(positionalArgs[0]);
       case 'computeMinIntrinsicHeight':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.computeMinIntrinsicHeight(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => computeMinIntrinsicHeight(positionalArgs[0]);
       case 'computeMaxIntrinsicHeight':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.computeMaxIntrinsicHeight(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => computeMaxIntrinsicHeight(positionalArgs[0]);
       case 'computeDistanceToActualBaseline':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.computeDistanceToActualBaseline(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => computeDistanceToActualBaseline(positionalArgs[0]);
       case 'paint':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.paint(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => paint(positionalArgs[0], positionalArgs[1]);
       case 'hitTestChildren':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.hitTestChildren(positionalArgs[0], position : namedArgs.containsKey('position') ? namedArgs['position'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => hitTestChildren(positionalArgs[0],
+            position: namedArgs.containsKey('position') ? namedArgs['position'] : null);
+      case 'debugValidateChild':
+        return ({positionalArgs, namedArgs, typeArgs}) => debugValidateChild(positionalArgs[0]);
+      case 'attach':
+        return ({positionalArgs, namedArgs, typeArgs}) => attach(positionalArgs[0]);
+      case 'detach':
+        return ({positionalArgs, namedArgs, typeArgs}) => detach();
+      case 'redepthChildren':
+        return ({positionalArgs, namedArgs, typeArgs}) => redepthChildren();
+      case 'visitChildren':
+        return ({positionalArgs, namedArgs, typeArgs}) => visitChildren(positionalArgs[0]);
+      case 'debugDescribeChildren':
+        return ({positionalArgs, namedArgs, typeArgs}) => debugDescribeChildren();
       case 'setupParentData':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.setupParentData(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => setupParentData(positionalArgs[0]);
       case 'getMinIntrinsicWidth':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.getMinIntrinsicWidth(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => getMinIntrinsicWidth(positionalArgs[0]);
       case 'getMaxIntrinsicWidth':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.getMaxIntrinsicWidth(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => getMaxIntrinsicWidth(positionalArgs[0]);
       case 'getMinIntrinsicHeight':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.getMinIntrinsicHeight(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => getMinIntrinsicHeight(positionalArgs[0]);
       case 'getMaxIntrinsicHeight':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.getMaxIntrinsicHeight(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => getMaxIntrinsicHeight(positionalArgs[0]);
       case 'getDryLayout':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.getDryLayout(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => getDryLayout(positionalArgs[0]);
       case 'debugCannotComputeDryLayout':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugCannotComputeDryLayout(reason : namedArgs.containsKey('reason') ? namedArgs['reason'] : null, error : namedArgs.containsKey('error') ? namedArgs['error'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugCannotComputeDryLayout(
+            reason: namedArgs.containsKey('reason') ? namedArgs['reason'] : null,
+            error: namedArgs.containsKey('error') ? namedArgs['error'] : null);
       case 'debugAdoptSize':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugAdoptSize(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugAdoptSize(positionalArgs[0]);
       case 'debugResetSize':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugResetSize();
+        return ({positionalArgs, namedArgs, typeArgs}) => debugResetSize();
       case 'getDistanceToBaseline':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.getDistanceToBaseline(positionalArgs[0], onlyReal : namedArgs.containsKey('onlyReal') ? namedArgs['onlyReal'] : false);
+        return ({positionalArgs, namedArgs, typeArgs}) => getDistanceToBaseline(positionalArgs[0],
+            onlyReal: namedArgs.containsKey('onlyReal') ? namedArgs['onlyReal'] : false);
       case 'debugAssertDoesMeetConstraints':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugAssertDoesMeetConstraints();
+        return ({positionalArgs, namedArgs, typeArgs}) => debugAssertDoesMeetConstraints();
       case 'markNeedsLayout':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.markNeedsLayout();
+        return ({positionalArgs, namedArgs, typeArgs}) => markNeedsLayout();
       case 'performResize':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.performResize();
+        return ({positionalArgs, namedArgs, typeArgs}) => performResize();
       case 'hitTest':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.hitTest(positionalArgs[0], position : namedArgs.containsKey('position') ? namedArgs['position'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            hitTest(positionalArgs[0], position: namedArgs.containsKey('position') ? namedArgs['position'] : null);
       case 'applyPaintTransform':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.applyPaintTransform(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => applyPaintTransform(positionalArgs[0], positionalArgs[1]);
       case 'globalToLocal':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.globalToLocal(positionalArgs[0], ancestor : namedArgs.containsKey('ancestor') ? namedArgs['ancestor'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => globalToLocal(positionalArgs[0],
+            ancestor: namedArgs.containsKey('ancestor') ? namedArgs['ancestor'] : null);
       case 'localToGlobal':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.localToGlobal(positionalArgs[0], ancestor : namedArgs.containsKey('ancestor') ? namedArgs['ancestor'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => localToGlobal(positionalArgs[0],
+            ancestor: namedArgs.containsKey('ancestor') ? namedArgs['ancestor'] : null);
       case 'handleEvent':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.handleEvent(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => handleEvent(positionalArgs[0], positionalArgs[1]);
       case 'debugHandleEvent':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugHandleEvent(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugHandleEvent(positionalArgs[0], positionalArgs[1]);
       case 'debugPaint':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugPaint(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugPaint(positionalArgs[0], positionalArgs[1]);
+      case 'reassemble':
+        return ({positionalArgs, namedArgs, typeArgs}) => reassemble();
+      case 'adoptChild':
+        return ({positionalArgs, namedArgs, typeArgs}) => adoptChild(positionalArgs[0]);
+      case 'dropChild':
+        return ({positionalArgs, namedArgs, typeArgs}) => dropChild(positionalArgs[0]);
+      case 'markNeedsLayoutForSizedByParentChange':
+        return ({positionalArgs, namedArgs, typeArgs}) => markNeedsLayoutForSizedByParentChange();
+      case 'scheduleInitialLayout':
+        return ({positionalArgs, namedArgs, typeArgs}) => scheduleInitialLayout();
+      case 'layout':
+        return ({positionalArgs, namedArgs, typeArgs}) => layout(positionalArgs[0],
+            parentUsesSize: namedArgs.containsKey('parentUsesSize') ? namedArgs['parentUsesSize'] : false);
+      case 'rotate':
+        return ({positionalArgs, namedArgs, typeArgs}) => rotate(
+            oldAngle: namedArgs.containsKey('oldAngle') ? namedArgs['oldAngle'] : null,
+            newAngle: namedArgs.containsKey('newAngle') ? namedArgs['newAngle'] : null,
+            time: namedArgs.containsKey('time') ? namedArgs['time'] : null);
+      case 'debugRegisterRepaintBoundaryPaint':
+        return ({positionalArgs, namedArgs, typeArgs}) => debugRegisterRepaintBoundaryPaint(
+            includedParent: namedArgs.containsKey('includedParent') ? namedArgs['includedParent'] : true,
+            includedChild: namedArgs.containsKey('includedChild') ? namedArgs['includedChild'] : false);
+      case 'markNeedsCompositingBitsUpdate':
+        return ({positionalArgs, namedArgs, typeArgs}) => markNeedsCompositingBitsUpdate();
+      case 'markNeedsPaint':
+        return ({positionalArgs, namedArgs, typeArgs}) => markNeedsPaint();
+      case 'scheduleInitialPaint':
+        return ({positionalArgs, namedArgs, typeArgs}) => scheduleInitialPaint(positionalArgs[0]);
+      case 'replaceRootLayer':
+        return ({positionalArgs, namedArgs, typeArgs}) => replaceRootLayer(positionalArgs[0]);
+      case 'getTransformTo':
+        return ({positionalArgs, namedArgs, typeArgs}) => getTransformTo(positionalArgs[0]);
+      case 'describeApproximatePaintClip':
+        return ({positionalArgs, namedArgs, typeArgs}) => describeApproximatePaintClip(positionalArgs[0]);
+      case 'describeSemanticsClip':
+        return ({positionalArgs, namedArgs, typeArgs}) => describeSemanticsClip(positionalArgs[0]);
+      case 'scheduleInitialSemantics':
+        return ({positionalArgs, namedArgs, typeArgs}) => scheduleInitialSemantics();
+      case 'sendSemanticsEvent':
+        return ({positionalArgs, namedArgs, typeArgs}) => sendSemanticsEvent(positionalArgs[0]);
+      case 'clearSemantics':
+        return ({positionalArgs, namedArgs, typeArgs}) => clearSemantics();
+      case 'markNeedsSemanticsUpdate':
+        return ({positionalArgs, namedArgs, typeArgs}) => markNeedsSemanticsUpdate();
+      case 'visitChildrenForSemantics':
+        return ({positionalArgs, namedArgs, typeArgs}) => visitChildrenForSemantics(positionalArgs[0]);
+      case 'assembleSemanticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            assembleSemanticsNode(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
+      case 'toStringShort':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+      case 'toStringDeep':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
+            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : '',
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toStringShallow':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
+            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'showOnScreen':
+        return ({positionalArgs, namedArgs, typeArgs}) => showOnScreen(
+            descendant: namedArgs.containsKey('descendant') ? namedArgs['descendant'] : null,
+            rect: namedArgs.containsKey('rect') ? namedArgs['rect'] : null,
+            duration: namedArgs.containsKey('duration') ? namedArgs['duration'] : Duration.zero,
+            curve: namedArgs.containsKey('curve') ? namedArgs['curve'] : Curves.ease);
+      case 'describeForError':
+        return ({positionalArgs, namedArgs, typeArgs}) => describeForError(positionalArgs[0],
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : DiagnosticsTreeStyle.shallow);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -1022,15 +2177,20 @@ extension RenderBaselineBinding on RenderBaseline {
 
   void htAssign(String varName, dynamic value) {
     switch (varName) {
+      case 'parentData':
+        parentData = value;
+        break;
+      case 'debugCreator':
+        debugCreator = value;
+        break;
       case 'baseline':
-        this.baseline = value;
+        baseline = value;
         break;
       case 'baselineType':
-        this.baselineType = value;
+        baselineType = value;
         break;
       default:
         throw HTErrorUndefined(varName);
     }
   }
 }
-

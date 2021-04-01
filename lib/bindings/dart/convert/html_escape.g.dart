@@ -1,8 +1,5 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'dart:convert';
-import 'dart:async';
-import 'dart:typed_data';
-
 
 class HtmlEscapeModeAutoBinding extends HTExternalClass {
   HtmlEscapeModeAutoBinding() : super('HtmlEscapeMode');
@@ -11,7 +8,12 @@ class HtmlEscapeModeAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'HtmlEscapeMode':
-        return ({positionalArgs, namedArgs, typeArgs}) => HtmlEscapeMode(name : namedArgs.containsKey('name') ? namedArgs['name'] : "custom", escapeLtGt : namedArgs.containsKey('escapeLtGt') ? namedArgs['escapeLtGt'] : false, escapeQuot : namedArgs.containsKey('escapeQuot') ? namedArgs['escapeQuot'] : false, escapeApos : namedArgs.containsKey('escapeApos') ? namedArgs['escapeApos'] : false, escapeSlash : namedArgs.containsKey('escapeSlash') ? namedArgs['escapeSlash'] : false);
+        return ({positionalArgs, namedArgs, typeArgs}) => HtmlEscapeMode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : 'custom',
+            escapeLtGt: namedArgs.containsKey('escapeLtGt') ? namedArgs['escapeLtGt'] : false,
+            escapeQuot: namedArgs.containsKey('escapeQuot') ? namedArgs['escapeQuot'] : false,
+            escapeApos: namedArgs.containsKey('escapeApos') ? namedArgs['escapeApos'] : false,
+            escapeSlash: namedArgs.containsKey('escapeSlash') ? namedArgs['escapeSlash'] : false);
       case 'HtmlEscapeMode.unknown':
         return HtmlEscapeMode.unknown;
       case 'HtmlEscapeMode.attribute':
@@ -29,9 +31,6 @@ class HtmlEscapeModeAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as HtmlEscapeMode).htFetch(id);
   }
-
-
-
 }
 
 extension HtmlEscapeModeBinding on HtmlEscapeMode {
@@ -48,12 +47,11 @@ extension HtmlEscapeModeBinding on HtmlEscapeMode {
       case 'escapeSlash':
         return escapeSlash;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class HtmlEscapeAutoBinding extends HTExternalClass {
@@ -63,7 +61,8 @@ class HtmlEscapeAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'HtmlEscape':
-        return ({positionalArgs, namedArgs, typeArgs}) => HtmlEscape(positionalArgs.length > 0 ? positionalArgs[0] : HtmlEscapeMode.unknown);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            HtmlEscape(positionalArgs.length > 0 ? positionalArgs[0] : HtmlEscapeMode.unknown);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -73,9 +72,6 @@ class HtmlEscapeAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as HtmlEscape).htFetch(id);
   }
-
-
-
 }
 
 extension HtmlEscapeBinding on HtmlEscape {
@@ -86,19 +82,17 @@ extension HtmlEscapeBinding on HtmlEscape {
       case 'mode':
         return mode;
       case 'convert':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.convert(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => convert(positionalArgs[0]);
       case 'startChunkedConversion':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.startChunkedConversion(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => startChunkedConversion(positionalArgs[0]);
       case 'fuse':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.fuse(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => fuse(positionalArgs[0]);
       case 'bind':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.bind(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => bind(positionalArgs[0]);
       case 'cast':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.cast();
+        return ({positionalArgs, namedArgs, typeArgs}) => cast();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
-

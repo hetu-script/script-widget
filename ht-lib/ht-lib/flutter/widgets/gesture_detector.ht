@@ -1,0 +1,97 @@
+external class GestureDetector {
+    construct 
+    get child
+    get onTapDown
+    get onTapUp
+    get onTap
+    get onTapCancel
+    get onSecondaryTap
+    get onSecondaryTapDown
+    get onSecondaryTapUp
+    get onSecondaryTapCancel
+    get onTertiaryTapDown
+    get onTertiaryTapUp
+    get onTertiaryTapCancel
+    get onDoubleTapDown
+    get onDoubleTap
+    get onDoubleTapCancel
+    get onLongPress
+    get onLongPressStart
+    get onLongPressMoveUpdate
+    get onLongPressUp
+    get onLongPressEnd
+    get onSecondaryLongPress
+    get onSecondaryLongPressStart
+    get onSecondaryLongPressMoveUpdate
+    get onSecondaryLongPressUp
+    get onSecondaryLongPressEnd
+    get onVerticalDragDown
+    get onVerticalDragStart
+    get onVerticalDragUpdate
+    get onVerticalDragEnd
+    get onVerticalDragCancel
+    get onHorizontalDragDown
+    get onHorizontalDragStart
+    get onHorizontalDragUpdate
+    get onHorizontalDragEnd
+    get onHorizontalDragCancel
+    get onPanDown
+    get onPanStart
+    get onPanUpdate
+    get onPanEnd
+    get onPanCancel
+    get onScaleStart
+    get onScaleUpdate
+    get onScaleEnd
+    get onForcePressStart
+    get onForcePressPeak
+    get onForcePressUpdate
+    get onForcePressEnd
+    get behavior
+    get excludeFromSemantics
+    get dragStartBehavior
+    get key
+    fun build
+    fun debugFillProperties
+    fun createElement
+    fun toStringShort
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class RawGestureDetector {
+    construct 
+    get child
+    get gestures
+    get behavior
+    get excludeFromSemantics
+    get semantics
+    get key
+    fun createState
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class RawGestureDetectorState {
+    construct
+    fun initState
+    fun didUpdateWidget
+    fun replaceGestureRecognizers
+    fun replaceSemanticsActions
+    fun dispose
+    fun build
+    fun debugFillProperties
+    get widget
+    get context
+    get mounted
+    fun toStringShort
+    fun toString
+    fun toDiagnosticsNode
+}

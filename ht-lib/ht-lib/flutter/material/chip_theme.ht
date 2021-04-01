@@ -1,0 +1,46 @@
+external class ChipTheme {
+    construct 
+    get data
+    get child
+    get key
+    fun wrap
+    fun updateShouldNotify
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+    static fun of (context)
+}
+external class ChipThemeData {
+    construct 
+    construct fromDefaults
+    get backgroundColor
+    get deleteIconColor
+    get disabledColor
+    get selectedColor
+    get secondarySelectedColor
+    get shadowColor
+    get selectedShadowColor
+    get showCheckmark
+    get checkmarkColor
+    get labelPadding
+    get padding
+    get side
+    get shape
+    get labelStyle
+    get secondaryLabelStyle
+    get brightness
+    get elevation
+    get pressElevation
+    fun copyWith
+    get hashCode
+    fun debugFillProperties
+    fun toStringShort
+    fun toString
+    fun toDiagnosticsNode
+    static fun lerp (a, b, t)
+}

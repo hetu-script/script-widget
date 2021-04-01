@@ -1,14 +1,7 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/widgets.dart';
-import 'dart:async';
-import 'dart:collection';
-import 'dart:convert';
-import 'dart:developer'as developer;
-import 'dart:ui'as ui;
 import 'package:flutter/foundation.dart';
 import 'package:flutter/rendering.dart';
-import 'package:flutter/scheduler.dart';
-import 'package:flutter/services.dart';
 
 class RoutePopDispositionAutoBinding extends HTExternalClass {
   RoutePopDispositionAutoBinding() : super('RoutePopDisposition');
@@ -28,7 +21,6 @@ class RoutePopDispositionAutoBinding extends HTExternalClass {
         throw HTErrorUndefined(varName);
     }
   }
-
 
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
@@ -52,7 +44,9 @@ class RouteSettingsAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'RouteSettings':
-        return ({positionalArgs, namedArgs, typeArgs}) => RouteSettings(name : namedArgs.containsKey('name') ? namedArgs['name'] : null, arguments : namedArgs.containsKey('arguments') ? namedArgs['arguments'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => RouteSettings(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            arguments: namedArgs.containsKey('arguments') ? namedArgs['arguments'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -62,9 +56,6 @@ class RouteSettingsAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as RouteSettings).htFetch(id);
   }
-
-
-
 }
 
 extension RouteSettingsBinding on RouteSettings {
@@ -77,14 +68,15 @@ extension RouteSettingsBinding on RouteSettings {
       case 'arguments':
         return arguments;
       case 'copyWith':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.copyWith(name : namedArgs.containsKey('name') ? namedArgs['name'] : null, arguments : namedArgs.containsKey('arguments') ? namedArgs['arguments'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => copyWith(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            arguments: namedArgs.containsKey('arguments') ? namedArgs['arguments'] : null);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class NavigatorObserverAutoBinding extends HTExternalClass {
@@ -104,9 +96,6 @@ class NavigatorObserverAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as NavigatorObserver).htFetch(id);
   }
-
-
-
 }
 
 extension NavigatorObserverBinding on NavigatorObserver {
@@ -117,22 +106,23 @@ extension NavigatorObserverBinding on NavigatorObserver {
       case 'navigator':
         return navigator;
       case 'didPush':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.didPush(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => didPush(positionalArgs[0], positionalArgs[1]);
       case 'didPop':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.didPop(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => didPop(positionalArgs[0], positionalArgs[1]);
       case 'didRemove':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.didRemove(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => didRemove(positionalArgs[0], positionalArgs[1]);
       case 'didReplace':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.didReplace(newRoute : namedArgs.containsKey('newRoute') ? namedArgs['newRoute'] : null, oldRoute : namedArgs.containsKey('oldRoute') ? namedArgs['oldRoute'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => didReplace(
+            newRoute: namedArgs.containsKey('newRoute') ? namedArgs['newRoute'] : null,
+            oldRoute: namedArgs.containsKey('oldRoute') ? namedArgs['oldRoute'] : null);
       case 'didStartUserGesture':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.didStartUserGesture(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => didStartUserGesture(positionalArgs[0], positionalArgs[1]);
       case 'didStopUserGesture':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.didStopUserGesture();
+        return ({positionalArgs, namedArgs, typeArgs}) => didStopUserGesture();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class HeroControllerScopeAutoBinding extends HTExternalClass {
@@ -142,9 +132,13 @@ class HeroControllerScopeAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'HeroControllerScope':
-        return ({positionalArgs, namedArgs, typeArgs}) => HeroControllerScope(key : namedArgs.containsKey('key') ? namedArgs['key'] : null, controller : namedArgs['controller'], child : namedArgs['child']);
+        return ({positionalArgs, namedArgs, typeArgs}) => HeroControllerScope(
+            key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
+            controller: namedArgs['controller'],
+            child: namedArgs['child']);
       case 'HeroControllerScope.none':
-        return ({positionalArgs, namedArgs, typeArgs}) => HeroControllerScope.none(key : namedArgs.containsKey('key') ? namedArgs['key'] : null, child : namedArgs['child']);
+        return ({positionalArgs, namedArgs, typeArgs}) => HeroControllerScope.none(
+            key: namedArgs.containsKey('key') ? namedArgs['key'] : null, child: namedArgs['child']);
       case 'HeroControllerScope.of':
         return ({positionalArgs, namedArgs, typeArgs}) => HeroControllerScope.of(positionalArgs[0]);
       default:
@@ -156,9 +150,6 @@ class HeroControllerScopeAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as HeroControllerScope).htFetch(id);
   }
-
-
-
 }
 
 extension HeroControllerScopeBinding on HeroControllerScope {
@@ -168,13 +159,40 @@ extension HeroControllerScopeBinding on HeroControllerScope {
         return HTTypeId('HeroControllerScope');
       case 'controller':
         return controller;
+      case 'child':
+        return child;
+      case 'key':
+        return key;
+      case 'hashCode':
+        return hashCode;
       case 'updateShouldNotify':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.updateShouldNotify(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => updateShouldNotify(positionalArgs[0]);
+      case 'createElement':
+        return ({positionalArgs, namedArgs, typeArgs}) => createElement();
+      case 'toStringShort':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'debugFillProperties':
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+      case 'toStringShallow':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
+            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toStringDeep':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
+            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class NavigatorAutoBinding extends HTExternalClass {
@@ -184,7 +202,26 @@ class NavigatorAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'Navigator':
-        return ({positionalArgs, namedArgs, typeArgs}) => Navigator(key : namedArgs.containsKey('key') ? namedArgs['key'] : null, pages : namedArgs.containsKey('pages') ? List<Page<dynamic>>.from(namedArgs['pages']) : const <Page<dynamic>>[], onPopPage : namedArgs.containsKey('onPopPage') ? namedArgs['onPopPage'] : null, initialRoute : namedArgs.containsKey('initialRoute') ? namedArgs['initialRoute'] : null, onGenerateInitialRoutes : namedArgs.containsKey('onGenerateInitialRoutes') ? namedArgs['onGenerateInitialRoutes'] : Navigator.defaultGenerateInitialRoutes, onGenerateRoute : namedArgs.containsKey('onGenerateRoute') ? namedArgs['onGenerateRoute'] : null, onUnknownRoute : namedArgs.containsKey('onUnknownRoute') ? namedArgs['onUnknownRoute'] : null, transitionDelegate : namedArgs.containsKey('transitionDelegate') ? namedArgs['transitionDelegate'] : const DefaultTransitionDelegate<dynamic>(), reportsRouteUpdateToEngine : namedArgs.containsKey('reportsRouteUpdateToEngine') ? namedArgs['reportsRouteUpdateToEngine'] : false, observers : namedArgs.containsKey('observers') ? List<NavigatorObserver>.from(namedArgs['observers']) : const <NavigatorObserver>[], restorationScopeId : namedArgs.containsKey('restorationScopeId') ? namedArgs['restorationScopeId'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => Navigator(
+            key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
+            pages:
+                namedArgs.containsKey('pages') ? List<Page<dynamic>>.from(namedArgs['pages']) : const <Page<dynamic>>[],
+            onPopPage: namedArgs.containsKey('onPopPage') ? namedArgs['onPopPage'] : null,
+            initialRoute: namedArgs.containsKey('initialRoute') ? namedArgs['initialRoute'] : null,
+            onGenerateInitialRoutes: namedArgs.containsKey('onGenerateInitialRoutes')
+                ? namedArgs['onGenerateInitialRoutes']
+                : Navigator.defaultGenerateInitialRoutes,
+            onGenerateRoute: namedArgs.containsKey('onGenerateRoute') ? namedArgs['onGenerateRoute'] : null,
+            onUnknownRoute: namedArgs.containsKey('onUnknownRoute') ? namedArgs['onUnknownRoute'] : null,
+            transitionDelegate: namedArgs.containsKey('transitionDelegate')
+                ? namedArgs['transitionDelegate']
+                : const DefaultTransitionDelegate<dynamic>(),
+            reportsRouteUpdateToEngine:
+                namedArgs.containsKey('reportsRouteUpdateToEngine') ? namedArgs['reportsRouteUpdateToEngine'] : false,
+            observers: namedArgs.containsKey('observers')
+                ? List<NavigatorObserver>.from(namedArgs['observers'])
+                : const <NavigatorObserver>[],
+            restorationScopeId: namedArgs.containsKey('restorationScopeId') ? namedArgs['restorationScopeId'] : null);
       case 'Navigator.canPop':
         return ({positionalArgs, namedArgs, typeArgs}) => Navigator.canPop(positionalArgs[0]);
       case 'Navigator.popUntil':
@@ -192,13 +229,17 @@ class NavigatorAutoBinding extends HTExternalClass {
       case 'Navigator.removeRoute':
         return ({positionalArgs, namedArgs, typeArgs}) => Navigator.removeRoute(positionalArgs[0], positionalArgs[1]);
       case 'Navigator.removeRouteBelow':
-        return ({positionalArgs, namedArgs, typeArgs}) => Navigator.removeRouteBelow(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            Navigator.removeRouteBelow(positionalArgs[0], positionalArgs[1]);
       case 'Navigator.of':
-        return ({positionalArgs, namedArgs, typeArgs}) => Navigator.of(positionalArgs[0], rootNavigator : namedArgs.containsKey('rootNavigator') ? namedArgs['rootNavigator'] : false);
+        return ({positionalArgs, namedArgs, typeArgs}) => Navigator.of(positionalArgs[0],
+            rootNavigator: namedArgs.containsKey('rootNavigator') ? namedArgs['rootNavigator'] : false);
       case 'Navigator.maybeOf':
-        return ({positionalArgs, namedArgs, typeArgs}) => Navigator.maybeOf(positionalArgs[0], rootNavigator : namedArgs.containsKey('rootNavigator') ? namedArgs['rootNavigator'] : false);
+        return ({positionalArgs, namedArgs, typeArgs}) => Navigator.maybeOf(positionalArgs[0],
+            rootNavigator: namedArgs.containsKey('rootNavigator') ? namedArgs['rootNavigator'] : false);
       case 'Navigator.defaultGenerateInitialRoutes':
-        return ({positionalArgs, namedArgs, typeArgs}) => Navigator.defaultGenerateInitialRoutes(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            Navigator.defaultGenerateInitialRoutes(positionalArgs[0], positionalArgs[1]);
       case 'Navigator.defaultRouteName':
         return Navigator.defaultRouteName;
       default:
@@ -211,16 +252,18 @@ class NavigatorAutoBinding extends HTExternalClass {
     return (instance as Navigator).htFetch(id);
   }
 
-
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'PopPageCallback': (HTFunction function) => (route, result) => function.call(positionalArgs: [route, result], namedArgs: const {}) as bool,
-      'RouteListFactory': (HTFunction function) => (navigator, initialRoute) => function.call(positionalArgs: [navigator, initialRoute], namedArgs: const {}) as List<Route<dynamic>>,
-      'RouteFactory': (HTFunction function) => (settings) => function.call(positionalArgs: [settings], namedArgs: const {}) as Route<dynamic>?,
-      'RoutePredicate': (HTFunction function) => (route) => function.call(positionalArgs: [route], namedArgs: const {}) as bool,
+      'PopPageCallback': (HTFunction function) =>
+          (route, result) => function.call(positionalArgs: [route, result], namedArgs: const {}) as bool,
+      'RouteListFactory': (HTFunction function) => (navigator, initialRoute) =>
+          function.call(positionalArgs: [navigator, initialRoute], namedArgs: const {}) as List<Route<dynamic>>,
+      'RouteFactory': (HTFunction function) =>
+          (settings) => function.call(positionalArgs: [settings], namedArgs: const {}) as Route<dynamic>?,
+      'RoutePredicate': (HTFunction function) =>
+          (route) => function.call(positionalArgs: [route], namedArgs: const {}) as bool,
     };
   }
-
 }
 
 extension NavigatorBinding on Navigator {
@@ -248,13 +291,38 @@ extension NavigatorBinding on Navigator {
         return onGenerateInitialRoutes;
       case 'reportsRouteUpdateToEngine':
         return reportsRouteUpdateToEngine;
+      case 'key':
+        return key;
+      case 'hashCode':
+        return hashCode;
       case 'createState':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.createState();
+        return ({positionalArgs, namedArgs, typeArgs}) => createState();
+      case 'createElement':
+        return ({positionalArgs, namedArgs, typeArgs}) => createElement();
+      case 'toStringShort':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'debugFillProperties':
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+      case 'toStringShallow':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
+            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toStringDeep':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
+            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class NavigatorStateAutoBinding extends HTExternalClass {
@@ -275,14 +343,14 @@ class NavigatorStateAutoBinding extends HTExternalClass {
     return (instance as NavigatorState).htFetch(id);
   }
 
-
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'RoutePredicate': (HTFunction function) => (route) => function.call(positionalArgs: [route], namedArgs: const {}) as bool,
-      'TickerCallback': (HTFunction function) => (elapsed) => function.call(positionalArgs: [elapsed], namedArgs: const {}),
+      'RoutePredicate': (HTFunction function) =>
+          (route) => function.call(positionalArgs: [route], namedArgs: const {}) as bool,
+      'TickerCallback': (HTFunction function) =>
+          (elapsed) => function.call(positionalArgs: [elapsed], namedArgs: const {}),
     };
   }
-
 }
 
 extension NavigatorStateBinding on NavigatorState {
@@ -304,82 +372,125 @@ extension NavigatorStateBinding on NavigatorState {
         return bucket;
       case 'restorePending':
         return restorePending;
+      case 'widget':
+        return widget;
+      case 'context':
+        return context;
+      case 'mounted':
+        return mounted;
       case 'initState':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.initState();
+        return ({positionalArgs, namedArgs, typeArgs}) => initState();
       case 'restoreState':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.restoreState(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => restoreState(positionalArgs[0], positionalArgs[1]);
       case 'didToggleBucket':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.didToggleBucket(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => didToggleBucket(positionalArgs[0]);
       case 'didChangeDependencies':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.didChangeDependencies();
+        return ({positionalArgs, namedArgs, typeArgs}) => didChangeDependencies();
       case 'didUpdateWidget':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.didUpdateWidget(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => didUpdateWidget(positionalArgs[0]);
       case 'dispose':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.dispose();
+        return ({positionalArgs, namedArgs, typeArgs}) => dispose();
       case 'pushNamed':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.pushNamed(positionalArgs[0], arguments : namedArgs.containsKey('arguments') ? namedArgs['arguments'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            pushNamed(positionalArgs[0], arguments: namedArgs.containsKey('arguments') ? namedArgs['arguments'] : null);
       case 'restorablePushNamed':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.restorablePushNamed(positionalArgs[0], arguments : namedArgs.containsKey('arguments') ? namedArgs['arguments'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => restorablePushNamed(positionalArgs[0],
+            arguments: namedArgs.containsKey('arguments') ? namedArgs['arguments'] : null);
       case 'pushReplacementNamed':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.pushReplacementNamed(positionalArgs[0], result : namedArgs.containsKey('result') ? namedArgs['result'] : null, arguments : namedArgs.containsKey('arguments') ? namedArgs['arguments'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => pushReplacementNamed(positionalArgs[0],
+            result: namedArgs.containsKey('result') ? namedArgs['result'] : null,
+            arguments: namedArgs.containsKey('arguments') ? namedArgs['arguments'] : null);
       case 'restorablePushReplacementNamed':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.restorablePushReplacementNamed(positionalArgs[0], result : namedArgs.containsKey('result') ? namedArgs['result'] : null, arguments : namedArgs.containsKey('arguments') ? namedArgs['arguments'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => restorablePushReplacementNamed(positionalArgs[0],
+            result: namedArgs.containsKey('result') ? namedArgs['result'] : null,
+            arguments: namedArgs.containsKey('arguments') ? namedArgs['arguments'] : null);
       case 'popAndPushNamed':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.popAndPushNamed(positionalArgs[0], result : namedArgs.containsKey('result') ? namedArgs['result'] : null, arguments : namedArgs.containsKey('arguments') ? namedArgs['arguments'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => popAndPushNamed(positionalArgs[0],
+            result: namedArgs.containsKey('result') ? namedArgs['result'] : null,
+            arguments: namedArgs.containsKey('arguments') ? namedArgs['arguments'] : null);
       case 'restorablePopAndPushNamed':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.restorablePopAndPushNamed(positionalArgs[0], result : namedArgs.containsKey('result') ? namedArgs['result'] : null, arguments : namedArgs.containsKey('arguments') ? namedArgs['arguments'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => restorablePopAndPushNamed(positionalArgs[0],
+            result: namedArgs.containsKey('result') ? namedArgs['result'] : null,
+            arguments: namedArgs.containsKey('arguments') ? namedArgs['arguments'] : null);
       case 'pushNamedAndRemoveUntil':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.pushNamedAndRemoveUntil(positionalArgs[0], positionalArgs[1], arguments : namedArgs.containsKey('arguments') ? namedArgs['arguments'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => pushNamedAndRemoveUntil(positionalArgs[0], positionalArgs[1],
+            arguments: namedArgs.containsKey('arguments') ? namedArgs['arguments'] : null);
       case 'restorablePushNamedAndRemoveUntil':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.restorablePushNamedAndRemoveUntil(positionalArgs[0], positionalArgs[1], arguments : namedArgs.containsKey('arguments') ? namedArgs['arguments'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => restorablePushNamedAndRemoveUntil(
+            positionalArgs[0], positionalArgs[1],
+            arguments: namedArgs.containsKey('arguments') ? namedArgs['arguments'] : null);
       case 'push':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.push(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => push(positionalArgs[0]);
       case 'restorablePush':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.restorablePush(positionalArgs[0], arguments : namedArgs.containsKey('arguments') ? namedArgs['arguments'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => restorablePush(positionalArgs[0],
+            arguments: namedArgs.containsKey('arguments') ? namedArgs['arguments'] : null);
       case 'pushReplacement':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.pushReplacement(positionalArgs[0], result : namedArgs.containsKey('result') ? namedArgs['result'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            pushReplacement(positionalArgs[0], result: namedArgs.containsKey('result') ? namedArgs['result'] : null);
       case 'restorablePushReplacement':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.restorablePushReplacement(positionalArgs[0], result : namedArgs.containsKey('result') ? namedArgs['result'] : null, arguments : namedArgs.containsKey('arguments') ? namedArgs['arguments'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => restorablePushReplacement(positionalArgs[0],
+            result: namedArgs.containsKey('result') ? namedArgs['result'] : null,
+            arguments: namedArgs.containsKey('arguments') ? namedArgs['arguments'] : null);
       case 'pushAndRemoveUntil':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.pushAndRemoveUntil(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => pushAndRemoveUntil(positionalArgs[0], positionalArgs[1]);
       case 'restorablePushAndRemoveUntil':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.restorablePushAndRemoveUntil(positionalArgs[0], positionalArgs[1], arguments : namedArgs.containsKey('arguments') ? namedArgs['arguments'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => restorablePushAndRemoveUntil(
+            positionalArgs[0], positionalArgs[1],
+            arguments: namedArgs.containsKey('arguments') ? namedArgs['arguments'] : null);
       case 'replace':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.replace(oldRoute : namedArgs.containsKey('oldRoute') ? namedArgs['oldRoute'] : null, newRoute : namedArgs.containsKey('newRoute') ? namedArgs['newRoute'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => replace(
+            oldRoute: namedArgs.containsKey('oldRoute') ? namedArgs['oldRoute'] : null,
+            newRoute: namedArgs.containsKey('newRoute') ? namedArgs['newRoute'] : null);
       case 'restorableReplace':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.restorableReplace(oldRoute : namedArgs.containsKey('oldRoute') ? namedArgs['oldRoute'] : null, newRouteBuilder : namedArgs.containsKey('newRouteBuilder') ? namedArgs['newRouteBuilder'] : null, arguments : namedArgs.containsKey('arguments') ? namedArgs['arguments'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => restorableReplace(
+            oldRoute: namedArgs.containsKey('oldRoute') ? namedArgs['oldRoute'] : null,
+            newRouteBuilder: namedArgs.containsKey('newRouteBuilder') ? namedArgs['newRouteBuilder'] : null,
+            arguments: namedArgs.containsKey('arguments') ? namedArgs['arguments'] : null);
       case 'replaceRouteBelow':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.replaceRouteBelow(anchorRoute : namedArgs.containsKey('anchorRoute') ? namedArgs['anchorRoute'] : null, newRoute : namedArgs.containsKey('newRoute') ? namedArgs['newRoute'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => replaceRouteBelow(
+            anchorRoute: namedArgs.containsKey('anchorRoute') ? namedArgs['anchorRoute'] : null,
+            newRoute: namedArgs.containsKey('newRoute') ? namedArgs['newRoute'] : null);
       case 'restorableReplaceRouteBelow':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.restorableReplaceRouteBelow(anchorRoute : namedArgs.containsKey('anchorRoute') ? namedArgs['anchorRoute'] : null, newRouteBuilder : namedArgs.containsKey('newRouteBuilder') ? namedArgs['newRouteBuilder'] : null, arguments : namedArgs.containsKey('arguments') ? namedArgs['arguments'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => restorableReplaceRouteBelow(
+            anchorRoute: namedArgs.containsKey('anchorRoute') ? namedArgs['anchorRoute'] : null,
+            newRouteBuilder: namedArgs.containsKey('newRouteBuilder') ? namedArgs['newRouteBuilder'] : null,
+            arguments: namedArgs.containsKey('arguments') ? namedArgs['arguments'] : null);
       case 'canPop':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.canPop();
+        return ({positionalArgs, namedArgs, typeArgs}) => canPop();
       case 'maybePop':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.maybePop(positionalArgs.length > 0 ? positionalArgs[0] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            maybePop(positionalArgs.length > 0 ? positionalArgs[0] : null);
       case 'pop':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.pop(positionalArgs.length > 0 ? positionalArgs[0] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => pop(positionalArgs.length > 0 ? positionalArgs[0] : null);
       case 'popUntil':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.popUntil(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => popUntil(positionalArgs[0]);
       case 'removeRoute':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.removeRoute(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => removeRoute(positionalArgs[0]);
       case 'removeRouteBelow':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.removeRouteBelow(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => removeRouteBelow(positionalArgs[0]);
       case 'finalizeRoute':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.finalizeRoute(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => finalizeRoute(positionalArgs[0]);
       case 'didStartUserGesture':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.didStartUserGesture();
+        return ({positionalArgs, namedArgs, typeArgs}) => didStartUserGesture();
       case 'didStopUserGesture':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.didStopUserGesture();
+        return ({positionalArgs, namedArgs, typeArgs}) => didStopUserGesture();
       case 'build':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.build(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => build(positionalArgs[0]);
       case 'createTicker':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.createTicker(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => createTicker(positionalArgs[0]);
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+      case 'toStringShort':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
-

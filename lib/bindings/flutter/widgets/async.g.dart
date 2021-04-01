@@ -1,7 +1,5 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/widgets.dart';
-import 'dart:async';
-import 'package:flutter/foundation.dart';
 
 class ConnectionStateAutoBinding extends HTExternalClass {
   ConnectionStateAutoBinding() : super('ConnectionState');
@@ -24,7 +22,6 @@ class ConnectionStateAutoBinding extends HTExternalClass {
     }
   }
 
-
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
@@ -39,4 +36,3 @@ class ConnectionStateAutoBinding extends HTExternalClass {
     }
   }
 }
-

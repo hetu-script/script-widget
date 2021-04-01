@@ -1,8 +1,6 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/gestures.dart';
 import 'dart:ui';
-import 'package:flutter/foundation.dart';
-
 
 class DragDownDetailsAutoBinding extends HTExternalClass {
   DragDownDetailsAutoBinding() : super('DragDownDetails');
@@ -11,7 +9,9 @@ class DragDownDetailsAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'DragDownDetails':
-        return ({positionalArgs, namedArgs, typeArgs}) => DragDownDetails(globalPosition : namedArgs.containsKey('globalPosition') ? namedArgs['globalPosition'] : Offset.zero, localPosition : namedArgs.containsKey('localPosition') ? namedArgs['localPosition'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => DragDownDetails(
+            globalPosition: namedArgs.containsKey('globalPosition') ? namedArgs['globalPosition'] : Offset.zero,
+            localPosition: namedArgs.containsKey('localPosition') ? namedArgs['localPosition'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -21,9 +21,6 @@ class DragDownDetailsAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as DragDownDetails).htFetch(id);
   }
-
-
-
 }
 
 extension DragDownDetailsBinding on DragDownDetails {
@@ -36,12 +33,11 @@ extension DragDownDetailsBinding on DragDownDetails {
       case 'localPosition':
         return localPosition;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class DragStartDetailsAutoBinding extends HTExternalClass {
@@ -51,7 +47,11 @@ class DragStartDetailsAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'DragStartDetails':
-        return ({positionalArgs, namedArgs, typeArgs}) => DragStartDetails(sourceTimeStamp : namedArgs.containsKey('sourceTimeStamp') ? namedArgs['sourceTimeStamp'] : null, globalPosition : namedArgs.containsKey('globalPosition') ? namedArgs['globalPosition'] : Offset.zero, localPosition : namedArgs.containsKey('localPosition') ? namedArgs['localPosition'] : null, kind : namedArgs.containsKey('kind') ? namedArgs['kind'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => DragStartDetails(
+            sourceTimeStamp: namedArgs.containsKey('sourceTimeStamp') ? namedArgs['sourceTimeStamp'] : null,
+            globalPosition: namedArgs.containsKey('globalPosition') ? namedArgs['globalPosition'] : Offset.zero,
+            localPosition: namedArgs.containsKey('localPosition') ? namedArgs['localPosition'] : null,
+            kind: namedArgs.containsKey('kind') ? namedArgs['kind'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -61,9 +61,6 @@ class DragStartDetailsAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as DragStartDetails).htFetch(id);
   }
-
-
-
 }
 
 extension DragStartDetailsBinding on DragStartDetails {
@@ -80,12 +77,11 @@ extension DragStartDetailsBinding on DragStartDetails {
       case 'kind':
         return kind;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class DragUpdateDetailsAutoBinding extends HTExternalClass {
@@ -95,7 +91,12 @@ class DragUpdateDetailsAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'DragUpdateDetails':
-        return ({positionalArgs, namedArgs, typeArgs}) => DragUpdateDetails(sourceTimeStamp : namedArgs.containsKey('sourceTimeStamp') ? namedArgs['sourceTimeStamp'] : null, delta : namedArgs.containsKey('delta') ? namedArgs['delta'] : Offset.zero, primaryDelta : namedArgs.containsKey('primaryDelta') ? namedArgs['primaryDelta'] : null, globalPosition : namedArgs['globalPosition'], localPosition : namedArgs.containsKey('localPosition') ? namedArgs['localPosition'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => DragUpdateDetails(
+            sourceTimeStamp: namedArgs.containsKey('sourceTimeStamp') ? namedArgs['sourceTimeStamp'] : null,
+            delta: namedArgs.containsKey('delta') ? namedArgs['delta'] : Offset.zero,
+            primaryDelta: namedArgs.containsKey('primaryDelta') ? namedArgs['primaryDelta'] : null,
+            globalPosition: namedArgs['globalPosition'],
+            localPosition: namedArgs.containsKey('localPosition') ? namedArgs['localPosition'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -105,9 +106,6 @@ class DragUpdateDetailsAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as DragUpdateDetails).htFetch(id);
   }
-
-
-
 }
 
 extension DragUpdateDetailsBinding on DragUpdateDetails {
@@ -126,12 +124,11 @@ extension DragUpdateDetailsBinding on DragUpdateDetails {
       case 'localPosition':
         return localPosition;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class DragEndDetailsAutoBinding extends HTExternalClass {
@@ -141,7 +138,9 @@ class DragEndDetailsAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'DragEndDetails':
-        return ({positionalArgs, namedArgs, typeArgs}) => DragEndDetails(velocity : namedArgs.containsKey('velocity') ? namedArgs['velocity'] : Velocity.zero, primaryVelocity : namedArgs.containsKey('primaryVelocity') ? namedArgs['primaryVelocity'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => DragEndDetails(
+            velocity: namedArgs.containsKey('velocity') ? namedArgs['velocity'] : Velocity.zero,
+            primaryVelocity: namedArgs.containsKey('primaryVelocity') ? namedArgs['primaryVelocity'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -151,9 +150,6 @@ class DragEndDetailsAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as DragEndDetails).htFetch(id);
   }
-
-
-
 }
 
 extension DragEndDetailsBinding on DragEndDetails {
@@ -166,11 +162,9 @@ extension DragEndDetailsBinding on DragEndDetails {
       case 'primaryVelocity':
         return primaryVelocity;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
-

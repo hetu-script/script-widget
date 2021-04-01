@@ -1,0 +1,21 @@
+external class FloatingActionButtonThemeData {
+    construct 
+    get foregroundColor
+    get backgroundColor
+    get focusColor
+    get hoverColor
+    get splashColor
+    get elevation
+    get focusElevation
+    get hoverElevation
+    get disabledElevation
+    get highlightElevation
+    get shape
+    fun copyWith
+    get hashCode
+    fun debugFillProperties
+    fun toStringShort
+    fun toString
+    fun toDiagnosticsNode
+    static fun lerp (a, b, t)
+}

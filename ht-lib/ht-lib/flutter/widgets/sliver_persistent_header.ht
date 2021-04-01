@@ -1,0 +1,16 @@
+external class SliverPersistentHeader {
+    construct 
+    get delegate
+    get pinned
+    get floating
+    get key
+    fun build
+    fun debugFillProperties
+    fun createElement
+    fun toStringShort
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}

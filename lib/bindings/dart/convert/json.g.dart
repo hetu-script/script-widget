@@ -1,8 +1,5 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'dart:convert';
-import 'dart:async';
-import 'dart:typed_data';
-
 
 class JsonUnsupportedObjectErrorAutoBinding extends HTExternalClass {
   JsonUnsupportedObjectErrorAutoBinding() : super('JsonUnsupportedObjectError');
@@ -11,7 +8,9 @@ class JsonUnsupportedObjectErrorAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'JsonUnsupportedObjectError':
-        return ({positionalArgs, namedArgs, typeArgs}) => JsonUnsupportedObjectError(positionalArgs[0], cause : namedArgs.containsKey('cause') ? namedArgs['cause'] : null, partialResult : namedArgs.containsKey('partialResult') ? namedArgs['partialResult'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => JsonUnsupportedObjectError(positionalArgs[0],
+            cause: namedArgs.containsKey('cause') ? namedArgs['cause'] : null,
+            partialResult: namedArgs.containsKey('partialResult') ? namedArgs['partialResult'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -21,9 +20,6 @@ class JsonUnsupportedObjectErrorAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as JsonUnsupportedObjectError).htFetch(id);
   }
-
-
-
 }
 
 extension JsonUnsupportedObjectErrorBinding on JsonUnsupportedObjectError {
@@ -38,12 +34,11 @@ extension JsonUnsupportedObjectErrorBinding on JsonUnsupportedObjectError {
       case 'partialResult':
         return partialResult;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class JsonCyclicErrorAutoBinding extends HTExternalClass {
@@ -63,9 +58,6 @@ class JsonCyclicErrorAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as JsonCyclicError).htFetch(id);
   }
-
-
-
 }
 
 extension JsonCyclicErrorBinding on JsonCyclicError {
@@ -80,12 +72,11 @@ extension JsonCyclicErrorBinding on JsonCyclicError {
       case 'partialResult':
         return partialResult;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class JsonCodecAutoBinding extends HTExternalClass {
@@ -95,7 +86,9 @@ class JsonCodecAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'JsonCodec':
-        return ({positionalArgs, namedArgs, typeArgs}) => JsonCodec(reviver : namedArgs.containsKey('reviver') ? namedArgs['reviver'] : null, toEncodable : namedArgs.containsKey('toEncodable') ? namedArgs['toEncodable'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => JsonCodec(
+            reviver: namedArgs.containsKey('reviver') ? namedArgs['reviver'] : null,
+            toEncodable: namedArgs.containsKey('toEncodable') ? namedArgs['toEncodable'] : null);
       case 'JsonCodec.withReviver':
         return ({positionalArgs, namedArgs, typeArgs}) => JsonCodec.withReviver(positionalArgs[0]);
       default:
@@ -107,9 +100,6 @@ class JsonCodecAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as JsonCodec).htFetch(id);
   }
-
-
-
 }
 
 extension JsonCodecBinding on JsonCodec {
@@ -122,14 +112,15 @@ extension JsonCodecBinding on JsonCodec {
       case 'decoder':
         return decoder;
       case 'decode':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.decode(positionalArgs[0], reviver : namedArgs.containsKey('reviver') ? namedArgs['reviver'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            decode(positionalArgs[0], reviver: namedArgs.containsKey('reviver') ? namedArgs['reviver'] : null);
       case 'encode':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.encode(positionalArgs[0], toEncodable : namedArgs.containsKey('toEncodable') ? namedArgs['toEncodable'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => encode(positionalArgs[0],
+            toEncodable: namedArgs.containsKey('toEncodable') ? namedArgs['toEncodable'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class JsonEncoderAutoBinding extends HTExternalClass {
@@ -139,9 +130,11 @@ class JsonEncoderAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'JsonEncoder':
-        return ({positionalArgs, namedArgs, typeArgs}) => JsonEncoder(positionalArgs.length > 0 ? positionalArgs[0] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            JsonEncoder(positionalArgs.length > 0 ? positionalArgs[0] : null);
       case 'JsonEncoder.withIndent':
-        return ({positionalArgs, namedArgs, typeArgs}) => JsonEncoder.withIndent(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            JsonEncoder.withIndent(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : null);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -151,9 +144,6 @@ class JsonEncoderAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as JsonEncoder).htFetch(id);
   }
-
-
-
 }
 
 extension JsonEncoderBinding on JsonEncoder {
@@ -164,20 +154,19 @@ extension JsonEncoderBinding on JsonEncoder {
       case 'indent':
         return indent;
       case 'convert':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.convert(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => convert(positionalArgs[0]);
       case 'startChunkedConversion':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.startChunkedConversion(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => startChunkedConversion(positionalArgs[0]);
       case 'bind':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.bind(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => bind(positionalArgs[0]);
       case 'fuse':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.fuse(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => fuse(positionalArgs[0]);
       case 'cast':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.cast();
+        return ({positionalArgs, namedArgs, typeArgs}) => cast();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class JsonUtf8EncoderAutoBinding extends HTExternalClass {
@@ -187,9 +176,10 @@ class JsonUtf8EncoderAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'JsonUtf8Encoder':
-        return ({positionalArgs, namedArgs, typeArgs}) => JsonUtf8Encoder(positionalArgs.length > 0 ? positionalArgs[0] : null, positionalArgs.length > 1 ? positionalArgs[1] : null, positionalArgs.length > 2 ? positionalArgs[2] : null);
-      case 'JsonUtf8Encoder.DEFAULT_BUFFER_SIZE':
-        return JsonUtf8Encoder.DEFAULT_BUFFER_SIZE;
+        return ({positionalArgs, namedArgs, typeArgs}) => JsonUtf8Encoder(
+            positionalArgs.length > 0 ? positionalArgs[0] : null,
+            positionalArgs.length > 1 ? positionalArgs[1] : null,
+            positionalArgs.length > 2 ? positionalArgs[2] : null);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -199,9 +189,6 @@ class JsonUtf8EncoderAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as JsonUtf8Encoder).htFetch(id);
   }
-
-
-
 }
 
 extension JsonUtf8EncoderBinding on JsonUtf8Encoder {
@@ -210,20 +197,19 @@ extension JsonUtf8EncoderBinding on JsonUtf8Encoder {
       case 'typeid':
         return HTTypeId('JsonUtf8Encoder');
       case 'convert':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.convert(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => convert(positionalArgs[0]);
       case 'startChunkedConversion':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.startChunkedConversion(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => startChunkedConversion(positionalArgs[0]);
       case 'bind':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.bind(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => bind(positionalArgs[0]);
       case 'fuse':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.fuse(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => fuse(positionalArgs[0]);
       case 'cast':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.cast();
+        return ({positionalArgs, namedArgs, typeArgs}) => cast();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class JsonDecoderAutoBinding extends HTExternalClass {
@@ -233,7 +219,8 @@ class JsonDecoderAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'JsonDecoder':
-        return ({positionalArgs, namedArgs, typeArgs}) => JsonDecoder(positionalArgs.length > 0 ? positionalArgs[0] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            JsonDecoder(positionalArgs.length > 0 ? positionalArgs[0] : null);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -243,9 +230,6 @@ class JsonDecoderAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as JsonDecoder).htFetch(id);
   }
-
-
-
 }
 
 extension JsonDecoderBinding on JsonDecoder {
@@ -254,19 +238,17 @@ extension JsonDecoderBinding on JsonDecoder {
       case 'typeid':
         return HTTypeId('JsonDecoder');
       case 'convert':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.convert(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => convert(positionalArgs[0]);
       case 'startChunkedConversion':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.startChunkedConversion(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => startChunkedConversion(positionalArgs[0]);
       case 'bind':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.bind(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => bind(positionalArgs[0]);
       case 'fuse':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.fuse(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => fuse(positionalArgs[0]);
       case 'cast':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.cast();
+        return ({positionalArgs, namedArgs, typeArgs}) => cast();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
-

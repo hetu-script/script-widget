@@ -1,10 +1,5 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'dart:core';
-import "dart:collection";
-import "dart:convert";
-import "dart:math";
-import "dart:typed_data";
-
 
 class StringBufferAutoBinding extends HTExternalClass {
   StringBufferAutoBinding() : super('StringBuffer');
@@ -13,7 +8,8 @@ class StringBufferAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'StringBuffer':
-        return ({positionalArgs, namedArgs, typeArgs}) => StringBuffer(positionalArgs.length > 0 ? positionalArgs[0] : "");
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            StringBuffer(positionalArgs.length > 0 ? positionalArgs[0] : '');
       default:
         throw HTErrorUndefined(varName);
     }
@@ -23,9 +19,6 @@ class StringBufferAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as StringBuffer).htFetch(id);
   }
-
-
-
 }
 
 extension StringBufferBinding on StringBuffer {
@@ -40,21 +33,20 @@ extension StringBufferBinding on StringBuffer {
       case 'isNotEmpty':
         return isNotEmpty;
       case 'write':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.write(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => write(positionalArgs[0]);
       case 'writeCharCode':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.writeCharCode(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => writeCharCode(positionalArgs[0]);
       case 'writeAll':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.writeAll(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : "");
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            writeAll(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : '');
       case 'writeln':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.writeln(positionalArgs.length > 0 ? positionalArgs[0] : "");
+        return ({positionalArgs, namedArgs, typeArgs}) => writeln(positionalArgs.length > 0 ? positionalArgs[0] : '');
       case 'clear':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.clear();
+        return ({positionalArgs, namedArgs, typeArgs}) => clear();
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
-

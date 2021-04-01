@@ -1,0 +1,182 @@
+external class TraversalDirection {
+    static const up
+    static const right
+    static const down
+    static const left
+}
+external class WidgetOrderTraversalPolicy {
+    construct
+    fun sortDescendants
+    fun invalidateScopeData
+    fun changedScope
+    fun findFirstFocusInDirection
+    fun inDirection
+    fun findFirstFocus
+    fun findLastFocus
+    fun next
+    fun previous
+    fun toStringShort
+    fun toString
+    fun toDiagnosticsNode
+}
+external class ReadingOrderTraversalPolicy {
+    construct
+    fun sortDescendants
+    fun invalidateScopeData
+    fun changedScope
+    fun findFirstFocusInDirection
+    fun inDirection
+    fun findFirstFocus
+    fun findLastFocus
+    fun next
+    fun previous
+    fun toStringShort
+    fun toString
+    fun toDiagnosticsNode
+}
+external class NumericFocusOrder {
+    construct 
+    get order
+    fun doCompare
+    fun debugFillProperties
+    fun compareTo
+    fun toStringShort
+    fun toString
+    fun toDiagnosticsNode
+}
+external class LexicalFocusOrder {
+    construct 
+    get order
+    fun doCompare
+    fun debugFillProperties
+    fun compareTo
+    fun toStringShort
+    fun toString
+    fun toDiagnosticsNode
+}
+external class OrderedTraversalPolicy {
+    construct 
+    get secondary
+    fun sortDescendants
+    fun invalidateScopeData
+    fun changedScope
+    fun findFirstFocusInDirection
+    fun inDirection
+    fun findFirstFocus
+    fun findLastFocus
+    fun next
+    fun previous
+    fun toStringShort
+    fun toString
+    fun toDiagnosticsNode
+}
+external class FocusTraversalOrder {
+    construct 
+    get order
+    get child
+    get key
+    fun updateShouldNotify
+    fun debugFillProperties
+    fun createElement
+    fun toStringShort
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+    static fun of (context)
+    static fun maybeOf (context)
+}
+external class FocusTraversalGroup {
+    construct 
+    get policy
+    get descendantsAreFocusable
+    get child
+    get key
+    fun createState
+    fun debugFillProperties
+    fun createElement
+    fun toStringShort
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+    static fun of (context)
+    static fun maybeOf (context)
+}
+external class RequestFocusIntent {
+    construct 
+    get focusNode
+    fun toStringShort
+    fun toString
+    fun toDiagnosticsNode
+}
+external class RequestFocusAction {
+    construct
+    fun invoke
+    get intentType
+    fun isEnabled
+    fun consumesKey
+    fun addActionListener
+    fun removeActionListener
+    fun toStringShort
+    fun toString
+    fun toDiagnosticsNode
+}
+external class NextFocusIntent {
+    construct 
+    fun toStringShort
+    fun toString
+    fun toDiagnosticsNode
+}
+external class NextFocusAction {
+    construct
+    fun invoke
+    get intentType
+    fun isEnabled
+    fun consumesKey
+    fun addActionListener
+    fun removeActionListener
+    fun toStringShort
+    fun toString
+    fun toDiagnosticsNode
+}
+external class PreviousFocusIntent {
+    construct 
+    fun toStringShort
+    fun toString
+    fun toDiagnosticsNode
+}
+external class PreviousFocusAction {
+    construct
+    fun invoke
+    get intentType
+    fun isEnabled
+    fun consumesKey
+    fun addActionListener
+    fun removeActionListener
+    fun toStringShort
+    fun toString
+    fun toDiagnosticsNode
+}
+external class DirectionalFocusIntent {
+    construct 
+    get direction
+    get ignoreTextFields
+    fun toStringShort
+    fun toString
+    fun toDiagnosticsNode
+}
+external class DirectionalFocusAction {
+    construct
+    fun invoke
+    get intentType
+    fun isEnabled
+    fun consumesKey
+    fun addActionListener
+    fun removeActionListener
+    fun toStringShort
+    fun toString
+    fun toDiagnosticsNode
+}

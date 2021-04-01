@@ -1,11 +1,5 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/widgets.dart';
-import 'dart:async';
-import 'dart:collection';
-import 'package:flutter/foundation.dart';
-import 'package:flutter/scheduler.dart';
-import 'package:flutter/services.dart';
-
 
 class RouteInformationAutoBinding extends HTExternalClass {
   RouteInformationAutoBinding() : super('RouteInformation');
@@ -14,7 +8,9 @@ class RouteInformationAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'RouteInformation':
-        return ({positionalArgs, namedArgs, typeArgs}) => RouteInformation(location : namedArgs.containsKey('location') ? namedArgs['location'] : null, state : namedArgs.containsKey('state') ? namedArgs['state'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => RouteInformation(
+            location: namedArgs.containsKey('location') ? namedArgs['location'] : null,
+            state: namedArgs.containsKey('state') ? namedArgs['state'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -24,9 +20,6 @@ class RouteInformationAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as RouteInformation).htFetch(id);
   }
-
-
-
 }
 
 extension RouteInformationBinding on RouteInformation {
@@ -42,7 +35,6 @@ extension RouteInformationBinding on RouteInformation {
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class RootBackButtonDispatcherAutoBinding extends HTExternalClass {
@@ -62,9 +54,6 @@ class RootBackButtonDispatcherAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as RootBackButtonDispatcher).htFetch(id);
   }
-
-
-
 }
 
 extension RootBackButtonDispatcherBinding on RootBackButtonDispatcher {
@@ -75,26 +64,25 @@ extension RootBackButtonDispatcherBinding on RootBackButtonDispatcher {
       case 'hasCallbacks':
         return hasCallbacks;
       case 'addCallback':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.addCallback(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => addCallback(positionalArgs[0]);
       case 'removeCallback':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.removeCallback(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => removeCallback(positionalArgs[0]);
       case 'didPopRoute':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.didPopRoute();
+        return ({positionalArgs, namedArgs, typeArgs}) => didPopRoute();
       case 'invokeCallback':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.invokeCallback(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => invokeCallback(positionalArgs[0]);
       case 'createChildBackButtonDispatcher':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.createChildBackButtonDispatcher();
+        return ({positionalArgs, namedArgs, typeArgs}) => createChildBackButtonDispatcher();
       case 'takePriority':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.takePriority();
+        return ({positionalArgs, namedArgs, typeArgs}) => takePriority();
       case 'deferTo':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.deferTo(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => deferTo(positionalArgs[0]);
       case 'forget':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.forget(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => forget(positionalArgs[0]);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class ChildBackButtonDispatcherAutoBinding extends HTExternalClass {
@@ -114,9 +102,6 @@ class ChildBackButtonDispatcherAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as ChildBackButtonDispatcher).htFetch(id);
   }
-
-
-
 }
 
 extension ChildBackButtonDispatcherBinding on ChildBackButtonDispatcher {
@@ -129,24 +114,23 @@ extension ChildBackButtonDispatcherBinding on ChildBackButtonDispatcher {
       case 'hasCallbacks':
         return hasCallbacks;
       case 'takePriority':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.takePriority();
+        return ({positionalArgs, namedArgs, typeArgs}) => takePriority();
       case 'deferTo':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.deferTo(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => deferTo(positionalArgs[0]);
       case 'removeCallback':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.removeCallback(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => removeCallback(positionalArgs[0]);
       case 'invokeCallback':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.invokeCallback(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => invokeCallback(positionalArgs[0]);
       case 'createChildBackButtonDispatcher':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.createChildBackButtonDispatcher();
+        return ({positionalArgs, namedArgs, typeArgs}) => createChildBackButtonDispatcher();
       case 'forget':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.forget(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => forget(positionalArgs[0]);
       case 'addCallback':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.addCallback(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => addCallback(positionalArgs[0]);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class PlatformRouteInformationProviderAutoBinding extends HTExternalClass {
@@ -156,7 +140,9 @@ class PlatformRouteInformationProviderAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'PlatformRouteInformationProvider':
-        return ({positionalArgs, namedArgs, typeArgs}) => PlatformRouteInformationProvider(initialRouteInformation : namedArgs.containsKey('initialRouteInformation') ? namedArgs['initialRouteInformation'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => PlatformRouteInformationProvider(
+            initialRouteInformation:
+                namedArgs.containsKey('initialRouteInformation') ? namedArgs['initialRouteInformation'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -167,13 +153,11 @@ class PlatformRouteInformationProviderAutoBinding extends HTExternalClass {
     return (instance as PlatformRouteInformationProvider).htFetch(id);
   }
 
-
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
       'VoidCallback': (HTFunction function) => () => function.call(positionalArgs: const [], namedArgs: const {}),
     };
   }
-
 }
 
 extension PlatformRouteInformationProviderBinding on PlatformRouteInformationProvider {
@@ -184,21 +168,19 @@ extension PlatformRouteInformationProviderBinding on PlatformRouteInformationPro
       case 'value':
         return value;
       case 'routerReportsNewRouteInformation':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.routerReportsNewRouteInformation(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => routerReportsNewRouteInformation(positionalArgs[0]);
       case 'addListener':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.addListener(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => addListener(positionalArgs[0]);
       case 'removeListener':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.removeListener(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => removeListener(positionalArgs[0]);
       case 'dispose':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.dispose();
+        return ({positionalArgs, namedArgs, typeArgs}) => dispose();
       case 'didPushRouteInformation':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.didPushRouteInformation(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => didPushRouteInformation(positionalArgs[0]);
       case 'didPushRoute':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.didPushRoute(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => didPushRoute(positionalArgs[0]);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
-

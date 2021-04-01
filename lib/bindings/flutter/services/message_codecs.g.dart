@@ -1,9 +1,5 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/services.dart';
-import 'dart:convert';
-import 'dart:typed_data';
-import 'package:flutter/foundation.dart';
-
 
 class BinaryCodecAutoBinding extends HTExternalClass {
   BinaryCodecAutoBinding() : super('BinaryCodec');
@@ -22,9 +18,6 @@ class BinaryCodecAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as BinaryCodec).htFetch(id);
   }
-
-
-
 }
 
 extension BinaryCodecBinding on BinaryCodec {
@@ -33,14 +26,13 @@ extension BinaryCodecBinding on BinaryCodec {
       case 'typeid':
         return HTTypeId('BinaryCodec');
       case 'decodeMessage':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.decodeMessage(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => decodeMessage(positionalArgs[0]);
       case 'encodeMessage':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.encodeMessage(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => encodeMessage(positionalArgs[0]);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class StringCodecAutoBinding extends HTExternalClass {
@@ -60,9 +52,6 @@ class StringCodecAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as StringCodec).htFetch(id);
   }
-
-
-
 }
 
 extension StringCodecBinding on StringCodec {
@@ -71,14 +60,13 @@ extension StringCodecBinding on StringCodec {
       case 'typeid':
         return HTTypeId('StringCodec');
       case 'decodeMessage':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.decodeMessage(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => decodeMessage(positionalArgs[0]);
       case 'encodeMessage':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.encodeMessage(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => encodeMessage(positionalArgs[0]);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class JSONMessageCodecAutoBinding extends HTExternalClass {
@@ -98,9 +86,6 @@ class JSONMessageCodecAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as JSONMessageCodec).htFetch(id);
   }
-
-
-
 }
 
 extension JSONMessageCodecBinding on JSONMessageCodec {
@@ -109,14 +94,13 @@ extension JSONMessageCodecBinding on JSONMessageCodec {
       case 'typeid':
         return HTTypeId('JSONMessageCodec');
       case 'encodeMessage':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.encodeMessage(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => encodeMessage(positionalArgs[0]);
       case 'decodeMessage':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.decodeMessage(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => decodeMessage(positionalArgs[0]);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class JSONMethodCodecAutoBinding extends HTExternalClass {
@@ -136,9 +120,6 @@ class JSONMethodCodecAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as JSONMethodCodec).htFetch(id);
   }
-
-
-
 }
 
 extension JSONMethodCodecBinding on JSONMethodCodec {
@@ -147,20 +128,22 @@ extension JSONMethodCodecBinding on JSONMethodCodec {
       case 'typeid':
         return HTTypeId('JSONMethodCodec');
       case 'encodeMethodCall':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.encodeMethodCall(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => encodeMethodCall(positionalArgs[0]);
       case 'decodeMethodCall':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.decodeMethodCall(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => decodeMethodCall(positionalArgs[0]);
       case 'decodeEnvelope':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.decodeEnvelope(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => decodeEnvelope(positionalArgs[0]);
       case 'encodeSuccessEnvelope':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.encodeSuccessEnvelope(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => encodeSuccessEnvelope(positionalArgs[0]);
       case 'encodeErrorEnvelope':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.encodeErrorEnvelope(code : namedArgs.containsKey('code') ? namedArgs['code'] : null, message : namedArgs.containsKey('message') ? namedArgs['message'] : null, details : namedArgs.containsKey('details') ? namedArgs['details'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => encodeErrorEnvelope(
+            code: namedArgs.containsKey('code') ? namedArgs['code'] : null,
+            message: namedArgs.containsKey('message') ? namedArgs['message'] : null,
+            details: namedArgs.containsKey('details') ? namedArgs['details'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class StandardMessageCodecAutoBinding extends HTExternalClass {
@@ -180,9 +163,6 @@ class StandardMessageCodecAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as StandardMessageCodec).htFetch(id);
   }
-
-
-
 }
 
 extension StandardMessageCodecBinding on StandardMessageCodec {
@@ -191,24 +171,23 @@ extension StandardMessageCodecBinding on StandardMessageCodec {
       case 'typeid':
         return HTTypeId('StandardMessageCodec');
       case 'encodeMessage':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.encodeMessage(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => encodeMessage(positionalArgs[0]);
       case 'decodeMessage':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.decodeMessage(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => decodeMessage(positionalArgs[0]);
       case 'writeValue':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.writeValue(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => writeValue(positionalArgs[0], positionalArgs[1]);
       case 'readValue':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.readValue(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => readValue(positionalArgs[0]);
       case 'readValueOfType':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.readValueOfType(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => readValueOfType(positionalArgs[0], positionalArgs[1]);
       case 'writeSize':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.writeSize(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => writeSize(positionalArgs[0], positionalArgs[1]);
       case 'readSize':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.readSize(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => readSize(positionalArgs[0]);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class StandardMethodCodecAutoBinding extends HTExternalClass {
@@ -218,7 +197,8 @@ class StandardMethodCodecAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'StandardMethodCodec':
-        return ({positionalArgs, namedArgs, typeArgs}) => StandardMethodCodec(positionalArgs.length > 0 ? positionalArgs[0] : const StandardMessageCodec());
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            StandardMethodCodec(positionalArgs.length > 0 ? positionalArgs[0] : const StandardMessageCodec());
       default:
         throw HTErrorUndefined(varName);
     }
@@ -228,9 +208,6 @@ class StandardMethodCodecAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as StandardMethodCodec).htFetch(id);
   }
-
-
-
 }
 
 extension StandardMethodCodecBinding on StandardMethodCodec {
@@ -241,19 +218,20 @@ extension StandardMethodCodecBinding on StandardMethodCodec {
       case 'messageCodec':
         return messageCodec;
       case 'encodeMethodCall':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.encodeMethodCall(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => encodeMethodCall(positionalArgs[0]);
       case 'decodeMethodCall':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.decodeMethodCall(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => decodeMethodCall(positionalArgs[0]);
       case 'encodeSuccessEnvelope':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.encodeSuccessEnvelope(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => encodeSuccessEnvelope(positionalArgs[0]);
       case 'encodeErrorEnvelope':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.encodeErrorEnvelope(code : namedArgs.containsKey('code') ? namedArgs['code'] : null, message : namedArgs.containsKey('message') ? namedArgs['message'] : null, details : namedArgs.containsKey('details') ? namedArgs['details'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => encodeErrorEnvelope(
+            code: namedArgs.containsKey('code') ? namedArgs['code'] : null,
+            message: namedArgs.containsKey('message') ? namedArgs['message'] : null,
+            details: namedArgs.containsKey('details') ? namedArgs['details'] : null);
       case 'decodeEnvelope':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.decodeEnvelope(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => decodeEnvelope(positionalArgs[0]);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
-

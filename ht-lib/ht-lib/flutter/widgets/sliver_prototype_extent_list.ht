@@ -1,0 +1,16 @@
+external class SliverPrototypeExtentList {
+    construct 
+    get prototypeItem
+    get delegate
+    get key
+    fun createRenderObject
+    fun createElement
+    fun estimateMaxScrollOffset
+    fun debugFillProperties
+    fun toStringShort
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}

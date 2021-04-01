@@ -1,7 +1,5 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/foundation.dart';
-import 'package:meta/meta.dart';
-
 
 class AbstractNodeAutoBinding extends HTExternalClass {
   AbstractNodeAutoBinding() : super('AbstractNode');
@@ -20,9 +18,6 @@ class AbstractNodeAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as AbstractNode).htFetch(id);
   }
-
-
-
 }
 
 extension AbstractNodeBinding on AbstractNode {
@@ -39,15 +34,13 @@ extension AbstractNodeBinding on AbstractNode {
       case 'parent':
         return parent;
       case 'redepthChildren':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.redepthChildren();
+        return ({positionalArgs, namedArgs, typeArgs}) => redepthChildren();
       case 'attach':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.attach(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => attach(positionalArgs[0]);
       case 'detach':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.detach();
+        return ({positionalArgs, namedArgs, typeArgs}) => detach();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
-

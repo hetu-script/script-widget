@@ -1,14 +1,5 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'dart:ui';
-import 'dart:async';
-import 'dart:collection'as collection;
-import 'dart:convert';
-import 'dart:developer'as developer;
-import 'dart:io';
-import 'dart:isolate';
-import 'dart:math'as math;
-import 'dart:nativewrappers';
-import 'dart:typed_data';
 
 class FramePhaseAutoBinding extends HTExternalClass {
   FramePhaseAutoBinding() : super('FramePhase');
@@ -33,7 +24,6 @@ class FramePhaseAutoBinding extends HTExternalClass {
     }
   }
 
-
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
@@ -48,6 +38,7 @@ class FramePhaseAutoBinding extends HTExternalClass {
     }
   }
 }
+
 class AppLifecycleStateAutoBinding extends HTExternalClass {
   AppLifecycleStateAutoBinding() : super('AppLifecycleState');
 
@@ -68,7 +59,6 @@ class AppLifecycleStateAutoBinding extends HTExternalClass {
         throw HTErrorUndefined(varName);
     }
   }
-
 
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
@@ -97,12 +87,7 @@ class PlatformDispatcherAutoBinding extends HTExternalClass {
         throw HTErrorUndefined(varName);
     }
   }
-
-
-
-
 }
-
 
 class FrameTimingAutoBinding extends HTExternalClass {
   FrameTimingAutoBinding() : super('FrameTiming');
@@ -111,7 +96,12 @@ class FrameTimingAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'FrameTiming':
-        return ({positionalArgs, namedArgs, typeArgs}) => FrameTiming(vsyncStart : namedArgs['vsyncStart'], buildStart : namedArgs['buildStart'], buildFinish : namedArgs['buildFinish'], rasterStart : namedArgs['rasterStart'], rasterFinish : namedArgs['rasterFinish']);
+        return ({positionalArgs, namedArgs, typeArgs}) => FrameTiming(
+            vsyncStart: namedArgs['vsyncStart'],
+            buildStart: namedArgs['buildStart'],
+            buildFinish: namedArgs['buildFinish'],
+            rasterStart: namedArgs['rasterStart'],
+            rasterFinish: namedArgs['rasterFinish']);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -121,9 +111,6 @@ class FrameTimingAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as FrameTiming).htFetch(id);
   }
-
-
-
 }
 
 extension FrameTimingBinding on FrameTiming {
@@ -140,14 +127,13 @@ extension FrameTimingBinding on FrameTiming {
       case 'totalSpan':
         return totalSpan;
       case 'timestampInMicroseconds':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.timestampInMicroseconds(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => timestampInMicroseconds(positionalArgs[0]);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class WindowPaddingAutoBinding extends HTExternalClass {
@@ -162,12 +148,7 @@ class WindowPaddingAutoBinding extends HTExternalClass {
         throw HTErrorUndefined(varName);
     }
   }
-
-
-
-
 }
-
 
 class LocaleAutoBinding extends HTExternalClass {
   LocaleAutoBinding() : super('Locale');
@@ -176,9 +157,13 @@ class LocaleAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'Locale':
-        return ({positionalArgs, namedArgs, typeArgs}) => Locale(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            Locale(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : null);
       case 'Locale.fromSubtags':
-        return ({positionalArgs, namedArgs, typeArgs}) => Locale.fromSubtags(languageCode : namedArgs.containsKey('languageCode') ? namedArgs['languageCode'] : 'und', scriptCode : namedArgs.containsKey('scriptCode') ? namedArgs['scriptCode'] : null, countryCode : namedArgs.containsKey('countryCode') ? namedArgs['countryCode'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => Locale.fromSubtags(
+            languageCode: namedArgs.containsKey('languageCode') ? namedArgs['languageCode'] : 'und',
+            scriptCode: namedArgs.containsKey('scriptCode') ? namedArgs['scriptCode'] : null,
+            countryCode: namedArgs.containsKey('countryCode') ? namedArgs['countryCode'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -188,9 +173,6 @@ class LocaleAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as Locale).htFetch(id);
   }
-
-
-
 }
 
 extension LocaleBinding on Locale {
@@ -207,13 +189,11 @@ extension LocaleBinding on Locale {
       case 'hashCode':
         return hashCode;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       case 'toLanguageTag':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toLanguageTag();
+        return ({positionalArgs, namedArgs, typeArgs}) => toLanguageTag();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
-

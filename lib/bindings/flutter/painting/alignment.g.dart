@@ -1,8 +1,5 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/painting.dart';
-import 'dart:ui'as ui;
-import 'package:flutter/foundation.dart';
-
 
 class AlignmentAutoBinding extends HTExternalClass {
   AlignmentAutoBinding() : super('Alignment');
@@ -13,7 +10,8 @@ class AlignmentAutoBinding extends HTExternalClass {
       case 'Alignment':
         return ({positionalArgs, namedArgs, typeArgs}) => Alignment(positionalArgs[0], positionalArgs[1]);
       case 'Alignment.lerp':
-        return ({positionalArgs, namedArgs, typeArgs}) => Alignment.lerp(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            Alignment.lerp(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
       case 'Alignment.topLeft':
         return Alignment.topLeft;
       case 'Alignment.topCenter':
@@ -41,9 +39,6 @@ class AlignmentAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as Alignment).htFetch(id);
   }
-
-
-
 }
 
 extension AlignmentBinding on Alignment {
@@ -58,24 +53,23 @@ extension AlignmentBinding on Alignment {
       case 'hashCode':
         return hashCode;
       case 'add':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.add(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => add(positionalArgs[0]);
       case 'alongOffset':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.alongOffset(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => alongOffset(positionalArgs[0]);
       case 'alongSize':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.alongSize(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => alongSize(positionalArgs[0]);
       case 'withinRect':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.withinRect(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => withinRect(positionalArgs[0]);
       case 'inscribe':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.inscribe(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => inscribe(positionalArgs[0], positionalArgs[1]);
       case 'resolve':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.resolve(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => resolve(positionalArgs[0]);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class AlignmentDirectionalAutoBinding extends HTExternalClass {
@@ -87,7 +81,8 @@ class AlignmentDirectionalAutoBinding extends HTExternalClass {
       case 'AlignmentDirectional':
         return ({positionalArgs, namedArgs, typeArgs}) => AlignmentDirectional(positionalArgs[0], positionalArgs[1]);
       case 'AlignmentDirectional.lerp':
-        return ({positionalArgs, namedArgs, typeArgs}) => AlignmentDirectional.lerp(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            AlignmentDirectional.lerp(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
       case 'AlignmentDirectional.topStart':
         return AlignmentDirectional.topStart;
       case 'AlignmentDirectional.topCenter':
@@ -115,9 +110,6 @@ class AlignmentDirectionalAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as AlignmentDirectional).htFetch(id);
   }
-
-
-
 }
 
 extension AlignmentDirectionalBinding on AlignmentDirectional {
@@ -132,16 +124,15 @@ extension AlignmentDirectionalBinding on AlignmentDirectional {
       case 'hashCode':
         return hashCode;
       case 'add':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.add(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => add(positionalArgs[0]);
       case 'resolve':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.resolve(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => resolve(positionalArgs[0]);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class TextAlignVerticalAutoBinding extends HTExternalClass {
@@ -151,7 +142,7 @@ class TextAlignVerticalAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'TextAlignVertical':
-        return ({positionalArgs, namedArgs, typeArgs}) => TextAlignVertical(y : namedArgs['y']);
+        return ({positionalArgs, namedArgs, typeArgs}) => TextAlignVertical(y: namedArgs['y']);
       case 'TextAlignVertical.top':
         return TextAlignVertical.top;
       case 'TextAlignVertical.center':
@@ -167,9 +158,6 @@ class TextAlignVerticalAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as TextAlignVertical).htFetch(id);
   }
-
-
-
 }
 
 extension TextAlignVerticalBinding on TextAlignVertical {
@@ -180,11 +168,9 @@ extension TextAlignVerticalBinding on TextAlignVertical {
       case 'y':
         return y;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
-

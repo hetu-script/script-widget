@@ -1,11 +1,7 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter/foundation.dart';
-import 'package:flutter/scheduler.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/rendering.dart';
-import 'package:flutter/services.dart';
-
 
 class ActionListenerAutoBinding extends HTExternalClass {
   ActionListenerAutoBinding() : super('ActionListener');
@@ -14,7 +10,11 @@ class ActionListenerAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'ActionListener':
-        return ({positionalArgs, namedArgs, typeArgs}) => ActionListener(key : namedArgs.containsKey('key') ? namedArgs['key'] : null, listener : namedArgs['listener'], action : namedArgs['action'], child : namedArgs['child']);
+        return ({positionalArgs, namedArgs, typeArgs}) => ActionListener(
+            key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
+            listener: namedArgs['listener'],
+            action: namedArgs['action'],
+            child: namedArgs['child']);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -25,13 +25,12 @@ class ActionListenerAutoBinding extends HTExternalClass {
     return (instance as ActionListener).htFetch(id);
   }
 
-
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'ActionListenerCallback': (HTFunction function) => (action) => function.call(positionalArgs: [action], namedArgs: const {}),
+      'ActionListenerCallback': (HTFunction function) =>
+          (action) => function.call(positionalArgs: [action], namedArgs: const {}),
     };
   }
-
 }
 
 extension ActionListenerBinding on ActionListener {
@@ -45,13 +44,38 @@ extension ActionListenerBinding on ActionListener {
         return action;
       case 'child':
         return child;
+      case 'key':
+        return key;
+      case 'hashCode':
+        return hashCode;
       case 'createState':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.createState();
+        return ({positionalArgs, namedArgs, typeArgs}) => createState();
+      case 'createElement':
+        return ({positionalArgs, namedArgs, typeArgs}) => createElement();
+      case 'toStringShort':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'debugFillProperties':
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+      case 'toStringShallow':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
+            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toStringDeep':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
+            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class ActionDispatcherAutoBinding extends HTExternalClass {
@@ -71,9 +95,6 @@ class ActionDispatcherAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as ActionDispatcher).htFetch(id);
   }
-
-
-
 }
 
 extension ActionDispatcherBinding on ActionDispatcher {
@@ -82,12 +103,21 @@ extension ActionDispatcherBinding on ActionDispatcher {
       case 'typeid':
         return HTTypeId('ActionDispatcher');
       case 'invokeAction':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.invokeAction(positionalArgs[0], positionalArgs[1], positionalArgs.length > 2 ? positionalArgs[2] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            invokeAction(positionalArgs[0], positionalArgs[1], positionalArgs.length > 2 ? positionalArgs[2] : null);
+      case 'toStringShort':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class ActionsAutoBinding extends HTExternalClass {
@@ -97,7 +127,11 @@ class ActionsAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'Actions':
-        return ({positionalArgs, namedArgs, typeArgs}) => Actions(key : namedArgs.containsKey('key') ? namedArgs['key'] : null, dispatcher : namedArgs.containsKey('dispatcher') ? namedArgs['dispatcher'] : null, actions : namedArgs['actions'], child : namedArgs['child']);
+        return ({positionalArgs, namedArgs, typeArgs}) => Actions(
+            key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
+            dispatcher: namedArgs.containsKey('dispatcher') ? namedArgs['dispatcher'] : null,
+            actions: namedArgs['actions'],
+            child: namedArgs['child']);
       case 'Actions.of':
         return ({positionalArgs, namedArgs, typeArgs}) => Actions.of(positionalArgs[0]);
       default:
@@ -109,9 +143,6 @@ class ActionsAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as Actions).htFetch(id);
   }
-
-
-
 }
 
 extension ActionsBinding on Actions {
@@ -125,15 +156,38 @@ extension ActionsBinding on Actions {
         return actions;
       case 'child':
         return child;
+      case 'key':
+        return key;
+      case 'hashCode':
+        return hashCode;
       case 'createState':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.createState();
+        return ({positionalArgs, namedArgs, typeArgs}) => createState();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+      case 'createElement':
+        return ({positionalArgs, namedArgs, typeArgs}) => createElement();
+      case 'toStringShort':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'toStringShallow':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
+            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toStringDeep':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
+            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class FocusableActionDetectorAutoBinding extends HTExternalClass {
@@ -143,7 +197,20 @@ class FocusableActionDetectorAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'FocusableActionDetector':
-        return ({positionalArgs, namedArgs, typeArgs}) => FocusableActionDetector(key : namedArgs.containsKey('key') ? namedArgs['key'] : null, enabled : namedArgs.containsKey('enabled') ? namedArgs['enabled'] : true, focusNode : namedArgs.containsKey('focusNode') ? namedArgs['focusNode'] : null, autofocus : namedArgs.containsKey('autofocus') ? namedArgs['autofocus'] : false, shortcuts : namedArgs.containsKey('shortcuts') ? namedArgs['shortcuts'] : null, actions : namedArgs.containsKey('actions') ? namedArgs['actions'] : null, onShowFocusHighlight : namedArgs.containsKey('onShowFocusHighlight') ? namedArgs['onShowFocusHighlight'] : null, onShowHoverHighlight : namedArgs.containsKey('onShowHoverHighlight') ? namedArgs['onShowHoverHighlight'] : null, onFocusChange : namedArgs.containsKey('onFocusChange') ? namedArgs['onFocusChange'] : null, mouseCursor : namedArgs.containsKey('mouseCursor') ? namedArgs['mouseCursor'] : MouseCursor.defer, child : namedArgs['child']);
+        return ({positionalArgs, namedArgs, typeArgs}) => FocusableActionDetector(
+            key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
+            enabled: namedArgs.containsKey('enabled') ? namedArgs['enabled'] : true,
+            focusNode: namedArgs.containsKey('focusNode') ? namedArgs['focusNode'] : null,
+            autofocus: namedArgs.containsKey('autofocus') ? namedArgs['autofocus'] : false,
+            shortcuts: namedArgs.containsKey('shortcuts') ? namedArgs['shortcuts'] : null,
+            actions: namedArgs.containsKey('actions') ? namedArgs['actions'] : null,
+            onShowFocusHighlight:
+                namedArgs.containsKey('onShowFocusHighlight') ? namedArgs['onShowFocusHighlight'] : null,
+            onShowHoverHighlight:
+                namedArgs.containsKey('onShowHoverHighlight') ? namedArgs['onShowHoverHighlight'] : null,
+            onFocusChange: namedArgs.containsKey('onFocusChange') ? namedArgs['onFocusChange'] : null,
+            mouseCursor: namedArgs.containsKey('mouseCursor') ? namedArgs['mouseCursor'] : MouseCursor.defer,
+            child: namedArgs['child']);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -153,9 +220,6 @@ class FocusableActionDetectorAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as FocusableActionDetector).htFetch(id);
   }
-
-
-
 }
 
 extension FocusableActionDetectorBinding on FocusableActionDetector {
@@ -183,13 +247,38 @@ extension FocusableActionDetectorBinding on FocusableActionDetector {
         return mouseCursor;
       case 'child':
         return child;
+      case 'key':
+        return key;
+      case 'hashCode':
+        return hashCode;
       case 'createState':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.createState();
+        return ({positionalArgs, namedArgs, typeArgs}) => createState();
+      case 'createElement':
+        return ({positionalArgs, namedArgs, typeArgs}) => createElement();
+      case 'toStringShort':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'debugFillProperties':
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+      case 'toStringShallow':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
+            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toStringDeep':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
+            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
+            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class DoNothingIntentAutoBinding extends HTExternalClass {
@@ -205,13 +294,30 @@ class DoNothingIntentAutoBinding extends HTExternalClass {
     }
   }
 
-
-
-
+  @override
+  dynamic instanceMemberGet(dynamic instance, String id) {
+    return (instance as DoNothingIntent).htFetch(id);
+  }
 }
 
 extension DoNothingIntentBinding on DoNothingIntent {
-
+  dynamic htFetch(String varName) {
+    switch (varName) {
+      case 'typeid':
+        return HTTypeId('DoNothingIntent');
+      case 'toStringShort':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
+      default:
+        throw HTErrorUndefined(varName);
+    }
+  }
 }
 
 class DoNothingAndStopPropagationIntentAutoBinding extends HTExternalClass {
@@ -227,13 +333,30 @@ class DoNothingAndStopPropagationIntentAutoBinding extends HTExternalClass {
     }
   }
 
-
-
-
+  @override
+  dynamic instanceMemberGet(dynamic instance, String id) {
+    return (instance as DoNothingAndStopPropagationIntent).htFetch(id);
+  }
 }
 
 extension DoNothingAndStopPropagationIntentBinding on DoNothingAndStopPropagationIntent {
-
+  dynamic htFetch(String varName) {
+    switch (varName) {
+      case 'typeid':
+        return HTTypeId('DoNothingAndStopPropagationIntent');
+      case 'toStringShort':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
+      default:
+        throw HTErrorUndefined(varName);
+    }
+  }
 }
 
 class DoNothingActionAutoBinding extends HTExternalClass {
@@ -243,7 +366,8 @@ class DoNothingActionAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'DoNothingAction':
-        return ({positionalArgs, namedArgs, typeArgs}) => DoNothingAction(consumesKey : namedArgs.containsKey('consumesKey') ? namedArgs['consumesKey'] : true);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            DoNothingAction(consumesKey: namedArgs.containsKey('consumesKey') ? namedArgs['consumesKey'] : true);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -254,13 +378,12 @@ class DoNothingActionAutoBinding extends HTExternalClass {
     return (instance as DoNothingAction).htFetch(id);
   }
 
-
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'ActionListenerCallback': (HTFunction function) => (action) => function.call(positionalArgs: [action], namedArgs: const {}),
+      'ActionListenerCallback': (HTFunction function) =>
+          (action) => function.call(positionalArgs: [action], namedArgs: const {}),
     };
   }
-
 }
 
 extension DoNothingActionBinding on DoNothingAction {
@@ -271,20 +394,28 @@ extension DoNothingActionBinding on DoNothingAction {
       case 'intentType':
         return intentType;
       case 'consumesKey':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.consumesKey(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => consumesKey(positionalArgs[0]);
       case 'invoke':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.invoke(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => invoke(positionalArgs[0]);
       case 'isEnabled':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.isEnabled(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => isEnabled(positionalArgs[0]);
       case 'addActionListener':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.addActionListener(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => addActionListener(positionalArgs[0]);
       case 'removeActionListener':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.removeActionListener(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => removeActionListener(positionalArgs[0]);
+      case 'toStringShort':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class ActivateIntentAutoBinding extends HTExternalClass {
@@ -300,13 +431,30 @@ class ActivateIntentAutoBinding extends HTExternalClass {
     }
   }
 
-
-
-
+  @override
+  dynamic instanceMemberGet(dynamic instance, String id) {
+    return (instance as ActivateIntent).htFetch(id);
+  }
 }
 
 extension ActivateIntentBinding on ActivateIntent {
-
+  dynamic htFetch(String varName) {
+    switch (varName) {
+      case 'typeid':
+        return HTTypeId('ActivateIntent');
+      case 'toStringShort':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
+      default:
+        throw HTErrorUndefined(varName);
+    }
+  }
 }
 
 class ButtonActivateIntentAutoBinding extends HTExternalClass {
@@ -322,13 +470,30 @@ class ButtonActivateIntentAutoBinding extends HTExternalClass {
     }
   }
 
-
-
-
+  @override
+  dynamic instanceMemberGet(dynamic instance, String id) {
+    return (instance as ButtonActivateIntent).htFetch(id);
+  }
 }
 
 extension ButtonActivateIntentBinding on ButtonActivateIntent {
-
+  dynamic htFetch(String varName) {
+    switch (varName) {
+      case 'typeid':
+        return HTTypeId('ButtonActivateIntent');
+      case 'toStringShort':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
+      default:
+        throw HTErrorUndefined(varName);
+    }
+  }
 }
 
 class SelectIntentAutoBinding extends HTExternalClass {
@@ -344,13 +509,30 @@ class SelectIntentAutoBinding extends HTExternalClass {
     }
   }
 
-
-
-
+  @override
+  dynamic instanceMemberGet(dynamic instance, String id) {
+    return (instance as SelectIntent).htFetch(id);
+  }
 }
 
 extension SelectIntentBinding on SelectIntent {
-
+  dynamic htFetch(String varName) {
+    switch (varName) {
+      case 'typeid':
+        return HTTypeId('SelectIntent');
+      case 'toStringShort':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
+      default:
+        throw HTErrorUndefined(varName);
+    }
+  }
 }
 
 class DismissIntentAutoBinding extends HTExternalClass {
@@ -366,13 +548,30 @@ class DismissIntentAutoBinding extends HTExternalClass {
     }
   }
 
-
-
-
+  @override
+  dynamic instanceMemberGet(dynamic instance, String id) {
+    return (instance as DismissIntent).htFetch(id);
+  }
 }
 
 extension DismissIntentBinding on DismissIntent {
-
+  dynamic htFetch(String varName) {
+    switch (varName) {
+      case 'typeid':
+        return HTTypeId('DismissIntent');
+      case 'toStringShort':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
+      default:
+        throw HTErrorUndefined(varName);
+    }
+  }
 }
 
 class PrioritizedIntentsAutoBinding extends HTExternalClass {
@@ -382,7 +581,8 @@ class PrioritizedIntentsAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'PrioritizedIntents':
-        return ({positionalArgs, namedArgs, typeArgs}) => PrioritizedIntents(orderedIntents : List<Intent>.from(namedArgs['orderedIntents']));
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            PrioritizedIntents(orderedIntents: List<Intent>.from(namedArgs['orderedIntents']));
       default:
         throw HTErrorUndefined(varName);
     }
@@ -392,9 +592,6 @@ class PrioritizedIntentsAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as PrioritizedIntents).htFetch(id);
   }
-
-
-
 }
 
 extension PrioritizedIntentsBinding on PrioritizedIntents {
@@ -404,11 +601,19 @@ extension PrioritizedIntentsBinding on PrioritizedIntents {
         return HTTypeId('PrioritizedIntents');
       case 'orderedIntents':
         return orderedIntents;
+      case 'toStringShort':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class PrioritizedActionAutoBinding extends HTExternalClass {
@@ -429,13 +634,12 @@ class PrioritizedActionAutoBinding extends HTExternalClass {
     return (instance as PrioritizedAction).htFetch(id);
   }
 
-
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'ActionListenerCallback': (HTFunction function) => (action) => function.call(positionalArgs: [action], namedArgs: const {}),
+      'ActionListenerCallback': (HTFunction function) =>
+          (action) => function.call(positionalArgs: [action], namedArgs: const {}),
     };
   }
-
 }
 
 extension PrioritizedActionBinding on PrioritizedAction {
@@ -446,19 +650,26 @@ extension PrioritizedActionBinding on PrioritizedAction {
       case 'intentType':
         return intentType;
       case 'isEnabled':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.isEnabled(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => isEnabled(positionalArgs[0]);
       case 'invoke':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.invoke(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => invoke(positionalArgs[0]);
       case 'consumesKey':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.consumesKey(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => consumesKey(positionalArgs[0]);
       case 'addActionListener':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.addActionListener(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => addActionListener(positionalArgs[0]);
       case 'removeActionListener':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.removeActionListener(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => removeActionListener(positionalArgs[0]);
+      case 'toStringShort':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
-

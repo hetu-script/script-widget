@@ -4,7 +4,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart';
 
-
 class FadeUpwardsPageTransitionsBuilderAutoBinding extends HTExternalClass {
   FadeUpwardsPageTransitionsBuilderAutoBinding() : super('FadeUpwardsPageTransitionsBuilder');
 
@@ -22,9 +21,6 @@ class FadeUpwardsPageTransitionsBuilderAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as FadeUpwardsPageTransitionsBuilder).htFetch(id);
   }
-
-
-
 }
 
 extension FadeUpwardsPageTransitionsBuilderBinding on FadeUpwardsPageTransitionsBuilder {
@@ -33,12 +29,12 @@ extension FadeUpwardsPageTransitionsBuilderBinding on FadeUpwardsPageTransitions
       case 'typeid':
         return HTTypeId('FadeUpwardsPageTransitionsBuilder');
       case 'buildTransitions':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.buildTransitions(positionalArgs[0], positionalArgs[1], positionalArgs[2], positionalArgs[3], positionalArgs[4]);
+        return ({positionalArgs, namedArgs, typeArgs}) => buildTransitions(
+            positionalArgs[0], positionalArgs[1], positionalArgs[2], positionalArgs[3], positionalArgs[4]);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class OpenUpwardsPageTransitionsBuilderAutoBinding extends HTExternalClass {
@@ -58,9 +54,6 @@ class OpenUpwardsPageTransitionsBuilderAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as OpenUpwardsPageTransitionsBuilder).htFetch(id);
   }
-
-
-
 }
 
 extension OpenUpwardsPageTransitionsBuilderBinding on OpenUpwardsPageTransitionsBuilder {
@@ -69,12 +62,12 @@ extension OpenUpwardsPageTransitionsBuilderBinding on OpenUpwardsPageTransitions
       case 'typeid':
         return HTTypeId('OpenUpwardsPageTransitionsBuilder');
       case 'buildTransitions':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.buildTransitions(positionalArgs[0], positionalArgs[1], positionalArgs[2], positionalArgs[3], positionalArgs[4]);
+        return ({positionalArgs, namedArgs, typeArgs}) => buildTransitions(
+            positionalArgs[0], positionalArgs[1], positionalArgs[2], positionalArgs[3], positionalArgs[4]);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class ZoomPageTransitionsBuilderAutoBinding extends HTExternalClass {
@@ -94,9 +87,6 @@ class ZoomPageTransitionsBuilderAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as ZoomPageTransitionsBuilder).htFetch(id);
   }
-
-
-
 }
 
 extension ZoomPageTransitionsBuilderBinding on ZoomPageTransitionsBuilder {
@@ -105,12 +95,12 @@ extension ZoomPageTransitionsBuilderBinding on ZoomPageTransitionsBuilder {
       case 'typeid':
         return HTTypeId('ZoomPageTransitionsBuilder');
       case 'buildTransitions':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.buildTransitions(positionalArgs[0], positionalArgs[1], positionalArgs[2], positionalArgs[3], positionalArgs[4]);
+        return ({positionalArgs, namedArgs, typeArgs}) => buildTransitions(
+            positionalArgs[0], positionalArgs[1], positionalArgs[2], positionalArgs[3], positionalArgs[4]);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class CupertinoPageTransitionsBuilderAutoBinding extends HTExternalClass {
@@ -130,9 +120,6 @@ class CupertinoPageTransitionsBuilderAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as CupertinoPageTransitionsBuilder).htFetch(id);
   }
-
-
-
 }
 
 extension CupertinoPageTransitionsBuilderBinding on CupertinoPageTransitionsBuilder {
@@ -141,12 +128,12 @@ extension CupertinoPageTransitionsBuilderBinding on CupertinoPageTransitionsBuil
       case 'typeid':
         return HTTypeId('CupertinoPageTransitionsBuilder');
       case 'buildTransitions':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.buildTransitions(positionalArgs[0], positionalArgs[1], positionalArgs[2], positionalArgs[3], positionalArgs[4]);
+        return ({positionalArgs, namedArgs, typeArgs}) => buildTransitions(
+            positionalArgs[0], positionalArgs[1], positionalArgs[2], positionalArgs[3], positionalArgs[4]);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class PageTransitionsThemeAutoBinding extends HTExternalClass {
@@ -156,7 +143,8 @@ class PageTransitionsThemeAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'PageTransitionsTheme':
-        return ({positionalArgs, namedArgs, typeArgs}) => PageTransitionsTheme(builders : namedArgs.containsKey('builders') ? namedArgs['builders'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            PageTransitionsTheme(builders: namedArgs.containsKey('builders') ? namedArgs['builders'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -166,9 +154,6 @@ class PageTransitionsThemeAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as PageTransitionsTheme).htFetch(id);
   }
-
-
-
 }
 
 extension PageTransitionsThemeBinding on PageTransitionsTheme {
@@ -181,13 +166,21 @@ extension PageTransitionsThemeBinding on PageTransitionsTheme {
       case 'hashCode':
         return hashCode;
       case 'buildTransitions':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.buildTransitions(positionalArgs[0], positionalArgs[1], positionalArgs[2], positionalArgs[3], positionalArgs[4]);
+        return ({positionalArgs, namedArgs, typeArgs}) => buildTransitions(
+            positionalArgs[0], positionalArgs[1], positionalArgs[2], positionalArgs[3], positionalArgs[4]);
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+      case 'toStringShort':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
-

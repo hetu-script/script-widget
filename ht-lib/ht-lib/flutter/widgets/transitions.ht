@@ -1,0 +1,229 @@
+external class SlideTransition {
+    construct 
+    get textDirection
+    get transformHitTests
+    get child
+    get listenable
+    get key
+    get position
+    fun build
+    fun createState
+    fun debugFillProperties
+    fun createElement
+    fun toStringShort
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class ScaleTransition {
+    construct 
+    get alignment
+    get child
+    get listenable
+    get key
+    get scale
+    fun build
+    fun createState
+    fun debugFillProperties
+    fun createElement
+    fun toStringShort
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class RotationTransition {
+    construct 
+    get alignment
+    get child
+    get listenable
+    get key
+    get turns
+    fun build
+    fun createState
+    fun debugFillProperties
+    fun createElement
+    fun toStringShort
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class SizeTransition {
+    construct 
+    get axis
+    get axisAlignment
+    get child
+    get listenable
+    get key
+    get sizeFactor
+    fun build
+    fun createState
+    fun debugFillProperties
+    fun createElement
+    fun toStringShort
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class FadeTransition {
+    construct 
+    get opacity
+    get alwaysIncludeSemantics
+    get child
+    get key
+    fun createRenderObject
+    fun updateRenderObject
+    fun debugFillProperties
+    fun createElement
+    fun toStringShort
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class SliverFadeTransition {
+    construct 
+    get opacity
+    get alwaysIncludeSemantics
+    get child
+    get key
+    fun createRenderObject
+    fun updateRenderObject
+    fun debugFillProperties
+    fun createElement
+    fun toStringShort
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class RelativeRectTween {
+    construct 
+    var begin
+    var end
+    fun lerp
+    fun transform
+    fun toString
+    fun evaluate
+    fun animate
+    fun chain
+}
+external class PositionedTransition {
+    construct 
+    get child
+    get listenable
+    get key
+    get rect
+    fun build
+    fun createState
+    fun debugFillProperties
+    fun createElement
+    fun toStringShort
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class RelativePositionedTransition {
+    construct 
+    get size
+    get child
+    get listenable
+    get key
+    get rect
+    fun build
+    fun createState
+    fun debugFillProperties
+    fun createElement
+    fun toStringShort
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class DecoratedBoxTransition {
+    construct 
+    get decoration
+    get position
+    get child
+    get listenable
+    get key
+    fun build
+    fun createState
+    fun debugFillProperties
+    fun createElement
+    fun toStringShort
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class AlignTransition {
+    construct 
+    get widthFactor
+    get heightFactor
+    get child
+    get listenable
+    get key
+    get alignment
+    fun build
+    fun createState
+    fun debugFillProperties
+    fun createElement
+    fun toStringShort
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class DefaultTextStyleTransition {
+    construct 
+    get textAlign
+    get softWrap
+    get overflow
+    get maxLines
+    get child
+    get listenable
+    get key
+    get style
+    fun build
+    fun createState
+    fun debugFillProperties
+    fun createElement
+    fun toStringShort
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class AnimatedBuilder {
+    construct 
+    get builder
+    get child
+    get listenable
+    get key
+    fun build
+    fun createState
+    fun debugFillProperties
+    fun createElement
+    fun toStringShort
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}

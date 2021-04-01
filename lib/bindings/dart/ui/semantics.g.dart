@@ -1,15 +1,5 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'dart:ui';
-import 'dart:async';
-import 'dart:collection'as collection;
-import 'dart:convert';
-import 'dart:developer'as developer;
-import 'dart:io';
-import 'dart:isolate';
-import 'dart:math'as math;
-import 'dart:nativewrappers';
-import 'dart:typed_data';
-
 
 class SemanticsActionAutoBinding extends HTExternalClass {
   SemanticsActionAutoBinding() : super('SemanticsAction');
@@ -65,12 +55,7 @@ class SemanticsActionAutoBinding extends HTExternalClass {
         throw HTErrorUndefined(varName);
     }
   }
-
-
-
-
 }
-
 
 class SemanticsFlagAutoBinding extends HTExternalClass {
   SemanticsFlagAutoBinding() : super('SemanticsFlag');
@@ -132,12 +117,7 @@ class SemanticsFlagAutoBinding extends HTExternalClass {
         throw HTErrorUndefined(varName);
     }
   }
-
-
-
-
 }
-
 
 class SemanticsUpdateBuilderAutoBinding extends HTExternalClass {
   SemanticsUpdateBuilderAutoBinding() : super('SemanticsUpdateBuilder');
@@ -156,9 +136,6 @@ class SemanticsUpdateBuilderAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as SemanticsUpdateBuilder).htFetch(id);
   }
-
-
-
 }
 
 extension SemanticsUpdateBuilderBinding on SemanticsUpdateBuilder {
@@ -167,15 +144,45 @@ extension SemanticsUpdateBuilderBinding on SemanticsUpdateBuilder {
       case 'typeid':
         return HTTypeId('SemanticsUpdateBuilder');
       case 'updateNode':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.updateNode(id : namedArgs.containsKey('id') ? namedArgs['id'] : null, flags : namedArgs.containsKey('flags') ? namedArgs['flags'] : null, actions : namedArgs.containsKey('actions') ? namedArgs['actions'] : null, maxValueLength : namedArgs.containsKey('maxValueLength') ? namedArgs['maxValueLength'] : null, currentValueLength : namedArgs.containsKey('currentValueLength') ? namedArgs['currentValueLength'] : null, textSelectionBase : namedArgs.containsKey('textSelectionBase') ? namedArgs['textSelectionBase'] : null, textSelectionExtent : namedArgs.containsKey('textSelectionExtent') ? namedArgs['textSelectionExtent'] : null, platformViewId : namedArgs.containsKey('platformViewId') ? namedArgs['platformViewId'] : null, scrollChildren : namedArgs.containsKey('scrollChildren') ? namedArgs['scrollChildren'] : null, scrollIndex : namedArgs.containsKey('scrollIndex') ? namedArgs['scrollIndex'] : null, scrollPosition : namedArgs.containsKey('scrollPosition') ? namedArgs['scrollPosition'] : null, scrollExtentMax : namedArgs.containsKey('scrollExtentMax') ? namedArgs['scrollExtentMax'] : null, scrollExtentMin : namedArgs.containsKey('scrollExtentMin') ? namedArgs['scrollExtentMin'] : null, elevation : namedArgs.containsKey('elevation') ? namedArgs['elevation'] : null, thickness : namedArgs.containsKey('thickness') ? namedArgs['thickness'] : null, rect : namedArgs.containsKey('rect') ? namedArgs['rect'] : null, label : namedArgs.containsKey('label') ? namedArgs['label'] : null, hint : namedArgs.containsKey('hint') ? namedArgs['hint'] : null, value : namedArgs.containsKey('value') ? namedArgs['value'] : null, increasedValue : namedArgs.containsKey('increasedValue') ? namedArgs['increasedValue'] : null, decreasedValue : namedArgs.containsKey('decreasedValue') ? namedArgs['decreasedValue'] : null, textDirection : namedArgs.containsKey('textDirection') ? namedArgs['textDirection'] : null, transform : namedArgs.containsKey('transform') ? namedArgs['transform'] : null, childrenInTraversalOrder : namedArgs.containsKey('childrenInTraversalOrder') ? namedArgs['childrenInTraversalOrder'] : null, childrenInHitTestOrder : namedArgs.containsKey('childrenInHitTestOrder') ? namedArgs['childrenInHitTestOrder'] : null, additionalActions : namedArgs.containsKey('additionalActions') ? namedArgs['additionalActions'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => updateNode(
+            id: namedArgs.containsKey('id') ? namedArgs['id'] : null,
+            flags: namedArgs.containsKey('flags') ? namedArgs['flags'] : null,
+            actions: namedArgs.containsKey('actions') ? namedArgs['actions'] : null,
+            maxValueLength: namedArgs.containsKey('maxValueLength') ? namedArgs['maxValueLength'] : null,
+            currentValueLength: namedArgs.containsKey('currentValueLength') ? namedArgs['currentValueLength'] : null,
+            textSelectionBase: namedArgs.containsKey('textSelectionBase') ? namedArgs['textSelectionBase'] : null,
+            textSelectionExtent: namedArgs.containsKey('textSelectionExtent') ? namedArgs['textSelectionExtent'] : null,
+            platformViewId: namedArgs.containsKey('platformViewId') ? namedArgs['platformViewId'] : null,
+            scrollChildren: namedArgs.containsKey('scrollChildren') ? namedArgs['scrollChildren'] : null,
+            scrollIndex: namedArgs.containsKey('scrollIndex') ? namedArgs['scrollIndex'] : null,
+            scrollPosition: namedArgs.containsKey('scrollPosition') ? namedArgs['scrollPosition'] : null,
+            scrollExtentMax: namedArgs.containsKey('scrollExtentMax') ? namedArgs['scrollExtentMax'] : null,
+            scrollExtentMin: namedArgs.containsKey('scrollExtentMin') ? namedArgs['scrollExtentMin'] : null,
+            elevation: namedArgs.containsKey('elevation') ? namedArgs['elevation'] : null,
+            thickness: namedArgs.containsKey('thickness') ? namedArgs['thickness'] : null,
+            rect: namedArgs.containsKey('rect') ? namedArgs['rect'] : null,
+            label: namedArgs.containsKey('label') ? namedArgs['label'] : null,
+            hint: namedArgs.containsKey('hint') ? namedArgs['hint'] : null,
+            value: namedArgs.containsKey('value') ? namedArgs['value'] : null,
+            increasedValue: namedArgs.containsKey('increasedValue') ? namedArgs['increasedValue'] : null,
+            decreasedValue: namedArgs.containsKey('decreasedValue') ? namedArgs['decreasedValue'] : null,
+            textDirection: namedArgs.containsKey('textDirection') ? namedArgs['textDirection'] : null,
+            transform: namedArgs.containsKey('transform') ? namedArgs['transform'] : null,
+            childrenInTraversalOrder:
+                namedArgs.containsKey('childrenInTraversalOrder') ? namedArgs['childrenInTraversalOrder'] : null,
+            childrenInHitTestOrder:
+                namedArgs.containsKey('childrenInHitTestOrder') ? namedArgs['childrenInHitTestOrder'] : null,
+            additionalActions: namedArgs.containsKey('additionalActions') ? namedArgs['additionalActions'] : null);
       case 'updateCustomAction':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.updateCustomAction(id : namedArgs.containsKey('id') ? namedArgs['id'] : null, label : namedArgs.containsKey('label') ? namedArgs['label'] : null, hint : namedArgs.containsKey('hint') ? namedArgs['hint'] : null, overrideId : namedArgs.containsKey('overrideId') ? namedArgs['overrideId'] : -1);
+        return ({positionalArgs, namedArgs, typeArgs}) => updateCustomAction(
+            id: namedArgs.containsKey('id') ? namedArgs['id'] : null,
+            label: namedArgs.containsKey('label') ? namedArgs['label'] : null,
+            hint: namedArgs.containsKey('hint') ? namedArgs['hint'] : null,
+            overrideId: namedArgs.containsKey('overrideId') ? namedArgs['overrideId'] : -1);
       case 'build':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.build();
+        return ({positionalArgs, namedArgs, typeArgs}) => build();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
-

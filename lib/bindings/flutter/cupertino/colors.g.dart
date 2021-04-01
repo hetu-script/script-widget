@@ -1,7 +1,5 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/cupertino.dart';
-import 'dart:ui';
-
 
 class CupertinoColorsAutoBinding extends HTExternalClass {
   CupertinoColorsAutoBinding() : super('CupertinoColors');
@@ -99,12 +97,7 @@ class CupertinoColorsAutoBinding extends HTExternalClass {
         throw HTErrorUndefined(varName);
     }
   }
-
-
-
-
 }
-
 
 class CupertinoDynamicColorAutoBinding extends HTExternalClass {
   CupertinoDynamicColorAutoBinding() : super('CupertinoDynamicColor');
@@ -113,15 +106,34 @@ class CupertinoDynamicColorAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'CupertinoDynamicColor':
-        return ({positionalArgs, namedArgs, typeArgs}) => CupertinoDynamicColor(debugLabel : namedArgs.containsKey('debugLabel') ? namedArgs['debugLabel'] : null, color : namedArgs['color'], darkColor : namedArgs['darkColor'], highContrastColor : namedArgs['highContrastColor'], darkHighContrastColor : namedArgs['darkHighContrastColor'], elevatedColor : namedArgs['elevatedColor'], darkElevatedColor : namedArgs['darkElevatedColor'], highContrastElevatedColor : namedArgs['highContrastElevatedColor'], darkHighContrastElevatedColor : namedArgs['darkHighContrastElevatedColor']);
+        return ({positionalArgs, namedArgs, typeArgs}) => CupertinoDynamicColor(
+            debugLabel: namedArgs.containsKey('debugLabel') ? namedArgs['debugLabel'] : null,
+            color: namedArgs['color'],
+            darkColor: namedArgs['darkColor'],
+            highContrastColor: namedArgs['highContrastColor'],
+            darkHighContrastColor: namedArgs['darkHighContrastColor'],
+            elevatedColor: namedArgs['elevatedColor'],
+            darkElevatedColor: namedArgs['darkElevatedColor'],
+            highContrastElevatedColor: namedArgs['highContrastElevatedColor'],
+            darkHighContrastElevatedColor: namedArgs['darkHighContrastElevatedColor']);
       case 'CupertinoDynamicColor.withBrightnessAndContrast':
-        return ({positionalArgs, namedArgs, typeArgs}) => CupertinoDynamicColor.withBrightnessAndContrast(debugLabel : namedArgs.containsKey('debugLabel') ? namedArgs['debugLabel'] : null, color : namedArgs['color'], darkColor : namedArgs['darkColor'], highContrastColor : namedArgs['highContrastColor'], darkHighContrastColor : namedArgs['darkHighContrastColor']);
+        return ({positionalArgs, namedArgs, typeArgs}) => CupertinoDynamicColor.withBrightnessAndContrast(
+            debugLabel: namedArgs.containsKey('debugLabel') ? namedArgs['debugLabel'] : null,
+            color: namedArgs['color'],
+            darkColor: namedArgs['darkColor'],
+            highContrastColor: namedArgs['highContrastColor'],
+            darkHighContrastColor: namedArgs['darkHighContrastColor']);
       case 'CupertinoDynamicColor.withBrightness':
-        return ({positionalArgs, namedArgs, typeArgs}) => CupertinoDynamicColor.withBrightness(debugLabel : namedArgs.containsKey('debugLabel') ? namedArgs['debugLabel'] : null, color : namedArgs['color'], darkColor : namedArgs['darkColor']);
+        return ({positionalArgs, namedArgs, typeArgs}) => CupertinoDynamicColor.withBrightness(
+            debugLabel: namedArgs.containsKey('debugLabel') ? namedArgs['debugLabel'] : null,
+            color: namedArgs['color'],
+            darkColor: namedArgs['darkColor']);
       case 'CupertinoDynamicColor.resolve':
-        return ({positionalArgs, namedArgs, typeArgs}) => CupertinoDynamicColor.resolve(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            CupertinoDynamicColor.resolve(positionalArgs[0], positionalArgs[1]);
       case 'CupertinoDynamicColor.maybeResolve':
-        return ({positionalArgs, namedArgs, typeArgs}) => CupertinoDynamicColor.maybeResolve(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            CupertinoDynamicColor.maybeResolve(positionalArgs[0], positionalArgs[1]);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -131,9 +143,6 @@ class CupertinoDynamicColorAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as CupertinoDynamicColor).htFetch(id);
   }
-
-
-
 }
 
 extension CupertinoDynamicColorBinding on CupertinoDynamicColor {
@@ -172,27 +181,32 @@ extension CupertinoDynamicColorBinding on CupertinoDynamicColor {
       case 'blue':
         return blue;
       case 'resolveFrom':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.resolveFrom(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => resolveFrom(positionalArgs[0]);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString(minLevel : namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+      case 'toStringShort':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'withAlpha':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.withAlpha(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => withAlpha(positionalArgs[0]);
       case 'withOpacity':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.withOpacity(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => withOpacity(positionalArgs[0]);
       case 'withRed':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.withRed(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => withRed(positionalArgs[0]);
       case 'withGreen':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.withGreen(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => withGreen(positionalArgs[0]);
       case 'withBlue':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.withBlue(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => withBlue(positionalArgs[0]);
       case 'computeLuminance':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.computeLuminance();
+        return ({positionalArgs, namedArgs, typeArgs}) => computeLuminance();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
-

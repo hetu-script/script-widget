@@ -1,0 +1,36 @@
+external class FloatingActionButton {
+    construct 
+    construct extended
+    get child
+    get tooltip
+    get foregroundColor
+    get backgroundColor
+    get focusColor
+    get hoverColor
+    get splashColor
+    get heroTag
+    get onPressed
+    get mouseCursor
+    get elevation
+    get focusElevation
+    get hoverElevation
+    get highlightElevation
+    get disabledElevation
+    get mini
+    get shape
+    get clipBehavior
+    get isExtended
+    get focusNode
+    get autofocus
+    get materialTapTargetSize
+    get key
+    fun build
+    fun debugFillProperties
+    fun createElement
+    fun toStringShort
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}

@@ -1,0 +1,19 @@
+external class NavigationToolbar {
+    construct 
+    get leading
+    get middle
+    get trailing
+    get centerMiddle
+    get middleSpacing
+    get key
+    fun build
+    fun createElement
+    fun toStringShort
+    fun debugFillProperties
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+    static const kMiddleSpacing
+}

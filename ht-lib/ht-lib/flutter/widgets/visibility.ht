@@ -1,0 +1,42 @@
+external class Visibility {
+    construct 
+    get child
+    get replacement
+    get visible
+    get maintainState
+    get maintainAnimation
+    get maintainSize
+    get maintainSemantics
+    get maintainInteractivity
+    get key
+    fun build
+    fun debugFillProperties
+    fun createElement
+    fun toStringShort
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}
+external class SliverVisibility {
+    construct 
+    get sliver
+    get replacementSliver
+    get visible
+    get maintainState
+    get maintainAnimation
+    get maintainSize
+    get maintainSemantics
+    get maintainInteractivity
+    get key
+    fun build
+    fun debugFillProperties
+    fun createElement
+    fun toStringShort
+    get hashCode
+    fun toStringShallow
+    fun toStringDeep
+    fun toDiagnosticsNode
+    fun toString
+}

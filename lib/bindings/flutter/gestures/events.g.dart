@@ -2,9 +2,8 @@ import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/gestures.dart';
 import 'dart:ui';
 import 'package:flutter/foundation.dart';
-import 'package:vector_math/vector_math_64.dart';
-const kPrimaryButton = 0x01;
 
+const kPrimaryButton = 0x01;
 
 class PointerAddedEventAutoBinding extends HTExternalClass {
   PointerAddedEventAutoBinding() : super('PointerAddedEvent');
@@ -13,7 +12,22 @@ class PointerAddedEventAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'PointerAddedEvent':
-        return ({positionalArgs, namedArgs, typeArgs}) => PointerAddedEvent(timeStamp : namedArgs.containsKey('timeStamp') ? namedArgs['timeStamp'] : Duration.zero, pointer : namedArgs.containsKey('pointer') ? namedArgs['pointer'] : 0, kind : namedArgs.containsKey('kind') ? namedArgs['kind'] : PointerDeviceKind.touch, device : namedArgs.containsKey('device') ? namedArgs['device'] : 0, position : namedArgs.containsKey('position') ? namedArgs['position'] : Offset.zero, obscured : namedArgs.containsKey('obscured') ? namedArgs['obscured'] : false, pressureMin : namedArgs.containsKey('pressureMin') ? namedArgs['pressureMin'] : 1.0, pressureMax : namedArgs.containsKey('pressureMax') ? namedArgs['pressureMax'] : 1.0, distance : namedArgs.containsKey('distance') ? namedArgs['distance'] : 0.0, distanceMax : namedArgs.containsKey('distanceMax') ? namedArgs['distanceMax'] : 0.0, radiusMin : namedArgs.containsKey('radiusMin') ? namedArgs['radiusMin'] : 0.0, radiusMax : namedArgs.containsKey('radiusMax') ? namedArgs['radiusMax'] : 0.0, orientation : namedArgs.containsKey('orientation') ? namedArgs['orientation'] : 0.0, tilt : namedArgs.containsKey('tilt') ? namedArgs['tilt'] : 0.0, embedderId : namedArgs.containsKey('embedderId') ? namedArgs['embedderId'] : 0);
+        return ({positionalArgs, namedArgs, typeArgs}) => PointerAddedEvent(
+            timeStamp: namedArgs.containsKey('timeStamp') ? namedArgs['timeStamp'] : Duration.zero,
+            pointer: namedArgs.containsKey('pointer') ? namedArgs['pointer'] : 0,
+            kind: namedArgs.containsKey('kind') ? namedArgs['kind'] : PointerDeviceKind.touch,
+            device: namedArgs.containsKey('device') ? namedArgs['device'] : 0,
+            position: namedArgs.containsKey('position') ? namedArgs['position'] : Offset.zero,
+            obscured: namedArgs.containsKey('obscured') ? namedArgs['obscured'] : false,
+            pressureMin: namedArgs.containsKey('pressureMin') ? namedArgs['pressureMin'] : 1.0,
+            pressureMax: namedArgs.containsKey('pressureMax') ? namedArgs['pressureMax'] : 1.0,
+            distance: namedArgs.containsKey('distance') ? namedArgs['distance'] : 0.0,
+            distanceMax: namedArgs.containsKey('distanceMax') ? namedArgs['distanceMax'] : 0.0,
+            radiusMin: namedArgs.containsKey('radiusMin') ? namedArgs['radiusMin'] : 0.0,
+            radiusMax: namedArgs.containsKey('radiusMax') ? namedArgs['radiusMax'] : 0.0,
+            orientation: namedArgs.containsKey('orientation') ? namedArgs['orientation'] : 0.0,
+            tilt: namedArgs.containsKey('tilt') ? namedArgs['tilt'] : 0.0,
+            embedderId: namedArgs.containsKey('embedderId') ? namedArgs['embedderId'] : 0);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -23,9 +37,6 @@ class PointerAddedEventAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as PointerAddedEvent).htFetch(id);
   }
-
-
-
 }
 
 extension PointerAddedEventBinding on PointerAddedEvent {
@@ -92,18 +103,48 @@ extension PointerAddedEventBinding on PointerAddedEvent {
       case 'distanceMin':
         return distanceMin;
       case 'transformed':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.transformed(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => transformed(positionalArgs[0]);
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
       case 'toStringFull':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toStringFull();
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringFull();
       case 'copyWith':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.copyWith(timeStamp : namedArgs.containsKey('timeStamp') ? namedArgs['timeStamp'] : null, pointer : namedArgs.containsKey('pointer') ? namedArgs['pointer'] : null, kind : namedArgs.containsKey('kind') ? namedArgs['kind'] : null, device : namedArgs.containsKey('device') ? namedArgs['device'] : null, position : namedArgs.containsKey('position') ? namedArgs['position'] : null, delta : namedArgs.containsKey('delta') ? namedArgs['delta'] : null, buttons : namedArgs.containsKey('buttons') ? namedArgs['buttons'] : null, obscured : namedArgs.containsKey('obscured') ? namedArgs['obscured'] : null, pressure : namedArgs.containsKey('pressure') ? namedArgs['pressure'] : null, pressureMin : namedArgs.containsKey('pressureMin') ? namedArgs['pressureMin'] : null, pressureMax : namedArgs.containsKey('pressureMax') ? namedArgs['pressureMax'] : null, distance : namedArgs.containsKey('distance') ? namedArgs['distance'] : null, distanceMax : namedArgs.containsKey('distanceMax') ? namedArgs['distanceMax'] : null, size : namedArgs.containsKey('size') ? namedArgs['size'] : null, radiusMajor : namedArgs.containsKey('radiusMajor') ? namedArgs['radiusMajor'] : null, radiusMinor : namedArgs.containsKey('radiusMinor') ? namedArgs['radiusMinor'] : null, radiusMin : namedArgs.containsKey('radiusMin') ? namedArgs['radiusMin'] : null, radiusMax : namedArgs.containsKey('radiusMax') ? namedArgs['radiusMax'] : null, orientation : namedArgs.containsKey('orientation') ? namedArgs['orientation'] : null, tilt : namedArgs.containsKey('tilt') ? namedArgs['tilt'] : null, synthesized : namedArgs.containsKey('synthesized') ? namedArgs['synthesized'] : null, embedderId : namedArgs.containsKey('embedderId') ? namedArgs['embedderId'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => copyWith(
+            timeStamp: namedArgs.containsKey('timeStamp') ? namedArgs['timeStamp'] : null,
+            pointer: namedArgs.containsKey('pointer') ? namedArgs['pointer'] : null,
+            kind: namedArgs.containsKey('kind') ? namedArgs['kind'] : null,
+            device: namedArgs.containsKey('device') ? namedArgs['device'] : null,
+            position: namedArgs.containsKey('position') ? namedArgs['position'] : null,
+            delta: namedArgs.containsKey('delta') ? namedArgs['delta'] : null,
+            buttons: namedArgs.containsKey('buttons') ? namedArgs['buttons'] : null,
+            obscured: namedArgs.containsKey('obscured') ? namedArgs['obscured'] : null,
+            pressure: namedArgs.containsKey('pressure') ? namedArgs['pressure'] : null,
+            pressureMin: namedArgs.containsKey('pressureMin') ? namedArgs['pressureMin'] : null,
+            pressureMax: namedArgs.containsKey('pressureMax') ? namedArgs['pressureMax'] : null,
+            distance: namedArgs.containsKey('distance') ? namedArgs['distance'] : null,
+            distanceMax: namedArgs.containsKey('distanceMax') ? namedArgs['distanceMax'] : null,
+            size: namedArgs.containsKey('size') ? namedArgs['size'] : null,
+            radiusMajor: namedArgs.containsKey('radiusMajor') ? namedArgs['radiusMajor'] : null,
+            radiusMinor: namedArgs.containsKey('radiusMinor') ? namedArgs['radiusMinor'] : null,
+            radiusMin: namedArgs.containsKey('radiusMin') ? namedArgs['radiusMin'] : null,
+            radiusMax: namedArgs.containsKey('radiusMax') ? namedArgs['radiusMax'] : null,
+            orientation: namedArgs.containsKey('orientation') ? namedArgs['orientation'] : null,
+            tilt: namedArgs.containsKey('tilt') ? namedArgs['tilt'] : null,
+            synthesized: namedArgs.containsKey('synthesized') ? namedArgs['synthesized'] : null,
+            embedderId: namedArgs.containsKey('embedderId') ? namedArgs['embedderId'] : null);
+      case 'toStringShort':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class PointerRemovedEventAutoBinding extends HTExternalClass {
@@ -113,7 +154,20 @@ class PointerRemovedEventAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'PointerRemovedEvent':
-        return ({positionalArgs, namedArgs, typeArgs}) => PointerRemovedEvent(timeStamp : namedArgs.containsKey('timeStamp') ? namedArgs['timeStamp'] : Duration.zero, pointer : namedArgs.containsKey('pointer') ? namedArgs['pointer'] : 0, kind : namedArgs.containsKey('kind') ? namedArgs['kind'] : PointerDeviceKind.touch, device : namedArgs.containsKey('device') ? namedArgs['device'] : 0, position : namedArgs.containsKey('position') ? namedArgs['position'] : Offset.zero, obscured : namedArgs.containsKey('obscured') ? namedArgs['obscured'] : false, pressureMin : namedArgs.containsKey('pressureMin') ? namedArgs['pressureMin'] : 1.0, pressureMax : namedArgs.containsKey('pressureMax') ? namedArgs['pressureMax'] : 1.0, distanceMax : namedArgs.containsKey('distanceMax') ? namedArgs['distanceMax'] : 0.0, radiusMin : namedArgs.containsKey('radiusMin') ? namedArgs['radiusMin'] : 0.0, radiusMax : namedArgs.containsKey('radiusMax') ? namedArgs['radiusMax'] : 0.0, original : namedArgs.containsKey('original') ? namedArgs['original'] : null, embedderId : namedArgs.containsKey('embedderId') ? namedArgs['embedderId'] : 0);
+        return ({positionalArgs, namedArgs, typeArgs}) => PointerRemovedEvent(
+            timeStamp: namedArgs.containsKey('timeStamp') ? namedArgs['timeStamp'] : Duration.zero,
+            pointer: namedArgs.containsKey('pointer') ? namedArgs['pointer'] : 0,
+            kind: namedArgs.containsKey('kind') ? namedArgs['kind'] : PointerDeviceKind.touch,
+            device: namedArgs.containsKey('device') ? namedArgs['device'] : 0,
+            position: namedArgs.containsKey('position') ? namedArgs['position'] : Offset.zero,
+            obscured: namedArgs.containsKey('obscured') ? namedArgs['obscured'] : false,
+            pressureMin: namedArgs.containsKey('pressureMin') ? namedArgs['pressureMin'] : 1.0,
+            pressureMax: namedArgs.containsKey('pressureMax') ? namedArgs['pressureMax'] : 1.0,
+            distanceMax: namedArgs.containsKey('distanceMax') ? namedArgs['distanceMax'] : 0.0,
+            radiusMin: namedArgs.containsKey('radiusMin') ? namedArgs['radiusMin'] : 0.0,
+            radiusMax: namedArgs.containsKey('radiusMax') ? namedArgs['radiusMax'] : 0.0,
+            original: namedArgs.containsKey('original') ? namedArgs['original'] : null,
+            embedderId: namedArgs.containsKey('embedderId') ? namedArgs['embedderId'] : 0);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -123,9 +177,6 @@ class PointerRemovedEventAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as PointerRemovedEvent).htFetch(id);
   }
-
-
-
 }
 
 extension PointerRemovedEventBinding on PointerRemovedEvent {
@@ -192,18 +243,48 @@ extension PointerRemovedEventBinding on PointerRemovedEvent {
       case 'distanceMin':
         return distanceMin;
       case 'transformed':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.transformed(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => transformed(positionalArgs[0]);
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
       case 'toStringFull':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toStringFull();
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringFull();
       case 'copyWith':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.copyWith(timeStamp : namedArgs.containsKey('timeStamp') ? namedArgs['timeStamp'] : null, pointer : namedArgs.containsKey('pointer') ? namedArgs['pointer'] : null, kind : namedArgs.containsKey('kind') ? namedArgs['kind'] : null, device : namedArgs.containsKey('device') ? namedArgs['device'] : null, position : namedArgs.containsKey('position') ? namedArgs['position'] : null, delta : namedArgs.containsKey('delta') ? namedArgs['delta'] : null, buttons : namedArgs.containsKey('buttons') ? namedArgs['buttons'] : null, obscured : namedArgs.containsKey('obscured') ? namedArgs['obscured'] : null, pressure : namedArgs.containsKey('pressure') ? namedArgs['pressure'] : null, pressureMin : namedArgs.containsKey('pressureMin') ? namedArgs['pressureMin'] : null, pressureMax : namedArgs.containsKey('pressureMax') ? namedArgs['pressureMax'] : null, distance : namedArgs.containsKey('distance') ? namedArgs['distance'] : null, distanceMax : namedArgs.containsKey('distanceMax') ? namedArgs['distanceMax'] : null, size : namedArgs.containsKey('size') ? namedArgs['size'] : null, radiusMajor : namedArgs.containsKey('radiusMajor') ? namedArgs['radiusMajor'] : null, radiusMinor : namedArgs.containsKey('radiusMinor') ? namedArgs['radiusMinor'] : null, radiusMin : namedArgs.containsKey('radiusMin') ? namedArgs['radiusMin'] : null, radiusMax : namedArgs.containsKey('radiusMax') ? namedArgs['radiusMax'] : null, orientation : namedArgs.containsKey('orientation') ? namedArgs['orientation'] : null, tilt : namedArgs.containsKey('tilt') ? namedArgs['tilt'] : null, synthesized : namedArgs.containsKey('synthesized') ? namedArgs['synthesized'] : null, embedderId : namedArgs.containsKey('embedderId') ? namedArgs['embedderId'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => copyWith(
+            timeStamp: namedArgs.containsKey('timeStamp') ? namedArgs['timeStamp'] : null,
+            pointer: namedArgs.containsKey('pointer') ? namedArgs['pointer'] : null,
+            kind: namedArgs.containsKey('kind') ? namedArgs['kind'] : null,
+            device: namedArgs.containsKey('device') ? namedArgs['device'] : null,
+            position: namedArgs.containsKey('position') ? namedArgs['position'] : null,
+            delta: namedArgs.containsKey('delta') ? namedArgs['delta'] : null,
+            buttons: namedArgs.containsKey('buttons') ? namedArgs['buttons'] : null,
+            obscured: namedArgs.containsKey('obscured') ? namedArgs['obscured'] : null,
+            pressure: namedArgs.containsKey('pressure') ? namedArgs['pressure'] : null,
+            pressureMin: namedArgs.containsKey('pressureMin') ? namedArgs['pressureMin'] : null,
+            pressureMax: namedArgs.containsKey('pressureMax') ? namedArgs['pressureMax'] : null,
+            distance: namedArgs.containsKey('distance') ? namedArgs['distance'] : null,
+            distanceMax: namedArgs.containsKey('distanceMax') ? namedArgs['distanceMax'] : null,
+            size: namedArgs.containsKey('size') ? namedArgs['size'] : null,
+            radiusMajor: namedArgs.containsKey('radiusMajor') ? namedArgs['radiusMajor'] : null,
+            radiusMinor: namedArgs.containsKey('radiusMinor') ? namedArgs['radiusMinor'] : null,
+            radiusMin: namedArgs.containsKey('radiusMin') ? namedArgs['radiusMin'] : null,
+            radiusMax: namedArgs.containsKey('radiusMax') ? namedArgs['radiusMax'] : null,
+            orientation: namedArgs.containsKey('orientation') ? namedArgs['orientation'] : null,
+            tilt: namedArgs.containsKey('tilt') ? namedArgs['tilt'] : null,
+            synthesized: namedArgs.containsKey('synthesized') ? namedArgs['synthesized'] : null,
+            embedderId: namedArgs.containsKey('embedderId') ? namedArgs['embedderId'] : null);
+      case 'toStringShort':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class PointerHoverEventAutoBinding extends HTExternalClass {
@@ -213,7 +294,28 @@ class PointerHoverEventAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'PointerHoverEvent':
-        return ({positionalArgs, namedArgs, typeArgs}) => PointerHoverEvent(timeStamp : namedArgs.containsKey('timeStamp') ? namedArgs['timeStamp'] : Duration.zero, kind : namedArgs.containsKey('kind') ? namedArgs['kind'] : PointerDeviceKind.touch, pointer : namedArgs.containsKey('pointer') ? namedArgs['pointer'] : 0, device : namedArgs.containsKey('device') ? namedArgs['device'] : 0, position : namedArgs.containsKey('position') ? namedArgs['position'] : Offset.zero, delta : namedArgs.containsKey('delta') ? namedArgs['delta'] : Offset.zero, buttons : namedArgs.containsKey('buttons') ? namedArgs['buttons'] : 0, obscured : namedArgs.containsKey('obscured') ? namedArgs['obscured'] : false, pressureMin : namedArgs.containsKey('pressureMin') ? namedArgs['pressureMin'] : 1.0, pressureMax : namedArgs.containsKey('pressureMax') ? namedArgs['pressureMax'] : 1.0, distance : namedArgs.containsKey('distance') ? namedArgs['distance'] : 0.0, distanceMax : namedArgs.containsKey('distanceMax') ? namedArgs['distanceMax'] : 0.0, size : namedArgs.containsKey('size') ? namedArgs['size'] : 0.0, radiusMajor : namedArgs.containsKey('radiusMajor') ? namedArgs['radiusMajor'] : 0.0, radiusMinor : namedArgs.containsKey('radiusMinor') ? namedArgs['radiusMinor'] : 0.0, radiusMin : namedArgs.containsKey('radiusMin') ? namedArgs['radiusMin'] : 0.0, radiusMax : namedArgs.containsKey('radiusMax') ? namedArgs['radiusMax'] : 0.0, orientation : namedArgs.containsKey('orientation') ? namedArgs['orientation'] : 0.0, tilt : namedArgs.containsKey('tilt') ? namedArgs['tilt'] : 0.0, synthesized : namedArgs.containsKey('synthesized') ? namedArgs['synthesized'] : false, embedderId : namedArgs.containsKey('embedderId') ? namedArgs['embedderId'] : 0);
+        return ({positionalArgs, namedArgs, typeArgs}) => PointerHoverEvent(
+            timeStamp: namedArgs.containsKey('timeStamp') ? namedArgs['timeStamp'] : Duration.zero,
+            kind: namedArgs.containsKey('kind') ? namedArgs['kind'] : PointerDeviceKind.touch,
+            pointer: namedArgs.containsKey('pointer') ? namedArgs['pointer'] : 0,
+            device: namedArgs.containsKey('device') ? namedArgs['device'] : 0,
+            position: namedArgs.containsKey('position') ? namedArgs['position'] : Offset.zero,
+            delta: namedArgs.containsKey('delta') ? namedArgs['delta'] : Offset.zero,
+            buttons: namedArgs.containsKey('buttons') ? namedArgs['buttons'] : 0,
+            obscured: namedArgs.containsKey('obscured') ? namedArgs['obscured'] : false,
+            pressureMin: namedArgs.containsKey('pressureMin') ? namedArgs['pressureMin'] : 1.0,
+            pressureMax: namedArgs.containsKey('pressureMax') ? namedArgs['pressureMax'] : 1.0,
+            distance: namedArgs.containsKey('distance') ? namedArgs['distance'] : 0.0,
+            distanceMax: namedArgs.containsKey('distanceMax') ? namedArgs['distanceMax'] : 0.0,
+            size: namedArgs.containsKey('size') ? namedArgs['size'] : 0.0,
+            radiusMajor: namedArgs.containsKey('radiusMajor') ? namedArgs['radiusMajor'] : 0.0,
+            radiusMinor: namedArgs.containsKey('radiusMinor') ? namedArgs['radiusMinor'] : 0.0,
+            radiusMin: namedArgs.containsKey('radiusMin') ? namedArgs['radiusMin'] : 0.0,
+            radiusMax: namedArgs.containsKey('radiusMax') ? namedArgs['radiusMax'] : 0.0,
+            orientation: namedArgs.containsKey('orientation') ? namedArgs['orientation'] : 0.0,
+            tilt: namedArgs.containsKey('tilt') ? namedArgs['tilt'] : 0.0,
+            synthesized: namedArgs.containsKey('synthesized') ? namedArgs['synthesized'] : false,
+            embedderId: namedArgs.containsKey('embedderId') ? namedArgs['embedderId'] : 0);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -223,9 +325,6 @@ class PointerHoverEventAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as PointerHoverEvent).htFetch(id);
   }
-
-
-
 }
 
 extension PointerHoverEventBinding on PointerHoverEvent {
@@ -292,18 +391,48 @@ extension PointerHoverEventBinding on PointerHoverEvent {
       case 'distanceMin':
         return distanceMin;
       case 'transformed':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.transformed(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => transformed(positionalArgs[0]);
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
       case 'toStringFull':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toStringFull();
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringFull();
       case 'copyWith':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.copyWith(timeStamp : namedArgs.containsKey('timeStamp') ? namedArgs['timeStamp'] : null, pointer : namedArgs.containsKey('pointer') ? namedArgs['pointer'] : null, kind : namedArgs.containsKey('kind') ? namedArgs['kind'] : null, device : namedArgs.containsKey('device') ? namedArgs['device'] : null, position : namedArgs.containsKey('position') ? namedArgs['position'] : null, delta : namedArgs.containsKey('delta') ? namedArgs['delta'] : null, buttons : namedArgs.containsKey('buttons') ? namedArgs['buttons'] : null, obscured : namedArgs.containsKey('obscured') ? namedArgs['obscured'] : null, pressure : namedArgs.containsKey('pressure') ? namedArgs['pressure'] : null, pressureMin : namedArgs.containsKey('pressureMin') ? namedArgs['pressureMin'] : null, pressureMax : namedArgs.containsKey('pressureMax') ? namedArgs['pressureMax'] : null, distance : namedArgs.containsKey('distance') ? namedArgs['distance'] : null, distanceMax : namedArgs.containsKey('distanceMax') ? namedArgs['distanceMax'] : null, size : namedArgs.containsKey('size') ? namedArgs['size'] : null, radiusMajor : namedArgs.containsKey('radiusMajor') ? namedArgs['radiusMajor'] : null, radiusMinor : namedArgs.containsKey('radiusMinor') ? namedArgs['radiusMinor'] : null, radiusMin : namedArgs.containsKey('radiusMin') ? namedArgs['radiusMin'] : null, radiusMax : namedArgs.containsKey('radiusMax') ? namedArgs['radiusMax'] : null, orientation : namedArgs.containsKey('orientation') ? namedArgs['orientation'] : null, tilt : namedArgs.containsKey('tilt') ? namedArgs['tilt'] : null, synthesized : namedArgs.containsKey('synthesized') ? namedArgs['synthesized'] : null, embedderId : namedArgs.containsKey('embedderId') ? namedArgs['embedderId'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => copyWith(
+            timeStamp: namedArgs.containsKey('timeStamp') ? namedArgs['timeStamp'] : null,
+            pointer: namedArgs.containsKey('pointer') ? namedArgs['pointer'] : null,
+            kind: namedArgs.containsKey('kind') ? namedArgs['kind'] : null,
+            device: namedArgs.containsKey('device') ? namedArgs['device'] : null,
+            position: namedArgs.containsKey('position') ? namedArgs['position'] : null,
+            delta: namedArgs.containsKey('delta') ? namedArgs['delta'] : null,
+            buttons: namedArgs.containsKey('buttons') ? namedArgs['buttons'] : null,
+            obscured: namedArgs.containsKey('obscured') ? namedArgs['obscured'] : null,
+            pressure: namedArgs.containsKey('pressure') ? namedArgs['pressure'] : null,
+            pressureMin: namedArgs.containsKey('pressureMin') ? namedArgs['pressureMin'] : null,
+            pressureMax: namedArgs.containsKey('pressureMax') ? namedArgs['pressureMax'] : null,
+            distance: namedArgs.containsKey('distance') ? namedArgs['distance'] : null,
+            distanceMax: namedArgs.containsKey('distanceMax') ? namedArgs['distanceMax'] : null,
+            size: namedArgs.containsKey('size') ? namedArgs['size'] : null,
+            radiusMajor: namedArgs.containsKey('radiusMajor') ? namedArgs['radiusMajor'] : null,
+            radiusMinor: namedArgs.containsKey('radiusMinor') ? namedArgs['radiusMinor'] : null,
+            radiusMin: namedArgs.containsKey('radiusMin') ? namedArgs['radiusMin'] : null,
+            radiusMax: namedArgs.containsKey('radiusMax') ? namedArgs['radiusMax'] : null,
+            orientation: namedArgs.containsKey('orientation') ? namedArgs['orientation'] : null,
+            tilt: namedArgs.containsKey('tilt') ? namedArgs['tilt'] : null,
+            synthesized: namedArgs.containsKey('synthesized') ? namedArgs['synthesized'] : null,
+            embedderId: namedArgs.containsKey('embedderId') ? namedArgs['embedderId'] : null);
+      case 'toStringShort':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class PointerEnterEventAutoBinding extends HTExternalClass {
@@ -313,7 +442,29 @@ class PointerEnterEventAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'PointerEnterEvent':
-        return ({positionalArgs, namedArgs, typeArgs}) => PointerEnterEvent(timeStamp : namedArgs.containsKey('timeStamp') ? namedArgs['timeStamp'] : Duration.zero, pointer : namedArgs.containsKey('pointer') ? namedArgs['pointer'] : 0, kind : namedArgs.containsKey('kind') ? namedArgs['kind'] : PointerDeviceKind.touch, device : namedArgs.containsKey('device') ? namedArgs['device'] : 0, position : namedArgs.containsKey('position') ? namedArgs['position'] : Offset.zero, delta : namedArgs.containsKey('delta') ? namedArgs['delta'] : Offset.zero, buttons : namedArgs.containsKey('buttons') ? namedArgs['buttons'] : 0, obscured : namedArgs.containsKey('obscured') ? namedArgs['obscured'] : false, pressureMin : namedArgs.containsKey('pressureMin') ? namedArgs['pressureMin'] : 1.0, pressureMax : namedArgs.containsKey('pressureMax') ? namedArgs['pressureMax'] : 1.0, distance : namedArgs.containsKey('distance') ? namedArgs['distance'] : 0.0, distanceMax : namedArgs.containsKey('distanceMax') ? namedArgs['distanceMax'] : 0.0, size : namedArgs.containsKey('size') ? namedArgs['size'] : 0.0, radiusMajor : namedArgs.containsKey('radiusMajor') ? namedArgs['radiusMajor'] : 0.0, radiusMinor : namedArgs.containsKey('radiusMinor') ? namedArgs['radiusMinor'] : 0.0, radiusMin : namedArgs.containsKey('radiusMin') ? namedArgs['radiusMin'] : 0.0, radiusMax : namedArgs.containsKey('radiusMax') ? namedArgs['radiusMax'] : 0.0, orientation : namedArgs.containsKey('orientation') ? namedArgs['orientation'] : 0.0, tilt : namedArgs.containsKey('tilt') ? namedArgs['tilt'] : 0.0, down : namedArgs.containsKey('down') ? namedArgs['down'] : false, synthesized : namedArgs.containsKey('synthesized') ? namedArgs['synthesized'] : false, embedderId : namedArgs.containsKey('embedderId') ? namedArgs['embedderId'] : 0);
+        return ({positionalArgs, namedArgs, typeArgs}) => PointerEnterEvent(
+            timeStamp: namedArgs.containsKey('timeStamp') ? namedArgs['timeStamp'] : Duration.zero,
+            pointer: namedArgs.containsKey('pointer') ? namedArgs['pointer'] : 0,
+            kind: namedArgs.containsKey('kind') ? namedArgs['kind'] : PointerDeviceKind.touch,
+            device: namedArgs.containsKey('device') ? namedArgs['device'] : 0,
+            position: namedArgs.containsKey('position') ? namedArgs['position'] : Offset.zero,
+            delta: namedArgs.containsKey('delta') ? namedArgs['delta'] : Offset.zero,
+            buttons: namedArgs.containsKey('buttons') ? namedArgs['buttons'] : 0,
+            obscured: namedArgs.containsKey('obscured') ? namedArgs['obscured'] : false,
+            pressureMin: namedArgs.containsKey('pressureMin') ? namedArgs['pressureMin'] : 1.0,
+            pressureMax: namedArgs.containsKey('pressureMax') ? namedArgs['pressureMax'] : 1.0,
+            distance: namedArgs.containsKey('distance') ? namedArgs['distance'] : 0.0,
+            distanceMax: namedArgs.containsKey('distanceMax') ? namedArgs['distanceMax'] : 0.0,
+            size: namedArgs.containsKey('size') ? namedArgs['size'] : 0.0,
+            radiusMajor: namedArgs.containsKey('radiusMajor') ? namedArgs['radiusMajor'] : 0.0,
+            radiusMinor: namedArgs.containsKey('radiusMinor') ? namedArgs['radiusMinor'] : 0.0,
+            radiusMin: namedArgs.containsKey('radiusMin') ? namedArgs['radiusMin'] : 0.0,
+            radiusMax: namedArgs.containsKey('radiusMax') ? namedArgs['radiusMax'] : 0.0,
+            orientation: namedArgs.containsKey('orientation') ? namedArgs['orientation'] : 0.0,
+            tilt: namedArgs.containsKey('tilt') ? namedArgs['tilt'] : 0.0,
+            down: namedArgs.containsKey('down') ? namedArgs['down'] : false,
+            synthesized: namedArgs.containsKey('synthesized') ? namedArgs['synthesized'] : false,
+            embedderId: namedArgs.containsKey('embedderId') ? namedArgs['embedderId'] : 0);
       case 'PointerEnterEvent.fromMouseEvent':
         return ({positionalArgs, namedArgs, typeArgs}) => PointerEnterEvent.fromMouseEvent(positionalArgs[0]);
       default:
@@ -325,9 +476,6 @@ class PointerEnterEventAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as PointerEnterEvent).htFetch(id);
   }
-
-
-
 }
 
 extension PointerEnterEventBinding on PointerEnterEvent {
@@ -394,18 +542,48 @@ extension PointerEnterEventBinding on PointerEnterEvent {
       case 'distanceMin':
         return distanceMin;
       case 'transformed':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.transformed(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => transformed(positionalArgs[0]);
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
       case 'toStringFull':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toStringFull();
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringFull();
       case 'copyWith':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.copyWith(timeStamp : namedArgs.containsKey('timeStamp') ? namedArgs['timeStamp'] : null, pointer : namedArgs.containsKey('pointer') ? namedArgs['pointer'] : null, kind : namedArgs.containsKey('kind') ? namedArgs['kind'] : null, device : namedArgs.containsKey('device') ? namedArgs['device'] : null, position : namedArgs.containsKey('position') ? namedArgs['position'] : null, delta : namedArgs.containsKey('delta') ? namedArgs['delta'] : null, buttons : namedArgs.containsKey('buttons') ? namedArgs['buttons'] : null, obscured : namedArgs.containsKey('obscured') ? namedArgs['obscured'] : null, pressure : namedArgs.containsKey('pressure') ? namedArgs['pressure'] : null, pressureMin : namedArgs.containsKey('pressureMin') ? namedArgs['pressureMin'] : null, pressureMax : namedArgs.containsKey('pressureMax') ? namedArgs['pressureMax'] : null, distance : namedArgs.containsKey('distance') ? namedArgs['distance'] : null, distanceMax : namedArgs.containsKey('distanceMax') ? namedArgs['distanceMax'] : null, size : namedArgs.containsKey('size') ? namedArgs['size'] : null, radiusMajor : namedArgs.containsKey('radiusMajor') ? namedArgs['radiusMajor'] : null, radiusMinor : namedArgs.containsKey('radiusMinor') ? namedArgs['radiusMinor'] : null, radiusMin : namedArgs.containsKey('radiusMin') ? namedArgs['radiusMin'] : null, radiusMax : namedArgs.containsKey('radiusMax') ? namedArgs['radiusMax'] : null, orientation : namedArgs.containsKey('orientation') ? namedArgs['orientation'] : null, tilt : namedArgs.containsKey('tilt') ? namedArgs['tilt'] : null, synthesized : namedArgs.containsKey('synthesized') ? namedArgs['synthesized'] : null, embedderId : namedArgs.containsKey('embedderId') ? namedArgs['embedderId'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => copyWith(
+            timeStamp: namedArgs.containsKey('timeStamp') ? namedArgs['timeStamp'] : null,
+            pointer: namedArgs.containsKey('pointer') ? namedArgs['pointer'] : null,
+            kind: namedArgs.containsKey('kind') ? namedArgs['kind'] : null,
+            device: namedArgs.containsKey('device') ? namedArgs['device'] : null,
+            position: namedArgs.containsKey('position') ? namedArgs['position'] : null,
+            delta: namedArgs.containsKey('delta') ? namedArgs['delta'] : null,
+            buttons: namedArgs.containsKey('buttons') ? namedArgs['buttons'] : null,
+            obscured: namedArgs.containsKey('obscured') ? namedArgs['obscured'] : null,
+            pressure: namedArgs.containsKey('pressure') ? namedArgs['pressure'] : null,
+            pressureMin: namedArgs.containsKey('pressureMin') ? namedArgs['pressureMin'] : null,
+            pressureMax: namedArgs.containsKey('pressureMax') ? namedArgs['pressureMax'] : null,
+            distance: namedArgs.containsKey('distance') ? namedArgs['distance'] : null,
+            distanceMax: namedArgs.containsKey('distanceMax') ? namedArgs['distanceMax'] : null,
+            size: namedArgs.containsKey('size') ? namedArgs['size'] : null,
+            radiusMajor: namedArgs.containsKey('radiusMajor') ? namedArgs['radiusMajor'] : null,
+            radiusMinor: namedArgs.containsKey('radiusMinor') ? namedArgs['radiusMinor'] : null,
+            radiusMin: namedArgs.containsKey('radiusMin') ? namedArgs['radiusMin'] : null,
+            radiusMax: namedArgs.containsKey('radiusMax') ? namedArgs['radiusMax'] : null,
+            orientation: namedArgs.containsKey('orientation') ? namedArgs['orientation'] : null,
+            tilt: namedArgs.containsKey('tilt') ? namedArgs['tilt'] : null,
+            synthesized: namedArgs.containsKey('synthesized') ? namedArgs['synthesized'] : null,
+            embedderId: namedArgs.containsKey('embedderId') ? namedArgs['embedderId'] : null);
+      case 'toStringShort':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class PointerExitEventAutoBinding extends HTExternalClass {
@@ -415,7 +593,29 @@ class PointerExitEventAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'PointerExitEvent':
-        return ({positionalArgs, namedArgs, typeArgs}) => PointerExitEvent(timeStamp : namedArgs.containsKey('timeStamp') ? namedArgs['timeStamp'] : Duration.zero, kind : namedArgs.containsKey('kind') ? namedArgs['kind'] : PointerDeviceKind.touch, pointer : namedArgs.containsKey('pointer') ? namedArgs['pointer'] : 0, device : namedArgs.containsKey('device') ? namedArgs['device'] : 0, position : namedArgs.containsKey('position') ? namedArgs['position'] : Offset.zero, delta : namedArgs.containsKey('delta') ? namedArgs['delta'] : Offset.zero, buttons : namedArgs.containsKey('buttons') ? namedArgs['buttons'] : 0, obscured : namedArgs.containsKey('obscured') ? namedArgs['obscured'] : false, pressureMin : namedArgs.containsKey('pressureMin') ? namedArgs['pressureMin'] : 1.0, pressureMax : namedArgs.containsKey('pressureMax') ? namedArgs['pressureMax'] : 1.0, distance : namedArgs.containsKey('distance') ? namedArgs['distance'] : 0.0, distanceMax : namedArgs.containsKey('distanceMax') ? namedArgs['distanceMax'] : 0.0, size : namedArgs.containsKey('size') ? namedArgs['size'] : 0.0, radiusMajor : namedArgs.containsKey('radiusMajor') ? namedArgs['radiusMajor'] : 0.0, radiusMinor : namedArgs.containsKey('radiusMinor') ? namedArgs['radiusMinor'] : 0.0, radiusMin : namedArgs.containsKey('radiusMin') ? namedArgs['radiusMin'] : 0.0, radiusMax : namedArgs.containsKey('radiusMax') ? namedArgs['radiusMax'] : 0.0, orientation : namedArgs.containsKey('orientation') ? namedArgs['orientation'] : 0.0, tilt : namedArgs.containsKey('tilt') ? namedArgs['tilt'] : 0.0, down : namedArgs.containsKey('down') ? namedArgs['down'] : false, synthesized : namedArgs.containsKey('synthesized') ? namedArgs['synthesized'] : false, embedderId : namedArgs.containsKey('embedderId') ? namedArgs['embedderId'] : 0);
+        return ({positionalArgs, namedArgs, typeArgs}) => PointerExitEvent(
+            timeStamp: namedArgs.containsKey('timeStamp') ? namedArgs['timeStamp'] : Duration.zero,
+            kind: namedArgs.containsKey('kind') ? namedArgs['kind'] : PointerDeviceKind.touch,
+            pointer: namedArgs.containsKey('pointer') ? namedArgs['pointer'] : 0,
+            device: namedArgs.containsKey('device') ? namedArgs['device'] : 0,
+            position: namedArgs.containsKey('position') ? namedArgs['position'] : Offset.zero,
+            delta: namedArgs.containsKey('delta') ? namedArgs['delta'] : Offset.zero,
+            buttons: namedArgs.containsKey('buttons') ? namedArgs['buttons'] : 0,
+            obscured: namedArgs.containsKey('obscured') ? namedArgs['obscured'] : false,
+            pressureMin: namedArgs.containsKey('pressureMin') ? namedArgs['pressureMin'] : 1.0,
+            pressureMax: namedArgs.containsKey('pressureMax') ? namedArgs['pressureMax'] : 1.0,
+            distance: namedArgs.containsKey('distance') ? namedArgs['distance'] : 0.0,
+            distanceMax: namedArgs.containsKey('distanceMax') ? namedArgs['distanceMax'] : 0.0,
+            size: namedArgs.containsKey('size') ? namedArgs['size'] : 0.0,
+            radiusMajor: namedArgs.containsKey('radiusMajor') ? namedArgs['radiusMajor'] : 0.0,
+            radiusMinor: namedArgs.containsKey('radiusMinor') ? namedArgs['radiusMinor'] : 0.0,
+            radiusMin: namedArgs.containsKey('radiusMin') ? namedArgs['radiusMin'] : 0.0,
+            radiusMax: namedArgs.containsKey('radiusMax') ? namedArgs['radiusMax'] : 0.0,
+            orientation: namedArgs.containsKey('orientation') ? namedArgs['orientation'] : 0.0,
+            tilt: namedArgs.containsKey('tilt') ? namedArgs['tilt'] : 0.0,
+            down: namedArgs.containsKey('down') ? namedArgs['down'] : false,
+            synthesized: namedArgs.containsKey('synthesized') ? namedArgs['synthesized'] : false,
+            embedderId: namedArgs.containsKey('embedderId') ? namedArgs['embedderId'] : 0);
       case 'PointerExitEvent.fromMouseEvent':
         return ({positionalArgs, namedArgs, typeArgs}) => PointerExitEvent.fromMouseEvent(positionalArgs[0]);
       default:
@@ -427,9 +627,6 @@ class PointerExitEventAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as PointerExitEvent).htFetch(id);
   }
-
-
-
 }
 
 extension PointerExitEventBinding on PointerExitEvent {
@@ -496,18 +693,48 @@ extension PointerExitEventBinding on PointerExitEvent {
       case 'distanceMin':
         return distanceMin;
       case 'transformed':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.transformed(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => transformed(positionalArgs[0]);
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
       case 'toStringFull':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toStringFull();
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringFull();
       case 'copyWith':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.copyWith(timeStamp : namedArgs.containsKey('timeStamp') ? namedArgs['timeStamp'] : null, pointer : namedArgs.containsKey('pointer') ? namedArgs['pointer'] : null, kind : namedArgs.containsKey('kind') ? namedArgs['kind'] : null, device : namedArgs.containsKey('device') ? namedArgs['device'] : null, position : namedArgs.containsKey('position') ? namedArgs['position'] : null, delta : namedArgs.containsKey('delta') ? namedArgs['delta'] : null, buttons : namedArgs.containsKey('buttons') ? namedArgs['buttons'] : null, obscured : namedArgs.containsKey('obscured') ? namedArgs['obscured'] : null, pressure : namedArgs.containsKey('pressure') ? namedArgs['pressure'] : null, pressureMin : namedArgs.containsKey('pressureMin') ? namedArgs['pressureMin'] : null, pressureMax : namedArgs.containsKey('pressureMax') ? namedArgs['pressureMax'] : null, distance : namedArgs.containsKey('distance') ? namedArgs['distance'] : null, distanceMax : namedArgs.containsKey('distanceMax') ? namedArgs['distanceMax'] : null, size : namedArgs.containsKey('size') ? namedArgs['size'] : null, radiusMajor : namedArgs.containsKey('radiusMajor') ? namedArgs['radiusMajor'] : null, radiusMinor : namedArgs.containsKey('radiusMinor') ? namedArgs['radiusMinor'] : null, radiusMin : namedArgs.containsKey('radiusMin') ? namedArgs['radiusMin'] : null, radiusMax : namedArgs.containsKey('radiusMax') ? namedArgs['radiusMax'] : null, orientation : namedArgs.containsKey('orientation') ? namedArgs['orientation'] : null, tilt : namedArgs.containsKey('tilt') ? namedArgs['tilt'] : null, synthesized : namedArgs.containsKey('synthesized') ? namedArgs['synthesized'] : null, embedderId : namedArgs.containsKey('embedderId') ? namedArgs['embedderId'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => copyWith(
+            timeStamp: namedArgs.containsKey('timeStamp') ? namedArgs['timeStamp'] : null,
+            pointer: namedArgs.containsKey('pointer') ? namedArgs['pointer'] : null,
+            kind: namedArgs.containsKey('kind') ? namedArgs['kind'] : null,
+            device: namedArgs.containsKey('device') ? namedArgs['device'] : null,
+            position: namedArgs.containsKey('position') ? namedArgs['position'] : null,
+            delta: namedArgs.containsKey('delta') ? namedArgs['delta'] : null,
+            buttons: namedArgs.containsKey('buttons') ? namedArgs['buttons'] : null,
+            obscured: namedArgs.containsKey('obscured') ? namedArgs['obscured'] : null,
+            pressure: namedArgs.containsKey('pressure') ? namedArgs['pressure'] : null,
+            pressureMin: namedArgs.containsKey('pressureMin') ? namedArgs['pressureMin'] : null,
+            pressureMax: namedArgs.containsKey('pressureMax') ? namedArgs['pressureMax'] : null,
+            distance: namedArgs.containsKey('distance') ? namedArgs['distance'] : null,
+            distanceMax: namedArgs.containsKey('distanceMax') ? namedArgs['distanceMax'] : null,
+            size: namedArgs.containsKey('size') ? namedArgs['size'] : null,
+            radiusMajor: namedArgs.containsKey('radiusMajor') ? namedArgs['radiusMajor'] : null,
+            radiusMinor: namedArgs.containsKey('radiusMinor') ? namedArgs['radiusMinor'] : null,
+            radiusMin: namedArgs.containsKey('radiusMin') ? namedArgs['radiusMin'] : null,
+            radiusMax: namedArgs.containsKey('radiusMax') ? namedArgs['radiusMax'] : null,
+            orientation: namedArgs.containsKey('orientation') ? namedArgs['orientation'] : null,
+            tilt: namedArgs.containsKey('tilt') ? namedArgs['tilt'] : null,
+            synthesized: namedArgs.containsKey('synthesized') ? namedArgs['synthesized'] : null,
+            embedderId: namedArgs.containsKey('embedderId') ? namedArgs['embedderId'] : null);
+      case 'toStringShort':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class PointerDownEventAutoBinding extends HTExternalClass {
@@ -517,7 +744,26 @@ class PointerDownEventAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'PointerDownEvent':
-        return ({positionalArgs, namedArgs, typeArgs}) => PointerDownEvent(timeStamp : namedArgs.containsKey('timeStamp') ? namedArgs['timeStamp'] : Duration.zero, pointer : namedArgs.containsKey('pointer') ? namedArgs['pointer'] : 0, kind : namedArgs.containsKey('kind') ? namedArgs['kind'] : PointerDeviceKind.touch, device : namedArgs.containsKey('device') ? namedArgs['device'] : 0, position : namedArgs.containsKey('position') ? namedArgs['position'] : Offset.zero, buttons : namedArgs.containsKey('buttons') ? namedArgs['buttons'] : kPrimaryButton, obscured : namedArgs.containsKey('obscured') ? namedArgs['obscured'] : false, pressure : namedArgs.containsKey('pressure') ? namedArgs['pressure'] : 1.0, pressureMin : namedArgs.containsKey('pressureMin') ? namedArgs['pressureMin'] : 1.0, pressureMax : namedArgs.containsKey('pressureMax') ? namedArgs['pressureMax'] : 1.0, distanceMax : namedArgs.containsKey('distanceMax') ? namedArgs['distanceMax'] : 0.0, size : namedArgs.containsKey('size') ? namedArgs['size'] : 0.0, radiusMajor : namedArgs.containsKey('radiusMajor') ? namedArgs['radiusMajor'] : 0.0, radiusMinor : namedArgs.containsKey('radiusMinor') ? namedArgs['radiusMinor'] : 0.0, radiusMin : namedArgs.containsKey('radiusMin') ? namedArgs['radiusMin'] : 0.0, radiusMax : namedArgs.containsKey('radiusMax') ? namedArgs['radiusMax'] : 0.0, orientation : namedArgs.containsKey('orientation') ? namedArgs['orientation'] : 0.0, tilt : namedArgs.containsKey('tilt') ? namedArgs['tilt'] : 0.0, embedderId : namedArgs.containsKey('embedderId') ? namedArgs['embedderId'] : 0);
+        return ({positionalArgs, namedArgs, typeArgs}) => PointerDownEvent(
+            timeStamp: namedArgs.containsKey('timeStamp') ? namedArgs['timeStamp'] : Duration.zero,
+            pointer: namedArgs.containsKey('pointer') ? namedArgs['pointer'] : 0,
+            kind: namedArgs.containsKey('kind') ? namedArgs['kind'] : PointerDeviceKind.touch,
+            device: namedArgs.containsKey('device') ? namedArgs['device'] : 0,
+            position: namedArgs.containsKey('position') ? namedArgs['position'] : Offset.zero,
+            buttons: namedArgs.containsKey('buttons') ? namedArgs['buttons'] : kPrimaryButton,
+            obscured: namedArgs.containsKey('obscured') ? namedArgs['obscured'] : false,
+            pressure: namedArgs.containsKey('pressure') ? namedArgs['pressure'] : 1.0,
+            pressureMin: namedArgs.containsKey('pressureMin') ? namedArgs['pressureMin'] : 1.0,
+            pressureMax: namedArgs.containsKey('pressureMax') ? namedArgs['pressureMax'] : 1.0,
+            distanceMax: namedArgs.containsKey('distanceMax') ? namedArgs['distanceMax'] : 0.0,
+            size: namedArgs.containsKey('size') ? namedArgs['size'] : 0.0,
+            radiusMajor: namedArgs.containsKey('radiusMajor') ? namedArgs['radiusMajor'] : 0.0,
+            radiusMinor: namedArgs.containsKey('radiusMinor') ? namedArgs['radiusMinor'] : 0.0,
+            radiusMin: namedArgs.containsKey('radiusMin') ? namedArgs['radiusMin'] : 0.0,
+            radiusMax: namedArgs.containsKey('radiusMax') ? namedArgs['radiusMax'] : 0.0,
+            orientation: namedArgs.containsKey('orientation') ? namedArgs['orientation'] : 0.0,
+            tilt: namedArgs.containsKey('tilt') ? namedArgs['tilt'] : 0.0,
+            embedderId: namedArgs.containsKey('embedderId') ? namedArgs['embedderId'] : 0);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -527,9 +773,6 @@ class PointerDownEventAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as PointerDownEvent).htFetch(id);
   }
-
-
-
 }
 
 extension PointerDownEventBinding on PointerDownEvent {
@@ -596,18 +839,48 @@ extension PointerDownEventBinding on PointerDownEvent {
       case 'distanceMin':
         return distanceMin;
       case 'transformed':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.transformed(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => transformed(positionalArgs[0]);
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
       case 'toStringFull':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toStringFull();
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringFull();
       case 'copyWith':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.copyWith(timeStamp : namedArgs.containsKey('timeStamp') ? namedArgs['timeStamp'] : null, pointer : namedArgs.containsKey('pointer') ? namedArgs['pointer'] : null, kind : namedArgs.containsKey('kind') ? namedArgs['kind'] : null, device : namedArgs.containsKey('device') ? namedArgs['device'] : null, position : namedArgs.containsKey('position') ? namedArgs['position'] : null, delta : namedArgs.containsKey('delta') ? namedArgs['delta'] : null, buttons : namedArgs.containsKey('buttons') ? namedArgs['buttons'] : null, obscured : namedArgs.containsKey('obscured') ? namedArgs['obscured'] : null, pressure : namedArgs.containsKey('pressure') ? namedArgs['pressure'] : null, pressureMin : namedArgs.containsKey('pressureMin') ? namedArgs['pressureMin'] : null, pressureMax : namedArgs.containsKey('pressureMax') ? namedArgs['pressureMax'] : null, distance : namedArgs.containsKey('distance') ? namedArgs['distance'] : null, distanceMax : namedArgs.containsKey('distanceMax') ? namedArgs['distanceMax'] : null, size : namedArgs.containsKey('size') ? namedArgs['size'] : null, radiusMajor : namedArgs.containsKey('radiusMajor') ? namedArgs['radiusMajor'] : null, radiusMinor : namedArgs.containsKey('radiusMinor') ? namedArgs['radiusMinor'] : null, radiusMin : namedArgs.containsKey('radiusMin') ? namedArgs['radiusMin'] : null, radiusMax : namedArgs.containsKey('radiusMax') ? namedArgs['radiusMax'] : null, orientation : namedArgs.containsKey('orientation') ? namedArgs['orientation'] : null, tilt : namedArgs.containsKey('tilt') ? namedArgs['tilt'] : null, synthesized : namedArgs.containsKey('synthesized') ? namedArgs['synthesized'] : null, embedderId : namedArgs.containsKey('embedderId') ? namedArgs['embedderId'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => copyWith(
+            timeStamp: namedArgs.containsKey('timeStamp') ? namedArgs['timeStamp'] : null,
+            pointer: namedArgs.containsKey('pointer') ? namedArgs['pointer'] : null,
+            kind: namedArgs.containsKey('kind') ? namedArgs['kind'] : null,
+            device: namedArgs.containsKey('device') ? namedArgs['device'] : null,
+            position: namedArgs.containsKey('position') ? namedArgs['position'] : null,
+            delta: namedArgs.containsKey('delta') ? namedArgs['delta'] : null,
+            buttons: namedArgs.containsKey('buttons') ? namedArgs['buttons'] : null,
+            obscured: namedArgs.containsKey('obscured') ? namedArgs['obscured'] : null,
+            pressure: namedArgs.containsKey('pressure') ? namedArgs['pressure'] : null,
+            pressureMin: namedArgs.containsKey('pressureMin') ? namedArgs['pressureMin'] : null,
+            pressureMax: namedArgs.containsKey('pressureMax') ? namedArgs['pressureMax'] : null,
+            distance: namedArgs.containsKey('distance') ? namedArgs['distance'] : null,
+            distanceMax: namedArgs.containsKey('distanceMax') ? namedArgs['distanceMax'] : null,
+            size: namedArgs.containsKey('size') ? namedArgs['size'] : null,
+            radiusMajor: namedArgs.containsKey('radiusMajor') ? namedArgs['radiusMajor'] : null,
+            radiusMinor: namedArgs.containsKey('radiusMinor') ? namedArgs['radiusMinor'] : null,
+            radiusMin: namedArgs.containsKey('radiusMin') ? namedArgs['radiusMin'] : null,
+            radiusMax: namedArgs.containsKey('radiusMax') ? namedArgs['radiusMax'] : null,
+            orientation: namedArgs.containsKey('orientation') ? namedArgs['orientation'] : null,
+            tilt: namedArgs.containsKey('tilt') ? namedArgs['tilt'] : null,
+            synthesized: namedArgs.containsKey('synthesized') ? namedArgs['synthesized'] : null,
+            embedderId: namedArgs.containsKey('embedderId') ? namedArgs['embedderId'] : null);
+      case 'toStringShort':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class PointerMoveEventAutoBinding extends HTExternalClass {
@@ -617,7 +890,29 @@ class PointerMoveEventAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'PointerMoveEvent':
-        return ({positionalArgs, namedArgs, typeArgs}) => PointerMoveEvent(timeStamp : namedArgs.containsKey('timeStamp') ? namedArgs['timeStamp'] : Duration.zero, pointer : namedArgs.containsKey('pointer') ? namedArgs['pointer'] : 0, kind : namedArgs.containsKey('kind') ? namedArgs['kind'] : PointerDeviceKind.touch, device : namedArgs.containsKey('device') ? namedArgs['device'] : 0, position : namedArgs.containsKey('position') ? namedArgs['position'] : Offset.zero, delta : namedArgs.containsKey('delta') ? namedArgs['delta'] : Offset.zero, buttons : namedArgs.containsKey('buttons') ? namedArgs['buttons'] : kPrimaryButton, obscured : namedArgs.containsKey('obscured') ? namedArgs['obscured'] : false, pressure : namedArgs.containsKey('pressure') ? namedArgs['pressure'] : 1.0, pressureMin : namedArgs.containsKey('pressureMin') ? namedArgs['pressureMin'] : 1.0, pressureMax : namedArgs.containsKey('pressureMax') ? namedArgs['pressureMax'] : 1.0, distanceMax : namedArgs.containsKey('distanceMax') ? namedArgs['distanceMax'] : 0.0, size : namedArgs.containsKey('size') ? namedArgs['size'] : 0.0, radiusMajor : namedArgs.containsKey('radiusMajor') ? namedArgs['radiusMajor'] : 0.0, radiusMinor : namedArgs.containsKey('radiusMinor') ? namedArgs['radiusMinor'] : 0.0, radiusMin : namedArgs.containsKey('radiusMin') ? namedArgs['radiusMin'] : 0.0, radiusMax : namedArgs.containsKey('radiusMax') ? namedArgs['radiusMax'] : 0.0, orientation : namedArgs.containsKey('orientation') ? namedArgs['orientation'] : 0.0, tilt : namedArgs.containsKey('tilt') ? namedArgs['tilt'] : 0.0, platformData : namedArgs.containsKey('platformData') ? namedArgs['platformData'] : 0, synthesized : namedArgs.containsKey('synthesized') ? namedArgs['synthesized'] : false, embedderId : namedArgs.containsKey('embedderId') ? namedArgs['embedderId'] : 0);
+        return ({positionalArgs, namedArgs, typeArgs}) => PointerMoveEvent(
+            timeStamp: namedArgs.containsKey('timeStamp') ? namedArgs['timeStamp'] : Duration.zero,
+            pointer: namedArgs.containsKey('pointer') ? namedArgs['pointer'] : 0,
+            kind: namedArgs.containsKey('kind') ? namedArgs['kind'] : PointerDeviceKind.touch,
+            device: namedArgs.containsKey('device') ? namedArgs['device'] : 0,
+            position: namedArgs.containsKey('position') ? namedArgs['position'] : Offset.zero,
+            delta: namedArgs.containsKey('delta') ? namedArgs['delta'] : Offset.zero,
+            buttons: namedArgs.containsKey('buttons') ? namedArgs['buttons'] : kPrimaryButton,
+            obscured: namedArgs.containsKey('obscured') ? namedArgs['obscured'] : false,
+            pressure: namedArgs.containsKey('pressure') ? namedArgs['pressure'] : 1.0,
+            pressureMin: namedArgs.containsKey('pressureMin') ? namedArgs['pressureMin'] : 1.0,
+            pressureMax: namedArgs.containsKey('pressureMax') ? namedArgs['pressureMax'] : 1.0,
+            distanceMax: namedArgs.containsKey('distanceMax') ? namedArgs['distanceMax'] : 0.0,
+            size: namedArgs.containsKey('size') ? namedArgs['size'] : 0.0,
+            radiusMajor: namedArgs.containsKey('radiusMajor') ? namedArgs['radiusMajor'] : 0.0,
+            radiusMinor: namedArgs.containsKey('radiusMinor') ? namedArgs['radiusMinor'] : 0.0,
+            radiusMin: namedArgs.containsKey('radiusMin') ? namedArgs['radiusMin'] : 0.0,
+            radiusMax: namedArgs.containsKey('radiusMax') ? namedArgs['radiusMax'] : 0.0,
+            orientation: namedArgs.containsKey('orientation') ? namedArgs['orientation'] : 0.0,
+            tilt: namedArgs.containsKey('tilt') ? namedArgs['tilt'] : 0.0,
+            platformData: namedArgs.containsKey('platformData') ? namedArgs['platformData'] : 0,
+            synthesized: namedArgs.containsKey('synthesized') ? namedArgs['synthesized'] : false,
+            embedderId: namedArgs.containsKey('embedderId') ? namedArgs['embedderId'] : 0);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -627,9 +922,6 @@ class PointerMoveEventAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as PointerMoveEvent).htFetch(id);
   }
-
-
-
 }
 
 extension PointerMoveEventBinding on PointerMoveEvent {
@@ -696,18 +988,48 @@ extension PointerMoveEventBinding on PointerMoveEvent {
       case 'distanceMin':
         return distanceMin;
       case 'transformed':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.transformed(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => transformed(positionalArgs[0]);
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
       case 'toStringFull':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toStringFull();
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringFull();
       case 'copyWith':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.copyWith(timeStamp : namedArgs.containsKey('timeStamp') ? namedArgs['timeStamp'] : null, pointer : namedArgs.containsKey('pointer') ? namedArgs['pointer'] : null, kind : namedArgs.containsKey('kind') ? namedArgs['kind'] : null, device : namedArgs.containsKey('device') ? namedArgs['device'] : null, position : namedArgs.containsKey('position') ? namedArgs['position'] : null, delta : namedArgs.containsKey('delta') ? namedArgs['delta'] : null, buttons : namedArgs.containsKey('buttons') ? namedArgs['buttons'] : null, obscured : namedArgs.containsKey('obscured') ? namedArgs['obscured'] : null, pressure : namedArgs.containsKey('pressure') ? namedArgs['pressure'] : null, pressureMin : namedArgs.containsKey('pressureMin') ? namedArgs['pressureMin'] : null, pressureMax : namedArgs.containsKey('pressureMax') ? namedArgs['pressureMax'] : null, distance : namedArgs.containsKey('distance') ? namedArgs['distance'] : null, distanceMax : namedArgs.containsKey('distanceMax') ? namedArgs['distanceMax'] : null, size : namedArgs.containsKey('size') ? namedArgs['size'] : null, radiusMajor : namedArgs.containsKey('radiusMajor') ? namedArgs['radiusMajor'] : null, radiusMinor : namedArgs.containsKey('radiusMinor') ? namedArgs['radiusMinor'] : null, radiusMin : namedArgs.containsKey('radiusMin') ? namedArgs['radiusMin'] : null, radiusMax : namedArgs.containsKey('radiusMax') ? namedArgs['radiusMax'] : null, orientation : namedArgs.containsKey('orientation') ? namedArgs['orientation'] : null, tilt : namedArgs.containsKey('tilt') ? namedArgs['tilt'] : null, synthesized : namedArgs.containsKey('synthesized') ? namedArgs['synthesized'] : null, embedderId : namedArgs.containsKey('embedderId') ? namedArgs['embedderId'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => copyWith(
+            timeStamp: namedArgs.containsKey('timeStamp') ? namedArgs['timeStamp'] : null,
+            pointer: namedArgs.containsKey('pointer') ? namedArgs['pointer'] : null,
+            kind: namedArgs.containsKey('kind') ? namedArgs['kind'] : null,
+            device: namedArgs.containsKey('device') ? namedArgs['device'] : null,
+            position: namedArgs.containsKey('position') ? namedArgs['position'] : null,
+            delta: namedArgs.containsKey('delta') ? namedArgs['delta'] : null,
+            buttons: namedArgs.containsKey('buttons') ? namedArgs['buttons'] : null,
+            obscured: namedArgs.containsKey('obscured') ? namedArgs['obscured'] : null,
+            pressure: namedArgs.containsKey('pressure') ? namedArgs['pressure'] : null,
+            pressureMin: namedArgs.containsKey('pressureMin') ? namedArgs['pressureMin'] : null,
+            pressureMax: namedArgs.containsKey('pressureMax') ? namedArgs['pressureMax'] : null,
+            distance: namedArgs.containsKey('distance') ? namedArgs['distance'] : null,
+            distanceMax: namedArgs.containsKey('distanceMax') ? namedArgs['distanceMax'] : null,
+            size: namedArgs.containsKey('size') ? namedArgs['size'] : null,
+            radiusMajor: namedArgs.containsKey('radiusMajor') ? namedArgs['radiusMajor'] : null,
+            radiusMinor: namedArgs.containsKey('radiusMinor') ? namedArgs['radiusMinor'] : null,
+            radiusMin: namedArgs.containsKey('radiusMin') ? namedArgs['radiusMin'] : null,
+            radiusMax: namedArgs.containsKey('radiusMax') ? namedArgs['radiusMax'] : null,
+            orientation: namedArgs.containsKey('orientation') ? namedArgs['orientation'] : null,
+            tilt: namedArgs.containsKey('tilt') ? namedArgs['tilt'] : null,
+            synthesized: namedArgs.containsKey('synthesized') ? namedArgs['synthesized'] : null,
+            embedderId: namedArgs.containsKey('embedderId') ? namedArgs['embedderId'] : null);
+      case 'toStringShort':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class PointerUpEventAutoBinding extends HTExternalClass {
@@ -717,7 +1039,27 @@ class PointerUpEventAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'PointerUpEvent':
-        return ({positionalArgs, namedArgs, typeArgs}) => PointerUpEvent(timeStamp : namedArgs.containsKey('timeStamp') ? namedArgs['timeStamp'] : Duration.zero, pointer : namedArgs.containsKey('pointer') ? namedArgs['pointer'] : 0, kind : namedArgs.containsKey('kind') ? namedArgs['kind'] : PointerDeviceKind.touch, device : namedArgs.containsKey('device') ? namedArgs['device'] : 0, position : namedArgs.containsKey('position') ? namedArgs['position'] : Offset.zero, buttons : namedArgs.containsKey('buttons') ? namedArgs['buttons'] : 0, obscured : namedArgs.containsKey('obscured') ? namedArgs['obscured'] : false, pressure : namedArgs.containsKey('pressure') ? namedArgs['pressure'] : 0.0, pressureMin : namedArgs.containsKey('pressureMin') ? namedArgs['pressureMin'] : 1.0, pressureMax : namedArgs.containsKey('pressureMax') ? namedArgs['pressureMax'] : 1.0, distance : namedArgs.containsKey('distance') ? namedArgs['distance'] : 0.0, distanceMax : namedArgs.containsKey('distanceMax') ? namedArgs['distanceMax'] : 0.0, size : namedArgs.containsKey('size') ? namedArgs['size'] : 0.0, radiusMajor : namedArgs.containsKey('radiusMajor') ? namedArgs['radiusMajor'] : 0.0, radiusMinor : namedArgs.containsKey('radiusMinor') ? namedArgs['radiusMinor'] : 0.0, radiusMin : namedArgs.containsKey('radiusMin') ? namedArgs['radiusMin'] : 0.0, radiusMax : namedArgs.containsKey('radiusMax') ? namedArgs['radiusMax'] : 0.0, orientation : namedArgs.containsKey('orientation') ? namedArgs['orientation'] : 0.0, tilt : namedArgs.containsKey('tilt') ? namedArgs['tilt'] : 0.0, embedderId : namedArgs.containsKey('embedderId') ? namedArgs['embedderId'] : 0);
+        return ({positionalArgs, namedArgs, typeArgs}) => PointerUpEvent(
+            timeStamp: namedArgs.containsKey('timeStamp') ? namedArgs['timeStamp'] : Duration.zero,
+            pointer: namedArgs.containsKey('pointer') ? namedArgs['pointer'] : 0,
+            kind: namedArgs.containsKey('kind') ? namedArgs['kind'] : PointerDeviceKind.touch,
+            device: namedArgs.containsKey('device') ? namedArgs['device'] : 0,
+            position: namedArgs.containsKey('position') ? namedArgs['position'] : Offset.zero,
+            buttons: namedArgs.containsKey('buttons') ? namedArgs['buttons'] : 0,
+            obscured: namedArgs.containsKey('obscured') ? namedArgs['obscured'] : false,
+            pressure: namedArgs.containsKey('pressure') ? namedArgs['pressure'] : 0.0,
+            pressureMin: namedArgs.containsKey('pressureMin') ? namedArgs['pressureMin'] : 1.0,
+            pressureMax: namedArgs.containsKey('pressureMax') ? namedArgs['pressureMax'] : 1.0,
+            distance: namedArgs.containsKey('distance') ? namedArgs['distance'] : 0.0,
+            distanceMax: namedArgs.containsKey('distanceMax') ? namedArgs['distanceMax'] : 0.0,
+            size: namedArgs.containsKey('size') ? namedArgs['size'] : 0.0,
+            radiusMajor: namedArgs.containsKey('radiusMajor') ? namedArgs['radiusMajor'] : 0.0,
+            radiusMinor: namedArgs.containsKey('radiusMinor') ? namedArgs['radiusMinor'] : 0.0,
+            radiusMin: namedArgs.containsKey('radiusMin') ? namedArgs['radiusMin'] : 0.0,
+            radiusMax: namedArgs.containsKey('radiusMax') ? namedArgs['radiusMax'] : 0.0,
+            orientation: namedArgs.containsKey('orientation') ? namedArgs['orientation'] : 0.0,
+            tilt: namedArgs.containsKey('tilt') ? namedArgs['tilt'] : 0.0,
+            embedderId: namedArgs.containsKey('embedderId') ? namedArgs['embedderId'] : 0);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -727,9 +1069,6 @@ class PointerUpEventAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as PointerUpEvent).htFetch(id);
   }
-
-
-
 }
 
 extension PointerUpEventBinding on PointerUpEvent {
@@ -796,18 +1135,49 @@ extension PointerUpEventBinding on PointerUpEvent {
       case 'distanceMin':
         return distanceMin;
       case 'transformed':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.transformed(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => transformed(positionalArgs[0]);
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
       case 'toStringFull':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toStringFull();
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringFull();
       case 'copyWith':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.copyWith(timeStamp : namedArgs.containsKey('timeStamp') ? namedArgs['timeStamp'] : null, pointer : namedArgs.containsKey('pointer') ? namedArgs['pointer'] : null, kind : namedArgs.containsKey('kind') ? namedArgs['kind'] : null, device : namedArgs.containsKey('device') ? namedArgs['device'] : null, position : namedArgs.containsKey('position') ? namedArgs['position'] : null, localPosition : namedArgs.containsKey('localPosition') ? namedArgs['localPosition'] : null, delta : namedArgs.containsKey('delta') ? namedArgs['delta'] : null, buttons : namedArgs.containsKey('buttons') ? namedArgs['buttons'] : null, obscured : namedArgs.containsKey('obscured') ? namedArgs['obscured'] : null, pressure : namedArgs.containsKey('pressure') ? namedArgs['pressure'] : null, pressureMin : namedArgs.containsKey('pressureMin') ? namedArgs['pressureMin'] : null, pressureMax : namedArgs.containsKey('pressureMax') ? namedArgs['pressureMax'] : null, distance : namedArgs.containsKey('distance') ? namedArgs['distance'] : null, distanceMax : namedArgs.containsKey('distanceMax') ? namedArgs['distanceMax'] : null, size : namedArgs.containsKey('size') ? namedArgs['size'] : null, radiusMajor : namedArgs.containsKey('radiusMajor') ? namedArgs['radiusMajor'] : null, radiusMinor : namedArgs.containsKey('radiusMinor') ? namedArgs['radiusMinor'] : null, radiusMin : namedArgs.containsKey('radiusMin') ? namedArgs['radiusMin'] : null, radiusMax : namedArgs.containsKey('radiusMax') ? namedArgs['radiusMax'] : null, orientation : namedArgs.containsKey('orientation') ? namedArgs['orientation'] : null, tilt : namedArgs.containsKey('tilt') ? namedArgs['tilt'] : null, synthesized : namedArgs.containsKey('synthesized') ? namedArgs['synthesized'] : null, embedderId : namedArgs.containsKey('embedderId') ? namedArgs['embedderId'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => copyWith(
+            timeStamp: namedArgs.containsKey('timeStamp') ? namedArgs['timeStamp'] : null,
+            pointer: namedArgs.containsKey('pointer') ? namedArgs['pointer'] : null,
+            kind: namedArgs.containsKey('kind') ? namedArgs['kind'] : null,
+            device: namedArgs.containsKey('device') ? namedArgs['device'] : null,
+            position: namedArgs.containsKey('position') ? namedArgs['position'] : null,
+            localPosition: namedArgs.containsKey('localPosition') ? namedArgs['localPosition'] : null,
+            delta: namedArgs.containsKey('delta') ? namedArgs['delta'] : null,
+            buttons: namedArgs.containsKey('buttons') ? namedArgs['buttons'] : null,
+            obscured: namedArgs.containsKey('obscured') ? namedArgs['obscured'] : null,
+            pressure: namedArgs.containsKey('pressure') ? namedArgs['pressure'] : null,
+            pressureMin: namedArgs.containsKey('pressureMin') ? namedArgs['pressureMin'] : null,
+            pressureMax: namedArgs.containsKey('pressureMax') ? namedArgs['pressureMax'] : null,
+            distance: namedArgs.containsKey('distance') ? namedArgs['distance'] : null,
+            distanceMax: namedArgs.containsKey('distanceMax') ? namedArgs['distanceMax'] : null,
+            size: namedArgs.containsKey('size') ? namedArgs['size'] : null,
+            radiusMajor: namedArgs.containsKey('radiusMajor') ? namedArgs['radiusMajor'] : null,
+            radiusMinor: namedArgs.containsKey('radiusMinor') ? namedArgs['radiusMinor'] : null,
+            radiusMin: namedArgs.containsKey('radiusMin') ? namedArgs['radiusMin'] : null,
+            radiusMax: namedArgs.containsKey('radiusMax') ? namedArgs['radiusMax'] : null,
+            orientation: namedArgs.containsKey('orientation') ? namedArgs['orientation'] : null,
+            tilt: namedArgs.containsKey('tilt') ? namedArgs['tilt'] : null,
+            synthesized: namedArgs.containsKey('synthesized') ? namedArgs['synthesized'] : null,
+            embedderId: namedArgs.containsKey('embedderId') ? namedArgs['embedderId'] : null);
+      case 'toStringShort':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class PointerScrollEventAutoBinding extends HTExternalClass {
@@ -817,7 +1187,13 @@ class PointerScrollEventAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'PointerScrollEvent':
-        return ({positionalArgs, namedArgs, typeArgs}) => PointerScrollEvent(timeStamp : namedArgs.containsKey('timeStamp') ? namedArgs['timeStamp'] : Duration.zero, kind : namedArgs.containsKey('kind') ? namedArgs['kind'] : PointerDeviceKind.mouse, device : namedArgs.containsKey('device') ? namedArgs['device'] : 0, position : namedArgs.containsKey('position') ? namedArgs['position'] : Offset.zero, scrollDelta : namedArgs.containsKey('scrollDelta') ? namedArgs['scrollDelta'] : Offset.zero, embedderId : namedArgs.containsKey('embedderId') ? namedArgs['embedderId'] : 0);
+        return ({positionalArgs, namedArgs, typeArgs}) => PointerScrollEvent(
+            timeStamp: namedArgs.containsKey('timeStamp') ? namedArgs['timeStamp'] : Duration.zero,
+            kind: namedArgs.containsKey('kind') ? namedArgs['kind'] : PointerDeviceKind.mouse,
+            device: namedArgs.containsKey('device') ? namedArgs['device'] : 0,
+            position: namedArgs.containsKey('position') ? namedArgs['position'] : Offset.zero,
+            scrollDelta: namedArgs.containsKey('scrollDelta') ? namedArgs['scrollDelta'] : Offset.zero,
+            embedderId: namedArgs.containsKey('embedderId') ? namedArgs['embedderId'] : 0);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -827,9 +1203,6 @@ class PointerScrollEventAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as PointerScrollEvent).htFetch(id);
   }
-
-
-
 }
 
 extension PointerScrollEventBinding on PointerScrollEvent {
@@ -898,18 +1271,48 @@ extension PointerScrollEventBinding on PointerScrollEvent {
       case 'distanceMin':
         return distanceMin;
       case 'transformed':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.transformed(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => transformed(positionalArgs[0]);
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
       case 'toStringFull':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toStringFull();
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringFull();
       case 'copyWith':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.copyWith(timeStamp : namedArgs.containsKey('timeStamp') ? namedArgs['timeStamp'] : null, pointer : namedArgs.containsKey('pointer') ? namedArgs['pointer'] : null, kind : namedArgs.containsKey('kind') ? namedArgs['kind'] : null, device : namedArgs.containsKey('device') ? namedArgs['device'] : null, position : namedArgs.containsKey('position') ? namedArgs['position'] : null, delta : namedArgs.containsKey('delta') ? namedArgs['delta'] : null, buttons : namedArgs.containsKey('buttons') ? namedArgs['buttons'] : null, obscured : namedArgs.containsKey('obscured') ? namedArgs['obscured'] : null, pressure : namedArgs.containsKey('pressure') ? namedArgs['pressure'] : null, pressureMin : namedArgs.containsKey('pressureMin') ? namedArgs['pressureMin'] : null, pressureMax : namedArgs.containsKey('pressureMax') ? namedArgs['pressureMax'] : null, distance : namedArgs.containsKey('distance') ? namedArgs['distance'] : null, distanceMax : namedArgs.containsKey('distanceMax') ? namedArgs['distanceMax'] : null, size : namedArgs.containsKey('size') ? namedArgs['size'] : null, radiusMajor : namedArgs.containsKey('radiusMajor') ? namedArgs['radiusMajor'] : null, radiusMinor : namedArgs.containsKey('radiusMinor') ? namedArgs['radiusMinor'] : null, radiusMin : namedArgs.containsKey('radiusMin') ? namedArgs['radiusMin'] : null, radiusMax : namedArgs.containsKey('radiusMax') ? namedArgs['radiusMax'] : null, orientation : namedArgs.containsKey('orientation') ? namedArgs['orientation'] : null, tilt : namedArgs.containsKey('tilt') ? namedArgs['tilt'] : null, synthesized : namedArgs.containsKey('synthesized') ? namedArgs['synthesized'] : null, embedderId : namedArgs.containsKey('embedderId') ? namedArgs['embedderId'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => copyWith(
+            timeStamp: namedArgs.containsKey('timeStamp') ? namedArgs['timeStamp'] : null,
+            pointer: namedArgs.containsKey('pointer') ? namedArgs['pointer'] : null,
+            kind: namedArgs.containsKey('kind') ? namedArgs['kind'] : null,
+            device: namedArgs.containsKey('device') ? namedArgs['device'] : null,
+            position: namedArgs.containsKey('position') ? namedArgs['position'] : null,
+            delta: namedArgs.containsKey('delta') ? namedArgs['delta'] : null,
+            buttons: namedArgs.containsKey('buttons') ? namedArgs['buttons'] : null,
+            obscured: namedArgs.containsKey('obscured') ? namedArgs['obscured'] : null,
+            pressure: namedArgs.containsKey('pressure') ? namedArgs['pressure'] : null,
+            pressureMin: namedArgs.containsKey('pressureMin') ? namedArgs['pressureMin'] : null,
+            pressureMax: namedArgs.containsKey('pressureMax') ? namedArgs['pressureMax'] : null,
+            distance: namedArgs.containsKey('distance') ? namedArgs['distance'] : null,
+            distanceMax: namedArgs.containsKey('distanceMax') ? namedArgs['distanceMax'] : null,
+            size: namedArgs.containsKey('size') ? namedArgs['size'] : null,
+            radiusMajor: namedArgs.containsKey('radiusMajor') ? namedArgs['radiusMajor'] : null,
+            radiusMinor: namedArgs.containsKey('radiusMinor') ? namedArgs['radiusMinor'] : null,
+            radiusMin: namedArgs.containsKey('radiusMin') ? namedArgs['radiusMin'] : null,
+            radiusMax: namedArgs.containsKey('radiusMax') ? namedArgs['radiusMax'] : null,
+            orientation: namedArgs.containsKey('orientation') ? namedArgs['orientation'] : null,
+            tilt: namedArgs.containsKey('tilt') ? namedArgs['tilt'] : null,
+            synthesized: namedArgs.containsKey('synthesized') ? namedArgs['synthesized'] : null,
+            embedderId: namedArgs.containsKey('embedderId') ? namedArgs['embedderId'] : null);
+      case 'toStringShort':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class PointerCancelEventAutoBinding extends HTExternalClass {
@@ -919,7 +1322,26 @@ class PointerCancelEventAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'PointerCancelEvent':
-        return ({positionalArgs, namedArgs, typeArgs}) => PointerCancelEvent(timeStamp : namedArgs.containsKey('timeStamp') ? namedArgs['timeStamp'] : Duration.zero, pointer : namedArgs.containsKey('pointer') ? namedArgs['pointer'] : 0, kind : namedArgs.containsKey('kind') ? namedArgs['kind'] : PointerDeviceKind.touch, device : namedArgs.containsKey('device') ? namedArgs['device'] : 0, position : namedArgs.containsKey('position') ? namedArgs['position'] : Offset.zero, buttons : namedArgs.containsKey('buttons') ? namedArgs['buttons'] : 0, obscured : namedArgs.containsKey('obscured') ? namedArgs['obscured'] : false, pressureMin : namedArgs.containsKey('pressureMin') ? namedArgs['pressureMin'] : 1.0, pressureMax : namedArgs.containsKey('pressureMax') ? namedArgs['pressureMax'] : 1.0, distance : namedArgs.containsKey('distance') ? namedArgs['distance'] : 0.0, distanceMax : namedArgs.containsKey('distanceMax') ? namedArgs['distanceMax'] : 0.0, size : namedArgs.containsKey('size') ? namedArgs['size'] : 0.0, radiusMajor : namedArgs.containsKey('radiusMajor') ? namedArgs['radiusMajor'] : 0.0, radiusMinor : namedArgs.containsKey('radiusMinor') ? namedArgs['radiusMinor'] : 0.0, radiusMin : namedArgs.containsKey('radiusMin') ? namedArgs['radiusMin'] : 0.0, radiusMax : namedArgs.containsKey('radiusMax') ? namedArgs['radiusMax'] : 0.0, orientation : namedArgs.containsKey('orientation') ? namedArgs['orientation'] : 0.0, tilt : namedArgs.containsKey('tilt') ? namedArgs['tilt'] : 0.0, embedderId : namedArgs.containsKey('embedderId') ? namedArgs['embedderId'] : 0);
+        return ({positionalArgs, namedArgs, typeArgs}) => PointerCancelEvent(
+            timeStamp: namedArgs.containsKey('timeStamp') ? namedArgs['timeStamp'] : Duration.zero,
+            pointer: namedArgs.containsKey('pointer') ? namedArgs['pointer'] : 0,
+            kind: namedArgs.containsKey('kind') ? namedArgs['kind'] : PointerDeviceKind.touch,
+            device: namedArgs.containsKey('device') ? namedArgs['device'] : 0,
+            position: namedArgs.containsKey('position') ? namedArgs['position'] : Offset.zero,
+            buttons: namedArgs.containsKey('buttons') ? namedArgs['buttons'] : 0,
+            obscured: namedArgs.containsKey('obscured') ? namedArgs['obscured'] : false,
+            pressureMin: namedArgs.containsKey('pressureMin') ? namedArgs['pressureMin'] : 1.0,
+            pressureMax: namedArgs.containsKey('pressureMax') ? namedArgs['pressureMax'] : 1.0,
+            distance: namedArgs.containsKey('distance') ? namedArgs['distance'] : 0.0,
+            distanceMax: namedArgs.containsKey('distanceMax') ? namedArgs['distanceMax'] : 0.0,
+            size: namedArgs.containsKey('size') ? namedArgs['size'] : 0.0,
+            radiusMajor: namedArgs.containsKey('radiusMajor') ? namedArgs['radiusMajor'] : 0.0,
+            radiusMinor: namedArgs.containsKey('radiusMinor') ? namedArgs['radiusMinor'] : 0.0,
+            radiusMin: namedArgs.containsKey('radiusMin') ? namedArgs['radiusMin'] : 0.0,
+            radiusMax: namedArgs.containsKey('radiusMax') ? namedArgs['radiusMax'] : 0.0,
+            orientation: namedArgs.containsKey('orientation') ? namedArgs['orientation'] : 0.0,
+            tilt: namedArgs.containsKey('tilt') ? namedArgs['tilt'] : 0.0,
+            embedderId: namedArgs.containsKey('embedderId') ? namedArgs['embedderId'] : 0);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -929,9 +1351,6 @@ class PointerCancelEventAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as PointerCancelEvent).htFetch(id);
   }
-
-
-
 }
 
 extension PointerCancelEventBinding on PointerCancelEvent {
@@ -998,17 +1417,46 @@ extension PointerCancelEventBinding on PointerCancelEvent {
       case 'distanceMin':
         return distanceMin;
       case 'transformed':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.transformed(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => transformed(positionalArgs[0]);
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
       case 'toStringFull':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toStringFull();
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringFull();
       case 'copyWith':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.copyWith(timeStamp : namedArgs.containsKey('timeStamp') ? namedArgs['timeStamp'] : null, pointer : namedArgs.containsKey('pointer') ? namedArgs['pointer'] : null, kind : namedArgs.containsKey('kind') ? namedArgs['kind'] : null, device : namedArgs.containsKey('device') ? namedArgs['device'] : null, position : namedArgs.containsKey('position') ? namedArgs['position'] : null, delta : namedArgs.containsKey('delta') ? namedArgs['delta'] : null, buttons : namedArgs.containsKey('buttons') ? namedArgs['buttons'] : null, obscured : namedArgs.containsKey('obscured') ? namedArgs['obscured'] : null, pressure : namedArgs.containsKey('pressure') ? namedArgs['pressure'] : null, pressureMin : namedArgs.containsKey('pressureMin') ? namedArgs['pressureMin'] : null, pressureMax : namedArgs.containsKey('pressureMax') ? namedArgs['pressureMax'] : null, distance : namedArgs.containsKey('distance') ? namedArgs['distance'] : null, distanceMax : namedArgs.containsKey('distanceMax') ? namedArgs['distanceMax'] : null, size : namedArgs.containsKey('size') ? namedArgs['size'] : null, radiusMajor : namedArgs.containsKey('radiusMajor') ? namedArgs['radiusMajor'] : null, radiusMinor : namedArgs.containsKey('radiusMinor') ? namedArgs['radiusMinor'] : null, radiusMin : namedArgs.containsKey('radiusMin') ? namedArgs['radiusMin'] : null, radiusMax : namedArgs.containsKey('radiusMax') ? namedArgs['radiusMax'] : null, orientation : namedArgs.containsKey('orientation') ? namedArgs['orientation'] : null, tilt : namedArgs.containsKey('tilt') ? namedArgs['tilt'] : null, synthesized : namedArgs.containsKey('synthesized') ? namedArgs['synthesized'] : null, embedderId : namedArgs.containsKey('embedderId') ? namedArgs['embedderId'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => copyWith(
+            timeStamp: namedArgs.containsKey('timeStamp') ? namedArgs['timeStamp'] : null,
+            pointer: namedArgs.containsKey('pointer') ? namedArgs['pointer'] : null,
+            kind: namedArgs.containsKey('kind') ? namedArgs['kind'] : null,
+            device: namedArgs.containsKey('device') ? namedArgs['device'] : null,
+            position: namedArgs.containsKey('position') ? namedArgs['position'] : null,
+            delta: namedArgs.containsKey('delta') ? namedArgs['delta'] : null,
+            buttons: namedArgs.containsKey('buttons') ? namedArgs['buttons'] : null,
+            obscured: namedArgs.containsKey('obscured') ? namedArgs['obscured'] : null,
+            pressure: namedArgs.containsKey('pressure') ? namedArgs['pressure'] : null,
+            pressureMin: namedArgs.containsKey('pressureMin') ? namedArgs['pressureMin'] : null,
+            pressureMax: namedArgs.containsKey('pressureMax') ? namedArgs['pressureMax'] : null,
+            distance: namedArgs.containsKey('distance') ? namedArgs['distance'] : null,
+            distanceMax: namedArgs.containsKey('distanceMax') ? namedArgs['distanceMax'] : null,
+            size: namedArgs.containsKey('size') ? namedArgs['size'] : null,
+            radiusMajor: namedArgs.containsKey('radiusMajor') ? namedArgs['radiusMajor'] : null,
+            radiusMinor: namedArgs.containsKey('radiusMinor') ? namedArgs['radiusMinor'] : null,
+            radiusMin: namedArgs.containsKey('radiusMin') ? namedArgs['radiusMin'] : null,
+            radiusMax: namedArgs.containsKey('radiusMax') ? namedArgs['radiusMax'] : null,
+            orientation: namedArgs.containsKey('orientation') ? namedArgs['orientation'] : null,
+            tilt: namedArgs.containsKey('tilt') ? namedArgs['tilt'] : null,
+            synthesized: namedArgs.containsKey('synthesized') ? namedArgs['synthesized'] : null,
+            embedderId: namedArgs.containsKey('embedderId') ? namedArgs['embedderId'] : null);
+      case 'toStringShort':
+        return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+      case 'toDiagnosticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+            style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
-

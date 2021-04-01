@@ -1,7 +1,5 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/gestures.dart';
-import 'dart:collection';
-
 
 class PointerEventResamplerAutoBinding extends HTExternalClass {
   PointerEventResamplerAutoBinding() : super('PointerEventResampler');
@@ -21,13 +19,12 @@ class PointerEventResamplerAutoBinding extends HTExternalClass {
     return (instance as PointerEventResampler).htFetch(id);
   }
 
-
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'HandleEventCallback': (HTFunction function) => (event) => function.call(positionalArgs: [event], namedArgs: const {}),
+      'HandleEventCallback': (HTFunction function) =>
+          (event) => function.call(positionalArgs: [event], namedArgs: const {}),
     };
   }
-
 }
 
 extension PointerEventResamplerBinding on PointerEventResampler {
@@ -42,15 +39,14 @@ extension PointerEventResamplerBinding on PointerEventResampler {
       case 'isDown':
         return isDown;
       case 'addEvent':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.addEvent(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => addEvent(positionalArgs[0]);
       case 'sample':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.sample(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            sample(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
       case 'stop':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.stop(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => stop(positionalArgs[0]);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
-

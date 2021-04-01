@@ -1,8 +1,5 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/services.dart';
-import 'dart:typed_data';
-import 'package:flutter/foundation.dart';
-
 
 class MethodCallAutoBinding extends HTExternalClass {
   MethodCallAutoBinding() : super('MethodCall');
@@ -11,7 +8,8 @@ class MethodCallAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'MethodCall':
-        return ({positionalArgs, namedArgs, typeArgs}) => MethodCall(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            MethodCall(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : null);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -21,9 +19,6 @@ class MethodCallAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as MethodCall).htFetch(id);
   }
-
-
-
 }
 
 extension MethodCallBinding on MethodCall {
@@ -36,12 +31,11 @@ extension MethodCallBinding on MethodCall {
       case 'arguments':
         return arguments;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class PlatformExceptionAutoBinding extends HTExternalClass {
@@ -51,7 +45,11 @@ class PlatformExceptionAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'PlatformException':
-        return ({positionalArgs, namedArgs, typeArgs}) => PlatformException(code : namedArgs['code'], message : namedArgs.containsKey('message') ? namedArgs['message'] : null, details : namedArgs.containsKey('details') ? namedArgs['details'] : null, stacktrace : namedArgs.containsKey('stacktrace') ? namedArgs['stacktrace'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => PlatformException(
+            code: namedArgs['code'],
+            message: namedArgs.containsKey('message') ? namedArgs['message'] : null,
+            details: namedArgs.containsKey('details') ? namedArgs['details'] : null,
+            stacktrace: namedArgs.containsKey('stacktrace') ? namedArgs['stacktrace'] : null);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -61,9 +59,6 @@ class PlatformExceptionAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as PlatformException).htFetch(id);
   }
-
-
-
 }
 
 extension PlatformExceptionBinding on PlatformException {
@@ -80,12 +75,11 @@ extension PlatformExceptionBinding on PlatformException {
       case 'stacktrace':
         return stacktrace;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
 
 class MissingPluginExceptionAutoBinding extends HTExternalClass {
@@ -95,7 +89,8 @@ class MissingPluginExceptionAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'MissingPluginException':
-        return ({positionalArgs, namedArgs, typeArgs}) => MissingPluginException(positionalArgs.length > 0 ? positionalArgs[0] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            MissingPluginException(positionalArgs.length > 0 ? positionalArgs[0] : null);
       default:
         throw HTErrorUndefined(varName);
     }
@@ -105,9 +100,6 @@ class MissingPluginExceptionAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as MissingPluginException).htFetch(id);
   }
-
-
-
 }
 
 extension MissingPluginExceptionBinding on MissingPluginException {
@@ -118,11 +110,9 @@ extension MissingPluginExceptionBinding on MissingPluginException {
       case 'message':
         return message;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.toString();
+        return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
-

@@ -1,7 +1,5 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter/foundation.dart';
-
 
 class RawKeyEventDataWindowsAutoBinding extends HTExternalClass {
   RawKeyEventDataWindowsAutoBinding() : super('RawKeyEventDataWindows');
@@ -10,7 +8,11 @@ class RawKeyEventDataWindowsAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'RawKeyEventDataWindows':
-        return ({positionalArgs, namedArgs, typeArgs}) => RawKeyEventDataWindows(keyCode : namedArgs.containsKey('keyCode') ? namedArgs['keyCode'] : 0, scanCode : namedArgs.containsKey('scanCode') ? namedArgs['scanCode'] : 0, characterCodePoint : namedArgs.containsKey('characterCodePoint') ? namedArgs['characterCodePoint'] : 0, modifiers : namedArgs.containsKey('modifiers') ? namedArgs['modifiers'] : 0);
+        return ({positionalArgs, namedArgs, typeArgs}) => RawKeyEventDataWindows(
+            keyCode: namedArgs.containsKey('keyCode') ? namedArgs['keyCode'] : 0,
+            scanCode: namedArgs.containsKey('scanCode') ? namedArgs['scanCode'] : 0,
+            characterCodePoint: namedArgs.containsKey('characterCodePoint') ? namedArgs['characterCodePoint'] : 0,
+            modifiers: namedArgs.containsKey('modifiers') ? namedArgs['modifiers'] : 0);
       case 'RawKeyEventDataWindows.modifierShift':
         return RawKeyEventDataWindows.modifierShift;
       case 'RawKeyEventDataWindows.modifierLeftShift':
@@ -48,9 +50,6 @@ class RawKeyEventDataWindowsAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String id) {
     return (instance as RawKeyEventDataWindows).htFetch(id);
   }
-
-
-
 }
 
 extension RawKeyEventDataWindowsBinding on RawKeyEventDataWindows {
@@ -83,13 +82,12 @@ extension RawKeyEventDataWindowsBinding on RawKeyEventDataWindows {
       case 'modifiersPressed':
         return modifiersPressed;
       case 'isModifierPressed':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.isModifierPressed(positionalArgs[0], side : namedArgs.containsKey('side') ? namedArgs['side'] : KeyboardSide.any);
+        return ({positionalArgs, namedArgs, typeArgs}) => isModifierPressed(positionalArgs[0],
+            side: namedArgs.containsKey('side') ? namedArgs['side'] : KeyboardSide.any);
       case 'getModifierSide':
-        return ({positionalArgs, namedArgs, typeArgs}) => this.getModifierSide(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) => getModifierSide(positionalArgs[0]);
       default:
         throw HTErrorUndefined(varName);
     }
   }
-
 }
-

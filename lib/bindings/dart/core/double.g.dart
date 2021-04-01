@@ -1,19 +1,14 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'dart:core';
-import "dart:collection";
-import "dart:convert";
-import "dart:math";
-import "dart:typed_data";
 
-
-class doubleAutoBinding extends HTExternalClass {
-  doubleAutoBinding() : super('double');
+class DoubleAutoBinding extends HTExternalClass {
+  DoubleAutoBinding() : super('double');
 
   @override
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'double.parse':
-        return ({positionalArgs, namedArgs, typeArgs}) => double.parse(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => double.parse(positionalArgs[0]);
       case 'double.tryParse':
         return ({positionalArgs, namedArgs, typeArgs}) => double.tryParse(positionalArgs[0]);
       case 'double.nan':
@@ -30,10 +25,4 @@ class doubleAutoBinding extends HTExternalClass {
         throw HTErrorUndefined(varName);
     }
   }
-
-
-
-
 }
-
-
