@@ -24,6 +24,28 @@ dev_dependencies:
 
 # The following section is specific to Flutter.
 flutter:
+  assets:
+    - ht-bindings/dart/
+    - ht-bindings/dart/async/
+    - ht-bindings/dart/convert/
+    - ht-bindings/dart/core/
+    - ht-bindings/dart/io/
+    - ht-bindings/dart/ui/
+    - ht-bindings/dart/math/
+    - ht-bindings/flutter/
+    - ht-bindings/flutter/animation/
+    - ht-bindings/flutter/cupertino/
+    - ht-bindings/flutter/foundation/
+    - ht-bindings/flutter/gestures/
+    - ht-bindings/flutter/material/
+    - ht-bindings/flutter/painting/
+    - ht-bindings/flutter/physics/
+    - ht-bindings/flutter/rendering/
+    - ht-bindings/flutter/scheduler/
+    - ht-bindings/flutter/semantics/
+    - ht-bindings/flutter/services/
+    - ht-bindings/flutter/widgets/
+    - ht-lib/
 
   # To add assets to your package, add an assets section, like this:
   # assets:

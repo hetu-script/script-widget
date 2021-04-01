@@ -1,8 +1,8 @@
 import 'package:hetu_script/hetu_script.dart';
-import '../src/script_app.dart';
+import 'script_app.dart';
 
-class AppAutoBinding extends HTExternalClass {
-  AppAutoBinding() : super('App');
+class ScriptAppClassBinding extends HTExternalClass {
+  ScriptAppClassBinding() : super('App');
 
   @override
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
@@ -22,4 +22,4 @@ class AppAutoBinding extends HTExternalClass {
   }
 }
 
-extension AppBinding on ScriptApp {}
+extension ScriptAppObjectBinding on ScriptApp {}

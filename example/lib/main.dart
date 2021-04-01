@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:hetu_script/hetu_script.dart';
 import 'package:script_widget/script_widget.dart';
 
@@ -34,7 +33,7 @@ class MyHomePage extends StatefulWidget {
   late final Hetu interpreter;
 
   MyHomePage({Key? key, required this.title}) : super(key: key) {
-    interpreter = Hetu(moduleHandler: ScriptImportHandler());
+    interpreter = Hetu(moduleHandler: ScriptModuleHandler());
   }
 
   // This widget is the home page of your application. It is stateful, meaning
@@ -57,10 +56,11 @@ class _MyHomePageState extends State<MyHomePage> {
   bool loading = true;
 
   void load() async {
-    var binding = ManualBinding();
+    var binding = ManualBinding(widget.interpreter);
     await widget.interpreter.init();
-    binding.loadExternalClasses(widget.interpreter);
-    await binding.importScripts(widget.interpreter, 'ht-lib');
+    binding.loadExternalFunctionTypes();
+    binding.loadExternalClasses();
+    await binding.importScripts();
     setState(() {
       loading = false;
     });
@@ -90,24 +90,12 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 }
 
-class ScriptImportHandler extends HTModuleHandler {
-  final Set<String> _cachedKeys = {};
+class ManualBinding extends DefaultBindingHander {
+  ManualBinding(Hetu interpreter) : super(interpreter);
 
   @override
-  Future<HTModuleInfo> import(String key, [String? curFile]) async {
-    if (!_cachedKeys.contains(key)) {
-      var content = await rootBundle.loadString(key);
-      _cachedKeys.add(key);
-      return HTModuleInfo(key, content);
-    }
-    return HTModuleInfo(key, '', duplicate: true);
-  }
-}
-
-class ManualBinding extends Binding {
-  @override
-  void loadExternalFunctionTypes(Hetu interpreter) {
-    super.loadExternalFunctionTypes(interpreter);
+  void loadExternalFunctionTypes() {
+    super.loadExternalFunctionTypes();
 
     final functionWrappers = <String, HTExternalFunctionTypedef>{
       'ValueChangedInt': (HTFunction function) => (int data) => function.call(positionalArgs: [data]),
@@ -125,8 +113,16 @@ class ManualBinding extends Binding {
   }
 
   @override
-  void loadExternalClasses(Hetu interpreter) {
-    super.loadExternalClasses(interpreter);
+  void loadExternalClasses() {
+    super.loadExternalClasses();
     interpreter.bindExternalFunction('_rebuild', ScriptWidget.rebuild);
+  }
+
+  @override
+  Future importScripts() {
+    var future = super.importScripts();
+    var futures = <Future>[];
+    futures.add(future);
+    return Future.wait(futures);
   }
 }

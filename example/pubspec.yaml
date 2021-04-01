@@ -45,30 +45,6 @@ flutter:
   # the material Icons class.
   uses-material-design: true
 
-  assets:
-    - assets/
-    - ht-lib/dart/
-    - ht-lib/dart/async/
-    - ht-lib/dart/convert/
-    - ht-lib/dart/core/
-    - ht-lib/dart/io/
-    - ht-lib/dart/ui/
-    - ht-lib/dart/math/
-    - ht-lib/flutter/
-    - ht-lib/flutter/animation/
-    - ht-lib/flutter/cupertino/
-    - ht-lib/flutter/foundation/
-    - ht-lib/flutter/gestures/
-    - ht-lib/flutter/material/
-    - ht-lib/flutter/painting/
-    - ht-lib/flutter/physics/
-    - ht-lib/flutter/rendering/
-    - ht-lib/flutter/scheduler/
-    - ht-lib/flutter/semantics/
-    - ht-lib/flutter/services/
-    - ht-lib/flutter/widgets/
-    - ht-lib/user/
-
   # To add assets to your application, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg

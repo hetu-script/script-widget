@@ -1,0 +1,46 @@
+import 'package://widget.ht';
+
+class MainViewWidget extends Widget {
+
+  var controller
+	construct(ticker) {
+		controller = TabController(vsync: ticker, initialIndex: 0, length: 3)
+	}
+	//解注释下面3句可以让tab正常工作
+//	fun rebuild() {
+//	  _rebuild(host)
+//	}
+
+	fun build(context) {
+		return Scaffold(
+			body: TabBarView(
+				controller: controller,
+				children: [
+					Container(color: Colors.blue),
+					Container(color: Colors.red),
+					Container(color: Colors.green),
+				],
+			),
+			bottomNavigationBar: BottomNavigationBar(
+				onTap: fun[ValueChangedInt](index) {
+					print('[TABBAR] tap tabbar ' + index.toString())
+					controller.index = index;
+					rebuild()
+				},
+				currentIndex: controller.index,
+				items: [
+					BottomNavigationBarItem(icon: Icon(Icons.supervised_user_circle), label: 'Users'),
+					BottomNavigationBarItem(icon: Icon(Icons.notifications), label: 'Alerts'),
+					BottomNavigationBarItem(icon: Icon(Icons.email), label: 'Inbox'),
+				],
+			),
+		)
+	}
+}
+
+
+fun buildMainView(context, ticker) {
+	return ScriptWidget(
+		child: MainViewWidget(ticker)
+	)
+}

@@ -1,8 +1,8 @@
 import 'package:hetu_script/hetu_script.dart';
-import '../src/script_widget.dart';
+import 'script_widget.dart';
 
-class ScriptWidgetAutoBinding extends HTExternalClass {
-  ScriptWidgetAutoBinding() : super('ScriptWidget');
+class ScriptWidgetClassBinding extends HTExternalClass {
+  ScriptWidgetClassBinding() : super('ScriptWidget');
 
   @override
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
@@ -23,7 +23,7 @@ class ScriptWidgetAutoBinding extends HTExternalClass {
   }
 }
 
-extension ScriptWidgetBinding on ScriptWidget {
+extension ScriptWidgetObjectBinding on ScriptWidget {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':

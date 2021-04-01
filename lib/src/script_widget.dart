@@ -3,23 +3,6 @@ import 'package:flutter/widgets.dart';
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/material.dart';
 
-@HTAutoBinding()
-class ScriptApp {
-  //future回调处理
-  static void handleFuture(Future future, HTFunction function) {
-    future.then((value) {
-      function.call(positionalArgs: [value]);
-    });
-  }
-
-  //异步处理
-  static Future futureMaker(HTFunction function, {posArgs, namedArgs, typeArgs}) async {
-    dynamic func() async => function.call(positionalArgs: posArgs ?? [], namedArgs: namedArgs ?? {});
-    return await func();
-  }
-}
-
-@HTAutoBinding()
 class ScriptWidget extends StatefulWidget {
   final HTInstance child;
 
@@ -117,8 +100,8 @@ class _ScriptWidgetContainerState extends State<ScriptWidgetContainer> with Tick
   Widget build(BuildContext context) {
     if (!scriptLoading) {
       print('[启动检查] 正在加载脚本RootWidget');
-      _script =
-          widget.interpreter.import('assets/script_root.ht', invokeFunc: 'buildRoot', positionalArgs: [context, this]);
+      _script = widget.interpreter
+          .import('package://main_view.ht', invokeFunc: 'buildMainView', positionalArgs: [context, this]);
       scriptLoading = true;
     }
     print('[启动检查] 必须在Init执行之后');
