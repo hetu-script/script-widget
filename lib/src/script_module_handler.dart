@@ -1,20 +1,20 @@
 import 'package:hetu_script/hetu_script.dart' show HTModuleHandler, HTModuleInfo, HTErrorEmpty;
 import 'package:flutter/services.dart' show rootBundle;
 
-class ScriptModuleHandler extends HTModuleHandler {
+class ScriptModuleHandler implements HTModuleHandler {
   final Set<String> _cachedKeys = {};
-  static const assetsDir = 'packages/script_widget';
+  static const assetsDir = 'packages/script_widget/ht-lib';
 
   String getUniqueKey(Uri uri) {
     var uniqueKey = '';
     var path = '${uri.host}${uri.path}';
     var scheme = uri.scheme;
     if (scheme == 'flutter') {
-      uniqueKey = '$assetsDir/ht-bindings/flutter/$path';
+      uniqueKey = '$assetsDir/flutter/$path';
     } else if (scheme == 'dart') {
-      uniqueKey = '$assetsDir/ht-bindings/dart/$path';
+      uniqueKey = '$assetsDir/dart/$path';
     } else if (scheme == 'package') {
-      uniqueKey = '$assetsDir/ht-lib/$path';
+      uniqueKey = '$assetsDir/package/$path';
     } else {
       uniqueKey = uri.toString();
     }

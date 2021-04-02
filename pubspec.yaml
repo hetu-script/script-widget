@@ -11,7 +11,7 @@ dependencies:
   flutter:
     sdk: flutter
 
-  hetu_script: ^0.1.0+2
+  hetu_script: ^0.1.0+3
 
 dev_dependencies:
   pedantic: ^1.11.0
@@ -25,27 +25,27 @@ dev_dependencies:
 # The following section is specific to Flutter.
 flutter:
   assets:
-    - ht-bindings/dart/
-    - ht-bindings/dart/async/
-    - ht-bindings/dart/convert/
-    - ht-bindings/dart/core/
-    - ht-bindings/dart/io/
-    - ht-bindings/dart/ui/
-    - ht-bindings/dart/math/
-    - ht-bindings/flutter/
-    - ht-bindings/flutter/animation/
-    - ht-bindings/flutter/cupertino/
-    - ht-bindings/flutter/foundation/
-    - ht-bindings/flutter/gestures/
-    - ht-bindings/flutter/material/
-    - ht-bindings/flutter/painting/
-    - ht-bindings/flutter/physics/
-    - ht-bindings/flutter/rendering/
-    - ht-bindings/flutter/scheduler/
-    - ht-bindings/flutter/semantics/
-    - ht-bindings/flutter/services/
-    - ht-bindings/flutter/widgets/
-    - ht-lib/
+    - ht-lib/package/
+    - ht-lib/dart/
+    - ht-lib/dart/async/
+    - ht-lib/dart/convert/
+    - ht-lib/dart/core/
+    - ht-lib/dart/io/
+    - ht-lib/dart/ui/
+    - ht-lib/dart/math/
+    - ht-lib/flutter/
+    - ht-lib/flutter/animation/
+    - ht-lib/flutter/cupertino/
+    - ht-lib/flutter/foundation/
+    - ht-lib/flutter/gestures/
+    - ht-lib/flutter/material/
+    - ht-lib/flutter/painting/
+    - ht-lib/flutter/physics/
+    - ht-lib/flutter/rendering/
+    - ht-lib/flutter/scheduler/
+    - ht-lib/flutter/semantics/
+    - ht-lib/flutter/services/
+    - ht-lib/flutter/widgets/
 
   # To add assets to your package, add an assets section, like this:
   # assets:

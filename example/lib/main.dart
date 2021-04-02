@@ -86,7 +86,7 @@ class _MyHomePageState extends State<MyHomePage> {
           // the App.build method, and use it to set our appbar title.
           title: Text(widget.title),
         ),
-        body: loading ? CircularProgressIndicator() : ScriptWidgetContainer(widget.interpreter));
+        body: loading ? CircularProgressIndicator() : ScriptController(widget.interpreter));
   }
 }
 
@@ -115,7 +115,6 @@ class ManualBinding extends DefaultBindingHander {
   @override
   void loadExternalClasses() {
     super.loadExternalClasses();
-    interpreter.bindExternalFunction('_rebuild', ScriptWidget.rebuild);
   }
 
   @override

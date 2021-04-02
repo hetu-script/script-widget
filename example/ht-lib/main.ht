@@ -1,0 +1,41 @@
+import 'package://widget.ht';
+
+class Main extends Widget {
+  var controller
+  
+	construct(ticker) {
+		controller = TabController(vsync: ticker, initialIndex: 0, length: 3)
+	}
+
+	fun build(context) {
+		return Scaffold(
+			body: TabBarView(
+				controller: controller,
+				children: [
+					Container(color: Colors.blue),
+					Container(color: Colors.red),
+					Container(color: Colors.green),
+				],
+			),
+			bottomNavigationBar: BottomNavigationBar(
+				onTap: fun[ValueChangedInt](index) {
+					print('[TABBAR] tap tabbar ' + index.toString())
+					controller.index = index;
+					rebuild()
+				},
+				currentIndex: controller.index,
+				items: [
+					BottomNavigationBarItem(icon: Icon(Icons.supervised_user_circle), label: 'Users'),
+					BottomNavigationBarItem(icon: Icon(Icons.notifications), label: 'Alerts'),
+					BottomNavigationBarItem(icon: Icon(Icons.email), label: 'Inbox'),
+				],
+			),
+		)
+	}
+}
+
+fun main(ticker) {
+	return ScriptContainer(
+		child: Main(ticker)
+	)
+}
