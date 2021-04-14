@@ -17,7 +17,7 @@ class KeyEventResultAutoBinding extends HTExternalClass {
       case 'KeyEventResult.skipRemainingHandlers':
         return KeyEventResult.skipRemainingHandlers;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -25,13 +25,14 @@ class KeyEventResultAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('KeyEventResult');
+        return const HTType('KeyEventResult');
       case 'index':
         return (instance as KeyEventResult).index;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => (instance as KeyEventResult).toString();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            (instance as KeyEventResult).toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -49,7 +50,7 @@ class UnfocusDispositionAutoBinding extends HTExternalClass {
       case 'UnfocusDisposition.previouslyFocusedChild':
         return UnfocusDisposition.previouslyFocusedChild;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -57,13 +58,14 @@ class UnfocusDispositionAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('UnfocusDisposition');
+        return const HTType('UnfocusDisposition');
       case 'index':
         return (instance as UnfocusDisposition).index;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => (instance as UnfocusDisposition).toString();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            (instance as UnfocusDisposition).toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -81,7 +83,7 @@ class FocusHighlightModeAutoBinding extends HTExternalClass {
       case 'FocusHighlightMode.traditional':
         return FocusHighlightMode.traditional;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -89,13 +91,14 @@ class FocusHighlightModeAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('FocusHighlightMode');
+        return const HTType('FocusHighlightMode');
       case 'index':
         return (instance as FocusHighlightMode).index;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => (instance as FocusHighlightMode).toString();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            (instance as FocusHighlightMode).toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -115,7 +118,7 @@ class FocusHighlightStrategyAutoBinding extends HTExternalClass {
       case 'FocusHighlightStrategy.alwaysTraditional':
         return FocusHighlightStrategy.alwaysTraditional;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -123,13 +126,14 @@ class FocusHighlightStrategyAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('FocusHighlightStrategy');
+        return const HTType('FocusHighlightStrategy');
       case 'index':
         return (instance as FocusHighlightStrategy).index;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => (instance as FocusHighlightStrategy).toString();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            (instance as FocusHighlightStrategy).toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -142,14 +146,22 @@ class FocusNodeAutoBinding extends HTExternalClass {
     switch (varName) {
       case 'FocusNode':
         return ({positionalArgs, namedArgs, typeArgs}) => FocusNode(
-            debugLabel: namedArgs.containsKey('debugLabel') ? namedArgs['debugLabel'] : null,
+            debugLabel: namedArgs.containsKey('debugLabel')
+                ? namedArgs['debugLabel']
+                : null,
             onKey: namedArgs.containsKey('onKey') ? namedArgs['onKey'] : null,
-            skipTraversal: namedArgs.containsKey('skipTraversal') ? namedArgs['skipTraversal'] : false,
-            canRequestFocus: namedArgs.containsKey('canRequestFocus') ? namedArgs['canRequestFocus'] : true,
+            skipTraversal: namedArgs.containsKey('skipTraversal')
+                ? namedArgs['skipTraversal']
+                : false,
+            canRequestFocus: namedArgs.containsKey('canRequestFocus')
+                ? namedArgs['canRequestFocus']
+                : true,
             descendantsAreFocusable:
-                namedArgs.containsKey('descendantsAreFocusable') ? namedArgs['descendantsAreFocusable'] : true);
+                namedArgs.containsKey('descendantsAreFocusable')
+                    ? namedArgs['descendantsAreFocusable']
+                    : true);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -165,8 +177,8 @@ class FocusNodeAutoBinding extends HTExternalClass {
 
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'FocusOnKeyCallback': (HTFunction function) =>
-          (node, event) => function.call(positionalArgs: [node, event], namedArgs: const {}) as dynamic,
+      'FocusOnKeyCallback': (HTFunction function) => (node, event) => function
+          .call(positionalArgs: [node, event], namedArgs: const {}) as dynamic,
     };
   }
 }
@@ -175,7 +187,7 @@ extension FocusNodeBinding on FocusNode {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('FocusNode');
+        return const HTType('FocusNode');
       case 'skipTraversal':
         return skipTraversal;
       case 'canRequestFocus':
@@ -218,12 +230,16 @@ extension FocusNodeBinding on FocusNode {
         return rect;
       case 'unfocus':
         return ({positionalArgs, namedArgs, typeArgs}) => unfocus(
-            disposition: namedArgs.containsKey('disposition') ? namedArgs['disposition'] : UnfocusDisposition.scope);
+            disposition: namedArgs.containsKey('disposition')
+                ? namedArgs['disposition']
+                : UnfocusDisposition.scope);
       case 'consumeKeyboardToken':
-        return ({positionalArgs, namedArgs, typeArgs}) => consumeKeyboardToken();
-      case 'attach':
         return ({positionalArgs, namedArgs, typeArgs}) =>
-            attach(positionalArgs[0], onKey: namedArgs.containsKey('onKey') ? namedArgs['onKey'] : null);
+            consumeKeyboardToken();
+      case 'attach':
+        return ({positionalArgs, namedArgs, typeArgs}) => attach(
+            positionalArgs[0],
+            onKey: namedArgs.containsKey('onKey') ? namedArgs['onKey'] : null);
       case 'dispose':
         return ({positionalArgs, namedArgs, typeArgs}) => dispose();
       case 'requestFocus':
@@ -234,31 +250,45 @@ extension FocusNodeBinding on FocusNode {
       case 'previousFocus':
         return ({positionalArgs, namedArgs, typeArgs}) => previousFocus();
       case 'focusInDirection':
-        return ({positionalArgs, namedArgs, typeArgs}) => focusInDirection(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            focusInDirection(positionalArgs[0]);
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'debugDescribeChildren':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugDescribeChildren();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugDescribeChildren();
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       case 'toStringShallow':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
-            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            joiner:
+                namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -277,7 +307,7 @@ extension FocusNodeBinding on FocusNode {
         debugLabel = value;
         break;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -290,12 +320,18 @@ class FocusScopeNodeAutoBinding extends HTExternalClass {
     switch (varName) {
       case 'FocusScopeNode':
         return ({positionalArgs, namedArgs, typeArgs}) => FocusScopeNode(
-            debugLabel: namedArgs.containsKey('debugLabel') ? namedArgs['debugLabel'] : null,
+            debugLabel: namedArgs.containsKey('debugLabel')
+                ? namedArgs['debugLabel']
+                : null,
             onKey: namedArgs.containsKey('onKey') ? namedArgs['onKey'] : null,
-            skipTraversal: namedArgs.containsKey('skipTraversal') ? namedArgs['skipTraversal'] : false,
-            canRequestFocus: namedArgs.containsKey('canRequestFocus') ? namedArgs['canRequestFocus'] : true);
+            skipTraversal: namedArgs.containsKey('skipTraversal')
+                ? namedArgs['skipTraversal']
+                : false,
+            canRequestFocus: namedArgs.containsKey('canRequestFocus')
+                ? namedArgs['canRequestFocus']
+                : true);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -306,8 +342,8 @@ class FocusScopeNodeAutoBinding extends HTExternalClass {
 
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'FocusOnKeyCallback': (HTFunction function) =>
-          (node, event) => function.call(positionalArgs: [node, event], namedArgs: const {}) as dynamic,
+      'FocusOnKeyCallback': (HTFunction function) => (node, event) => function
+          .call(positionalArgs: [node, event], namedArgs: const {}) as dynamic,
     };
   }
 }
@@ -316,7 +352,7 @@ extension FocusScopeNodeBinding on FocusScopeNode {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('FocusScopeNode');
+        return const HTType('FocusScopeNode');
       case 'nearestScope':
         return nearestScope;
       case 'isFirstFocus':
@@ -362,19 +398,26 @@ extension FocusScopeNodeBinding on FocusScopeNode {
       case 'rect':
         return rect;
       case 'setFirstFocus':
-        return ({positionalArgs, namedArgs, typeArgs}) => setFirstFocus(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            setFirstFocus(positionalArgs[0]);
       case 'autofocus':
-        return ({positionalArgs, namedArgs, typeArgs}) => autofocus(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            autofocus(positionalArgs[0]);
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'unfocus':
         return ({positionalArgs, namedArgs, typeArgs}) => unfocus(
-            disposition: namedArgs.containsKey('disposition') ? namedArgs['disposition'] : UnfocusDisposition.scope);
+            disposition: namedArgs.containsKey('disposition')
+                ? namedArgs['disposition']
+                : UnfocusDisposition.scope);
       case 'consumeKeyboardToken':
-        return ({positionalArgs, namedArgs, typeArgs}) => consumeKeyboardToken();
-      case 'attach':
         return ({positionalArgs, namedArgs, typeArgs}) =>
-            attach(positionalArgs[0], onKey: namedArgs.containsKey('onKey') ? namedArgs['onKey'] : null);
+            consumeKeyboardToken();
+      case 'attach':
+        return ({positionalArgs, namedArgs, typeArgs}) => attach(
+            positionalArgs[0],
+            onKey: namedArgs.containsKey('onKey') ? namedArgs['onKey'] : null);
       case 'dispose':
         return ({positionalArgs, namedArgs, typeArgs}) => dispose();
       case 'requestFocus':
@@ -385,29 +428,42 @@ extension FocusScopeNodeBinding on FocusScopeNode {
       case 'previousFocus':
         return ({positionalArgs, namedArgs, typeArgs}) => previousFocus();
       case 'focusInDirection':
-        return ({positionalArgs, namedArgs, typeArgs}) => focusInDirection(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            focusInDirection(positionalArgs[0]);
       case 'debugDescribeChildren':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugDescribeChildren();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugDescribeChildren();
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       case 'toStringShallow':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
-            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            joiner:
+                namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -423,7 +479,7 @@ class FocusManagerAutoBinding extends HTExternalClass {
       case 'FocusManager.instance':
         return FocusManager.instance;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -442,7 +498,7 @@ extension FocusManagerBinding on FocusManager {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('FocusManager');
+        return const HTType('FocusManager');
       case 'rootScope':
         return rootScope;
       case 'highlightStrategy':
@@ -452,25 +508,40 @@ extension FocusManagerBinding on FocusManager {
       case 'primaryFocus':
         return primaryFocus;
       case 'addHighlightModeListener':
-        return ({positionalArgs, namedArgs, typeArgs}) => addHighlightModeListener(positionalArgs[0]);
-      case 'removeHighlightModeListener':
-        return ({positionalArgs, namedArgs, typeArgs}) => removeHighlightModeListener(positionalArgs[0]);
-      case 'debugDescribeChildren':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugDescribeChildren();
-      case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
-      case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+            addHighlightModeListener(positionalArgs[0]);
+      case 'removeHighlightModeListener':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            removeHighlightModeListener(positionalArgs[0]);
+      case 'debugDescribeChildren':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugDescribeChildren();
+      case 'debugFillProperties':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       case 'toStringShallow':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
-            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            joiner:
+                namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'toDiagnosticsNode':
@@ -478,7 +549,7 @@ extension FocusManagerBinding on FocusManager {
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -488,7 +559,7 @@ extension FocusManagerBinding on FocusManager {
         highlightStrategy = value;
         break;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

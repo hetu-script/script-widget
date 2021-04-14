@@ -15,22 +15,29 @@ class StackFrameAutoBinding extends HTExternalClass {
             packageScheme: namedArgs['packageScheme'],
             package: namedArgs['package'],
             packagePath: namedArgs['packagePath'],
-            className: namedArgs.containsKey('className') ? namedArgs['className'] : '',
+            className: namedArgs.containsKey('className')
+                ? namedArgs['className']
+                : '',
             method: namedArgs['method'],
-            isConstructor: namedArgs.containsKey('isConstructor') ? namedArgs['isConstructor'] : false,
+            isConstructor: namedArgs.containsKey('isConstructor')
+                ? namedArgs['isConstructor']
+                : false,
             source: namedArgs['source']);
       case 'StackFrame.fromStackTrace':
-        return ({positionalArgs, namedArgs, typeArgs}) => StackFrame.fromStackTrace(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            StackFrame.fromStackTrace(positionalArgs[0]);
       case 'StackFrame.fromStackString':
-        return ({positionalArgs, namedArgs, typeArgs}) => StackFrame.fromStackString(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            StackFrame.fromStackString(positionalArgs[0]);
       case 'StackFrame.fromStackTraceLine':
-        return ({positionalArgs, namedArgs, typeArgs}) => StackFrame.fromStackTraceLine(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            StackFrame.fromStackTraceLine(positionalArgs[0]);
       case 'StackFrame.asynchronousSuspension':
         return StackFrame.asynchronousSuspension;
       case 'StackFrame.stackOverFlowElision':
         return StackFrame.stackOverFlowElision;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -44,7 +51,7 @@ extension StackFrameBinding on StackFrame {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('StackFrame');
+        return const HTType('StackFrame');
       case 'source':
         return source;
       case 'number':
@@ -70,7 +77,7 @@ extension StackFrameBinding on StackFrame {
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

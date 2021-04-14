@@ -15,9 +15,10 @@ class RestorationScopeAutoBinding extends HTExternalClass {
             restorationId: namedArgs['restorationId'],
             child: namedArgs['child']);
       case 'RestorationScope.of':
-        return ({positionalArgs, namedArgs, typeArgs}) => RestorationScope.of(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            RestorationScope.of(positionalArgs[0]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -31,7 +32,7 @@ extension RestorationScopeBinding on RestorationScope {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('RestorationScope');
+        return const HTType('RestorationScope');
       case 'child':
         return child;
       case 'restorationId':
@@ -47,25 +48,37 @@ extension RestorationScopeBinding on RestorationScope {
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'toStringShallow':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
-            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            joiner:
+                namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -77,12 +90,15 @@ class UnmanagedRestorationScopeAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'UnmanagedRestorationScope':
-        return ({positionalArgs, namedArgs, typeArgs}) => UnmanagedRestorationScope(
-            key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
-            bucket: namedArgs.containsKey('bucket') ? namedArgs['bucket'] : null,
-            child: namedArgs['child']);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            UnmanagedRestorationScope(
+                key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
+                bucket: namedArgs.containsKey('bucket')
+                    ? namedArgs['bucket']
+                    : null,
+                child: namedArgs['child']);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -96,7 +112,7 @@ extension UnmanagedRestorationScopeBinding on UnmanagedRestorationScope {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('UnmanagedRestorationScope');
+        return const HTType('UnmanagedRestorationScope');
       case 'bucket':
         return bucket;
       case 'child':
@@ -106,31 +122,44 @@ extension UnmanagedRestorationScopeBinding on UnmanagedRestorationScope {
       case 'hashCode':
         return hashCode;
       case 'updateShouldNotify':
-        return ({positionalArgs, namedArgs, typeArgs}) => updateShouldNotify(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            updateShouldNotify(positionalArgs[0]);
       case 'createElement':
         return ({positionalArgs, namedArgs, typeArgs}) => createElement();
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'toStringShallow':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
-            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            joiner:
+                namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -147,7 +176,7 @@ class RootRestorationScopeAutoBinding extends HTExternalClass {
             restorationId: namedArgs['restorationId'],
             child: namedArgs['child']);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -161,7 +190,7 @@ extension RootRestorationScopeBinding on RootRestorationScope {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('RootRestorationScope');
+        return const HTType('RootRestorationScope');
       case 'child':
         return child;
       case 'restorationId':
@@ -177,25 +206,37 @@ extension RootRestorationScopeBinding on RootRestorationScope {
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'toStringShallow':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
-            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            joiner:
+                namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

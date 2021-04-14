@@ -11,22 +11,38 @@ class TooltipThemeDataAutoBinding extends HTExternalClass {
     switch (varName) {
       case 'TooltipThemeData':
         return ({positionalArgs, namedArgs, typeArgs}) => TooltipThemeData(
-            height: namedArgs.containsKey('height') ? namedArgs['height'] : null,
-            padding: namedArgs.containsKey('padding') ? namedArgs['padding'] : null,
-            margin: namedArgs.containsKey('margin') ? namedArgs['margin'] : null,
-            verticalOffset: namedArgs.containsKey('verticalOffset') ? namedArgs['verticalOffset'] : null,
-            preferBelow: namedArgs.containsKey('preferBelow') ? namedArgs['preferBelow'] : null,
-            excludeFromSemantics:
-                namedArgs.containsKey('excludeFromSemantics') ? namedArgs['excludeFromSemantics'] : null,
-            decoration: namedArgs.containsKey('decoration') ? namedArgs['decoration'] : null,
-            textStyle: namedArgs.containsKey('textStyle') ? namedArgs['textStyle'] : null,
-            waitDuration: namedArgs.containsKey('waitDuration') ? namedArgs['waitDuration'] : null,
-            showDuration: namedArgs.containsKey('showDuration') ? namedArgs['showDuration'] : null);
+            height:
+                namedArgs.containsKey('height') ? namedArgs['height'] : null,
+            padding:
+                namedArgs.containsKey('padding') ? namedArgs['padding'] : null,
+            margin:
+                namedArgs.containsKey('margin') ? namedArgs['margin'] : null,
+            verticalOffset: namedArgs.containsKey('verticalOffset')
+                ? namedArgs['verticalOffset']
+                : null,
+            preferBelow: namedArgs.containsKey('preferBelow')
+                ? namedArgs['preferBelow']
+                : null,
+            excludeFromSemantics: namedArgs.containsKey('excludeFromSemantics')
+                ? namedArgs['excludeFromSemantics']
+                : null,
+            decoration: namedArgs.containsKey('decoration')
+                ? namedArgs['decoration']
+                : null,
+            textStyle: namedArgs.containsKey('textStyle')
+                ? namedArgs['textStyle']
+                : null,
+            waitDuration: namedArgs.containsKey('waitDuration')
+                ? namedArgs['waitDuration']
+                : null,
+            showDuration: namedArgs.containsKey('showDuration')
+                ? namedArgs['showDuration']
+                : null);
       case 'TooltipThemeData.lerp':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            TooltipThemeData.lerp(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
+        return ({positionalArgs, namedArgs, typeArgs}) => TooltipThemeData.lerp(
+            positionalArgs[0], positionalArgs[1], positionalArgs[2]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -40,7 +56,7 @@ extension TooltipThemeDataBinding on TooltipThemeData {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('TooltipThemeData');
+        return const HTType('TooltipThemeData');
       case 'height':
         return height;
       case 'padding':
@@ -65,30 +81,49 @@ extension TooltipThemeDataBinding on TooltipThemeData {
         return hashCode;
       case 'copyWith':
         return ({positionalArgs, namedArgs, typeArgs}) => copyWith(
-            height: namedArgs.containsKey('height') ? namedArgs['height'] : null,
-            padding: namedArgs.containsKey('padding') ? namedArgs['padding'] : null,
-            margin: namedArgs.containsKey('margin') ? namedArgs['margin'] : null,
-            verticalOffset: namedArgs.containsKey('verticalOffset') ? namedArgs['verticalOffset'] : null,
-            preferBelow: namedArgs.containsKey('preferBelow') ? namedArgs['preferBelow'] : null,
-            excludeFromSemantics:
-                namedArgs.containsKey('excludeFromSemantics') ? namedArgs['excludeFromSemantics'] : null,
-            decoration: namedArgs.containsKey('decoration') ? namedArgs['decoration'] : null,
-            textStyle: namedArgs.containsKey('textStyle') ? namedArgs['textStyle'] : null,
-            waitDuration: namedArgs.containsKey('waitDuration') ? namedArgs['waitDuration'] : null,
-            showDuration: namedArgs.containsKey('showDuration') ? namedArgs['showDuration'] : null);
+            height:
+                namedArgs.containsKey('height') ? namedArgs['height'] : null,
+            padding:
+                namedArgs.containsKey('padding') ? namedArgs['padding'] : null,
+            margin:
+                namedArgs.containsKey('margin') ? namedArgs['margin'] : null,
+            verticalOffset: namedArgs.containsKey('verticalOffset')
+                ? namedArgs['verticalOffset']
+                : null,
+            preferBelow: namedArgs.containsKey('preferBelow')
+                ? namedArgs['preferBelow']
+                : null,
+            excludeFromSemantics: namedArgs.containsKey('excludeFromSemantics')
+                ? namedArgs['excludeFromSemantics']
+                : null,
+            decoration: namedArgs.containsKey('decoration')
+                ? namedArgs['decoration']
+                : null,
+            textStyle: namedArgs.containsKey('textStyle')
+                ? namedArgs['textStyle']
+                : null,
+            waitDuration: namedArgs.containsKey('waitDuration')
+                ? namedArgs['waitDuration']
+                : null,
+            showDuration: namedArgs.containsKey('showDuration')
+                ? namedArgs['showDuration']
+                : null);
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -105,9 +140,10 @@ class TooltipThemeAutoBinding extends HTExternalClass {
             data: namedArgs['data'],
             child: namedArgs['child']);
       case 'TooltipTheme.of':
-        return ({positionalArgs, namedArgs, typeArgs}) => TooltipTheme.of(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            TooltipTheme.of(positionalArgs[0]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -121,7 +157,7 @@ extension TooltipThemeBinding on TooltipTheme {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('TooltipTheme');
+        return const HTType('TooltipTheme');
       case 'data':
         return data;
       case 'child':
@@ -131,33 +167,47 @@ extension TooltipThemeBinding on TooltipTheme {
       case 'hashCode':
         return hashCode;
       case 'wrap':
-        return ({positionalArgs, namedArgs, typeArgs}) => wrap(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            wrap(positionalArgs[0], positionalArgs[1]);
       case 'updateShouldNotify':
-        return ({positionalArgs, namedArgs, typeArgs}) => updateShouldNotify(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            updateShouldNotify(positionalArgs[0]);
       case 'createElement':
         return ({positionalArgs, namedArgs, typeArgs}) => createElement();
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'toStringShallow':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
-            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            joiner:
+                namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

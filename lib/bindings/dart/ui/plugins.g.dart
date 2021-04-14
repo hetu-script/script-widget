@@ -8,9 +8,10 @@ class CallbackHandleAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'CallbackHandle.fromRawHandle':
-        return ({positionalArgs, namedArgs, typeArgs}) => CallbackHandle.fromRawHandle(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            CallbackHandle.fromRawHandle(positionalArgs[0]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -24,13 +25,13 @@ extension CallbackHandleBinding on CallbackHandle {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('CallbackHandle');
+        return const HTType('CallbackHandle');
       case 'hashCode':
         return hashCode;
       case 'toRawHandle':
         return ({positionalArgs, namedArgs, typeArgs}) => toRawHandle();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -42,11 +43,13 @@ class PluginUtilitiesAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'PluginUtilities.getCallbackHandle':
-        return ({positionalArgs, namedArgs, typeArgs}) => PluginUtilities.getCallbackHandle(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            PluginUtilities.getCallbackHandle(positionalArgs[0]);
       case 'PluginUtilities.getCallbackFromHandle':
-        return ({positionalArgs, namedArgs, typeArgs}) => PluginUtilities.getCallbackFromHandle(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            PluginUtilities.getCallbackFromHandle(positionalArgs[0]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

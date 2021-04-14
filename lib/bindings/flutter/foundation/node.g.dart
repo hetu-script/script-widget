@@ -10,7 +10,7 @@ class AbstractNodeAutoBinding extends HTExternalClass {
       case 'AbstractNode':
         return ({positionalArgs, namedArgs, typeArgs}) => AbstractNode();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -24,7 +24,7 @@ extension AbstractNodeBinding on AbstractNode {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('AbstractNode');
+        return const HTType('AbstractNode');
       case 'depth':
         return depth;
       case 'owner':
@@ -36,11 +36,12 @@ extension AbstractNodeBinding on AbstractNode {
       case 'redepthChildren':
         return ({positionalArgs, namedArgs, typeArgs}) => redepthChildren();
       case 'attach':
-        return ({positionalArgs, namedArgs, typeArgs}) => attach(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            attach(positionalArgs[0]);
       case 'detach':
         return ({positionalArgs, namedArgs, typeArgs}) => detach();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

@@ -12,15 +12,19 @@ class BottomAppBarThemeAutoBinding extends HTExternalClass {
       case 'BottomAppBarTheme':
         return ({positionalArgs, namedArgs, typeArgs}) => BottomAppBarTheme(
             color: namedArgs.containsKey('color') ? namedArgs['color'] : null,
-            elevation: namedArgs.containsKey('elevation') ? namedArgs['elevation'] : null,
+            elevation: namedArgs.containsKey('elevation')
+                ? namedArgs['elevation']
+                : null,
             shape: namedArgs.containsKey('shape') ? namedArgs['shape'] : null);
       case 'BottomAppBarTheme.of':
-        return ({positionalArgs, namedArgs, typeArgs}) => BottomAppBarTheme.of(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            BottomAppBarTheme.of(positionalArgs[0]);
       case 'BottomAppBarTheme.lerp':
         return ({positionalArgs, namedArgs, typeArgs}) =>
-            BottomAppBarTheme.lerp(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
+            BottomAppBarTheme.lerp(
+                positionalArgs[0], positionalArgs[1], positionalArgs[2]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -34,7 +38,7 @@ extension BottomAppBarThemeBinding on BottomAppBarTheme {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('BottomAppBarTheme');
+        return const HTType('BottomAppBarTheme');
       case 'color':
         return color;
       case 'elevation':
@@ -46,21 +50,26 @@ extension BottomAppBarThemeBinding on BottomAppBarTheme {
       case 'copyWith':
         return ({positionalArgs, namedArgs, typeArgs}) => copyWith(
             color: namedArgs.containsKey('color') ? namedArgs['color'] : null,
-            elevation: namedArgs.containsKey('elevation') ? namedArgs['elevation'] : null,
+            elevation: namedArgs.containsKey('elevation')
+                ? namedArgs['elevation']
+                : null,
             shape: namedArgs.containsKey('shape') ? namedArgs['shape'] : null);
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

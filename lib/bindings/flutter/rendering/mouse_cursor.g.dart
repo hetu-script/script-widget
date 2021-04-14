@@ -80,7 +80,7 @@ class SystemMouseCursorsAutoBinding extends HTExternalClass {
       case 'SystemMouseCursors.zoomOut':
         return SystemMouseCursors.zoomOut;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

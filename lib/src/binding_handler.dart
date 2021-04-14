@@ -24,13 +24,20 @@ class DefaultBindingHander extends FlutterLibraryBinding {
     super.loadExternalFunctionTypes();
 
     final functionWrappers = <String, HTExternalFunctionTypedef>{
-      'ValueChangedInt': (HTFunction function) => (int data) => function.call(positionalArgs: [data]),
-      'ValueChangedDouble': (HTFunction function) => (double data) => function.call(positionalArgs: [data]),
-      'ValueChangedString': (HTFunction function) => (String data) => function.call(positionalArgs: [data]),
-      'ValueChangedBool': (HTFunction function) => (bool data) => function.call(positionalArgs: [data]),
-      'ValueChangedList': (HTFunction function) => (List data) => function.call(positionalArgs: [data]),
-      'ValueChangedMap': (HTFunction function) => (Map data) => function.call(positionalArgs: [data]),
-      'ValueChangedSet': (HTFunction function) => (Set data) => function.call(positionalArgs: [data]),
+      'ValueChangedInt': (HTFunction function) =>
+          (int data) => function.call(positionalArgs: [data]),
+      'ValueChangedDouble': (HTFunction function) =>
+          (double data) => function.call(positionalArgs: [data]),
+      'ValueChangedString': (HTFunction function) =>
+          (String data) => function.call(positionalArgs: [data]),
+      'ValueChangedBool': (HTFunction function) =>
+          (bool data) => function.call(positionalArgs: [data]),
+      'ValueChangedList': (HTFunction function) =>
+          (List data) => function.call(positionalArgs: [data]),
+      'ValueChangedMap': (HTFunction function) =>
+          (Map data) => function.call(positionalArgs: [data]),
+      'ValueChangedSet': (HTFunction function) =>
+          (Set data) => function.call(positionalArgs: [data]),
     };
 
     functionWrappers.forEach((key, value) {
@@ -55,7 +62,7 @@ class DefaultBindingHander extends FlutterLibraryBinding {
     var future = super.importScripts();
     var futures = <Future>[];
     futures.add(future);
-    futures.add(interpreter.import('package://script_widget.ht'));
+    futures.add(interpreter.import('package://widget.ht'));
     return Future.wait(futures);
   }
 }

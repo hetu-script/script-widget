@@ -11,9 +11,10 @@ class SemanticsServiceAutoBinding extends HTExternalClass {
         return ({positionalArgs, namedArgs, typeArgs}) =>
             SemanticsService.announce(positionalArgs[0], positionalArgs[1]);
       case 'SemanticsService.tooltip':
-        return ({positionalArgs, namedArgs, typeArgs}) => SemanticsService.tooltip(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            SemanticsService.tooltip(positionalArgs[0]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

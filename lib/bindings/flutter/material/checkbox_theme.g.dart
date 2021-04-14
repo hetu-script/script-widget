@@ -12,19 +12,34 @@ class CheckboxThemeDataAutoBinding extends HTExternalClass {
     switch (varName) {
       case 'CheckboxThemeData':
         return ({positionalArgs, namedArgs, typeArgs}) => CheckboxThemeData(
-            mouseCursor: namedArgs.containsKey('mouseCursor') ? namedArgs['mouseCursor'] : null,
-            fillColor: namedArgs.containsKey('fillColor') ? namedArgs['fillColor'] : null,
-            checkColor: namedArgs.containsKey('checkColor') ? namedArgs['checkColor'] : null,
-            overlayColor: namedArgs.containsKey('overlayColor') ? namedArgs['overlayColor'] : null,
-            splashRadius: namedArgs.containsKey('splashRadius') ? namedArgs['splashRadius'] : null,
+            mouseCursor: namedArgs.containsKey('mouseCursor')
+                ? namedArgs['mouseCursor']
+                : null,
+            fillColor: namedArgs.containsKey('fillColor')
+                ? namedArgs['fillColor']
+                : null,
+            checkColor: namedArgs.containsKey('checkColor')
+                ? namedArgs['checkColor']
+                : null,
+            overlayColor: namedArgs.containsKey('overlayColor')
+                ? namedArgs['overlayColor']
+                : null,
+            splashRadius: namedArgs.containsKey('splashRadius')
+                ? namedArgs['splashRadius']
+                : null,
             materialTapTargetSize:
-                namedArgs.containsKey('materialTapTargetSize') ? namedArgs['materialTapTargetSize'] : null,
-            visualDensity: namedArgs.containsKey('visualDensity') ? namedArgs['visualDensity'] : null);
+                namedArgs.containsKey('materialTapTargetSize')
+                    ? namedArgs['materialTapTargetSize']
+                    : null,
+            visualDensity: namedArgs.containsKey('visualDensity')
+                ? namedArgs['visualDensity']
+                : null);
       case 'CheckboxThemeData.lerp':
         return ({positionalArgs, namedArgs, typeArgs}) =>
-            CheckboxThemeData.lerp(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
+            CheckboxThemeData.lerp(
+                positionalArgs[0], positionalArgs[1], positionalArgs[2]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -38,7 +53,7 @@ extension CheckboxThemeDataBinding on CheckboxThemeData {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('CheckboxThemeData');
+        return const HTType('CheckboxThemeData');
       case 'mouseCursor':
         return mouseCursor;
       case 'fillColor':
@@ -57,27 +72,44 @@ extension CheckboxThemeDataBinding on CheckboxThemeData {
         return hashCode;
       case 'copyWith':
         return ({positionalArgs, namedArgs, typeArgs}) => copyWith(
-            mouseCursor: namedArgs.containsKey('mouseCursor') ? namedArgs['mouseCursor'] : null,
-            fillColor: namedArgs.containsKey('fillColor') ? namedArgs['fillColor'] : null,
-            checkColor: namedArgs.containsKey('checkColor') ? namedArgs['checkColor'] : null,
-            overlayColor: namedArgs.containsKey('overlayColor') ? namedArgs['overlayColor'] : null,
-            splashRadius: namedArgs.containsKey('splashRadius') ? namedArgs['splashRadius'] : null,
+            mouseCursor: namedArgs.containsKey('mouseCursor')
+                ? namedArgs['mouseCursor']
+                : null,
+            fillColor: namedArgs.containsKey('fillColor')
+                ? namedArgs['fillColor']
+                : null,
+            checkColor: namedArgs.containsKey('checkColor')
+                ? namedArgs['checkColor']
+                : null,
+            overlayColor: namedArgs.containsKey('overlayColor')
+                ? namedArgs['overlayColor']
+                : null,
+            splashRadius: namedArgs.containsKey('splashRadius')
+                ? namedArgs['splashRadius']
+                : null,
             materialTapTargetSize:
-                namedArgs.containsKey('materialTapTargetSize') ? namedArgs['materialTapTargetSize'] : null,
-            visualDensity: namedArgs.containsKey('visualDensity') ? namedArgs['visualDensity'] : null);
+                namedArgs.containsKey('materialTapTargetSize')
+                    ? namedArgs['materialTapTargetSize']
+                    : null,
+            visualDensity: namedArgs.containsKey('visualDensity')
+                ? namedArgs['visualDensity']
+                : null);
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -94,9 +126,10 @@ class CheckboxThemeAutoBinding extends HTExternalClass {
             data: namedArgs['data'],
             child: namedArgs['child']);
       case 'CheckboxTheme.of':
-        return ({positionalArgs, namedArgs, typeArgs}) => CheckboxTheme.of(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            CheckboxTheme.of(positionalArgs[0]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -110,7 +143,7 @@ extension CheckboxThemeBinding on CheckboxTheme {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('CheckboxTheme');
+        return const HTType('CheckboxTheme');
       case 'data':
         return data;
       case 'child':
@@ -120,31 +153,44 @@ extension CheckboxThemeBinding on CheckboxTheme {
       case 'hashCode':
         return hashCode;
       case 'updateShouldNotify':
-        return ({positionalArgs, namedArgs, typeArgs}) => updateShouldNotify(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            updateShouldNotify(positionalArgs[0]);
       case 'createElement':
         return ({positionalArgs, namedArgs, typeArgs}) => createElement();
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'toStringShallow':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
-            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            joiner:
+                namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

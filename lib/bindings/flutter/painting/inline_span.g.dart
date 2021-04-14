@@ -11,7 +11,7 @@ class AccumulatorAutoBinding extends HTExternalClass {
         return ({positionalArgs, namedArgs, typeArgs}) =>
             Accumulator(positionalArgs.length > 0 ? positionalArgs[0] : 0);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -25,32 +25,41 @@ extension AccumulatorBinding on Accumulator {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('Accumulator');
+        return const HTType('Accumulator');
       case 'value':
         return value;
       case 'increment':
-        return ({positionalArgs, namedArgs, typeArgs}) => increment(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            increment(positionalArgs[0]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
 
 class InlineSpanSemanticsInformationAutoBinding extends HTExternalClass {
-  InlineSpanSemanticsInformationAutoBinding() : super('InlineSpanSemanticsInformation');
+  InlineSpanSemanticsInformationAutoBinding()
+      : super('InlineSpanSemanticsInformation');
 
   @override
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'InlineSpanSemanticsInformation':
-        return ({positionalArgs, namedArgs, typeArgs}) => InlineSpanSemanticsInformation(positionalArgs[0],
-            isPlaceholder: namedArgs.containsKey('isPlaceholder') ? namedArgs['isPlaceholder'] : false,
-            semanticsLabel: namedArgs.containsKey('semanticsLabel') ? namedArgs['semanticsLabel'] : null,
-            recognizer: namedArgs.containsKey('recognizer') ? namedArgs['recognizer'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            InlineSpanSemanticsInformation(positionalArgs[0],
+                isPlaceholder: namedArgs.containsKey('isPlaceholder')
+                    ? namedArgs['isPlaceholder']
+                    : false,
+                semanticsLabel: namedArgs.containsKey('semanticsLabel')
+                    ? namedArgs['semanticsLabel']
+                    : null,
+                recognizer: namedArgs.containsKey('recognizer')
+                    ? namedArgs['recognizer']
+                    : null);
       case 'InlineSpanSemanticsInformation.placeholder':
         return InlineSpanSemanticsInformation.placeholder;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -60,11 +69,12 @@ class InlineSpanSemanticsInformationAutoBinding extends HTExternalClass {
   }
 }
 
-extension InlineSpanSemanticsInformationBinding on InlineSpanSemanticsInformation {
+extension InlineSpanSemanticsInformationBinding
+    on InlineSpanSemanticsInformation {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('InlineSpanSemanticsInformation');
+        return const HTType('InlineSpanSemanticsInformation');
       case 'text':
         return text;
       case 'semanticsLabel':
@@ -80,7 +90,7 @@ extension InlineSpanSemanticsInformationBinding on InlineSpanSemanticsInformatio
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

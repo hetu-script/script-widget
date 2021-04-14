@@ -18,7 +18,7 @@ class OverflowBarAlignmentAutoBinding extends HTExternalClass {
       case 'OverflowBarAlignment.center':
         return OverflowBarAlignment.center;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -26,13 +26,14 @@ class OverflowBarAlignmentAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('OverflowBarAlignment');
+        return const HTType('OverflowBarAlignment');
       case 'index':
         return (instance as OverflowBarAlignment).index;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => (instance as OverflowBarAlignment).toString();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            (instance as OverflowBarAlignment).toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -46,18 +47,28 @@ class OverflowBarAutoBinding extends HTExternalClass {
       case 'OverflowBar':
         return ({positionalArgs, namedArgs, typeArgs}) => OverflowBar(
             key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
-            spacing: namedArgs.containsKey('spacing') ? namedArgs['spacing'] : 0.0,
-            overflowSpacing: namedArgs.containsKey('overflowSpacing') ? namedArgs['overflowSpacing'] : 0.0,
+            spacing:
+                namedArgs.containsKey('spacing') ? namedArgs['spacing'] : 0.0,
+            overflowSpacing: namedArgs.containsKey('overflowSpacing')
+                ? namedArgs['overflowSpacing']
+                : 0.0,
             overflowAlignment: namedArgs.containsKey('overflowAlignment')
                 ? namedArgs['overflowAlignment']
                 : OverflowBarAlignment.start,
-            overflowDirection:
-                namedArgs.containsKey('overflowDirection') ? namedArgs['overflowDirection'] : VerticalDirection.down,
-            textDirection: namedArgs.containsKey('textDirection') ? namedArgs['textDirection'] : null,
-            clipBehavior: namedArgs.containsKey('clipBehavior') ? namedArgs['clipBehavior'] : Clip.none,
-            children: namedArgs.containsKey('children') ? List<Widget>.from(namedArgs['children']) : const <Widget>[]);
+            overflowDirection: namedArgs.containsKey('overflowDirection')
+                ? namedArgs['overflowDirection']
+                : VerticalDirection.down,
+            textDirection: namedArgs.containsKey('textDirection')
+                ? namedArgs['textDirection']
+                : null,
+            clipBehavior: namedArgs.containsKey('clipBehavior')
+                ? namedArgs['clipBehavior']
+                : Clip.none,
+            children: namedArgs.containsKey('children')
+                ? List<Widget>.from(namedArgs['children'])
+                : const <Widget>[]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -71,7 +82,7 @@ extension OverflowBarBinding on OverflowBar {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('OverflowBar');
+        return const HTType('OverflowBar');
       case 'spacing':
         return spacing;
       case 'overflowSpacing':
@@ -91,33 +102,47 @@ extension OverflowBarBinding on OverflowBar {
       case 'hashCode':
         return hashCode;
       case 'createRenderObject':
-        return ({positionalArgs, namedArgs, typeArgs}) => createRenderObject(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            createRenderObject(positionalArgs[0]);
       case 'updateRenderObject':
-        return ({positionalArgs, namedArgs, typeArgs}) => updateRenderObject(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            updateRenderObject(positionalArgs[0], positionalArgs[1]);
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'createElement':
         return ({positionalArgs, namedArgs, typeArgs}) => createElement();
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'toStringShallow':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
-            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            joiner:
+                namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

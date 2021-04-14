@@ -10,12 +10,15 @@ class FrictionSimulationAutoBinding extends HTExternalClass {
       case 'FrictionSimulation':
         return ({positionalArgs, namedArgs, typeArgs}) => FrictionSimulation(
             positionalArgs[0], positionalArgs[1], positionalArgs[2],
-            tolerance: namedArgs.containsKey('tolerance') ? namedArgs['tolerance'] : Tolerance.defaultTolerance);
+            tolerance: namedArgs.containsKey('tolerance')
+                ? namedArgs['tolerance']
+                : Tolerance.defaultTolerance);
       case 'FrictionSimulation.through':
         return ({positionalArgs, namedArgs, typeArgs}) =>
-            FrictionSimulation.through(positionalArgs[0], positionalArgs[1], positionalArgs[2], positionalArgs[3]);
+            FrictionSimulation.through(positionalArgs[0], positionalArgs[1],
+                positionalArgs[2], positionalArgs[3]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -34,7 +37,7 @@ extension FrictionSimulationBinding on FrictionSimulation {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('FrictionSimulation');
+        return const HTType('FrictionSimulation');
       case 'tolerance':
         return tolerance;
       case 'finalX':
@@ -44,13 +47,15 @@ extension FrictionSimulationBinding on FrictionSimulation {
       case 'dx':
         return ({positionalArgs, namedArgs, typeArgs}) => dx(positionalArgs[0]);
       case 'timeAtX':
-        return ({positionalArgs, namedArgs, typeArgs}) => timeAtX(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            timeAtX(positionalArgs[0]);
       case 'isDone':
-        return ({positionalArgs, namedArgs, typeArgs}) => isDone(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            isDone(positionalArgs[0]);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -60,7 +65,7 @@ extension FrictionSimulationBinding on FrictionSimulation {
         tolerance = value;
         break;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -72,10 +77,11 @@ class BoundedFrictionSimulationAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'BoundedFrictionSimulation':
-        return ({positionalArgs, namedArgs, typeArgs}) => BoundedFrictionSimulation(
-            positionalArgs[0], positionalArgs[1], positionalArgs[2], positionalArgs[3], positionalArgs[4]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            BoundedFrictionSimulation(positionalArgs[0], positionalArgs[1],
+                positionalArgs[2], positionalArgs[3], positionalArgs[4]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -94,7 +100,7 @@ extension BoundedFrictionSimulationBinding on BoundedFrictionSimulation {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('BoundedFrictionSimulation');
+        return const HTType('BoundedFrictionSimulation');
       case 'tolerance':
         return tolerance;
       case 'finalX':
@@ -102,15 +108,17 @@ extension BoundedFrictionSimulationBinding on BoundedFrictionSimulation {
       case 'x':
         return ({positionalArgs, namedArgs, typeArgs}) => x(positionalArgs[0]);
       case 'isDone':
-        return ({positionalArgs, namedArgs, typeArgs}) => isDone(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            isDone(positionalArgs[0]);
       case 'dx':
         return ({positionalArgs, namedArgs, typeArgs}) => dx(positionalArgs[0]);
       case 'timeAtX':
-        return ({positionalArgs, namedArgs, typeArgs}) => timeAtX(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            timeAtX(positionalArgs[0]);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -120,7 +128,7 @@ extension BoundedFrictionSimulationBinding on BoundedFrictionSimulation {
         tolerance = value;
         break;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

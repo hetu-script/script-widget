@@ -15,7 +15,7 @@ class ChannelBuffersAutoBinding extends HTExternalClass {
       case 'ChannelBuffers.kControlChannelName':
         return ChannelBuffers.kControlChannelName;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -28,10 +28,11 @@ class ChannelBuffersAutoBinding extends HTExternalClass {
     return <String, HTExternalFunctionTypedef>{
       'PlatformMessageResponseCallback': (HTFunction function) =>
           (data) => function.call(positionalArgs: [data], namedArgs: const {}),
-      'ChannelCallback': (HTFunction function) =>
-          (data, callback) => function.call(positionalArgs: [data, callback], namedArgs: const {}),
-      'DrainChannelCallback': (HTFunction function) =>
-          (data, callback) => function.call(positionalArgs: [data, callback], namedArgs: const {}) as Future<void>,
+      'ChannelCallback': (HTFunction function) => (data, callback) =>
+          function.call(positionalArgs: [data, callback], namedArgs: const {}),
+      'DrainChannelCallback': (HTFunction function) => (data, callback) =>
+          function.call(positionalArgs: [data, callback], namedArgs: const {})
+              as Future<void>,
     };
   }
 }
@@ -40,23 +41,30 @@ extension ChannelBuffersBinding on ChannelBuffers {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('ChannelBuffers');
+        return const HTType('ChannelBuffers');
       case 'push':
-        return ({positionalArgs, namedArgs, typeArgs}) => push(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            push(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
       case 'setListener':
-        return ({positionalArgs, namedArgs, typeArgs}) => setListener(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            setListener(positionalArgs[0], positionalArgs[1]);
       case 'clearListener':
-        return ({positionalArgs, namedArgs, typeArgs}) => clearListener(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            clearListener(positionalArgs[0]);
       case 'drain':
-        return ({positionalArgs, namedArgs, typeArgs}) => drain(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            drain(positionalArgs[0], positionalArgs[1]);
       case 'handleMessage':
-        return ({positionalArgs, namedArgs, typeArgs}) => handleMessage(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            handleMessage(positionalArgs[0]);
       case 'resize':
-        return ({positionalArgs, namedArgs, typeArgs}) => resize(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            resize(positionalArgs[0], positionalArgs[1]);
       case 'allowOverflow':
-        return ({positionalArgs, namedArgs, typeArgs}) => allowOverflow(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            allowOverflow(positionalArgs[0], positionalArgs[1]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

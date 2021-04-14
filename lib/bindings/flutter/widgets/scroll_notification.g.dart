@@ -8,12 +8,15 @@ class ScrollStartNotificationAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'ScrollStartNotification':
-        return ({positionalArgs, namedArgs, typeArgs}) => ScrollStartNotification(
-            metrics: namedArgs['metrics'],
-            context: namedArgs['context'],
-            dragDetails: namedArgs.containsKey('dragDetails') ? namedArgs['dragDetails'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            ScrollStartNotification(
+                metrics: namedArgs['metrics'],
+                context: namedArgs['context'],
+                dragDetails: namedArgs.containsKey('dragDetails')
+                    ? namedArgs['dragDetails']
+                    : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -27,7 +30,7 @@ extension ScrollStartNotificationBinding on ScrollStartNotification {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('ScrollStartNotification');
+        return const HTType('ScrollStartNotification');
       case 'dragDetails':
         return dragDetails;
       case 'metrics':
@@ -37,15 +40,18 @@ extension ScrollStartNotificationBinding on ScrollStartNotification {
       case 'depth':
         return depth;
       case 'debugFillDescription':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillDescription(List<String>.from(positionalArgs[0]));
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillDescription(List<String>.from(positionalArgs[0]));
       case 'visitAncestor':
-        return ({positionalArgs, namedArgs, typeArgs}) => visitAncestor(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            visitAncestor(positionalArgs[0]);
       case 'dispatch':
-        return ({positionalArgs, namedArgs, typeArgs}) => dispatch(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            dispatch(positionalArgs[0]);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -57,13 +63,18 @@ class ScrollUpdateNotificationAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'ScrollUpdateNotification':
-        return ({positionalArgs, namedArgs, typeArgs}) => ScrollUpdateNotification(
-            metrics: namedArgs['metrics'],
-            context: namedArgs['context'],
-            dragDetails: namedArgs.containsKey('dragDetails') ? namedArgs['dragDetails'] : null,
-            scrollDelta: namedArgs.containsKey('scrollDelta') ? namedArgs['scrollDelta'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            ScrollUpdateNotification(
+                metrics: namedArgs['metrics'],
+                context: namedArgs['context'],
+                dragDetails: namedArgs.containsKey('dragDetails')
+                    ? namedArgs['dragDetails']
+                    : null,
+                scrollDelta: namedArgs.containsKey('scrollDelta')
+                    ? namedArgs['scrollDelta']
+                    : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -77,7 +88,7 @@ extension ScrollUpdateNotificationBinding on ScrollUpdateNotification {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('ScrollUpdateNotification');
+        return const HTType('ScrollUpdateNotification');
       case 'dragDetails':
         return dragDetails;
       case 'scrollDelta':
@@ -89,15 +100,18 @@ extension ScrollUpdateNotificationBinding on ScrollUpdateNotification {
       case 'depth':
         return depth;
       case 'debugFillDescription':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillDescription(List<String>.from(positionalArgs[0]));
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillDescription(List<String>.from(positionalArgs[0]));
       case 'visitAncestor':
-        return ({positionalArgs, namedArgs, typeArgs}) => visitAncestor(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            visitAncestor(positionalArgs[0]);
       case 'dispatch':
-        return ({positionalArgs, namedArgs, typeArgs}) => dispatch(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            dispatch(positionalArgs[0]);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -109,14 +123,19 @@ class OverscrollNotificationAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'OverscrollNotification':
-        return ({positionalArgs, namedArgs, typeArgs}) => OverscrollNotification(
-            metrics: namedArgs['metrics'],
-            context: namedArgs['context'],
-            dragDetails: namedArgs.containsKey('dragDetails') ? namedArgs['dragDetails'] : null,
-            overscroll: namedArgs['overscroll'],
-            velocity: namedArgs.containsKey('velocity') ? namedArgs['velocity'] : 0.0);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            OverscrollNotification(
+                metrics: namedArgs['metrics'],
+                context: namedArgs['context'],
+                dragDetails: namedArgs.containsKey('dragDetails')
+                    ? namedArgs['dragDetails']
+                    : null,
+                overscroll: namedArgs['overscroll'],
+                velocity: namedArgs.containsKey('velocity')
+                    ? namedArgs['velocity']
+                    : 0.0);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -130,7 +149,7 @@ extension OverscrollNotificationBinding on OverscrollNotification {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('OverscrollNotification');
+        return const HTType('OverscrollNotification');
       case 'dragDetails':
         return dragDetails;
       case 'overscroll':
@@ -144,15 +163,18 @@ extension OverscrollNotificationBinding on OverscrollNotification {
       case 'depth':
         return depth;
       case 'debugFillDescription':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillDescription(List<String>.from(positionalArgs[0]));
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillDescription(List<String>.from(positionalArgs[0]));
       case 'visitAncestor':
-        return ({positionalArgs, namedArgs, typeArgs}) => visitAncestor(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            visitAncestor(positionalArgs[0]);
       case 'dispatch':
-        return ({positionalArgs, namedArgs, typeArgs}) => dispatch(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            dispatch(positionalArgs[0]);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -167,9 +189,11 @@ class ScrollEndNotificationAutoBinding extends HTExternalClass {
         return ({positionalArgs, namedArgs, typeArgs}) => ScrollEndNotification(
             metrics: namedArgs['metrics'],
             context: namedArgs['context'],
-            dragDetails: namedArgs.containsKey('dragDetails') ? namedArgs['dragDetails'] : null);
+            dragDetails: namedArgs.containsKey('dragDetails')
+                ? namedArgs['dragDetails']
+                : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -183,7 +207,7 @@ extension ScrollEndNotificationBinding on ScrollEndNotification {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('ScrollEndNotification');
+        return const HTType('ScrollEndNotification');
       case 'dragDetails':
         return dragDetails;
       case 'metrics':
@@ -193,15 +217,18 @@ extension ScrollEndNotificationBinding on ScrollEndNotification {
       case 'depth':
         return depth;
       case 'debugFillDescription':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillDescription(List<String>.from(positionalArgs[0]));
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillDescription(List<String>.from(positionalArgs[0]));
       case 'visitAncestor':
-        return ({positionalArgs, namedArgs, typeArgs}) => visitAncestor(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            visitAncestor(positionalArgs[0]);
       case 'dispatch':
-        return ({positionalArgs, namedArgs, typeArgs}) => dispatch(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            dispatch(positionalArgs[0]);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -213,10 +240,13 @@ class UserScrollNotificationAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'UserScrollNotification':
-        return ({positionalArgs, namedArgs, typeArgs}) => UserScrollNotification(
-            metrics: namedArgs['metrics'], context: namedArgs['context'], direction: namedArgs['direction']);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            UserScrollNotification(
+                metrics: namedArgs['metrics'],
+                context: namedArgs['context'],
+                direction: namedArgs['direction']);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -230,7 +260,7 @@ extension UserScrollNotificationBinding on UserScrollNotification {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('UserScrollNotification');
+        return const HTType('UserScrollNotification');
       case 'direction':
         return direction;
       case 'metrics':
@@ -240,15 +270,18 @@ extension UserScrollNotificationBinding on UserScrollNotification {
       case 'depth':
         return depth;
       case 'debugFillDescription':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillDescription(List<String>.from(positionalArgs[0]));
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillDescription(List<String>.from(positionalArgs[0]));
       case 'visitAncestor':
-        return ({positionalArgs, namedArgs, typeArgs}) => visitAncestor(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            visitAncestor(positionalArgs[0]);
       case 'dispatch':
-        return ({positionalArgs, namedArgs, typeArgs}) => dispatch(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            dispatch(positionalArgs[0]);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

@@ -12,18 +12,29 @@ class CupertinoScrollbarAutoBinding extends HTExternalClass {
         return ({positionalArgs, namedArgs, typeArgs}) => CupertinoScrollbar(
             key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
             child: namedArgs['child'],
-            controller: namedArgs.containsKey('controller') ? namedArgs['controller'] : null,
-            isAlwaysShown: namedArgs.containsKey('isAlwaysShown') ? namedArgs['isAlwaysShown'] : false,
-            thickness: namedArgs.containsKey('thickness') ? namedArgs['thickness'] : defaultThickness,
-            thicknessWhileDragging: namedArgs.containsKey('thicknessWhileDragging')
-                ? namedArgs['thicknessWhileDragging']
-                : defaultThicknessWhileDragging,
-            radius: namedArgs.containsKey('radius') ? namedArgs['radius'] : defaultRadius,
+            controller: namedArgs.containsKey('controller')
+                ? namedArgs['controller']
+                : null,
+            isAlwaysShown: namedArgs.containsKey('isAlwaysShown')
+                ? namedArgs['isAlwaysShown']
+                : false,
+            thickness: namedArgs.containsKey('thickness')
+                ? namedArgs['thickness']
+                : defaultThickness,
+            thicknessWhileDragging:
+                namedArgs.containsKey('thicknessWhileDragging')
+                    ? namedArgs['thicknessWhileDragging']
+                    : defaultThicknessWhileDragging,
+            radius: namedArgs.containsKey('radius')
+                ? namedArgs['radius']
+                : defaultRadius,
             radiusWhileDragging: namedArgs.containsKey('radiusWhileDragging')
                 ? namedArgs['radiusWhileDragging']
                 : defaultRadiusWhileDragging,
             notificationPredicate:
-                namedArgs.containsKey('notificationPredicate') ? namedArgs['notificationPredicate'] : null);
+                namedArgs.containsKey('notificationPredicate')
+                    ? namedArgs['notificationPredicate']
+                    : null);
       case 'CupertinoScrollbar.defaultThickness':
         return CupertinoScrollbar.defaultThickness;
       case 'CupertinoScrollbar.defaultThicknessWhileDragging':
@@ -33,7 +44,7 @@ class CupertinoScrollbarAutoBinding extends HTExternalClass {
       case 'CupertinoScrollbar.defaultRadiusWhileDragging':
         return CupertinoScrollbar.defaultRadiusWhileDragging;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -44,8 +55,9 @@ class CupertinoScrollbarAutoBinding extends HTExternalClass {
 
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'ScrollNotificationPredicate': (HTFunction function) =>
-          (notification) => function.call(positionalArgs: [notification], namedArgs: const {}) as bool,
+      'ScrollNotificationPredicate': (HTFunction function) => (notification) =>
+          function.call(positionalArgs: [notification], namedArgs: const {})
+              as bool,
     };
   }
 
@@ -59,7 +71,7 @@ extension CupertinoScrollbarBinding on CupertinoScrollbar {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('CupertinoScrollbar');
+        return const HTType('CupertinoScrollbar');
       case 'thicknessWhileDragging':
         return thicknessWhileDragging;
       case 'radiusWhileDragging':
@@ -95,25 +107,37 @@ extension CupertinoScrollbarBinding on CupertinoScrollbar {
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'toStringShallow':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
-            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            joiner:
+                namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

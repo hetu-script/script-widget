@@ -19,7 +19,7 @@ class KeyboardSideAutoBinding extends HTExternalClass {
       case 'KeyboardSide.all':
         return KeyboardSide.all;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -27,13 +27,14 @@ class KeyboardSideAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('KeyboardSide');
+        return const HTType('KeyboardSide');
       case 'index':
         return (instance as KeyboardSide).index;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => (instance as KeyboardSide).toString();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            (instance as KeyboardSide).toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -65,7 +66,7 @@ class ModifierKeyAutoBinding extends HTExternalClass {
       case 'ModifierKey.symbolModifier':
         return ModifierKey.symbolModifier;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -73,13 +74,14 @@ class ModifierKeyAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('ModifierKey');
+        return const HTType('ModifierKey');
       case 'index':
         return (instance as ModifierKey).index;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => (instance as ModifierKey).toString();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            (instance as ModifierKey).toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -91,9 +93,10 @@ class RawKeyEventAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'RawKeyEvent.fromMessage':
-        return ({positionalArgs, namedArgs, typeArgs}) => RawKeyEvent.fromMessage(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            RawKeyEvent.fromMessage(positionalArgs[0]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -107,7 +110,7 @@ extension RawKeyEventBinding on RawKeyEvent {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('RawKeyEvent');
+        return const HTType('RawKeyEvent');
       case 'character':
         return character;
       case 'data':
@@ -125,20 +128,24 @@ extension RawKeyEventBinding on RawKeyEvent {
       case 'logicalKey':
         return logicalKey;
       case 'isKeyPressed':
-        return ({positionalArgs, namedArgs, typeArgs}) => isKeyPressed(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            isKeyPressed(positionalArgs[0]);
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -151,9 +158,12 @@ class RawKeyDownEventAutoBinding extends HTExternalClass {
     switch (varName) {
       case 'RawKeyDownEvent':
         return ({positionalArgs, namedArgs, typeArgs}) => RawKeyDownEvent(
-            data: namedArgs['data'], character: namedArgs.containsKey('character') ? namedArgs['character'] : null);
+            data: namedArgs['data'],
+            character: namedArgs.containsKey('character')
+                ? namedArgs['character']
+                : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -167,7 +177,7 @@ extension RawKeyDownEventBinding on RawKeyDownEvent {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('RawKeyDownEvent');
+        return const HTType('RawKeyDownEvent');
       case 'character':
         return character;
       case 'data':
@@ -185,20 +195,24 @@ extension RawKeyDownEventBinding on RawKeyDownEvent {
       case 'logicalKey':
         return logicalKey;
       case 'isKeyPressed':
-        return ({positionalArgs, namedArgs, typeArgs}) => isKeyPressed(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            isKeyPressed(positionalArgs[0]);
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -211,9 +225,12 @@ class RawKeyUpEventAutoBinding extends HTExternalClass {
     switch (varName) {
       case 'RawKeyUpEvent':
         return ({positionalArgs, namedArgs, typeArgs}) => RawKeyUpEvent(
-            data: namedArgs['data'], character: namedArgs.containsKey('character') ? namedArgs['character'] : null);
+            data: namedArgs['data'],
+            character: namedArgs.containsKey('character')
+                ? namedArgs['character']
+                : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -227,7 +244,7 @@ extension RawKeyUpEventBinding on RawKeyUpEvent {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('RawKeyUpEvent');
+        return const HTType('RawKeyUpEvent');
       case 'character':
         return character;
       case 'data':
@@ -245,20 +262,24 @@ extension RawKeyUpEventBinding on RawKeyUpEvent {
       case 'logicalKey':
         return logicalKey;
       case 'isKeyPressed':
-        return ({positionalArgs, namedArgs, typeArgs}) => isKeyPressed(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            isKeyPressed(positionalArgs[0]);
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -272,7 +293,7 @@ class RawKeyboardAutoBinding extends HTExternalClass {
       case 'RawKeyboard.instance':
         return RawKeyboard.instance;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

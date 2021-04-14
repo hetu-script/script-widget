@@ -11,7 +11,7 @@ dependencies:
   flutter:
     sdk: flutter
 
-  hetu_script: ^0.1.0+3
+  hetu_script: ^0.1.1+1
 
 dev_dependencies:
   pedantic: ^1.11.0

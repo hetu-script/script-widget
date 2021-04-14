@@ -14,37 +14,82 @@ class RawMaterialButtonAutoBinding extends HTExternalClass {
         return ({positionalArgs, namedArgs, typeArgs}) => RawMaterialButton(
             key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
             onPressed: namedArgs['onPressed'],
-            onLongPress: namedArgs.containsKey('onLongPress') ? namedArgs['onLongPress'] : null,
-            onHighlightChanged: namedArgs.containsKey('onHighlightChanged') ? namedArgs['onHighlightChanged'] : null,
-            mouseCursor: namedArgs.containsKey('mouseCursor') ? namedArgs['mouseCursor'] : null,
-            textStyle: namedArgs.containsKey('textStyle') ? namedArgs['textStyle'] : null,
-            fillColor: namedArgs.containsKey('fillColor') ? namedArgs['fillColor'] : null,
-            focusColor: namedArgs.containsKey('focusColor') ? namedArgs['focusColor'] : null,
-            hoverColor: namedArgs.containsKey('hoverColor') ? namedArgs['hoverColor'] : null,
-            highlightColor: namedArgs.containsKey('highlightColor') ? namedArgs['highlightColor'] : null,
-            splashColor: namedArgs.containsKey('splashColor') ? namedArgs['splashColor'] : null,
-            elevation: namedArgs.containsKey('elevation') ? namedArgs['elevation'] : 2.0,
-            focusElevation: namedArgs.containsKey('focusElevation') ? namedArgs['focusElevation'] : 4.0,
-            hoverElevation: namedArgs.containsKey('hoverElevation') ? namedArgs['hoverElevation'] : 4.0,
-            highlightElevation: namedArgs.containsKey('highlightElevation') ? namedArgs['highlightElevation'] : 8.0,
-            disabledElevation: namedArgs.containsKey('disabledElevation') ? namedArgs['disabledElevation'] : 0.0,
-            padding: namedArgs.containsKey('padding') ? namedArgs['padding'] : EdgeInsets.zero,
-            visualDensity: namedArgs.containsKey('visualDensity') ? namedArgs['visualDensity'] : VisualDensity.standard,
+            onLongPress: namedArgs.containsKey('onLongPress')
+                ? namedArgs['onLongPress']
+                : null,
+            onHighlightChanged: namedArgs.containsKey('onHighlightChanged')
+                ? namedArgs['onHighlightChanged']
+                : null,
+            mouseCursor: namedArgs.containsKey('mouseCursor')
+                ? namedArgs['mouseCursor']
+                : null,
+            textStyle: namedArgs.containsKey('textStyle')
+                ? namedArgs['textStyle']
+                : null,
+            fillColor: namedArgs.containsKey('fillColor')
+                ? namedArgs['fillColor']
+                : null,
+            focusColor: namedArgs.containsKey('focusColor')
+                ? namedArgs['focusColor']
+                : null,
+            hoverColor: namedArgs.containsKey('hoverColor')
+                ? namedArgs['hoverColor']
+                : null,
+            highlightColor: namedArgs.containsKey('highlightColor')
+                ? namedArgs['highlightColor']
+                : null,
+            splashColor: namedArgs.containsKey('splashColor')
+                ? namedArgs['splashColor']
+                : null,
+            elevation: namedArgs.containsKey('elevation')
+                ? namedArgs['elevation']
+                : 2.0,
+            focusElevation: namedArgs.containsKey('focusElevation')
+                ? namedArgs['focusElevation']
+                : 4.0,
+            hoverElevation: namedArgs.containsKey('hoverElevation')
+                ? namedArgs['hoverElevation']
+                : 4.0,
+            highlightElevation: namedArgs.containsKey('highlightElevation')
+                ? namedArgs['highlightElevation']
+                : 8.0,
+            disabledElevation: namedArgs.containsKey('disabledElevation')
+                ? namedArgs['disabledElevation']
+                : 0.0,
+            padding: namedArgs.containsKey('padding')
+                ? namedArgs['padding']
+                : EdgeInsets.zero,
+            visualDensity: namedArgs.containsKey('visualDensity')
+                ? namedArgs['visualDensity']
+                : VisualDensity.standard,
             constraints: namedArgs.containsKey('constraints')
                 ? namedArgs['constraints']
                 : const BoxConstraints(minWidth: 88.0, minHeight: 36.0),
-            shape: namedArgs.containsKey('shape') ? namedArgs['shape'] : const RoundedRectangleBorder(),
-            animationDuration:
-                namedArgs.containsKey('animationDuration') ? namedArgs['animationDuration'] : kThemeChangeDuration,
-            clipBehavior: namedArgs.containsKey('clipBehavior') ? namedArgs['clipBehavior'] : Clip.none,
-            focusNode: namedArgs.containsKey('focusNode') ? namedArgs['focusNode'] : null,
-            autofocus: namedArgs.containsKey('autofocus') ? namedArgs['autofocus'] : false,
+            shape: namedArgs.containsKey('shape')
+                ? namedArgs['shape']
+                : const RoundedRectangleBorder(),
+            animationDuration: namedArgs.containsKey('animationDuration')
+                ? namedArgs['animationDuration']
+                : kThemeChangeDuration,
+            clipBehavior: namedArgs.containsKey('clipBehavior')
+                ? namedArgs['clipBehavior']
+                : Clip.none,
+            focusNode: namedArgs.containsKey('focusNode')
+                ? namedArgs['focusNode']
+                : null,
+            autofocus: namedArgs.containsKey('autofocus')
+                ? namedArgs['autofocus']
+                : false,
             materialTapTargetSize:
-                namedArgs.containsKey('materialTapTargetSize') ? namedArgs['materialTapTargetSize'] : null,
+                namedArgs.containsKey('materialTapTargetSize')
+                    ? namedArgs['materialTapTargetSize']
+                    : null,
             child: namedArgs.containsKey('child') ? namedArgs['child'] : null,
-            enableFeedback: namedArgs.containsKey('enableFeedback') ? namedArgs['enableFeedback'] : true);
+            enableFeedback: namedArgs.containsKey('enableFeedback')
+                ? namedArgs['enableFeedback']
+                : true);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -55,7 +100,8 @@ class RawMaterialButtonAutoBinding extends HTExternalClass {
 
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'VoidCallback': (HTFunction function) => () => function.call(positionalArgs: const [], namedArgs: const {}),
+      'VoidCallback': (HTFunction function) =>
+          () => function.call(positionalArgs: const [], namedArgs: const {}),
     };
   }
 }
@@ -64,7 +110,7 @@ extension RawMaterialButtonBinding on RawMaterialButton {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('RawMaterialButton');
+        return const HTType('RawMaterialButton');
       case 'onPressed':
         return onPressed;
       case 'onLongPress':
@@ -130,25 +176,37 @@ extension RawMaterialButtonBinding on RawMaterialButton {
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'toStringShallow':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
-            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            joiner:
+                namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

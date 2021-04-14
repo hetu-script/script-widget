@@ -14,7 +14,7 @@ class GestureDispositionAutoBinding extends HTExternalClass {
       case 'GestureDisposition.rejected':
         return GestureDisposition.rejected;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -22,13 +22,14 @@ class GestureDispositionAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('GestureDisposition');
+        return const HTType('GestureDisposition');
       case 'index':
         return (instance as GestureDisposition).index;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => (instance as GestureDisposition).toString();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            (instance as GestureDisposition).toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -42,7 +43,7 @@ class GestureArenaManagerAutoBinding extends HTExternalClass {
       case 'GestureArenaManager':
         return ({positionalArgs, namedArgs, typeArgs}) => GestureArenaManager();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -56,19 +57,24 @@ extension GestureArenaManagerBinding on GestureArenaManager {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('GestureArenaManager');
+        return const HTType('GestureArenaManager');
       case 'add':
-        return ({positionalArgs, namedArgs, typeArgs}) => add(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            add(positionalArgs[0], positionalArgs[1]);
       case 'close':
-        return ({positionalArgs, namedArgs, typeArgs}) => close(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            close(positionalArgs[0]);
       case 'sweep':
-        return ({positionalArgs, namedArgs, typeArgs}) => sweep(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            sweep(positionalArgs[0]);
       case 'hold':
-        return ({positionalArgs, namedArgs, typeArgs}) => hold(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            hold(positionalArgs[0]);
       case 'release':
-        return ({positionalArgs, namedArgs, typeArgs}) => release(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            release(positionalArgs[0]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

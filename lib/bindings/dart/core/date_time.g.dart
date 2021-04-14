@@ -30,15 +30,23 @@ class DateTimeAutoBinding extends HTExternalClass {
       case 'DateTime.now':
         return ({positionalArgs, namedArgs, typeArgs}) => DateTime.now();
       case 'DateTime.fromMillisecondsSinceEpoch':
-        return ({positionalArgs, namedArgs, typeArgs}) => DateTime.fromMillisecondsSinceEpoch(positionalArgs[0],
-            isUtc: namedArgs.containsKey('isUtc') ? namedArgs['isUtc'] : false);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            DateTime.fromMillisecondsSinceEpoch(positionalArgs[0],
+                isUtc: namedArgs.containsKey('isUtc')
+                    ? namedArgs['isUtc']
+                    : false);
       case 'DateTime.fromMicrosecondsSinceEpoch':
-        return ({positionalArgs, namedArgs, typeArgs}) => DateTime.fromMicrosecondsSinceEpoch(positionalArgs[0],
-            isUtc: namedArgs.containsKey('isUtc') ? namedArgs['isUtc'] : false);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            DateTime.fromMicrosecondsSinceEpoch(positionalArgs[0],
+                isUtc: namedArgs.containsKey('isUtc')
+                    ? namedArgs['isUtc']
+                    : false);
       case 'DateTime.parse':
-        return ({positionalArgs, namedArgs, typeArgs}) => DateTime.parse(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            DateTime.parse(positionalArgs[0]);
       case 'DateTime.tryParse':
-        return ({positionalArgs, namedArgs, typeArgs}) => DateTime.tryParse(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            DateTime.tryParse(positionalArgs[0]);
       case 'DateTime.monday':
         return DateTime.monday;
       case 'DateTime.tuesday':
@@ -82,7 +90,7 @@ class DateTimeAutoBinding extends HTExternalClass {
       case 'DateTime.monthsPerYear':
         return DateTime.monthsPerYear;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -96,7 +104,7 @@ extension DateTimeBinding on DateTime {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('DateTime');
+        return const HTType('DateTime');
       case 'isUtc':
         return isUtc;
       case 'hashCode':
@@ -128,13 +136,17 @@ extension DateTimeBinding on DateTime {
       case 'weekday':
         return weekday;
       case 'isBefore':
-        return ({positionalArgs, namedArgs, typeArgs}) => isBefore(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            isBefore(positionalArgs[0]);
       case 'isAfter':
-        return ({positionalArgs, namedArgs, typeArgs}) => isAfter(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            isAfter(positionalArgs[0]);
       case 'isAtSameMomentAs':
-        return ({positionalArgs, namedArgs, typeArgs}) => isAtSameMomentAs(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            isAtSameMomentAs(positionalArgs[0]);
       case 'compareTo':
-        return ({positionalArgs, namedArgs, typeArgs}) => compareTo(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            compareTo(positionalArgs[0]);
       case 'toLocal':
         return ({positionalArgs, namedArgs, typeArgs}) => toLocal();
       case 'toUtc':
@@ -144,13 +156,16 @@ extension DateTimeBinding on DateTime {
       case 'toIso8601String':
         return ({positionalArgs, namedArgs, typeArgs}) => toIso8601String();
       case 'add':
-        return ({positionalArgs, namedArgs, typeArgs}) => add(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            add(positionalArgs[0]);
       case 'subtract':
-        return ({positionalArgs, namedArgs, typeArgs}) => subtract(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            subtract(positionalArgs[0]);
       case 'difference':
-        return ({positionalArgs, namedArgs, typeArgs}) => difference(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            difference(positionalArgs[0]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

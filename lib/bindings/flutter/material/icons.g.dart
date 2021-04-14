@@ -11318,7 +11318,7 @@ class IconsAutoBinding extends HTExternalClass {
       case 'Icons.zoom_out_sharp':
         return Icons.zoom_out_sharp;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

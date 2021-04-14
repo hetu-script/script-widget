@@ -11,7 +11,7 @@ class PointerEventConverterAutoBinding extends HTExternalClass {
         return ({positionalArgs, namedArgs, typeArgs}) =>
             PointerEventConverter.expand(positionalArgs[0], positionalArgs[1]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

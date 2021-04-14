@@ -12,11 +12,17 @@ class PageControllerAutoBinding extends HTExternalClass {
     switch (varName) {
       case 'PageController':
         return ({positionalArgs, namedArgs, typeArgs}) => PageController(
-            initialPage: namedArgs.containsKey('initialPage') ? namedArgs['initialPage'] : 0,
-            keepPage: namedArgs.containsKey('keepPage') ? namedArgs['keepPage'] : true,
-            viewportFraction: namedArgs.containsKey('viewportFraction') ? namedArgs['viewportFraction'] : 1.0);
+            initialPage: namedArgs.containsKey('initialPage')
+                ? namedArgs['initialPage']
+                : 0,
+            keepPage: namedArgs.containsKey('keepPage')
+                ? namedArgs['keepPage']
+                : true,
+            viewportFraction: namedArgs.containsKey('viewportFraction')
+                ? namedArgs['viewportFraction']
+                : 1.0);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -27,7 +33,8 @@ class PageControllerAutoBinding extends HTExternalClass {
 
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'VoidCallback': (HTFunction function) => () => function.call(positionalArgs: const [], namedArgs: const {}),
+      'VoidCallback': (HTFunction function) =>
+          () => function.call(positionalArgs: const [], namedArgs: const {}),
     };
   }
 }
@@ -36,7 +43,7 @@ extension PageControllerBinding on PageController {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('PageController');
+        return const HTType('PageController');
       case 'initialPage':
         return initialPage;
       case 'keepPage':
@@ -58,44 +65,61 @@ extension PageControllerBinding on PageController {
       case 'offset':
         return offset;
       case 'animateToPage':
-        return ({positionalArgs, namedArgs, typeArgs}) => animateToPage(positionalArgs[0],
-            duration: namedArgs.containsKey('duration') ? namedArgs['duration'] : null,
+        return ({positionalArgs, namedArgs, typeArgs}) => animateToPage(
+            positionalArgs[0],
+            duration: namedArgs.containsKey('duration')
+                ? namedArgs['duration']
+                : null,
             curve: namedArgs.containsKey('curve') ? namedArgs['curve'] : null);
       case 'jumpToPage':
-        return ({positionalArgs, namedArgs, typeArgs}) => jumpToPage(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            jumpToPage(positionalArgs[0]);
       case 'nextPage':
         return ({positionalArgs, namedArgs, typeArgs}) => nextPage(
-            duration: namedArgs.containsKey('duration') ? namedArgs['duration'] : null,
+            duration: namedArgs.containsKey('duration')
+                ? namedArgs['duration']
+                : null,
             curve: namedArgs.containsKey('curve') ? namedArgs['curve'] : null);
       case 'previousPage':
         return ({positionalArgs, namedArgs, typeArgs}) => previousPage(
-            duration: namedArgs.containsKey('duration') ? namedArgs['duration'] : null,
+            duration: namedArgs.containsKey('duration')
+                ? namedArgs['duration']
+                : null,
             curve: namedArgs.containsKey('curve') ? namedArgs['curve'] : null);
       case 'createScrollPosition':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            createScrollPosition(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
+        return ({positionalArgs, namedArgs, typeArgs}) => createScrollPosition(
+            positionalArgs[0], positionalArgs[1], positionalArgs[2]);
       case 'attach':
-        return ({positionalArgs, namedArgs, typeArgs}) => attach(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            attach(positionalArgs[0]);
       case 'animateTo':
-        return ({positionalArgs, namedArgs, typeArgs}) => animateTo(positionalArgs[0],
-            duration: namedArgs.containsKey('duration') ? namedArgs['duration'] : null,
+        return ({positionalArgs, namedArgs, typeArgs}) => animateTo(
+            positionalArgs[0],
+            duration: namedArgs.containsKey('duration')
+                ? namedArgs['duration']
+                : null,
             curve: namedArgs.containsKey('curve') ? namedArgs['curve'] : null);
       case 'jumpTo':
-        return ({positionalArgs, namedArgs, typeArgs}) => jumpTo(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            jumpTo(positionalArgs[0]);
       case 'detach':
-        return ({positionalArgs, namedArgs, typeArgs}) => detach(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            detach(positionalArgs[0]);
       case 'dispose':
         return ({positionalArgs, namedArgs, typeArgs}) => dispose();
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       case 'debugFillDescription':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillDescription(List<String>.from(positionalArgs[0]));
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillDescription(List<String>.from(positionalArgs[0]));
       case 'addListener':
-        return ({positionalArgs, namedArgs, typeArgs}) => addListener(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            addListener(positionalArgs[0]);
       case 'removeListener':
-        return ({positionalArgs, namedArgs, typeArgs}) => removeListener(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            removeListener(positionalArgs[0]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -115,7 +139,7 @@ class PageMetricsAutoBinding extends HTExternalClass {
             axisDirection: namedArgs['axisDirection'],
             viewportFraction: namedArgs['viewportFraction']);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -129,7 +153,7 @@ extension PageMetricsBinding on PageMetrics {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('PageMetrics');
+        return const HTType('PageMetrics');
       case 'viewportFraction':
         return viewportFraction;
       case 'axisDirection':
@@ -164,16 +188,27 @@ extension PageMetricsBinding on PageMetrics {
         return extentAfter;
       case 'copyWith':
         return ({positionalArgs, namedArgs, typeArgs}) => copyWith(
-            minScrollExtent: namedArgs.containsKey('minScrollExtent') ? namedArgs['minScrollExtent'] : null,
-            maxScrollExtent: namedArgs.containsKey('maxScrollExtent') ? namedArgs['maxScrollExtent'] : null,
-            pixels: namedArgs.containsKey('pixels') ? namedArgs['pixels'] : null,
-            viewportDimension: namedArgs.containsKey('viewportDimension') ? namedArgs['viewportDimension'] : null,
-            axisDirection: namedArgs.containsKey('axisDirection') ? namedArgs['axisDirection'] : null,
-            viewportFraction: namedArgs.containsKey('viewportFraction') ? namedArgs['viewportFraction'] : null);
+            minScrollExtent: namedArgs.containsKey('minScrollExtent')
+                ? namedArgs['minScrollExtent']
+                : null,
+            maxScrollExtent: namedArgs.containsKey('maxScrollExtent')
+                ? namedArgs['maxScrollExtent']
+                : null,
+            pixels:
+                namedArgs.containsKey('pixels') ? namedArgs['pixels'] : null,
+            viewportDimension: namedArgs.containsKey('viewportDimension')
+                ? namedArgs['viewportDimension']
+                : null,
+            axisDirection: namedArgs.containsKey('axisDirection')
+                ? namedArgs['axisDirection']
+                : null,
+            viewportFraction: namedArgs.containsKey('viewportFraction')
+                ? namedArgs['viewportFraction']
+                : null);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -185,10 +220,11 @@ class PageScrollPhysicsAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'PageScrollPhysics':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            PageScrollPhysics(parent: namedArgs.containsKey('parent') ? namedArgs['parent'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => PageScrollPhysics(
+            parent:
+                namedArgs.containsKey('parent') ? namedArgs['parent'] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -202,7 +238,7 @@ extension PageScrollPhysicsBinding on PageScrollPhysics {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('PageScrollPhysics');
+        return const HTType('PageScrollPhysics');
       case 'parent':
         return parent;
       case 'allowImplicitScrolling':
@@ -220,7 +256,8 @@ extension PageScrollPhysicsBinding on PageScrollPhysics {
       case 'dragStartDistanceMotionThreshold':
         return dragStartDistanceMotionThreshold;
       case 'applyTo':
-        return ({positionalArgs, namedArgs, typeArgs}) => applyTo(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            applyTo(positionalArgs[0]);
       case 'createBallisticSimulation':
         return ({positionalArgs, namedArgs, typeArgs}) =>
             createBallisticSimulation(positionalArgs[0], positionalArgs[1]);
@@ -228,24 +265,37 @@ extension PageScrollPhysicsBinding on PageScrollPhysics {
         return ({positionalArgs, namedArgs, typeArgs}) =>
             applyPhysicsToUserOffset(positionalArgs[0], positionalArgs[1]);
       case 'shouldAcceptUserOffset':
-        return ({positionalArgs, namedArgs, typeArgs}) => shouldAcceptUserOffset(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            shouldAcceptUserOffset(positionalArgs[0]);
       case 'recommendDeferredLoading':
         return ({positionalArgs, namedArgs, typeArgs}) =>
-            recommendDeferredLoading(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
+            recommendDeferredLoading(
+                positionalArgs[0], positionalArgs[1], positionalArgs[2]);
       case 'applyBoundaryConditions':
-        return ({positionalArgs, namedArgs, typeArgs}) => applyBoundaryConditions(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            applyBoundaryConditions(positionalArgs[0], positionalArgs[1]);
       case 'adjustPositionForNewDimensions':
-        return ({positionalArgs, namedArgs, typeArgs}) => adjustPositionForNewDimensions(
-            oldPosition: namedArgs.containsKey('oldPosition') ? namedArgs['oldPosition'] : null,
-            newPosition: namedArgs.containsKey('newPosition') ? namedArgs['newPosition'] : null,
-            isScrolling: namedArgs.containsKey('isScrolling') ? namedArgs['isScrolling'] : null,
-            velocity: namedArgs.containsKey('velocity') ? namedArgs['velocity'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            adjustPositionForNewDimensions(
+                oldPosition: namedArgs.containsKey('oldPosition')
+                    ? namedArgs['oldPosition']
+                    : null,
+                newPosition: namedArgs.containsKey('newPosition')
+                    ? namedArgs['newPosition']
+                    : null,
+                isScrolling: namedArgs.containsKey('isScrolling')
+                    ? namedArgs['isScrolling']
+                    : null,
+                velocity: namedArgs.containsKey('velocity')
+                    ? namedArgs['velocity']
+                    : null);
       case 'carriedMomentum':
-        return ({positionalArgs, namedArgs, typeArgs}) => carriedMomentum(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            carriedMomentum(positionalArgs[0]);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -259,54 +309,109 @@ class PageViewAutoBinding extends HTExternalClass {
       case 'PageView':
         return ({positionalArgs, namedArgs, typeArgs}) => PageView(
             key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
-            scrollDirection: namedArgs.containsKey('scrollDirection') ? namedArgs['scrollDirection'] : Axis.horizontal,
-            reverse: namedArgs.containsKey('reverse') ? namedArgs['reverse'] : false,
-            controller: namedArgs.containsKey('controller') ? namedArgs['controller'] : null,
-            physics: namedArgs.containsKey('physics') ? namedArgs['physics'] : null,
-            pageSnapping: namedArgs.containsKey('pageSnapping') ? namedArgs['pageSnapping'] : true,
-            onPageChanged: namedArgs.containsKey('onPageChanged') ? namedArgs['onPageChanged'] : null,
-            dragStartBehavior:
-                namedArgs.containsKey('dragStartBehavior') ? namedArgs['dragStartBehavior'] : DragStartBehavior.start,
+            scrollDirection: namedArgs.containsKey('scrollDirection')
+                ? namedArgs['scrollDirection']
+                : Axis.horizontal,
+            reverse:
+                namedArgs.containsKey('reverse') ? namedArgs['reverse'] : false,
+            controller: namedArgs.containsKey('controller')
+                ? namedArgs['controller']
+                : null,
+            physics:
+                namedArgs.containsKey('physics') ? namedArgs['physics'] : null,
+            pageSnapping: namedArgs.containsKey('pageSnapping')
+                ? namedArgs['pageSnapping']
+                : true,
+            onPageChanged: namedArgs.containsKey('onPageChanged')
+                ? namedArgs['onPageChanged']
+                : null,
+            dragStartBehavior: namedArgs.containsKey('dragStartBehavior')
+                ? namedArgs['dragStartBehavior']
+                : DragStartBehavior.start,
             allowImplicitScrolling:
-                namedArgs.containsKey('allowImplicitScrolling') ? namedArgs['allowImplicitScrolling'] : false,
-            restorationId: namedArgs.containsKey('restorationId') ? namedArgs['restorationId'] : null,
-            clipBehavior: namedArgs.containsKey('clipBehavior') ? namedArgs['clipBehavior'] : Clip.hardEdge,
-            children: namedArgs.containsKey('children') ? List<Widget>.from(namedArgs['children']) : const <Widget>[]);
+                namedArgs.containsKey('allowImplicitScrolling')
+                    ? namedArgs['allowImplicitScrolling']
+                    : false,
+            restorationId: namedArgs.containsKey('restorationId')
+                ? namedArgs['restorationId']
+                : null,
+            clipBehavior: namedArgs.containsKey('clipBehavior')
+                ? namedArgs['clipBehavior']
+                : Clip.hardEdge,
+            children: namedArgs.containsKey('children')
+                ? List<Widget>.from(namedArgs['children'])
+                : const <Widget>[]);
       case 'PageView.builder':
         return ({positionalArgs, namedArgs, typeArgs}) => PageView.builder(
             key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
-            scrollDirection: namedArgs.containsKey('scrollDirection') ? namedArgs['scrollDirection'] : Axis.horizontal,
-            reverse: namedArgs.containsKey('reverse') ? namedArgs['reverse'] : false,
-            controller: namedArgs.containsKey('controller') ? namedArgs['controller'] : null,
-            physics: namedArgs.containsKey('physics') ? namedArgs['physics'] : null,
-            pageSnapping: namedArgs.containsKey('pageSnapping') ? namedArgs['pageSnapping'] : true,
-            onPageChanged: namedArgs.containsKey('onPageChanged') ? namedArgs['onPageChanged'] : null,
+            scrollDirection: namedArgs.containsKey('scrollDirection')
+                ? namedArgs['scrollDirection']
+                : Axis.horizontal,
+            reverse:
+                namedArgs.containsKey('reverse') ? namedArgs['reverse'] : false,
+            controller: namedArgs.containsKey('controller')
+                ? namedArgs['controller']
+                : null,
+            physics:
+                namedArgs.containsKey('physics') ? namedArgs['physics'] : null,
+            pageSnapping: namedArgs.containsKey('pageSnapping')
+                ? namedArgs['pageSnapping']
+                : true,
+            onPageChanged: namedArgs.containsKey('onPageChanged')
+                ? namedArgs['onPageChanged']
+                : null,
             itemBuilder: namedArgs['itemBuilder'],
-            itemCount: namedArgs.containsKey('itemCount') ? namedArgs['itemCount'] : null,
-            dragStartBehavior:
-                namedArgs.containsKey('dragStartBehavior') ? namedArgs['dragStartBehavior'] : DragStartBehavior.start,
+            itemCount: namedArgs.containsKey('itemCount')
+                ? namedArgs['itemCount']
+                : null,
+            dragStartBehavior: namedArgs.containsKey('dragStartBehavior')
+                ? namedArgs['dragStartBehavior']
+                : DragStartBehavior.start,
             allowImplicitScrolling:
-                namedArgs.containsKey('allowImplicitScrolling') ? namedArgs['allowImplicitScrolling'] : false,
-            restorationId: namedArgs.containsKey('restorationId') ? namedArgs['restorationId'] : null,
-            clipBehavior: namedArgs.containsKey('clipBehavior') ? namedArgs['clipBehavior'] : Clip.hardEdge);
+                namedArgs.containsKey('allowImplicitScrolling')
+                    ? namedArgs['allowImplicitScrolling']
+                    : false,
+            restorationId: namedArgs.containsKey('restorationId')
+                ? namedArgs['restorationId']
+                : null,
+            clipBehavior: namedArgs.containsKey('clipBehavior')
+                ? namedArgs['clipBehavior']
+                : Clip.hardEdge);
       case 'PageView.custom':
         return ({positionalArgs, namedArgs, typeArgs}) => PageView.custom(
             key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
-            scrollDirection: namedArgs.containsKey('scrollDirection') ? namedArgs['scrollDirection'] : Axis.horizontal,
-            reverse: namedArgs.containsKey('reverse') ? namedArgs['reverse'] : false,
-            controller: namedArgs.containsKey('controller') ? namedArgs['controller'] : null,
-            physics: namedArgs.containsKey('physics') ? namedArgs['physics'] : null,
-            pageSnapping: namedArgs.containsKey('pageSnapping') ? namedArgs['pageSnapping'] : true,
-            onPageChanged: namedArgs.containsKey('onPageChanged') ? namedArgs['onPageChanged'] : null,
+            scrollDirection: namedArgs.containsKey('scrollDirection')
+                ? namedArgs['scrollDirection']
+                : Axis.horizontal,
+            reverse:
+                namedArgs.containsKey('reverse') ? namedArgs['reverse'] : false,
+            controller: namedArgs.containsKey('controller')
+                ? namedArgs['controller']
+                : null,
+            physics:
+                namedArgs.containsKey('physics') ? namedArgs['physics'] : null,
+            pageSnapping: namedArgs.containsKey('pageSnapping')
+                ? namedArgs['pageSnapping']
+                : true,
+            onPageChanged: namedArgs.containsKey('onPageChanged')
+                ? namedArgs['onPageChanged']
+                : null,
             childrenDelegate: namedArgs['childrenDelegate'],
-            dragStartBehavior:
-                namedArgs.containsKey('dragStartBehavior') ? namedArgs['dragStartBehavior'] : DragStartBehavior.start,
+            dragStartBehavior: namedArgs.containsKey('dragStartBehavior')
+                ? namedArgs['dragStartBehavior']
+                : DragStartBehavior.start,
             allowImplicitScrolling:
-                namedArgs.containsKey('allowImplicitScrolling') ? namedArgs['allowImplicitScrolling'] : false,
-            restorationId: namedArgs.containsKey('restorationId') ? namedArgs['restorationId'] : null,
-            clipBehavior: namedArgs.containsKey('clipBehavior') ? namedArgs['clipBehavior'] : Clip.hardEdge);
+                namedArgs.containsKey('allowImplicitScrolling')
+                    ? namedArgs['allowImplicitScrolling']
+                    : false,
+            restorationId: namedArgs.containsKey('restorationId')
+                ? namedArgs['restorationId']
+                : null,
+            clipBehavior: namedArgs.containsKey('clipBehavior')
+                ? namedArgs['clipBehavior']
+                : Clip.hardEdge);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -317,8 +422,9 @@ class PageViewAutoBinding extends HTExternalClass {
 
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'IndexedWidgetBuilder': (HTFunction function) =>
-          (context, index) => function.call(positionalArgs: [context, index], namedArgs: const {}) as Widget,
+      'IndexedWidgetBuilder': (HTFunction function) => (context, index) =>
+          function.call(positionalArgs: [context, index], namedArgs: const {})
+              as Widget,
     };
   }
 }
@@ -327,7 +433,7 @@ extension PageViewBinding on PageView {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('PageView');
+        return const HTType('PageView');
       case 'allowImplicitScrolling':
         return allowImplicitScrolling;
       case 'restorationId':
@@ -361,25 +467,37 @@ extension PageViewBinding on PageView {
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'toStringShallow':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
-            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            joiner:
+                namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

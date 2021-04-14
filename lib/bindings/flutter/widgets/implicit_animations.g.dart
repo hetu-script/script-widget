@@ -14,7 +14,7 @@ class BoxConstraintsTweenAutoBinding extends HTExternalClass {
             begin: namedArgs.containsKey('begin') ? namedArgs['begin'] : null,
             end: namedArgs.containsKey('end') ? namedArgs['end'] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -33,25 +33,30 @@ extension BoxConstraintsTweenBinding on BoxConstraintsTween {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('BoxConstraintsTween');
+        return const HTType('BoxConstraintsTween');
       case 'begin':
         return begin;
       case 'end':
         return end;
       case 'lerp':
-        return ({positionalArgs, namedArgs, typeArgs}) => lerp(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            lerp(positionalArgs[0]);
       case 'transform':
-        return ({positionalArgs, namedArgs, typeArgs}) => transform(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            transform(positionalArgs[0]);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       case 'evaluate':
-        return ({positionalArgs, namedArgs, typeArgs}) => evaluate(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            evaluate(positionalArgs[0]);
       case 'animate':
-        return ({positionalArgs, namedArgs, typeArgs}) => animate(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            animate(positionalArgs[0]);
       case 'chain':
-        return ({positionalArgs, namedArgs, typeArgs}) => chain(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            chain(positionalArgs[0]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -64,7 +69,7 @@ extension BoxConstraintsTweenBinding on BoxConstraintsTween {
         end = value;
         break;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -80,7 +85,7 @@ class DecorationTweenAutoBinding extends HTExternalClass {
             begin: namedArgs.containsKey('begin') ? namedArgs['begin'] : null,
             end: namedArgs.containsKey('end') ? namedArgs['end'] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -99,25 +104,30 @@ extension DecorationTweenBinding on DecorationTween {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('DecorationTween');
+        return const HTType('DecorationTween');
       case 'begin':
         return begin;
       case 'end':
         return end;
       case 'lerp':
-        return ({positionalArgs, namedArgs, typeArgs}) => lerp(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            lerp(positionalArgs[0]);
       case 'transform':
-        return ({positionalArgs, namedArgs, typeArgs}) => transform(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            transform(positionalArgs[0]);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       case 'evaluate':
-        return ({positionalArgs, namedArgs, typeArgs}) => evaluate(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            evaluate(positionalArgs[0]);
       case 'animate':
-        return ({positionalArgs, namedArgs, typeArgs}) => animate(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            animate(positionalArgs[0]);
       case 'chain':
-        return ({positionalArgs, namedArgs, typeArgs}) => chain(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            chain(positionalArgs[0]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -130,7 +140,7 @@ extension DecorationTweenBinding on DecorationTween {
         end = value;
         break;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -146,7 +156,7 @@ class EdgeInsetsTweenAutoBinding extends HTExternalClass {
             begin: namedArgs.containsKey('begin') ? namedArgs['begin'] : null,
             end: namedArgs.containsKey('end') ? namedArgs['end'] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -165,25 +175,30 @@ extension EdgeInsetsTweenBinding on EdgeInsetsTween {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('EdgeInsetsTween');
+        return const HTType('EdgeInsetsTween');
       case 'begin':
         return begin;
       case 'end':
         return end;
       case 'lerp':
-        return ({positionalArgs, namedArgs, typeArgs}) => lerp(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            lerp(positionalArgs[0]);
       case 'transform':
-        return ({positionalArgs, namedArgs, typeArgs}) => transform(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            transform(positionalArgs[0]);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       case 'evaluate':
-        return ({positionalArgs, namedArgs, typeArgs}) => evaluate(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            evaluate(positionalArgs[0]);
       case 'animate':
-        return ({positionalArgs, namedArgs, typeArgs}) => animate(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            animate(positionalArgs[0]);
       case 'chain':
-        return ({positionalArgs, namedArgs, typeArgs}) => chain(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            chain(positionalArgs[0]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -196,7 +211,7 @@ extension EdgeInsetsTweenBinding on EdgeInsetsTween {
         end = value;
         break;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -208,11 +223,13 @@ class EdgeInsetsGeometryTweenAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'EdgeInsetsGeometryTween':
-        return ({positionalArgs, namedArgs, typeArgs}) => EdgeInsetsGeometryTween(
-            begin: namedArgs.containsKey('begin') ? namedArgs['begin'] : null,
-            end: namedArgs.containsKey('end') ? namedArgs['end'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            EdgeInsetsGeometryTween(
+                begin:
+                    namedArgs.containsKey('begin') ? namedArgs['begin'] : null,
+                end: namedArgs.containsKey('end') ? namedArgs['end'] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -231,25 +248,30 @@ extension EdgeInsetsGeometryTweenBinding on EdgeInsetsGeometryTween {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('EdgeInsetsGeometryTween');
+        return const HTType('EdgeInsetsGeometryTween');
       case 'begin':
         return begin;
       case 'end':
         return end;
       case 'lerp':
-        return ({positionalArgs, namedArgs, typeArgs}) => lerp(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            lerp(positionalArgs[0]);
       case 'transform':
-        return ({positionalArgs, namedArgs, typeArgs}) => transform(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            transform(positionalArgs[0]);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       case 'evaluate':
-        return ({positionalArgs, namedArgs, typeArgs}) => evaluate(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            evaluate(positionalArgs[0]);
       case 'animate':
-        return ({positionalArgs, namedArgs, typeArgs}) => animate(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            animate(positionalArgs[0]);
       case 'chain':
-        return ({positionalArgs, namedArgs, typeArgs}) => chain(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            chain(positionalArgs[0]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -262,7 +284,7 @@ extension EdgeInsetsGeometryTweenBinding on EdgeInsetsGeometryTween {
         end = value;
         break;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -278,7 +300,7 @@ class BorderRadiusTweenAutoBinding extends HTExternalClass {
             begin: namedArgs.containsKey('begin') ? namedArgs['begin'] : null,
             end: namedArgs.containsKey('end') ? namedArgs['end'] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -297,25 +319,30 @@ extension BorderRadiusTweenBinding on BorderRadiusTween {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('BorderRadiusTween');
+        return const HTType('BorderRadiusTween');
       case 'begin':
         return begin;
       case 'end':
         return end;
       case 'lerp':
-        return ({positionalArgs, namedArgs, typeArgs}) => lerp(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            lerp(positionalArgs[0]);
       case 'transform':
-        return ({positionalArgs, namedArgs, typeArgs}) => transform(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            transform(positionalArgs[0]);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       case 'evaluate':
-        return ({positionalArgs, namedArgs, typeArgs}) => evaluate(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            evaluate(positionalArgs[0]);
       case 'animate':
-        return ({positionalArgs, namedArgs, typeArgs}) => animate(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            animate(positionalArgs[0]);
       case 'chain':
-        return ({positionalArgs, namedArgs, typeArgs}) => chain(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            chain(positionalArgs[0]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -328,7 +355,7 @@ extension BorderRadiusTweenBinding on BorderRadiusTween {
         end = value;
         break;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -344,7 +371,7 @@ class BorderTweenAutoBinding extends HTExternalClass {
             begin: namedArgs.containsKey('begin') ? namedArgs['begin'] : null,
             end: namedArgs.containsKey('end') ? namedArgs['end'] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -363,25 +390,30 @@ extension BorderTweenBinding on BorderTween {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('BorderTween');
+        return const HTType('BorderTween');
       case 'begin':
         return begin;
       case 'end':
         return end;
       case 'lerp':
-        return ({positionalArgs, namedArgs, typeArgs}) => lerp(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            lerp(positionalArgs[0]);
       case 'transform':
-        return ({positionalArgs, namedArgs, typeArgs}) => transform(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            transform(positionalArgs[0]);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       case 'evaluate':
-        return ({positionalArgs, namedArgs, typeArgs}) => evaluate(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            evaluate(positionalArgs[0]);
       case 'animate':
-        return ({positionalArgs, namedArgs, typeArgs}) => animate(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            animate(positionalArgs[0]);
       case 'chain':
-        return ({positionalArgs, namedArgs, typeArgs}) => chain(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            chain(positionalArgs[0]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -394,7 +426,7 @@ extension BorderTweenBinding on BorderTween {
         end = value;
         break;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -410,7 +442,7 @@ class Matrix4TweenAutoBinding extends HTExternalClass {
             begin: namedArgs.containsKey('begin') ? namedArgs['begin'] : null,
             end: namedArgs.containsKey('end') ? namedArgs['end'] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -429,25 +461,30 @@ extension Matrix4TweenBinding on Matrix4Tween {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('Matrix4Tween');
+        return const HTType('Matrix4Tween');
       case 'begin':
         return begin;
       case 'end':
         return end;
       case 'lerp':
-        return ({positionalArgs, namedArgs, typeArgs}) => lerp(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            lerp(positionalArgs[0]);
       case 'transform':
-        return ({positionalArgs, namedArgs, typeArgs}) => transform(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            transform(positionalArgs[0]);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       case 'evaluate':
-        return ({positionalArgs, namedArgs, typeArgs}) => evaluate(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            evaluate(positionalArgs[0]);
       case 'animate':
-        return ({positionalArgs, namedArgs, typeArgs}) => animate(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            animate(positionalArgs[0]);
       case 'chain':
-        return ({positionalArgs, namedArgs, typeArgs}) => chain(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            chain(positionalArgs[0]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -460,7 +497,7 @@ extension Matrix4TweenBinding on Matrix4Tween {
         end = value;
         break;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -476,7 +513,7 @@ class TextStyleTweenAutoBinding extends HTExternalClass {
             begin: namedArgs.containsKey('begin') ? namedArgs['begin'] : null,
             end: namedArgs.containsKey('end') ? namedArgs['end'] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -495,25 +532,30 @@ extension TextStyleTweenBinding on TextStyleTween {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('TextStyleTween');
+        return const HTType('TextStyleTween');
       case 'begin':
         return begin;
       case 'end':
         return end;
       case 'lerp':
-        return ({positionalArgs, namedArgs, typeArgs}) => lerp(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            lerp(positionalArgs[0]);
       case 'transform':
-        return ({positionalArgs, namedArgs, typeArgs}) => transform(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            transform(positionalArgs[0]);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       case 'evaluate':
-        return ({positionalArgs, namedArgs, typeArgs}) => evaluate(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            evaluate(positionalArgs[0]);
       case 'animate':
-        return ({positionalArgs, namedArgs, typeArgs}) => animate(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            animate(positionalArgs[0]);
       case 'chain':
-        return ({positionalArgs, namedArgs, typeArgs}) => chain(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            chain(positionalArgs[0]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -526,7 +568,7 @@ extension TextStyleTweenBinding on TextStyleTween {
         end = value;
         break;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -540,25 +582,43 @@ class AnimatedContainerAutoBinding extends HTExternalClass {
       case 'AnimatedContainer':
         return ({positionalArgs, namedArgs, typeArgs}) => AnimatedContainer(
             key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
-            alignment: namedArgs.containsKey('alignment') ? namedArgs['alignment'] : null,
-            padding: namedArgs.containsKey('padding') ? namedArgs['padding'] : null,
+            alignment: namedArgs.containsKey('alignment')
+                ? namedArgs['alignment']
+                : null,
+            padding:
+                namedArgs.containsKey('padding') ? namedArgs['padding'] : null,
             color: namedArgs.containsKey('color') ? namedArgs['color'] : null,
-            decoration: namedArgs.containsKey('decoration') ? namedArgs['decoration'] : null,
-            foregroundDecoration:
-                namedArgs.containsKey('foregroundDecoration') ? namedArgs['foregroundDecoration'] : null,
+            decoration: namedArgs.containsKey('decoration')
+                ? namedArgs['decoration']
+                : null,
+            foregroundDecoration: namedArgs.containsKey('foregroundDecoration')
+                ? namedArgs['foregroundDecoration']
+                : null,
             width: namedArgs.containsKey('width') ? namedArgs['width'] : null,
-            height: namedArgs.containsKey('height') ? namedArgs['height'] : null,
-            constraints: namedArgs.containsKey('constraints') ? namedArgs['constraints'] : null,
-            margin: namedArgs.containsKey('margin') ? namedArgs['margin'] : null,
-            transform: namedArgs.containsKey('transform') ? namedArgs['transform'] : null,
-            transformAlignment: namedArgs.containsKey('transformAlignment') ? namedArgs['transformAlignment'] : null,
+            height:
+                namedArgs.containsKey('height') ? namedArgs['height'] : null,
+            constraints: namedArgs.containsKey('constraints')
+                ? namedArgs['constraints']
+                : null,
+            margin:
+                namedArgs.containsKey('margin') ? namedArgs['margin'] : null,
+            transform: namedArgs.containsKey('transform')
+                ? namedArgs['transform']
+                : null,
+            transformAlignment: namedArgs.containsKey('transformAlignment')
+                ? namedArgs['transformAlignment']
+                : null,
             child: namedArgs.containsKey('child') ? namedArgs['child'] : null,
-            clipBehavior: namedArgs.containsKey('clipBehavior') ? namedArgs['clipBehavior'] : Clip.none,
-            curve: namedArgs.containsKey('curve') ? namedArgs['curve'] : Curves.linear,
+            clipBehavior: namedArgs.containsKey('clipBehavior')
+                ? namedArgs['clipBehavior']
+                : Clip.none,
+            curve: namedArgs.containsKey('curve')
+                ? namedArgs['curve']
+                : Curves.linear,
             duration: namedArgs['duration'],
             onEnd: namedArgs.containsKey('onEnd') ? namedArgs['onEnd'] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -569,7 +629,8 @@ class AnimatedContainerAutoBinding extends HTExternalClass {
 
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'VoidCallback': (HTFunction function) => () => function.call(positionalArgs: const [], namedArgs: const {}),
+      'VoidCallback': (HTFunction function) =>
+          () => function.call(positionalArgs: const [], namedArgs: const {}),
     };
   }
 }
@@ -578,7 +639,7 @@ extension AnimatedContainerBinding on AnimatedContainer {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('AnimatedContainer');
+        return const HTType('AnimatedContainer');
       case 'child':
         return child;
       case 'alignment':
@@ -612,29 +673,41 @@ extension AnimatedContainerBinding on AnimatedContainer {
       case 'createState':
         return ({positionalArgs, namedArgs, typeArgs}) => createState();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'createElement':
         return ({positionalArgs, namedArgs, typeArgs}) => createElement();
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'toStringShallow':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
-            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            joiner:
+                namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -650,11 +723,13 @@ class AnimatedPaddingAutoBinding extends HTExternalClass {
             key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
             padding: namedArgs['padding'],
             child: namedArgs.containsKey('child') ? namedArgs['child'] : null,
-            curve: namedArgs.containsKey('curve') ? namedArgs['curve'] : Curves.linear,
+            curve: namedArgs.containsKey('curve')
+                ? namedArgs['curve']
+                : Curves.linear,
             duration: namedArgs['duration'],
             onEnd: namedArgs.containsKey('onEnd') ? namedArgs['onEnd'] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -665,7 +740,8 @@ class AnimatedPaddingAutoBinding extends HTExternalClass {
 
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'VoidCallback': (HTFunction function) => () => function.call(positionalArgs: const [], namedArgs: const {}),
+      'VoidCallback': (HTFunction function) =>
+          () => function.call(positionalArgs: const [], namedArgs: const {}),
     };
   }
 }
@@ -674,7 +750,7 @@ extension AnimatedPaddingBinding on AnimatedPadding {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('AnimatedPadding');
+        return const HTType('AnimatedPadding');
       case 'padding':
         return padding;
       case 'child':
@@ -692,29 +768,41 @@ extension AnimatedPaddingBinding on AnimatedPadding {
       case 'createState':
         return ({positionalArgs, namedArgs, typeArgs}) => createState();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'createElement':
         return ({positionalArgs, namedArgs, typeArgs}) => createElement();
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'toStringShallow':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
-            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            joiner:
+                namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -730,13 +818,19 @@ class AnimatedAlignAutoBinding extends HTExternalClass {
             key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
             alignment: namedArgs['alignment'],
             child: namedArgs.containsKey('child') ? namedArgs['child'] : null,
-            heightFactor: namedArgs.containsKey('heightFactor') ? namedArgs['heightFactor'] : null,
-            widthFactor: namedArgs.containsKey('widthFactor') ? namedArgs['widthFactor'] : null,
-            curve: namedArgs.containsKey('curve') ? namedArgs['curve'] : Curves.linear,
+            heightFactor: namedArgs.containsKey('heightFactor')
+                ? namedArgs['heightFactor']
+                : null,
+            widthFactor: namedArgs.containsKey('widthFactor')
+                ? namedArgs['widthFactor']
+                : null,
+            curve: namedArgs.containsKey('curve')
+                ? namedArgs['curve']
+                : Curves.linear,
             duration: namedArgs['duration'],
             onEnd: namedArgs.containsKey('onEnd') ? namedArgs['onEnd'] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -747,7 +841,8 @@ class AnimatedAlignAutoBinding extends HTExternalClass {
 
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'VoidCallback': (HTFunction function) => () => function.call(positionalArgs: const [], namedArgs: const {}),
+      'VoidCallback': (HTFunction function) =>
+          () => function.call(positionalArgs: const [], namedArgs: const {}),
     };
   }
 }
@@ -756,7 +851,7 @@ extension AnimatedAlignBinding on AnimatedAlign {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('AnimatedAlign');
+        return const HTType('AnimatedAlign');
       case 'alignment':
         return alignment;
       case 'child':
@@ -778,29 +873,41 @@ extension AnimatedAlignBinding on AnimatedAlign {
       case 'createState':
         return ({positionalArgs, namedArgs, typeArgs}) => createState();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'createElement':
         return ({positionalArgs, namedArgs, typeArgs}) => createElement();
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'toStringShallow':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
-            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            joiner:
+                namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -818,22 +925,30 @@ class AnimatedPositionedAutoBinding extends HTExternalClass {
             left: namedArgs.containsKey('left') ? namedArgs['left'] : null,
             top: namedArgs.containsKey('top') ? namedArgs['top'] : null,
             right: namedArgs.containsKey('right') ? namedArgs['right'] : null,
-            bottom: namedArgs.containsKey('bottom') ? namedArgs['bottom'] : null,
+            bottom:
+                namedArgs.containsKey('bottom') ? namedArgs['bottom'] : null,
             width: namedArgs.containsKey('width') ? namedArgs['width'] : null,
-            height: namedArgs.containsKey('height') ? namedArgs['height'] : null,
-            curve: namedArgs.containsKey('curve') ? namedArgs['curve'] : Curves.linear,
+            height:
+                namedArgs.containsKey('height') ? namedArgs['height'] : null,
+            curve: namedArgs.containsKey('curve')
+                ? namedArgs['curve']
+                : Curves.linear,
             duration: namedArgs['duration'],
             onEnd: namedArgs.containsKey('onEnd') ? namedArgs['onEnd'] : null);
       case 'AnimatedPositioned.fromRect':
-        return ({positionalArgs, namedArgs, typeArgs}) => AnimatedPositioned.fromRect(
-            key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
-            child: namedArgs['child'],
-            rect: namedArgs['rect'],
-            curve: namedArgs.containsKey('curve') ? namedArgs['curve'] : Curves.linear,
-            duration: namedArgs['duration'],
-            onEnd: namedArgs.containsKey('onEnd') ? namedArgs['onEnd'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            AnimatedPositioned.fromRect(
+                key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
+                child: namedArgs['child'],
+                rect: namedArgs['rect'],
+                curve: namedArgs.containsKey('curve')
+                    ? namedArgs['curve']
+                    : Curves.linear,
+                duration: namedArgs['duration'],
+                onEnd:
+                    namedArgs.containsKey('onEnd') ? namedArgs['onEnd'] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -844,7 +959,8 @@ class AnimatedPositionedAutoBinding extends HTExternalClass {
 
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'VoidCallback': (HTFunction function) => () => function.call(positionalArgs: const [], namedArgs: const {}),
+      'VoidCallback': (HTFunction function) =>
+          () => function.call(positionalArgs: const [], namedArgs: const {}),
     };
   }
 }
@@ -853,7 +969,7 @@ extension AnimatedPositionedBinding on AnimatedPositioned {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('AnimatedPositioned');
+        return const HTType('AnimatedPositioned');
       case 'child':
         return child;
       case 'left':
@@ -881,54 +997,77 @@ extension AnimatedPositionedBinding on AnimatedPositioned {
       case 'createState':
         return ({positionalArgs, namedArgs, typeArgs}) => createState();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'createElement':
         return ({positionalArgs, namedArgs, typeArgs}) => createElement();
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'toStringShallow':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
-            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            joiner:
+                namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
 
 class AnimatedPositionedDirectionalAutoBinding extends HTExternalClass {
-  AnimatedPositionedDirectionalAutoBinding() : super('AnimatedPositionedDirectional');
+  AnimatedPositionedDirectionalAutoBinding()
+      : super('AnimatedPositionedDirectional');
 
   @override
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'AnimatedPositionedDirectional':
-        return ({positionalArgs, namedArgs, typeArgs}) => AnimatedPositionedDirectional(
-            key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
-            child: namedArgs['child'],
-            start: namedArgs.containsKey('start') ? namedArgs['start'] : null,
-            top: namedArgs.containsKey('top') ? namedArgs['top'] : null,
-            end: namedArgs.containsKey('end') ? namedArgs['end'] : null,
-            bottom: namedArgs.containsKey('bottom') ? namedArgs['bottom'] : null,
-            width: namedArgs.containsKey('width') ? namedArgs['width'] : null,
-            height: namedArgs.containsKey('height') ? namedArgs['height'] : null,
-            curve: namedArgs.containsKey('curve') ? namedArgs['curve'] : Curves.linear,
-            duration: namedArgs['duration'],
-            onEnd: namedArgs.containsKey('onEnd') ? namedArgs['onEnd'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            AnimatedPositionedDirectional(
+                key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
+                child: namedArgs['child'],
+                start:
+                    namedArgs.containsKey('start') ? namedArgs['start'] : null,
+                top: namedArgs.containsKey('top') ? namedArgs['top'] : null,
+                end: namedArgs.containsKey('end') ? namedArgs['end'] : null,
+                bottom: namedArgs.containsKey('bottom')
+                    ? namedArgs['bottom']
+                    : null,
+                width:
+                    namedArgs.containsKey('width') ? namedArgs['width'] : null,
+                height: namedArgs.containsKey('height')
+                    ? namedArgs['height']
+                    : null,
+                curve: namedArgs.containsKey('curve')
+                    ? namedArgs['curve']
+                    : Curves.linear,
+                duration: namedArgs['duration'],
+                onEnd:
+                    namedArgs.containsKey('onEnd') ? namedArgs['onEnd'] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -939,16 +1078,18 @@ class AnimatedPositionedDirectionalAutoBinding extends HTExternalClass {
 
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'VoidCallback': (HTFunction function) => () => function.call(positionalArgs: const [], namedArgs: const {}),
+      'VoidCallback': (HTFunction function) =>
+          () => function.call(positionalArgs: const [], namedArgs: const {}),
     };
   }
 }
 
-extension AnimatedPositionedDirectionalBinding on AnimatedPositionedDirectional {
+extension AnimatedPositionedDirectionalBinding
+    on AnimatedPositionedDirectional {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('AnimatedPositionedDirectional');
+        return const HTType('AnimatedPositionedDirectional');
       case 'child':
         return child;
       case 'start':
@@ -976,29 +1117,41 @@ extension AnimatedPositionedDirectionalBinding on AnimatedPositionedDirectional 
       case 'createState':
         return ({positionalArgs, namedArgs, typeArgs}) => createState();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'createElement':
         return ({positionalArgs, namedArgs, typeArgs}) => createElement();
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'toStringShallow':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
-            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            joiner:
+                namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -1014,13 +1167,17 @@ class AnimatedOpacityAutoBinding extends HTExternalClass {
             key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
             child: namedArgs.containsKey('child') ? namedArgs['child'] : null,
             opacity: namedArgs['opacity'],
-            curve: namedArgs.containsKey('curve') ? namedArgs['curve'] : Curves.linear,
+            curve: namedArgs.containsKey('curve')
+                ? namedArgs['curve']
+                : Curves.linear,
             duration: namedArgs['duration'],
             onEnd: namedArgs.containsKey('onEnd') ? namedArgs['onEnd'] : null,
             alwaysIncludeSemantics:
-                namedArgs.containsKey('alwaysIncludeSemantics') ? namedArgs['alwaysIncludeSemantics'] : false);
+                namedArgs.containsKey('alwaysIncludeSemantics')
+                    ? namedArgs['alwaysIncludeSemantics']
+                    : false);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -1031,7 +1188,8 @@ class AnimatedOpacityAutoBinding extends HTExternalClass {
 
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'VoidCallback': (HTFunction function) => () => function.call(positionalArgs: const [], namedArgs: const {}),
+      'VoidCallback': (HTFunction function) =>
+          () => function.call(positionalArgs: const [], namedArgs: const {}),
     };
   }
 }
@@ -1040,7 +1198,7 @@ extension AnimatedOpacityBinding on AnimatedOpacity {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('AnimatedOpacity');
+        return const HTType('AnimatedOpacity');
       case 'child':
         return child;
       case 'opacity':
@@ -1060,29 +1218,41 @@ extension AnimatedOpacityBinding on AnimatedOpacity {
       case 'createState':
         return ({positionalArgs, namedArgs, typeArgs}) => createState();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'createElement':
         return ({positionalArgs, namedArgs, typeArgs}) => createElement();
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'toStringShallow':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
-            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            joiner:
+                namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -1096,15 +1266,20 @@ class SliverAnimatedOpacityAutoBinding extends HTExternalClass {
       case 'SliverAnimatedOpacity':
         return ({positionalArgs, namedArgs, typeArgs}) => SliverAnimatedOpacity(
             key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
-            sliver: namedArgs.containsKey('sliver') ? namedArgs['sliver'] : null,
+            sliver:
+                namedArgs.containsKey('sliver') ? namedArgs['sliver'] : null,
             opacity: namedArgs['opacity'],
-            curve: namedArgs.containsKey('curve') ? namedArgs['curve'] : Curves.linear,
+            curve: namedArgs.containsKey('curve')
+                ? namedArgs['curve']
+                : Curves.linear,
             duration: namedArgs['duration'],
             onEnd: namedArgs.containsKey('onEnd') ? namedArgs['onEnd'] : null,
             alwaysIncludeSemantics:
-                namedArgs.containsKey('alwaysIncludeSemantics') ? namedArgs['alwaysIncludeSemantics'] : false);
+                namedArgs.containsKey('alwaysIncludeSemantics')
+                    ? namedArgs['alwaysIncludeSemantics']
+                    : false);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -1115,7 +1290,8 @@ class SliverAnimatedOpacityAutoBinding extends HTExternalClass {
 
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'VoidCallback': (HTFunction function) => () => function.call(positionalArgs: const [], namedArgs: const {}),
+      'VoidCallback': (HTFunction function) =>
+          () => function.call(positionalArgs: const [], namedArgs: const {}),
     };
   }
 }
@@ -1124,7 +1300,7 @@ extension SliverAnimatedOpacityBinding on SliverAnimatedOpacity {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('SliverAnimatedOpacity');
+        return const HTType('SliverAnimatedOpacity');
       case 'sliver':
         return sliver;
       case 'opacity':
@@ -1144,29 +1320,41 @@ extension SliverAnimatedOpacityBinding on SliverAnimatedOpacity {
       case 'createState':
         return ({positionalArgs, namedArgs, typeArgs}) => createState();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'createElement':
         return ({positionalArgs, namedArgs, typeArgs}) => createElement();
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'toStringShallow':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
-            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            joiner:
+                namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -1178,22 +1366,51 @@ class AnimatedDefaultTextStyleAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'AnimatedDefaultTextStyle':
-        return ({positionalArgs, namedArgs, typeArgs}) => AnimatedDefaultTextStyle(
-            key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
-            child: namedArgs['child'],
-            style: namedArgs['style'],
-            textAlign: namedArgs.containsKey('textAlign') ? namedArgs['textAlign'] : null,
-            softWrap: namedArgs.containsKey('softWrap') ? namedArgs['softWrap'] : true,
-            overflow: namedArgs.containsKey('overflow') ? namedArgs['overflow'] : TextOverflow.clip,
-            maxLines: namedArgs.containsKey('maxLines') ? namedArgs['maxLines'] : null,
-            textWidthBasis:
-                namedArgs.containsKey('textWidthBasis') ? namedArgs['textWidthBasis'] : TextWidthBasis.parent,
-            textHeightBehavior: namedArgs.containsKey('textHeightBehavior') ? namedArgs['textHeightBehavior'] : null,
-            curve: namedArgs.containsKey('curve') ? namedArgs['curve'] : Curves.linear,
-            duration: namedArgs['duration'],
-            onEnd: namedArgs.containsKey('onEnd') ? namedArgs['onEnd'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            AnimatedDefaultTextStyle(
+                key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
+                child: namedArgs['child'],
+                style: namedArgs['style'],
+                textAlign:
+                    namedArgs.containsKey(
+                            'textAlign')
+                        ? namedArgs['textAlign']
+                        : null,
+                softWrap:
+                    namedArgs.containsKey(
+                            'softWrap')
+                        ? namedArgs['softWrap']
+                        : true,
+                overflow:
+                    namedArgs.containsKey(
+                            'overflow')
+                        ? namedArgs['overflow']
+                        : TextOverflow.clip,
+                maxLines:
+                    namedArgs.containsKey(
+                            'maxLines')
+                        ? namedArgs['maxLines']
+                        : null,
+                textWidthBasis:
+                    namedArgs.containsKey(
+                            'textWidthBasis')
+                        ? namedArgs['textWidthBasis']
+                        : TextWidthBasis.parent,
+                textHeightBehavior:
+                    namedArgs.containsKey(
+                            'textHeightBehavior')
+                        ? namedArgs['textHeightBehavior']
+                        : null,
+                curve:
+                    namedArgs
+                            .containsKey('curve')
+                        ? namedArgs['curve']
+                        : Curves.linear,
+                duration: namedArgs['duration'],
+                onEnd:
+                    namedArgs.containsKey('onEnd') ? namedArgs['onEnd'] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -1204,7 +1421,8 @@ class AnimatedDefaultTextStyleAutoBinding extends HTExternalClass {
 
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'VoidCallback': (HTFunction function) => () => function.call(positionalArgs: const [], namedArgs: const {}),
+      'VoidCallback': (HTFunction function) =>
+          () => function.call(positionalArgs: const [], namedArgs: const {}),
     };
   }
 }
@@ -1213,7 +1431,7 @@ extension AnimatedDefaultTextStyleBinding on AnimatedDefaultTextStyle {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('AnimatedDefaultTextStyle');
+        return const HTType('AnimatedDefaultTextStyle');
       case 'child':
         return child;
       case 'style':
@@ -1243,29 +1461,41 @@ extension AnimatedDefaultTextStyleBinding on AnimatedDefaultTextStyle {
       case 'createState':
         return ({positionalArgs, namedArgs, typeArgs}) => createState();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'createElement':
         return ({positionalArgs, namedArgs, typeArgs}) => createElement();
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'toStringShallow':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
-            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            joiner:
+                namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -1281,18 +1511,28 @@ class AnimatedPhysicalModelAutoBinding extends HTExternalClass {
             key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
             child: namedArgs['child'],
             shape: namedArgs['shape'],
-            clipBehavior: namedArgs.containsKey('clipBehavior') ? namedArgs['clipBehavior'] : Clip.none,
-            borderRadius: namedArgs.containsKey('borderRadius') ? namedArgs['borderRadius'] : BorderRadius.zero,
+            clipBehavior: namedArgs.containsKey('clipBehavior')
+                ? namedArgs['clipBehavior']
+                : Clip.none,
+            borderRadius: namedArgs.containsKey('borderRadius')
+                ? namedArgs['borderRadius']
+                : BorderRadius.zero,
             elevation: namedArgs['elevation'],
             color: namedArgs['color'],
-            animateColor: namedArgs.containsKey('animateColor') ? namedArgs['animateColor'] : true,
+            animateColor: namedArgs.containsKey('animateColor')
+                ? namedArgs['animateColor']
+                : true,
             shadowColor: namedArgs['shadowColor'],
-            animateShadowColor: namedArgs.containsKey('animateShadowColor') ? namedArgs['animateShadowColor'] : true,
-            curve: namedArgs.containsKey('curve') ? namedArgs['curve'] : Curves.linear,
+            animateShadowColor: namedArgs.containsKey('animateShadowColor')
+                ? namedArgs['animateShadowColor']
+                : true,
+            curve: namedArgs.containsKey('curve')
+                ? namedArgs['curve']
+                : Curves.linear,
             duration: namedArgs['duration'],
             onEnd: namedArgs.containsKey('onEnd') ? namedArgs['onEnd'] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -1303,7 +1543,8 @@ class AnimatedPhysicalModelAutoBinding extends HTExternalClass {
 
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'VoidCallback': (HTFunction function) => () => function.call(positionalArgs: const [], namedArgs: const {}),
+      'VoidCallback': (HTFunction function) =>
+          () => function.call(positionalArgs: const [], namedArgs: const {}),
     };
   }
 }
@@ -1312,7 +1553,7 @@ extension AnimatedPhysicalModelBinding on AnimatedPhysicalModel {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('AnimatedPhysicalModel');
+        return const HTType('AnimatedPhysicalModel');
       case 'child':
         return child;
       case 'shape':
@@ -1344,29 +1585,41 @@ extension AnimatedPhysicalModelBinding on AnimatedPhysicalModel {
       case 'createState':
         return ({positionalArgs, namedArgs, typeArgs}) => createState();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'createElement':
         return ({positionalArgs, namedArgs, typeArgs}) => createElement();
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'toStringShallow':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
-            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            joiner:
+                namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

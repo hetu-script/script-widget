@@ -8,10 +8,12 @@ class FunctionAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'Function.apply':
-        return ({positionalArgs, namedArgs, typeArgs}) => Function.apply(positionalArgs[0],
-            List<dynamic>.from(positionalArgs[1]), positionalArgs.length > 2 ? positionalArgs[2] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => Function.apply(
+            positionalArgs[0],
+            List<dynamic>.from(positionalArgs[1]),
+            positionalArgs.length > 2 ? positionalArgs[2] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

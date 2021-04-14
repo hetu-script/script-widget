@@ -12,19 +12,36 @@ class CircleAvatarAutoBinding extends HTExternalClass {
         return ({positionalArgs, namedArgs, typeArgs}) => CircleAvatar(
             key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
             child: namedArgs.containsKey('child') ? namedArgs['child'] : null,
-            backgroundColor: namedArgs.containsKey('backgroundColor') ? namedArgs['backgroundColor'] : null,
-            backgroundImage: namedArgs.containsKey('backgroundImage') ? namedArgs['backgroundImage'] : null,
-            foregroundImage: namedArgs.containsKey('foregroundImage') ? namedArgs['foregroundImage'] : null,
+            backgroundColor: namedArgs.containsKey('backgroundColor')
+                ? namedArgs['backgroundColor']
+                : null,
+            backgroundImage: namedArgs.containsKey('backgroundImage')
+                ? namedArgs['backgroundImage']
+                : null,
+            foregroundImage: namedArgs.containsKey('foregroundImage')
+                ? namedArgs['foregroundImage']
+                : null,
             onBackgroundImageError:
-                namedArgs.containsKey('onBackgroundImageError') ? namedArgs['onBackgroundImageError'] : null,
+                namedArgs.containsKey('onBackgroundImageError')
+                    ? namedArgs['onBackgroundImageError']
+                    : null,
             onForegroundImageError:
-                namedArgs.containsKey('onForegroundImageError') ? namedArgs['onForegroundImageError'] : null,
-            foregroundColor: namedArgs.containsKey('foregroundColor') ? namedArgs['foregroundColor'] : null,
-            radius: namedArgs.containsKey('radius') ? namedArgs['radius'] : null,
-            minRadius: namedArgs.containsKey('minRadius') ? namedArgs['minRadius'] : null,
-            maxRadius: namedArgs.containsKey('maxRadius') ? namedArgs['maxRadius'] : null);
+                namedArgs.containsKey('onForegroundImageError')
+                    ? namedArgs['onForegroundImageError']
+                    : null,
+            foregroundColor: namedArgs.containsKey('foregroundColor')
+                ? namedArgs['foregroundColor']
+                : null,
+            radius:
+                namedArgs.containsKey('radius') ? namedArgs['radius'] : null,
+            minRadius: namedArgs.containsKey('minRadius')
+                ? namedArgs['minRadius']
+                : null,
+            maxRadius: namedArgs.containsKey('maxRadius')
+                ? namedArgs['maxRadius']
+                : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -35,8 +52,9 @@ class CircleAvatarAutoBinding extends HTExternalClass {
 
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'ImageErrorListener': (HTFunction function) =>
-          (exception, stackTrace) => function.call(positionalArgs: [exception, stackTrace], namedArgs: const {}),
+      'ImageErrorListener': (HTFunction function) => (exception, stackTrace) =>
+          function.call(
+              positionalArgs: [exception, stackTrace], namedArgs: const {}),
     };
   }
 }
@@ -45,7 +63,7 @@ extension CircleAvatarBinding on CircleAvatar {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('CircleAvatar');
+        return const HTType('CircleAvatar');
       case 'child':
         return child;
       case 'backgroundColor':
@@ -71,31 +89,44 @@ extension CircleAvatarBinding on CircleAvatar {
       case 'hashCode':
         return hashCode;
       case 'build':
-        return ({positionalArgs, namedArgs, typeArgs}) => build(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            build(positionalArgs[0]);
       case 'createElement':
         return ({positionalArgs, namedArgs, typeArgs}) => createElement();
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'toStringShallow':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
-            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            joiner:
+                namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

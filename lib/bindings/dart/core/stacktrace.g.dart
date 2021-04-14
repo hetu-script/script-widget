@@ -8,13 +8,14 @@ class StackTraceAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'StackTrace.fromString':
-        return ({positionalArgs, namedArgs, typeArgs}) => StackTrace.fromString(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            StackTrace.fromString(positionalArgs[0]);
       case 'StackTrace.current':
         return StackTrace.current;
       case 'StackTrace.empty':
         return StackTrace.empty;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -28,11 +29,11 @@ extension StackTraceBinding on StackTrace {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('StackTrace');
+        return const HTType('StackTrace');
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

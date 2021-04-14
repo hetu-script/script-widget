@@ -10,21 +10,39 @@ class UserAccountsDrawerHeaderAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'UserAccountsDrawerHeader':
-        return ({positionalArgs, namedArgs, typeArgs}) => UserAccountsDrawerHeader(
-            key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
-            decoration: namedArgs.containsKey('decoration') ? namedArgs['decoration'] : null,
-            margin: namedArgs.containsKey('margin') ? namedArgs['margin'] : const EdgeInsets.only(bottom: 8.0),
-            currentAccountPicture:
-                namedArgs.containsKey('currentAccountPicture') ? namedArgs['currentAccountPicture'] : null,
-            otherAccountsPictures: namedArgs.containsKey('otherAccountsPictures')
-                ? List<Widget>.from(namedArgs['otherAccountsPictures'])
-                : null,
-            accountName: namedArgs['accountName'],
-            accountEmail: namedArgs['accountEmail'],
-            onDetailsPressed: namedArgs.containsKey('onDetailsPressed') ? namedArgs['onDetailsPressed'] : null,
-            arrowColor: namedArgs.containsKey('arrowColor') ? namedArgs['arrowColor'] : Colors.white);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            UserAccountsDrawerHeader(
+                key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
+                decoration: namedArgs.containsKey('decoration')
+                    ? namedArgs['decoration']
+                    : null,
+                margin:
+                    namedArgs.containsKey(
+                            'margin')
+                        ? namedArgs['margin']
+                        : const EdgeInsets.only(bottom: 8.0),
+                currentAccountPicture:
+                    namedArgs.containsKey(
+                            'currentAccountPicture')
+                        ? namedArgs['currentAccountPicture']
+                        : null,
+                otherAccountsPictures:
+                    namedArgs.containsKey(
+                            'otherAccountsPictures')
+                        ? List<Widget>.from(namedArgs['otherAccountsPictures'])
+                        : null,
+                accountName: namedArgs['accountName'],
+                accountEmail: namedArgs['accountEmail'],
+                onDetailsPressed:
+                    namedArgs
+                            .containsKey('onDetailsPressed')
+                        ? namedArgs['onDetailsPressed']
+                        : null,
+                arrowColor: namedArgs.containsKey('arrowColor')
+                    ? namedArgs['arrowColor']
+                    : Colors.white);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -35,7 +53,8 @@ class UserAccountsDrawerHeaderAutoBinding extends HTExternalClass {
 
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'VoidCallback': (HTFunction function) => () => function.call(positionalArgs: const [], namedArgs: const {}),
+      'VoidCallback': (HTFunction function) =>
+          () => function.call(positionalArgs: const [], namedArgs: const {}),
     };
   }
 }
@@ -44,7 +63,7 @@ extension UserAccountsDrawerHeaderBinding on UserAccountsDrawerHeader {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('UserAccountsDrawerHeader');
+        return const HTType('UserAccountsDrawerHeader');
       case 'decoration':
         return decoration;
       case 'margin':
@@ -72,25 +91,37 @@ extension UserAccountsDrawerHeaderBinding on UserAccountsDrawerHeader {
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'toStringShallow':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
-            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            joiner:
+                namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

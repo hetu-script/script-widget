@@ -22,7 +22,7 @@ class ShowValueIndicatorAutoBinding extends HTExternalClass {
       case 'ShowValueIndicator.never':
         return ShowValueIndicator.never;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -30,13 +30,14 @@ class ShowValueIndicatorAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('ShowValueIndicator');
+        return const HTType('ShowValueIndicator');
       case 'index':
         return (instance as ShowValueIndicator).index;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => (instance as ShowValueIndicator).toString();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            (instance as ShowValueIndicator).toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -54,7 +55,7 @@ class ThumbAutoBinding extends HTExternalClass {
       case 'Thumb.end':
         return Thumb.end;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -62,13 +63,14 @@ class ThumbAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('Thumb');
+        return const HTType('Thumb');
       case 'index':
         return (instance as Thumb).index;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => (instance as Thumb).toString();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            (instance as Thumb).toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -85,9 +87,10 @@ class SliderThemeAutoBinding extends HTExternalClass {
             data: namedArgs['data'],
             child: namedArgs['child']);
       case 'SliderTheme.of':
-        return ({positionalArgs, namedArgs, typeArgs}) => SliderTheme.of(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            SliderTheme.of(positionalArgs[0]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -101,7 +104,7 @@ extension SliderThemeBinding on SliderTheme {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('SliderTheme');
+        return const HTType('SliderTheme');
       case 'data':
         return data;
       case 'child':
@@ -111,33 +114,47 @@ extension SliderThemeBinding on SliderTheme {
       case 'hashCode':
         return hashCode;
       case 'wrap':
-        return ({positionalArgs, namedArgs, typeArgs}) => wrap(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            wrap(positionalArgs[0], positionalArgs[1]);
       case 'updateShouldNotify':
-        return ({positionalArgs, namedArgs, typeArgs}) => updateShouldNotify(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            updateShouldNotify(positionalArgs[0]);
       case 'createElement':
         return ({positionalArgs, namedArgs, typeArgs}) => createElement();
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'toStringShallow':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
-            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            joiner:
+                namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -150,25 +167,43 @@ class SliderThemeDataAutoBinding extends HTExternalClass {
     switch (varName) {
       case 'SliderThemeData':
         return ({positionalArgs, namedArgs, typeArgs}) => SliderThemeData(
-            trackHeight: namedArgs.containsKey('trackHeight') ? namedArgs['trackHeight'] : null,
-            activeTrackColor: namedArgs.containsKey('activeTrackColor') ? namedArgs['activeTrackColor'] : null,
-            inactiveTrackColor: namedArgs.containsKey('inactiveTrackColor') ? namedArgs['inactiveTrackColor'] : null,
-            disabledActiveTrackColor:
-                namedArgs.containsKey('disabledActiveTrackColor') ? namedArgs['disabledActiveTrackColor'] : null,
-            disabledInactiveTrackColor:
-                namedArgs.containsKey('disabledInactiveTrackColor') ? namedArgs['disabledInactiveTrackColor'] : null,
-            activeTickMarkColor: namedArgs.containsKey('activeTickMarkColor') ? namedArgs['activeTickMarkColor'] : null,
-            inactiveTickMarkColor:
-                namedArgs.containsKey('inactiveTickMarkColor') ? namedArgs['inactiveTickMarkColor'] : null,
-            disabledActiveTickMarkColor:
-                namedArgs.containsKey('disabledActiveTickMarkColor') ? namedArgs['disabledActiveTickMarkColor'] : null,
-            disabledInactiveTickMarkColor: namedArgs.containsKey('disabledInactiveTickMarkColor')
-                ? namedArgs['disabledInactiveTickMarkColor']
+            trackHeight: namedArgs.containsKey('trackHeight')
+                ? namedArgs['trackHeight']
                 : null,
-            thumbColor: namedArgs.containsKey('thumbColor') ? namedArgs['thumbColor'] : null,
-            overlappingShapeStrokeColor:
-                namedArgs.containsKey('overlappingShapeStrokeColor') ? namedArgs['overlappingShapeStrokeColor'] : null,
-            disabledThumbColor: namedArgs.containsKey('disabledThumbColor') ? namedArgs['disabledThumbColor'] : null,
+            activeTrackColor: namedArgs.containsKey('activeTrackColor')
+                ? namedArgs['activeTrackColor']
+                : null,
+            inactiveTrackColor: namedArgs.containsKey('inactiveTrackColor')
+                ? namedArgs['inactiveTrackColor']
+                : null,
+            disabledActiveTrackColor: namedArgs.containsKey('disabledActiveTrackColor')
+                ? namedArgs['disabledActiveTrackColor']
+                : null,
+            disabledInactiveTrackColor: namedArgs.containsKey('disabledInactiveTrackColor')
+                ? namedArgs['disabledInactiveTrackColor']
+                : null,
+            activeTickMarkColor: namedArgs.containsKey('activeTickMarkColor')
+                ? namedArgs['activeTickMarkColor']
+                : null,
+            inactiveTickMarkColor: namedArgs.containsKey('inactiveTickMarkColor')
+                ? namedArgs['inactiveTickMarkColor']
+                : null,
+            disabledActiveTickMarkColor: namedArgs.containsKey('disabledActiveTickMarkColor')
+                ? namedArgs['disabledActiveTickMarkColor']
+                : null,
+            disabledInactiveTickMarkColor:
+                namedArgs.containsKey('disabledInactiveTickMarkColor')
+                    ? namedArgs['disabledInactiveTickMarkColor']
+                    : null,
+            thumbColor: namedArgs.containsKey('thumbColor')
+                ? namedArgs['thumbColor']
+                : null,
+            overlappingShapeStrokeColor: namedArgs.containsKey('overlappingShapeStrokeColor')
+                ? namedArgs['overlappingShapeStrokeColor']
+                : null,
+            disabledThumbColor: namedArgs.containsKey('disabledThumbColor')
+                ? namedArgs['disabledThumbColor']
+                : null,
             overlayColor: namedArgs.containsKey('overlayColor') ? namedArgs['overlayColor'] : null,
             valueIndicatorColor: namedArgs.containsKey('valueIndicatorColor') ? namedArgs['valueIndicatorColor'] : null,
             overlayShape: namedArgs.containsKey('overlayShape') ? namedArgs['overlayShape'] : null,
@@ -179,24 +214,23 @@ class SliderThemeDataAutoBinding extends HTExternalClass {
             rangeTickMarkShape: namedArgs.containsKey('rangeTickMarkShape') ? namedArgs['rangeTickMarkShape'] : null,
             rangeThumbShape: namedArgs.containsKey('rangeThumbShape') ? namedArgs['rangeThumbShape'] : null,
             rangeTrackShape: namedArgs.containsKey('rangeTrackShape') ? namedArgs['rangeTrackShape'] : null,
-            rangeValueIndicatorShape:
-                namedArgs.containsKey('rangeValueIndicatorShape') ? namedArgs['rangeValueIndicatorShape'] : null,
+            rangeValueIndicatorShape: namedArgs.containsKey('rangeValueIndicatorShape') ? namedArgs['rangeValueIndicatorShape'] : null,
             showValueIndicator: namedArgs.containsKey('showValueIndicator') ? namedArgs['showValueIndicator'] : null,
-            valueIndicatorTextStyle:
-                namedArgs.containsKey('valueIndicatorTextStyle') ? namedArgs['valueIndicatorTextStyle'] : null,
+            valueIndicatorTextStyle: namedArgs.containsKey('valueIndicatorTextStyle') ? namedArgs['valueIndicatorTextStyle'] : null,
             minThumbSeparation: namedArgs.containsKey('minThumbSeparation') ? namedArgs['minThumbSeparation'] : null,
             thumbSelector: namedArgs.containsKey('thumbSelector') ? namedArgs['thumbSelector'] : null);
       case 'SliderThemeData.fromPrimaryColors':
-        return ({positionalArgs, namedArgs, typeArgs}) => SliderThemeData.fromPrimaryColors(
-            primaryColor: namedArgs['primaryColor'],
-            primaryColorDark: namedArgs['primaryColorDark'],
-            primaryColorLight: namedArgs['primaryColorLight'],
-            valueIndicatorTextStyle: namedArgs['valueIndicatorTextStyle']);
-      case 'SliderThemeData.lerp':
         return ({positionalArgs, namedArgs, typeArgs}) =>
-            SliderThemeData.lerp(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
+            SliderThemeData.fromPrimaryColors(
+                primaryColor: namedArgs['primaryColor'],
+                primaryColorDark: namedArgs['primaryColorDark'],
+                primaryColorLight: namedArgs['primaryColorLight'],
+                valueIndicatorTextStyle: namedArgs['valueIndicatorTextStyle']);
+      case 'SliderThemeData.lerp':
+        return ({positionalArgs, namedArgs, typeArgs}) => SliderThemeData.lerp(
+            positionalArgs[0], positionalArgs[1], positionalArgs[2]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -207,10 +241,16 @@ class SliderThemeDataAutoBinding extends HTExternalClass {
 
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'RangeThumbSelector': (HTFunction function) => (textDirection, values, tapValue, thumbSize, trackSize, dx) =>
-          function.call(
-              positionalArgs: [textDirection, values, tapValue, thumbSize, trackSize, dx],
-              namedArgs: const {}) as Thumb?,
+      'RangeThumbSelector': (HTFunction function) =>
+          (textDirection, values, tapValue, thumbSize, trackSize, dx) =>
+              function.call(positionalArgs: [
+                textDirection,
+                values,
+                tapValue,
+                thumbSize,
+                trackSize,
+                dx
+              ], namedArgs: const {}) as Thumb?,
     };
   }
 }
@@ -219,7 +259,7 @@ extension SliderThemeDataBinding on SliderThemeData {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('SliderThemeData');
+        return const HTType('SliderThemeData');
       case 'trackHeight':
         return trackHeight;
       case 'activeTrackColor':
@@ -278,25 +318,43 @@ extension SliderThemeDataBinding on SliderThemeData {
         return hashCode;
       case 'copyWith':
         return ({positionalArgs, namedArgs, typeArgs}) => copyWith(
-            trackHeight: namedArgs.containsKey('trackHeight') ? namedArgs['trackHeight'] : null,
-            activeTrackColor: namedArgs.containsKey('activeTrackColor') ? namedArgs['activeTrackColor'] : null,
-            inactiveTrackColor: namedArgs.containsKey('inactiveTrackColor') ? namedArgs['inactiveTrackColor'] : null,
-            disabledActiveTrackColor:
-                namedArgs.containsKey('disabledActiveTrackColor') ? namedArgs['disabledActiveTrackColor'] : null,
-            disabledInactiveTrackColor:
-                namedArgs.containsKey('disabledInactiveTrackColor') ? namedArgs['disabledInactiveTrackColor'] : null,
-            activeTickMarkColor: namedArgs.containsKey('activeTickMarkColor') ? namedArgs['activeTickMarkColor'] : null,
-            inactiveTickMarkColor:
-                namedArgs.containsKey('inactiveTickMarkColor') ? namedArgs['inactiveTickMarkColor'] : null,
-            disabledActiveTickMarkColor:
-                namedArgs.containsKey('disabledActiveTickMarkColor') ? namedArgs['disabledActiveTickMarkColor'] : null,
-            disabledInactiveTickMarkColor: namedArgs.containsKey('disabledInactiveTickMarkColor')
-                ? namedArgs['disabledInactiveTickMarkColor']
+            trackHeight: namedArgs.containsKey('trackHeight')
+                ? namedArgs['trackHeight']
                 : null,
-            thumbColor: namedArgs.containsKey('thumbColor') ? namedArgs['thumbColor'] : null,
-            overlappingShapeStrokeColor:
-                namedArgs.containsKey('overlappingShapeStrokeColor') ? namedArgs['overlappingShapeStrokeColor'] : null,
-            disabledThumbColor: namedArgs.containsKey('disabledThumbColor') ? namedArgs['disabledThumbColor'] : null,
+            activeTrackColor: namedArgs.containsKey('activeTrackColor')
+                ? namedArgs['activeTrackColor']
+                : null,
+            inactiveTrackColor: namedArgs.containsKey('inactiveTrackColor')
+                ? namedArgs['inactiveTrackColor']
+                : null,
+            disabledActiveTrackColor: namedArgs.containsKey('disabledActiveTrackColor')
+                ? namedArgs['disabledActiveTrackColor']
+                : null,
+            disabledInactiveTrackColor: namedArgs.containsKey('disabledInactiveTrackColor')
+                ? namedArgs['disabledInactiveTrackColor']
+                : null,
+            activeTickMarkColor: namedArgs.containsKey('activeTickMarkColor')
+                ? namedArgs['activeTickMarkColor']
+                : null,
+            inactiveTickMarkColor: namedArgs.containsKey('inactiveTickMarkColor')
+                ? namedArgs['inactiveTickMarkColor']
+                : null,
+            disabledActiveTickMarkColor: namedArgs.containsKey('disabledActiveTickMarkColor')
+                ? namedArgs['disabledActiveTickMarkColor']
+                : null,
+            disabledInactiveTickMarkColor:
+                namedArgs.containsKey('disabledInactiveTickMarkColor')
+                    ? namedArgs['disabledInactiveTickMarkColor']
+                    : null,
+            thumbColor: namedArgs.containsKey('thumbColor')
+                ? namedArgs['thumbColor']
+                : null,
+            overlappingShapeStrokeColor: namedArgs.containsKey('overlappingShapeStrokeColor')
+                ? namedArgs['overlappingShapeStrokeColor']
+                : null,
+            disabledThumbColor: namedArgs.containsKey('disabledThumbColor')
+                ? namedArgs['disabledThumbColor']
+                : null,
             overlayColor: namedArgs.containsKey('overlayColor') ? namedArgs['overlayColor'] : null,
             valueIndicatorColor: namedArgs.containsKey('valueIndicatorColor') ? namedArgs['valueIndicatorColor'] : null,
             overlayShape: namedArgs.containsKey('overlayShape') ? namedArgs['overlayShape'] : null,
@@ -307,42 +365,47 @@ extension SliderThemeDataBinding on SliderThemeData {
             rangeTickMarkShape: namedArgs.containsKey('rangeTickMarkShape') ? namedArgs['rangeTickMarkShape'] : null,
             rangeThumbShape: namedArgs.containsKey('rangeThumbShape') ? namedArgs['rangeThumbShape'] : null,
             rangeTrackShape: namedArgs.containsKey('rangeTrackShape') ? namedArgs['rangeTrackShape'] : null,
-            rangeValueIndicatorShape:
-                namedArgs.containsKey('rangeValueIndicatorShape') ? namedArgs['rangeValueIndicatorShape'] : null,
+            rangeValueIndicatorShape: namedArgs.containsKey('rangeValueIndicatorShape') ? namedArgs['rangeValueIndicatorShape'] : null,
             showValueIndicator: namedArgs.containsKey('showValueIndicator') ? namedArgs['showValueIndicator'] : null,
-            valueIndicatorTextStyle:
-                namedArgs.containsKey('valueIndicatorTextStyle') ? namedArgs['valueIndicatorTextStyle'] : null,
+            valueIndicatorTextStyle: namedArgs.containsKey('valueIndicatorTextStyle') ? namedArgs['valueIndicatorTextStyle'] : null,
             minThumbSeparation: namedArgs.containsKey('minThumbSeparation') ? namedArgs['minThumbSeparation'] : null,
             thumbSelector: namedArgs.containsKey('thumbSelector') ? namedArgs['thumbSelector'] : null);
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
 
 class RectangularSliderTrackShapeAutoBinding extends HTExternalClass {
-  RectangularSliderTrackShapeAutoBinding() : super('RectangularSliderTrackShape');
+  RectangularSliderTrackShapeAutoBinding()
+      : super('RectangularSliderTrackShape');
 
   @override
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'RectangularSliderTrackShape':
-        return ({positionalArgs, namedArgs, typeArgs}) => RectangularSliderTrackShape(
-            disabledThumbGapWidth:
-                namedArgs.containsKey('disabledThumbGapWidth') ? namedArgs['disabledThumbGapWidth'] : 2.0);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            RectangularSliderTrackShape(
+                disabledThumbGapWidth:
+                    namedArgs.containsKey('disabledThumbGapWidth')
+                        ? namedArgs['disabledThumbGapWidth']
+                        : 2.0);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -356,39 +419,66 @@ extension RectangularSliderTrackShapeBinding on RectangularSliderTrackShape {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('RectangularSliderTrackShape');
+        return const HTType('RectangularSliderTrackShape');
       case 'paint':
-        return ({positionalArgs, namedArgs, typeArgs}) => paint(positionalArgs[0], positionalArgs[1],
-            parentBox: namedArgs.containsKey('parentBox') ? namedArgs['parentBox'] : null,
-            sliderTheme: namedArgs.containsKey('sliderTheme') ? namedArgs['sliderTheme'] : null,
-            enableAnimation: namedArgs.containsKey('enableAnimation') ? namedArgs['enableAnimation'] : null,
-            textDirection: namedArgs.containsKey('textDirection') ? namedArgs['textDirection'] : null,
-            thumbCenter: namedArgs.containsKey('thumbCenter') ? namedArgs['thumbCenter'] : null,
-            isDiscrete: namedArgs.containsKey('isDiscrete') ? namedArgs['isDiscrete'] : false,
-            isEnabled: namedArgs.containsKey('isEnabled') ? namedArgs['isEnabled'] : false);
+        return ({positionalArgs, namedArgs, typeArgs}) => paint(
+            positionalArgs[0], positionalArgs[1],
+            parentBox: namedArgs.containsKey('parentBox')
+                ? namedArgs['parentBox']
+                : null,
+            sliderTheme: namedArgs.containsKey('sliderTheme')
+                ? namedArgs['sliderTheme']
+                : null,
+            enableAnimation: namedArgs.containsKey('enableAnimation')
+                ? namedArgs['enableAnimation']
+                : null,
+            textDirection: namedArgs.containsKey('textDirection')
+                ? namedArgs['textDirection']
+                : null,
+            thumbCenter: namedArgs.containsKey('thumbCenter')
+                ? namedArgs['thumbCenter']
+                : null,
+            isDiscrete: namedArgs.containsKey('isDiscrete')
+                ? namedArgs['isDiscrete']
+                : false,
+            isEnabled: namedArgs.containsKey('isEnabled')
+                ? namedArgs['isEnabled']
+                : false);
       case 'getPreferredRect':
         return ({positionalArgs, namedArgs, typeArgs}) => getPreferredRect(
-            parentBox: namedArgs.containsKey('parentBox') ? namedArgs['parentBox'] : null,
-            offset: namedArgs.containsKey('offset') ? namedArgs['offset'] : Offset.zero,
-            sliderTheme: namedArgs.containsKey('sliderTheme') ? namedArgs['sliderTheme'] : null,
-            isEnabled: namedArgs.containsKey('isEnabled') ? namedArgs['isEnabled'] : null,
-            isDiscrete: namedArgs.containsKey('isDiscrete') ? namedArgs['isDiscrete'] : null);
+            parentBox: namedArgs.containsKey('parentBox')
+                ? namedArgs['parentBox']
+                : null,
+            offset: namedArgs.containsKey('offset')
+                ? namedArgs['offset']
+                : Offset.zero,
+            sliderTheme: namedArgs.containsKey('sliderTheme')
+                ? namedArgs['sliderTheme']
+                : null,
+            isEnabled: namedArgs.containsKey('isEnabled')
+                ? namedArgs['isEnabled']
+                : null,
+            isDiscrete: namedArgs.containsKey('isDiscrete')
+                ? namedArgs['isDiscrete']
+                : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
 
 class RoundedRectSliderTrackShapeAutoBinding extends HTExternalClass {
-  RoundedRectSliderTrackShapeAutoBinding() : super('RoundedRectSliderTrackShape');
+  RoundedRectSliderTrackShapeAutoBinding()
+      : super('RoundedRectSliderTrackShape');
 
   @override
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'RoundedRectSliderTrackShape':
-        return ({positionalArgs, namedArgs, typeArgs}) => RoundedRectSliderTrackShape();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            RoundedRectSliderTrackShape();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -402,41 +492,70 @@ extension RoundedRectSliderTrackShapeBinding on RoundedRectSliderTrackShape {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('RoundedRectSliderTrackShape');
+        return const HTType('RoundedRectSliderTrackShape');
       case 'paint':
-        return ({positionalArgs, namedArgs, typeArgs}) => paint(positionalArgs[0], positionalArgs[1],
-            parentBox: namedArgs.containsKey('parentBox') ? namedArgs['parentBox'] : null,
-            sliderTheme: namedArgs.containsKey('sliderTheme') ? namedArgs['sliderTheme'] : null,
-            enableAnimation: namedArgs.containsKey('enableAnimation') ? namedArgs['enableAnimation'] : null,
-            textDirection: namedArgs.containsKey('textDirection') ? namedArgs['textDirection'] : null,
-            thumbCenter: namedArgs.containsKey('thumbCenter') ? namedArgs['thumbCenter'] : null,
-            isDiscrete: namedArgs.containsKey('isDiscrete') ? namedArgs['isDiscrete'] : false,
-            isEnabled: namedArgs.containsKey('isEnabled') ? namedArgs['isEnabled'] : false,
+        return ({positionalArgs, namedArgs, typeArgs}) => paint(
+            positionalArgs[0], positionalArgs[1],
+            parentBox: namedArgs.containsKey('parentBox')
+                ? namedArgs['parentBox']
+                : null,
+            sliderTheme: namedArgs.containsKey('sliderTheme')
+                ? namedArgs['sliderTheme']
+                : null,
+            enableAnimation: namedArgs.containsKey('enableAnimation')
+                ? namedArgs['enableAnimation']
+                : null,
+            textDirection: namedArgs.containsKey('textDirection')
+                ? namedArgs['textDirection']
+                : null,
+            thumbCenter: namedArgs.containsKey('thumbCenter')
+                ? namedArgs['thumbCenter']
+                : null,
+            isDiscrete: namedArgs.containsKey('isDiscrete')
+                ? namedArgs['isDiscrete']
+                : false,
+            isEnabled: namedArgs.containsKey('isEnabled')
+                ? namedArgs['isEnabled']
+                : false,
             additionalActiveTrackHeight:
-                namedArgs.containsKey('additionalActiveTrackHeight') ? namedArgs['additionalActiveTrackHeight'] : 2);
+                namedArgs.containsKey('additionalActiveTrackHeight')
+                    ? namedArgs['additionalActiveTrackHeight']
+                    : 2);
       case 'getPreferredRect':
         return ({positionalArgs, namedArgs, typeArgs}) => getPreferredRect(
-            parentBox: namedArgs.containsKey('parentBox') ? namedArgs['parentBox'] : null,
-            offset: namedArgs.containsKey('offset') ? namedArgs['offset'] : Offset.zero,
-            sliderTheme: namedArgs.containsKey('sliderTheme') ? namedArgs['sliderTheme'] : null,
-            isEnabled: namedArgs.containsKey('isEnabled') ? namedArgs['isEnabled'] : null,
-            isDiscrete: namedArgs.containsKey('isDiscrete') ? namedArgs['isDiscrete'] : null);
+            parentBox: namedArgs.containsKey('parentBox')
+                ? namedArgs['parentBox']
+                : null,
+            offset: namedArgs.containsKey('offset')
+                ? namedArgs['offset']
+                : Offset.zero,
+            sliderTheme: namedArgs.containsKey('sliderTheme')
+                ? namedArgs['sliderTheme']
+                : null,
+            isEnabled: namedArgs.containsKey('isEnabled')
+                ? namedArgs['isEnabled']
+                : null,
+            isDiscrete: namedArgs.containsKey('isDiscrete')
+                ? namedArgs['isDiscrete']
+                : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
 
 class RectangularRangeSliderTrackShapeAutoBinding extends HTExternalClass {
-  RectangularRangeSliderTrackShapeAutoBinding() : super('RectangularRangeSliderTrackShape');
+  RectangularRangeSliderTrackShapeAutoBinding()
+      : super('RectangularRangeSliderTrackShape');
 
   @override
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'RectangularRangeSliderTrackShape':
-        return ({positionalArgs, namedArgs, typeArgs}) => RectangularRangeSliderTrackShape();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            RectangularRangeSliderTrackShape();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -446,44 +565,74 @@ class RectangularRangeSliderTrackShapeAutoBinding extends HTExternalClass {
   }
 }
 
-extension RectangularRangeSliderTrackShapeBinding on RectangularRangeSliderTrackShape {
+extension RectangularRangeSliderTrackShapeBinding
+    on RectangularRangeSliderTrackShape {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('RectangularRangeSliderTrackShape');
+        return const HTType('RectangularRangeSliderTrackShape');
       case 'getPreferredRect':
         return ({positionalArgs, namedArgs, typeArgs}) => getPreferredRect(
-            parentBox: namedArgs.containsKey('parentBox') ? namedArgs['parentBox'] : null,
-            offset: namedArgs.containsKey('offset') ? namedArgs['offset'] : Offset.zero,
-            sliderTheme: namedArgs.containsKey('sliderTheme') ? namedArgs['sliderTheme'] : null,
-            isEnabled: namedArgs.containsKey('isEnabled') ? namedArgs['isEnabled'] : false,
-            isDiscrete: namedArgs.containsKey('isDiscrete') ? namedArgs['isDiscrete'] : false);
+            parentBox: namedArgs.containsKey('parentBox')
+                ? namedArgs['parentBox']
+                : null,
+            offset: namedArgs.containsKey('offset')
+                ? namedArgs['offset']
+                : Offset.zero,
+            sliderTheme: namedArgs.containsKey('sliderTheme')
+                ? namedArgs['sliderTheme']
+                : null,
+            isEnabled: namedArgs.containsKey('isEnabled')
+                ? namedArgs['isEnabled']
+                : false,
+            isDiscrete: namedArgs.containsKey('isDiscrete')
+                ? namedArgs['isDiscrete']
+                : false);
       case 'paint':
-        return ({positionalArgs, namedArgs, typeArgs}) => paint(positionalArgs[0], positionalArgs[1],
-            parentBox: namedArgs.containsKey('parentBox') ? namedArgs['parentBox'] : null,
-            sliderTheme: namedArgs.containsKey('sliderTheme') ? namedArgs['sliderTheme'] : null,
-            enableAnimation: namedArgs.containsKey('enableAnimation') ? namedArgs['enableAnimation'] : null,
-            startThumbCenter: namedArgs.containsKey('startThumbCenter') ? namedArgs['startThumbCenter'] : null,
-            endThumbCenter: namedArgs.containsKey('endThumbCenter') ? namedArgs['endThumbCenter'] : null,
-            isEnabled: namedArgs.containsKey('isEnabled') ? namedArgs['isEnabled'] : false,
-            isDiscrete: namedArgs.containsKey('isDiscrete') ? namedArgs['isDiscrete'] : false,
-            textDirection: namedArgs.containsKey('textDirection') ? namedArgs['textDirection'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => paint(
+            positionalArgs[0], positionalArgs[1],
+            parentBox: namedArgs.containsKey('parentBox')
+                ? namedArgs['parentBox']
+                : null,
+            sliderTheme: namedArgs.containsKey('sliderTheme')
+                ? namedArgs['sliderTheme']
+                : null,
+            enableAnimation: namedArgs.containsKey('enableAnimation')
+                ? namedArgs['enableAnimation']
+                : null,
+            startThumbCenter: namedArgs.containsKey('startThumbCenter')
+                ? namedArgs['startThumbCenter']
+                : null,
+            endThumbCenter: namedArgs.containsKey('endThumbCenter')
+                ? namedArgs['endThumbCenter']
+                : null,
+            isEnabled: namedArgs.containsKey('isEnabled')
+                ? namedArgs['isEnabled']
+                : false,
+            isDiscrete: namedArgs.containsKey('isDiscrete')
+                ? namedArgs['isDiscrete']
+                : false,
+            textDirection: namedArgs.containsKey('textDirection')
+                ? namedArgs['textDirection']
+                : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
 
 class RoundedRectRangeSliderTrackShapeAutoBinding extends HTExternalClass {
-  RoundedRectRangeSliderTrackShapeAutoBinding() : super('RoundedRectRangeSliderTrackShape');
+  RoundedRectRangeSliderTrackShapeAutoBinding()
+      : super('RoundedRectRangeSliderTrackShape');
 
   @override
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'RoundedRectRangeSliderTrackShape':
-        return ({positionalArgs, namedArgs, typeArgs}) => RoundedRectRangeSliderTrackShape();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            RoundedRectRangeSliderTrackShape();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -493,32 +642,62 @@ class RoundedRectRangeSliderTrackShapeAutoBinding extends HTExternalClass {
   }
 }
 
-extension RoundedRectRangeSliderTrackShapeBinding on RoundedRectRangeSliderTrackShape {
+extension RoundedRectRangeSliderTrackShapeBinding
+    on RoundedRectRangeSliderTrackShape {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('RoundedRectRangeSliderTrackShape');
+        return const HTType('RoundedRectRangeSliderTrackShape');
       case 'getPreferredRect':
         return ({positionalArgs, namedArgs, typeArgs}) => getPreferredRect(
-            parentBox: namedArgs.containsKey('parentBox') ? namedArgs['parentBox'] : null,
-            offset: namedArgs.containsKey('offset') ? namedArgs['offset'] : Offset.zero,
-            sliderTheme: namedArgs.containsKey('sliderTheme') ? namedArgs['sliderTheme'] : null,
-            isEnabled: namedArgs.containsKey('isEnabled') ? namedArgs['isEnabled'] : false,
-            isDiscrete: namedArgs.containsKey('isDiscrete') ? namedArgs['isDiscrete'] : false);
+            parentBox: namedArgs.containsKey('parentBox')
+                ? namedArgs['parentBox']
+                : null,
+            offset: namedArgs.containsKey('offset')
+                ? namedArgs['offset']
+                : Offset.zero,
+            sliderTheme: namedArgs.containsKey('sliderTheme')
+                ? namedArgs['sliderTheme']
+                : null,
+            isEnabled: namedArgs.containsKey('isEnabled')
+                ? namedArgs['isEnabled']
+                : false,
+            isDiscrete: namedArgs.containsKey('isDiscrete')
+                ? namedArgs['isDiscrete']
+                : false);
       case 'paint':
-        return ({positionalArgs, namedArgs, typeArgs}) => paint(positionalArgs[0], positionalArgs[1],
-            parentBox: namedArgs.containsKey('parentBox') ? namedArgs['parentBox'] : null,
-            sliderTheme: namedArgs.containsKey('sliderTheme') ? namedArgs['sliderTheme'] : null,
-            enableAnimation: namedArgs.containsKey('enableAnimation') ? namedArgs['enableAnimation'] : null,
-            startThumbCenter: namedArgs.containsKey('startThumbCenter') ? namedArgs['startThumbCenter'] : null,
-            endThumbCenter: namedArgs.containsKey('endThumbCenter') ? namedArgs['endThumbCenter'] : null,
-            isEnabled: namedArgs.containsKey('isEnabled') ? namedArgs['isEnabled'] : false,
-            isDiscrete: namedArgs.containsKey('isDiscrete') ? namedArgs['isDiscrete'] : false,
-            textDirection: namedArgs.containsKey('textDirection') ? namedArgs['textDirection'] : null,
+        return ({positionalArgs, namedArgs, typeArgs}) => paint(
+            positionalArgs[0], positionalArgs[1],
+            parentBox: namedArgs.containsKey('parentBox')
+                ? namedArgs['parentBox']
+                : null,
+            sliderTheme: namedArgs.containsKey('sliderTheme')
+                ? namedArgs['sliderTheme']
+                : null,
+            enableAnimation: namedArgs.containsKey('enableAnimation')
+                ? namedArgs['enableAnimation']
+                : null,
+            startThumbCenter: namedArgs.containsKey('startThumbCenter')
+                ? namedArgs['startThumbCenter']
+                : null,
+            endThumbCenter: namedArgs.containsKey('endThumbCenter')
+                ? namedArgs['endThumbCenter']
+                : null,
+            isEnabled: namedArgs.containsKey('isEnabled')
+                ? namedArgs['isEnabled']
+                : false,
+            isDiscrete: namedArgs.containsKey('isDiscrete')
+                ? namedArgs['isDiscrete']
+                : false,
+            textDirection: namedArgs.containsKey('textDirection')
+                ? namedArgs['textDirection']
+                : null,
             additionalActiveTrackHeight:
-                namedArgs.containsKey('additionalActiveTrackHeight') ? namedArgs['additionalActiveTrackHeight'] : 2);
+                namedArgs.containsKey('additionalActiveTrackHeight')
+                    ? namedArgs['additionalActiveTrackHeight']
+                    : 2);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -530,10 +709,13 @@ class RoundSliderTickMarkShapeAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'RoundSliderTickMarkShape':
-        return ({positionalArgs, namedArgs, typeArgs}) => RoundSliderTickMarkShape(
-            tickMarkRadius: namedArgs.containsKey('tickMarkRadius') ? namedArgs['tickMarkRadius'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            RoundSliderTickMarkShape(
+                tickMarkRadius: namedArgs.containsKey('tickMarkRadius')
+                    ? namedArgs['tickMarkRadius']
+                    : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -547,38 +729,59 @@ extension RoundSliderTickMarkShapeBinding on RoundSliderTickMarkShape {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('RoundSliderTickMarkShape');
+        return const HTType('RoundSliderTickMarkShape');
       case 'tickMarkRadius':
         return tickMarkRadius;
       case 'getPreferredSize':
         return ({positionalArgs, namedArgs, typeArgs}) => getPreferredSize(
-            sliderTheme: namedArgs.containsKey('sliderTheme') ? namedArgs['sliderTheme'] : null,
-            isEnabled: namedArgs.containsKey('isEnabled') ? namedArgs['isEnabled'] : null);
+            sliderTheme: namedArgs.containsKey('sliderTheme')
+                ? namedArgs['sliderTheme']
+                : null,
+            isEnabled: namedArgs.containsKey('isEnabled')
+                ? namedArgs['isEnabled']
+                : null);
       case 'paint':
-        return ({positionalArgs, namedArgs, typeArgs}) => paint(positionalArgs[0], positionalArgs[1],
-            parentBox: namedArgs.containsKey('parentBox') ? namedArgs['parentBox'] : null,
-            sliderTheme: namedArgs.containsKey('sliderTheme') ? namedArgs['sliderTheme'] : null,
-            enableAnimation: namedArgs.containsKey('enableAnimation') ? namedArgs['enableAnimation'] : null,
-            textDirection: namedArgs.containsKey('textDirection') ? namedArgs['textDirection'] : null,
-            thumbCenter: namedArgs.containsKey('thumbCenter') ? namedArgs['thumbCenter'] : null,
-            isEnabled: namedArgs.containsKey('isEnabled') ? namedArgs['isEnabled'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => paint(
+            positionalArgs[0], positionalArgs[1],
+            parentBox: namedArgs.containsKey('parentBox')
+                ? namedArgs['parentBox']
+                : null,
+            sliderTheme: namedArgs.containsKey('sliderTheme')
+                ? namedArgs['sliderTheme']
+                : null,
+            enableAnimation: namedArgs.containsKey('enableAnimation')
+                ? namedArgs['enableAnimation']
+                : null,
+            textDirection: namedArgs.containsKey('textDirection')
+                ? namedArgs['textDirection']
+                : null,
+            thumbCenter: namedArgs.containsKey('thumbCenter')
+                ? namedArgs['thumbCenter']
+                : null,
+            isEnabled: namedArgs.containsKey('isEnabled')
+                ? namedArgs['isEnabled']
+                : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
 
 class RoundRangeSliderTickMarkShapeAutoBinding extends HTExternalClass {
-  RoundRangeSliderTickMarkShapeAutoBinding() : super('RoundRangeSliderTickMarkShape');
+  RoundRangeSliderTickMarkShapeAutoBinding()
+      : super('RoundRangeSliderTickMarkShape');
 
   @override
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'RoundRangeSliderTickMarkShape':
-        return ({positionalArgs, namedArgs, typeArgs}) => RoundRangeSliderTickMarkShape(
-            tickMarkRadius: namedArgs.containsKey('tickMarkRadius') ? namedArgs['tickMarkRadius'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            RoundRangeSliderTickMarkShape(
+                tickMarkRadius: namedArgs.containsKey('tickMarkRadius')
+                    ? namedArgs['tickMarkRadius']
+                    : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -588,28 +791,48 @@ class RoundRangeSliderTickMarkShapeAutoBinding extends HTExternalClass {
   }
 }
 
-extension RoundRangeSliderTickMarkShapeBinding on RoundRangeSliderTickMarkShape {
+extension RoundRangeSliderTickMarkShapeBinding
+    on RoundRangeSliderTickMarkShape {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('RoundRangeSliderTickMarkShape');
+        return const HTType('RoundRangeSliderTickMarkShape');
       case 'tickMarkRadius':
         return tickMarkRadius;
       case 'getPreferredSize':
         return ({positionalArgs, namedArgs, typeArgs}) => getPreferredSize(
-            sliderTheme: namedArgs.containsKey('sliderTheme') ? namedArgs['sliderTheme'] : null,
-            isEnabled: namedArgs.containsKey('isEnabled') ? namedArgs['isEnabled'] : false);
+            sliderTheme: namedArgs.containsKey('sliderTheme')
+                ? namedArgs['sliderTheme']
+                : null,
+            isEnabled: namedArgs.containsKey('isEnabled')
+                ? namedArgs['isEnabled']
+                : false);
       case 'paint':
-        return ({positionalArgs, namedArgs, typeArgs}) => paint(positionalArgs[0], positionalArgs[1],
-            parentBox: namedArgs.containsKey('parentBox') ? namedArgs['parentBox'] : null,
-            sliderTheme: namedArgs.containsKey('sliderTheme') ? namedArgs['sliderTheme'] : null,
-            enableAnimation: namedArgs.containsKey('enableAnimation') ? namedArgs['enableAnimation'] : null,
-            startThumbCenter: namedArgs.containsKey('startThumbCenter') ? namedArgs['startThumbCenter'] : null,
-            endThumbCenter: namedArgs.containsKey('endThumbCenter') ? namedArgs['endThumbCenter'] : null,
-            isEnabled: namedArgs.containsKey('isEnabled') ? namedArgs['isEnabled'] : false,
-            textDirection: namedArgs.containsKey('textDirection') ? namedArgs['textDirection'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => paint(
+            positionalArgs[0], positionalArgs[1],
+            parentBox: namedArgs.containsKey('parentBox')
+                ? namedArgs['parentBox']
+                : null,
+            sliderTheme: namedArgs.containsKey('sliderTheme')
+                ? namedArgs['sliderTheme']
+                : null,
+            enableAnimation: namedArgs.containsKey('enableAnimation')
+                ? namedArgs['enableAnimation']
+                : null,
+            startThumbCenter: namedArgs.containsKey('startThumbCenter')
+                ? namedArgs['startThumbCenter']
+                : null,
+            endThumbCenter: namedArgs.containsKey('endThumbCenter')
+                ? namedArgs['endThumbCenter']
+                : null,
+            isEnabled: namedArgs.containsKey('isEnabled')
+                ? namedArgs['isEnabled']
+                : false,
+            textDirection: namedArgs.containsKey('textDirection')
+                ? namedArgs['textDirection']
+                : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -622,12 +845,20 @@ class RoundSliderThumbShapeAutoBinding extends HTExternalClass {
     switch (varName) {
       case 'RoundSliderThumbShape':
         return ({positionalArgs, namedArgs, typeArgs}) => RoundSliderThumbShape(
-            enabledThumbRadius: namedArgs.containsKey('enabledThumbRadius') ? namedArgs['enabledThumbRadius'] : 10.0,
-            disabledThumbRadius: namedArgs.containsKey('disabledThumbRadius') ? namedArgs['disabledThumbRadius'] : null,
-            elevation: namedArgs.containsKey('elevation') ? namedArgs['elevation'] : 1.0,
-            pressedElevation: namedArgs.containsKey('pressedElevation') ? namedArgs['pressedElevation'] : 6.0);
+            enabledThumbRadius: namedArgs.containsKey('enabledThumbRadius')
+                ? namedArgs['enabledThumbRadius']
+                : 10.0,
+            disabledThumbRadius: namedArgs.containsKey('disabledThumbRadius')
+                ? namedArgs['disabledThumbRadius']
+                : null,
+            elevation: namedArgs.containsKey('elevation')
+                ? namedArgs['elevation']
+                : 1.0,
+            pressedElevation: namedArgs.containsKey('pressedElevation')
+                ? namedArgs['pressedElevation']
+                : 6.0);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -641,7 +872,7 @@ extension RoundSliderThumbShapeBinding on RoundSliderThumbShape {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('RoundSliderThumbShape');
+        return const HTType('RoundSliderThumbShape');
       case 'enabledThumbRadius':
         return enabledThumbRadius;
       case 'disabledThumbRadius':
@@ -651,21 +882,41 @@ extension RoundSliderThumbShapeBinding on RoundSliderThumbShape {
       case 'pressedElevation':
         return pressedElevation;
       case 'getPreferredSize':
-        return ({positionalArgs, namedArgs, typeArgs}) => getPreferredSize(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            getPreferredSize(positionalArgs[0], positionalArgs[1]);
       case 'paint':
-        return ({positionalArgs, namedArgs, typeArgs}) => paint(positionalArgs[0], positionalArgs[1],
-            activationAnimation: namedArgs.containsKey('activationAnimation') ? namedArgs['activationAnimation'] : null,
-            enableAnimation: namedArgs.containsKey('enableAnimation') ? namedArgs['enableAnimation'] : null,
-            isDiscrete: namedArgs.containsKey('isDiscrete') ? namedArgs['isDiscrete'] : null,
-            labelPainter: namedArgs.containsKey('labelPainter') ? namedArgs['labelPainter'] : null,
-            parentBox: namedArgs.containsKey('parentBox') ? namedArgs['parentBox'] : null,
-            sliderTheme: namedArgs.containsKey('sliderTheme') ? namedArgs['sliderTheme'] : null,
-            textDirection: namedArgs.containsKey('textDirection') ? namedArgs['textDirection'] : null,
+        return ({positionalArgs, namedArgs, typeArgs}) => paint(
+            positionalArgs[0], positionalArgs[1],
+            activationAnimation: namedArgs.containsKey('activationAnimation')
+                ? namedArgs['activationAnimation']
+                : null,
+            enableAnimation: namedArgs.containsKey('enableAnimation')
+                ? namedArgs['enableAnimation']
+                : null,
+            isDiscrete: namedArgs.containsKey('isDiscrete')
+                ? namedArgs['isDiscrete']
+                : null,
+            labelPainter: namedArgs.containsKey('labelPainter')
+                ? namedArgs['labelPainter']
+                : null,
+            parentBox: namedArgs.containsKey('parentBox')
+                ? namedArgs['parentBox']
+                : null,
+            sliderTheme: namedArgs.containsKey('sliderTheme')
+                ? namedArgs['sliderTheme']
+                : null,
+            textDirection: namedArgs.containsKey('textDirection')
+                ? namedArgs['textDirection']
+                : null,
             value: namedArgs.containsKey('value') ? namedArgs['value'] : null,
-            textScaleFactor: namedArgs.containsKey('textScaleFactor') ? namedArgs['textScaleFactor'] : null,
-            sizeWithOverflow: namedArgs.containsKey('sizeWithOverflow') ? namedArgs['sizeWithOverflow'] : null);
+            textScaleFactor: namedArgs.containsKey('textScaleFactor')
+                ? namedArgs['textScaleFactor']
+                : null,
+            sizeWithOverflow: namedArgs.containsKey('sizeWithOverflow')
+                ? namedArgs['sizeWithOverflow']
+                : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -677,13 +928,23 @@ class RoundRangeSliderThumbShapeAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'RoundRangeSliderThumbShape':
-        return ({positionalArgs, namedArgs, typeArgs}) => RoundRangeSliderThumbShape(
-            enabledThumbRadius: namedArgs.containsKey('enabledThumbRadius') ? namedArgs['enabledThumbRadius'] : 10.0,
-            disabledThumbRadius: namedArgs.containsKey('disabledThumbRadius') ? namedArgs['disabledThumbRadius'] : null,
-            elevation: namedArgs.containsKey('elevation') ? namedArgs['elevation'] : 1.0,
-            pressedElevation: namedArgs.containsKey('pressedElevation') ? namedArgs['pressedElevation'] : 6.0);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            RoundRangeSliderThumbShape(
+                enabledThumbRadius: namedArgs.containsKey('enabledThumbRadius')
+                    ? namedArgs['enabledThumbRadius']
+                    : 10.0,
+                disabledThumbRadius:
+                    namedArgs.containsKey('disabledThumbRadius')
+                        ? namedArgs['disabledThumbRadius']
+                        : null,
+                elevation: namedArgs.containsKey('elevation')
+                    ? namedArgs['elevation']
+                    : 1.0,
+                pressedElevation: namedArgs.containsKey('pressedElevation')
+                    ? namedArgs['pressedElevation']
+                    : 6.0);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -697,7 +958,7 @@ extension RoundRangeSliderThumbShapeBinding on RoundRangeSliderThumbShape {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('RoundRangeSliderThumbShape');
+        return const HTType('RoundRangeSliderThumbShape');
       case 'enabledThumbRadius':
         return enabledThumbRadius;
       case 'disabledThumbRadius':
@@ -707,20 +968,37 @@ extension RoundRangeSliderThumbShapeBinding on RoundRangeSliderThumbShape {
       case 'pressedElevation':
         return pressedElevation;
       case 'getPreferredSize':
-        return ({positionalArgs, namedArgs, typeArgs}) => getPreferredSize(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            getPreferredSize(positionalArgs[0], positionalArgs[1]);
       case 'paint':
-        return ({positionalArgs, namedArgs, typeArgs}) => paint(positionalArgs[0], positionalArgs[1],
-            activationAnimation: namedArgs.containsKey('activationAnimation') ? namedArgs['activationAnimation'] : null,
-            enableAnimation: namedArgs.containsKey('enableAnimation') ? namedArgs['enableAnimation'] : null,
-            isDiscrete: namedArgs.containsKey('isDiscrete') ? namedArgs['isDiscrete'] : false,
-            isEnabled: namedArgs.containsKey('isEnabled') ? namedArgs['isEnabled'] : false,
-            isOnTop: namedArgs.containsKey('isOnTop') ? namedArgs['isOnTop'] : null,
-            sliderTheme: namedArgs.containsKey('sliderTheme') ? namedArgs['sliderTheme'] : null,
-            textDirection: namedArgs.containsKey('textDirection') ? namedArgs['textDirection'] : null,
+        return ({positionalArgs, namedArgs, typeArgs}) => paint(
+            positionalArgs[0], positionalArgs[1],
+            activationAnimation: namedArgs.containsKey('activationAnimation')
+                ? namedArgs['activationAnimation']
+                : null,
+            enableAnimation: namedArgs.containsKey('enableAnimation')
+                ? namedArgs['enableAnimation']
+                : null,
+            isDiscrete: namedArgs.containsKey('isDiscrete')
+                ? namedArgs['isDiscrete']
+                : false,
+            isEnabled: namedArgs.containsKey('isEnabled')
+                ? namedArgs['isEnabled']
+                : false,
+            isOnTop:
+                namedArgs.containsKey('isOnTop') ? namedArgs['isOnTop'] : null,
+            sliderTheme: namedArgs.containsKey('sliderTheme')
+                ? namedArgs['sliderTheme']
+                : null,
+            textDirection: namedArgs.containsKey('textDirection')
+                ? namedArgs['textDirection']
+                : null,
             thumb: namedArgs.containsKey('thumb') ? namedArgs['thumb'] : null,
-            isPressed: namedArgs.containsKey('isPressed') ? namedArgs['isPressed'] : null);
+            isPressed: namedArgs.containsKey('isPressed')
+                ? namedArgs['isPressed']
+                : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -732,10 +1010,13 @@ class RoundSliderOverlayShapeAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'RoundSliderOverlayShape':
-        return ({positionalArgs, namedArgs, typeArgs}) => RoundSliderOverlayShape(
-            overlayRadius: namedArgs.containsKey('overlayRadius') ? namedArgs['overlayRadius'] : 24.0);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            RoundSliderOverlayShape(
+                overlayRadius: namedArgs.containsKey('overlayRadius')
+                    ? namedArgs['overlayRadius']
+                    : 24.0);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -749,39 +1030,61 @@ extension RoundSliderOverlayShapeBinding on RoundSliderOverlayShape {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('RoundSliderOverlayShape');
+        return const HTType('RoundSliderOverlayShape');
       case 'overlayRadius':
         return overlayRadius;
       case 'getPreferredSize':
-        return ({positionalArgs, namedArgs, typeArgs}) => getPreferredSize(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            getPreferredSize(positionalArgs[0], positionalArgs[1]);
       case 'paint':
-        return ({positionalArgs, namedArgs, typeArgs}) => paint(positionalArgs[0], positionalArgs[1],
-            activationAnimation: namedArgs.containsKey('activationAnimation') ? namedArgs['activationAnimation'] : null,
-            enableAnimation: namedArgs.containsKey('enableAnimation') ? namedArgs['enableAnimation'] : null,
-            isDiscrete: namedArgs.containsKey('isDiscrete') ? namedArgs['isDiscrete'] : null,
-            labelPainter: namedArgs.containsKey('labelPainter') ? namedArgs['labelPainter'] : null,
-            parentBox: namedArgs.containsKey('parentBox') ? namedArgs['parentBox'] : null,
-            sliderTheme: namedArgs.containsKey('sliderTheme') ? namedArgs['sliderTheme'] : null,
-            textDirection: namedArgs.containsKey('textDirection') ? namedArgs['textDirection'] : null,
+        return ({positionalArgs, namedArgs, typeArgs}) => paint(
+            positionalArgs[0], positionalArgs[1],
+            activationAnimation: namedArgs.containsKey('activationAnimation')
+                ? namedArgs['activationAnimation']
+                : null,
+            enableAnimation: namedArgs.containsKey('enableAnimation')
+                ? namedArgs['enableAnimation']
+                : null,
+            isDiscrete: namedArgs.containsKey('isDiscrete')
+                ? namedArgs['isDiscrete']
+                : null,
+            labelPainter: namedArgs.containsKey('labelPainter')
+                ? namedArgs['labelPainter']
+                : null,
+            parentBox: namedArgs.containsKey('parentBox')
+                ? namedArgs['parentBox']
+                : null,
+            sliderTheme: namedArgs.containsKey('sliderTheme')
+                ? namedArgs['sliderTheme']
+                : null,
+            textDirection: namedArgs.containsKey('textDirection')
+                ? namedArgs['textDirection']
+                : null,
             value: namedArgs.containsKey('value') ? namedArgs['value'] : null,
-            textScaleFactor: namedArgs.containsKey('textScaleFactor') ? namedArgs['textScaleFactor'] : null,
-            sizeWithOverflow: namedArgs.containsKey('sizeWithOverflow') ? namedArgs['sizeWithOverflow'] : null);
+            textScaleFactor: namedArgs.containsKey('textScaleFactor')
+                ? namedArgs['textScaleFactor']
+                : null,
+            sizeWithOverflow: namedArgs.containsKey('sizeWithOverflow')
+                ? namedArgs['sizeWithOverflow']
+                : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
 
 class RectangularSliderValueIndicatorShapeAutoBinding extends HTExternalClass {
-  RectangularSliderValueIndicatorShapeAutoBinding() : super('RectangularSliderValueIndicatorShape');
+  RectangularSliderValueIndicatorShapeAutoBinding()
+      : super('RectangularSliderValueIndicatorShape');
 
   @override
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'RectangularSliderValueIndicatorShape':
-        return ({positionalArgs, namedArgs, typeArgs}) => RectangularSliderValueIndicatorShape();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            RectangularSliderValueIndicatorShape();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -791,43 +1094,71 @@ class RectangularSliderValueIndicatorShapeAutoBinding extends HTExternalClass {
   }
 }
 
-extension RectangularSliderValueIndicatorShapeBinding on RectangularSliderValueIndicatorShape {
+extension RectangularSliderValueIndicatorShapeBinding
+    on RectangularSliderValueIndicatorShape {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('RectangularSliderValueIndicatorShape');
+        return const HTType('RectangularSliderValueIndicatorShape');
       case 'getPreferredSize':
-        return ({positionalArgs, namedArgs, typeArgs}) => getPreferredSize(positionalArgs[0], positionalArgs[1],
-            labelPainter: namedArgs.containsKey('labelPainter') ? namedArgs['labelPainter'] : null,
-            textScaleFactor: namedArgs.containsKey('textScaleFactor') ? namedArgs['textScaleFactor'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => getPreferredSize(
+            positionalArgs[0], positionalArgs[1],
+            labelPainter: namedArgs.containsKey('labelPainter')
+                ? namedArgs['labelPainter']
+                : null,
+            textScaleFactor: namedArgs.containsKey('textScaleFactor')
+                ? namedArgs['textScaleFactor']
+                : null);
       case 'paint':
-        return ({positionalArgs, namedArgs, typeArgs}) => paint(positionalArgs[0], positionalArgs[1],
-            activationAnimation: namedArgs.containsKey('activationAnimation') ? namedArgs['activationAnimation'] : null,
-            enableAnimation: namedArgs.containsKey('enableAnimation') ? namedArgs['enableAnimation'] : null,
-            isDiscrete: namedArgs.containsKey('isDiscrete') ? namedArgs['isDiscrete'] : null,
-            labelPainter: namedArgs.containsKey('labelPainter') ? namedArgs['labelPainter'] : null,
-            parentBox: namedArgs.containsKey('parentBox') ? namedArgs['parentBox'] : null,
-            sliderTheme: namedArgs.containsKey('sliderTheme') ? namedArgs['sliderTheme'] : null,
-            textDirection: namedArgs.containsKey('textDirection') ? namedArgs['textDirection'] : null,
+        return ({positionalArgs, namedArgs, typeArgs}) => paint(
+            positionalArgs[0], positionalArgs[1],
+            activationAnimation: namedArgs.containsKey('activationAnimation')
+                ? namedArgs['activationAnimation']
+                : null,
+            enableAnimation: namedArgs.containsKey('enableAnimation')
+                ? namedArgs['enableAnimation']
+                : null,
+            isDiscrete: namedArgs.containsKey('isDiscrete')
+                ? namedArgs['isDiscrete']
+                : null,
+            labelPainter: namedArgs.containsKey('labelPainter')
+                ? namedArgs['labelPainter']
+                : null,
+            parentBox: namedArgs.containsKey('parentBox')
+                ? namedArgs['parentBox']
+                : null,
+            sliderTheme: namedArgs.containsKey('sliderTheme')
+                ? namedArgs['sliderTheme']
+                : null,
+            textDirection: namedArgs.containsKey('textDirection')
+                ? namedArgs['textDirection']
+                : null,
             value: namedArgs.containsKey('value') ? namedArgs['value'] : null,
-            textScaleFactor: namedArgs.containsKey('textScaleFactor') ? namedArgs['textScaleFactor'] : null,
-            sizeWithOverflow: namedArgs.containsKey('sizeWithOverflow') ? namedArgs['sizeWithOverflow'] : null);
+            textScaleFactor: namedArgs.containsKey('textScaleFactor')
+                ? namedArgs['textScaleFactor']
+                : null,
+            sizeWithOverflow: namedArgs.containsKey('sizeWithOverflow')
+                ? namedArgs['sizeWithOverflow']
+                : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
 
-class RectangularRangeSliderValueIndicatorShapeAutoBinding extends HTExternalClass {
-  RectangularRangeSliderValueIndicatorShapeAutoBinding() : super('RectangularRangeSliderValueIndicatorShape');
+class RectangularRangeSliderValueIndicatorShapeAutoBinding
+    extends HTExternalClass {
+  RectangularRangeSliderValueIndicatorShapeAutoBinding()
+      : super('RectangularRangeSliderValueIndicatorShape');
 
   @override
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'RectangularRangeSliderValueIndicatorShape':
-        return ({positionalArgs, namedArgs, typeArgs}) => RectangularRangeSliderValueIndicatorShape();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            RectangularRangeSliderValueIndicatorShape();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -837,53 +1168,92 @@ class RectangularRangeSliderValueIndicatorShapeAutoBinding extends HTExternalCla
   }
 }
 
-extension RectangularRangeSliderValueIndicatorShapeBinding on RectangularRangeSliderValueIndicatorShape {
+extension RectangularRangeSliderValueIndicatorShapeBinding
+    on RectangularRangeSliderValueIndicatorShape {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('RectangularRangeSliderValueIndicatorShape');
+        return const HTType('RectangularRangeSliderValueIndicatorShape');
       case 'getPreferredSize':
-        return ({positionalArgs, namedArgs, typeArgs}) => getPreferredSize(positionalArgs[0], positionalArgs[1],
-            labelPainter: namedArgs.containsKey('labelPainter') ? namedArgs['labelPainter'] : null,
-            textScaleFactor: namedArgs.containsKey('textScaleFactor') ? namedArgs['textScaleFactor'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => getPreferredSize(
+            positionalArgs[0], positionalArgs[1],
+            labelPainter: namedArgs.containsKey('labelPainter')
+                ? namedArgs['labelPainter']
+                : null,
+            textScaleFactor: namedArgs.containsKey('textScaleFactor')
+                ? namedArgs['textScaleFactor']
+                : null);
       case 'getHorizontalShift':
         return ({positionalArgs, namedArgs, typeArgs}) => getHorizontalShift(
-            parentBox: namedArgs.containsKey('parentBox') ? namedArgs['parentBox'] : null,
-            center: namedArgs.containsKey('center') ? namedArgs['center'] : null,
-            labelPainter: namedArgs.containsKey('labelPainter') ? namedArgs['labelPainter'] : null,
-            activationAnimation: namedArgs.containsKey('activationAnimation') ? namedArgs['activationAnimation'] : null,
-            textScaleFactor: namedArgs.containsKey('textScaleFactor') ? namedArgs['textScaleFactor'] : null,
-            sizeWithOverflow: namedArgs.containsKey('sizeWithOverflow') ? namedArgs['sizeWithOverflow'] : null);
+            parentBox: namedArgs.containsKey('parentBox')
+                ? namedArgs['parentBox']
+                : null,
+            center:
+                namedArgs.containsKey('center') ? namedArgs['center'] : null,
+            labelPainter: namedArgs.containsKey('labelPainter')
+                ? namedArgs['labelPainter']
+                : null,
+            activationAnimation: namedArgs.containsKey('activationAnimation')
+                ? namedArgs['activationAnimation']
+                : null,
+            textScaleFactor: namedArgs.containsKey('textScaleFactor')
+                ? namedArgs['textScaleFactor']
+                : null,
+            sizeWithOverflow: namedArgs.containsKey('sizeWithOverflow')
+                ? namedArgs['sizeWithOverflow']
+                : null);
       case 'paint':
-        return ({positionalArgs, namedArgs, typeArgs}) => paint(positionalArgs[0], positionalArgs[1],
-            activationAnimation: namedArgs.containsKey('activationAnimation') ? namedArgs['activationAnimation'] : null,
-            enableAnimation: namedArgs.containsKey('enableAnimation') ? namedArgs['enableAnimation'] : null,
-            isDiscrete: namedArgs.containsKey('isDiscrete') ? namedArgs['isDiscrete'] : null,
-            isOnTop: namedArgs.containsKey('isOnTop') ? namedArgs['isOnTop'] : null,
-            labelPainter: namedArgs.containsKey('labelPainter') ? namedArgs['labelPainter'] : null,
-            textScaleFactor: namedArgs.containsKey('textScaleFactor') ? namedArgs['textScaleFactor'] : null,
-            sizeWithOverflow: namedArgs.containsKey('sizeWithOverflow') ? namedArgs['sizeWithOverflow'] : null,
-            parentBox: namedArgs.containsKey('parentBox') ? namedArgs['parentBox'] : null,
-            sliderTheme: namedArgs.containsKey('sliderTheme') ? namedArgs['sliderTheme'] : null,
-            textDirection: namedArgs.containsKey('textDirection') ? namedArgs['textDirection'] : null,
+        return ({positionalArgs, namedArgs, typeArgs}) => paint(
+            positionalArgs[0], positionalArgs[1],
+            activationAnimation: namedArgs.containsKey('activationAnimation')
+                ? namedArgs['activationAnimation']
+                : null,
+            enableAnimation: namedArgs.containsKey('enableAnimation')
+                ? namedArgs['enableAnimation']
+                : null,
+            isDiscrete: namedArgs.containsKey('isDiscrete')
+                ? namedArgs['isDiscrete']
+                : null,
+            isOnTop:
+                namedArgs.containsKey('isOnTop') ? namedArgs['isOnTop'] : null,
+            labelPainter: namedArgs.containsKey('labelPainter')
+                ? namedArgs['labelPainter']
+                : null,
+            textScaleFactor: namedArgs.containsKey('textScaleFactor')
+                ? namedArgs['textScaleFactor']
+                : null,
+            sizeWithOverflow: namedArgs.containsKey('sizeWithOverflow')
+                ? namedArgs['sizeWithOverflow']
+                : null,
+            parentBox: namedArgs.containsKey('parentBox')
+                ? namedArgs['parentBox']
+                : null,
+            sliderTheme: namedArgs.containsKey('sliderTheme')
+                ? namedArgs['sliderTheme']
+                : null,
+            textDirection: namedArgs.containsKey('textDirection')
+                ? namedArgs['textDirection']
+                : null,
             value: namedArgs.containsKey('value') ? namedArgs['value'] : null,
             thumb: namedArgs.containsKey('thumb') ? namedArgs['thumb'] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
 
 class PaddleSliderValueIndicatorShapeAutoBinding extends HTExternalClass {
-  PaddleSliderValueIndicatorShapeAutoBinding() : super('PaddleSliderValueIndicatorShape');
+  PaddleSliderValueIndicatorShapeAutoBinding()
+      : super('PaddleSliderValueIndicatorShape');
 
   @override
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'PaddleSliderValueIndicatorShape':
-        return ({positionalArgs, namedArgs, typeArgs}) => PaddleSliderValueIndicatorShape();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            PaddleSliderValueIndicatorShape();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -893,43 +1263,70 @@ class PaddleSliderValueIndicatorShapeAutoBinding extends HTExternalClass {
   }
 }
 
-extension PaddleSliderValueIndicatorShapeBinding on PaddleSliderValueIndicatorShape {
+extension PaddleSliderValueIndicatorShapeBinding
+    on PaddleSliderValueIndicatorShape {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('PaddleSliderValueIndicatorShape');
+        return const HTType('PaddleSliderValueIndicatorShape');
       case 'getPreferredSize':
-        return ({positionalArgs, namedArgs, typeArgs}) => getPreferredSize(positionalArgs[0], positionalArgs[1],
-            labelPainter: namedArgs.containsKey('labelPainter') ? namedArgs['labelPainter'] : null,
-            textScaleFactor: namedArgs.containsKey('textScaleFactor') ? namedArgs['textScaleFactor'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => getPreferredSize(
+            positionalArgs[0], positionalArgs[1],
+            labelPainter: namedArgs.containsKey('labelPainter')
+                ? namedArgs['labelPainter']
+                : null,
+            textScaleFactor: namedArgs.containsKey('textScaleFactor')
+                ? namedArgs['textScaleFactor']
+                : null);
       case 'paint':
-        return ({positionalArgs, namedArgs, typeArgs}) => paint(positionalArgs[0], positionalArgs[1],
-            activationAnimation: namedArgs.containsKey('activationAnimation') ? namedArgs['activationAnimation'] : null,
-            enableAnimation: namedArgs.containsKey('enableAnimation') ? namedArgs['enableAnimation'] : null,
-            isDiscrete: namedArgs.containsKey('isDiscrete') ? namedArgs['isDiscrete'] : null,
-            labelPainter: namedArgs.containsKey('labelPainter') ? namedArgs['labelPainter'] : null,
-            parentBox: namedArgs.containsKey('parentBox') ? namedArgs['parentBox'] : null,
-            sliderTheme: namedArgs.containsKey('sliderTheme') ? namedArgs['sliderTheme'] : null,
-            textDirection: namedArgs.containsKey('textDirection') ? namedArgs['textDirection'] : null,
+        return ({positionalArgs, namedArgs, typeArgs}) => paint(
+            positionalArgs[0], positionalArgs[1],
+            activationAnimation: namedArgs.containsKey('activationAnimation')
+                ? namedArgs['activationAnimation']
+                : null,
+            enableAnimation: namedArgs.containsKey('enableAnimation')
+                ? namedArgs['enableAnimation']
+                : null,
+            isDiscrete: namedArgs.containsKey('isDiscrete')
+                ? namedArgs['isDiscrete']
+                : null,
+            labelPainter: namedArgs.containsKey('labelPainter')
+                ? namedArgs['labelPainter']
+                : null,
+            parentBox: namedArgs.containsKey('parentBox')
+                ? namedArgs['parentBox']
+                : null,
+            sliderTheme: namedArgs.containsKey('sliderTheme')
+                ? namedArgs['sliderTheme']
+                : null,
+            textDirection: namedArgs.containsKey('textDirection')
+                ? namedArgs['textDirection']
+                : null,
             value: namedArgs.containsKey('value') ? namedArgs['value'] : null,
-            textScaleFactor: namedArgs.containsKey('textScaleFactor') ? namedArgs['textScaleFactor'] : null,
-            sizeWithOverflow: namedArgs.containsKey('sizeWithOverflow') ? namedArgs['sizeWithOverflow'] : null);
+            textScaleFactor: namedArgs.containsKey('textScaleFactor')
+                ? namedArgs['textScaleFactor']
+                : null,
+            sizeWithOverflow: namedArgs.containsKey('sizeWithOverflow')
+                ? namedArgs['sizeWithOverflow']
+                : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
 
 class PaddleRangeSliderValueIndicatorShapeAutoBinding extends HTExternalClass {
-  PaddleRangeSliderValueIndicatorShapeAutoBinding() : super('PaddleRangeSliderValueIndicatorShape');
+  PaddleRangeSliderValueIndicatorShapeAutoBinding()
+      : super('PaddleRangeSliderValueIndicatorShape');
 
   @override
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'PaddleRangeSliderValueIndicatorShape':
-        return ({positionalArgs, namedArgs, typeArgs}) => PaddleRangeSliderValueIndicatorShape();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            PaddleRangeSliderValueIndicatorShape();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -939,39 +1336,76 @@ class PaddleRangeSliderValueIndicatorShapeAutoBinding extends HTExternalClass {
   }
 }
 
-extension PaddleRangeSliderValueIndicatorShapeBinding on PaddleRangeSliderValueIndicatorShape {
+extension PaddleRangeSliderValueIndicatorShapeBinding
+    on PaddleRangeSliderValueIndicatorShape {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('PaddleRangeSliderValueIndicatorShape');
+        return const HTType('PaddleRangeSliderValueIndicatorShape');
       case 'getPreferredSize':
-        return ({positionalArgs, namedArgs, typeArgs}) => getPreferredSize(positionalArgs[0], positionalArgs[1],
-            labelPainter: namedArgs.containsKey('labelPainter') ? namedArgs['labelPainter'] : null,
-            textScaleFactor: namedArgs.containsKey('textScaleFactor') ? namedArgs['textScaleFactor'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => getPreferredSize(
+            positionalArgs[0], positionalArgs[1],
+            labelPainter: namedArgs.containsKey('labelPainter')
+                ? namedArgs['labelPainter']
+                : null,
+            textScaleFactor: namedArgs.containsKey('textScaleFactor')
+                ? namedArgs['textScaleFactor']
+                : null);
       case 'getHorizontalShift':
         return ({positionalArgs, namedArgs, typeArgs}) => getHorizontalShift(
-            parentBox: namedArgs.containsKey('parentBox') ? namedArgs['parentBox'] : null,
-            center: namedArgs.containsKey('center') ? namedArgs['center'] : null,
-            labelPainter: namedArgs.containsKey('labelPainter') ? namedArgs['labelPainter'] : null,
-            activationAnimation: namedArgs.containsKey('activationAnimation') ? namedArgs['activationAnimation'] : null,
-            textScaleFactor: namedArgs.containsKey('textScaleFactor') ? namedArgs['textScaleFactor'] : null,
-            sizeWithOverflow: namedArgs.containsKey('sizeWithOverflow') ? namedArgs['sizeWithOverflow'] : null);
+            parentBox: namedArgs.containsKey('parentBox')
+                ? namedArgs['parentBox']
+                : null,
+            center:
+                namedArgs.containsKey('center') ? namedArgs['center'] : null,
+            labelPainter: namedArgs.containsKey('labelPainter')
+                ? namedArgs['labelPainter']
+                : null,
+            activationAnimation: namedArgs.containsKey('activationAnimation')
+                ? namedArgs['activationAnimation']
+                : null,
+            textScaleFactor: namedArgs.containsKey('textScaleFactor')
+                ? namedArgs['textScaleFactor']
+                : null,
+            sizeWithOverflow: namedArgs.containsKey('sizeWithOverflow')
+                ? namedArgs['sizeWithOverflow']
+                : null);
       case 'paint':
-        return ({positionalArgs, namedArgs, typeArgs}) => paint(positionalArgs[0], positionalArgs[1],
-            activationAnimation: namedArgs.containsKey('activationAnimation') ? namedArgs['activationAnimation'] : null,
-            enableAnimation: namedArgs.containsKey('enableAnimation') ? namedArgs['enableAnimation'] : null,
-            isDiscrete: namedArgs.containsKey('isDiscrete') ? namedArgs['isDiscrete'] : null,
-            isOnTop: namedArgs.containsKey('isOnTop') ? namedArgs['isOnTop'] : false,
-            labelPainter: namedArgs.containsKey('labelPainter') ? namedArgs['labelPainter'] : null,
-            parentBox: namedArgs.containsKey('parentBox') ? namedArgs['parentBox'] : null,
-            sliderTheme: namedArgs.containsKey('sliderTheme') ? namedArgs['sliderTheme'] : null,
-            textDirection: namedArgs.containsKey('textDirection') ? namedArgs['textDirection'] : null,
+        return ({positionalArgs, namedArgs, typeArgs}) => paint(
+            positionalArgs[0], positionalArgs[1],
+            activationAnimation: namedArgs.containsKey('activationAnimation')
+                ? namedArgs['activationAnimation']
+                : null,
+            enableAnimation: namedArgs.containsKey('enableAnimation')
+                ? namedArgs['enableAnimation']
+                : null,
+            isDiscrete: namedArgs.containsKey('isDiscrete')
+                ? namedArgs['isDiscrete']
+                : null,
+            isOnTop:
+                namedArgs.containsKey('isOnTop') ? namedArgs['isOnTop'] : false,
+            labelPainter: namedArgs.containsKey('labelPainter')
+                ? namedArgs['labelPainter']
+                : null,
+            parentBox: namedArgs.containsKey('parentBox')
+                ? namedArgs['parentBox']
+                : null,
+            sliderTheme: namedArgs.containsKey('sliderTheme')
+                ? namedArgs['sliderTheme']
+                : null,
+            textDirection: namedArgs.containsKey('textDirection')
+                ? namedArgs['textDirection']
+                : null,
             thumb: namedArgs.containsKey('thumb') ? namedArgs['thumb'] : null,
             value: namedArgs.containsKey('value') ? namedArgs['value'] : null,
-            textScaleFactor: namedArgs.containsKey('textScaleFactor') ? namedArgs['textScaleFactor'] : null,
-            sizeWithOverflow: namedArgs.containsKey('sizeWithOverflow') ? namedArgs['sizeWithOverflow'] : null);
+            textScaleFactor: namedArgs.containsKey('textScaleFactor')
+                ? namedArgs['textScaleFactor']
+                : null,
+            sizeWithOverflow: namedArgs.containsKey('sizeWithOverflow')
+                ? namedArgs['sizeWithOverflow']
+                : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -983,9 +1417,10 @@ class RangeValuesAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'RangeValues':
-        return ({positionalArgs, namedArgs, typeArgs}) => RangeValues(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            RangeValues(positionalArgs[0], positionalArgs[1]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -999,7 +1434,7 @@ extension RangeValuesBinding on RangeValues {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('RangeValues');
+        return const HTType('RangeValues');
       case 'start':
         return start;
       case 'end':
@@ -1009,7 +1444,7 @@ extension RangeValuesBinding on RangeValues {
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -1021,9 +1456,10 @@ class RangeLabelsAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'RangeLabels':
-        return ({positionalArgs, namedArgs, typeArgs}) => RangeLabels(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            RangeLabels(positionalArgs[0], positionalArgs[1]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -1037,7 +1473,7 @@ extension RangeLabelsBinding on RangeLabels {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('RangeLabels');
+        return const HTType('RangeLabels');
       case 'start':
         return start;
       case 'end':
@@ -1047,7 +1483,7 @@ extension RangeLabelsBinding on RangeLabels {
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

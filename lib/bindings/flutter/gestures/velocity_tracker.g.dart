@@ -8,11 +8,12 @@ class VelocityAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'Velocity':
-        return ({positionalArgs, namedArgs, typeArgs}) => Velocity(pixelsPerSecond: namedArgs['pixelsPerSecond']);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            Velocity(pixelsPerSecond: namedArgs['pixelsPerSecond']);
       case 'Velocity.zero':
         return Velocity.zero;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -26,17 +27,18 @@ extension VelocityBinding on Velocity {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('Velocity');
+        return const HTType('Velocity');
       case 'pixelsPerSecond':
         return pixelsPerSecond;
       case 'hashCode':
         return hashCode;
       case 'clampMagnitude':
-        return ({positionalArgs, namedArgs, typeArgs}) => clampMagnitude(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            clampMagnitude(positionalArgs[0], positionalArgs[1]);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -54,7 +56,7 @@ class VelocityEstimateAutoBinding extends HTExternalClass {
             duration: namedArgs['duration'],
             offset: namedArgs['offset']);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -68,7 +70,7 @@ extension VelocityEstimateBinding on VelocityEstimate {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('VelocityEstimate');
+        return const HTType('VelocityEstimate');
       case 'pixelsPerSecond':
         return pixelsPerSecond;
       case 'confidence':
@@ -80,7 +82,7 @@ extension VelocityEstimateBinding on VelocityEstimate {
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -92,9 +94,10 @@ class VelocityTrackerAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'VelocityTracker.withKind':
-        return ({positionalArgs, namedArgs, typeArgs}) => VelocityTracker.withKind(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            VelocityTracker.withKind(positionalArgs[0]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -108,31 +111,34 @@ extension VelocityTrackerBinding on VelocityTracker {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('VelocityTracker');
+        return const HTType('VelocityTracker');
       case 'kind':
         return kind;
       case 'addPosition':
-        return ({positionalArgs, namedArgs, typeArgs}) => addPosition(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            addPosition(positionalArgs[0], positionalArgs[1]);
       case 'getVelocityEstimate':
         return ({positionalArgs, namedArgs, typeArgs}) => getVelocityEstimate();
       case 'getVelocity':
         return ({positionalArgs, namedArgs, typeArgs}) => getVelocity();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
 
 class IOSScrollViewFlingVelocityTrackerAutoBinding extends HTExternalClass {
-  IOSScrollViewFlingVelocityTrackerAutoBinding() : super('IOSScrollViewFlingVelocityTracker');
+  IOSScrollViewFlingVelocityTrackerAutoBinding()
+      : super('IOSScrollViewFlingVelocityTracker');
 
   @override
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'IOSScrollViewFlingVelocityTracker':
-        return ({positionalArgs, namedArgs, typeArgs}) => IOSScrollViewFlingVelocityTracker(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            IOSScrollViewFlingVelocityTracker(positionalArgs[0]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -142,21 +148,23 @@ class IOSScrollViewFlingVelocityTrackerAutoBinding extends HTExternalClass {
   }
 }
 
-extension IOSScrollViewFlingVelocityTrackerBinding on IOSScrollViewFlingVelocityTracker {
+extension IOSScrollViewFlingVelocityTrackerBinding
+    on IOSScrollViewFlingVelocityTracker {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('IOSScrollViewFlingVelocityTracker');
+        return const HTType('IOSScrollViewFlingVelocityTracker');
       case 'kind':
         return kind;
       case 'addPosition':
-        return ({positionalArgs, namedArgs, typeArgs}) => addPosition(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            addPosition(positionalArgs[0], positionalArgs[1]);
       case 'getVelocityEstimate':
         return ({positionalArgs, namedArgs, typeArgs}) => getVelocityEstimate();
       case 'getVelocity':
         return ({positionalArgs, namedArgs, typeArgs}) => getVelocity();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

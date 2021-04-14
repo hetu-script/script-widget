@@ -14,7 +14,7 @@ class DragStartBehaviorAutoBinding extends HTExternalClass {
       case 'DragStartBehavior.start':
         return DragStartBehavior.start;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -22,13 +22,14 @@ class DragStartBehaviorAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('DragStartBehavior');
+        return const HTType('DragStartBehavior');
       case 'index':
         return (instance as DragStartBehavior).index;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => (instance as DragStartBehavior).toString();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            (instance as DragStartBehavior).toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -48,7 +49,7 @@ class GestureRecognizerStateAutoBinding extends HTExternalClass {
       case 'GestureRecognizerState.defunct':
         return GestureRecognizerState.defunct;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -56,13 +57,14 @@ class GestureRecognizerStateAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('GestureRecognizerState');
+        return const HTType('GestureRecognizerState');
       case 'index':
         return (instance as GestureRecognizerState).index;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => (instance as GestureRecognizerState).toString();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            (instance as GestureRecognizerState).toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -77,13 +79,15 @@ class OffsetPairAutoBinding extends HTExternalClass {
         return ({positionalArgs, namedArgs, typeArgs}) =>
             OffsetPair(local: namedArgs['local'], global: namedArgs['global']);
       case 'OffsetPair.fromEventPosition':
-        return ({positionalArgs, namedArgs, typeArgs}) => OffsetPair.fromEventPosition(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            OffsetPair.fromEventPosition(positionalArgs[0]);
       case 'OffsetPair.fromEventDelta':
-        return ({positionalArgs, namedArgs, typeArgs}) => OffsetPair.fromEventDelta(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            OffsetPair.fromEventDelta(positionalArgs[0]);
       case 'OffsetPair.zero':
         return OffsetPair.zero;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -97,7 +101,7 @@ extension OffsetPairBinding on OffsetPair {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('OffsetPair');
+        return const HTType('OffsetPair');
       case 'local':
         return local;
       case 'global':
@@ -105,7 +109,7 @@ extension OffsetPairBinding on OffsetPair {
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

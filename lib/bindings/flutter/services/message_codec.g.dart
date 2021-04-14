@@ -8,10 +8,11 @@ class MethodCallAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'MethodCall':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            MethodCall(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => MethodCall(
+            positionalArgs[0],
+            positionalArgs.length > 1 ? positionalArgs[1] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -25,7 +26,7 @@ extension MethodCallBinding on MethodCall {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('MethodCall');
+        return const HTType('MethodCall');
       case 'method':
         return method;
       case 'arguments':
@@ -33,7 +34,7 @@ extension MethodCallBinding on MethodCall {
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -47,11 +48,15 @@ class PlatformExceptionAutoBinding extends HTExternalClass {
       case 'PlatformException':
         return ({positionalArgs, namedArgs, typeArgs}) => PlatformException(
             code: namedArgs['code'],
-            message: namedArgs.containsKey('message') ? namedArgs['message'] : null,
-            details: namedArgs.containsKey('details') ? namedArgs['details'] : null,
-            stacktrace: namedArgs.containsKey('stacktrace') ? namedArgs['stacktrace'] : null);
+            message:
+                namedArgs.containsKey('message') ? namedArgs['message'] : null,
+            details:
+                namedArgs.containsKey('details') ? namedArgs['details'] : null,
+            stacktrace: namedArgs.containsKey('stacktrace')
+                ? namedArgs['stacktrace']
+                : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -65,7 +70,7 @@ extension PlatformExceptionBinding on PlatformException {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('PlatformException');
+        return const HTType('PlatformException');
       case 'code':
         return code;
       case 'message':
@@ -77,7 +82,7 @@ extension PlatformExceptionBinding on PlatformException {
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -90,9 +95,10 @@ class MissingPluginExceptionAutoBinding extends HTExternalClass {
     switch (varName) {
       case 'MissingPluginException':
         return ({positionalArgs, namedArgs, typeArgs}) =>
-            MissingPluginException(positionalArgs.length > 0 ? positionalArgs[0] : null);
+            MissingPluginException(
+                positionalArgs.length > 0 ? positionalArgs[0] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -106,13 +112,13 @@ extension MissingPluginExceptionBinding on MissingPluginException {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('MissingPluginException');
+        return const HTType('MissingPluginException');
       case 'message':
         return message;
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

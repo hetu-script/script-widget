@@ -3,17 +3,21 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/foundation.dart';
 
 class VerticalDragGestureRecognizerAutoBinding extends HTExternalClass {
-  VerticalDragGestureRecognizerAutoBinding() : super('VerticalDragGestureRecognizer');
+  VerticalDragGestureRecognizerAutoBinding()
+      : super('VerticalDragGestureRecognizer');
 
   @override
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'VerticalDragGestureRecognizer':
-        return ({positionalArgs, namedArgs, typeArgs}) => VerticalDragGestureRecognizer(
-            debugOwner: namedArgs.containsKey('debugOwner') ? namedArgs['debugOwner'] : null,
-            kind: namedArgs.containsKey('kind') ? namedArgs['kind'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            VerticalDragGestureRecognizer(
+                debugOwner: namedArgs.containsKey('debugOwner')
+                    ? namedArgs['debugOwner']
+                    : null,
+                kind: namedArgs.containsKey('kind') ? namedArgs['kind'] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -28,11 +32,12 @@ class VerticalDragGestureRecognizerAutoBinding extends HTExternalClass {
   }
 }
 
-extension VerticalDragGestureRecognizerBinding on VerticalDragGestureRecognizer {
+extension VerticalDragGestureRecognizerBinding
+    on VerticalDragGestureRecognizer {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('VerticalDragGestureRecognizer');
+        return const HTType('VerticalDragGestureRecognizer');
       case 'dragStartBehavior':
         return dragStartBehavior;
       case 'onDown':
@@ -60,39 +65,60 @@ extension VerticalDragGestureRecognizerBinding on VerticalDragGestureRecognizer 
       case 'team':
         return team;
       case 'isFlingGesture':
-        return ({positionalArgs, namedArgs, typeArgs}) => isFlingGesture(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            isFlingGesture(positionalArgs[0], positionalArgs[1]);
       case 'isPointerAllowed':
-        return ({positionalArgs, namedArgs, typeArgs}) => isPointerAllowed(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            isPointerAllowed(positionalArgs[0]);
       case 'addAllowedPointer':
-        return ({positionalArgs, namedArgs, typeArgs}) => addAllowedPointer(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            addAllowedPointer(positionalArgs[0]);
       case 'handleEvent':
-        return ({positionalArgs, namedArgs, typeArgs}) => handleEvent(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            handleEvent(positionalArgs[0]);
       case 'acceptGesture':
-        return ({positionalArgs, namedArgs, typeArgs}) => acceptGesture(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            acceptGesture(positionalArgs[0]);
       case 'rejectGesture':
-        return ({positionalArgs, namedArgs, typeArgs}) => rejectGesture(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            rejectGesture(positionalArgs[0]);
       case 'didStopTrackingLastPointer':
-        return ({positionalArgs, namedArgs, typeArgs}) => didStopTrackingLastPointer(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            didStopTrackingLastPointer(positionalArgs[0]);
       case 'dispose':
         return ({positionalArgs, namedArgs, typeArgs}) => dispose();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
-      case 'handleNonAllowedPointer':
-        return ({positionalArgs, namedArgs, typeArgs}) => handleNonAllowedPointer(positionalArgs[0]);
-      case 'addPointer':
-        return ({positionalArgs, namedArgs, typeArgs}) => addPointer(positionalArgs[0]);
-      case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+            debugFillProperties(positionalArgs[0]);
+      case 'handleNonAllowedPointer':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            handleNonAllowedPointer(positionalArgs[0]);
+      case 'addPointer':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            addPointer(positionalArgs[0]);
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       case 'toStringShallow':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
-            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            joiner:
+                namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'toDiagnosticsNode':
@@ -100,9 +126,10 @@ extension VerticalDragGestureRecognizerBinding on VerticalDragGestureRecognizer 
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'debugDescribeChildren':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugDescribeChildren();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugDescribeChildren();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -139,23 +166,27 @@ extension VerticalDragGestureRecognizerBinding on VerticalDragGestureRecognizer 
         velocityTrackerBuilder = value;
         break;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
 
 class HorizontalDragGestureRecognizerAutoBinding extends HTExternalClass {
-  HorizontalDragGestureRecognizerAutoBinding() : super('HorizontalDragGestureRecognizer');
+  HorizontalDragGestureRecognizerAutoBinding()
+      : super('HorizontalDragGestureRecognizer');
 
   @override
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'HorizontalDragGestureRecognizer':
-        return ({positionalArgs, namedArgs, typeArgs}) => HorizontalDragGestureRecognizer(
-            debugOwner: namedArgs.containsKey('debugOwner') ? namedArgs['debugOwner'] : null,
-            kind: namedArgs.containsKey('kind') ? namedArgs['kind'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            HorizontalDragGestureRecognizer(
+                debugOwner: namedArgs.containsKey('debugOwner')
+                    ? namedArgs['debugOwner']
+                    : null,
+                kind: namedArgs.containsKey('kind') ? namedArgs['kind'] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -170,11 +201,12 @@ class HorizontalDragGestureRecognizerAutoBinding extends HTExternalClass {
   }
 }
 
-extension HorizontalDragGestureRecognizerBinding on HorizontalDragGestureRecognizer {
+extension HorizontalDragGestureRecognizerBinding
+    on HorizontalDragGestureRecognizer {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('HorizontalDragGestureRecognizer');
+        return const HTType('HorizontalDragGestureRecognizer');
       case 'dragStartBehavior':
         return dragStartBehavior;
       case 'onDown':
@@ -202,39 +234,60 @@ extension HorizontalDragGestureRecognizerBinding on HorizontalDragGestureRecogni
       case 'team':
         return team;
       case 'isFlingGesture':
-        return ({positionalArgs, namedArgs, typeArgs}) => isFlingGesture(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            isFlingGesture(positionalArgs[0], positionalArgs[1]);
       case 'isPointerAllowed':
-        return ({positionalArgs, namedArgs, typeArgs}) => isPointerAllowed(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            isPointerAllowed(positionalArgs[0]);
       case 'addAllowedPointer':
-        return ({positionalArgs, namedArgs, typeArgs}) => addAllowedPointer(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            addAllowedPointer(positionalArgs[0]);
       case 'handleEvent':
-        return ({positionalArgs, namedArgs, typeArgs}) => handleEvent(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            handleEvent(positionalArgs[0]);
       case 'acceptGesture':
-        return ({positionalArgs, namedArgs, typeArgs}) => acceptGesture(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            acceptGesture(positionalArgs[0]);
       case 'rejectGesture':
-        return ({positionalArgs, namedArgs, typeArgs}) => rejectGesture(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            rejectGesture(positionalArgs[0]);
       case 'didStopTrackingLastPointer':
-        return ({positionalArgs, namedArgs, typeArgs}) => didStopTrackingLastPointer(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            didStopTrackingLastPointer(positionalArgs[0]);
       case 'dispose':
         return ({positionalArgs, namedArgs, typeArgs}) => dispose();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
-      case 'handleNonAllowedPointer':
-        return ({positionalArgs, namedArgs, typeArgs}) => handleNonAllowedPointer(positionalArgs[0]);
-      case 'addPointer':
-        return ({positionalArgs, namedArgs, typeArgs}) => addPointer(positionalArgs[0]);
-      case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+            debugFillProperties(positionalArgs[0]);
+      case 'handleNonAllowedPointer':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            handleNonAllowedPointer(positionalArgs[0]);
+      case 'addPointer':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            addPointer(positionalArgs[0]);
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       case 'toStringShallow':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
-            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            joiner:
+                namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'toDiagnosticsNode':
@@ -242,9 +295,10 @@ extension HorizontalDragGestureRecognizerBinding on HorizontalDragGestureRecogni
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'debugDescribeChildren':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugDescribeChildren();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugDescribeChildren();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -281,7 +335,7 @@ extension HorizontalDragGestureRecognizerBinding on HorizontalDragGestureRecogni
         velocityTrackerBuilder = value;
         break;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -293,10 +347,12 @@ class PanGestureRecognizerAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'PanGestureRecognizer':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            PanGestureRecognizer(debugOwner: namedArgs.containsKey('debugOwner') ? namedArgs['debugOwner'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => PanGestureRecognizer(
+            debugOwner: namedArgs.containsKey('debugOwner')
+                ? namedArgs['debugOwner']
+                : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -315,7 +371,7 @@ extension PanGestureRecognizerBinding on PanGestureRecognizer {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('PanGestureRecognizer');
+        return const HTType('PanGestureRecognizer');
       case 'dragStartBehavior':
         return dragStartBehavior;
       case 'onDown':
@@ -343,39 +399,60 @@ extension PanGestureRecognizerBinding on PanGestureRecognizer {
       case 'team':
         return team;
       case 'isFlingGesture':
-        return ({positionalArgs, namedArgs, typeArgs}) => isFlingGesture(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            isFlingGesture(positionalArgs[0], positionalArgs[1]);
       case 'isPointerAllowed':
-        return ({positionalArgs, namedArgs, typeArgs}) => isPointerAllowed(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            isPointerAllowed(positionalArgs[0]);
       case 'addAllowedPointer':
-        return ({positionalArgs, namedArgs, typeArgs}) => addAllowedPointer(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            addAllowedPointer(positionalArgs[0]);
       case 'handleEvent':
-        return ({positionalArgs, namedArgs, typeArgs}) => handleEvent(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            handleEvent(positionalArgs[0]);
       case 'acceptGesture':
-        return ({positionalArgs, namedArgs, typeArgs}) => acceptGesture(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            acceptGesture(positionalArgs[0]);
       case 'rejectGesture':
-        return ({positionalArgs, namedArgs, typeArgs}) => rejectGesture(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            rejectGesture(positionalArgs[0]);
       case 'didStopTrackingLastPointer':
-        return ({positionalArgs, namedArgs, typeArgs}) => didStopTrackingLastPointer(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            didStopTrackingLastPointer(positionalArgs[0]);
       case 'dispose':
         return ({positionalArgs, namedArgs, typeArgs}) => dispose();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
-      case 'handleNonAllowedPointer':
-        return ({positionalArgs, namedArgs, typeArgs}) => handleNonAllowedPointer(positionalArgs[0]);
-      case 'addPointer':
-        return ({positionalArgs, namedArgs, typeArgs}) => addPointer(positionalArgs[0]);
-      case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+            debugFillProperties(positionalArgs[0]);
+      case 'handleNonAllowedPointer':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            handleNonAllowedPointer(positionalArgs[0]);
+      case 'addPointer':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            addPointer(positionalArgs[0]);
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       case 'toStringShallow':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
-            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            joiner:
+                namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'toDiagnosticsNode':
@@ -383,9 +460,10 @@ extension PanGestureRecognizerBinding on PanGestureRecognizer {
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'debugDescribeChildren':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugDescribeChildren();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugDescribeChildren();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -422,7 +500,7 @@ extension PanGestureRecognizerBinding on PanGestureRecognizer {
         velocityTrackerBuilder = value;
         break;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

@@ -68,7 +68,7 @@ class BlendModeAutoBinding extends HTExternalClass {
       case 'BlendMode.luminosity':
         return BlendMode.luminosity;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -76,13 +76,14 @@ class BlendModeAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('BlendMode');
+        return const HTType('BlendMode');
       case 'index':
         return (instance as BlendMode).index;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => (instance as BlendMode).toString();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            (instance as BlendMode).toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -104,7 +105,7 @@ class FilterQualityAutoBinding extends HTExternalClass {
       case 'FilterQuality.high':
         return FilterQuality.high;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -112,13 +113,14 @@ class FilterQualityAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('FilterQuality');
+        return const HTType('FilterQuality');
       case 'index':
         return (instance as FilterQuality).index;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => (instance as FilterQuality).toString();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            (instance as FilterQuality).toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -138,7 +140,7 @@ class StrokeCapAutoBinding extends HTExternalClass {
       case 'StrokeCap.square':
         return StrokeCap.square;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -146,13 +148,14 @@ class StrokeCapAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('StrokeCap');
+        return const HTType('StrokeCap');
       case 'index':
         return (instance as StrokeCap).index;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => (instance as StrokeCap).toString();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            (instance as StrokeCap).toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -172,7 +175,7 @@ class StrokeJoinAutoBinding extends HTExternalClass {
       case 'StrokeJoin.bevel':
         return StrokeJoin.bevel;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -180,13 +183,14 @@ class StrokeJoinAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('StrokeJoin');
+        return const HTType('StrokeJoin');
       case 'index':
         return (instance as StrokeJoin).index;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => (instance as StrokeJoin).toString();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            (instance as StrokeJoin).toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -204,7 +208,7 @@ class PaintingStyleAutoBinding extends HTExternalClass {
       case 'PaintingStyle.stroke':
         return PaintingStyle.stroke;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -212,13 +216,14 @@ class PaintingStyleAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('PaintingStyle');
+        return const HTType('PaintingStyle');
       case 'index':
         return (instance as PaintingStyle).index;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => (instance as PaintingStyle).toString();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            (instance as PaintingStyle).toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -240,7 +245,7 @@ class ClipAutoBinding extends HTExternalClass {
       case 'Clip.antiAliasWithSaveLayer':
         return Clip.antiAliasWithSaveLayer;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -248,13 +253,14 @@ class ClipAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('Clip');
+        return const HTType('Clip');
       case 'index':
         return (instance as Clip).index;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => (instance as Clip).toString();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            (instance as Clip).toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -274,7 +280,7 @@ class ImageByteFormatAutoBinding extends HTExternalClass {
       case 'ImageByteFormat.png':
         return ImageByteFormat.png;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -282,13 +288,14 @@ class ImageByteFormatAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('ImageByteFormat');
+        return const HTType('ImageByteFormat');
       case 'index':
         return (instance as ImageByteFormat).index;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => (instance as ImageByteFormat).toString();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            (instance as ImageByteFormat).toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -306,7 +313,7 @@ class PixelFormatAutoBinding extends HTExternalClass {
       case 'PixelFormat.bgra8888':
         return PixelFormat.bgra8888;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -314,13 +321,14 @@ class PixelFormatAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('PixelFormat');
+        return const HTType('PixelFormat');
       case 'index':
         return (instance as PixelFormat).index;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => (instance as PixelFormat).toString();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            (instance as PixelFormat).toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -338,7 +346,7 @@ class PathFillTypeAutoBinding extends HTExternalClass {
       case 'PathFillType.evenOdd':
         return PathFillType.evenOdd;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -346,13 +354,14 @@ class PathFillTypeAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('PathFillType');
+        return const HTType('PathFillType');
       case 'index':
         return (instance as PathFillType).index;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => (instance as PathFillType).toString();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            (instance as PathFillType).toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -376,7 +385,7 @@ class PathOperationAutoBinding extends HTExternalClass {
       case 'PathOperation.reverseDifference':
         return PathOperation.reverseDifference;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -384,13 +393,14 @@ class PathOperationAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('PathOperation');
+        return const HTType('PathOperation');
       case 'index':
         return (instance as PathOperation).index;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => (instance as PathOperation).toString();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            (instance as PathOperation).toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -412,7 +422,7 @@ class BlurStyleAutoBinding extends HTExternalClass {
       case 'BlurStyle.inner':
         return BlurStyle.inner;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -420,13 +430,14 @@ class BlurStyleAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('BlurStyle');
+        return const HTType('BlurStyle');
       case 'index':
         return (instance as BlurStyle).index;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => (instance as BlurStyle).toString();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            (instance as BlurStyle).toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -448,7 +459,7 @@ class TileModeAutoBinding extends HTExternalClass {
       case 'TileMode.decal':
         return TileMode.decal;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -456,13 +467,14 @@ class TileModeAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('TileMode');
+        return const HTType('TileMode');
       case 'index':
         return (instance as TileMode).index;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => (instance as TileMode).toString();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            (instance as TileMode).toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -482,7 +494,7 @@ class VertexModeAutoBinding extends HTExternalClass {
       case 'VertexMode.triangleFan':
         return VertexMode.triangleFan;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -490,13 +502,14 @@ class VertexModeAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('VertexMode');
+        return const HTType('VertexMode');
       case 'index':
         return (instance as VertexMode).index;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => (instance as VertexMode).toString();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            (instance as VertexMode).toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -516,7 +529,7 @@ class PointModeAutoBinding extends HTExternalClass {
       case 'PointMode.polygon':
         return PointMode.polygon;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -524,13 +537,14 @@ class PointModeAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('PointMode');
+        return const HTType('PointMode');
       case 'index':
         return (instance as PointMode).index;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => (instance as PointMode).toString();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            (instance as PointMode).toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -548,7 +562,7 @@ class ClipOpAutoBinding extends HTExternalClass {
       case 'ClipOp.intersect':
         return ClipOp.intersect;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -556,13 +570,14 @@ class ClipOpAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('ClipOp');
+        return const HTType('ClipOp');
       case 'index':
         return (instance as ClipOp).index;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => (instance as ClipOp).toString();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            (instance as ClipOp).toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -574,22 +589,31 @@ class ColorAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'Color':
-        return ({positionalArgs, namedArgs, typeArgs}) => Color(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            Color(positionalArgs[0]);
       case 'Color.fromARGB':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            Color.fromARGB(positionalArgs[0], positionalArgs[1], positionalArgs[2], positionalArgs[3]);
+        return ({positionalArgs, namedArgs, typeArgs}) => Color.fromARGB(
+            positionalArgs[0],
+            positionalArgs[1],
+            positionalArgs[2],
+            positionalArgs[3]);
       case 'Color.fromRGBO':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            Color.fromRGBO(positionalArgs[0], positionalArgs[1], positionalArgs[2], positionalArgs[3]);
+        return ({positionalArgs, namedArgs, typeArgs}) => Color.fromRGBO(
+            positionalArgs[0],
+            positionalArgs[1],
+            positionalArgs[2],
+            positionalArgs[3]);
       case 'Color.lerp':
         return ({positionalArgs, namedArgs, typeArgs}) =>
             Color.lerp(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
       case 'Color.alphaBlend':
-        return ({positionalArgs, namedArgs, typeArgs}) => Color.alphaBlend(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            Color.alphaBlend(positionalArgs[0], positionalArgs[1]);
       case 'Color.getAlphaFromOpacity':
-        return ({positionalArgs, namedArgs, typeArgs}) => Color.getAlphaFromOpacity(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            Color.getAlphaFromOpacity(positionalArgs[0]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -603,7 +627,7 @@ extension ColorBinding on Color {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('Color');
+        return const HTType('Color');
       case 'value':
         return value;
       case 'alpha':
@@ -619,21 +643,26 @@ extension ColorBinding on Color {
       case 'hashCode':
         return hashCode;
       case 'withAlpha':
-        return ({positionalArgs, namedArgs, typeArgs}) => withAlpha(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            withAlpha(positionalArgs[0]);
       case 'withOpacity':
-        return ({positionalArgs, namedArgs, typeArgs}) => withOpacity(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            withOpacity(positionalArgs[0]);
       case 'withRed':
-        return ({positionalArgs, namedArgs, typeArgs}) => withRed(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            withRed(positionalArgs[0]);
       case 'withGreen':
-        return ({positionalArgs, namedArgs, typeArgs}) => withGreen(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            withGreen(positionalArgs[0]);
       case 'withBlue':
-        return ({positionalArgs, namedArgs, typeArgs}) => withBlue(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            withBlue(positionalArgs[0]);
       case 'computeLuminance':
         return ({positionalArgs, namedArgs, typeArgs}) => computeLuminance();
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -649,17 +678,18 @@ class PaintAutoBinding extends HTExternalClass {
       case 'Paint.enableDithering':
         return Paint.enableDithering;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
   @override
-  void memberSet(String varName, dynamic value, {String from = HTLexicon.global}) {
+  void memberSet(String varName, dynamic value,
+      {String from = HTLexicon.global}) {
     switch (varName) {
       case 'Paint.enableDithering':
         return Paint.enableDithering = value;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -678,7 +708,7 @@ extension PaintBinding on Paint {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('Paint');
+        return const HTType('Paint');
       case 'isAntiAlias':
         return isAntiAlias;
       case 'color':
@@ -710,7 +740,7 @@ extension PaintBinding on Paint {
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -759,7 +789,7 @@ extension PaintBinding on Paint {
         invertColors = value;
         break;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -773,12 +803,13 @@ class PathAutoBinding extends HTExternalClass {
       case 'Path':
         return ({positionalArgs, namedArgs, typeArgs}) => Path();
       case 'Path.from':
-        return ({positionalArgs, namedArgs, typeArgs}) => Path.from(positionalArgs[0]);
-      case 'Path.combine':
         return ({positionalArgs, namedArgs, typeArgs}) =>
-            Path.combine(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
+            Path.from(positionalArgs[0]);
+      case 'Path.combine':
+        return ({positionalArgs, namedArgs, typeArgs}) => Path.combine(
+            positionalArgs[0], positionalArgs[1], positionalArgs[2]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -797,54 +828,101 @@ extension PathBinding on Path {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('Path');
+        return const HTType('Path');
       case 'fillType':
         return fillType;
       case 'moveTo':
-        return ({positionalArgs, namedArgs, typeArgs}) => moveTo(positionalArgs[0], positionalArgs[1]);
-      case 'relativeMoveTo':
-        return ({positionalArgs, namedArgs, typeArgs}) => relativeMoveTo(positionalArgs[0], positionalArgs[1]);
-      case 'lineTo':
-        return ({positionalArgs, namedArgs, typeArgs}) => lineTo(positionalArgs[0], positionalArgs[1]);
-      case 'relativeLineTo':
-        return ({positionalArgs, namedArgs, typeArgs}) => relativeLineTo(positionalArgs[0], positionalArgs[1]);
-      case 'quadraticBezierTo':
         return ({positionalArgs, namedArgs, typeArgs}) =>
-            quadraticBezierTo(positionalArgs[0], positionalArgs[1], positionalArgs[2], positionalArgs[3]);
+            moveTo(positionalArgs[0], positionalArgs[1]);
+      case 'relativeMoveTo':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            relativeMoveTo(positionalArgs[0], positionalArgs[1]);
+      case 'lineTo':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            lineTo(positionalArgs[0], positionalArgs[1]);
+      case 'relativeLineTo':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            relativeLineTo(positionalArgs[0], positionalArgs[1]);
+      case 'quadraticBezierTo':
+        return ({positionalArgs, namedArgs, typeArgs}) => quadraticBezierTo(
+            positionalArgs[0],
+            positionalArgs[1],
+            positionalArgs[2],
+            positionalArgs[3]);
       case 'relativeQuadraticBezierTo':
         return ({positionalArgs, namedArgs, typeArgs}) =>
-            relativeQuadraticBezierTo(positionalArgs[0], positionalArgs[1], positionalArgs[2], positionalArgs[3]);
+            relativeQuadraticBezierTo(positionalArgs[0], positionalArgs[1],
+                positionalArgs[2], positionalArgs[3]);
       case 'cubicTo':
-        return ({positionalArgs, namedArgs, typeArgs}) => cubicTo(positionalArgs[0], positionalArgs[1],
-            positionalArgs[2], positionalArgs[3], positionalArgs[4], positionalArgs[5]);
+        return ({positionalArgs, namedArgs, typeArgs}) => cubicTo(
+            positionalArgs[0],
+            positionalArgs[1],
+            positionalArgs[2],
+            positionalArgs[3],
+            positionalArgs[4],
+            positionalArgs[5]);
       case 'relativeCubicTo':
-        return ({positionalArgs, namedArgs, typeArgs}) => relativeCubicTo(positionalArgs[0], positionalArgs[1],
-            positionalArgs[2], positionalArgs[3], positionalArgs[4], positionalArgs[5]);
+        return ({positionalArgs, namedArgs, typeArgs}) => relativeCubicTo(
+            positionalArgs[0],
+            positionalArgs[1],
+            positionalArgs[2],
+            positionalArgs[3],
+            positionalArgs[4],
+            positionalArgs[5]);
       case 'conicTo':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            conicTo(positionalArgs[0], positionalArgs[1], positionalArgs[2], positionalArgs[3], positionalArgs[4]);
+        return ({positionalArgs, namedArgs, typeArgs}) => conicTo(
+            positionalArgs[0],
+            positionalArgs[1],
+            positionalArgs[2],
+            positionalArgs[3],
+            positionalArgs[4]);
       case 'relativeConicTo':
         return ({positionalArgs, namedArgs, typeArgs}) => relativeConicTo(
-            positionalArgs[0], positionalArgs[1], positionalArgs[2], positionalArgs[3], positionalArgs[4]);
+            positionalArgs[0],
+            positionalArgs[1],
+            positionalArgs[2],
+            positionalArgs[3],
+            positionalArgs[4]);
       case 'arcTo':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            arcTo(positionalArgs[0], positionalArgs[1], positionalArgs[2], positionalArgs[3]);
+        return ({positionalArgs, namedArgs, typeArgs}) => arcTo(
+            positionalArgs[0],
+            positionalArgs[1],
+            positionalArgs[2],
+            positionalArgs[3]);
       case 'arcToPoint':
-        return ({positionalArgs, namedArgs, typeArgs}) => arcToPoint(positionalArgs[0],
-            radius: namedArgs.containsKey('radius') ? namedArgs['radius'] : Radius.zero,
-            rotation: namedArgs.containsKey('rotation') ? namedArgs['rotation'] : 0.0,
-            largeArc: namedArgs.containsKey('largeArc') ? namedArgs['largeArc'] : false,
-            clockwise: namedArgs.containsKey('clockwise') ? namedArgs['clockwise'] : true);
+        return ({positionalArgs, namedArgs, typeArgs}) => arcToPoint(
+            positionalArgs[0],
+            radius: namedArgs.containsKey('radius')
+                ? namedArgs['radius']
+                : Radius.zero,
+            rotation:
+                namedArgs.containsKey('rotation') ? namedArgs['rotation'] : 0.0,
+            largeArc: namedArgs.containsKey('largeArc')
+                ? namedArgs['largeArc']
+                : false,
+            clockwise: namedArgs.containsKey('clockwise')
+                ? namedArgs['clockwise']
+                : true);
       case 'relativeArcToPoint':
-        return ({positionalArgs, namedArgs, typeArgs}) => relativeArcToPoint(positionalArgs[0],
-            radius: namedArgs.containsKey('radius') ? namedArgs['radius'] : Radius.zero,
-            rotation: namedArgs.containsKey('rotation') ? namedArgs['rotation'] : 0.0,
-            largeArc: namedArgs.containsKey('largeArc') ? namedArgs['largeArc'] : false,
-            clockwise: namedArgs.containsKey('clockwise') ? namedArgs['clockwise'] : true);
+        return ({positionalArgs, namedArgs, typeArgs}) => relativeArcToPoint(
+            positionalArgs[0],
+            radius: namedArgs.containsKey('radius')
+                ? namedArgs['radius']
+                : Radius.zero,
+            rotation:
+                namedArgs.containsKey('rotation') ? namedArgs['rotation'] : 0.0,
+            largeArc: namedArgs.containsKey('largeArc')
+                ? namedArgs['largeArc']
+                : false,
+            clockwise: namedArgs.containsKey('clockwise')
+                ? namedArgs['clockwise']
+                : true);
       case 'addRect':
-        return ({positionalArgs, namedArgs, typeArgs}) => addRect(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            addRect(positionalArgs[0]);
       case 'addOval':
-        return ({positionalArgs, namedArgs, typeArgs}) => addOval(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            addOval(positionalArgs[0]);
       case 'addArc':
         return ({positionalArgs, namedArgs, typeArgs}) =>
             addArc(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
@@ -852,30 +930,40 @@ extension PathBinding on Path {
         return ({positionalArgs, namedArgs, typeArgs}) =>
             addPolygon(List<Offset>.from(positionalArgs[0]), positionalArgs[1]);
       case 'addRRect':
-        return ({positionalArgs, namedArgs, typeArgs}) => addRRect(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            addRRect(positionalArgs[0]);
       case 'addPath':
-        return ({positionalArgs, namedArgs, typeArgs}) => addPath(positionalArgs[0], positionalArgs[1],
-            matrix4: namedArgs.containsKey('matrix4') ? namedArgs['matrix4'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => addPath(
+            positionalArgs[0], positionalArgs[1],
+            matrix4:
+                namedArgs.containsKey('matrix4') ? namedArgs['matrix4'] : null);
       case 'extendWithPath':
-        return ({positionalArgs, namedArgs, typeArgs}) => extendWithPath(positionalArgs[0], positionalArgs[1],
-            matrix4: namedArgs.containsKey('matrix4') ? namedArgs['matrix4'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => extendWithPath(
+            positionalArgs[0], positionalArgs[1],
+            matrix4:
+                namedArgs.containsKey('matrix4') ? namedArgs['matrix4'] : null);
       case 'close':
         return ({positionalArgs, namedArgs, typeArgs}) => close();
       case 'reset':
         return ({positionalArgs, namedArgs, typeArgs}) => reset();
       case 'contains':
-        return ({positionalArgs, namedArgs, typeArgs}) => contains(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            contains(positionalArgs[0]);
       case 'shift':
-        return ({positionalArgs, namedArgs, typeArgs}) => shift(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            shift(positionalArgs[0]);
       case 'transform':
-        return ({positionalArgs, namedArgs, typeArgs}) => transform(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            transform(positionalArgs[0]);
       case 'getBounds':
         return ({positionalArgs, namedArgs, typeArgs}) => getBounds();
       case 'computeMetrics':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            computeMetrics(forceClosed: namedArgs.containsKey('forceClosed') ? namedArgs['forceClosed'] : false);
+        return ({positionalArgs, namedArgs, typeArgs}) => computeMetrics(
+            forceClosed: namedArgs.containsKey('forceClosed')
+                ? namedArgs['forceClosed']
+                : false);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -885,7 +973,7 @@ extension PathBinding on Path {
         fillType = value;
         break;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -897,11 +985,13 @@ class TangentAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'Tangent':
-        return ({positionalArgs, namedArgs, typeArgs}) => Tangent(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            Tangent(positionalArgs[0], positionalArgs[1]);
       case 'Tangent.fromAngle':
-        return ({positionalArgs, namedArgs, typeArgs}) => Tangent.fromAngle(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            Tangent.fromAngle(positionalArgs[0], positionalArgs[1]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -915,7 +1005,7 @@ extension TangentBinding on Tangent {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('Tangent');
+        return const HTType('Tangent');
       case 'position':
         return position;
       case 'vector':
@@ -923,7 +1013,7 @@ extension TangentBinding on Tangent {
       case 'angle':
         return angle;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -935,9 +1025,10 @@ class MaskFilterAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'MaskFilter.blur':
-        return ({positionalArgs, namedArgs, typeArgs}) => MaskFilter.blur(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            MaskFilter.blur(positionalArgs[0], positionalArgs[1]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -951,13 +1042,13 @@ extension MaskFilterBinding on MaskFilter {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('MaskFilter');
+        return const HTType('MaskFilter');
       case 'hashCode':
         return hashCode;
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -969,15 +1060,19 @@ class ColorFilterAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'ColorFilter.mode':
-        return ({positionalArgs, namedArgs, typeArgs}) => ColorFilter.mode(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            ColorFilter.mode(positionalArgs[0], positionalArgs[1]);
       case 'ColorFilter.matrix':
-        return ({positionalArgs, namedArgs, typeArgs}) => ColorFilter.matrix(List<double>.from(positionalArgs[0]));
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            ColorFilter.matrix(List<double>.from(positionalArgs[0]));
       case 'ColorFilter.linearToSrgbGamma':
-        return ({positionalArgs, namedArgs, typeArgs}) => ColorFilter.linearToSrgbGamma();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            ColorFilter.linearToSrgbGamma();
       case 'ColorFilter.srgbToLinearGamma':
-        return ({positionalArgs, namedArgs, typeArgs}) => ColorFilter.srgbToLinearGamma();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            ColorFilter.srgbToLinearGamma();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -991,13 +1086,13 @@ extension ColorFilterBinding on ColorFilter {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('ColorFilter');
+        return const HTType('ColorFilter');
       case 'hashCode':
         return hashCode;
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -1012,15 +1107,20 @@ class ImageFilterAutoBinding extends HTExternalClass {
         return ({positionalArgs, namedArgs, typeArgs}) => ImageFilter.blur(
             sigmaX: namedArgs.containsKey('sigmaX') ? namedArgs['sigmaX'] : 0.0,
             sigmaY: namedArgs.containsKey('sigmaY') ? namedArgs['sigmaY'] : 0.0,
-            tileMode: namedArgs.containsKey('tileMode') ? namedArgs['tileMode'] : TileMode.clamp);
+            tileMode: namedArgs.containsKey('tileMode')
+                ? namedArgs['tileMode']
+                : TileMode.clamp);
       case 'ImageFilter.matrix':
-        return ({positionalArgs, namedArgs, typeArgs}) => ImageFilter.matrix(positionalArgs[0],
-            filterQuality: namedArgs.containsKey('filterQuality') ? namedArgs['filterQuality'] : FilterQuality.low);
+        return ({positionalArgs, namedArgs, typeArgs}) => ImageFilter.matrix(
+            positionalArgs[0],
+            filterQuality: namedArgs.containsKey('filterQuality')
+                ? namedArgs['filterQuality']
+                : FilterQuality.low);
       case 'ImageFilter.compose':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            ImageFilter.compose(outer: namedArgs['outer'], inner: namedArgs['inner']);
+        return ({positionalArgs, namedArgs, typeArgs}) => ImageFilter.compose(
+            outer: namedArgs['outer'], inner: namedArgs['inner']);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -1034,10 +1134,13 @@ class ImageShaderAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'ImageShader':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            ImageShader(positionalArgs[0], positionalArgs[1], positionalArgs[2], positionalArgs[3]);
+        return ({positionalArgs, namedArgs, typeArgs}) => ImageShader(
+            positionalArgs[0],
+            positionalArgs[1],
+            positionalArgs[2],
+            positionalArgs[3]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -1053,17 +1156,27 @@ class VerticesAutoBinding extends HTExternalClass {
       case 'Vertices':
         return ({positionalArgs, namedArgs, typeArgs}) => Vertices(
             positionalArgs[0], List<Offset>.from(positionalArgs[1]),
-            textureCoordinates:
-                namedArgs.containsKey('textureCoordinates') ? List<Offset>.from(namedArgs['textureCoordinates']) : null,
-            colors: namedArgs.containsKey('colors') ? List<Color>.from(namedArgs['colors']) : null,
-            indices: namedArgs.containsKey('indices') ? List<int>.from(namedArgs['indices']) : null);
+            textureCoordinates: namedArgs.containsKey('textureCoordinates')
+                ? List<Offset>.from(namedArgs['textureCoordinates'])
+                : null,
+            colors: namedArgs.containsKey('colors')
+                ? List<Color>.from(namedArgs['colors'])
+                : null,
+            indices: namedArgs.containsKey('indices')
+                ? List<int>.from(namedArgs['indices'])
+                : null);
       case 'Vertices.raw':
-        return ({positionalArgs, namedArgs, typeArgs}) => Vertices.raw(positionalArgs[0], positionalArgs[1],
-            textureCoordinates: namedArgs.containsKey('textureCoordinates') ? namedArgs['textureCoordinates'] : null,
-            colors: namedArgs.containsKey('colors') ? namedArgs['colors'] : null,
-            indices: namedArgs.containsKey('indices') ? namedArgs['indices'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => Vertices.raw(
+            positionalArgs[0], positionalArgs[1],
+            textureCoordinates: namedArgs.containsKey('textureCoordinates')
+                ? namedArgs['textureCoordinates']
+                : null,
+            colors:
+                namedArgs.containsKey('colors') ? namedArgs['colors'] : null,
+            indices:
+                namedArgs.containsKey('indices') ? namedArgs['indices'] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -1077,10 +1190,11 @@ class CanvasAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'Canvas':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            Canvas(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => Canvas(
+            positionalArgs[0],
+            positionalArgs.length > 1 ? positionalArgs[1] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -1094,82 +1208,119 @@ extension CanvasBinding on Canvas {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('Canvas');
+        return const HTType('Canvas');
       case 'save':
         return ({positionalArgs, namedArgs, typeArgs}) => save();
       case 'saveLayer':
-        return ({positionalArgs, namedArgs, typeArgs}) => saveLayer(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            saveLayer(positionalArgs[0], positionalArgs[1]);
       case 'restore':
         return ({positionalArgs, namedArgs, typeArgs}) => restore();
       case 'getSaveCount':
         return ({positionalArgs, namedArgs, typeArgs}) => getSaveCount();
       case 'translate':
-        return ({positionalArgs, namedArgs, typeArgs}) => translate(positionalArgs[0], positionalArgs[1]);
-      case 'scale':
         return ({positionalArgs, namedArgs, typeArgs}) =>
-            scale(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : null);
+            translate(positionalArgs[0], positionalArgs[1]);
+      case 'scale':
+        return ({positionalArgs, namedArgs, typeArgs}) => scale(
+            positionalArgs[0],
+            positionalArgs.length > 1 ? positionalArgs[1] : null);
       case 'rotate':
-        return ({positionalArgs, namedArgs, typeArgs}) => rotate(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            rotate(positionalArgs[0]);
       case 'skew':
-        return ({positionalArgs, namedArgs, typeArgs}) => skew(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            skew(positionalArgs[0], positionalArgs[1]);
       case 'transform':
-        return ({positionalArgs, namedArgs, typeArgs}) => transform(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            transform(positionalArgs[0]);
       case 'clipRect':
-        return ({positionalArgs, namedArgs, typeArgs}) => clipRect(positionalArgs[0],
-            clipOp: namedArgs.containsKey('clipOp') ? namedArgs['clipOp'] : ClipOp.intersect,
-            doAntiAlias: namedArgs.containsKey('doAntiAlias') ? namedArgs['doAntiAlias'] : true);
+        return ({positionalArgs, namedArgs, typeArgs}) => clipRect(
+            positionalArgs[0],
+            clipOp: namedArgs.containsKey('clipOp')
+                ? namedArgs['clipOp']
+                : ClipOp.intersect,
+            doAntiAlias: namedArgs.containsKey('doAntiAlias')
+                ? namedArgs['doAntiAlias']
+                : true);
       case 'clipRRect':
-        return ({positionalArgs, namedArgs, typeArgs}) => clipRRect(positionalArgs[0],
-            doAntiAlias: namedArgs.containsKey('doAntiAlias') ? namedArgs['doAntiAlias'] : true);
+        return ({positionalArgs, namedArgs, typeArgs}) => clipRRect(
+            positionalArgs[0],
+            doAntiAlias: namedArgs.containsKey('doAntiAlias')
+                ? namedArgs['doAntiAlias']
+                : true);
       case 'clipPath':
-        return ({positionalArgs, namedArgs, typeArgs}) => clipPath(positionalArgs[0],
-            doAntiAlias: namedArgs.containsKey('doAntiAlias') ? namedArgs['doAntiAlias'] : true);
+        return ({positionalArgs, namedArgs, typeArgs}) => clipPath(
+            positionalArgs[0],
+            doAntiAlias: namedArgs.containsKey('doAntiAlias')
+                ? namedArgs['doAntiAlias']
+                : true);
       case 'drawColor':
-        return ({positionalArgs, namedArgs, typeArgs}) => drawColor(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            drawColor(positionalArgs[0], positionalArgs[1]);
       case 'drawLine':
         return ({positionalArgs, namedArgs, typeArgs}) =>
             drawLine(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
       case 'drawPaint':
-        return ({positionalArgs, namedArgs, typeArgs}) => drawPaint(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            drawPaint(positionalArgs[0]);
       case 'drawRect':
-        return ({positionalArgs, namedArgs, typeArgs}) => drawRect(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            drawRect(positionalArgs[0], positionalArgs[1]);
       case 'drawRRect':
-        return ({positionalArgs, namedArgs, typeArgs}) => drawRRect(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            drawRRect(positionalArgs[0], positionalArgs[1]);
       case 'drawDRRect':
         return ({positionalArgs, namedArgs, typeArgs}) =>
             drawDRRect(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
       case 'drawOval':
-        return ({positionalArgs, namedArgs, typeArgs}) => drawOval(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            drawOval(positionalArgs[0], positionalArgs[1]);
       case 'drawCircle':
         return ({positionalArgs, namedArgs, typeArgs}) =>
             drawCircle(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
       case 'drawArc':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            drawArc(positionalArgs[0], positionalArgs[1], positionalArgs[2], positionalArgs[3], positionalArgs[4]);
+        return ({positionalArgs, namedArgs, typeArgs}) => drawArc(
+            positionalArgs[0],
+            positionalArgs[1],
+            positionalArgs[2],
+            positionalArgs[3],
+            positionalArgs[4]);
       case 'drawPath':
-        return ({positionalArgs, namedArgs, typeArgs}) => drawPath(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            drawPath(positionalArgs[0], positionalArgs[1]);
       case 'drawImage':
         return ({positionalArgs, namedArgs, typeArgs}) =>
             drawImage(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
       case 'drawImageRect':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            drawImageRect(positionalArgs[0], positionalArgs[1], positionalArgs[2], positionalArgs[3]);
+        return ({positionalArgs, namedArgs, typeArgs}) => drawImageRect(
+            positionalArgs[0],
+            positionalArgs[1],
+            positionalArgs[2],
+            positionalArgs[3]);
       case 'drawImageNine':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            drawImageNine(positionalArgs[0], positionalArgs[1], positionalArgs[2], positionalArgs[3]);
+        return ({positionalArgs, namedArgs, typeArgs}) => drawImageNine(
+            positionalArgs[0],
+            positionalArgs[1],
+            positionalArgs[2],
+            positionalArgs[3]);
       case 'drawPicture':
-        return ({positionalArgs, namedArgs, typeArgs}) => drawPicture(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            drawPicture(positionalArgs[0]);
       case 'drawParagraph':
-        return ({positionalArgs, namedArgs, typeArgs}) => drawParagraph(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            drawParagraph(positionalArgs[0], positionalArgs[1]);
       case 'drawPoints':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            drawPoints(positionalArgs[0], List<Offset>.from(positionalArgs[1]), positionalArgs[2]);
+        return ({positionalArgs, namedArgs, typeArgs}) => drawPoints(
+            positionalArgs[0],
+            List<Offset>.from(positionalArgs[1]),
+            positionalArgs[2]);
       case 'drawRawPoints':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            drawRawPoints(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
+        return ({positionalArgs, namedArgs, typeArgs}) => drawRawPoints(
+            positionalArgs[0], positionalArgs[1], positionalArgs[2]);
       case 'drawVertices':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            drawVertices(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
+        return ({positionalArgs, namedArgs, typeArgs}) => drawVertices(
+            positionalArgs[0], positionalArgs[1], positionalArgs[2]);
       case 'drawAtlas':
         return ({positionalArgs, namedArgs, typeArgs}) => drawAtlas(
             positionalArgs[0],
@@ -1180,13 +1331,22 @@ extension CanvasBinding on Canvas {
             positionalArgs[5],
             positionalArgs[6]);
       case 'drawRawAtlas':
-        return ({positionalArgs, namedArgs, typeArgs}) => drawRawAtlas(positionalArgs[0], positionalArgs[1],
-            positionalArgs[2], positionalArgs[3], positionalArgs[4], positionalArgs[5], positionalArgs[6]);
+        return ({positionalArgs, namedArgs, typeArgs}) => drawRawAtlas(
+            positionalArgs[0],
+            positionalArgs[1],
+            positionalArgs[2],
+            positionalArgs[3],
+            positionalArgs[4],
+            positionalArgs[5],
+            positionalArgs[6]);
       case 'drawShadow':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            drawShadow(positionalArgs[0], positionalArgs[1], positionalArgs[2], positionalArgs[3]);
+        return ({positionalArgs, namedArgs, typeArgs}) => drawShadow(
+            positionalArgs[0],
+            positionalArgs[1],
+            positionalArgs[2],
+            positionalArgs[3]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -1200,7 +1360,7 @@ class PictureRecorderAutoBinding extends HTExternalClass {
       case 'PictureRecorder':
         return ({positionalArgs, namedArgs, typeArgs}) => PictureRecorder();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -1214,13 +1374,13 @@ extension PictureRecorderBinding on PictureRecorder {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('PictureRecorder');
+        return const HTType('PictureRecorder');
       case 'isRecording':
         return isRecording;
       case 'endRecording':
         return ({positionalArgs, namedArgs, typeArgs}) => endRecording();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -1233,19 +1393,28 @@ class ShadowAutoBinding extends HTExternalClass {
     switch (varName) {
       case 'Shadow':
         return ({positionalArgs, namedArgs, typeArgs}) => Shadow(
-            color: namedArgs.containsKey('color') ? namedArgs['color'] : const Color(_kColorDefault),
-            offset: namedArgs.containsKey('offset') ? namedArgs['offset'] : Offset.zero,
-            blurRadius: namedArgs.containsKey('blurRadius') ? namedArgs['blurRadius'] : 0.0);
+            color: namedArgs.containsKey('color')
+                ? namedArgs['color']
+                : const Color(_kColorDefault),
+            offset: namedArgs.containsKey('offset')
+                ? namedArgs['offset']
+                : Offset.zero,
+            blurRadius: namedArgs.containsKey('blurRadius')
+                ? namedArgs['blurRadius']
+                : 0.0);
       case 'Shadow.convertRadiusToSigma':
-        return ({positionalArgs, namedArgs, typeArgs}) => Shadow.convertRadiusToSigma(positionalArgs[0]);
-      case 'Shadow.lerp':
         return ({positionalArgs, namedArgs, typeArgs}) =>
-            Shadow.lerp(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
+            Shadow.convertRadiusToSigma(positionalArgs[0]);
+      case 'Shadow.lerp':
+        return ({positionalArgs, namedArgs, typeArgs}) => Shadow.lerp(
+            positionalArgs[0], positionalArgs[1], positionalArgs[2]);
       case 'Shadow.lerpList':
         return ({positionalArgs, namedArgs, typeArgs}) => Shadow.lerpList(
-            List<Shadow>.from(positionalArgs[0]), List<Shadow>.from(positionalArgs[1]), positionalArgs[2]);
+            List<Shadow>.from(positionalArgs[0]),
+            List<Shadow>.from(positionalArgs[1]),
+            positionalArgs[2]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -1261,7 +1430,7 @@ extension ShadowBinding on Shadow {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('Shadow');
+        return const HTType('Shadow');
       case 'color':
         return color;
       case 'offset':
@@ -1275,11 +1444,12 @@ extension ShadowBinding on Shadow {
       case 'toPaint':
         return ({positionalArgs, namedArgs, typeArgs}) => toPaint();
       case 'scale':
-        return ({positionalArgs, namedArgs, typeArgs}) => scale(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            scale(positionalArgs[0]);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -1291,9 +1461,10 @@ class ImmutableBufferAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'ImmutableBuffer.fromUint8List':
-        return ({positionalArgs, namedArgs, typeArgs}) => ImmutableBuffer.fromUint8List(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            ImmutableBuffer.fromUint8List(positionalArgs[0]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -1305,15 +1476,19 @@ class ImageDescriptorAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'ImageDescriptor.raw':
-        return ({positionalArgs, namedArgs, typeArgs}) => ImageDescriptor.raw(positionalArgs[0],
+        return ({positionalArgs, namedArgs, typeArgs}) => ImageDescriptor.raw(
+            positionalArgs[0],
             width: namedArgs['width'],
             height: namedArgs['height'],
-            rowBytes: namedArgs.containsKey('rowBytes') ? namedArgs['rowBytes'] : null,
+            rowBytes: namedArgs.containsKey('rowBytes')
+                ? namedArgs['rowBytes']
+                : null,
             pixelFormat: namedArgs['pixelFormat']);
       case 'ImageDescriptor.encoded':
-        return ({positionalArgs, namedArgs, typeArgs}) => ImageDescriptor.encoded(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            ImageDescriptor.encoded(positionalArgs[0]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -1327,7 +1502,7 @@ extension ImageDescriptorBinding on ImageDescriptor {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('ImageDescriptor');
+        return const HTType('ImageDescriptor');
       case 'width':
         return width;
       case 'height':
@@ -1338,10 +1513,14 @@ extension ImageDescriptorBinding on ImageDescriptor {
         return ({positionalArgs, namedArgs, typeArgs}) => dispose();
       case 'instantiateCodec':
         return ({positionalArgs, namedArgs, typeArgs}) => instantiateCodec(
-            targetWidth: namedArgs.containsKey('targetWidth') ? namedArgs['targetWidth'] : null,
-            targetHeight: namedArgs.containsKey('targetHeight') ? namedArgs['targetHeight'] : null);
+            targetWidth: namedArgs.containsKey('targetWidth')
+                ? namedArgs['targetWidth']
+                : null,
+            targetHeight: namedArgs.containsKey('targetHeight')
+                ? namedArgs['targetHeight']
+                : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

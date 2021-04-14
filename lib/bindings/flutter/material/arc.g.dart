@@ -12,7 +12,7 @@ class MaterialPointArcTweenAutoBinding extends HTExternalClass {
             begin: namedArgs.containsKey('begin') ? namedArgs['begin'] : null,
             end: namedArgs.containsKey('end') ? namedArgs['end'] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -31,7 +31,7 @@ extension MaterialPointArcTweenBinding on MaterialPointArcTween {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('MaterialPointArcTween');
+        return const HTType('MaterialPointArcTween');
       case 'center':
         return center;
       case 'radius':
@@ -41,19 +41,24 @@ extension MaterialPointArcTweenBinding on MaterialPointArcTween {
       case 'endAngle':
         return endAngle;
       case 'lerp':
-        return ({positionalArgs, namedArgs, typeArgs}) => lerp(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            lerp(positionalArgs[0]);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       case 'transform':
-        return ({positionalArgs, namedArgs, typeArgs}) => transform(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            transform(positionalArgs[0]);
       case 'evaluate':
-        return ({positionalArgs, namedArgs, typeArgs}) => evaluate(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            evaluate(positionalArgs[0]);
       case 'animate':
-        return ({positionalArgs, namedArgs, typeArgs}) => animate(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            animate(positionalArgs[0]);
       case 'chain':
-        return ({positionalArgs, namedArgs, typeArgs}) => chain(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            chain(positionalArgs[0]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -66,7 +71,7 @@ extension MaterialPointArcTweenBinding on MaterialPointArcTween {
         end = value;
         break;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -82,7 +87,7 @@ class MaterialRectArcTweenAutoBinding extends HTExternalClass {
             begin: namedArgs.containsKey('begin') ? namedArgs['begin'] : null,
             end: namedArgs.containsKey('end') ? namedArgs['end'] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -101,25 +106,30 @@ extension MaterialRectArcTweenBinding on MaterialRectArcTween {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('MaterialRectArcTween');
+        return const HTType('MaterialRectArcTween');
       case 'beginArc':
         return beginArc;
       case 'endArc':
         return endArc;
       case 'lerp':
-        return ({positionalArgs, namedArgs, typeArgs}) => lerp(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            lerp(positionalArgs[0]);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       case 'transform':
-        return ({positionalArgs, namedArgs, typeArgs}) => transform(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            transform(positionalArgs[0]);
       case 'evaluate':
-        return ({positionalArgs, namedArgs, typeArgs}) => evaluate(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            evaluate(positionalArgs[0]);
       case 'animate':
-        return ({positionalArgs, namedArgs, typeArgs}) => animate(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            animate(positionalArgs[0]);
       case 'chain':
-        return ({positionalArgs, namedArgs, typeArgs}) => chain(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            chain(positionalArgs[0]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -132,7 +142,7 @@ extension MaterialRectArcTweenBinding on MaterialRectArcTween {
         end = value;
         break;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -144,11 +154,13 @@ class MaterialRectCenterArcTweenAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'MaterialRectCenterArcTween':
-        return ({positionalArgs, namedArgs, typeArgs}) => MaterialRectCenterArcTween(
-            begin: namedArgs.containsKey('begin') ? namedArgs['begin'] : null,
-            end: namedArgs.containsKey('end') ? namedArgs['end'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            MaterialRectCenterArcTween(
+                begin:
+                    namedArgs.containsKey('begin') ? namedArgs['begin'] : null,
+                end: namedArgs.containsKey('end') ? namedArgs['end'] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -167,23 +179,28 @@ extension MaterialRectCenterArcTweenBinding on MaterialRectCenterArcTween {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('MaterialRectCenterArcTween');
+        return const HTType('MaterialRectCenterArcTween');
       case 'centerArc':
         return centerArc;
       case 'lerp':
-        return ({positionalArgs, namedArgs, typeArgs}) => lerp(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            lerp(positionalArgs[0]);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       case 'transform':
-        return ({positionalArgs, namedArgs, typeArgs}) => transform(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            transform(positionalArgs[0]);
       case 'evaluate':
-        return ({positionalArgs, namedArgs, typeArgs}) => evaluate(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            evaluate(positionalArgs[0]);
       case 'animate':
-        return ({positionalArgs, namedArgs, typeArgs}) => animate(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            animate(positionalArgs[0]);
       case 'chain':
-        return ({positionalArgs, namedArgs, typeArgs}) => chain(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            chain(positionalArgs[0]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -196,7 +213,7 @@ extension MaterialRectCenterArcTweenBinding on MaterialRectCenterArcTween {
         end = value;
         break;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

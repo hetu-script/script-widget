@@ -10,12 +10,16 @@ class FutureHandlerClassBinding extends HTExternalClass {
       case 'FutureHandler':
         return ({positionalArgs, namedArgs, typeArgs}) => FutureHandler();
       case 'FutureHandler.handle':
-        return ({positionalArgs, namedArgs, typeArgs}) => FutureHandler.handle(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            FutureHandler.handle(positionalArgs[0], positionalArgs[1]);
       case 'FutureHandler.make':
-        return ({positionalArgs, namedArgs, typeArgs}) => FutureHandler.make(positionalArgs[0],
-            posArgs: namedArgs['posArgs'], namedArgs: namedArgs['namedArgs'], typeArgs: namedArgs['typeArgs']);
+        return ({positionalArgs, namedArgs, typeArgs}) => FutureHandler.make(
+            positionalArgs[0],
+            posArgs: namedArgs['posArgs'],
+            namedArgs: namedArgs['namedArgs'],
+            typeArgs: namedArgs['typeArgs']);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

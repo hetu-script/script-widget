@@ -4,7 +4,8 @@ import 'dart:ui';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart';
 
-const _defaultInsetPadding = EdgeInsets.symmetric(horizontal: 40.0, vertical: 24.0);
+const _defaultInsetPadding =
+    EdgeInsets.symmetric(horizontal: 40.0, vertical: 24.0);
 
 class DialogAutoBinding extends HTExternalClass {
   DialogAutoBinding() : super('Dialog');
@@ -15,19 +16,29 @@ class DialogAutoBinding extends HTExternalClass {
       case 'Dialog':
         return ({positionalArgs, namedArgs, typeArgs}) => Dialog(
             key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
-            backgroundColor: namedArgs.containsKey('backgroundColor') ? namedArgs['backgroundColor'] : null,
-            elevation: namedArgs.containsKey('elevation') ? namedArgs['elevation'] : null,
-            insetAnimationDuration: namedArgs.containsKey('insetAnimationDuration')
-                ? namedArgs['insetAnimationDuration']
-                : const Duration(milliseconds: 100),
-            insetAnimationCurve:
-                namedArgs.containsKey('insetAnimationCurve') ? namedArgs['insetAnimationCurve'] : Curves.decelerate,
-            insetPadding: namedArgs.containsKey('insetPadding') ? namedArgs['insetPadding'] : _defaultInsetPadding,
-            clipBehavior: namedArgs.containsKey('clipBehavior') ? namedArgs['clipBehavior'] : Clip.none,
+            backgroundColor: namedArgs.containsKey('backgroundColor')
+                ? namedArgs['backgroundColor']
+                : null,
+            elevation: namedArgs.containsKey('elevation')
+                ? namedArgs['elevation']
+                : null,
+            insetAnimationDuration:
+                namedArgs.containsKey('insetAnimationDuration')
+                    ? namedArgs['insetAnimationDuration']
+                    : const Duration(milliseconds: 100),
+            insetAnimationCurve: namedArgs.containsKey('insetAnimationCurve')
+                ? namedArgs['insetAnimationCurve']
+                : Curves.decelerate,
+            insetPadding: namedArgs.containsKey('insetPadding')
+                ? namedArgs['insetPadding']
+                : _defaultInsetPadding,
+            clipBehavior: namedArgs.containsKey('clipBehavior')
+                ? namedArgs['clipBehavior']
+                : Clip.none,
             shape: namedArgs.containsKey('shape') ? namedArgs['shape'] : null,
             child: namedArgs.containsKey('child') ? namedArgs['child'] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -41,7 +52,7 @@ extension DialogBinding on Dialog {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('Dialog');
+        return const HTType('Dialog');
       case 'backgroundColor':
         return backgroundColor;
       case 'elevation':
@@ -63,31 +74,44 @@ extension DialogBinding on Dialog {
       case 'hashCode':
         return hashCode;
       case 'build':
-        return ({positionalArgs, namedArgs, typeArgs}) => build(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            build(positionalArgs[0]);
       case 'createElement':
         return ({positionalArgs, namedArgs, typeArgs}) => createElement();
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'toStringShallow':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
-            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            joiner:
+                namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -102,30 +126,58 @@ class AlertDialogAutoBinding extends HTExternalClass {
         return ({positionalArgs, namedArgs, typeArgs}) => AlertDialog(
             key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
             title: namedArgs.containsKey('title') ? namedArgs['title'] : null,
-            titlePadding: namedArgs.containsKey('titlePadding') ? namedArgs['titlePadding'] : null,
-            titleTextStyle: namedArgs.containsKey('titleTextStyle') ? namedArgs['titleTextStyle'] : null,
-            content: namedArgs.containsKey('content') ? namedArgs['content'] : null,
+            titlePadding: namedArgs.containsKey('titlePadding')
+                ? namedArgs['titlePadding']
+                : null,
+            titleTextStyle: namedArgs.containsKey('titleTextStyle')
+                ? namedArgs['titleTextStyle']
+                : null,
+            content:
+                namedArgs.containsKey('content') ? namedArgs['content'] : null,
             contentPadding: namedArgs.containsKey('contentPadding')
                 ? namedArgs['contentPadding']
                 : const EdgeInsets.fromLTRB(24.0, 20.0, 24.0, 24.0),
-            contentTextStyle: namedArgs.containsKey('contentTextStyle') ? namedArgs['contentTextStyle'] : null,
-            actions: namedArgs.containsKey('actions') ? List<Widget>.from(namedArgs['actions']) : null,
-            actionsPadding: namedArgs.containsKey('actionsPadding') ? namedArgs['actionsPadding'] : EdgeInsets.zero,
-            actionsOverflowDirection:
-                namedArgs.containsKey('actionsOverflowDirection') ? namedArgs['actionsOverflowDirection'] : null,
-            actionsOverflowButtonSpacing: namedArgs.containsKey('actionsOverflowButtonSpacing')
-                ? namedArgs['actionsOverflowButtonSpacing']
+            contentTextStyle: namedArgs.containsKey('contentTextStyle')
+                ? namedArgs['contentTextStyle']
                 : null,
-            buttonPadding: namedArgs.containsKey('buttonPadding') ? namedArgs['buttonPadding'] : null,
-            backgroundColor: namedArgs.containsKey('backgroundColor') ? namedArgs['backgroundColor'] : null,
-            elevation: namedArgs.containsKey('elevation') ? namedArgs['elevation'] : null,
-            semanticLabel: namedArgs.containsKey('semanticLabel') ? namedArgs['semanticLabel'] : null,
-            insetPadding: namedArgs.containsKey('insetPadding') ? namedArgs['insetPadding'] : _defaultInsetPadding,
-            clipBehavior: namedArgs.containsKey('clipBehavior') ? namedArgs['clipBehavior'] : Clip.none,
+            actions: namedArgs.containsKey('actions')
+                ? List<Widget>.from(namedArgs['actions'])
+                : null,
+            actionsPadding: namedArgs.containsKey('actionsPadding')
+                ? namedArgs['actionsPadding']
+                : EdgeInsets.zero,
+            actionsOverflowDirection:
+                namedArgs.containsKey('actionsOverflowDirection')
+                    ? namedArgs['actionsOverflowDirection']
+                    : null,
+            actionsOverflowButtonSpacing:
+                namedArgs.containsKey('actionsOverflowButtonSpacing')
+                    ? namedArgs['actionsOverflowButtonSpacing']
+                    : null,
+            buttonPadding: namedArgs.containsKey('buttonPadding')
+                ? namedArgs['buttonPadding']
+                : null,
+            backgroundColor: namedArgs.containsKey('backgroundColor')
+                ? namedArgs['backgroundColor']
+                : null,
+            elevation: namedArgs.containsKey('elevation')
+                ? namedArgs['elevation']
+                : null,
+            semanticLabel: namedArgs.containsKey('semanticLabel')
+                ? namedArgs['semanticLabel']
+                : null,
+            insetPadding: namedArgs.containsKey('insetPadding')
+                ? namedArgs['insetPadding']
+                : _defaultInsetPadding,
+            clipBehavior: namedArgs.containsKey('clipBehavior')
+                ? namedArgs['clipBehavior']
+                : Clip.none,
             shape: namedArgs.containsKey('shape') ? namedArgs['shape'] : null,
-            scrollable: namedArgs.containsKey('scrollable') ? namedArgs['scrollable'] : false);
+            scrollable: namedArgs.containsKey('scrollable')
+                ? namedArgs['scrollable']
+                : false);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -139,7 +191,7 @@ extension AlertDialogBinding on AlertDialog {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('AlertDialog');
+        return const HTType('AlertDialog');
       case 'title':
         return title;
       case 'titlePadding':
@@ -179,31 +231,44 @@ extension AlertDialogBinding on AlertDialog {
       case 'hashCode':
         return hashCode;
       case 'build':
-        return ({positionalArgs, namedArgs, typeArgs}) => build(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            build(positionalArgs[0]);
       case 'createElement':
         return ({positionalArgs, namedArgs, typeArgs}) => createElement();
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'toStringShallow':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
-            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            joiner:
+                namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -217,11 +282,14 @@ class SimpleDialogOptionAutoBinding extends HTExternalClass {
       case 'SimpleDialogOption':
         return ({positionalArgs, namedArgs, typeArgs}) => SimpleDialogOption(
             key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
-            onPressed: namedArgs.containsKey('onPressed') ? namedArgs['onPressed'] : null,
-            padding: namedArgs.containsKey('padding') ? namedArgs['padding'] : null,
+            onPressed: namedArgs.containsKey('onPressed')
+                ? namedArgs['onPressed']
+                : null,
+            padding:
+                namedArgs.containsKey('padding') ? namedArgs['padding'] : null,
             child: namedArgs.containsKey('child') ? namedArgs['child'] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -232,7 +300,8 @@ class SimpleDialogOptionAutoBinding extends HTExternalClass {
 
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'VoidCallback': (HTFunction function) => () => function.call(positionalArgs: const [], namedArgs: const {}),
+      'VoidCallback': (HTFunction function) =>
+          () => function.call(positionalArgs: const [], namedArgs: const {}),
     };
   }
 }
@@ -241,7 +310,7 @@ extension SimpleDialogOptionBinding on SimpleDialogOption {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('SimpleDialogOption');
+        return const HTType('SimpleDialogOption');
       case 'onPressed':
         return onPressed;
       case 'child':
@@ -253,31 +322,44 @@ extension SimpleDialogOptionBinding on SimpleDialogOption {
       case 'hashCode':
         return hashCode;
       case 'build':
-        return ({positionalArgs, namedArgs, typeArgs}) => build(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            build(positionalArgs[0]);
       case 'createElement':
         return ({positionalArgs, namedArgs, typeArgs}) => createElement();
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'toStringShallow':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
-            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            joiner:
+                namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -295,19 +377,33 @@ class SimpleDialogAutoBinding extends HTExternalClass {
             titlePadding: namedArgs.containsKey('titlePadding')
                 ? namedArgs['titlePadding']
                 : const EdgeInsets.fromLTRB(24.0, 24.0, 24.0, 0.0),
-            titleTextStyle: namedArgs.containsKey('titleTextStyle') ? namedArgs['titleTextStyle'] : null,
+            titleTextStyle: namedArgs.containsKey('titleTextStyle')
+                ? namedArgs['titleTextStyle']
+                : null,
             contentPadding: namedArgs.containsKey('contentPadding')
                 ? namedArgs['contentPadding']
                 : const EdgeInsets.fromLTRB(0.0, 12.0, 0.0, 16.0),
-            backgroundColor: namedArgs.containsKey('backgroundColor') ? namedArgs['backgroundColor'] : null,
-            elevation: namedArgs.containsKey('elevation') ? namedArgs['elevation'] : null,
-            semanticLabel: namedArgs.containsKey('semanticLabel') ? namedArgs['semanticLabel'] : null,
-            insetPadding: namedArgs.containsKey('insetPadding') ? namedArgs['insetPadding'] : _defaultInsetPadding,
-            clipBehavior: namedArgs.containsKey('clipBehavior') ? namedArgs['clipBehavior'] : Clip.none,
+            backgroundColor: namedArgs.containsKey('backgroundColor')
+                ? namedArgs['backgroundColor']
+                : null,
+            elevation: namedArgs.containsKey('elevation')
+                ? namedArgs['elevation']
+                : null,
+            semanticLabel: namedArgs.containsKey('semanticLabel')
+                ? namedArgs['semanticLabel']
+                : null,
+            insetPadding: namedArgs.containsKey('insetPadding')
+                ? namedArgs['insetPadding']
+                : _defaultInsetPadding,
+            clipBehavior: namedArgs.containsKey('clipBehavior')
+                ? namedArgs['clipBehavior']
+                : Clip.none,
             shape: namedArgs.containsKey('shape') ? namedArgs['shape'] : null,
-            children: namedArgs.containsKey('children') ? List<Widget>.from(namedArgs['children']) : null);
+            children: namedArgs.containsKey('children')
+                ? List<Widget>.from(namedArgs['children'])
+                : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -321,7 +417,7 @@ extension SimpleDialogBinding on SimpleDialog {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('SimpleDialog');
+        return const HTType('SimpleDialog');
       case 'title':
         return title;
       case 'titlePadding':
@@ -349,31 +445,44 @@ extension SimpleDialogBinding on SimpleDialog {
       case 'hashCode':
         return hashCode;
       case 'build':
-        return ({positionalArgs, namedArgs, typeArgs}) => build(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            build(positionalArgs[0]);
       case 'createElement':
         return ({positionalArgs, namedArgs, typeArgs}) => createElement();
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'toStringShallow':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
-            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            joiner:
+                namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

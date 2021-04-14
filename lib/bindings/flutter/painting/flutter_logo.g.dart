@@ -17,7 +17,7 @@ class FlutterLogoStyleAutoBinding extends HTExternalClass {
       case 'FlutterLogoStyle.stacked':
         return FlutterLogoStyle.stacked;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -25,13 +25,14 @@ class FlutterLogoStyleAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('FlutterLogoStyle');
+        return const HTType('FlutterLogoStyle');
       case 'index':
         return (instance as FlutterLogoStyle).index;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => (instance as FlutterLogoStyle).toString();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            (instance as FlutterLogoStyle).toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -44,14 +45,21 @@ class FlutterLogoDecorationAutoBinding extends HTExternalClass {
     switch (varName) {
       case 'FlutterLogoDecoration':
         return ({positionalArgs, namedArgs, typeArgs}) => FlutterLogoDecoration(
-            textColor: namedArgs.containsKey('textColor') ? namedArgs['textColor'] : const Color(0xFF757575),
-            style: namedArgs.containsKey('style') ? namedArgs['style'] : FlutterLogoStyle.markOnly,
-            margin: namedArgs.containsKey('margin') ? namedArgs['margin'] : EdgeInsets.zero);
+            textColor: namedArgs.containsKey('textColor')
+                ? namedArgs['textColor']
+                : const Color(0xFF757575),
+            style: namedArgs.containsKey('style')
+                ? namedArgs['style']
+                : FlutterLogoStyle.markOnly,
+            margin: namedArgs.containsKey('margin')
+                ? namedArgs['margin']
+                : EdgeInsets.zero);
       case 'FlutterLogoDecoration.lerp':
         return ({positionalArgs, namedArgs, typeArgs}) =>
-            FlutterLogoDecoration.lerp(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
+            FlutterLogoDecoration.lerp(
+                positionalArgs[0], positionalArgs[1], positionalArgs[2]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -62,7 +70,8 @@ class FlutterLogoDecorationAutoBinding extends HTExternalClass {
 
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'VoidCallback': (HTFunction function) => () => function.call(positionalArgs: const [], namedArgs: const {}),
+      'VoidCallback': (HTFunction function) =>
+          () => function.call(positionalArgs: const [], namedArgs: const {}),
     };
   }
 }
@@ -71,7 +80,7 @@ extension FlutterLogoDecorationBinding on FlutterLogoDecoration {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('FlutterLogoDecoration');
+        return const HTType('FlutterLogoDecoration');
       case 'textColor':
         return textColor;
       case 'style':
@@ -87,30 +96,39 @@ extension FlutterLogoDecorationBinding on FlutterLogoDecoration {
       case 'debugAssertIsValid':
         return ({positionalArgs, namedArgs, typeArgs}) => debugAssertIsValid();
       case 'lerpFrom':
-        return ({positionalArgs, namedArgs, typeArgs}) => lerpFrom(positionalArgs[0], positionalArgs[1]);
-      case 'lerpTo':
-        return ({positionalArgs, namedArgs, typeArgs}) => lerpTo(positionalArgs[0], positionalArgs[1]);
-      case 'hitTest':
-        return ({positionalArgs, namedArgs, typeArgs}) => hitTest(positionalArgs[0], positionalArgs[1],
-            textDirection: namedArgs.containsKey('textDirection') ? namedArgs['textDirection'] : null);
-      case 'createBoxPainter':
         return ({positionalArgs, namedArgs, typeArgs}) =>
-            createBoxPainter(positionalArgs.length > 0 ? positionalArgs[0] : null);
+            lerpFrom(positionalArgs[0], positionalArgs[1]);
+      case 'lerpTo':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            lerpTo(positionalArgs[0], positionalArgs[1]);
+      case 'hitTest':
+        return ({positionalArgs, namedArgs, typeArgs}) => hitTest(
+            positionalArgs[0], positionalArgs[1],
+            textDirection: namedArgs.containsKey('textDirection')
+                ? namedArgs['textDirection']
+                : null);
+      case 'createBoxPainter':
+        return ({positionalArgs, namedArgs, typeArgs}) => createBoxPainter(
+            positionalArgs.length > 0 ? positionalArgs[0] : null);
       case 'getClipPath':
-        return ({positionalArgs, namedArgs, typeArgs}) => getClipPath(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            getClipPath(positionalArgs[0], positionalArgs[1]);
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

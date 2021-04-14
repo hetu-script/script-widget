@@ -9,17 +9,20 @@ class BouncingScrollSimulationAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'BouncingScrollSimulation':
-        return ({positionalArgs, namedArgs, typeArgs}) => BouncingScrollSimulation(
-            position: namedArgs['position'],
-            velocity: namedArgs['velocity'],
-            leadingExtent: namedArgs['leadingExtent'],
-            trailingExtent: namedArgs['trailingExtent'],
-            spring: namedArgs['spring'],
-            tolerance: namedArgs.containsKey('tolerance') ? namedArgs['tolerance'] : Tolerance.defaultTolerance);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            BouncingScrollSimulation(
+                position: namedArgs['position'],
+                velocity: namedArgs['velocity'],
+                leadingExtent: namedArgs['leadingExtent'],
+                trailingExtent: namedArgs['trailingExtent'],
+                spring: namedArgs['spring'],
+                tolerance: namedArgs.containsKey('tolerance')
+                    ? namedArgs['tolerance']
+                    : Tolerance.defaultTolerance);
       case 'BouncingScrollSimulation.maxSpringTransferVelocity':
         return BouncingScrollSimulation.maxSpringTransferVelocity;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -38,7 +41,7 @@ extension BouncingScrollSimulationBinding on BouncingScrollSimulation {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('BouncingScrollSimulation');
+        return const HTType('BouncingScrollSimulation');
       case 'leadingExtent':
         return leadingExtent;
       case 'trailingExtent':
@@ -52,11 +55,12 @@ extension BouncingScrollSimulationBinding on BouncingScrollSimulation {
       case 'dx':
         return ({positionalArgs, namedArgs, typeArgs}) => dx(positionalArgs[0]);
       case 'isDone':
-        return ({positionalArgs, namedArgs, typeArgs}) => isDone(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            isDone(positionalArgs[0]);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -66,7 +70,7 @@ extension BouncingScrollSimulationBinding on BouncingScrollSimulation {
         tolerance = value;
         break;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -78,13 +82,18 @@ class ClampingScrollSimulationAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'ClampingScrollSimulation':
-        return ({positionalArgs, namedArgs, typeArgs}) => ClampingScrollSimulation(
-            position: namedArgs['position'],
-            velocity: namedArgs['velocity'],
-            friction: namedArgs.containsKey('friction') ? namedArgs['friction'] : 0.015,
-            tolerance: namedArgs.containsKey('tolerance') ? namedArgs['tolerance'] : Tolerance.defaultTolerance);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            ClampingScrollSimulation(
+                position: namedArgs['position'],
+                velocity: namedArgs['velocity'],
+                friction: namedArgs.containsKey('friction')
+                    ? namedArgs['friction']
+                    : 0.015,
+                tolerance: namedArgs.containsKey('tolerance')
+                    ? namedArgs['tolerance']
+                    : Tolerance.defaultTolerance);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -103,7 +112,7 @@ extension ClampingScrollSimulationBinding on ClampingScrollSimulation {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('ClampingScrollSimulation');
+        return const HTType('ClampingScrollSimulation');
       case 'position':
         return position;
       case 'velocity':
@@ -117,11 +126,12 @@ extension ClampingScrollSimulationBinding on ClampingScrollSimulation {
       case 'dx':
         return ({positionalArgs, namedArgs, typeArgs}) => dx(positionalArgs[0]);
       case 'isDone':
-        return ({positionalArgs, namedArgs, typeArgs}) => isDone(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            isDone(positionalArgs[0]);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -131,7 +141,7 @@ extension ClampingScrollSimulationBinding on ClampingScrollSimulation {
         tolerance = value;
         break;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

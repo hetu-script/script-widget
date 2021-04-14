@@ -16,39 +16,71 @@ class CupertinoPickerAutoBinding extends HTExternalClass {
       case 'CupertinoPicker':
         return ({positionalArgs, namedArgs, typeArgs}) => CupertinoPicker(
             key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
-            diameterRatio: namedArgs.containsKey('diameterRatio') ? namedArgs['diameterRatio'] : _kDefaultDiameterRatio,
-            backgroundColor: namedArgs.containsKey('backgroundColor') ? namedArgs['backgroundColor'] : null,
-            offAxisFraction: namedArgs.containsKey('offAxisFraction') ? namedArgs['offAxisFraction'] : 0.0,
-            useMagnifier: namedArgs.containsKey('useMagnifier') ? namedArgs['useMagnifier'] : false,
-            magnification: namedArgs.containsKey('magnification') ? namedArgs['magnification'] : 1.0,
-            scrollController: namedArgs.containsKey('scrollController') ? namedArgs['scrollController'] : null,
-            squeeze: namedArgs.containsKey('squeeze') ? namedArgs['squeeze'] : _kSqueeze,
+            diameterRatio: namedArgs.containsKey('diameterRatio')
+                ? namedArgs['diameterRatio']
+                : _kDefaultDiameterRatio,
+            backgroundColor: namedArgs.containsKey('backgroundColor')
+                ? namedArgs['backgroundColor']
+                : null,
+            offAxisFraction: namedArgs.containsKey('offAxisFraction')
+                ? namedArgs['offAxisFraction']
+                : 0.0,
+            useMagnifier: namedArgs.containsKey('useMagnifier')
+                ? namedArgs['useMagnifier']
+                : false,
+            magnification: namedArgs.containsKey('magnification')
+                ? namedArgs['magnification']
+                : 1.0,
+            scrollController: namedArgs.containsKey('scrollController')
+                ? namedArgs['scrollController']
+                : null,
+            squeeze: namedArgs.containsKey('squeeze')
+                ? namedArgs['squeeze']
+                : _kSqueeze,
             itemExtent: namedArgs['itemExtent'],
             onSelectedItemChanged: namedArgs['onSelectedItemChanged'],
             selectionOverlay: namedArgs.containsKey('selectionOverlay')
                 ? namedArgs['selectionOverlay']
                 : const CupertinoPickerDefaultSelectionOverlay(),
-            looping: namedArgs.containsKey('looping') ? namedArgs['looping'] : false,
+            looping:
+                namedArgs.containsKey('looping') ? namedArgs['looping'] : false,
             children: List<Widget>.from(namedArgs['children']));
       case 'CupertinoPicker.builder':
-        return ({positionalArgs, namedArgs, typeArgs}) => CupertinoPicker.builder(
-            key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
-            diameterRatio: namedArgs.containsKey('diameterRatio') ? namedArgs['diameterRatio'] : _kDefaultDiameterRatio,
-            backgroundColor: namedArgs.containsKey('backgroundColor') ? namedArgs['backgroundColor'] : null,
-            offAxisFraction: namedArgs.containsKey('offAxisFraction') ? namedArgs['offAxisFraction'] : 0.0,
-            useMagnifier: namedArgs.containsKey('useMagnifier') ? namedArgs['useMagnifier'] : false,
-            magnification: namedArgs.containsKey('magnification') ? namedArgs['magnification'] : 1.0,
-            scrollController: namedArgs.containsKey('scrollController') ? namedArgs['scrollController'] : null,
-            squeeze: namedArgs.containsKey('squeeze') ? namedArgs['squeeze'] : _kSqueeze,
-            itemExtent: namedArgs['itemExtent'],
-            onSelectedItemChanged: namedArgs['onSelectedItemChanged'],
-            itemBuilder: namedArgs['itemBuilder'],
-            childCount: namedArgs.containsKey('childCount') ? namedArgs['childCount'] : null,
-            selectionOverlay: namedArgs.containsKey('selectionOverlay')
-                ? namedArgs['selectionOverlay']
-                : const CupertinoPickerDefaultSelectionOverlay());
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            CupertinoPicker.builder(
+                key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
+                diameterRatio: namedArgs.containsKey('diameterRatio')
+                    ? namedArgs['diameterRatio']
+                    : _kDefaultDiameterRatio,
+                backgroundColor: namedArgs.containsKey('backgroundColor')
+                    ? namedArgs['backgroundColor']
+                    : null,
+                offAxisFraction: namedArgs.containsKey('offAxisFraction')
+                    ? namedArgs['offAxisFraction']
+                    : 0.0,
+                useMagnifier: namedArgs.containsKey('useMagnifier')
+                    ? namedArgs['useMagnifier']
+                    : false,
+                magnification: namedArgs.containsKey('magnification')
+                    ? namedArgs['magnification']
+                    : 1.0,
+                scrollController: namedArgs.containsKey('scrollController')
+                    ? namedArgs['scrollController']
+                    : null,
+                squeeze: namedArgs.containsKey('squeeze')
+                    ? namedArgs['squeeze']
+                    : _kSqueeze,
+                itemExtent: namedArgs['itemExtent'],
+                onSelectedItemChanged: namedArgs['onSelectedItemChanged'],
+                itemBuilder: namedArgs['itemBuilder'],
+                childCount: namedArgs.containsKey('childCount')
+                    ? namedArgs['childCount']
+                    : null,
+                selectionOverlay: namedArgs.containsKey('selectionOverlay')
+                    ? namedArgs['selectionOverlay']
+                    : const CupertinoPickerDefaultSelectionOverlay());
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -59,8 +91,10 @@ class CupertinoPickerAutoBinding extends HTExternalClass {
 
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'NullableIndexedWidgetBuilder': (HTFunction function) =>
-          (context, index) => function.call(positionalArgs: [context, index], namedArgs: const {}) as Widget?,
+      'NullableIndexedWidgetBuilder': (HTFunction function) => (context,
+              index) =>
+          function.call(positionalArgs: [context, index], namedArgs: const {})
+              as Widget?,
     };
   }
 }
@@ -69,7 +103,7 @@ extension CupertinoPickerBinding on CupertinoPicker {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('CupertinoPicker');
+        return const HTType('CupertinoPicker');
       case 'diameterRatio':
         return diameterRatio;
       case 'backgroundColor':
@@ -103,44 +137,64 @@ extension CupertinoPickerBinding on CupertinoPicker {
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'toStringShallow':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
-            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            joiner:
+                namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
 
-class CupertinoPickerDefaultSelectionOverlayAutoBinding extends HTExternalClass {
-  CupertinoPickerDefaultSelectionOverlayAutoBinding() : super('CupertinoPickerDefaultSelectionOverlay');
+class CupertinoPickerDefaultSelectionOverlayAutoBinding
+    extends HTExternalClass {
+  CupertinoPickerDefaultSelectionOverlayAutoBinding()
+      : super('CupertinoPickerDefaultSelectionOverlay');
 
   @override
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'CupertinoPickerDefaultSelectionOverlay':
-        return ({positionalArgs, namedArgs, typeArgs}) => CupertinoPickerDefaultSelectionOverlay(
-            key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
-            background:
-                namedArgs.containsKey('background') ? namedArgs['background'] : CupertinoColors.tertiarySystemFill,
-            capLeftEdge: namedArgs.containsKey('capLeftEdge') ? namedArgs['capLeftEdge'] : true,
-            capRightEdge: namedArgs.containsKey('capRightEdge') ? namedArgs['capRightEdge'] : true);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            CupertinoPickerDefaultSelectionOverlay(
+                key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
+                background: namedArgs.containsKey('background')
+                    ? namedArgs['background']
+                    : CupertinoColors.tertiarySystemFill,
+                capLeftEdge: namedArgs.containsKey('capLeftEdge')
+                    ? namedArgs['capLeftEdge']
+                    : true,
+                capRightEdge: namedArgs.containsKey('capRightEdge')
+                    ? namedArgs['capRightEdge']
+                    : true);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -150,11 +204,12 @@ class CupertinoPickerDefaultSelectionOverlayAutoBinding extends HTExternalClass 
   }
 }
 
-extension CupertinoPickerDefaultSelectionOverlayBinding on CupertinoPickerDefaultSelectionOverlay {
+extension CupertinoPickerDefaultSelectionOverlayBinding
+    on CupertinoPickerDefaultSelectionOverlay {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('CupertinoPickerDefaultSelectionOverlay');
+        return const HTType('CupertinoPickerDefaultSelectionOverlay');
       case 'capLeftEdge':
         return capLeftEdge;
       case 'capRightEdge':
@@ -166,31 +221,44 @@ extension CupertinoPickerDefaultSelectionOverlayBinding on CupertinoPickerDefaul
       case 'hashCode':
         return hashCode;
       case 'build':
-        return ({positionalArgs, namedArgs, typeArgs}) => build(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            build(positionalArgs[0]);
       case 'createElement':
         return ({positionalArgs, namedArgs, typeArgs}) => createElement();
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'toStringShallow':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
-            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            joiner:
+                namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

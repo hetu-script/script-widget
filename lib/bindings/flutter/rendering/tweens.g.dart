@@ -12,7 +12,7 @@ class FractionalOffsetTweenAutoBinding extends HTExternalClass {
             begin: namedArgs.containsKey('begin') ? namedArgs['begin'] : null,
             end: namedArgs.containsKey('end') ? namedArgs['end'] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -31,25 +31,30 @@ extension FractionalOffsetTweenBinding on FractionalOffsetTween {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('FractionalOffsetTween');
+        return const HTType('FractionalOffsetTween');
       case 'begin':
         return begin;
       case 'end':
         return end;
       case 'lerp':
-        return ({positionalArgs, namedArgs, typeArgs}) => lerp(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            lerp(positionalArgs[0]);
       case 'transform':
-        return ({positionalArgs, namedArgs, typeArgs}) => transform(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            transform(positionalArgs[0]);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       case 'evaluate':
-        return ({positionalArgs, namedArgs, typeArgs}) => evaluate(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            evaluate(positionalArgs[0]);
       case 'animate':
-        return ({positionalArgs, namedArgs, typeArgs}) => animate(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            animate(positionalArgs[0]);
       case 'chain':
-        return ({positionalArgs, namedArgs, typeArgs}) => chain(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            chain(positionalArgs[0]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -62,7 +67,7 @@ extension FractionalOffsetTweenBinding on FractionalOffsetTween {
         end = value;
         break;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -78,7 +83,7 @@ class AlignmentTweenAutoBinding extends HTExternalClass {
             begin: namedArgs.containsKey('begin') ? namedArgs['begin'] : null,
             end: namedArgs.containsKey('end') ? namedArgs['end'] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -97,25 +102,30 @@ extension AlignmentTweenBinding on AlignmentTween {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('AlignmentTween');
+        return const HTType('AlignmentTween');
       case 'begin':
         return begin;
       case 'end':
         return end;
       case 'lerp':
-        return ({positionalArgs, namedArgs, typeArgs}) => lerp(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            lerp(positionalArgs[0]);
       case 'transform':
-        return ({positionalArgs, namedArgs, typeArgs}) => transform(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            transform(positionalArgs[0]);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       case 'evaluate':
-        return ({positionalArgs, namedArgs, typeArgs}) => evaluate(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            evaluate(positionalArgs[0]);
       case 'animate':
-        return ({positionalArgs, namedArgs, typeArgs}) => animate(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            animate(positionalArgs[0]);
       case 'chain':
-        return ({positionalArgs, namedArgs, typeArgs}) => chain(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            chain(positionalArgs[0]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -128,7 +138,7 @@ extension AlignmentTweenBinding on AlignmentTween {
         end = value;
         break;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -140,11 +150,13 @@ class AlignmentGeometryTweenAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'AlignmentGeometryTween':
-        return ({positionalArgs, namedArgs, typeArgs}) => AlignmentGeometryTween(
-            begin: namedArgs.containsKey('begin') ? namedArgs['begin'] : null,
-            end: namedArgs.containsKey('end') ? namedArgs['end'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            AlignmentGeometryTween(
+                begin:
+                    namedArgs.containsKey('begin') ? namedArgs['begin'] : null,
+                end: namedArgs.containsKey('end') ? namedArgs['end'] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -163,25 +175,30 @@ extension AlignmentGeometryTweenBinding on AlignmentGeometryTween {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('AlignmentGeometryTween');
+        return const HTType('AlignmentGeometryTween');
       case 'begin':
         return begin;
       case 'end':
         return end;
       case 'lerp':
-        return ({positionalArgs, namedArgs, typeArgs}) => lerp(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            lerp(positionalArgs[0]);
       case 'transform':
-        return ({positionalArgs, namedArgs, typeArgs}) => transform(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            transform(positionalArgs[0]);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       case 'evaluate':
-        return ({positionalArgs, namedArgs, typeArgs}) => evaluate(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            evaluate(positionalArgs[0]);
       case 'animate':
-        return ({positionalArgs, namedArgs, typeArgs}) => animate(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            animate(positionalArgs[0]);
       case 'chain':
-        return ({positionalArgs, namedArgs, typeArgs}) => chain(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            chain(positionalArgs[0]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -194,7 +211,7 @@ extension AlignmentGeometryTweenBinding on AlignmentGeometryTween {
         end = value;
         break;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

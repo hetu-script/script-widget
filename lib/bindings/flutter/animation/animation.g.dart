@@ -18,7 +18,7 @@ class AnimationStatusAutoBinding extends HTExternalClass {
       case 'AnimationStatus.completed':
         return AnimationStatus.completed;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -26,13 +26,14 @@ class AnimationStatusAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('AnimationStatus');
+        return const HTType('AnimationStatus');
       case 'index':
         return (instance as AnimationStatus).index;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => (instance as AnimationStatus).toString();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            (instance as AnimationStatus).toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

@@ -15,7 +15,7 @@ class DebugSemanticsDumpOrderAutoBinding extends HTExternalClass {
       case 'DebugSemanticsDumpOrder.traversalOrder':
         return DebugSemanticsDumpOrder.traversalOrder;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -23,13 +23,14 @@ class DebugSemanticsDumpOrderAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('DebugSemanticsDumpOrder');
+        return const HTType('DebugSemanticsDumpOrder');
       case 'index':
         return (instance as DebugSemanticsDumpOrder).index;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => (instance as DebugSemanticsDumpOrder).toString();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            (instance as DebugSemanticsDumpOrder).toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -41,9 +42,10 @@ class SemanticsTagAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'SemanticsTag':
-        return ({positionalArgs, namedArgs, typeArgs}) => SemanticsTag(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            SemanticsTag(positionalArgs[0]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -57,13 +59,13 @@ extension SemanticsTagBinding on SemanticsTag {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('SemanticsTag');
+        return const HTType('SemanticsTag');
       case 'name':
         return name;
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -75,16 +77,20 @@ class CustomSemanticsActionAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'CustomSemanticsAction':
-        return ({positionalArgs, namedArgs, typeArgs}) => CustomSemanticsAction(label: namedArgs['label']);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            CustomSemanticsAction(label: namedArgs['label']);
       case 'CustomSemanticsAction.overridingAction':
         return ({positionalArgs, namedArgs, typeArgs}) =>
-            CustomSemanticsAction.overridingAction(hint: namedArgs['hint'], action: namedArgs['action']);
+            CustomSemanticsAction.overridingAction(
+                hint: namedArgs['hint'], action: namedArgs['action']);
       case 'CustomSemanticsAction.getIdentifier':
-        return ({positionalArgs, namedArgs, typeArgs}) => CustomSemanticsAction.getIdentifier(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            CustomSemanticsAction.getIdentifier(positionalArgs[0]);
       case 'CustomSemanticsAction.getAction':
-        return ({positionalArgs, namedArgs, typeArgs}) => CustomSemanticsAction.getAction(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            CustomSemanticsAction.getAction(positionalArgs[0]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -98,7 +104,7 @@ extension CustomSemanticsActionBinding on CustomSemanticsAction {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('CustomSemanticsAction');
+        return const HTType('CustomSemanticsAction');
       case 'label':
         return label;
       case 'hint':
@@ -110,7 +116,7 @@ extension CustomSemanticsActionBinding on CustomSemanticsAction {
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -144,12 +150,15 @@ class SemanticsDataAutoBinding extends HTExternalClass {
             maxValueLength: namedArgs['maxValueLength'],
             currentValueLength: namedArgs['currentValueLength'],
             tags: namedArgs.containsKey('tags') ? namedArgs['tags'] : null,
-            transform: namedArgs.containsKey('transform') ? namedArgs['transform'] : null,
-            customSemanticsActionIds: namedArgs.containsKey('customSemanticsActionIds')
-                ? List<int>.from(namedArgs['customSemanticsActionIds'])
-                : null);
+            transform: namedArgs.containsKey('transform')
+                ? namedArgs['transform']
+                : null,
+            customSemanticsActionIds:
+                namedArgs.containsKey('customSemanticsActionIds')
+                    ? List<int>.from(namedArgs['customSemanticsActionIds'])
+                    : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -163,7 +172,7 @@ extension SemanticsDataBinding on SemanticsData {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('SemanticsData');
+        return const HTType('SemanticsData');
       case 'flags':
         return flags;
       case 'actions':
@@ -213,22 +222,27 @@ extension SemanticsDataBinding on SemanticsData {
       case 'hashCode':
         return hashCode;
       case 'hasFlag':
-        return ({positionalArgs, namedArgs, typeArgs}) => hasFlag(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            hasFlag(positionalArgs[0]);
       case 'hasAction':
-        return ({positionalArgs, namedArgs, typeArgs}) => hasAction(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            hasAction(positionalArgs[0]);
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
-      case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+            debugFillProperties(positionalArgs[0]);
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -240,11 +254,16 @@ class SemanticsHintOverridesAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'SemanticsHintOverrides':
-        return ({positionalArgs, namedArgs, typeArgs}) => SemanticsHintOverrides(
-            onTapHint: namedArgs.containsKey('onTapHint') ? namedArgs['onTapHint'] : null,
-            onLongPressHint: namedArgs.containsKey('onLongPressHint') ? namedArgs['onLongPressHint'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            SemanticsHintOverrides(
+                onTapHint: namedArgs.containsKey('onTapHint')
+                    ? namedArgs['onTapHint']
+                    : null,
+                onLongPressHint: namedArgs.containsKey('onLongPressHint')
+                    ? namedArgs['onLongPressHint']
+                    : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -258,7 +277,7 @@ extension SemanticsHintOverridesBinding on SemanticsHintOverrides {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('SemanticsHintOverrides');
+        return const HTType('SemanticsHintOverrides');
       case 'onTapHint':
         return onTapHint;
       case 'onLongPressHint':
@@ -268,16 +287,26 @@ extension SemanticsHintOverridesBinding on SemanticsHintOverrides {
       case 'hashCode':
         return hashCode;
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'toStringShallow':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
-            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            joiner:
+                namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'toDiagnosticsNode':
@@ -285,10 +314,12 @@ extension SemanticsHintOverridesBinding on SemanticsHintOverrides {
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -301,41 +332,86 @@ class SemanticsPropertiesAutoBinding extends HTExternalClass {
     switch (varName) {
       case 'SemanticsProperties':
         return ({positionalArgs, namedArgs, typeArgs}) => SemanticsProperties(
-            enabled: namedArgs.containsKey('enabled') ? namedArgs['enabled'] : null,
-            checked: namedArgs.containsKey('checked') ? namedArgs['checked'] : null,
-            selected: namedArgs.containsKey('selected') ? namedArgs['selected'] : null,
-            toggled: namedArgs.containsKey('toggled') ? namedArgs['toggled'] : null,
-            button: namedArgs.containsKey('button') ? namedArgs['button'] : null,
+            enabled:
+                namedArgs.containsKey('enabled') ? namedArgs['enabled'] : null,
+            checked:
+                namedArgs.containsKey('checked') ? namedArgs['checked'] : null,
+            selected: namedArgs.containsKey('selected')
+                ? namedArgs['selected']
+                : null,
+            toggled:
+                namedArgs.containsKey('toggled') ? namedArgs['toggled'] : null,
+            button:
+                namedArgs.containsKey('button') ? namedArgs['button'] : null,
             link: namedArgs.containsKey('link') ? namedArgs['link'] : null,
-            header: namedArgs.containsKey('header') ? namedArgs['header'] : null,
-            textField: namedArgs.containsKey('textField') ? namedArgs['textField'] : null,
-            slider: namedArgs.containsKey('slider') ? namedArgs['slider'] : null,
-            readOnly: namedArgs.containsKey('readOnly') ? namedArgs['readOnly'] : null,
-            focusable: namedArgs.containsKey('focusable') ? namedArgs['focusable'] : null,
-            focused: namedArgs.containsKey('focused') ? namedArgs['focused'] : null,
-            inMutuallyExclusiveGroup:
-                namedArgs.containsKey('inMutuallyExclusiveGroup') ? namedArgs['inMutuallyExclusiveGroup'] : null,
-            hidden: namedArgs.containsKey('hidden') ? namedArgs['hidden'] : null,
-            obscured: namedArgs.containsKey('obscured') ? namedArgs['obscured'] : null,
-            multiline: namedArgs.containsKey('multiline') ? namedArgs['multiline'] : null,
-            scopesRoute: namedArgs.containsKey('scopesRoute') ? namedArgs['scopesRoute'] : null,
-            namesRoute: namedArgs.containsKey('namesRoute') ? namedArgs['namesRoute'] : null,
+            header:
+                namedArgs.containsKey('header') ? namedArgs['header'] : null,
+            textField: namedArgs.containsKey('textField')
+                ? namedArgs['textField']
+                : null,
+            slider:
+                namedArgs.containsKey('slider') ? namedArgs['slider'] : null,
+            readOnly: namedArgs.containsKey('readOnly')
+                ? namedArgs['readOnly']
+                : null,
+            focusable: namedArgs.containsKey('focusable')
+                ? namedArgs['focusable']
+                : null,
+            focused:
+                namedArgs.containsKey('focused') ? namedArgs['focused'] : null,
+            inMutuallyExclusiveGroup: namedArgs.containsKey('inMutuallyExclusiveGroup')
+                ? namedArgs['inMutuallyExclusiveGroup']
+                : null,
+            hidden:
+                namedArgs.containsKey('hidden') ? namedArgs['hidden'] : null,
+            obscured: namedArgs.containsKey('obscured')
+                ? namedArgs['obscured']
+                : null,
+            multiline: namedArgs.containsKey('multiline')
+                ? namedArgs['multiline']
+                : null,
+            scopesRoute: namedArgs.containsKey('scopesRoute')
+                ? namedArgs['scopesRoute']
+                : null,
+            namesRoute: namedArgs.containsKey('namesRoute')
+                ? namedArgs['namesRoute']
+                : null,
             image: namedArgs.containsKey('image') ? namedArgs['image'] : null,
-            liveRegion: namedArgs.containsKey('liveRegion') ? namedArgs['liveRegion'] : null,
-            maxValueLength: namedArgs.containsKey('maxValueLength') ? namedArgs['maxValueLength'] : null,
-            currentValueLength: namedArgs.containsKey('currentValueLength') ? namedArgs['currentValueLength'] : null,
+            liveRegion: namedArgs.containsKey('liveRegion')
+                ? namedArgs['liveRegion']
+                : null,
+            maxValueLength: namedArgs.containsKey('maxValueLength')
+                ? namedArgs['maxValueLength']
+                : null,
+            currentValueLength: namedArgs.containsKey('currentValueLength')
+                ? namedArgs['currentValueLength']
+                : null,
             label: namedArgs.containsKey('label') ? namedArgs['label'] : null,
             value: namedArgs.containsKey('value') ? namedArgs['value'] : null,
-            increasedValue: namedArgs.containsKey('increasedValue') ? namedArgs['increasedValue'] : null,
-            decreasedValue: namedArgs.containsKey('decreasedValue') ? namedArgs['decreasedValue'] : null,
+            increasedValue: namedArgs.containsKey('increasedValue')
+                ? namedArgs['increasedValue']
+                : null,
+            decreasedValue: namedArgs.containsKey('decreasedValue')
+                ? namedArgs['decreasedValue']
+                : null,
             hint: namedArgs.containsKey('hint') ? namedArgs['hint'] : null,
-            hintOverrides: namedArgs.containsKey('hintOverrides') ? namedArgs['hintOverrides'] : null,
-            textDirection: namedArgs.containsKey('textDirection') ? namedArgs['textDirection'] : null,
-            sortKey: namedArgs.containsKey('sortKey') ? namedArgs['sortKey'] : null,
-            tagForChildren: namedArgs.containsKey('tagForChildren') ? namedArgs['tagForChildren'] : null,
+            hintOverrides: namedArgs.containsKey('hintOverrides')
+                ? namedArgs['hintOverrides']
+                : null,
+            textDirection: namedArgs.containsKey('textDirection')
+                ? namedArgs['textDirection']
+                : null,
+            sortKey:
+                namedArgs.containsKey('sortKey') ? namedArgs['sortKey'] : null,
+            tagForChildren: namedArgs.containsKey('tagForChildren')
+                ? namedArgs['tagForChildren']
+                : null,
             onTap: namedArgs.containsKey('onTap') ? namedArgs['onTap'] : null,
-            onLongPress: namedArgs.containsKey('onLongPress') ? namedArgs['onLongPress'] : null,
-            onScrollLeft: namedArgs.containsKey('onScrollLeft') ? namedArgs['onScrollLeft'] : null,
+            onLongPress: namedArgs.containsKey('onLongPress')
+                ? namedArgs['onLongPress']
+                : null,
+            onScrollLeft:
+                namedArgs.containsKey('onScrollLeft') ? namedArgs['onScrollLeft'] : null,
             onScrollRight: namedArgs.containsKey('onScrollRight') ? namedArgs['onScrollRight'] : null,
             onScrollUp: namedArgs.containsKey('onScrollUp') ? namedArgs['onScrollUp'] : null,
             onScrollDown: namedArgs.containsKey('onScrollDown') ? namedArgs['onScrollDown'] : null,
@@ -344,26 +420,17 @@ class SemanticsPropertiesAutoBinding extends HTExternalClass {
             onCopy: namedArgs.containsKey('onCopy') ? namedArgs['onCopy'] : null,
             onCut: namedArgs.containsKey('onCut') ? namedArgs['onCut'] : null,
             onPaste: namedArgs.containsKey('onPaste') ? namedArgs['onPaste'] : null,
-            onMoveCursorForwardByCharacter: namedArgs.containsKey('onMoveCursorForwardByCharacter')
-                ? namedArgs['onMoveCursorForwardByCharacter']
-                : null,
-            onMoveCursorBackwardByCharacter: namedArgs.containsKey('onMoveCursorBackwardByCharacter')
-                ? namedArgs['onMoveCursorBackwardByCharacter']
-                : null,
-            onMoveCursorForwardByWord:
-                namedArgs.containsKey('onMoveCursorForwardByWord') ? namedArgs['onMoveCursorForwardByWord'] : null,
-            onMoveCursorBackwardByWord:
-                namedArgs.containsKey('onMoveCursorBackwardByWord') ? namedArgs['onMoveCursorBackwardByWord'] : null,
+            onMoveCursorForwardByCharacter: namedArgs.containsKey('onMoveCursorForwardByCharacter') ? namedArgs['onMoveCursorForwardByCharacter'] : null,
+            onMoveCursorBackwardByCharacter: namedArgs.containsKey('onMoveCursorBackwardByCharacter') ? namedArgs['onMoveCursorBackwardByCharacter'] : null,
+            onMoveCursorForwardByWord: namedArgs.containsKey('onMoveCursorForwardByWord') ? namedArgs['onMoveCursorForwardByWord'] : null,
+            onMoveCursorBackwardByWord: namedArgs.containsKey('onMoveCursorBackwardByWord') ? namedArgs['onMoveCursorBackwardByWord'] : null,
             onSetSelection: namedArgs.containsKey('onSetSelection') ? namedArgs['onSetSelection'] : null,
-            onDidGainAccessibilityFocus:
-                namedArgs.containsKey('onDidGainAccessibilityFocus') ? namedArgs['onDidGainAccessibilityFocus'] : null,
-            onDidLoseAccessibilityFocus:
-                namedArgs.containsKey('onDidLoseAccessibilityFocus') ? namedArgs['onDidLoseAccessibilityFocus'] : null,
+            onDidGainAccessibilityFocus: namedArgs.containsKey('onDidGainAccessibilityFocus') ? namedArgs['onDidGainAccessibilityFocus'] : null,
+            onDidLoseAccessibilityFocus: namedArgs.containsKey('onDidLoseAccessibilityFocus') ? namedArgs['onDidLoseAccessibilityFocus'] : null,
             onDismiss: namedArgs.containsKey('onDismiss') ? namedArgs['onDismiss'] : null,
-            customSemanticsActions:
-                namedArgs.containsKey('customSemanticsActions') ? namedArgs['customSemanticsActions'] : null);
+            customSemanticsActions: namedArgs.containsKey('customSemanticsActions') ? namedArgs['customSemanticsActions'] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -374,11 +441,12 @@ class SemanticsPropertiesAutoBinding extends HTExternalClass {
 
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'VoidCallback': (HTFunction function) => () => function.call(positionalArgs: const [], namedArgs: const {}),
-      'MoveCursorHandler': (HTFunction function) =>
-          (extendSelection) => function.call(positionalArgs: [extendSelection], namedArgs: const {}),
-      'SetSelectionHandler': (HTFunction function) =>
-          (selection) => function.call(positionalArgs: [selection], namedArgs: const {}),
+      'VoidCallback': (HTFunction function) =>
+          () => function.call(positionalArgs: const [], namedArgs: const {}),
+      'MoveCursorHandler': (HTFunction function) => (extendSelection) =>
+          function.call(positionalArgs: [extendSelection], namedArgs: const {}),
+      'SetSelectionHandler': (HTFunction function) => (selection) =>
+          function.call(positionalArgs: [selection], namedArgs: const {}),
     };
   }
 }
@@ -387,7 +455,7 @@ extension SemanticsPropertiesBinding on SemanticsProperties {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('SemanticsProperties');
+        return const HTType('SemanticsProperties');
       case 'enabled':
         return enabled;
       case 'checked':
@@ -491,27 +559,39 @@ extension SemanticsPropertiesBinding on SemanticsProperties {
       case 'customSemanticsActions':
         return customSemanticsActions;
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'toStringShallow':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
-            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            joiner:
+                namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -525,14 +605,18 @@ class SemanticsNodeAutoBinding extends HTExternalClass {
       case 'SemanticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => SemanticsNode(
             key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
-            showOnScreen: namedArgs.containsKey('showOnScreen') ? namedArgs['showOnScreen'] : null);
+            showOnScreen: namedArgs.containsKey('showOnScreen')
+                ? namedArgs['showOnScreen']
+                : null);
       case 'SemanticsNode.root':
         return ({positionalArgs, namedArgs, typeArgs}) => SemanticsNode.root(
             key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
-            showOnScreen: namedArgs.containsKey('showOnScreen') ? namedArgs['showOnScreen'] : null,
+            showOnScreen: namedArgs.containsKey('showOnScreen')
+                ? namedArgs['showOnScreen']
+                : null,
             owner: namedArgs['owner']);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -548,9 +632,10 @@ class SemanticsNodeAutoBinding extends HTExternalClass {
 
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'VoidCallback': (HTFunction function) => () => function.call(positionalArgs: const [], namedArgs: const {}),
-      'SemanticsNodeVisitor': (HTFunction function) =>
-          (node) => function.call(positionalArgs: [node], namedArgs: const {}) as bool,
+      'VoidCallback': (HTFunction function) =>
+          () => function.call(positionalArgs: const [], namedArgs: const {}),
+      'SemanticsNodeVisitor': (HTFunction function) => (node) =>
+          function.call(positionalArgs: [node], namedArgs: const {}) as bool,
     };
   }
 }
@@ -559,7 +644,7 @@ extension SemanticsNodeBinding on SemanticsNode {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('SemanticsNode');
+        return const HTType('SemanticsNode');
       case 'key':
         return key;
       case 'id':
@@ -639,59 +724,85 @@ extension SemanticsNodeBinding on SemanticsNode {
       case 'attached':
         return attached;
       case 'visitChildren':
-        return ({positionalArgs, namedArgs, typeArgs}) => visitChildren(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            visitChildren(positionalArgs[0]);
       case 'redepthChildren':
         return ({positionalArgs, namedArgs, typeArgs}) => redepthChildren();
       case 'attach':
-        return ({positionalArgs, namedArgs, typeArgs}) => attach(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            attach(positionalArgs[0]);
       case 'detach':
         return ({positionalArgs, namedArgs, typeArgs}) => detach();
       case 'isTagged':
-        return ({positionalArgs, namedArgs, typeArgs}) => isTagged(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            isTagged(positionalArgs[0]);
       case 'hasFlag':
-        return ({positionalArgs, namedArgs, typeArgs}) => hasFlag(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            hasFlag(positionalArgs[0]);
       case 'updateWith':
         return ({positionalArgs, namedArgs, typeArgs}) => updateWith(
-            config: namedArgs.containsKey('config') ? namedArgs['config'] : null,
-            childrenInInversePaintOrder: namedArgs.containsKey('childrenInInversePaintOrder')
-                ? List<SemanticsNode>.from(namedArgs['childrenInInversePaintOrder'])
-                : null);
+            config:
+                namedArgs.containsKey('config') ? namedArgs['config'] : null,
+            childrenInInversePaintOrder:
+                namedArgs.containsKey('childrenInInversePaintOrder')
+                    ? List<SemanticsNode>.from(
+                        namedArgs['childrenInInversePaintOrder'])
+                    : null);
       case 'getSemanticsData':
         return ({positionalArgs, namedArgs, typeArgs}) => getSemanticsData();
       case 'sendEvent':
-        return ({positionalArgs, namedArgs, typeArgs}) => sendEvent(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            sendEvent(positionalArgs[0]);
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug,
-            childOrder:
-                namedArgs.containsKey('childOrder') ? namedArgs['childOrder'] : DebugSemanticsDumpOrder.traversalOrder);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug,
+            childOrder: namedArgs.containsKey('childOrder')
+                ? namedArgs['childOrder']
+                : DebugSemanticsDumpOrder.traversalOrder);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
-            style: namedArgs.containsKey('style') ? namedArgs['style'] : DiagnosticsTreeStyle.sparse,
-            childOrder:
-                namedArgs.containsKey('childOrder') ? namedArgs['childOrder'] : DebugSemanticsDumpOrder.traversalOrder);
+            style: namedArgs.containsKey('style')
+                ? namedArgs['style']
+                : DiagnosticsTreeStyle.sparse,
+            childOrder: namedArgs.containsKey('childOrder')
+                ? namedArgs['childOrder']
+                : DebugSemanticsDumpOrder.traversalOrder);
       case 'debugDescribeChildren':
         return ({positionalArgs, namedArgs, typeArgs}) => debugDescribeChildren(
-            childOrder:
-                namedArgs.containsKey('childOrder') ? namedArgs['childOrder'] : DebugSemanticsDumpOrder.inverseHitTest);
+            childOrder: namedArgs.containsKey('childOrder')
+                ? namedArgs['childOrder']
+                : DebugSemanticsDumpOrder.inverseHitTest);
       case 'debugListChildrenInOrder':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugListChildrenInOrder(positionalArgs[0]);
-      case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+            debugListChildrenInOrder(positionalArgs[0]);
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       case 'toStringShallow':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
-            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            joiner:
+                namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -722,7 +833,7 @@ extension SemanticsNodeBinding on SemanticsNode {
         isMergedIntoParent = value;
         break;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -736,7 +847,7 @@ class SemanticsOwnerAutoBinding extends HTExternalClass {
       case 'SemanticsOwner':
         return ({positionalArgs, namedArgs, typeArgs}) => SemanticsOwner();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -747,7 +858,8 @@ class SemanticsOwnerAutoBinding extends HTExternalClass {
 
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'VoidCallback': (HTFunction function) => () => function.call(positionalArgs: const [], namedArgs: const {}),
+      'VoidCallback': (HTFunction function) =>
+          () => function.call(positionalArgs: const [], namedArgs: const {}),
     };
   }
 }
@@ -756,7 +868,7 @@ extension SemanticsOwnerBinding on SemanticsOwner {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('SemanticsOwner');
+        return const HTType('SemanticsOwner');
       case 'rootSemanticsNode':
         return rootSemanticsNode;
       case 'dispose':
@@ -764,19 +876,25 @@ extension SemanticsOwnerBinding on SemanticsOwner {
       case 'sendSemanticsUpdate':
         return ({positionalArgs, namedArgs, typeArgs}) => sendSemanticsUpdate();
       case 'performAction':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            performAction(positionalArgs[0], positionalArgs[1], positionalArgs.length > 2 ? positionalArgs[2] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => performAction(
+            positionalArgs[0],
+            positionalArgs[1],
+            positionalArgs.length > 2 ? positionalArgs[2] : null);
       case 'performActionAt':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            performActionAt(positionalArgs[0], positionalArgs[1], positionalArgs.length > 2 ? positionalArgs[2] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => performActionAt(
+            positionalArgs[0],
+            positionalArgs[1],
+            positionalArgs.length > 2 ? positionalArgs[2] : null);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       case 'addListener':
-        return ({positionalArgs, namedArgs, typeArgs}) => addListener(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            addListener(positionalArgs[0]);
       case 'removeListener':
-        return ({positionalArgs, namedArgs, typeArgs}) => removeListener(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            removeListener(positionalArgs[0]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -788,9 +906,10 @@ class SemanticsConfigurationAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'SemanticsConfiguration':
-        return ({positionalArgs, namedArgs, typeArgs}) => SemanticsConfiguration();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            SemanticsConfiguration();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -806,11 +925,12 @@ class SemanticsConfigurationAutoBinding extends HTExternalClass {
 
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'VoidCallback': (HTFunction function) => () => function.call(positionalArgs: const [], namedArgs: const {}),
-      'MoveCursorHandler': (HTFunction function) =>
-          (extendSelection) => function.call(positionalArgs: [extendSelection], namedArgs: const {}),
-      'SetSelectionHandler': (HTFunction function) =>
-          (selection) => function.call(positionalArgs: [selection], namedArgs: const {}),
+      'VoidCallback': (HTFunction function) =>
+          () => function.call(positionalArgs: const [], namedArgs: const {}),
+      'MoveCursorHandler': (HTFunction function) => (extendSelection) =>
+          function.call(positionalArgs: [extendSelection], namedArgs: const {}),
+      'SetSelectionHandler': (HTFunction function) => (selection) =>
+          function.call(positionalArgs: [selection], namedArgs: const {}),
     };
   }
 }
@@ -819,7 +939,7 @@ extension SemanticsConfigurationBinding on SemanticsConfiguration {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('SemanticsConfiguration');
+        return const HTType('SemanticsConfiguration');
       case 'explicitChildNodes':
         return explicitChildNodes;
       case 'isBlockingSemanticsOfPreviouslyPaintedNodes':
@@ -957,17 +1077,21 @@ extension SemanticsConfigurationBinding on SemanticsConfiguration {
       case 'tagsForChildren':
         return tagsForChildren;
       case 'getActionHandler':
-        return ({positionalArgs, namedArgs, typeArgs}) => getActionHandler(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            getActionHandler(positionalArgs[0]);
       case 'addTagForChildren':
-        return ({positionalArgs, namedArgs, typeArgs}) => addTagForChildren(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            addTagForChildren(positionalArgs[0]);
       case 'isCompatibleWith':
-        return ({positionalArgs, namedArgs, typeArgs}) => isCompatibleWith(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            isCompatibleWith(positionalArgs[0]);
       case 'absorb':
-        return ({positionalArgs, namedArgs, typeArgs}) => absorb(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            absorb(positionalArgs[0]);
       case 'copy':
         return ({positionalArgs, namedArgs, typeArgs}) => copy();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -1172,7 +1296,7 @@ extension SemanticsConfigurationBinding on SemanticsConfiguration {
         scrollExtentMin = value;
         break;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -1184,10 +1308,11 @@ class OrdinalSortKeyAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'OrdinalSortKey':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            OrdinalSortKey(positionalArgs[0], name: namedArgs.containsKey('name') ? namedArgs['name'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => OrdinalSortKey(
+            positionalArgs[0],
+            name: namedArgs.containsKey('name') ? namedArgs['name'] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -1201,28 +1326,33 @@ extension OrdinalSortKeyBinding on OrdinalSortKey {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('OrdinalSortKey');
+        return const HTType('OrdinalSortKey');
       case 'order':
         return order;
       case 'name':
         return name;
       case 'doCompare':
-        return ({positionalArgs, namedArgs, typeArgs}) => doCompare(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            doCompare(positionalArgs[0]);
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'compareTo':
-        return ({positionalArgs, namedArgs, typeArgs}) => compareTo(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            compareTo(positionalArgs[0]);
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

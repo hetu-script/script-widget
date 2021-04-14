@@ -11,7 +11,7 @@ class PageStorageBucketAutoBinding extends HTExternalClass {
       case 'PageStorageBucket':
         return ({positionalArgs, namedArgs, typeArgs}) => PageStorageBucket();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -25,15 +25,21 @@ extension PageStorageBucketBinding on PageStorageBucket {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('PageStorageBucket');
+        return const HTType('PageStorageBucket');
       case 'writeState':
-        return ({positionalArgs, namedArgs, typeArgs}) => writeState(positionalArgs[0], positionalArgs[1],
-            identifier: namedArgs.containsKey('identifier') ? namedArgs['identifier'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => writeState(
+            positionalArgs[0], positionalArgs[1],
+            identifier: namedArgs.containsKey('identifier')
+                ? namedArgs['identifier']
+                : null);
       case 'readState':
-        return ({positionalArgs, namedArgs, typeArgs}) => readState(positionalArgs[0],
-            identifier: namedArgs.containsKey('identifier') ? namedArgs['identifier'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => readState(
+            positionalArgs[0],
+            identifier: namedArgs.containsKey('identifier')
+                ? namedArgs['identifier']
+                : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -50,9 +56,10 @@ class PageStorageAutoBinding extends HTExternalClass {
             bucket: namedArgs['bucket'],
             child: namedArgs['child']);
       case 'PageStorage.of':
-        return ({positionalArgs, namedArgs, typeArgs}) => PageStorage.of(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            PageStorage.of(positionalArgs[0]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -66,7 +73,7 @@ extension PageStorageBinding on PageStorage {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('PageStorage');
+        return const HTType('PageStorage');
       case 'child':
         return child;
       case 'bucket':
@@ -76,31 +83,44 @@ extension PageStorageBinding on PageStorage {
       case 'hashCode':
         return hashCode;
       case 'build':
-        return ({positionalArgs, namedArgs, typeArgs}) => build(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            build(positionalArgs[0]);
       case 'createElement':
         return ({positionalArgs, namedArgs, typeArgs}) => createElement();
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'toStringShallow':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
-            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            joiner:
+                namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

@@ -24,7 +24,7 @@ class PointerChangeAutoBinding extends HTExternalClass {
       case 'PointerChange.up':
         return PointerChange.up;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -32,13 +32,14 @@ class PointerChangeAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('PointerChange');
+        return const HTType('PointerChange');
       case 'index':
         return (instance as PointerChange).index;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => (instance as PointerChange).toString();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            (instance as PointerChange).toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -62,7 +63,7 @@ class PointerDeviceKindAutoBinding extends HTExternalClass {
       case 'PointerDeviceKind.unknown':
         return PointerDeviceKind.unknown;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -70,13 +71,14 @@ class PointerDeviceKindAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('PointerDeviceKind');
+        return const HTType('PointerDeviceKind');
       case 'index':
         return (instance as PointerDeviceKind).index;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => (instance as PointerDeviceKind).toString();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            (instance as PointerDeviceKind).toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -96,7 +98,7 @@ class PointerSignalKindAutoBinding extends HTExternalClass {
       case 'PointerSignalKind.unknown':
         return PointerSignalKind.unknown;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -104,13 +106,14 @@ class PointerSignalKindAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('PointerSignalKind');
+        return const HTType('PointerSignalKind');
       case 'index':
         return (instance as PointerSignalKind).index;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => (instance as PointerSignalKind).toString();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            (instance as PointerSignalKind).toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -123,37 +126,86 @@ class PointerDataAutoBinding extends HTExternalClass {
     switch (varName) {
       case 'PointerData':
         return ({positionalArgs, namedArgs, typeArgs}) => PointerData(
-            embedderId: namedArgs.containsKey('embedderId') ? namedArgs['embedderId'] : 0,
-            timeStamp: namedArgs.containsKey('timeStamp') ? namedArgs['timeStamp'] : Duration.zero,
-            change: namedArgs.containsKey('change') ? namedArgs['change'] : PointerChange.cancel,
-            kind: namedArgs.containsKey('kind') ? namedArgs['kind'] : PointerDeviceKind.touch,
-            signalKind: namedArgs.containsKey('signalKind') ? namedArgs['signalKind'] : null,
+            embedderId: namedArgs.containsKey('embedderId')
+                ? namedArgs['embedderId']
+                : 0,
+            timeStamp: namedArgs.containsKey('timeStamp')
+                ? namedArgs['timeStamp']
+                : Duration.zero,
+            change: namedArgs.containsKey('change')
+                ? namedArgs['change']
+                : PointerChange.cancel,
+            kind: namedArgs.containsKey('kind')
+                ? namedArgs['kind']
+                : PointerDeviceKind.touch,
+            signalKind: namedArgs.containsKey('signalKind')
+                ? namedArgs['signalKind']
+                : null,
             device: namedArgs.containsKey('device') ? namedArgs['device'] : 0,
-            pointerIdentifier: namedArgs.containsKey('pointerIdentifier') ? namedArgs['pointerIdentifier'] : 0,
-            physicalX: namedArgs.containsKey('physicalX') ? namedArgs['physicalX'] : 0.0,
-            physicalY: namedArgs.containsKey('physicalY') ? namedArgs['physicalY'] : 0.0,
-            physicalDeltaX: namedArgs.containsKey('physicalDeltaX') ? namedArgs['physicalDeltaX'] : 0.0,
-            physicalDeltaY: namedArgs.containsKey('physicalDeltaY') ? namedArgs['physicalDeltaY'] : 0.0,
-            buttons: namedArgs.containsKey('buttons') ? namedArgs['buttons'] : 0,
-            obscured: namedArgs.containsKey('obscured') ? namedArgs['obscured'] : false,
-            synthesized: namedArgs.containsKey('synthesized') ? namedArgs['synthesized'] : false,
-            pressure: namedArgs.containsKey('pressure') ? namedArgs['pressure'] : 0.0,
-            pressureMin: namedArgs.containsKey('pressureMin') ? namedArgs['pressureMin'] : 0.0,
-            pressureMax: namedArgs.containsKey('pressureMax') ? namedArgs['pressureMax'] : 0.0,
-            distance: namedArgs.containsKey('distance') ? namedArgs['distance'] : 0.0,
-            distanceMax: namedArgs.containsKey('distanceMax') ? namedArgs['distanceMax'] : 0.0,
+            pointerIdentifier: namedArgs.containsKey('pointerIdentifier')
+                ? namedArgs['pointerIdentifier']
+                : 0,
+            physicalX: namedArgs.containsKey('physicalX')
+                ? namedArgs['physicalX']
+                : 0.0,
+            physicalY: namedArgs.containsKey('physicalY')
+                ? namedArgs['physicalY']
+                : 0.0,
+            physicalDeltaX: namedArgs.containsKey('physicalDeltaX')
+                ? namedArgs['physicalDeltaX']
+                : 0.0,
+            physicalDeltaY: namedArgs.containsKey('physicalDeltaY')
+                ? namedArgs['physicalDeltaY']
+                : 0.0,
+            buttons:
+                namedArgs.containsKey('buttons') ? namedArgs['buttons'] : 0,
+            obscured: namedArgs.containsKey('obscured')
+                ? namedArgs['obscured']
+                : false,
+            synthesized: namedArgs.containsKey('synthesized')
+                ? namedArgs['synthesized']
+                : false,
+            pressure:
+                namedArgs.containsKey('pressure') ? namedArgs['pressure'] : 0.0,
+            pressureMin: namedArgs.containsKey('pressureMin')
+                ? namedArgs['pressureMin']
+                : 0.0,
+            pressureMax: namedArgs.containsKey('pressureMax')
+                ? namedArgs['pressureMax']
+                : 0.0,
+            distance:
+                namedArgs.containsKey('distance') ? namedArgs['distance'] : 0.0,
+            distanceMax: namedArgs.containsKey('distanceMax')
+                ? namedArgs['distanceMax']
+                : 0.0,
             size: namedArgs.containsKey('size') ? namedArgs['size'] : 0.0,
-            radiusMajor: namedArgs.containsKey('radiusMajor') ? namedArgs['radiusMajor'] : 0.0,
-            radiusMinor: namedArgs.containsKey('radiusMinor') ? namedArgs['radiusMinor'] : 0.0,
-            radiusMin: namedArgs.containsKey('radiusMin') ? namedArgs['radiusMin'] : 0.0,
-            radiusMax: namedArgs.containsKey('radiusMax') ? namedArgs['radiusMax'] : 0.0,
-            orientation: namedArgs.containsKey('orientation') ? namedArgs['orientation'] : 0.0,
+            radiusMajor: namedArgs.containsKey('radiusMajor')
+                ? namedArgs['radiusMajor']
+                : 0.0,
+            radiusMinor: namedArgs.containsKey('radiusMinor')
+                ? namedArgs['radiusMinor']
+                : 0.0,
+            radiusMin: namedArgs.containsKey('radiusMin')
+                ? namedArgs['radiusMin']
+                : 0.0,
+            radiusMax: namedArgs.containsKey('radiusMax')
+                ? namedArgs['radiusMax']
+                : 0.0,
+            orientation: namedArgs.containsKey('orientation')
+                ? namedArgs['orientation']
+                : 0.0,
             tilt: namedArgs.containsKey('tilt') ? namedArgs['tilt'] : 0.0,
-            platformData: namedArgs.containsKey('platformData') ? namedArgs['platformData'] : 0,
-            scrollDeltaX: namedArgs.containsKey('scrollDeltaX') ? namedArgs['scrollDeltaX'] : 0.0,
-            scrollDeltaY: namedArgs.containsKey('scrollDeltaY') ? namedArgs['scrollDeltaY'] : 0.0);
+            platformData: namedArgs.containsKey('platformData')
+                ? namedArgs['platformData']
+                : 0,
+            scrollDeltaX: namedArgs.containsKey('scrollDeltaX')
+                ? namedArgs['scrollDeltaX']
+                : 0.0,
+            scrollDeltaY: namedArgs.containsKey('scrollDeltaY')
+                ? namedArgs['scrollDeltaY']
+                : 0.0);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -167,7 +219,7 @@ extension PointerDataBinding on PointerData {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('PointerData');
+        return const HTType('PointerData');
       case 'embedderId':
         return embedderId;
       case 'timeStamp':
@@ -231,7 +283,7 @@ extension PointerDataBinding on PointerData {
       case 'toStringFull':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringFull();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -244,9 +296,11 @@ class PointerDataPacketAutoBinding extends HTExternalClass {
     switch (varName) {
       case 'PointerDataPacket':
         return ({positionalArgs, namedArgs, typeArgs}) => PointerDataPacket(
-            data: namedArgs.containsKey('data') ? List<PointerData>.from(namedArgs['data']) : const <PointerData>[]);
+            data: namedArgs.containsKey('data')
+                ? List<PointerData>.from(namedArgs['data'])
+                : const <PointerData>[]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -260,11 +314,11 @@ extension PointerDataPacketBinding on PointerDataPacket {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('PointerDataPacket');
+        return const HTType('PointerDataPacket');
       case 'data':
         return data;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

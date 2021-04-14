@@ -13,16 +13,29 @@ class ScrollbarAutoBinding extends HTExternalClass {
         return ({positionalArgs, namedArgs, typeArgs}) => Scrollbar(
             key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
             child: namedArgs['child'],
-            controller: namedArgs.containsKey('controller') ? namedArgs['controller'] : null,
-            isAlwaysShown: namedArgs.containsKey('isAlwaysShown') ? namedArgs['isAlwaysShown'] : null,
-            showTrackOnHover: namedArgs.containsKey('showTrackOnHover') ? namedArgs['showTrackOnHover'] : null,
-            hoverThickness: namedArgs.containsKey('hoverThickness') ? namedArgs['hoverThickness'] : null,
-            thickness: namedArgs.containsKey('thickness') ? namedArgs['thickness'] : null,
-            radius: namedArgs.containsKey('radius') ? namedArgs['radius'] : null,
+            controller: namedArgs.containsKey('controller')
+                ? namedArgs['controller']
+                : null,
+            isAlwaysShown: namedArgs.containsKey('isAlwaysShown')
+                ? namedArgs['isAlwaysShown']
+                : null,
+            showTrackOnHover: namedArgs.containsKey('showTrackOnHover')
+                ? namedArgs['showTrackOnHover']
+                : null,
+            hoverThickness: namedArgs.containsKey('hoverThickness')
+                ? namedArgs['hoverThickness']
+                : null,
+            thickness: namedArgs.containsKey('thickness')
+                ? namedArgs['thickness']
+                : null,
+            radius:
+                namedArgs.containsKey('radius') ? namedArgs['radius'] : null,
             notificationPredicate:
-                namedArgs.containsKey('notificationPredicate') ? namedArgs['notificationPredicate'] : null);
+                namedArgs.containsKey('notificationPredicate')
+                    ? namedArgs['notificationPredicate']
+                    : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -33,8 +46,9 @@ class ScrollbarAutoBinding extends HTExternalClass {
 
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'ScrollNotificationPredicate': (HTFunction function) =>
-          (notification) => function.call(positionalArgs: [notification], namedArgs: const {}) as bool,
+      'ScrollNotificationPredicate': (HTFunction function) => (notification) =>
+          function.call(positionalArgs: [notification], namedArgs: const {})
+              as bool,
     };
   }
 }
@@ -43,7 +57,7 @@ extension ScrollbarBinding on Scrollbar {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('Scrollbar');
+        return const HTType('Scrollbar');
       case 'child':
         return child;
       case 'controller':
@@ -71,25 +85,37 @@ extension ScrollbarBinding on Scrollbar {
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'toStringShallow':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
-            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            joiner:
+                namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

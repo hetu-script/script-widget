@@ -56,7 +56,7 @@ class _MyHomePageState extends State<MyHomePage> {
   bool loading = true;
 
   void load() async {
-    var binding = ManualBinding(widget.interpreter);
+    var binding = DefaultBindingHander(widget.interpreter);
     await widget.interpreter.init();
     binding.loadExternalFunctionTypes();
     binding.loadExternalClasses();
@@ -86,42 +86,8 @@ class _MyHomePageState extends State<MyHomePage> {
           // the App.build method, and use it to set our appbar title.
           title: Text(widget.title),
         ),
-        body: loading ? CircularProgressIndicator() : ScriptController(widget.interpreter));
-  }
-}
-
-class ManualBinding extends DefaultBindingHander {
-  ManualBinding(Hetu interpreter) : super(interpreter);
-
-  @override
-  void loadExternalFunctionTypes() {
-    super.loadExternalFunctionTypes();
-
-    final functionWrappers = <String, HTExternalFunctionTypedef>{
-      'ValueChangedInt': (HTFunction function) => (int data) => function.call(positionalArgs: [data]),
-      'ValueChangedDouble': (HTFunction function) => (double data) => function.call(positionalArgs: [data]),
-      'ValueChangedString': (HTFunction function) => (String data) => function.call(positionalArgs: [data]),
-      'ValueChangedBool': (HTFunction function) => (bool data) => function.call(positionalArgs: [data]),
-      'ValueChangedList': (HTFunction function) => (List data) => function.call(positionalArgs: [data]),
-      'ValueChangedMap': (HTFunction function) => (Map data) => function.call(positionalArgs: [data]),
-      'ValueChangedSet': (HTFunction function) => (Set data) => function.call(positionalArgs: [data]),
-    };
-
-    functionWrappers.forEach((key, value) {
-      interpreter.bindExternalFunctionType(key, value);
-    });
-  }
-
-  @override
-  void loadExternalClasses() {
-    super.loadExternalClasses();
-  }
-
-  @override
-  Future importScripts() {
-    var future = super.importScripts();
-    var futures = <Future>[];
-    futures.add(future);
-    return Future.wait(futures);
+        body: loading
+            ? CircularProgressIndicator()
+            : ScriptController(widget.interpreter));
   }
 }

@@ -12,7 +12,7 @@ class ColorTweenAutoBinding extends HTExternalClass {
             begin: namedArgs.containsKey('begin') ? namedArgs['begin'] : null,
             end: namedArgs.containsKey('end') ? namedArgs['end'] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -31,25 +31,30 @@ extension ColorTweenBinding on ColorTween {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('ColorTween');
+        return const HTType('ColorTween');
       case 'begin':
         return begin;
       case 'end':
         return end;
       case 'lerp':
-        return ({positionalArgs, namedArgs, typeArgs}) => lerp(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            lerp(positionalArgs[0]);
       case 'transform':
-        return ({positionalArgs, namedArgs, typeArgs}) => transform(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            transform(positionalArgs[0]);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       case 'evaluate':
-        return ({positionalArgs, namedArgs, typeArgs}) => evaluate(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            evaluate(positionalArgs[0]);
       case 'animate':
-        return ({positionalArgs, namedArgs, typeArgs}) => animate(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            animate(positionalArgs[0]);
       case 'chain':
-        return ({positionalArgs, namedArgs, typeArgs}) => chain(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            chain(positionalArgs[0]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -62,7 +67,7 @@ extension ColorTweenBinding on ColorTween {
         end = value;
         break;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -78,7 +83,7 @@ class SizeTweenAutoBinding extends HTExternalClass {
             begin: namedArgs.containsKey('begin') ? namedArgs['begin'] : null,
             end: namedArgs.containsKey('end') ? namedArgs['end'] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -97,25 +102,30 @@ extension SizeTweenBinding on SizeTween {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('SizeTween');
+        return const HTType('SizeTween');
       case 'begin':
         return begin;
       case 'end':
         return end;
       case 'lerp':
-        return ({positionalArgs, namedArgs, typeArgs}) => lerp(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            lerp(positionalArgs[0]);
       case 'transform':
-        return ({positionalArgs, namedArgs, typeArgs}) => transform(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            transform(positionalArgs[0]);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       case 'evaluate':
-        return ({positionalArgs, namedArgs, typeArgs}) => evaluate(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            evaluate(positionalArgs[0]);
       case 'animate':
-        return ({positionalArgs, namedArgs, typeArgs}) => animate(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            animate(positionalArgs[0]);
       case 'chain':
-        return ({positionalArgs, namedArgs, typeArgs}) => chain(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            chain(positionalArgs[0]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -128,7 +138,7 @@ extension SizeTweenBinding on SizeTween {
         end = value;
         break;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -144,7 +154,7 @@ class RectTweenAutoBinding extends HTExternalClass {
             begin: namedArgs.containsKey('begin') ? namedArgs['begin'] : null,
             end: namedArgs.containsKey('end') ? namedArgs['end'] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -163,25 +173,30 @@ extension RectTweenBinding on RectTween {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('RectTween');
+        return const HTType('RectTween');
       case 'begin':
         return begin;
       case 'end':
         return end;
       case 'lerp':
-        return ({positionalArgs, namedArgs, typeArgs}) => lerp(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            lerp(positionalArgs[0]);
       case 'transform':
-        return ({positionalArgs, namedArgs, typeArgs}) => transform(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            transform(positionalArgs[0]);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       case 'evaluate':
-        return ({positionalArgs, namedArgs, typeArgs}) => evaluate(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            evaluate(positionalArgs[0]);
       case 'animate':
-        return ({positionalArgs, namedArgs, typeArgs}) => animate(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            animate(positionalArgs[0]);
       case 'chain':
-        return ({positionalArgs, namedArgs, typeArgs}) => chain(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            chain(positionalArgs[0]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -194,7 +209,7 @@ extension RectTweenBinding on RectTween {
         end = value;
         break;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -210,7 +225,7 @@ class IntTweenAutoBinding extends HTExternalClass {
             begin: namedArgs.containsKey('begin') ? namedArgs['begin'] : null,
             end: namedArgs.containsKey('end') ? namedArgs['end'] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -229,25 +244,30 @@ extension IntTweenBinding on IntTween {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('IntTween');
+        return const HTType('IntTween');
       case 'begin':
         return begin;
       case 'end':
         return end;
       case 'lerp':
-        return ({positionalArgs, namedArgs, typeArgs}) => lerp(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            lerp(positionalArgs[0]);
       case 'transform':
-        return ({positionalArgs, namedArgs, typeArgs}) => transform(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            transform(positionalArgs[0]);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       case 'evaluate':
-        return ({positionalArgs, namedArgs, typeArgs}) => evaluate(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            evaluate(positionalArgs[0]);
       case 'animate':
-        return ({positionalArgs, namedArgs, typeArgs}) => animate(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            animate(positionalArgs[0]);
       case 'chain':
-        return ({positionalArgs, namedArgs, typeArgs}) => chain(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            chain(positionalArgs[0]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -260,7 +280,7 @@ extension IntTweenBinding on IntTween {
         end = value;
         break;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -276,7 +296,7 @@ class StepTweenAutoBinding extends HTExternalClass {
             begin: namedArgs.containsKey('begin') ? namedArgs['begin'] : null,
             end: namedArgs.containsKey('end') ? namedArgs['end'] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -295,25 +315,30 @@ extension StepTweenBinding on StepTween {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('StepTween');
+        return const HTType('StepTween');
       case 'begin':
         return begin;
       case 'end':
         return end;
       case 'lerp':
-        return ({positionalArgs, namedArgs, typeArgs}) => lerp(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            lerp(positionalArgs[0]);
       case 'transform':
-        return ({positionalArgs, namedArgs, typeArgs}) => transform(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            transform(positionalArgs[0]);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       case 'evaluate':
-        return ({positionalArgs, namedArgs, typeArgs}) => evaluate(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            evaluate(positionalArgs[0]);
       case 'animate':
-        return ({positionalArgs, namedArgs, typeArgs}) => animate(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            animate(positionalArgs[0]);
       case 'chain':
-        return ({positionalArgs, namedArgs, typeArgs}) => chain(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            chain(positionalArgs[0]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -326,7 +351,7 @@ extension StepTweenBinding on StepTween {
         end = value;
         break;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -338,9 +363,10 @@ class CurveTweenAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'CurveTween':
-        return ({positionalArgs, namedArgs, typeArgs}) => CurveTween(curve: namedArgs['curve']);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            CurveTween(curve: namedArgs['curve']);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -359,21 +385,25 @@ extension CurveTweenBinding on CurveTween {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('CurveTween');
+        return const HTType('CurveTween');
       case 'curve':
         return curve;
       case 'transform':
-        return ({positionalArgs, namedArgs, typeArgs}) => transform(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            transform(positionalArgs[0]);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       case 'evaluate':
-        return ({positionalArgs, namedArgs, typeArgs}) => evaluate(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            evaluate(positionalArgs[0]);
       case 'animate':
-        return ({positionalArgs, namedArgs, typeArgs}) => animate(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            animate(positionalArgs[0]);
       case 'chain':
-        return ({positionalArgs, namedArgs, typeArgs}) => chain(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            chain(positionalArgs[0]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -383,7 +413,7 @@ extension CurveTweenBinding on CurveTween {
         curve = value;
         break;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

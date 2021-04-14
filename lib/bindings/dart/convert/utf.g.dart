@@ -8,10 +8,12 @@ class Utf8CodecAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'Utf8Codec':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            Utf8Codec(allowMalformed: namedArgs.containsKey('allowMalformed') ? namedArgs['allowMalformed'] : false);
+        return ({positionalArgs, namedArgs, typeArgs}) => Utf8Codec(
+            allowMalformed: namedArgs.containsKey('allowMalformed')
+                ? namedArgs['allowMalformed']
+                : false);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -25,7 +27,7 @@ extension Utf8CodecBinding on Utf8Codec {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('Utf8Codec');
+        return const HTType('Utf8Codec');
       case 'name':
         return name;
       case 'encoder':
@@ -33,12 +35,16 @@ extension Utf8CodecBinding on Utf8Codec {
       case 'decoder':
         return decoder;
       case 'decode':
-        return ({positionalArgs, namedArgs, typeArgs}) => decode(List<int>.from(positionalArgs[0]),
-            allowMalformed: namedArgs.containsKey('allowMalformed') ? namedArgs['allowMalformed'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => decode(
+            List<int>.from(positionalArgs[0]),
+            allowMalformed: namedArgs.containsKey('allowMalformed')
+                ? namedArgs['allowMalformed']
+                : null);
       case 'decodeStream':
-        return ({positionalArgs, namedArgs, typeArgs}) => decodeStream(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            decodeStream(positionalArgs[0]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -52,7 +58,7 @@ class Utf8EncoderAutoBinding extends HTExternalClass {
       case 'Utf8Encoder':
         return ({positionalArgs, namedArgs, typeArgs}) => Utf8Encoder();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -66,20 +72,25 @@ extension Utf8EncoderBinding on Utf8Encoder {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('Utf8Encoder');
+        return const HTType('Utf8Encoder');
       case 'convert':
-        return ({positionalArgs, namedArgs, typeArgs}) => convert(positionalArgs[0],
-            positionalArgs.length > 1 ? positionalArgs[1] : 0, positionalArgs.length > 2 ? positionalArgs[2] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => convert(
+            positionalArgs[0],
+            positionalArgs.length > 1 ? positionalArgs[1] : 0,
+            positionalArgs.length > 2 ? positionalArgs[2] : null);
       case 'startChunkedConversion':
-        return ({positionalArgs, namedArgs, typeArgs}) => startChunkedConversion(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            startChunkedConversion(positionalArgs[0]);
       case 'bind':
-        return ({positionalArgs, namedArgs, typeArgs}) => bind(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            bind(positionalArgs[0]);
       case 'fuse':
-        return ({positionalArgs, namedArgs, typeArgs}) => fuse(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            fuse(positionalArgs[0]);
       case 'cast':
         return ({positionalArgs, namedArgs, typeArgs}) => cast();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -91,10 +102,12 @@ class Utf8DecoderAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'Utf8Decoder':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            Utf8Decoder(allowMalformed: namedArgs.containsKey('allowMalformed') ? namedArgs['allowMalformed'] : false);
+        return ({positionalArgs, namedArgs, typeArgs}) => Utf8Decoder(
+            allowMalformed: namedArgs.containsKey('allowMalformed')
+                ? namedArgs['allowMalformed']
+                : false);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -108,20 +121,25 @@ extension Utf8DecoderBinding on Utf8Decoder {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('Utf8Decoder');
+        return const HTType('Utf8Decoder');
       case 'convert':
-        return ({positionalArgs, namedArgs, typeArgs}) => convert(List<int>.from(positionalArgs[0]),
-            positionalArgs.length > 1 ? positionalArgs[1] : 0, positionalArgs.length > 2 ? positionalArgs[2] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => convert(
+            List<int>.from(positionalArgs[0]),
+            positionalArgs.length > 1 ? positionalArgs[1] : 0,
+            positionalArgs.length > 2 ? positionalArgs[2] : null);
       case 'startChunkedConversion':
-        return ({positionalArgs, namedArgs, typeArgs}) => startChunkedConversion(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            startChunkedConversion(positionalArgs[0]);
       case 'bind':
-        return ({positionalArgs, namedArgs, typeArgs}) => bind(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            bind(positionalArgs[0]);
       case 'fuse':
-        return ({positionalArgs, namedArgs, typeArgs}) => fuse(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            fuse(positionalArgs[0]);
       case 'cast':
         return ({positionalArgs, namedArgs, typeArgs}) => cast();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

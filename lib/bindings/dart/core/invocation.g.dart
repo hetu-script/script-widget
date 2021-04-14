@@ -9,16 +9,24 @@ class InvocationAutoBinding extends HTExternalClass {
     switch (varName) {
       case 'Invocation.method':
         return ({positionalArgs, namedArgs, typeArgs}) => Invocation.method(
-            positionalArgs[0], positionalArgs[1], positionalArgs.length > 2 ? positionalArgs[2] : null);
+            positionalArgs[0],
+            positionalArgs[1],
+            positionalArgs.length > 2 ? positionalArgs[2] : null);
       case 'Invocation.genericMethod':
-        return ({positionalArgs, namedArgs, typeArgs}) => Invocation.genericMethod(positionalArgs[0], positionalArgs[1],
-            positionalArgs[2], positionalArgs.length > 3 ? positionalArgs[3] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            Invocation.genericMethod(
+                positionalArgs[0],
+                positionalArgs[1],
+                positionalArgs[2],
+                positionalArgs.length > 3 ? positionalArgs[3] : null);
       case 'Invocation.getter':
-        return ({positionalArgs, namedArgs, typeArgs}) => Invocation.getter(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            Invocation.getter(positionalArgs[0]);
       case 'Invocation.setter':
-        return ({positionalArgs, namedArgs, typeArgs}) => Invocation.setter(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            Invocation.setter(positionalArgs[0], positionalArgs[1]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -32,7 +40,7 @@ extension InvocationBinding on Invocation {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('Invocation');
+        return const HTType('Invocation');
       case 'memberName':
         return memberName;
       case 'typeArguments':
@@ -50,7 +58,7 @@ extension InvocationBinding on Invocation {
       case 'isAccessor':
         return isAccessor;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

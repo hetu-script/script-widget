@@ -8,10 +8,13 @@ class TickerAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'Ticker':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            Ticker(positionalArgs[0], debugLabel: namedArgs.containsKey('debugLabel') ? namedArgs['debugLabel'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => Ticker(
+            positionalArgs[0],
+            debugLabel: namedArgs.containsKey('debugLabel')
+                ? namedArgs['debugLabel']
+                : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -27,8 +30,8 @@ class TickerAutoBinding extends HTExternalClass {
 
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'TickerCallback': (HTFunction function) =>
-          (elapsed) => function.call(positionalArgs: [elapsed], namedArgs: const {}),
+      'TickerCallback': (HTFunction function) => (elapsed) =>
+          function.call(positionalArgs: [elapsed], namedArgs: const {}),
     };
   }
 }
@@ -37,7 +40,7 @@ extension TickerBinding on Ticker {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('Ticker');
+        return const HTType('Ticker');
       case 'debugLabel':
         return debugLabel;
       case 'muted':
@@ -49,19 +52,25 @@ extension TickerBinding on Ticker {
       case 'start':
         return ({positionalArgs, namedArgs, typeArgs}) => start();
       case 'describeForError':
-        return ({positionalArgs, namedArgs, typeArgs}) => describeForError(positionalArgs[0]);
-      case 'stop':
         return ({positionalArgs, namedArgs, typeArgs}) =>
-            stop(canceled: namedArgs.containsKey('canceled') ? namedArgs['canceled'] : false);
+            describeForError(positionalArgs[0]);
+      case 'stop':
+        return ({positionalArgs, namedArgs, typeArgs}) => stop(
+            canceled: namedArgs.containsKey('canceled')
+                ? namedArgs['canceled']
+                : false);
       case 'absorbTicker':
-        return ({positionalArgs, namedArgs, typeArgs}) => absorbTicker(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            absorbTicker(positionalArgs[0]);
       case 'dispose':
         return ({positionalArgs, namedArgs, typeArgs}) => dispose();
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString(
-            debugIncludeStack: namedArgs.containsKey('debugIncludeStack') ? namedArgs['debugIncludeStack'] : false);
+            debugIncludeStack: namedArgs.containsKey('debugIncludeStack')
+                ? namedArgs['debugIncludeStack']
+                : false);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -71,7 +80,7 @@ extension TickerBinding on Ticker {
         muted = value;
         break;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -83,9 +92,10 @@ class TickerFutureAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'TickerFuture.complete':
-        return ({positionalArgs, namedArgs, typeArgs}) => TickerFuture.complete();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            TickerFuture.complete();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -96,7 +106,8 @@ class TickerFutureAutoBinding extends HTExternalClass {
 
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'VoidCallback': (HTFunction function) => () => function.call(positionalArgs: const [], namedArgs: const {}),
+      'VoidCallback': (HTFunction function) =>
+          () => function.call(positionalArgs: const [], namedArgs: const {}),
     };
   }
 }
@@ -105,28 +116,36 @@ extension TickerFutureBinding on TickerFuture {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('TickerFuture');
+        return const HTType('TickerFuture');
       case 'orCancel':
         return orCancel;
       case 'whenCompleteOrCancel':
-        return ({positionalArgs, namedArgs, typeArgs}) => whenCompleteOrCancel(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            whenCompleteOrCancel(positionalArgs[0]);
       case 'asStream':
         return ({positionalArgs, namedArgs, typeArgs}) => asStream();
       case 'catchError':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            catchError(positionalArgs[0], test: namedArgs.containsKey('test') ? namedArgs['test'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => catchError(
+            positionalArgs[0],
+            test: namedArgs.containsKey('test') ? namedArgs['test'] : null);
       case 'then':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            then(positionalArgs[0], onError: namedArgs.containsKey('onError') ? namedArgs['onError'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => then(
+            positionalArgs[0],
+            onError:
+                namedArgs.containsKey('onError') ? namedArgs['onError'] : null);
       case 'timeout':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            timeout(positionalArgs[0], onTimeout: namedArgs.containsKey('onTimeout') ? namedArgs['onTimeout'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => timeout(
+            positionalArgs[0],
+            onTimeout: namedArgs.containsKey('onTimeout')
+                ? namedArgs['onTimeout']
+                : null);
       case 'whenComplete':
-        return ({positionalArgs, namedArgs, typeArgs}) => whenComplete(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            whenComplete(positionalArgs[0]);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -138,10 +157,10 @@ class TickerCanceledAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'TickerCanceled':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            TickerCanceled(positionalArgs.length > 0 ? positionalArgs[0] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => TickerCanceled(
+            positionalArgs.length > 0 ? positionalArgs[0] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -155,13 +174,13 @@ extension TickerCanceledBinding on TickerCanceled {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('TickerCanceled');
+        return const HTType('TickerCanceled');
       case 'ticker':
         return ticker;
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

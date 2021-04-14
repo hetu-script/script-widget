@@ -8,9 +8,10 @@ class PolynomialFitAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'PolynomialFit':
-        return ({positionalArgs, namedArgs, typeArgs}) => PolynomialFit(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            PolynomialFit(positionalArgs[0]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -29,13 +30,13 @@ extension PolynomialFitBinding on PolynomialFit {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('PolynomialFit');
+        return const HTType('PolynomialFit');
       case 'coefficients':
         return coefficients;
       case 'confidence':
         return confidence;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -45,7 +46,7 @@ extension PolynomialFitBinding on PolynomialFit {
         confidence = value;
         break;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -57,10 +58,12 @@ class LeastSquaresSolverAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'LeastSquaresSolver':
-        return ({positionalArgs, namedArgs, typeArgs}) => LeastSquaresSolver(List<double>.from(positionalArgs[0]),
-            List<double>.from(positionalArgs[1]), List<double>.from(positionalArgs[2]));
+        return ({positionalArgs, namedArgs, typeArgs}) => LeastSquaresSolver(
+            List<double>.from(positionalArgs[0]),
+            List<double>.from(positionalArgs[1]),
+            List<double>.from(positionalArgs[2]));
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -74,7 +77,7 @@ extension LeastSquaresSolverBinding on LeastSquaresSolver {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('LeastSquaresSolver');
+        return const HTType('LeastSquaresSolver');
       case 'x':
         return x;
       case 'y':
@@ -82,9 +85,10 @@ extension LeastSquaresSolverBinding on LeastSquaresSolver {
       case 'w':
         return w;
       case 'solve':
-        return ({positionalArgs, namedArgs, typeArgs}) => solve(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            solve(positionalArgs[0]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

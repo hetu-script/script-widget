@@ -16,16 +16,27 @@ class InkRippleAutoBinding extends HTExternalClass {
             position: namedArgs['position'],
             color: namedArgs['color'],
             textDirection: namedArgs['textDirection'],
-            containedInkWell: namedArgs.containsKey('containedInkWell') ? namedArgs['containedInkWell'] : false,
-            rectCallback: namedArgs.containsKey('rectCallback') ? namedArgs['rectCallback'] : null,
-            borderRadius: namedArgs.containsKey('borderRadius') ? namedArgs['borderRadius'] : null,
-            customBorder: namedArgs.containsKey('customBorder') ? namedArgs['customBorder'] : null,
-            radius: namedArgs.containsKey('radius') ? namedArgs['radius'] : null,
-            onRemoved: namedArgs.containsKey('onRemoved') ? namedArgs['onRemoved'] : null);
+            containedInkWell: namedArgs.containsKey('containedInkWell')
+                ? namedArgs['containedInkWell']
+                : false,
+            rectCallback: namedArgs.containsKey('rectCallback')
+                ? namedArgs['rectCallback']
+                : null,
+            borderRadius: namedArgs.containsKey('borderRadius')
+                ? namedArgs['borderRadius']
+                : null,
+            customBorder: namedArgs.containsKey('customBorder')
+                ? namedArgs['customBorder']
+                : null,
+            radius:
+                namedArgs.containsKey('radius') ? namedArgs['radius'] : null,
+            onRemoved: namedArgs.containsKey('onRemoved')
+                ? namedArgs['onRemoved']
+                : null);
       case 'InkRipple.splashFactory':
         return InkRipple.splashFactory;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -36,9 +47,10 @@ class InkRippleAutoBinding extends HTExternalClass {
 
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'RectCallback': (HTFunction function) =>
-          () => function.call(positionalArgs: const [], namedArgs: const {}) as Rect,
-      'VoidCallback': (HTFunction function) => () => function.call(positionalArgs: const [], namedArgs: const {}),
+      'RectCallback': (HTFunction function) => () =>
+          function.call(positionalArgs: const [], namedArgs: const {}) as Rect,
+      'VoidCallback': (HTFunction function) =>
+          () => function.call(positionalArgs: const [], namedArgs: const {}),
     };
   }
 }
@@ -47,7 +59,7 @@ extension InkRippleBinding on InkRipple {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('InkRipple');
+        return const HTType('InkRipple');
       case 'referenceBox':
         return referenceBox;
       case 'onRemoved':
@@ -63,11 +75,12 @@ extension InkRippleBinding on InkRipple {
       case 'dispose':
         return ({positionalArgs, namedArgs, typeArgs}) => dispose();
       case 'paintFeature':
-        return ({positionalArgs, namedArgs, typeArgs}) => paintFeature(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            paintFeature(positionalArgs[0], positionalArgs[1]);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

@@ -10,10 +10,18 @@ class HtmlEscapeModeAutoBinding extends HTExternalClass {
       case 'HtmlEscapeMode':
         return ({positionalArgs, namedArgs, typeArgs}) => HtmlEscapeMode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : 'custom',
-            escapeLtGt: namedArgs.containsKey('escapeLtGt') ? namedArgs['escapeLtGt'] : false,
-            escapeQuot: namedArgs.containsKey('escapeQuot') ? namedArgs['escapeQuot'] : false,
-            escapeApos: namedArgs.containsKey('escapeApos') ? namedArgs['escapeApos'] : false,
-            escapeSlash: namedArgs.containsKey('escapeSlash') ? namedArgs['escapeSlash'] : false);
+            escapeLtGt: namedArgs.containsKey('escapeLtGt')
+                ? namedArgs['escapeLtGt']
+                : false,
+            escapeQuot: namedArgs.containsKey('escapeQuot')
+                ? namedArgs['escapeQuot']
+                : false,
+            escapeApos: namedArgs.containsKey('escapeApos')
+                ? namedArgs['escapeApos']
+                : false,
+            escapeSlash: namedArgs.containsKey('escapeSlash')
+                ? namedArgs['escapeSlash']
+                : false);
       case 'HtmlEscapeMode.unknown':
         return HtmlEscapeMode.unknown;
       case 'HtmlEscapeMode.attribute':
@@ -23,7 +31,7 @@ class HtmlEscapeModeAutoBinding extends HTExternalClass {
       case 'HtmlEscapeMode.element':
         return HtmlEscapeMode.element;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -37,7 +45,7 @@ extension HtmlEscapeModeBinding on HtmlEscapeMode {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('HtmlEscapeMode');
+        return const HTType('HtmlEscapeMode');
       case 'escapeLtGt':
         return escapeLtGt;
       case 'escapeQuot':
@@ -49,7 +57,7 @@ extension HtmlEscapeModeBinding on HtmlEscapeMode {
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -61,10 +69,12 @@ class HtmlEscapeAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'HtmlEscape':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            HtmlEscape(positionalArgs.length > 0 ? positionalArgs[0] : HtmlEscapeMode.unknown);
+        return ({positionalArgs, namedArgs, typeArgs}) => HtmlEscape(
+            positionalArgs.length > 0
+                ? positionalArgs[0]
+                : HtmlEscapeMode.unknown);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -78,21 +88,25 @@ extension HtmlEscapeBinding on HtmlEscape {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('HtmlEscape');
+        return const HTType('HtmlEscape');
       case 'mode':
         return mode;
       case 'convert':
-        return ({positionalArgs, namedArgs, typeArgs}) => convert(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            convert(positionalArgs[0]);
       case 'startChunkedConversion':
-        return ({positionalArgs, namedArgs, typeArgs}) => startChunkedConversion(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            startChunkedConversion(positionalArgs[0]);
       case 'fuse':
-        return ({positionalArgs, namedArgs, typeArgs}) => fuse(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            fuse(positionalArgs[0]);
       case 'bind':
-        return ({positionalArgs, namedArgs, typeArgs}) => bind(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            bind(positionalArgs[0]);
       case 'cast':
         return ({positionalArgs, namedArgs, typeArgs}) => cast();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

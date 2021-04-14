@@ -11,15 +11,23 @@ class ExpandIconAutoBinding extends HTExternalClass {
       case 'ExpandIcon':
         return ({positionalArgs, namedArgs, typeArgs}) => ExpandIcon(
             key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
-            isExpanded: namedArgs.containsKey('isExpanded') ? namedArgs['isExpanded'] : false,
+            isExpanded: namedArgs.containsKey('isExpanded')
+                ? namedArgs['isExpanded']
+                : false,
             size: namedArgs.containsKey('size') ? namedArgs['size'] : 24.0,
             onPressed: namedArgs['onPressed'],
-            padding: namedArgs.containsKey('padding') ? namedArgs['padding'] : const EdgeInsets.all(8.0),
+            padding: namedArgs.containsKey('padding')
+                ? namedArgs['padding']
+                : const EdgeInsets.all(8.0),
             color: namedArgs.containsKey('color') ? namedArgs['color'] : null,
-            disabledColor: namedArgs.containsKey('disabledColor') ? namedArgs['disabledColor'] : null,
-            expandedColor: namedArgs.containsKey('expandedColor') ? namedArgs['expandedColor'] : null);
+            disabledColor: namedArgs.containsKey('disabledColor')
+                ? namedArgs['disabledColor']
+                : null,
+            expandedColor: namedArgs.containsKey('expandedColor')
+                ? namedArgs['expandedColor']
+                : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -33,7 +41,7 @@ extension ExpandIconBinding on ExpandIcon {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('ExpandIcon');
+        return const HTType('ExpandIcon');
       case 'isExpanded':
         return isExpanded;
       case 'size':
@@ -59,25 +67,37 @@ extension ExpandIconBinding on ExpandIcon {
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'toStringShallow':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
-            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            joiner:
+                namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

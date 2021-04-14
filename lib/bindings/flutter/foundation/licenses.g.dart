@@ -8,11 +8,12 @@ class LicenseParagraphAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'LicenseParagraph':
-        return ({positionalArgs, namedArgs, typeArgs}) => LicenseParagraph(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            LicenseParagraph(positionalArgs[0], positionalArgs[1]);
       case 'LicenseParagraph.centeredIndent':
         return LicenseParagraph.centeredIndent;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -26,13 +27,13 @@ extension LicenseParagraphBinding on LicenseParagraph {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('LicenseParagraph');
+        return const HTType('LicenseParagraph');
       case 'text':
         return text;
       case 'indent':
         return indent;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -45,9 +46,10 @@ class LicenseEntryWithLineBreaksAutoBinding extends HTExternalClass {
     switch (varName) {
       case 'LicenseEntryWithLineBreaks':
         return ({positionalArgs, namedArgs, typeArgs}) =>
-            LicenseEntryWithLineBreaks(List<String>.from(positionalArgs[0]), positionalArgs[1]);
+            LicenseEntryWithLineBreaks(
+                List<String>.from(positionalArgs[0]), positionalArgs[1]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -61,7 +63,7 @@ extension LicenseEntryWithLineBreaksBinding on LicenseEntryWithLineBreaks {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('LicenseEntryWithLineBreaks');
+        return const HTType('LicenseEntryWithLineBreaks');
       case 'packages':
         return packages;
       case 'text':
@@ -69,7 +71,7 @@ extension LicenseEntryWithLineBreaksBinding on LicenseEntryWithLineBreaks {
       case 'paragraphs':
         return paragraphs;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -81,18 +83,20 @@ class LicenseRegistryAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'LicenseRegistry.addLicense':
-        return ({positionalArgs, namedArgs, typeArgs}) => LicenseRegistry.addLicense(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            LicenseRegistry.addLicense(positionalArgs[0]);
       case 'LicenseRegistry.licenses':
         return LicenseRegistry.licenses;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'LicenseEntryCollector': (HTFunction function) =>
-          () => function.call(positionalArgs: const [], namedArgs: const {}) as Stream<LicenseEntry>,
+      'LicenseEntryCollector': (HTFunction function) => () =>
+          function.call(positionalArgs: const [], namedArgs: const {})
+              as Stream<LicenseEntry>,
     };
   }
 }

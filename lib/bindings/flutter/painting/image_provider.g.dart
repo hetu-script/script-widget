@@ -11,16 +11,24 @@ class ImageConfigurationAutoBinding extends HTExternalClass {
     switch (varName) {
       case 'ImageConfiguration':
         return ({positionalArgs, namedArgs, typeArgs}) => ImageConfiguration(
-            bundle: namedArgs.containsKey('bundle') ? namedArgs['bundle'] : null,
-            devicePixelRatio: namedArgs.containsKey('devicePixelRatio') ? namedArgs['devicePixelRatio'] : null,
-            locale: namedArgs.containsKey('locale') ? namedArgs['locale'] : null,
-            textDirection: namedArgs.containsKey('textDirection') ? namedArgs['textDirection'] : null,
+            bundle:
+                namedArgs.containsKey('bundle') ? namedArgs['bundle'] : null,
+            devicePixelRatio: namedArgs.containsKey('devicePixelRatio')
+                ? namedArgs['devicePixelRatio']
+                : null,
+            locale:
+                namedArgs.containsKey('locale') ? namedArgs['locale'] : null,
+            textDirection: namedArgs.containsKey('textDirection')
+                ? namedArgs['textDirection']
+                : null,
             size: namedArgs.containsKey('size') ? namedArgs['size'] : null,
-            platform: namedArgs.containsKey('platform') ? namedArgs['platform'] : null);
+            platform: namedArgs.containsKey('platform')
+                ? namedArgs['platform']
+                : null);
       case 'ImageConfiguration.empty':
         return ImageConfiguration.empty;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -34,7 +42,7 @@ extension ImageConfigurationBinding on ImageConfiguration {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('ImageConfiguration');
+        return const HTType('ImageConfiguration');
       case 'bundle':
         return bundle;
       case 'devicePixelRatio':
@@ -51,16 +59,24 @@ extension ImageConfigurationBinding on ImageConfiguration {
         return hashCode;
       case 'copyWith':
         return ({positionalArgs, namedArgs, typeArgs}) => copyWith(
-            bundle: namedArgs.containsKey('bundle') ? namedArgs['bundle'] : null,
-            devicePixelRatio: namedArgs.containsKey('devicePixelRatio') ? namedArgs['devicePixelRatio'] : null,
-            locale: namedArgs.containsKey('locale') ? namedArgs['locale'] : null,
-            textDirection: namedArgs.containsKey('textDirection') ? namedArgs['textDirection'] : null,
+            bundle:
+                namedArgs.containsKey('bundle') ? namedArgs['bundle'] : null,
+            devicePixelRatio: namedArgs.containsKey('devicePixelRatio')
+                ? namedArgs['devicePixelRatio']
+                : null,
+            locale:
+                namedArgs.containsKey('locale') ? namedArgs['locale'] : null,
+            textDirection: namedArgs.containsKey('textDirection')
+                ? namedArgs['textDirection']
+                : null,
             size: namedArgs.containsKey('size') ? namedArgs['size'] : null,
-            platform: namedArgs.containsKey('platform') ? namedArgs['platform'] : null);
+            platform: namedArgs.containsKey('platform')
+                ? namedArgs['platform']
+                : null);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -72,10 +88,12 @@ class AssetBundleImageKeyAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'AssetBundleImageKey':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            AssetBundleImageKey(bundle: namedArgs['bundle'], name: namedArgs['name'], scale: namedArgs['scale']);
+        return ({positionalArgs, namedArgs, typeArgs}) => AssetBundleImageKey(
+            bundle: namedArgs['bundle'],
+            name: namedArgs['name'],
+            scale: namedArgs['scale']);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -89,7 +107,7 @@ extension AssetBundleImageKeyBinding on AssetBundleImageKey {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('AssetBundleImageKey');
+        return const HTType('AssetBundleImageKey');
       case 'bundle':
         return bundle;
       case 'name':
@@ -101,7 +119,7 @@ extension AssetBundleImageKeyBinding on AssetBundleImageKey {
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -113,15 +131,20 @@ class ResizeImageAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'ResizeImage':
-        return ({positionalArgs, namedArgs, typeArgs}) => ResizeImage(positionalArgs[0],
+        return ({positionalArgs, namedArgs, typeArgs}) => ResizeImage(
+            positionalArgs[0],
             width: namedArgs.containsKey('width') ? namedArgs['width'] : null,
-            height: namedArgs.containsKey('height') ? namedArgs['height'] : null,
-            allowUpscaling: namedArgs.containsKey('allowUpscaling') ? namedArgs['allowUpscaling'] : false);
+            height:
+                namedArgs.containsKey('height') ? namedArgs['height'] : null,
+            allowUpscaling: namedArgs.containsKey('allowUpscaling')
+                ? namedArgs['allowUpscaling']
+                : false);
       case 'ResizeImage.resizeIfNeeded':
         return ({positionalArgs, namedArgs, typeArgs}) =>
-            ResizeImage.resizeIfNeeded(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
+            ResizeImage.resizeIfNeeded(
+                positionalArgs[0], positionalArgs[1], positionalArgs[2]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -132,12 +155,18 @@ class ResizeImageAutoBinding extends HTExternalClass {
 
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'DecoderCallback': (HTFunction function) => (bytes, {cacheWidth, cacheHeight, allowUpscaling}) => function.call(
-              positionalArgs: [bytes],
-              namedArgs: {'cacheWidth': cacheWidth, 'cacheHeight': cacheHeight, 'allowUpscaling': allowUpscaling})
-          as Future<ui.Codec>,
-      'ImageErrorListener': (HTFunction function) =>
-          (exception, stackTrace) => function.call(positionalArgs: [exception, stackTrace], namedArgs: const {}),
+      'DecoderCallback': (HTFunction function) => (bytes,
+              {cacheWidth, cacheHeight, allowUpscaling}) =>
+          function.call(positionalArgs: [
+            bytes
+          ], namedArgs: {
+            'cacheWidth': cacheWidth,
+            'cacheHeight': cacheHeight,
+            'allowUpscaling': allowUpscaling
+          }) as Future<ui.Codec>,
+      'ImageErrorListener': (HTFunction function) => (exception, stackTrace) =>
+          function.call(
+              positionalArgs: [exception, stackTrace], namedArgs: const {}),
     };
   }
 }
@@ -146,7 +175,7 @@ extension ResizeImageBinding on ResizeImage {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('ResizeImage');
+        return const HTType('ResizeImage');
       case 'imageProvider':
         return imageProvider;
       case 'width':
@@ -156,24 +185,32 @@ extension ResizeImageBinding on ResizeImage {
       case 'allowUpscaling':
         return allowUpscaling;
       case 'load':
-        return ({positionalArgs, namedArgs, typeArgs}) => load(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            load(positionalArgs[0], positionalArgs[1]);
       case 'obtainKey':
-        return ({positionalArgs, namedArgs, typeArgs}) => obtainKey(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            obtainKey(positionalArgs[0]);
       case 'resolve':
-        return ({positionalArgs, namedArgs, typeArgs}) => resolve(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            resolve(positionalArgs[0]);
       case 'obtainCacheStatus':
         return ({positionalArgs, namedArgs, typeArgs}) => obtainCacheStatus(
-            configuration: namedArgs.containsKey('configuration') ? namedArgs['configuration'] : null,
-            handleError: namedArgs.containsKey('handleError') ? namedArgs['handleError'] : null);
+            configuration: namedArgs.containsKey('configuration')
+                ? namedArgs['configuration']
+                : null,
+            handleError: namedArgs.containsKey('handleError')
+                ? namedArgs['handleError']
+                : null);
       case 'evict':
         return ({positionalArgs, namedArgs, typeArgs}) => evict(
             cache: namedArgs.containsKey('cache') ? namedArgs['cache'] : null,
-            configuration:
-                namedArgs.containsKey('configuration') ? namedArgs['configuration'] : ImageConfiguration.empty);
+            configuration: namedArgs.containsKey('configuration')
+                ? namedArgs['configuration']
+                : ImageConfiguration.empty);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -185,11 +222,13 @@ class NetworkImageAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'NetworkImage':
-        return ({positionalArgs, namedArgs, typeArgs}) => NetworkImage(positionalArgs[0],
+        return ({positionalArgs, namedArgs, typeArgs}) => NetworkImage(
+            positionalArgs[0],
             scale: namedArgs.containsKey('scale') ? namedArgs['scale'] : null,
-            headers: namedArgs.containsKey('headers') ? namedArgs['headers'] : null);
+            headers:
+                namedArgs.containsKey('headers') ? namedArgs['headers'] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -200,12 +239,18 @@ class NetworkImageAutoBinding extends HTExternalClass {
 
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'DecoderCallback': (HTFunction function) => (bytes, {cacheWidth, cacheHeight, allowUpscaling}) => function.call(
-              positionalArgs: [bytes],
-              namedArgs: {'cacheWidth': cacheWidth, 'cacheHeight': cacheHeight, 'allowUpscaling': allowUpscaling})
-          as Future<ui.Codec>,
-      'ImageErrorListener': (HTFunction function) =>
-          (exception, stackTrace) => function.call(positionalArgs: [exception, stackTrace], namedArgs: const {}),
+      'DecoderCallback': (HTFunction function) => (bytes,
+              {cacheWidth, cacheHeight, allowUpscaling}) =>
+          function.call(positionalArgs: [
+            bytes
+          ], namedArgs: {
+            'cacheWidth': cacheWidth,
+            'cacheHeight': cacheHeight,
+            'allowUpscaling': allowUpscaling
+          }) as Future<ui.Codec>,
+      'ImageErrorListener': (HTFunction function) => (exception, stackTrace) =>
+          function.call(
+              positionalArgs: [exception, stackTrace], namedArgs: const {}),
     };
   }
 }
@@ -214,7 +259,7 @@ extension NetworkImageBinding on NetworkImage {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('NetworkImage');
+        return const HTType('NetworkImage');
       case 'url':
         return url;
       case 'scale':
@@ -222,24 +267,32 @@ extension NetworkImageBinding on NetworkImage {
       case 'headers':
         return headers;
       case 'load':
-        return ({positionalArgs, namedArgs, typeArgs}) => load(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            load(positionalArgs[0], positionalArgs[1]);
       case 'resolve':
-        return ({positionalArgs, namedArgs, typeArgs}) => resolve(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            resolve(positionalArgs[0]);
       case 'obtainCacheStatus':
         return ({positionalArgs, namedArgs, typeArgs}) => obtainCacheStatus(
-            configuration: namedArgs.containsKey('configuration') ? namedArgs['configuration'] : null,
-            handleError: namedArgs.containsKey('handleError') ? namedArgs['handleError'] : null);
+            configuration: namedArgs.containsKey('configuration')
+                ? namedArgs['configuration']
+                : null,
+            handleError: namedArgs.containsKey('handleError')
+                ? namedArgs['handleError']
+                : null);
       case 'evict':
         return ({positionalArgs, namedArgs, typeArgs}) => evict(
             cache: namedArgs.containsKey('cache') ? namedArgs['cache'] : null,
-            configuration:
-                namedArgs.containsKey('configuration') ? namedArgs['configuration'] : ImageConfiguration.empty);
+            configuration: namedArgs.containsKey('configuration')
+                ? namedArgs['configuration']
+                : ImageConfiguration.empty);
       case 'obtainKey':
-        return ({positionalArgs, namedArgs, typeArgs}) => obtainKey(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            obtainKey(positionalArgs[0]);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -251,10 +304,11 @@ class FileImageAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'FileImage':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            FileImage(positionalArgs[0], scale: namedArgs.containsKey('scale') ? namedArgs['scale'] : 1.0);
+        return ({positionalArgs, namedArgs, typeArgs}) => FileImage(
+            positionalArgs[0],
+            scale: namedArgs.containsKey('scale') ? namedArgs['scale'] : 1.0);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -265,12 +319,18 @@ class FileImageAutoBinding extends HTExternalClass {
 
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'DecoderCallback': (HTFunction function) => (bytes, {cacheWidth, cacheHeight, allowUpscaling}) => function.call(
-              positionalArgs: [bytes],
-              namedArgs: {'cacheWidth': cacheWidth, 'cacheHeight': cacheHeight, 'allowUpscaling': allowUpscaling})
-          as Future<ui.Codec>,
-      'ImageErrorListener': (HTFunction function) =>
-          (exception, stackTrace) => function.call(positionalArgs: [exception, stackTrace], namedArgs: const {}),
+      'DecoderCallback': (HTFunction function) => (bytes,
+              {cacheWidth, cacheHeight, allowUpscaling}) =>
+          function.call(positionalArgs: [
+            bytes
+          ], namedArgs: {
+            'cacheWidth': cacheWidth,
+            'cacheHeight': cacheHeight,
+            'allowUpscaling': allowUpscaling
+          }) as Future<ui.Codec>,
+      'ImageErrorListener': (HTFunction function) => (exception, stackTrace) =>
+          function.call(
+              positionalArgs: [exception, stackTrace], namedArgs: const {}),
     };
   }
 }
@@ -279,7 +339,7 @@ extension FileImageBinding on FileImage {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('FileImage');
+        return const HTType('FileImage');
       case 'file':
         return file;
       case 'scale':
@@ -287,24 +347,32 @@ extension FileImageBinding on FileImage {
       case 'hashCode':
         return hashCode;
       case 'obtainKey':
-        return ({positionalArgs, namedArgs, typeArgs}) => obtainKey(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            obtainKey(positionalArgs[0]);
       case 'load':
-        return ({positionalArgs, namedArgs, typeArgs}) => load(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            load(positionalArgs[0], positionalArgs[1]);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       case 'resolve':
-        return ({positionalArgs, namedArgs, typeArgs}) => resolve(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            resolve(positionalArgs[0]);
       case 'obtainCacheStatus':
         return ({positionalArgs, namedArgs, typeArgs}) => obtainCacheStatus(
-            configuration: namedArgs.containsKey('configuration') ? namedArgs['configuration'] : null,
-            handleError: namedArgs.containsKey('handleError') ? namedArgs['handleError'] : null);
+            configuration: namedArgs.containsKey('configuration')
+                ? namedArgs['configuration']
+                : null,
+            handleError: namedArgs.containsKey('handleError')
+                ? namedArgs['handleError']
+                : null);
       case 'evict':
         return ({positionalArgs, namedArgs, typeArgs}) => evict(
             cache: namedArgs.containsKey('cache') ? namedArgs['cache'] : null,
-            configuration:
-                namedArgs.containsKey('configuration') ? namedArgs['configuration'] : ImageConfiguration.empty);
+            configuration: namedArgs.containsKey('configuration')
+                ? namedArgs['configuration']
+                : ImageConfiguration.empty);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -316,10 +384,11 @@ class MemoryImageAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'MemoryImage':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            MemoryImage(positionalArgs[0], scale: namedArgs.containsKey('scale') ? namedArgs['scale'] : 1.0);
+        return ({positionalArgs, namedArgs, typeArgs}) => MemoryImage(
+            positionalArgs[0],
+            scale: namedArgs.containsKey('scale') ? namedArgs['scale'] : 1.0);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -330,12 +399,18 @@ class MemoryImageAutoBinding extends HTExternalClass {
 
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'DecoderCallback': (HTFunction function) => (bytes, {cacheWidth, cacheHeight, allowUpscaling}) => function.call(
-              positionalArgs: [bytes],
-              namedArgs: {'cacheWidth': cacheWidth, 'cacheHeight': cacheHeight, 'allowUpscaling': allowUpscaling})
-          as Future<ui.Codec>,
-      'ImageErrorListener': (HTFunction function) =>
-          (exception, stackTrace) => function.call(positionalArgs: [exception, stackTrace], namedArgs: const {}),
+      'DecoderCallback': (HTFunction function) => (bytes,
+              {cacheWidth, cacheHeight, allowUpscaling}) =>
+          function.call(positionalArgs: [
+            bytes
+          ], namedArgs: {
+            'cacheWidth': cacheWidth,
+            'cacheHeight': cacheHeight,
+            'allowUpscaling': allowUpscaling
+          }) as Future<ui.Codec>,
+      'ImageErrorListener': (HTFunction function) => (exception, stackTrace) =>
+          function.call(
+              positionalArgs: [exception, stackTrace], namedArgs: const {}),
     };
   }
 }
@@ -344,7 +419,7 @@ extension MemoryImageBinding on MemoryImage {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('MemoryImage');
+        return const HTType('MemoryImage');
       case 'bytes':
         return bytes;
       case 'scale':
@@ -352,24 +427,32 @@ extension MemoryImageBinding on MemoryImage {
       case 'hashCode':
         return hashCode;
       case 'obtainKey':
-        return ({positionalArgs, namedArgs, typeArgs}) => obtainKey(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            obtainKey(positionalArgs[0]);
       case 'load':
-        return ({positionalArgs, namedArgs, typeArgs}) => load(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            load(positionalArgs[0], positionalArgs[1]);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       case 'resolve':
-        return ({positionalArgs, namedArgs, typeArgs}) => resolve(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            resolve(positionalArgs[0]);
       case 'obtainCacheStatus':
         return ({positionalArgs, namedArgs, typeArgs}) => obtainCacheStatus(
-            configuration: namedArgs.containsKey('configuration') ? namedArgs['configuration'] : null,
-            handleError: namedArgs.containsKey('handleError') ? namedArgs['handleError'] : null);
+            configuration: namedArgs.containsKey('configuration')
+                ? namedArgs['configuration']
+                : null,
+            handleError: namedArgs.containsKey('handleError')
+                ? namedArgs['handleError']
+                : null);
       case 'evict':
         return ({positionalArgs, namedArgs, typeArgs}) => evict(
             cache: namedArgs.containsKey('cache') ? namedArgs['cache'] : null,
-            configuration:
-                namedArgs.containsKey('configuration') ? namedArgs['configuration'] : ImageConfiguration.empty);
+            configuration: namedArgs.containsKey('configuration')
+                ? namedArgs['configuration']
+                : ImageConfiguration.empty);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -381,12 +464,15 @@ class ExactAssetImageAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'ExactAssetImage':
-        return ({positionalArgs, namedArgs, typeArgs}) => ExactAssetImage(positionalArgs[0],
+        return ({positionalArgs, namedArgs, typeArgs}) => ExactAssetImage(
+            positionalArgs[0],
             scale: namedArgs.containsKey('scale') ? namedArgs['scale'] : 1.0,
-            bundle: namedArgs.containsKey('bundle') ? namedArgs['bundle'] : null,
-            package: namedArgs.containsKey('package') ? namedArgs['package'] : null);
+            bundle:
+                namedArgs.containsKey('bundle') ? namedArgs['bundle'] : null,
+            package:
+                namedArgs.containsKey('package') ? namedArgs['package'] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -397,12 +483,18 @@ class ExactAssetImageAutoBinding extends HTExternalClass {
 
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'DecoderCallback': (HTFunction function) => (bytes, {cacheWidth, cacheHeight, allowUpscaling}) => function.call(
-              positionalArgs: [bytes],
-              namedArgs: {'cacheWidth': cacheWidth, 'cacheHeight': cacheHeight, 'allowUpscaling': allowUpscaling})
-          as Future<ui.Codec>,
-      'ImageErrorListener': (HTFunction function) =>
-          (exception, stackTrace) => function.call(positionalArgs: [exception, stackTrace], namedArgs: const {}),
+      'DecoderCallback': (HTFunction function) => (bytes,
+              {cacheWidth, cacheHeight, allowUpscaling}) =>
+          function.call(positionalArgs: [
+            bytes
+          ], namedArgs: {
+            'cacheWidth': cacheWidth,
+            'cacheHeight': cacheHeight,
+            'allowUpscaling': allowUpscaling
+          }) as Future<ui.Codec>,
+      'ImageErrorListener': (HTFunction function) => (exception, stackTrace) =>
+          function.call(
+              positionalArgs: [exception, stackTrace], namedArgs: const {}),
     };
   }
 }
@@ -411,7 +503,7 @@ extension ExactAssetImageBinding on ExactAssetImage {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('ExactAssetImage');
+        return const HTType('ExactAssetImage');
       case 'assetName':
         return assetName;
       case 'scale':
@@ -425,24 +517,32 @@ extension ExactAssetImageBinding on ExactAssetImage {
       case 'hashCode':
         return hashCode;
       case 'obtainKey':
-        return ({positionalArgs, namedArgs, typeArgs}) => obtainKey(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            obtainKey(positionalArgs[0]);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       case 'load':
-        return ({positionalArgs, namedArgs, typeArgs}) => load(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            load(positionalArgs[0], positionalArgs[1]);
       case 'resolve':
-        return ({positionalArgs, namedArgs, typeArgs}) => resolve(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            resolve(positionalArgs[0]);
       case 'obtainCacheStatus':
         return ({positionalArgs, namedArgs, typeArgs}) => obtainCacheStatus(
-            configuration: namedArgs.containsKey('configuration') ? namedArgs['configuration'] : null,
-            handleError: namedArgs.containsKey('handleError') ? namedArgs['handleError'] : null);
+            configuration: namedArgs.containsKey('configuration')
+                ? namedArgs['configuration']
+                : null,
+            handleError: namedArgs.containsKey('handleError')
+                ? namedArgs['handleError']
+                : null);
       case 'evict':
         return ({positionalArgs, namedArgs, typeArgs}) => evict(
             cache: namedArgs.containsKey('cache') ? namedArgs['cache'] : null,
-            configuration:
-                namedArgs.containsKey('configuration') ? namedArgs['configuration'] : ImageConfiguration.empty);
+            configuration: namedArgs.containsKey('configuration')
+                ? namedArgs['configuration']
+                : ImageConfiguration.empty);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -455,9 +555,10 @@ class NetworkImageLoadExceptionAutoBinding extends HTExternalClass {
     switch (varName) {
       case 'NetworkImageLoadException':
         return ({positionalArgs, namedArgs, typeArgs}) =>
-            NetworkImageLoadException(statusCode: namedArgs['statusCode'], uri: namedArgs['uri']);
+            NetworkImageLoadException(
+                statusCode: namedArgs['statusCode'], uri: namedArgs['uri']);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -471,7 +572,7 @@ extension NetworkImageLoadExceptionBinding on NetworkImageLoadException {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('NetworkImageLoadException');
+        return const HTType('NetworkImageLoadException');
       case 'statusCode':
         return statusCode;
       case 'uri':
@@ -479,7 +580,7 @@ extension NetworkImageLoadExceptionBinding on NetworkImageLoadException {
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

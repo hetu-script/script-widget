@@ -18,7 +18,7 @@ class TabBarIndicatorSizeAutoBinding extends HTExternalClass {
       case 'TabBarIndicatorSize.label':
         return TabBarIndicatorSize.label;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -26,13 +26,14 @@ class TabBarIndicatorSizeAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('TabBarIndicatorSize');
+        return const HTType('TabBarIndicatorSize');
       case 'index':
         return (instance as TabBarIndicatorSize).index;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => (instance as TabBarIndicatorSize).toString();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            (instance as TabBarIndicatorSize).toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -48,11 +49,12 @@ class TabAutoBinding extends HTExternalClass {
             key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
             text: namedArgs.containsKey('text') ? namedArgs['text'] : null,
             icon: namedArgs.containsKey('icon') ? namedArgs['icon'] : null,
-            iconMargin:
-                namedArgs.containsKey('iconMargin') ? namedArgs['iconMargin'] : const EdgeInsets.only(bottom: 10.0),
+            iconMargin: namedArgs.containsKey('iconMargin')
+                ? namedArgs['iconMargin']
+                : const EdgeInsets.only(bottom: 10.0),
             child: namedArgs.containsKey('child') ? namedArgs['child'] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -66,7 +68,7 @@ extension TabBinding on Tab {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('Tab');
+        return const HTType('Tab');
       case 'text':
         return text;
       case 'child':
@@ -80,31 +82,44 @@ extension TabBinding on Tab {
       case 'hashCode':
         return hashCode;
       case 'build':
-        return ({positionalArgs, namedArgs, typeArgs}) => build(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            build(positionalArgs[0]);
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'createElement':
         return ({positionalArgs, namedArgs, typeArgs}) => createElement();
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'toStringShallow':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
-            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            joiner:
+                namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -119,33 +134,63 @@ class TabBarAutoBinding extends HTExternalClass {
         return ({positionalArgs, namedArgs, typeArgs}) => TabBar(
             key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
             tabs: List<Widget>.from(namedArgs['tabs']),
-            controller: namedArgs.containsKey('controller') ? namedArgs['controller'] : null,
-            isScrollable: namedArgs.containsKey('isScrollable') ? namedArgs['isScrollable'] : false,
-            indicatorColor: namedArgs.containsKey('indicatorColor') ? namedArgs['indicatorColor'] : null,
-            automaticIndicatorColorAdjustment: namedArgs.containsKey('automaticIndicatorColorAdjustment')
-                ? namedArgs['automaticIndicatorColorAdjustment']
-                : true,
-            indicatorWeight: namedArgs.containsKey('indicatorWeight') ? namedArgs['indicatorWeight'] : 2.0,
-            indicatorPadding:
-                namedArgs.containsKey('indicatorPadding') ? namedArgs['indicatorPadding'] : EdgeInsets.zero,
-            indicator: namedArgs.containsKey('indicator') ? namedArgs['indicator'] : null,
-            indicatorSize: namedArgs.containsKey('indicatorSize') ? namedArgs['indicatorSize'] : null,
-            labelColor: namedArgs.containsKey('labelColor') ? namedArgs['labelColor'] : null,
-            labelStyle: namedArgs.containsKey('labelStyle') ? namedArgs['labelStyle'] : null,
-            labelPadding: namedArgs.containsKey('labelPadding') ? namedArgs['labelPadding'] : null,
-            unselectedLabelColor:
-                namedArgs.containsKey('unselectedLabelColor') ? namedArgs['unselectedLabelColor'] : null,
-            unselectedLabelStyle:
-                namedArgs.containsKey('unselectedLabelStyle') ? namedArgs['unselectedLabelStyle'] : null,
-            dragStartBehavior:
-                namedArgs.containsKey('dragStartBehavior') ? namedArgs['dragStartBehavior'] : DragStartBehavior.start,
-            overlayColor: namedArgs.containsKey('overlayColor') ? namedArgs['overlayColor'] : null,
-            mouseCursor: namedArgs.containsKey('mouseCursor') ? namedArgs['mouseCursor'] : null,
-            enableFeedback: namedArgs.containsKey('enableFeedback') ? namedArgs['enableFeedback'] : null,
+            controller: namedArgs.containsKey('controller')
+                ? namedArgs['controller']
+                : null,
+            isScrollable: namedArgs.containsKey('isScrollable')
+                ? namedArgs['isScrollable']
+                : false,
+            indicatorColor: namedArgs.containsKey('indicatorColor')
+                ? namedArgs['indicatorColor']
+                : null,
+            automaticIndicatorColorAdjustment:
+                namedArgs.containsKey('automaticIndicatorColorAdjustment')
+                    ? namedArgs['automaticIndicatorColorAdjustment']
+                    : true,
+            indicatorWeight: namedArgs.containsKey('indicatorWeight')
+                ? namedArgs['indicatorWeight']
+                : 2.0,
+            indicatorPadding: namedArgs.containsKey('indicatorPadding')
+                ? namedArgs['indicatorPadding']
+                : EdgeInsets.zero,
+            indicator: namedArgs.containsKey('indicator')
+                ? namedArgs['indicator']
+                : null,
+            indicatorSize: namedArgs.containsKey('indicatorSize')
+                ? namedArgs['indicatorSize']
+                : null,
+            labelColor: namedArgs.containsKey('labelColor')
+                ? namedArgs['labelColor']
+                : null,
+            labelStyle: namedArgs.containsKey('labelStyle')
+                ? namedArgs['labelStyle']
+                : null,
+            labelPadding: namedArgs.containsKey('labelPadding')
+                ? namedArgs['labelPadding']
+                : null,
+            unselectedLabelColor: namedArgs.containsKey('unselectedLabelColor')
+                ? namedArgs['unselectedLabelColor']
+                : null,
+            unselectedLabelStyle: namedArgs.containsKey('unselectedLabelStyle')
+                ? namedArgs['unselectedLabelStyle']
+                : null,
+            dragStartBehavior: namedArgs.containsKey('dragStartBehavior')
+                ? namedArgs['dragStartBehavior']
+                : DragStartBehavior.start,
+            overlayColor: namedArgs.containsKey('overlayColor')
+                ? namedArgs['overlayColor']
+                : null,
+            mouseCursor: namedArgs.containsKey('mouseCursor')
+                ? namedArgs['mouseCursor']
+                : null,
+            enableFeedback: namedArgs.containsKey('enableFeedback')
+                ? namedArgs['enableFeedback']
+                : null,
             onTap: namedArgs.containsKey('onTap') ? namedArgs['onTap'] : null,
-            physics: namedArgs.containsKey('physics') ? namedArgs['physics'] : null);
+            physics:
+                namedArgs.containsKey('physics') ? namedArgs['physics'] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -159,7 +204,7 @@ extension TabBarBinding on TabBar {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('TabBar');
+        return const HTType('TabBar');
       case 'tabs':
         return tabs;
       case 'controller':
@@ -213,25 +258,37 @@ extension TabBarBinding on TabBar {
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'toStringShallow':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
-            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            joiner:
+                namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -245,13 +302,17 @@ class TabBarViewAutoBinding extends HTExternalClass {
       case 'TabBarView':
         return ({positionalArgs, namedArgs, typeArgs}) => TabBarView(
             key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
-            controller: namedArgs.containsKey('controller') ? namedArgs['controller'] : null,
-            physics: namedArgs.containsKey('physics') ? namedArgs['physics'] : null,
-            dragStartBehavior:
-                namedArgs.containsKey('dragStartBehavior') ? namedArgs['dragStartBehavior'] : DragStartBehavior.start,
+            controller: namedArgs.containsKey('controller')
+                ? namedArgs['controller']
+                : null,
+            physics:
+                namedArgs.containsKey('physics') ? namedArgs['physics'] : null,
+            dragStartBehavior: namedArgs.containsKey('dragStartBehavior')
+                ? namedArgs['dragStartBehavior']
+                : DragStartBehavior.start,
             children: List<Widget>.from(namedArgs['children']));
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -265,7 +326,7 @@ extension TabBarViewBinding on TabBarView {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('TabBarView');
+        return const HTType('TabBarView');
       case 'controller':
         return controller;
       case 'children':
@@ -285,25 +346,37 @@ extension TabBarViewBinding on TabBarView {
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'toStringShallow':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
-            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            joiner:
+                namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -315,13 +388,14 @@ class TabPageSelectorIndicatorAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'TabPageSelectorIndicator':
-        return ({positionalArgs, namedArgs, typeArgs}) => TabPageSelectorIndicator(
-            key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
-            backgroundColor: namedArgs['backgroundColor'],
-            borderColor: namedArgs['borderColor'],
-            size: namedArgs['size']);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            TabPageSelectorIndicator(
+                key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
+                backgroundColor: namedArgs['backgroundColor'],
+                borderColor: namedArgs['borderColor'],
+                size: namedArgs['size']);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -335,7 +409,7 @@ extension TabPageSelectorIndicatorBinding on TabPageSelectorIndicator {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('TabPageSelectorIndicator');
+        return const HTType('TabPageSelectorIndicator');
       case 'backgroundColor':
         return backgroundColor;
       case 'borderColor':
@@ -347,31 +421,44 @@ extension TabPageSelectorIndicatorBinding on TabPageSelectorIndicator {
       case 'hashCode':
         return hashCode;
       case 'build':
-        return ({positionalArgs, namedArgs, typeArgs}) => build(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            build(positionalArgs[0]);
       case 'createElement':
         return ({positionalArgs, namedArgs, typeArgs}) => createElement();
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'toStringShallow':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
-            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            joiner:
+                namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -385,12 +472,18 @@ class TabPageSelectorAutoBinding extends HTExternalClass {
       case 'TabPageSelector':
         return ({positionalArgs, namedArgs, typeArgs}) => TabPageSelector(
             key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
-            controller: namedArgs.containsKey('controller') ? namedArgs['controller'] : null,
-            indicatorSize: namedArgs.containsKey('indicatorSize') ? namedArgs['indicatorSize'] : 12.0,
+            controller: namedArgs.containsKey('controller')
+                ? namedArgs['controller']
+                : null,
+            indicatorSize: namedArgs.containsKey('indicatorSize')
+                ? namedArgs['indicatorSize']
+                : 12.0,
             color: namedArgs.containsKey('color') ? namedArgs['color'] : null,
-            selectedColor: namedArgs.containsKey('selectedColor') ? namedArgs['selectedColor'] : null);
+            selectedColor: namedArgs.containsKey('selectedColor')
+                ? namedArgs['selectedColor']
+                : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -404,7 +497,7 @@ extension TabPageSelectorBinding on TabPageSelector {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('TabPageSelector');
+        return const HTType('TabPageSelector');
       case 'controller':
         return controller;
       case 'indicatorSize':
@@ -418,31 +511,44 @@ extension TabPageSelectorBinding on TabPageSelector {
       case 'hashCode':
         return hashCode;
       case 'build':
-        return ({positionalArgs, namedArgs, typeArgs}) => build(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            build(positionalArgs[0]);
       case 'createElement':
         return ({positionalArgs, namedArgs, typeArgs}) => createElement();
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'toStringShallow':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
-            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            joiner:
+                namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

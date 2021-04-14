@@ -2,15 +2,17 @@ import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/rendering.dart';
 
 class SliverMultiBoxAdaptorParentDataAutoBinding extends HTExternalClass {
-  SliverMultiBoxAdaptorParentDataAutoBinding() : super('SliverMultiBoxAdaptorParentData');
+  SliverMultiBoxAdaptorParentDataAutoBinding()
+      : super('SliverMultiBoxAdaptorParentData');
 
   @override
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'SliverMultiBoxAdaptorParentData':
-        return ({positionalArgs, namedArgs, typeArgs}) => SliverMultiBoxAdaptorParentData();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            SliverMultiBoxAdaptorParentData();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -25,11 +27,12 @@ class SliverMultiBoxAdaptorParentDataAutoBinding extends HTExternalClass {
   }
 }
 
-extension SliverMultiBoxAdaptorParentDataBinding on SliverMultiBoxAdaptorParentData {
+extension SliverMultiBoxAdaptorParentDataBinding
+    on SliverMultiBoxAdaptorParentData {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('SliverMultiBoxAdaptorParentData');
+        return const HTType('SliverMultiBoxAdaptorParentData');
       case 'index':
         return index;
       case 'layoutOffset':
@@ -41,7 +44,7 @@ extension SliverMultiBoxAdaptorParentDataBinding on SliverMultiBoxAdaptorParentD
       case 'detach':
         return ({positionalArgs, namedArgs, typeArgs}) => detach();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -54,7 +57,7 @@ extension SliverMultiBoxAdaptorParentDataBinding on SliverMultiBoxAdaptorParentD
         layoutOffset = value;
         break;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

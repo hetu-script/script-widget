@@ -8,9 +8,10 @@ class CategoryAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'Category':
-        return ({positionalArgs, namedArgs, typeArgs}) => Category(List<String>.from(positionalArgs[0]));
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            Category(List<String>.from(positionalArgs[0]));
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -24,11 +25,11 @@ extension CategoryBinding on Category {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('Category');
+        return const HTType('Category');
       case 'sections':
         return sections;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -40,9 +41,10 @@ class DocumentationIconAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'DocumentationIcon':
-        return ({positionalArgs, namedArgs, typeArgs}) => DocumentationIcon(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            DocumentationIcon(positionalArgs[0]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -56,11 +58,11 @@ extension DocumentationIconBinding on DocumentationIcon {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('DocumentationIcon');
+        return const HTType('DocumentationIcon');
       case 'url':
         return url;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -72,9 +74,10 @@ class SummaryAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'Summary':
-        return ({positionalArgs, namedArgs, typeArgs}) => Summary(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            Summary(positionalArgs[0]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -88,11 +91,11 @@ extension SummaryBinding on Summary {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('Summary');
+        return const HTType('Summary');
       case 'text':
         return text;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

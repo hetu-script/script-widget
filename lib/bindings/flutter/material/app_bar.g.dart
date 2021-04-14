@@ -13,38 +13,77 @@ class AppBarAutoBinding extends HTExternalClass {
       case 'AppBar':
         return ({positionalArgs, namedArgs, typeArgs}) => AppBar(
             key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
-            leading: namedArgs.containsKey('leading') ? namedArgs['leading'] : null,
+            leading:
+                namedArgs.containsKey('leading') ? namedArgs['leading'] : null,
             automaticallyImplyLeading:
-                namedArgs.containsKey('automaticallyImplyLeading') ? namedArgs['automaticallyImplyLeading'] : true,
+                namedArgs.containsKey('automaticallyImplyLeading')
+                    ? namedArgs['automaticallyImplyLeading']
+                    : true,
             title: namedArgs.containsKey('title') ? namedArgs['title'] : null,
-            actions: namedArgs.containsKey('actions') ? List<Widget>.from(namedArgs['actions']) : null,
-            flexibleSpace: namedArgs.containsKey('flexibleSpace') ? namedArgs['flexibleSpace'] : null,
-            bottom: namedArgs.containsKey('bottom') ? namedArgs['bottom'] : null,
-            elevation: namedArgs.containsKey('elevation') ? namedArgs['elevation'] : null,
-            shadowColor: namedArgs.containsKey('shadowColor') ? namedArgs['shadowColor'] : null,
+            actions: namedArgs.containsKey('actions')
+                ? List<Widget>.from(namedArgs['actions'])
+                : null,
+            flexibleSpace: namedArgs.containsKey('flexibleSpace')
+                ? namedArgs['flexibleSpace']
+                : null,
+            bottom:
+                namedArgs.containsKey('bottom') ? namedArgs['bottom'] : null,
+            elevation: namedArgs.containsKey('elevation')
+                ? namedArgs['elevation']
+                : null,
+            shadowColor: namedArgs.containsKey('shadowColor')
+                ? namedArgs['shadowColor']
+                : null,
             shape: namedArgs.containsKey('shape') ? namedArgs['shape'] : null,
-            backgroundColor: namedArgs.containsKey('backgroundColor') ? namedArgs['backgroundColor'] : null,
-            foregroundColor: namedArgs.containsKey('foregroundColor') ? namedArgs['foregroundColor'] : null,
-            brightness: namedArgs.containsKey('brightness') ? namedArgs['brightness'] : null,
-            iconTheme: namedArgs.containsKey('iconTheme') ? namedArgs['iconTheme'] : null,
-            actionsIconTheme: namedArgs.containsKey('actionsIconTheme') ? namedArgs['actionsIconTheme'] : null,
-            textTheme: namedArgs.containsKey('textTheme') ? namedArgs['textTheme'] : null,
-            primary: namedArgs.containsKey('primary') ? namedArgs['primary'] : true,
-            centerTitle: namedArgs.containsKey('centerTitle') ? namedArgs['centerTitle'] : null,
-            excludeHeaderSemantics:
-                namedArgs.containsKey('excludeHeaderSemantics') ? namedArgs['excludeHeaderSemantics'] : false,
-            titleSpacing: namedArgs.containsKey('titleSpacing') ? namedArgs['titleSpacing'] : null,
-            toolbarOpacity: namedArgs.containsKey('toolbarOpacity') ? namedArgs['toolbarOpacity'] : 1.0,
-            bottomOpacity: namedArgs.containsKey('bottomOpacity') ? namedArgs['bottomOpacity'] : 1.0,
-            toolbarHeight: namedArgs.containsKey('toolbarHeight') ? namedArgs['toolbarHeight'] : null,
-            leadingWidth: namedArgs.containsKey('leadingWidth') ? namedArgs['leadingWidth'] : null,
-            backwardsCompatibility:
-                namedArgs.containsKey('backwardsCompatibility') ? namedArgs['backwardsCompatibility'] : null,
+            backgroundColor: namedArgs.containsKey('backgroundColor')
+                ? namedArgs['backgroundColor']
+                : null,
+            foregroundColor: namedArgs.containsKey('foregroundColor')
+                ? namedArgs['foregroundColor']
+                : null,
+            brightness: namedArgs.containsKey('brightness')
+                ? namedArgs['brightness']
+                : null,
+            iconTheme: namedArgs.containsKey('iconTheme')
+                ? namedArgs['iconTheme']
+                : null,
+            actionsIconTheme: namedArgs.containsKey('actionsIconTheme')
+                ? namedArgs['actionsIconTheme']
+                : null,
+            textTheme: namedArgs.containsKey('textTheme')
+                ? namedArgs['textTheme']
+                : null,
+            primary:
+                namedArgs.containsKey('primary') ? namedArgs['primary'] : true,
+            centerTitle: namedArgs.containsKey('centerTitle')
+                ? namedArgs['centerTitle']
+                : null,
+            excludeHeaderSemantics: namedArgs.containsKey('excludeHeaderSemantics')
+                ? namedArgs['excludeHeaderSemantics']
+                : false,
+            titleSpacing: namedArgs.containsKey('titleSpacing')
+                ? namedArgs['titleSpacing']
+                : null,
+            toolbarOpacity: namedArgs.containsKey('toolbarOpacity')
+                ? namedArgs['toolbarOpacity']
+                : 1.0,
+            bottomOpacity: namedArgs.containsKey('bottomOpacity')
+                ? namedArgs['bottomOpacity']
+                : 1.0,
+            toolbarHeight: namedArgs.containsKey('toolbarHeight')
+                ? namedArgs['toolbarHeight']
+                : null,
+            leadingWidth: namedArgs.containsKey('leadingWidth')
+                ? namedArgs['leadingWidth']
+                : null,
+            backwardsCompatibility: namedArgs.containsKey('backwardsCompatibility')
+                ? namedArgs['backwardsCompatibility']
+                : null,
             toolbarTextStyle: namedArgs.containsKey('toolbarTextStyle') ? namedArgs['toolbarTextStyle'] : null,
             titleTextStyle: namedArgs.containsKey('titleTextStyle') ? namedArgs['titleTextStyle'] : null,
             systemOverlayStyle: namedArgs.containsKey('systemOverlayStyle') ? namedArgs['systemOverlayStyle'] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -58,7 +97,7 @@ extension AppBarBinding on AppBar {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('AppBar');
+        return const HTType('AppBar');
       case 'leading':
         return leading;
       case 'automaticallyImplyLeading':
@@ -126,25 +165,37 @@ extension AppBarBinding on AppBar {
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'toStringShallow':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
-            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            joiner:
+                namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -158,46 +209,84 @@ class SliverAppBarAutoBinding extends HTExternalClass {
       case 'SliverAppBar':
         return ({positionalArgs, namedArgs, typeArgs}) => SliverAppBar(
             key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
-            leading: namedArgs.containsKey('leading') ? namedArgs['leading'] : null,
+            leading:
+                namedArgs.containsKey('leading') ? namedArgs['leading'] : null,
             automaticallyImplyLeading:
-                namedArgs.containsKey('automaticallyImplyLeading') ? namedArgs['automaticallyImplyLeading'] : true,
+                namedArgs.containsKey('automaticallyImplyLeading')
+                    ? namedArgs['automaticallyImplyLeading']
+                    : true,
             title: namedArgs.containsKey('title') ? namedArgs['title'] : null,
-            actions: namedArgs.containsKey('actions') ? List<Widget>.from(namedArgs['actions']) : null,
-            flexibleSpace: namedArgs.containsKey('flexibleSpace') ? namedArgs['flexibleSpace'] : null,
-            bottom: namedArgs.containsKey('bottom') ? namedArgs['bottom'] : null,
-            elevation: namedArgs.containsKey('elevation') ? namedArgs['elevation'] : null,
-            shadowColor: namedArgs.containsKey('shadowColor') ? namedArgs['shadowColor'] : null,
-            forceElevated: namedArgs.containsKey('forceElevated') ? namedArgs['forceElevated'] : false,
-            backgroundColor: namedArgs.containsKey('backgroundColor') ? namedArgs['backgroundColor'] : null,
-            foregroundColor: namedArgs.containsKey('foregroundColor') ? namedArgs['foregroundColor'] : null,
-            brightness: namedArgs.containsKey('brightness') ? namedArgs['brightness'] : null,
-            iconTheme: namedArgs.containsKey('iconTheme') ? namedArgs['iconTheme'] : null,
-            actionsIconTheme: namedArgs.containsKey('actionsIconTheme') ? namedArgs['actionsIconTheme'] : null,
-            textTheme: namedArgs.containsKey('textTheme') ? namedArgs['textTheme'] : null,
-            primary: namedArgs.containsKey('primary') ? namedArgs['primary'] : true,
-            centerTitle: namedArgs.containsKey('centerTitle') ? namedArgs['centerTitle'] : null,
-            excludeHeaderSemantics:
-                namedArgs.containsKey('excludeHeaderSemantics') ? namedArgs['excludeHeaderSemantics'] : false,
-            titleSpacing: namedArgs.containsKey('titleSpacing') ? namedArgs['titleSpacing'] : null,
-            collapsedHeight: namedArgs.containsKey('collapsedHeight') ? namedArgs['collapsedHeight'] : null,
-            expandedHeight: namedArgs.containsKey('expandedHeight') ? namedArgs['expandedHeight'] : null,
-            floating: namedArgs.containsKey('floating') ? namedArgs['floating'] : false,
-            pinned: namedArgs.containsKey('pinned') ? namedArgs['pinned'] : false,
+            actions: namedArgs.containsKey('actions')
+                ? List<Widget>.from(namedArgs['actions'])
+                : null,
+            flexibleSpace: namedArgs.containsKey('flexibleSpace')
+                ? namedArgs['flexibleSpace']
+                : null,
+            bottom:
+                namedArgs.containsKey('bottom') ? namedArgs['bottom'] : null,
+            elevation: namedArgs.containsKey('elevation')
+                ? namedArgs['elevation']
+                : null,
+            shadowColor: namedArgs.containsKey('shadowColor')
+                ? namedArgs['shadowColor']
+                : null,
+            forceElevated: namedArgs.containsKey('forceElevated')
+                ? namedArgs['forceElevated']
+                : false,
+            backgroundColor: namedArgs.containsKey('backgroundColor')
+                ? namedArgs['backgroundColor']
+                : null,
+            foregroundColor: namedArgs.containsKey('foregroundColor')
+                ? namedArgs['foregroundColor']
+                : null,
+            brightness: namedArgs.containsKey('brightness')
+                ? namedArgs['brightness']
+                : null,
+            iconTheme: namedArgs.containsKey('iconTheme')
+                ? namedArgs['iconTheme']
+                : null,
+            actionsIconTheme: namedArgs.containsKey('actionsIconTheme')
+                ? namedArgs['actionsIconTheme']
+                : null,
+            textTheme: namedArgs.containsKey('textTheme')
+                ? namedArgs['textTheme']
+                : null,
+            primary:
+                namedArgs.containsKey('primary') ? namedArgs['primary'] : true,
+            centerTitle: namedArgs.containsKey('centerTitle')
+                ? namedArgs['centerTitle']
+                : null,
+            excludeHeaderSemantics: namedArgs.containsKey('excludeHeaderSemantics')
+                ? namedArgs['excludeHeaderSemantics']
+                : false,
+            titleSpacing: namedArgs.containsKey('titleSpacing')
+                ? namedArgs['titleSpacing']
+                : null,
+            collapsedHeight: namedArgs.containsKey('collapsedHeight')
+                ? namedArgs['collapsedHeight']
+                : null,
+            expandedHeight: namedArgs.containsKey('expandedHeight')
+                ? namedArgs['expandedHeight']
+                : null,
+            floating: namedArgs.containsKey('floating')
+                ? namedArgs['floating']
+                : false,
+            pinned:
+                namedArgs.containsKey('pinned') ? namedArgs['pinned'] : false,
             snap: namedArgs.containsKey('snap') ? namedArgs['snap'] : false,
-            stretch: namedArgs.containsKey('stretch') ? namedArgs['stretch'] : false,
-            stretchTriggerOffset:
-                namedArgs.containsKey('stretchTriggerOffset') ? namedArgs['stretchTriggerOffset'] : 100.0,
+            stretch:
+                namedArgs.containsKey('stretch') ? namedArgs['stretch'] : false,
+            stretchTriggerOffset: namedArgs.containsKey('stretchTriggerOffset') ? namedArgs['stretchTriggerOffset'] : 100.0,
             onStretchTrigger: namedArgs.containsKey('onStretchTrigger') ? namedArgs['onStretchTrigger'] : null,
             shape: namedArgs.containsKey('shape') ? namedArgs['shape'] : null,
             toolbarHeight: namedArgs.containsKey('toolbarHeight') ? namedArgs['toolbarHeight'] : kToolbarHeight,
             leadingWidth: namedArgs.containsKey('leadingWidth') ? namedArgs['leadingWidth'] : null,
-            backwardsCompatibility:
-                namedArgs.containsKey('backwardsCompatibility') ? namedArgs['backwardsCompatibility'] : true,
+            backwardsCompatibility: namedArgs.containsKey('backwardsCompatibility') ? namedArgs['backwardsCompatibility'] : true,
             toolbarTextStyle: namedArgs.containsKey('toolbarTextStyle') ? namedArgs['toolbarTextStyle'] : null,
             titleTextStyle: namedArgs.containsKey('titleTextStyle') ? namedArgs['titleTextStyle'] : null,
             systemOverlayStyle: namedArgs.containsKey('systemOverlayStyle') ? namedArgs['systemOverlayStyle'] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -208,8 +297,8 @@ class SliverAppBarAutoBinding extends HTExternalClass {
 
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'AsyncCallback': (HTFunction function) =>
-          () => function.call(positionalArgs: const [], namedArgs: const {}) as Future<void>,
+      'AsyncCallback': (HTFunction function) => () => function
+          .call(positionalArgs: const [], namedArgs: const {}) as Future<void>,
     };
   }
 }
@@ -218,7 +307,7 @@ extension SliverAppBarBinding on SliverAppBar {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('SliverAppBar');
+        return const HTType('SliverAppBar');
       case 'leading':
         return leading;
       case 'automaticallyImplyLeading':
@@ -298,25 +387,37 @@ extension SliverAppBarBinding on SliverAppBar {
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'toStringShallow':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
-            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            joiner:
+                namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

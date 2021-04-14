@@ -8,16 +8,19 @@ class FractionalOffsetAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'FractionalOffset':
-        return ({positionalArgs, namedArgs, typeArgs}) => FractionalOffset(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            FractionalOffset(positionalArgs[0], positionalArgs[1]);
       case 'FractionalOffset.fromOffsetAndSize':
         return ({positionalArgs, namedArgs, typeArgs}) =>
-            FractionalOffset.fromOffsetAndSize(positionalArgs[0], positionalArgs[1]);
+            FractionalOffset.fromOffsetAndSize(
+                positionalArgs[0], positionalArgs[1]);
       case 'FractionalOffset.fromOffsetAndRect':
         return ({positionalArgs, namedArgs, typeArgs}) =>
-            FractionalOffset.fromOffsetAndRect(positionalArgs[0], positionalArgs[1]);
+            FractionalOffset.fromOffsetAndRect(
+                positionalArgs[0], positionalArgs[1]);
       case 'FractionalOffset.lerp':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            FractionalOffset.lerp(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
+        return ({positionalArgs, namedArgs, typeArgs}) => FractionalOffset.lerp(
+            positionalArgs[0], positionalArgs[1], positionalArgs[2]);
       case 'FractionalOffset.topLeft':
         return FractionalOffset.topLeft;
       case 'FractionalOffset.topCenter':
@@ -37,7 +40,7 @@ class FractionalOffsetAutoBinding extends HTExternalClass {
       case 'FractionalOffset.bottomRight':
         return FractionalOffset.bottomRight;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -51,7 +54,7 @@ extension FractionalOffsetBinding on FractionalOffset {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('FractionalOffset');
+        return const HTType('FractionalOffset');
       case 'x':
         return x;
       case 'y':
@@ -65,19 +68,25 @@ extension FractionalOffsetBinding on FractionalOffset {
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       case 'add':
-        return ({positionalArgs, namedArgs, typeArgs}) => add(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            add(positionalArgs[0]);
       case 'alongOffset':
-        return ({positionalArgs, namedArgs, typeArgs}) => alongOffset(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            alongOffset(positionalArgs[0]);
       case 'alongSize':
-        return ({positionalArgs, namedArgs, typeArgs}) => alongSize(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            alongSize(positionalArgs[0]);
       case 'withinRect':
-        return ({positionalArgs, namedArgs, typeArgs}) => withinRect(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            withinRect(positionalArgs[0]);
       case 'inscribe':
-        return ({positionalArgs, namedArgs, typeArgs}) => inscribe(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            inscribe(positionalArgs[0], positionalArgs[1]);
       case 'resolve':
-        return ({positionalArgs, namedArgs, typeArgs}) => resolve(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            resolve(positionalArgs[0]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

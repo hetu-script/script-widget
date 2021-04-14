@@ -14,7 +14,7 @@ class FontStyleAutoBinding extends HTExternalClass {
       case 'FontStyle.italic':
         return FontStyle.italic;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -22,13 +22,14 @@ class FontStyleAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('FontStyle');
+        return const HTType('FontStyle');
       case 'index':
         return (instance as FontStyle).index;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => (instance as FontStyle).toString();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            (instance as FontStyle).toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -54,7 +55,7 @@ class TextAlignAutoBinding extends HTExternalClass {
       case 'TextAlign.end':
         return TextAlign.end;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -62,13 +63,14 @@ class TextAlignAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('TextAlign');
+        return const HTType('TextAlign');
       case 'index':
         return (instance as TextAlign).index;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => (instance as TextAlign).toString();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            (instance as TextAlign).toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -86,7 +88,7 @@ class TextBaselineAutoBinding extends HTExternalClass {
       case 'TextBaseline.ideographic':
         return TextBaseline.ideographic;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -94,13 +96,14 @@ class TextBaselineAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('TextBaseline');
+        return const HTType('TextBaseline');
       case 'index':
         return (instance as TextBaseline).index;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => (instance as TextBaseline).toString();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            (instance as TextBaseline).toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -124,7 +127,7 @@ class TextDecorationStyleAutoBinding extends HTExternalClass {
       case 'TextDecorationStyle.wavy':
         return TextDecorationStyle.wavy;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -132,13 +135,14 @@ class TextDecorationStyleAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('TextDecorationStyle');
+        return const HTType('TextDecorationStyle');
       case 'index':
         return (instance as TextDecorationStyle).index;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => (instance as TextDecorationStyle).toString();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            (instance as TextDecorationStyle).toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -156,7 +160,7 @@ class TextDirectionAutoBinding extends HTExternalClass {
       case 'TextDirection.ltr':
         return TextDirection.ltr;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -164,13 +168,14 @@ class TextDirectionAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('TextDirection');
+        return const HTType('TextDirection');
       case 'index':
         return (instance as TextDirection).index;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => (instance as TextDirection).toString();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            (instance as TextDirection).toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -188,7 +193,7 @@ class TextAffinityAutoBinding extends HTExternalClass {
       case 'TextAffinity.downstream':
         return TextAffinity.downstream;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -196,13 +201,14 @@ class TextAffinityAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('TextAffinity');
+        return const HTType('TextAffinity');
       case 'index':
         return (instance as TextAffinity).index;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => (instance as TextAffinity).toString();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            (instance as TextAffinity).toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -228,7 +234,7 @@ class BoxHeightStyleAutoBinding extends HTExternalClass {
       case 'BoxHeightStyle.strut':
         return BoxHeightStyle.strut;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -236,13 +242,14 @@ class BoxHeightStyleAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('BoxHeightStyle');
+        return const HTType('BoxHeightStyle');
       case 'index':
         return (instance as BoxHeightStyle).index;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => (instance as BoxHeightStyle).toString();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            (instance as BoxHeightStyle).toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -260,7 +267,7 @@ class BoxWidthStyleAutoBinding extends HTExternalClass {
       case 'BoxWidthStyle.max':
         return BoxWidthStyle.max;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -268,13 +275,14 @@ class BoxWidthStyleAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('BoxWidthStyle');
+        return const HTType('BoxWidthStyle');
       case 'index':
         return (instance as BoxWidthStyle).index;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => (instance as BoxWidthStyle).toString();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            (instance as BoxWidthStyle).toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -300,7 +308,7 @@ class PlaceholderAlignmentAutoBinding extends HTExternalClass {
       case 'PlaceholderAlignment.middle':
         return PlaceholderAlignment.middle;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -308,13 +316,14 @@ class PlaceholderAlignmentAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('PlaceholderAlignment');
+        return const HTType('PlaceholderAlignment');
       case 'index':
         return (instance as PlaceholderAlignment).index;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => (instance as PlaceholderAlignment).toString();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            (instance as PlaceholderAlignment).toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -326,8 +335,8 @@ class FontWeightAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'FontWeight.lerp':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            FontWeight.lerp(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
+        return ({positionalArgs, namedArgs, typeArgs}) => FontWeight.lerp(
+            positionalArgs[0], positionalArgs[1], positionalArgs[2]);
       case 'FontWeight.w100':
         return FontWeight.w100;
       case 'FontWeight.w200':
@@ -353,7 +362,7 @@ class FontWeightAutoBinding extends HTExternalClass {
       case 'FontWeight.values':
         return FontWeight.values;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -365,26 +374,35 @@ class FontFeatureAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'FontFeature':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            FontFeature(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : 1);
+        return ({positionalArgs, namedArgs, typeArgs}) => FontFeature(
+            positionalArgs[0],
+            positionalArgs.length > 1 ? positionalArgs[1] : 1);
       case 'FontFeature.enable':
-        return ({positionalArgs, namedArgs, typeArgs}) => FontFeature.enable(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            FontFeature.enable(positionalArgs[0]);
       case 'FontFeature.disable':
-        return ({positionalArgs, namedArgs, typeArgs}) => FontFeature.disable(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            FontFeature.disable(positionalArgs[0]);
       case 'FontFeature.randomize':
-        return ({positionalArgs, namedArgs, typeArgs}) => FontFeature.randomize();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            FontFeature.randomize();
       case 'FontFeature.stylisticSet':
-        return ({positionalArgs, namedArgs, typeArgs}) => FontFeature.stylisticSet(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            FontFeature.stylisticSet(positionalArgs[0]);
       case 'FontFeature.slashedZero':
-        return ({positionalArgs, namedArgs, typeArgs}) => FontFeature.slashedZero();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            FontFeature.slashedZero();
       case 'FontFeature.oldstyleFigures':
-        return ({positionalArgs, namedArgs, typeArgs}) => FontFeature.oldstyleFigures();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            FontFeature.oldstyleFigures();
       case 'FontFeature.proportionalFigures':
-        return ({positionalArgs, namedArgs, typeArgs}) => FontFeature.proportionalFigures();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            FontFeature.proportionalFigures();
       case 'FontFeature.tabularFigures':
-        return ({positionalArgs, namedArgs, typeArgs}) => FontFeature.tabularFigures();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            FontFeature.tabularFigures();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -398,7 +416,7 @@ extension FontFeatureBinding on FontFeature {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('FontFeature');
+        return const HTType('FontFeature');
       case 'feature':
         return feature;
       case 'value':
@@ -408,7 +426,7 @@ extension FontFeatureBinding on FontFeature {
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -421,7 +439,8 @@ class TextDecorationAutoBinding extends HTExternalClass {
     switch (varName) {
       case 'TextDecoration.combine':
         return ({positionalArgs, namedArgs, typeArgs}) =>
-            TextDecoration.combine(List<TextDecoration>.from(positionalArgs[0]));
+            TextDecoration.combine(
+                List<TextDecoration>.from(positionalArgs[0]));
       case 'TextDecoration.none':
         return TextDecoration.none;
       case 'TextDecoration.underline':
@@ -431,7 +450,7 @@ class TextDecorationAutoBinding extends HTExternalClass {
       case 'TextDecoration.lineThrough':
         return TextDecoration.lineThrough;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -445,15 +464,16 @@ extension TextDecorationBinding on TextDecoration {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('TextDecoration');
+        return const HTType('TextDecoration');
       case 'hashCode':
         return hashCode;
       case 'contains':
-        return ({positionalArgs, namedArgs, typeArgs}) => contains(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            contains(positionalArgs[0]);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -467,13 +487,18 @@ class TextHeightBehaviorAutoBinding extends HTExternalClass {
       case 'TextHeightBehavior':
         return ({positionalArgs, namedArgs, typeArgs}) => TextHeightBehavior(
             applyHeightToFirstAscent:
-                namedArgs.containsKey('applyHeightToFirstAscent') ? namedArgs['applyHeightToFirstAscent'] : true,
+                namedArgs.containsKey('applyHeightToFirstAscent')
+                    ? namedArgs['applyHeightToFirstAscent']
+                    : true,
             applyHeightToLastDescent:
-                namedArgs.containsKey('applyHeightToLastDescent') ? namedArgs['applyHeightToLastDescent'] : true);
+                namedArgs.containsKey('applyHeightToLastDescent')
+                    ? namedArgs['applyHeightToLastDescent']
+                    : true);
       case 'TextHeightBehavior.fromEncoded':
-        return ({positionalArgs, namedArgs, typeArgs}) => TextHeightBehavior.fromEncoded(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            TextHeightBehavior.fromEncoded(positionalArgs[0]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -487,7 +512,7 @@ extension TextHeightBehaviorBinding on TextHeightBehavior {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('TextHeightBehavior');
+        return const HTType('TextHeightBehavior');
       case 'applyHeightToFirstAscent':
         return applyHeightToFirstAscent;
       case 'applyHeightToLastDescent':
@@ -499,7 +524,7 @@ extension TextHeightBehaviorBinding on TextHeightBehavior {
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -512,20 +537,42 @@ class ParagraphStyleAutoBinding extends HTExternalClass {
     switch (varName) {
       case 'ParagraphStyle':
         return ({positionalArgs, namedArgs, typeArgs}) => ParagraphStyle(
-            textAlign: namedArgs.containsKey('textAlign') ? namedArgs['textAlign'] : null,
-            textDirection: namedArgs.containsKey('textDirection') ? namedArgs['textDirection'] : null,
-            maxLines: namedArgs.containsKey('maxLines') ? namedArgs['maxLines'] : null,
-            fontFamily: namedArgs.containsKey('fontFamily') ? namedArgs['fontFamily'] : null,
-            fontSize: namedArgs.containsKey('fontSize') ? namedArgs['fontSize'] : null,
-            height: namedArgs.containsKey('height') ? namedArgs['height'] : null,
-            textHeightBehavior: namedArgs.containsKey('textHeightBehavior') ? namedArgs['textHeightBehavior'] : null,
-            fontWeight: namedArgs.containsKey('fontWeight') ? namedArgs['fontWeight'] : null,
-            fontStyle: namedArgs.containsKey('fontStyle') ? namedArgs['fontStyle'] : null,
-            strutStyle: namedArgs.containsKey('strutStyle') ? namedArgs['strutStyle'] : null,
-            ellipsis: namedArgs.containsKey('ellipsis') ? namedArgs['ellipsis'] : null,
-            locale: namedArgs.containsKey('locale') ? namedArgs['locale'] : null);
+            textAlign: namedArgs.containsKey('textAlign')
+                ? namedArgs['textAlign']
+                : null,
+            textDirection: namedArgs.containsKey('textDirection')
+                ? namedArgs['textDirection']
+                : null,
+            maxLines: namedArgs.containsKey('maxLines')
+                ? namedArgs['maxLines']
+                : null,
+            fontFamily: namedArgs.containsKey('fontFamily')
+                ? namedArgs['fontFamily']
+                : null,
+            fontSize: namedArgs.containsKey('fontSize')
+                ? namedArgs['fontSize']
+                : null,
+            height:
+                namedArgs.containsKey('height') ? namedArgs['height'] : null,
+            textHeightBehavior: namedArgs.containsKey('textHeightBehavior')
+                ? namedArgs['textHeightBehavior']
+                : null,
+            fontWeight: namedArgs.containsKey('fontWeight')
+                ? namedArgs['fontWeight']
+                : null,
+            fontStyle: namedArgs.containsKey('fontStyle')
+                ? namedArgs['fontStyle']
+                : null,
+            strutStyle: namedArgs.containsKey('strutStyle')
+                ? namedArgs['strutStyle']
+                : null,
+            ellipsis: namedArgs.containsKey('ellipsis')
+                ? namedArgs['ellipsis']
+                : null,
+            locale:
+                namedArgs.containsKey('locale') ? namedArgs['locale'] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -539,13 +586,13 @@ extension ParagraphStyleBinding on ParagraphStyle {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('ParagraphStyle');
+        return const HTType('ParagraphStyle');
       case 'hashCode':
         return hashCode;
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -558,9 +605,13 @@ class TextBoxAutoBinding extends HTExternalClass {
     switch (varName) {
       case 'TextBox.fromLTRBD':
         return ({positionalArgs, namedArgs, typeArgs}) => TextBox.fromLTRBD(
-            positionalArgs[0], positionalArgs[1], positionalArgs[2], positionalArgs[3], positionalArgs[4]);
+            positionalArgs[0],
+            positionalArgs[1],
+            positionalArgs[2],
+            positionalArgs[3],
+            positionalArgs[4]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -574,7 +625,7 @@ extension TextBoxBinding on TextBox {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('TextBox');
+        return const HTType('TextBox');
       case 'left':
         return left;
       case 'top':
@@ -596,7 +647,7 @@ extension TextBoxBinding on TextBox {
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -610,9 +661,11 @@ class TextPositionAutoBinding extends HTExternalClass {
       case 'TextPosition':
         return ({positionalArgs, namedArgs, typeArgs}) => TextPosition(
             offset: namedArgs['offset'],
-            affinity: namedArgs.containsKey('affinity') ? namedArgs['affinity'] : TextAffinity.downstream);
+            affinity: namedArgs.containsKey('affinity')
+                ? namedArgs['affinity']
+                : TextAffinity.downstream);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -626,7 +679,7 @@ extension TextPositionBinding on TextPosition {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('TextPosition');
+        return const HTType('TextPosition');
       case 'offset':
         return offset;
       case 'affinity':
@@ -636,7 +689,7 @@ extension TextPositionBinding on TextPosition {
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -648,13 +701,15 @@ class TextRangeAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'TextRange':
-        return ({positionalArgs, namedArgs, typeArgs}) => TextRange(start: namedArgs['start'], end: namedArgs['end']);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            TextRange(start: namedArgs['start'], end: namedArgs['end']);
       case 'TextRange.collapsed':
-        return ({positionalArgs, namedArgs, typeArgs}) => TextRange.collapsed(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            TextRange.collapsed(positionalArgs[0]);
       case 'TextRange.empty':
         return TextRange.empty;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -668,7 +723,7 @@ extension TextRangeBinding on TextRange {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('TextRange');
+        return const HTType('TextRange');
       case 'start':
         return start;
       case 'end':
@@ -682,15 +737,18 @@ extension TextRangeBinding on TextRange {
       case 'hashCode':
         return hashCode;
       case 'textBefore':
-        return ({positionalArgs, namedArgs, typeArgs}) => textBefore(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            textBefore(positionalArgs[0]);
       case 'textAfter':
-        return ({positionalArgs, namedArgs, typeArgs}) => textAfter(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            textAfter(positionalArgs[0]);
       case 'textInside':
-        return ({positionalArgs, namedArgs, typeArgs}) => textInside(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            textInside(positionalArgs[0]);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -702,9 +760,10 @@ class ParagraphConstraintsAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'ParagraphConstraints':
-        return ({positionalArgs, namedArgs, typeArgs}) => ParagraphConstraints(width: namedArgs['width']);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            ParagraphConstraints(width: namedArgs['width']);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -718,7 +777,7 @@ extension ParagraphConstraintsBinding on ParagraphConstraints {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('ParagraphConstraints');
+        return const HTType('ParagraphConstraints');
       case 'width':
         return width;
       case 'hashCode':
@@ -726,7 +785,7 @@ extension ParagraphConstraintsBinding on ParagraphConstraints {
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -749,7 +808,7 @@ class LineMetricsAutoBinding extends HTExternalClass {
             baseline: namedArgs['baseline'],
             lineNumber: namedArgs['lineNumber']);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -763,7 +822,7 @@ extension LineMetricsBinding on LineMetrics {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('LineMetrics');
+        return const HTType('LineMetrics');
       case 'hardBreak':
         return hardBreak;
       case 'ascent':
@@ -787,7 +846,7 @@ extension LineMetricsBinding on LineMetrics {
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -799,9 +858,10 @@ class ParagraphBuilderAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'ParagraphBuilder':
-        return ({positionalArgs, namedArgs, typeArgs}) => ParagraphBuilder(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            ParagraphBuilder(positionalArgs[0]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -815,27 +875,33 @@ extension ParagraphBuilderBinding on ParagraphBuilder {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('ParagraphBuilder');
+        return const HTType('ParagraphBuilder');
       case 'placeholderCount':
         return placeholderCount;
       case 'placeholderScales':
         return placeholderScales;
       case 'pushStyle':
-        return ({positionalArgs, namedArgs, typeArgs}) => pushStyle(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            pushStyle(positionalArgs[0]);
       case 'pop':
         return ({positionalArgs, namedArgs, typeArgs}) => pop();
       case 'addText':
-        return ({positionalArgs, namedArgs, typeArgs}) => addText(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            addText(positionalArgs[0]);
       case 'addPlaceholder':
         return ({positionalArgs, namedArgs, typeArgs}) => addPlaceholder(
             positionalArgs[0], positionalArgs[1], positionalArgs[2],
             scale: namedArgs.containsKey('scale') ? namedArgs['scale'] : 1.0,
-            baselineOffset: namedArgs.containsKey('baselineOffset') ? namedArgs['baselineOffset'] : null,
-            baseline: namedArgs.containsKey('baseline') ? namedArgs['baseline'] : null);
+            baselineOffset: namedArgs.containsKey('baselineOffset')
+                ? namedArgs['baselineOffset']
+                : null,
+            baseline: namedArgs.containsKey('baseline')
+                ? namedArgs['baseline']
+                : null);
       case 'build':
         return ({positionalArgs, namedArgs, typeArgs}) => build();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

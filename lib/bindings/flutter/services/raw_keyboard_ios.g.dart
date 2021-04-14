@@ -9,11 +9,18 @@ class RawKeyEventDataIosAutoBinding extends HTExternalClass {
     switch (varName) {
       case 'RawKeyEventDataIos':
         return ({positionalArgs, namedArgs, typeArgs}) => RawKeyEventDataIos(
-            characters: namedArgs.containsKey('characters') ? namedArgs['characters'] : '',
+            characters: namedArgs.containsKey('characters')
+                ? namedArgs['characters']
+                : '',
             charactersIgnoringModifiers:
-                namedArgs.containsKey('charactersIgnoringModifiers') ? namedArgs['charactersIgnoringModifiers'] : '',
-            keyCode: namedArgs.containsKey('keyCode') ? namedArgs['keyCode'] : 0,
-            modifiers: namedArgs.containsKey('modifiers') ? namedArgs['modifiers'] : 0);
+                namedArgs.containsKey('charactersIgnoringModifiers')
+                    ? namedArgs['charactersIgnoringModifiers']
+                    : '',
+            keyCode:
+                namedArgs.containsKey('keyCode') ? namedArgs['keyCode'] : 0,
+            modifiers: namedArgs.containsKey('modifiers')
+                ? namedArgs['modifiers']
+                : 0);
       case 'RawKeyEventDataIos.modifierCapsLock':
         return RawKeyEventDataIos.modifierCapsLock;
       case 'RawKeyEventDataIos.modifierShift':
@@ -49,7 +56,7 @@ class RawKeyEventDataIosAutoBinding extends HTExternalClass {
       case 'RawKeyEventDataIos.deviceIndependentMask':
         return RawKeyEventDataIos.deviceIndependentMask;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -63,7 +70,7 @@ extension RawKeyEventDataIosBinding on RawKeyEventDataIos {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('RawKeyEventDataIos');
+        return const HTType('RawKeyEventDataIos');
       case 'characters':
         return characters;
       case 'charactersIgnoringModifiers':
@@ -89,14 +96,18 @@ extension RawKeyEventDataIosBinding on RawKeyEventDataIos {
       case 'modifiersPressed':
         return modifiersPressed;
       case 'isModifierPressed':
-        return ({positionalArgs, namedArgs, typeArgs}) => isModifierPressed(positionalArgs[0],
-            side: namedArgs.containsKey('side') ? namedArgs['side'] : KeyboardSide.any);
+        return ({positionalArgs, namedArgs, typeArgs}) => isModifierPressed(
+            positionalArgs[0],
+            side: namedArgs.containsKey('side')
+                ? namedArgs['side']
+                : KeyboardSide.any);
       case 'getModifierSide':
-        return ({positionalArgs, namedArgs, typeArgs}) => getModifierSide(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            getModifierSide(positionalArgs[0]);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

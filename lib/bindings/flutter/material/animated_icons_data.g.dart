@@ -36,7 +36,7 @@ class AnimatedIconsAutoBinding extends HTExternalClass {
       case 'AnimatedIcons.view_list':
         return AnimatedIcons.view_list;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

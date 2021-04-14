@@ -8,13 +8,22 @@ class ClampedSimulationAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'ClampedSimulation':
-        return ({positionalArgs, namedArgs, typeArgs}) => ClampedSimulation(positionalArgs[0],
-            xMin: namedArgs.containsKey('xMin') ? namedArgs['xMin'] : double.negativeInfinity,
-            xMax: namedArgs.containsKey('xMax') ? namedArgs['xMax'] : double.infinity,
-            dxMin: namedArgs.containsKey('dxMin') ? namedArgs['dxMin'] : double.negativeInfinity,
-            dxMax: namedArgs.containsKey('dxMax') ? namedArgs['dxMax'] : double.infinity);
+        return ({positionalArgs, namedArgs, typeArgs}) => ClampedSimulation(
+            positionalArgs[0],
+            xMin: namedArgs.containsKey('xMin')
+                ? namedArgs['xMin']
+                : double.negativeInfinity,
+            xMax: namedArgs.containsKey('xMax')
+                ? namedArgs['xMax']
+                : double.infinity,
+            dxMin: namedArgs.containsKey('dxMin')
+                ? namedArgs['dxMin']
+                : double.negativeInfinity,
+            dxMax: namedArgs.containsKey('dxMax')
+                ? namedArgs['dxMax']
+                : double.infinity);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -33,7 +42,7 @@ extension ClampedSimulationBinding on ClampedSimulation {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('ClampedSimulation');
+        return const HTType('ClampedSimulation');
       case 'simulation':
         return simulation;
       case 'xMin':
@@ -51,11 +60,12 @@ extension ClampedSimulationBinding on ClampedSimulation {
       case 'dx':
         return ({positionalArgs, namedArgs, typeArgs}) => dx(positionalArgs[0]);
       case 'isDone':
-        return ({positionalArgs, namedArgs, typeArgs}) => isDone(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            isDone(positionalArgs[0]);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -65,7 +75,7 @@ extension ClampedSimulationBinding on ClampedSimulation {
         tolerance = value;
         break;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

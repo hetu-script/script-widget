@@ -14,7 +14,7 @@ class DragAnchorAutoBinding extends HTExternalClass {
       case 'DragAnchor.pointer':
         return DragAnchor.pointer;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -22,13 +22,14 @@ class DragAnchorAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('DragAnchor');
+        return const HTType('DragAnchor');
       case 'index':
         return (instance as DragAnchor).index;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => (instance as DragAnchor).toString();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            (instance as DragAnchor).toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -41,11 +42,13 @@ class DraggableDetailsAutoBinding extends HTExternalClass {
     switch (varName) {
       case 'DraggableDetails':
         return ({positionalArgs, namedArgs, typeArgs}) => DraggableDetails(
-            wasAccepted: namedArgs.containsKey('wasAccepted') ? namedArgs['wasAccepted'] : false,
+            wasAccepted: namedArgs.containsKey('wasAccepted')
+                ? namedArgs['wasAccepted']
+                : false,
             velocity: namedArgs['velocity'],
             offset: namedArgs['offset']);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -59,7 +62,7 @@ extension DraggableDetailsBinding on DraggableDetails {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('DraggableDetails');
+        return const HTType('DraggableDetails');
       case 'wasAccepted':
         return wasAccepted;
       case 'velocity':
@@ -67,7 +70,7 @@ extension DraggableDetailsBinding on DraggableDetails {
       case 'offset':
         return offset;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

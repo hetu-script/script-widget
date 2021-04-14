@@ -10,7 +10,7 @@ class SystemEncodingAutoBinding extends HTExternalClass {
       case 'SystemEncoding':
         return ({positionalArgs, namedArgs, typeArgs}) => SystemEncoding();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -24,7 +24,7 @@ extension SystemEncodingBinding on SystemEncoding {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('SystemEncoding');
+        return const HTType('SystemEncoding');
       case 'name':
         return name;
       case 'encoder':
@@ -32,13 +32,16 @@ extension SystemEncodingBinding on SystemEncoding {
       case 'decoder':
         return decoder;
       case 'encode':
-        return ({positionalArgs, namedArgs, typeArgs}) => encode(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            encode(positionalArgs[0]);
       case 'decode':
-        return ({positionalArgs, namedArgs, typeArgs}) => decode(List<int>.from(positionalArgs[0]));
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            decode(List<int>.from(positionalArgs[0]));
       case 'decodeStream':
-        return ({positionalArgs, namedArgs, typeArgs}) => decodeStream(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            decodeStream(positionalArgs[0]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

@@ -12,16 +12,24 @@ class TextSelectionAutoBinding extends HTExternalClass {
         return ({positionalArgs, namedArgs, typeArgs}) => TextSelection(
             baseOffset: namedArgs['baseOffset'],
             extentOffset: namedArgs['extentOffset'],
-            affinity: namedArgs.containsKey('affinity') ? namedArgs['affinity'] : TextAffinity.downstream,
-            isDirectional: namedArgs.containsKey('isDirectional') ? namedArgs['isDirectional'] : false);
+            affinity: namedArgs.containsKey('affinity')
+                ? namedArgs['affinity']
+                : TextAffinity.downstream,
+            isDirectional: namedArgs.containsKey('isDirectional')
+                ? namedArgs['isDirectional']
+                : false);
       case 'TextSelection.collapsed':
-        return ({positionalArgs, namedArgs, typeArgs}) => TextSelection.collapsed(
-            offset: namedArgs['offset'],
-            affinity: namedArgs.containsKey('affinity') ? namedArgs['affinity'] : TextAffinity.downstream);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            TextSelection.collapsed(
+                offset: namedArgs['offset'],
+                affinity: namedArgs.containsKey('affinity')
+                    ? namedArgs['affinity']
+                    : TextAffinity.downstream);
       case 'TextSelection.fromPosition':
-        return ({positionalArgs, namedArgs, typeArgs}) => TextSelection.fromPosition(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            TextSelection.fromPosition(positionalArgs[0]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -35,7 +43,7 @@ extension TextSelectionBinding on TextSelection {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('TextSelection');
+        return const HTType('TextSelection');
       case 'baseOffset':
         return baseOffset;
       case 'extentOffset':
@@ -64,18 +72,29 @@ extension TextSelectionBinding on TextSelection {
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       case 'copyWith':
         return ({positionalArgs, namedArgs, typeArgs}) => copyWith(
-            baseOffset: namedArgs.containsKey('baseOffset') ? namedArgs['baseOffset'] : null,
-            extentOffset: namedArgs.containsKey('extentOffset') ? namedArgs['extentOffset'] : null,
-            affinity: namedArgs.containsKey('affinity') ? namedArgs['affinity'] : null,
-            isDirectional: namedArgs.containsKey('isDirectional') ? namedArgs['isDirectional'] : null);
+            baseOffset: namedArgs.containsKey('baseOffset')
+                ? namedArgs['baseOffset']
+                : null,
+            extentOffset: namedArgs.containsKey('extentOffset')
+                ? namedArgs['extentOffset']
+                : null,
+            affinity: namedArgs.containsKey('affinity')
+                ? namedArgs['affinity']
+                : null,
+            isDirectional: namedArgs.containsKey('isDirectional')
+                ? namedArgs['isDirectional']
+                : null);
       case 'textBefore':
-        return ({positionalArgs, namedArgs, typeArgs}) => textBefore(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            textBefore(positionalArgs[0]);
       case 'textAfter':
-        return ({positionalArgs, namedArgs, typeArgs}) => textAfter(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            textAfter(positionalArgs[0]);
       case 'textInside':
-        return ({positionalArgs, namedArgs, typeArgs}) => textInside(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            textInside(positionalArgs[0]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

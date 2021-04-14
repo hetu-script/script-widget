@@ -10,9 +10,12 @@ class CupertinoTabControllerAutoBinding extends HTExternalClass {
     switch (varName) {
       case 'CupertinoTabController':
         return ({positionalArgs, namedArgs, typeArgs}) =>
-            CupertinoTabController(initialIndex: namedArgs.containsKey('initialIndex') ? namedArgs['initialIndex'] : 0);
+            CupertinoTabController(
+                initialIndex: namedArgs.containsKey('initialIndex')
+                    ? namedArgs['initialIndex']
+                    : 0);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -28,7 +31,8 @@ class CupertinoTabControllerAutoBinding extends HTExternalClass {
 
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'VoidCallback': (HTFunction function) => () => function.call(positionalArgs: const [], namedArgs: const {}),
+      'VoidCallback': (HTFunction function) =>
+          () => function.call(positionalArgs: const [], namedArgs: const {}),
     };
   }
 }
@@ -37,17 +41,19 @@ extension CupertinoTabControllerBinding on CupertinoTabController {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('CupertinoTabController');
+        return const HTType('CupertinoTabController');
       case 'index':
         return index;
       case 'dispose':
         return ({positionalArgs, namedArgs, typeArgs}) => dispose();
       case 'addListener':
-        return ({positionalArgs, namedArgs, typeArgs}) => addListener(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            addListener(positionalArgs[0]);
       case 'removeListener':
-        return ({positionalArgs, namedArgs, typeArgs}) => removeListener(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            removeListener(positionalArgs[0]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -57,7 +63,7 @@ extension CupertinoTabControllerBinding on CupertinoTabController {
         index = value;
         break;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -73,13 +79,21 @@ class CupertinoTabScaffoldAutoBinding extends HTExternalClass {
             key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
             tabBar: namedArgs['tabBar'],
             tabBuilder: namedArgs['tabBuilder'],
-            controller: namedArgs.containsKey('controller') ? namedArgs['controller'] : null,
-            backgroundColor: namedArgs.containsKey('backgroundColor') ? namedArgs['backgroundColor'] : null,
+            controller: namedArgs.containsKey('controller')
+                ? namedArgs['controller']
+                : null,
+            backgroundColor: namedArgs.containsKey('backgroundColor')
+                ? namedArgs['backgroundColor']
+                : null,
             resizeToAvoidBottomInset:
-                namedArgs.containsKey('resizeToAvoidBottomInset') ? namedArgs['resizeToAvoidBottomInset'] : true,
-            restorationId: namedArgs.containsKey('restorationId') ? namedArgs['restorationId'] : null);
+                namedArgs.containsKey('resizeToAvoidBottomInset')
+                    ? namedArgs['resizeToAvoidBottomInset']
+                    : true,
+            restorationId: namedArgs.containsKey('restorationId')
+                ? namedArgs['restorationId']
+                : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -90,8 +104,9 @@ class CupertinoTabScaffoldAutoBinding extends HTExternalClass {
 
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'IndexedWidgetBuilder': (HTFunction function) =>
-          (context, index) => function.call(positionalArgs: [context, index], namedArgs: const {}) as Widget,
+      'IndexedWidgetBuilder': (HTFunction function) => (context, index) =>
+          function.call(positionalArgs: [context, index], namedArgs: const {})
+              as Widget,
     };
   }
 }
@@ -100,7 +115,7 @@ extension CupertinoTabScaffoldBinding on CupertinoTabScaffold {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('CupertinoTabScaffold');
+        return const HTType('CupertinoTabScaffold');
       case 'tabBar':
         return tabBar;
       case 'controller':
@@ -124,40 +139,56 @@ extension CupertinoTabScaffoldBinding on CupertinoTabScaffold {
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'toStringShallow':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
-            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            joiner:
+                namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
 
 class RestorableCupertinoTabControllerAutoBinding extends HTExternalClass {
-  RestorableCupertinoTabControllerAutoBinding() : super('RestorableCupertinoTabController');
+  RestorableCupertinoTabControllerAutoBinding()
+      : super('RestorableCupertinoTabController');
 
   @override
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'RestorableCupertinoTabController':
-        return ({positionalArgs, namedArgs, typeArgs}) => RestorableCupertinoTabController(
-            initialIndex: namedArgs.containsKey('initialIndex') ? namedArgs['initialIndex'] : 0);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            RestorableCupertinoTabController(
+                initialIndex: namedArgs.containsKey('initialIndex')
+                    ? namedArgs['initialIndex']
+                    : 0);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -168,16 +199,18 @@ class RestorableCupertinoTabControllerAutoBinding extends HTExternalClass {
 
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'VoidCallback': (HTFunction function) => () => function.call(positionalArgs: const [], namedArgs: const {}),
+      'VoidCallback': (HTFunction function) =>
+          () => function.call(positionalArgs: const [], namedArgs: const {}),
     };
   }
 }
 
-extension RestorableCupertinoTabControllerBinding on RestorableCupertinoTabController {
+extension RestorableCupertinoTabControllerBinding
+    on RestorableCupertinoTabController {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('RestorableCupertinoTabController');
+        return const HTType('RestorableCupertinoTabController');
       case 'value':
         return value;
       case 'enabled':
@@ -185,19 +218,23 @@ extension RestorableCupertinoTabControllerBinding on RestorableCupertinoTabContr
       case 'createDefaultValue':
         return ({positionalArgs, namedArgs, typeArgs}) => createDefaultValue();
       case 'fromPrimitives':
-        return ({positionalArgs, namedArgs, typeArgs}) => fromPrimitives(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            fromPrimitives(positionalArgs[0]);
       case 'toPrimitives':
         return ({positionalArgs, namedArgs, typeArgs}) => toPrimitives();
       case 'initWithValue':
-        return ({positionalArgs, namedArgs, typeArgs}) => initWithValue(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            initWithValue(positionalArgs[0]);
       case 'dispose':
         return ({positionalArgs, namedArgs, typeArgs}) => dispose();
       case 'addListener':
-        return ({positionalArgs, namedArgs, typeArgs}) => addListener(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            addListener(positionalArgs[0]);
       case 'removeListener':
-        return ({positionalArgs, namedArgs, typeArgs}) => removeListener(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            removeListener(positionalArgs[0]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

@@ -10,10 +10,12 @@ class LineSplitterAutoBinding extends HTExternalClass {
       case 'LineSplitter':
         return ({positionalArgs, namedArgs, typeArgs}) => LineSplitter();
       case 'LineSplitter.split':
-        return ({positionalArgs, namedArgs, typeArgs}) => LineSplitter.split(positionalArgs[0],
-            positionalArgs.length > 1 ? positionalArgs[1] : 0, positionalArgs.length > 2 ? positionalArgs[2] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => LineSplitter.split(
+            positionalArgs[0],
+            positionalArgs.length > 1 ? positionalArgs[1] : 0,
+            positionalArgs.length > 2 ? positionalArgs[2] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -27,17 +29,20 @@ extension LineSplitterBinding on LineSplitter {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('LineSplitter');
+        return const HTType('LineSplitter');
       case 'convert':
-        return ({positionalArgs, namedArgs, typeArgs}) => convert(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            convert(positionalArgs[0]);
       case 'startChunkedConversion':
-        return ({positionalArgs, namedArgs, typeArgs}) => startChunkedConversion(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            startChunkedConversion(positionalArgs[0]);
       case 'bind':
-        return ({positionalArgs, namedArgs, typeArgs}) => bind(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            bind(positionalArgs[0]);
       case 'cast':
         return ({positionalArgs, namedArgs, typeArgs}) => cast();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

@@ -9,11 +9,14 @@ class ImageSizeInfoAutoBinding extends HTExternalClass {
     switch (varName) {
       case 'ImageSizeInfo':
         return ({positionalArgs, namedArgs, typeArgs}) => ImageSizeInfo(
-            source: namedArgs.containsKey('source') ? namedArgs['source'] : null,
-            displaySize: namedArgs.containsKey('displaySize') ? namedArgs['displaySize'] : null,
+            source:
+                namedArgs.containsKey('source') ? namedArgs['source'] : null,
+            displaySize: namedArgs.containsKey('displaySize')
+                ? namedArgs['displaySize']
+                : null,
             imageSize: namedArgs['imageSize']);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -27,7 +30,7 @@ extension ImageSizeInfoBinding on ImageSizeInfo {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('ImageSizeInfo');
+        return const HTType('ImageSizeInfo');
       case 'source':
         return source;
       case 'displaySize':
@@ -45,7 +48,7 @@ extension ImageSizeInfoBinding on ImageSizeInfo {
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

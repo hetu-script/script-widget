@@ -8,9 +8,10 @@ class KeyAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'Key':
-        return ({positionalArgs, namedArgs, typeArgs}) => Key(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            Key(positionalArgs[0]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

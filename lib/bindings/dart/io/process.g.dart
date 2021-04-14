@@ -14,7 +14,7 @@ class ProcessInfoAutoBinding extends HTExternalClass {
       case 'ProcessInfo.maxRss':
         return ProcessInfo.maxRss;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -38,7 +38,7 @@ class ProcessStartModeAutoBinding extends HTExternalClass {
       case 'ProcessStartMode.detachedWithStdio':
         return ProcessStartMode.detachedWithStdio;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -52,37 +52,74 @@ class ProcessAutoBinding extends HTExternalClass {
       case 'Process.start':
         return ({positionalArgs, namedArgs, typeArgs}) => Process.start(
             positionalArgs[0], List<String>.from(positionalArgs[1]),
-            workingDirectory: namedArgs.containsKey('workingDirectory') ? namedArgs['workingDirectory'] : null,
-            environment: namedArgs.containsKey('environment') ? namedArgs['environment'] : null,
+            workingDirectory: namedArgs.containsKey('workingDirectory')
+                ? namedArgs['workingDirectory']
+                : null,
+            environment: namedArgs.containsKey('environment')
+                ? namedArgs['environment']
+                : null,
             includeParentEnvironment:
-                namedArgs.containsKey('includeParentEnvironment') ? namedArgs['includeParentEnvironment'] : true,
-            runInShell: namedArgs.containsKey('runInShell') ? namedArgs['runInShell'] : false,
-            mode: namedArgs.containsKey('mode') ? namedArgs['mode'] : ProcessStartMode.normal);
+                namedArgs.containsKey('includeParentEnvironment')
+                    ? namedArgs['includeParentEnvironment']
+                    : true,
+            runInShell: namedArgs.containsKey('runInShell')
+                ? namedArgs['runInShell']
+                : false,
+            mode: namedArgs.containsKey('mode')
+                ? namedArgs['mode']
+                : ProcessStartMode.normal);
       case 'Process.run':
         return ({positionalArgs, namedArgs, typeArgs}) => Process.run(
             positionalArgs[0], List<String>.from(positionalArgs[1]),
-            workingDirectory: namedArgs.containsKey('workingDirectory') ? namedArgs['workingDirectory'] : null,
-            environment: namedArgs.containsKey('environment') ? namedArgs['environment'] : null,
+            workingDirectory: namedArgs.containsKey('workingDirectory')
+                ? namedArgs['workingDirectory']
+                : null,
+            environment: namedArgs.containsKey('environment')
+                ? namedArgs['environment']
+                : null,
             includeParentEnvironment:
-                namedArgs.containsKey('includeParentEnvironment') ? namedArgs['includeParentEnvironment'] : true,
-            runInShell: namedArgs.containsKey('runInShell') ? namedArgs['runInShell'] : false,
-            stdoutEncoding: namedArgs.containsKey('stdoutEncoding') ? namedArgs['stdoutEncoding'] : systemEncoding,
-            stderrEncoding: namedArgs.containsKey('stderrEncoding') ? namedArgs['stderrEncoding'] : systemEncoding);
+                namedArgs.containsKey('includeParentEnvironment')
+                    ? namedArgs['includeParentEnvironment']
+                    : true,
+            runInShell: namedArgs.containsKey('runInShell')
+                ? namedArgs['runInShell']
+                : false,
+            stdoutEncoding: namedArgs.containsKey('stdoutEncoding')
+                ? namedArgs['stdoutEncoding']
+                : systemEncoding,
+            stderrEncoding: namedArgs.containsKey('stderrEncoding')
+                ? namedArgs['stderrEncoding']
+                : systemEncoding);
       case 'Process.runSync':
         return ({positionalArgs, namedArgs, typeArgs}) => Process.runSync(
             positionalArgs[0], List<String>.from(positionalArgs[1]),
-            workingDirectory: namedArgs.containsKey('workingDirectory') ? namedArgs['workingDirectory'] : null,
-            environment: namedArgs.containsKey('environment') ? namedArgs['environment'] : null,
+            workingDirectory: namedArgs.containsKey('workingDirectory')
+                ? namedArgs['workingDirectory']
+                : null,
+            environment: namedArgs.containsKey('environment')
+                ? namedArgs['environment']
+                : null,
             includeParentEnvironment:
-                namedArgs.containsKey('includeParentEnvironment') ? namedArgs['includeParentEnvironment'] : true,
-            runInShell: namedArgs.containsKey('runInShell') ? namedArgs['runInShell'] : false,
-            stdoutEncoding: namedArgs.containsKey('stdoutEncoding') ? namedArgs['stdoutEncoding'] : systemEncoding,
-            stderrEncoding: namedArgs.containsKey('stderrEncoding') ? namedArgs['stderrEncoding'] : systemEncoding);
+                namedArgs.containsKey('includeParentEnvironment')
+                    ? namedArgs['includeParentEnvironment']
+                    : true,
+            runInShell: namedArgs.containsKey('runInShell')
+                ? namedArgs['runInShell']
+                : false,
+            stdoutEncoding: namedArgs.containsKey('stdoutEncoding')
+                ? namedArgs['stdoutEncoding']
+                : systemEncoding,
+            stderrEncoding: namedArgs.containsKey('stderrEncoding')
+                ? namedArgs['stderrEncoding']
+                : systemEncoding);
       case 'Process.killPid':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            Process.killPid(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : ProcessSignal.sigterm);
+        return ({positionalArgs, namedArgs, typeArgs}) => Process.killPid(
+            positionalArgs[0],
+            positionalArgs.length > 1
+                ? positionalArgs[1]
+                : ProcessSignal.sigterm);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -94,10 +131,13 @@ class ProcessResultAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'ProcessResult':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            ProcessResult(positionalArgs[0], positionalArgs[1], positionalArgs[2], positionalArgs[3]);
+        return ({positionalArgs, namedArgs, typeArgs}) => ProcessResult(
+            positionalArgs[0],
+            positionalArgs[1],
+            positionalArgs[2],
+            positionalArgs[3]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -111,7 +151,7 @@ extension ProcessResultBinding on ProcessResult {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('ProcessResult');
+        return const HTType('ProcessResult');
       case 'exitCode':
         return exitCode;
       case 'stdout':
@@ -121,7 +161,7 @@ extension ProcessResultBinding on ProcessResult {
       case 'pid':
         return pid;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -191,7 +231,7 @@ class ProcessSignalAutoBinding extends HTExternalClass {
       case 'ProcessSignal.sigsys':
         return ProcessSignal.sigsys;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -203,10 +243,11 @@ class SignalExceptionAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'SignalException':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            SignalException(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => SignalException(
+            positionalArgs[0],
+            positionalArgs.length > 1 ? positionalArgs[1] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -220,7 +261,7 @@ extension SignalExceptionBinding on SignalException {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('SignalException');
+        return const HTType('SignalException');
       case 'message':
         return message;
       case 'osError':
@@ -228,7 +269,7 @@ extension SignalExceptionBinding on SignalException {
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -246,7 +287,7 @@ class ProcessExceptionAutoBinding extends HTExternalClass {
             positionalArgs.length > 2 ? positionalArgs[2] : '',
             positionalArgs.length > 3 ? positionalArgs[3] : 0);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -260,7 +301,7 @@ extension ProcessExceptionBinding on ProcessException {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('ProcessException');
+        return const HTType('ProcessException');
       case 'executable':
         return executable;
       case 'arguments':
@@ -272,7 +313,7 @@ extension ProcessExceptionBinding on ProcessException {
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

@@ -26,7 +26,7 @@ class SnackBarClosedReasonAutoBinding extends HTExternalClass {
       case 'SnackBarClosedReason.timeout':
         return SnackBarClosedReason.timeout;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -34,13 +34,14 @@ class SnackBarClosedReasonAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('SnackBarClosedReason');
+        return const HTType('SnackBarClosedReason');
       case 'index':
         return (instance as SnackBarClosedReason).index;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => (instance as SnackBarClosedReason).toString();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            (instance as SnackBarClosedReason).toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -54,12 +55,16 @@ class SnackBarActionAutoBinding extends HTExternalClass {
       case 'SnackBarAction':
         return ({positionalArgs, namedArgs, typeArgs}) => SnackBarAction(
             key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
-            textColor: namedArgs.containsKey('textColor') ? namedArgs['textColor'] : null,
-            disabledTextColor: namedArgs.containsKey('disabledTextColor') ? namedArgs['disabledTextColor'] : null,
+            textColor: namedArgs.containsKey('textColor')
+                ? namedArgs['textColor']
+                : null,
+            disabledTextColor: namedArgs.containsKey('disabledTextColor')
+                ? namedArgs['disabledTextColor']
+                : null,
             label: namedArgs['label'],
             onPressed: namedArgs['onPressed']);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -70,7 +75,8 @@ class SnackBarActionAutoBinding extends HTExternalClass {
 
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'VoidCallback': (HTFunction function) => () => function.call(positionalArgs: const [], namedArgs: const {}),
+      'VoidCallback': (HTFunction function) =>
+          () => function.call(positionalArgs: const [], namedArgs: const {}),
     };
   }
 }
@@ -79,7 +85,7 @@ extension SnackBarActionBinding on SnackBarAction {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('SnackBarAction');
+        return const HTType('SnackBarAction');
       case 'textColor':
         return textColor;
       case 'disabledTextColor':
@@ -99,25 +105,37 @@ extension SnackBarActionBinding on SnackBarAction {
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'toStringShallow':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
-            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            joiner:
+                namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -132,22 +150,39 @@ class SnackBarAutoBinding extends HTExternalClass {
         return ({positionalArgs, namedArgs, typeArgs}) => SnackBar(
             key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
             content: namedArgs['content'],
-            backgroundColor: namedArgs.containsKey('backgroundColor') ? namedArgs['backgroundColor'] : null,
-            elevation: namedArgs.containsKey('elevation') ? namedArgs['elevation'] : null,
-            margin: namedArgs.containsKey('margin') ? namedArgs['margin'] : null,
-            padding: namedArgs.containsKey('padding') ? namedArgs['padding'] : null,
+            backgroundColor: namedArgs.containsKey('backgroundColor')
+                ? namedArgs['backgroundColor']
+                : null,
+            elevation: namedArgs.containsKey('elevation')
+                ? namedArgs['elevation']
+                : null,
+            margin:
+                namedArgs.containsKey('margin') ? namedArgs['margin'] : null,
+            padding:
+                namedArgs.containsKey('padding') ? namedArgs['padding'] : null,
             width: namedArgs.containsKey('width') ? namedArgs['width'] : null,
             shape: namedArgs.containsKey('shape') ? namedArgs['shape'] : null,
-            behavior: namedArgs.containsKey('behavior') ? namedArgs['behavior'] : null,
-            action: namedArgs.containsKey('action') ? namedArgs['action'] : null,
-            duration: namedArgs.containsKey('duration') ? namedArgs['duration'] : _snackBarDisplayDuration,
-            animation: namedArgs.containsKey('animation') ? namedArgs['animation'] : null,
-            onVisible: namedArgs.containsKey('onVisible') ? namedArgs['onVisible'] : null);
+            behavior: namedArgs.containsKey('behavior')
+                ? namedArgs['behavior']
+                : null,
+            action:
+                namedArgs.containsKey('action') ? namedArgs['action'] : null,
+            duration: namedArgs.containsKey('duration')
+                ? namedArgs['duration']
+                : _snackBarDisplayDuration,
+            animation: namedArgs.containsKey('animation')
+                ? namedArgs['animation']
+                : null,
+            onVisible: namedArgs.containsKey('onVisible')
+                ? namedArgs['onVisible']
+                : null);
       case 'SnackBar.createAnimationController':
         return ({positionalArgs, namedArgs, typeArgs}) =>
-            SnackBar.createAnimationController(vsync: namedArgs.containsKey('vsync') ? namedArgs['vsync'] : null);
+            SnackBar.createAnimationController(
+                vsync:
+                    namedArgs.containsKey('vsync') ? namedArgs['vsync'] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -158,7 +193,8 @@ class SnackBarAutoBinding extends HTExternalClass {
 
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'VoidCallback': (HTFunction function) => () => function.call(positionalArgs: const [], namedArgs: const {}),
+      'VoidCallback': (HTFunction function) =>
+          () => function.call(positionalArgs: const [], namedArgs: const {}),
     };
   }
 }
@@ -167,7 +203,7 @@ extension SnackBarBinding on SnackBar {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('SnackBar');
+        return const HTType('SnackBar');
       case 'content':
         return content;
       case 'backgroundColor':
@@ -197,8 +233,11 @@ extension SnackBarBinding on SnackBar {
       case 'hashCode':
         return hashCode;
       case 'withAnimation':
-        return ({positionalArgs, namedArgs, typeArgs}) => withAnimation(positionalArgs[0],
-            fallbackKey: namedArgs.containsKey('fallbackKey') ? namedArgs['fallbackKey'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => withAnimation(
+            positionalArgs[0],
+            fallbackKey: namedArgs.containsKey('fallbackKey')
+                ? namedArgs['fallbackKey']
+                : null);
       case 'createState':
         return ({positionalArgs, namedArgs, typeArgs}) => createState();
       case 'createElement':
@@ -206,25 +245,37 @@ extension SnackBarBinding on SnackBar {
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'toStringShallow':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
-            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            joiner:
+                namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

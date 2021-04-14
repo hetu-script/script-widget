@@ -8,9 +8,10 @@ class PointerSignalResolverAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'PointerSignalResolver':
-        return ({positionalArgs, namedArgs, typeArgs}) => PointerSignalResolver();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            PointerSignalResolver();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -21,8 +22,8 @@ class PointerSignalResolverAutoBinding extends HTExternalClass {
 
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'PointerSignalResolvedCallback': (HTFunction function) =>
-          (event) => function.call(positionalArgs: [event], namedArgs: const {}),
+      'PointerSignalResolvedCallback': (HTFunction function) => (event) =>
+          function.call(positionalArgs: [event], namedArgs: const {}),
     };
   }
 }
@@ -31,13 +32,15 @@ extension PointerSignalResolverBinding on PointerSignalResolver {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('PointerSignalResolver');
+        return const HTType('PointerSignalResolver');
       case 'register':
-        return ({positionalArgs, namedArgs, typeArgs}) => register(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            register(positionalArgs[0], positionalArgs[1]);
       case 'resolve':
-        return ({positionalArgs, namedArgs, typeArgs}) => resolve(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            resolve(positionalArgs[0]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

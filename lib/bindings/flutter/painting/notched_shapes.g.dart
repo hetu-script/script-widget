@@ -8,9 +8,10 @@ class CircularNotchedRectangleAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'CircularNotchedRectangle':
-        return ({positionalArgs, namedArgs, typeArgs}) => CircularNotchedRectangle();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            CircularNotchedRectangle();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -24,11 +25,12 @@ extension CircularNotchedRectangleBinding on CircularNotchedRectangle {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('CircularNotchedRectangle');
+        return const HTType('CircularNotchedRectangle');
       case 'getOuterPath':
-        return ({positionalArgs, namedArgs, typeArgs}) => getOuterPath(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            getOuterPath(positionalArgs[0], positionalArgs[1]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -40,10 +42,11 @@ class AutomaticNotchedShapeAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'AutomaticNotchedShape':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            AutomaticNotchedShape(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => AutomaticNotchedShape(
+            positionalArgs[0],
+            positionalArgs.length > 1 ? positionalArgs[1] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -57,15 +60,16 @@ extension AutomaticNotchedShapeBinding on AutomaticNotchedShape {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('AutomaticNotchedShape');
+        return const HTType('AutomaticNotchedShape');
       case 'host':
         return host;
       case 'guest':
         return guest;
       case 'getOuterPath':
-        return ({positionalArgs, namedArgs, typeArgs}) => getOuterPath(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            getOuterPath(positionalArgs[0], positionalArgs[1]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

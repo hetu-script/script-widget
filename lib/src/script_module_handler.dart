@@ -1,4 +1,5 @@
-import 'package:hetu_script/hetu_script.dart' show HTModuleHandler, HTModuleInfo, HTErrorEmpty;
+import 'package:hetu_script/hetu_script.dart'
+    show HTModuleHandler, HTModuleInfo, HTError;
 import 'package:flutter/services.dart' show rootBundle;
 
 class ScriptModuleHandler implements HTModuleHandler {
@@ -25,9 +26,9 @@ class ScriptModuleHandler implements HTModuleHandler {
   Future<HTModuleInfo> import(String key, [String? curUniqueKey]) async {
     var uri = Uri.parse(key);
     var uniqueKey = '';
-    if (uri.scheme.isEmpty) {
+    if (uri.scheme.isEmpty && (curUniqueKey != null)) {
       //相对路径，计算绝对路径
-      var file = curUniqueKey!;
+      var file = curUniqueKey;
       var idx = file.lastIndexOf('/');
       var url = '${file.substring(0, idx)}/$key';
       uri = Uri.parse(url);
@@ -43,7 +44,7 @@ class ScriptModuleHandler implements HTModuleHandler {
     _cachedKeys.add(uniqueKey);
     final content = await rootBundle.loadString(uniqueKey);
     if (content.isEmpty) {
-      throw HTErrorEmpty(uri.toString());
+      throw HTError.empty(uri.toString());
     }
 
     return HTModuleInfo(uniqueKey, content);

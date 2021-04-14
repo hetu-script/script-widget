@@ -11,12 +11,16 @@ class UnderlineInputBorderAutoBinding extends HTExternalClass {
     switch (varName) {
       case 'UnderlineInputBorder':
         return ({positionalArgs, namedArgs, typeArgs}) => UnderlineInputBorder(
-            borderSide: namedArgs.containsKey('borderSide') ? namedArgs['borderSide'] : const BorderSide(),
+            borderSide: namedArgs.containsKey('borderSide')
+                ? namedArgs['borderSide']
+                : const BorderSide(),
             borderRadius: namedArgs.containsKey('borderRadius')
                 ? namedArgs['borderRadius']
-                : const BorderRadius.only(topLeft: Radius.circular(4.0), topRight: Radius.circular(4.0)));
+                : const BorderRadius.only(
+                    topLeft: Radius.circular(4.0),
+                    topRight: Radius.circular(4.0)));
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -30,7 +34,7 @@ extension UnderlineInputBorderBinding on UnderlineInputBorder {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('UnderlineInputBorder');
+        return const HTType('UnderlineInputBorder');
       case 'borderRadius':
         return borderRadius;
       case 'borderSide':
@@ -43,30 +47,52 @@ extension UnderlineInputBorderBinding on UnderlineInputBorder {
         return hashCode;
       case 'copyWith':
         return ({positionalArgs, namedArgs, typeArgs}) => copyWith(
-            borderSide: namedArgs.containsKey('borderSide') ? namedArgs['borderSide'] : null,
-            borderRadius: namedArgs.containsKey('borderRadius') ? namedArgs['borderRadius'] : null);
+            borderSide: namedArgs.containsKey('borderSide')
+                ? namedArgs['borderSide']
+                : null,
+            borderRadius: namedArgs.containsKey('borderRadius')
+                ? namedArgs['borderRadius']
+                : null);
       case 'scale':
-        return ({positionalArgs, namedArgs, typeArgs}) => scale(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            scale(positionalArgs[0]);
       case 'getInnerPath':
-        return ({positionalArgs, namedArgs, typeArgs}) => getInnerPath(positionalArgs[0],
-            textDirection: namedArgs.containsKey('textDirection') ? namedArgs['textDirection'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => getInnerPath(
+            positionalArgs[0],
+            textDirection: namedArgs.containsKey('textDirection')
+                ? namedArgs['textDirection']
+                : null);
       case 'getOuterPath':
-        return ({positionalArgs, namedArgs, typeArgs}) => getOuterPath(positionalArgs[0],
-            textDirection: namedArgs.containsKey('textDirection') ? namedArgs['textDirection'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => getOuterPath(
+            positionalArgs[0],
+            textDirection: namedArgs.containsKey('textDirection')
+                ? namedArgs['textDirection']
+                : null);
       case 'lerpFrom':
-        return ({positionalArgs, namedArgs, typeArgs}) => lerpFrom(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            lerpFrom(positionalArgs[0], positionalArgs[1]);
       case 'lerpTo':
-        return ({positionalArgs, namedArgs, typeArgs}) => lerpTo(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            lerpTo(positionalArgs[0], positionalArgs[1]);
       case 'paint':
-        return ({positionalArgs, namedArgs, typeArgs}) => paint(positionalArgs[0], positionalArgs[1],
-            gapStart: namedArgs.containsKey('gapStart') ? namedArgs['gapStart'] : null,
-            gapExtent: namedArgs.containsKey('gapExtent') ? namedArgs['gapExtent'] : 0.0,
-            gapPercentage: namedArgs.containsKey('gapPercentage') ? namedArgs['gapPercentage'] : 0.0,
-            textDirection: namedArgs.containsKey('textDirection') ? namedArgs['textDirection'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => paint(
+            positionalArgs[0], positionalArgs[1],
+            gapStart: namedArgs.containsKey('gapStart')
+                ? namedArgs['gapStart']
+                : null,
+            gapExtent: namedArgs.containsKey('gapExtent')
+                ? namedArgs['gapExtent']
+                : 0.0,
+            gapPercentage: namedArgs.containsKey('gapPercentage')
+                ? namedArgs['gapPercentage']
+                : 0.0,
+            textDirection: namedArgs.containsKey('textDirection')
+                ? namedArgs['textDirection']
+                : null);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -79,13 +105,17 @@ class OutlineInputBorderAutoBinding extends HTExternalClass {
     switch (varName) {
       case 'OutlineInputBorder':
         return ({positionalArgs, namedArgs, typeArgs}) => OutlineInputBorder(
-            borderSide: namedArgs.containsKey('borderSide') ? namedArgs['borderSide'] : const BorderSide(),
+            borderSide: namedArgs.containsKey('borderSide')
+                ? namedArgs['borderSide']
+                : const BorderSide(),
             borderRadius: namedArgs.containsKey('borderRadius')
                 ? namedArgs['borderRadius']
                 : const BorderRadius.all(Radius.circular(4.0)),
-            gapPadding: namedArgs.containsKey('gapPadding') ? namedArgs['gapPadding'] : 4.0);
+            gapPadding: namedArgs.containsKey('gapPadding')
+                ? namedArgs['gapPadding']
+                : 4.0);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -99,7 +129,7 @@ extension OutlineInputBorderBinding on OutlineInputBorder {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('OutlineInputBorder');
+        return const HTType('OutlineInputBorder');
       case 'gapPadding':
         return gapPadding;
       case 'borderRadius':
@@ -114,31 +144,55 @@ extension OutlineInputBorderBinding on OutlineInputBorder {
         return hashCode;
       case 'copyWith':
         return ({positionalArgs, namedArgs, typeArgs}) => copyWith(
-            borderSide: namedArgs.containsKey('borderSide') ? namedArgs['borderSide'] : null,
-            borderRadius: namedArgs.containsKey('borderRadius') ? namedArgs['borderRadius'] : null,
-            gapPadding: namedArgs.containsKey('gapPadding') ? namedArgs['gapPadding'] : null);
+            borderSide: namedArgs.containsKey('borderSide')
+                ? namedArgs['borderSide']
+                : null,
+            borderRadius: namedArgs.containsKey('borderRadius')
+                ? namedArgs['borderRadius']
+                : null,
+            gapPadding: namedArgs.containsKey('gapPadding')
+                ? namedArgs['gapPadding']
+                : null);
       case 'scale':
-        return ({positionalArgs, namedArgs, typeArgs}) => scale(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            scale(positionalArgs[0]);
       case 'lerpFrom':
-        return ({positionalArgs, namedArgs, typeArgs}) => lerpFrom(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            lerpFrom(positionalArgs[0], positionalArgs[1]);
       case 'lerpTo':
-        return ({positionalArgs, namedArgs, typeArgs}) => lerpTo(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            lerpTo(positionalArgs[0], positionalArgs[1]);
       case 'getInnerPath':
-        return ({positionalArgs, namedArgs, typeArgs}) => getInnerPath(positionalArgs[0],
-            textDirection: namedArgs.containsKey('textDirection') ? namedArgs['textDirection'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => getInnerPath(
+            positionalArgs[0],
+            textDirection: namedArgs.containsKey('textDirection')
+                ? namedArgs['textDirection']
+                : null);
       case 'getOuterPath':
-        return ({positionalArgs, namedArgs, typeArgs}) => getOuterPath(positionalArgs[0],
-            textDirection: namedArgs.containsKey('textDirection') ? namedArgs['textDirection'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => getOuterPath(
+            positionalArgs[0],
+            textDirection: namedArgs.containsKey('textDirection')
+                ? namedArgs['textDirection']
+                : null);
       case 'paint':
-        return ({positionalArgs, namedArgs, typeArgs}) => paint(positionalArgs[0], positionalArgs[1],
-            gapStart: namedArgs.containsKey('gapStart') ? namedArgs['gapStart'] : null,
-            gapExtent: namedArgs.containsKey('gapExtent') ? namedArgs['gapExtent'] : 0.0,
-            gapPercentage: namedArgs.containsKey('gapPercentage') ? namedArgs['gapPercentage'] : 0.0,
-            textDirection: namedArgs.containsKey('textDirection') ? namedArgs['textDirection'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => paint(
+            positionalArgs[0], positionalArgs[1],
+            gapStart: namedArgs.containsKey('gapStart')
+                ? namedArgs['gapStart']
+                : null,
+            gapExtent: namedArgs.containsKey('gapExtent')
+                ? namedArgs['gapExtent']
+                : 0.0,
+            gapPercentage: namedArgs.containsKey('gapPercentage')
+                ? namedArgs['gapPercentage']
+                : 0.0,
+            textDirection: namedArgs.containsKey('textDirection')
+                ? namedArgs['textDirection']
+                : null);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

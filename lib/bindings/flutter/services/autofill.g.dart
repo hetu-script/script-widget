@@ -140,7 +140,7 @@ class AutofillHintsAutoBinding extends HTExternalClass {
       case 'AutofillHints.username':
         return AutofillHints.username;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -157,7 +157,7 @@ class AutofillConfigurationAutoBinding extends HTExternalClass {
             autofillHints: List<String>.from(namedArgs['autofillHints']),
             currentEditingValue: namedArgs['currentEditingValue']);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -171,7 +171,7 @@ extension AutofillConfigurationBinding on AutofillConfiguration {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('AutofillConfiguration');
+        return const HTType('AutofillConfiguration');
       case 'uniqueIdentifier':
         return uniqueIdentifier;
       case 'autofillHints':
@@ -181,7 +181,7 @@ extension AutofillConfigurationBinding on AutofillConfiguration {
       case 'toJson':
         return ({positionalArgs, namedArgs, typeArgs}) => toJson();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

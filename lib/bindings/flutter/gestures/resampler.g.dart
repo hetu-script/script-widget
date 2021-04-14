@@ -8,9 +8,10 @@ class PointerEventResamplerAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'PointerEventResampler':
-        return ({positionalArgs, namedArgs, typeArgs}) => PointerEventResampler();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            PointerEventResampler();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -21,8 +22,8 @@ class PointerEventResamplerAutoBinding extends HTExternalClass {
 
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'HandleEventCallback': (HTFunction function) =>
-          (event) => function.call(positionalArgs: [event], namedArgs: const {}),
+      'HandleEventCallback': (HTFunction function) => (event) =>
+          function.call(positionalArgs: [event], namedArgs: const {}),
     };
   }
 }
@@ -31,7 +32,7 @@ extension PointerEventResamplerBinding on PointerEventResampler {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('PointerEventResampler');
+        return const HTType('PointerEventResampler');
       case 'hasPendingEvents':
         return hasPendingEvents;
       case 'isTracked':
@@ -39,14 +40,16 @@ extension PointerEventResamplerBinding on PointerEventResampler {
       case 'isDown':
         return isDown;
       case 'addEvent':
-        return ({positionalArgs, namedArgs, typeArgs}) => addEvent(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            addEvent(positionalArgs[0]);
       case 'sample':
         return ({positionalArgs, namedArgs, typeArgs}) =>
             sample(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
       case 'stop':
-        return ({positionalArgs, namedArgs, typeArgs}) => stop(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            stop(positionalArgs[0]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

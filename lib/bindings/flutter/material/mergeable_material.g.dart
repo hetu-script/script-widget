@@ -15,7 +15,7 @@ class MaterialSliceAutoBinding extends HTExternalClass {
             child: namedArgs['child'],
             color: namedArgs.containsKey('color') ? namedArgs['color'] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -29,7 +29,7 @@ extension MaterialSliceBinding on MaterialSlice {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('MaterialSlice');
+        return const HTType('MaterialSlice');
       case 'child':
         return child;
       case 'color':
@@ -39,7 +39,7 @@ extension MaterialSliceBinding on MaterialSlice {
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -51,10 +51,11 @@ class MaterialGapAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'MaterialGap':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            MaterialGap(key: namedArgs['key'], size: namedArgs.containsKey('size') ? namedArgs['size'] : 16.0);
+        return ({positionalArgs, namedArgs, typeArgs}) => MaterialGap(
+            key: namedArgs['key'],
+            size: namedArgs.containsKey('size') ? namedArgs['size'] : 16.0);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -68,7 +69,7 @@ extension MaterialGapBinding on MaterialGap {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('MaterialGap');
+        return const HTType('MaterialGap');
       case 'size':
         return size;
       case 'key':
@@ -76,7 +77,7 @@ extension MaterialGapBinding on MaterialGap {
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -90,15 +91,22 @@ class MergeableMaterialAutoBinding extends HTExternalClass {
       case 'MergeableMaterial':
         return ({positionalArgs, namedArgs, typeArgs}) => MergeableMaterial(
             key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
-            mainAxis: namedArgs.containsKey('mainAxis') ? namedArgs['mainAxis'] : Axis.vertical,
-            elevation: namedArgs.containsKey('elevation') ? namedArgs['elevation'] : 2,
-            hasDividers: namedArgs.containsKey('hasDividers') ? namedArgs['hasDividers'] : false,
+            mainAxis: namedArgs.containsKey('mainAxis')
+                ? namedArgs['mainAxis']
+                : Axis.vertical,
+            elevation:
+                namedArgs.containsKey('elevation') ? namedArgs['elevation'] : 2,
+            hasDividers: namedArgs.containsKey('hasDividers')
+                ? namedArgs['hasDividers']
+                : false,
             children: namedArgs.containsKey('children')
                 ? List<MergeableMaterialItem>.from(namedArgs['children'])
                 : const <MergeableMaterialItem>[],
-            dividerColor: namedArgs.containsKey('dividerColor') ? namedArgs['dividerColor'] : null);
+            dividerColor: namedArgs.containsKey('dividerColor')
+                ? namedArgs['dividerColor']
+                : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -112,7 +120,7 @@ extension MergeableMaterialBinding on MergeableMaterial {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('MergeableMaterial');
+        return const HTType('MergeableMaterial');
       case 'children':
         return children;
       case 'mainAxis':
@@ -128,7 +136,8 @@ extension MergeableMaterialBinding on MergeableMaterial {
       case 'hashCode':
         return hashCode;
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'createState':
         return ({positionalArgs, namedArgs, typeArgs}) => createState();
       case 'createElement':
@@ -137,22 +146,33 @@ extension MergeableMaterialBinding on MergeableMaterial {
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'toStringShallow':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
-            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            joiner:
+                namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

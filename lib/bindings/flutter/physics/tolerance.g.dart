@@ -9,13 +9,19 @@ class ToleranceAutoBinding extends HTExternalClass {
     switch (varName) {
       case 'Tolerance':
         return ({positionalArgs, namedArgs, typeArgs}) => Tolerance(
-            distance: namedArgs.containsKey('distance') ? namedArgs['distance'] : _epsilonDefault,
-            time: namedArgs.containsKey('time') ? namedArgs['time'] : _epsilonDefault,
-            velocity: namedArgs.containsKey('velocity') ? namedArgs['velocity'] : _epsilonDefault);
+            distance: namedArgs.containsKey('distance')
+                ? namedArgs['distance']
+                : _epsilonDefault,
+            time: namedArgs.containsKey('time')
+                ? namedArgs['time']
+                : _epsilonDefault,
+            velocity: namedArgs.containsKey('velocity')
+                ? namedArgs['velocity']
+                : _epsilonDefault);
       case 'Tolerance.defaultTolerance':
         return Tolerance.defaultTolerance;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -31,7 +37,7 @@ extension ToleranceBinding on Tolerance {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('Tolerance');
+        return const HTType('Tolerance');
       case 'distance':
         return distance;
       case 'time':
@@ -41,7 +47,7 @@ extension ToleranceBinding on Tolerance {
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

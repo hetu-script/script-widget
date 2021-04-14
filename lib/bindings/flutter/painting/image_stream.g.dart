@@ -12,9 +12,11 @@ class ImageInfoAutoBinding extends HTExternalClass {
         return ({positionalArgs, namedArgs, typeArgs}) => ImageInfo(
             image: namedArgs['image'],
             scale: namedArgs.containsKey('scale') ? namedArgs['scale'] : 1.0,
-            debugLabel: namedArgs.containsKey('debugLabel') ? namedArgs['debugLabel'] : null);
+            debugLabel: namedArgs.containsKey('debugLabel')
+                ? namedArgs['debugLabel']
+                : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -28,7 +30,7 @@ extension ImageInfoBinding on ImageInfo {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('ImageInfo');
+        return const HTType('ImageInfo');
       case 'image':
         return image;
       case 'scale':
@@ -40,13 +42,14 @@ extension ImageInfoBinding on ImageInfo {
       case 'clone':
         return ({positionalArgs, namedArgs, typeArgs}) => clone();
       case 'isCloneOf':
-        return ({positionalArgs, namedArgs, typeArgs}) => isCloneOf(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            isCloneOf(positionalArgs[0]);
       case 'dispose':
         return ({positionalArgs, namedArgs, typeArgs}) => dispose();
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -58,11 +61,14 @@ class ImageStreamListenerAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'ImageStreamListener':
-        return ({positionalArgs, namedArgs, typeArgs}) => ImageStreamListener(positionalArgs[0],
-            onChunk: namedArgs.containsKey('onChunk') ? namedArgs['onChunk'] : null,
-            onError: namedArgs.containsKey('onError') ? namedArgs['onError'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => ImageStreamListener(
+            positionalArgs[0],
+            onChunk:
+                namedArgs.containsKey('onChunk') ? namedArgs['onChunk'] : null,
+            onError:
+                namedArgs.containsKey('onError') ? namedArgs['onError'] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -73,12 +79,14 @@ class ImageStreamListenerAutoBinding extends HTExternalClass {
 
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'ImageListener': (HTFunction function) =>
-          (image, synchronousCall) => function.call(positionalArgs: [image, synchronousCall], namedArgs: const {}),
-      'ImageChunkListener': (HTFunction function) =>
-          (event) => function.call(positionalArgs: [event], namedArgs: const {}),
-      'ImageErrorListener': (HTFunction function) =>
-          (exception, stackTrace) => function.call(positionalArgs: [exception, stackTrace], namedArgs: const {}),
+      'ImageListener': (HTFunction function) => (image, synchronousCall) =>
+          function.call(
+              positionalArgs: [image, synchronousCall], namedArgs: const {}),
+      'ImageChunkListener': (HTFunction function) => (event) =>
+          function.call(positionalArgs: [event], namedArgs: const {}),
+      'ImageErrorListener': (HTFunction function) => (exception, stackTrace) =>
+          function.call(
+              positionalArgs: [exception, stackTrace], namedArgs: const {}),
     };
   }
 }
@@ -87,7 +95,7 @@ extension ImageStreamListenerBinding on ImageStreamListener {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('ImageStreamListener');
+        return const HTType('ImageStreamListener');
       case 'onImage':
         return onImage;
       case 'onChunk':
@@ -97,7 +105,7 @@ extension ImageStreamListenerBinding on ImageStreamListener {
       case 'hashCode':
         return hashCode;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -113,7 +121,7 @@ class ImageChunkEventAutoBinding extends HTExternalClass {
             cumulativeBytesLoaded: namedArgs['cumulativeBytesLoaded'],
             expectedTotalBytes: namedArgs['expectedTotalBytes']);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -127,24 +135,27 @@ extension ImageChunkEventBinding on ImageChunkEvent {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('ImageChunkEvent');
+        return const HTType('ImageChunkEvent');
       case 'cumulativeBytesLoaded':
         return cumulativeBytesLoaded;
       case 'expectedTotalBytes':
         return expectedTotalBytes;
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -158,7 +169,7 @@ class ImageStreamAutoBinding extends HTExternalClass {
       case 'ImageStream':
         return ({positionalArgs, namedArgs, typeArgs}) => ImageStream();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -172,46 +183,56 @@ extension ImageStreamBinding on ImageStream {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('ImageStream');
+        return const HTType('ImageStream');
       case 'completer':
         return completer;
       case 'key':
         return key;
       case 'setCompleter':
-        return ({positionalArgs, namedArgs, typeArgs}) => setCompleter(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            setCompleter(positionalArgs[0]);
       case 'addListener':
-        return ({positionalArgs, namedArgs, typeArgs}) => addListener(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            addListener(positionalArgs[0]);
       case 'removeListener':
-        return ({positionalArgs, namedArgs, typeArgs}) => removeListener(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            removeListener(positionalArgs[0]);
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
 
 class OneFrameImageStreamCompleterAutoBinding extends HTExternalClass {
-  OneFrameImageStreamCompleterAutoBinding() : super('OneFrameImageStreamCompleter');
+  OneFrameImageStreamCompleterAutoBinding()
+      : super('OneFrameImageStreamCompleter');
 
   @override
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'OneFrameImageStreamCompleter':
-        return ({positionalArgs, namedArgs, typeArgs}) => OneFrameImageStreamCompleter(positionalArgs[0],
-            informationCollector:
-                namedArgs.containsKey('informationCollector') ? namedArgs['informationCollector'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            OneFrameImageStreamCompleter(positionalArgs[0],
+                informationCollector:
+                    namedArgs.containsKey('informationCollector')
+                        ? namedArgs['informationCollector']
+                        : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -227,9 +248,11 @@ class OneFrameImageStreamCompleterAutoBinding extends HTExternalClass {
 
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'InformationCollector': (HTFunction function) =>
-          () => function.call(positionalArgs: const [], namedArgs: const {}) as Iterable<DiagnosticsNode>,
-      'VoidCallback': (HTFunction function) => () => function.call(positionalArgs: const [], namedArgs: const {}),
+      'InformationCollector': (HTFunction function) => () =>
+          function.call(positionalArgs: const [], namedArgs: const {})
+              as Iterable<DiagnosticsNode>,
+      'VoidCallback': (HTFunction function) =>
+          () => function.call(positionalArgs: const [], namedArgs: const {}),
     };
   }
 }
@@ -238,32 +261,39 @@ extension OneFrameImageStreamCompleterBinding on OneFrameImageStreamCompleter {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('OneFrameImageStreamCompleter');
+        return const HTType('OneFrameImageStreamCompleter');
       case 'debugLabel':
         return debugLabel;
       case 'addListener':
-        return ({positionalArgs, namedArgs, typeArgs}) => addListener(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            addListener(positionalArgs[0]);
       case 'keepAlive':
         return ({positionalArgs, namedArgs, typeArgs}) => keepAlive();
       case 'removeListener':
-        return ({positionalArgs, namedArgs, typeArgs}) => removeListener(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            removeListener(positionalArgs[0]);
       case 'addOnLastListenerRemovedCallback':
-        return ({positionalArgs, namedArgs, typeArgs}) => addOnLastListenerRemovedCallback(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            addOnLastListenerRemovedCallback(positionalArgs[0]);
       case 'removeOnLastListenerRemovedCallback':
-        return ({positionalArgs, namedArgs, typeArgs}) => removeOnLastListenerRemovedCallback(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            removeOnLastListenerRemovedCallback(positionalArgs[0]);
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -273,27 +303,35 @@ extension OneFrameImageStreamCompleterBinding on OneFrameImageStreamCompleter {
         debugLabel = value;
         break;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
 
 class MultiFrameImageStreamCompleterAutoBinding extends HTExternalClass {
-  MultiFrameImageStreamCompleterAutoBinding() : super('MultiFrameImageStreamCompleter');
+  MultiFrameImageStreamCompleterAutoBinding()
+      : super('MultiFrameImageStreamCompleter');
 
   @override
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'MultiFrameImageStreamCompleter':
-        return ({positionalArgs, namedArgs, typeArgs}) => MultiFrameImageStreamCompleter(
-            codec: namedArgs['codec'],
-            scale: namedArgs['scale'],
-            debugLabel: namedArgs.containsKey('debugLabel') ? namedArgs['debugLabel'] : null,
-            chunkEvents: namedArgs.containsKey('chunkEvents') ? namedArgs['chunkEvents'] : null,
-            informationCollector:
-                namedArgs.containsKey('informationCollector') ? namedArgs['informationCollector'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            MultiFrameImageStreamCompleter(
+                codec: namedArgs['codec'],
+                scale: namedArgs['scale'],
+                debugLabel: namedArgs.containsKey('debugLabel')
+                    ? namedArgs['debugLabel']
+                    : null,
+                chunkEvents: namedArgs.containsKey('chunkEvents')
+                    ? namedArgs['chunkEvents']
+                    : null,
+                informationCollector:
+                    namedArgs.containsKey('informationCollector')
+                        ? namedArgs['informationCollector']
+                        : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -309,43 +347,53 @@ class MultiFrameImageStreamCompleterAutoBinding extends HTExternalClass {
 
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'InformationCollector': (HTFunction function) =>
-          () => function.call(positionalArgs: const [], namedArgs: const {}) as Iterable<DiagnosticsNode>,
-      'VoidCallback': (HTFunction function) => () => function.call(positionalArgs: const [], namedArgs: const {}),
+      'InformationCollector': (HTFunction function) => () =>
+          function.call(positionalArgs: const [], namedArgs: const {})
+              as Iterable<DiagnosticsNode>,
+      'VoidCallback': (HTFunction function) =>
+          () => function.call(positionalArgs: const [], namedArgs: const {}),
     };
   }
 }
 
-extension MultiFrameImageStreamCompleterBinding on MultiFrameImageStreamCompleter {
+extension MultiFrameImageStreamCompleterBinding
+    on MultiFrameImageStreamCompleter {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('MultiFrameImageStreamCompleter');
+        return const HTType('MultiFrameImageStreamCompleter');
       case 'debugLabel':
         return debugLabel;
       case 'addListener':
-        return ({positionalArgs, namedArgs, typeArgs}) => addListener(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            addListener(positionalArgs[0]);
       case 'removeListener':
-        return ({positionalArgs, namedArgs, typeArgs}) => removeListener(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            removeListener(positionalArgs[0]);
       case 'keepAlive':
         return ({positionalArgs, namedArgs, typeArgs}) => keepAlive();
       case 'addOnLastListenerRemovedCallback':
-        return ({positionalArgs, namedArgs, typeArgs}) => addOnLastListenerRemovedCallback(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            addOnLastListenerRemovedCallback(positionalArgs[0]);
       case 'removeOnLastListenerRemovedCallback':
-        return ({positionalArgs, namedArgs, typeArgs}) => removeOnLastListenerRemovedCallback(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            removeOnLastListenerRemovedCallback(positionalArgs[0]);
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -355,7 +403,7 @@ extension MultiFrameImageStreamCompleterBinding on MultiFrameImageStreamComplete
         debugLabel = value;
         break;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

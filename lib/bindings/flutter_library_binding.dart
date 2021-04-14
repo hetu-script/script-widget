@@ -45,10 +45,8 @@ import 'dart/io/string_transformer.g.dart';
 import 'dart/io/sync_socket.g.dart';
 import 'dart/core/bigint.g.dart';
 import 'dart/core/date_time.g.dart';
-import 'dart/core/double.g.dart';
 import 'dart/core/duration.g.dart';
 import 'dart/core/function.g.dart';
-import 'dart/core/int.g.dart';
 import 'dart/core/invocation.g.dart';
 import 'dart/core/regexp.g.dart';
 import 'dart/core/stacktrace.g.dart';
@@ -491,31 +489,44 @@ class FlutterLibraryBinding extends BindingHandler {
     functionWrappers.addAll(TrainHoppingAnimationAutoBinding.functionWrapper());
     functionWrappers.addAll(AnimationMeanAutoBinding.functionWrapper());
     functionWrappers.addAll(AnimationControllerAutoBinding.functionWrapper());
-    functionWrappers.addAll(CupertinoActionSheetActionAutoBinding.functionWrapper());
+    functionWrappers
+        .addAll(CupertinoActionSheetActionAutoBinding.functionWrapper());
     functionWrappers.addAll(CupertinoAppAutoBinding.functionWrapper());
     functionWrappers.addAll(CupertinoButtonAutoBinding.functionWrapper());
     functionWrappers.addAll(CupertinoContextMenuAutoBinding.functionWrapper());
-    functionWrappers.addAll(CupertinoContextMenuActionAutoBinding.functionWrapper());
+    functionWrappers
+        .addAll(CupertinoContextMenuActionAutoBinding.functionWrapper());
     functionWrappers.addAll(CupertinoDialogActionAutoBinding.functionWrapper());
-    functionWrappers.addAll(CupertinoNavigationBarBackButtonAutoBinding.functionWrapper());
+    functionWrappers
+        .addAll(CupertinoNavigationBarBackButtonAutoBinding.functionWrapper());
     functionWrappers.addAll(CupertinoPickerAutoBinding.functionWrapper());
-    functionWrappers.addAll(CupertinoSliverRefreshControlAutoBinding.functionWrapper());
+    functionWrappers
+        .addAll(CupertinoSliverRefreshControlAutoBinding.functionWrapper());
     functionWrappers.addAll(CupertinoScrollbarAutoBinding.functionWrapper());
-    functionWrappers.addAll(CupertinoSearchTextFieldAutoBinding.functionWrapper());
-    functionWrappers.addAll(CupertinoTabControllerAutoBinding.functionWrapper());
+    functionWrappers
+        .addAll(CupertinoSearchTextFieldAutoBinding.functionWrapper());
+    functionWrappers
+        .addAll(CupertinoTabControllerAutoBinding.functionWrapper());
     functionWrappers.addAll(CupertinoTabScaffoldAutoBinding.functionWrapper());
-    functionWrappers.addAll(RestorableCupertinoTabControllerAutoBinding.functionWrapper());
+    functionWrappers
+        .addAll(RestorableCupertinoTabControllerAutoBinding.functionWrapper());
     functionWrappers.addAll(CupertinoTabViewAutoBinding.functionWrapper());
     functionWrappers.addAll(CupertinoTextFieldAutoBinding.functionWrapper());
-    functionWrappers.addAll(CupertinoTextFormFieldRowAutoBinding.functionWrapper());
-    functionWrappers.addAll(CupertinoTextSelectionToolbarAutoBinding.functionWrapper());
-    functionWrappers.addAll(CupertinoTextSelectionToolbarButtonAutoBinding.functionWrapper());
+    functionWrappers
+        .addAll(CupertinoTextFormFieldRowAutoBinding.functionWrapper());
+    functionWrappers
+        .addAll(CupertinoTextSelectionToolbarAutoBinding.functionWrapper());
+    functionWrappers.addAll(
+        CupertinoTextSelectionToolbarButtonAutoBinding.functionWrapper());
     functionWrappers.addAll(FlutterErrorDetailsAutoBinding.functionWrapper());
     functionWrappers.addAll(ListenableAutoBinding.functionWrapper());
     functionWrappers.addAll(ChangeNotifierAutoBinding.functionWrapper());
     functionWrappers.addAll(LicenseRegistryAutoBinding.functionWrapper());
-    functionWrappers.addAll(FlutterErrorDetailsForPointerEventDispatcherAutoBinding.functionWrapper());
-    functionWrappers.addAll(ForcePressGestureRecognizerAutoBinding.functionWrapper());
+    functionWrappers.addAll(
+        FlutterErrorDetailsForPointerEventDispatcherAutoBinding
+            .functionWrapper());
+    functionWrappers
+        .addAll(ForcePressGestureRecognizerAutoBinding.functionWrapper());
     functionWrappers.addAll(PointerRouterAutoBinding.functionWrapper());
     functionWrappers.addAll(PointerSignalResolverAutoBinding.functionWrapper());
     functionWrappers.addAll(PointerEventResamplerAutoBinding.functionWrapper());
@@ -551,7 +562,8 @@ class FlutterLibraryBinding extends BindingHandler {
     functionWrappers.addAll(InkSplashAutoBinding.functionWrapper());
     functionWrappers.addAll(InkResponseAutoBinding.functionWrapper());
     functionWrappers.addAll(InkWellAutoBinding.functionWrapper());
-    functionWrappers.addAll(InputDatePickerFormFieldAutoBinding.functionWrapper());
+    functionWrappers
+        .addAll(InputDatePickerFormFieldAutoBinding.functionWrapper());
     functionWrappers.addAll(ListTileAutoBinding.functionWrapper());
     functionWrappers.addAll(MaterialButtonAutoBinding.functionWrapper());
     functionWrappers.addAll(OutlinedButtonAutoBinding.functionWrapper());
@@ -559,7 +571,8 @@ class FlutterLibraryBinding extends BindingHandler {
     functionWrappers.addAll(RefreshIndicatorAutoBinding.functionWrapper());
     functionWrappers.addAll(RefreshIndicatorStateAutoBinding.functionWrapper());
     functionWrappers.addAll(ReorderableListViewAutoBinding.functionWrapper());
-    functionWrappers.addAll(ScaffoldMessengerStateAutoBinding.functionWrapper());
+    functionWrappers
+        .addAll(ScaffoldMessengerStateAutoBinding.functionWrapper());
     functionWrappers.addAll(ScaffoldAutoBinding.functionWrapper());
     functionWrappers.addAll(ScaffoldStateAutoBinding.functionWrapper());
     functionWrappers.addAll(ScrollbarAutoBinding.functionWrapper());
@@ -576,9 +589,11 @@ class FlutterLibraryBinding extends BindingHandler {
     functionWrappers.addAll(TextFieldAutoBinding.functionWrapper());
     functionWrappers.addAll(TextFormFieldAutoBinding.functionWrapper());
     functionWrappers.addAll(TextSelectionToolbarAutoBinding.functionWrapper());
-    functionWrappers.addAll(TextSelectionToolbarTextButtonAutoBinding.functionWrapper());
+    functionWrappers
+        .addAll(TextSelectionToolbarTextButtonAutoBinding.functionWrapper());
     functionWrappers.addAll(AnimatedThemeAutoBinding.functionWrapper());
-    functionWrappers.addAll(UserAccountsDrawerHeaderAutoBinding.functionWrapper());
+    functionWrappers
+        .addAll(UserAccountsDrawerHeaderAutoBinding.functionWrapper());
     functionWrappers.addAll(BoxDecorationAutoBinding.functionWrapper());
     functionWrappers.addAll(DecorationImageAutoBinding.functionWrapper());
     functionWrappers.addAll(FlutterLogoDecorationAutoBinding.functionWrapper());
@@ -590,15 +605,19 @@ class FlutterLibraryBinding extends BindingHandler {
     functionWrappers.addAll(ExactAssetImageAutoBinding.functionWrapper());
     functionWrappers.addAll(AssetImageAutoBinding.functionWrapper());
     functionWrappers.addAll(ImageStreamListenerAutoBinding.functionWrapper());
-    functionWrappers.addAll(OneFrameImageStreamCompleterAutoBinding.functionWrapper());
-    functionWrappers.addAll(MultiFrameImageStreamCompleterAutoBinding.functionWrapper());
+    functionWrappers
+        .addAll(OneFrameImageStreamCompleterAutoBinding.functionWrapper());
+    functionWrappers
+        .addAll(MultiFrameImageStreamCompleterAutoBinding.functionWrapper());
     functionWrappers.addAll(ShapeDecorationAutoBinding.functionWrapper());
     functionWrappers.addAll(TextSpanAutoBinding.functionWrapper());
     functionWrappers.addAll(RenderAnimatedSizeAutoBinding.functionWrapper());
-    functionWrappers.addAll(RenderingFlutterBindingAutoBinding.functionWrapper());
+    functionWrappers
+        .addAll(RenderingFlutterBindingAutoBinding.functionWrapper());
     functionWrappers.addAll(BoxConstraintsAutoBinding.functionWrapper());
     functionWrappers.addAll(BoxHitTestResultAutoBinding.functionWrapper());
-    functionWrappers.addAll(RenderCustomMultiChildLayoutBoxAutoBinding.functionWrapper());
+    functionWrappers
+        .addAll(RenderCustomMultiChildLayoutBoxAutoBinding.functionWrapper());
     functionWrappers.addAll(RenderCustomPaintAutoBinding.functionWrapper());
     functionWrappers.addAll(RenderEditableAutoBinding.functionWrapper());
     functionWrappers.addAll(RenderErrorBoxAutoBinding.functionWrapper());
@@ -606,13 +625,16 @@ class FlutterLibraryBinding extends BindingHandler {
     functionWrappers.addAll(RenderFlowAutoBinding.functionWrapper());
     functionWrappers.addAll(RenderImageAutoBinding.functionWrapper());
     functionWrappers.addAll(RenderListBodyAutoBinding.functionWrapper());
-    functionWrappers.addAll(RenderListWheelViewportAutoBinding.functionWrapper());
-    functionWrappers.addAll(MouseTrackerAnnotationAutoBinding.functionWrapper());
+    functionWrappers
+        .addAll(RenderListWheelViewportAutoBinding.functionWrapper());
+    functionWrappers
+        .addAll(MouseTrackerAnnotationAutoBinding.functionWrapper());
     functionWrappers.addAll(MouseTrackerAutoBinding.functionWrapper());
     functionWrappers.addAll(PaintingContextAutoBinding.functionWrapper());
     functionWrappers.addAll(PipelineOwnerAutoBinding.functionWrapper());
     functionWrappers.addAll(RenderParagraphAutoBinding.functionWrapper());
-    functionWrappers.addAll(RenderPerformanceOverlayAutoBinding.functionWrapper());
+    functionWrappers
+        .addAll(RenderPerformanceOverlayAutoBinding.functionWrapper());
     functionWrappers.addAll(RenderAndroidViewAutoBinding.functionWrapper());
     functionWrappers.addAll(RenderUiKitViewAutoBinding.functionWrapper());
     functionWrappers.addAll(PlatformViewRenderBoxAutoBinding.functionWrapper());
@@ -636,7 +658,8 @@ class FlutterLibraryBinding extends BindingHandler {
     functionWrappers.addAll(RenderDecoratedBoxAutoBinding.functionWrapper());
     functionWrappers.addAll(RenderTransformAutoBinding.functionWrapper());
     functionWrappers.addAll(RenderFittedBoxAutoBinding.functionWrapper());
-    functionWrappers.addAll(RenderFractionalTranslationAutoBinding.functionWrapper());
+    functionWrappers
+        .addAll(RenderFractionalTranslationAutoBinding.functionWrapper());
     functionWrappers.addAll(RenderPointerListenerAutoBinding.functionWrapper());
     functionWrappers.addAll(RenderMouseRegionAutoBinding.functionWrapper());
     functionWrappers.addAll(RenderRepaintBoundaryAutoBinding.functionWrapper());
@@ -644,47 +667,66 @@ class FlutterLibraryBinding extends BindingHandler {
     functionWrappers.addAll(RenderOffstageAutoBinding.functionWrapper());
     functionWrappers.addAll(RenderAbsorbPointerAutoBinding.functionWrapper());
     functionWrappers.addAll(RenderMetaDataAutoBinding.functionWrapper());
-    functionWrappers.addAll(RenderSemanticsGestureHandlerAutoBinding.functionWrapper());
-    functionWrappers.addAll(RenderSemanticsAnnotationsAutoBinding.functionWrapper());
+    functionWrappers
+        .addAll(RenderSemanticsGestureHandlerAutoBinding.functionWrapper());
+    functionWrappers
+        .addAll(RenderSemanticsAnnotationsAutoBinding.functionWrapper());
     functionWrappers.addAll(RenderBlockSemanticsAutoBinding.functionWrapper());
     functionWrappers.addAll(RenderMergeSemanticsAutoBinding.functionWrapper());
-    functionWrappers.addAll(RenderExcludeSemanticsAutoBinding.functionWrapper());
-    functionWrappers.addAll(RenderIndexedSemanticsAutoBinding.functionWrapper());
+    functionWrappers
+        .addAll(RenderExcludeSemanticsAutoBinding.functionWrapper());
+    functionWrappers
+        .addAll(RenderIndexedSemanticsAutoBinding.functionWrapper());
     functionWrappers.addAll(RenderLeaderLayerAutoBinding.functionWrapper());
     functionWrappers.addAll(RenderFollowerLayerAutoBinding.functionWrapper());
     functionWrappers.addAll(RenderSliverOpacityAutoBinding.functionWrapper());
-    functionWrappers.addAll(RenderSliverIgnorePointerAutoBinding.functionWrapper());
+    functionWrappers
+        .addAll(RenderSliverIgnorePointerAutoBinding.functionWrapper());
     functionWrappers.addAll(RenderSliverOffstageAutoBinding.functionWrapper());
-    functionWrappers.addAll(RenderSliverAnimatedOpacityAutoBinding.functionWrapper());
+    functionWrappers
+        .addAll(RenderSliverAnimatedOpacityAutoBinding.functionWrapper());
     functionWrappers.addAll(RenderRotatedBoxAutoBinding.functionWrapper());
     functionWrappers.addAll(RenderPaddingAutoBinding.functionWrapper());
     functionWrappers.addAll(RenderPositionedBoxAutoBinding.functionWrapper());
-    functionWrappers.addAll(RenderConstrainedOverflowBoxAutoBinding.functionWrapper());
-    functionWrappers.addAll(RenderUnconstrainedBoxAutoBinding.functionWrapper());
-    functionWrappers.addAll(RenderSizedOverflowBoxAutoBinding.functionWrapper());
-    functionWrappers.addAll(RenderFractionallySizedOverflowBoxAutoBinding.functionWrapper());
-    functionWrappers.addAll(RenderCustomSingleChildLayoutBoxAutoBinding.functionWrapper());
+    functionWrappers
+        .addAll(RenderConstrainedOverflowBoxAutoBinding.functionWrapper());
+    functionWrappers
+        .addAll(RenderUnconstrainedBoxAutoBinding.functionWrapper());
+    functionWrappers
+        .addAll(RenderSizedOverflowBoxAutoBinding.functionWrapper());
+    functionWrappers.addAll(
+        RenderFractionallySizedOverflowBoxAutoBinding.functionWrapper());
+    functionWrappers
+        .addAll(RenderCustomSingleChildLayoutBoxAutoBinding.functionWrapper());
     functionWrappers.addAll(RenderBaselineAutoBinding.functionWrapper());
     functionWrappers.addAll(SliverConstraintsAutoBinding.functionWrapper());
     functionWrappers.addAll(SliverGeometryAutoBinding.functionWrapper());
     functionWrappers.addAll(SliverHitTestResultAutoBinding.functionWrapper());
-    functionWrappers.addAll(RenderSliverToBoxAdapterAutoBinding.functionWrapper());
-    functionWrappers.addAll(RenderSliverFillViewportAutoBinding.functionWrapper());
-    functionWrappers.addAll(RenderSliverFillRemainingWithScrollableAutoBinding.functionWrapper());
-    functionWrappers.addAll(RenderSliverFillRemainingAutoBinding.functionWrapper());
-    functionWrappers.addAll(RenderSliverFillRemainingAndOverscrollAutoBinding.functionWrapper());
-    functionWrappers.addAll(RenderSliverFixedExtentListAutoBinding.functionWrapper());
+    functionWrappers
+        .addAll(RenderSliverToBoxAdapterAutoBinding.functionWrapper());
+    functionWrappers
+        .addAll(RenderSliverFillViewportAutoBinding.functionWrapper());
+    functionWrappers.addAll(
+        RenderSliverFillRemainingWithScrollableAutoBinding.functionWrapper());
+    functionWrappers
+        .addAll(RenderSliverFillRemainingAutoBinding.functionWrapper());
+    functionWrappers.addAll(
+        RenderSliverFillRemainingAndOverscrollAutoBinding.functionWrapper());
+    functionWrappers
+        .addAll(RenderSliverFixedExtentListAutoBinding.functionWrapper());
     functionWrappers.addAll(RenderSliverGridAutoBinding.functionWrapper());
     functionWrappers.addAll(RenderSliverListAutoBinding.functionWrapper());
     functionWrappers.addAll(RenderSliverPaddingAutoBinding.functionWrapper());
-    functionWrappers.addAll(OverScrollHeaderStretchConfigurationAutoBinding.functionWrapper());
+    functionWrappers.addAll(
+        OverScrollHeaderStretchConfigurationAutoBinding.functionWrapper());
     functionWrappers.addAll(RenderStackAutoBinding.functionWrapper());
     functionWrappers.addAll(RenderIndexedStackAutoBinding.functionWrapper());
     functionWrappers.addAll(RenderTableAutoBinding.functionWrapper());
     functionWrappers.addAll(TextureBoxAutoBinding.functionWrapper());
     functionWrappers.addAll(RenderViewAutoBinding.functionWrapper());
     functionWrappers.addAll(RenderViewportAutoBinding.functionWrapper());
-    functionWrappers.addAll(RenderShrinkWrappingViewportAutoBinding.functionWrapper());
+    functionWrappers
+        .addAll(RenderShrinkWrappingViewportAutoBinding.functionWrapper());
     functionWrappers.addAll(ViewportOffsetAutoBinding.functionWrapper());
     functionWrappers.addAll(RenderWrapAutoBinding.functionWrapper());
     functionWrappers.addAll(TickerAutoBinding.functionWrapper());
@@ -692,7 +734,8 @@ class FlutterLibraryBinding extends BindingHandler {
     functionWrappers.addAll(SemanticsPropertiesAutoBinding.functionWrapper());
     functionWrappers.addAll(SemanticsNodeAutoBinding.functionWrapper());
     functionWrappers.addAll(SemanticsOwnerAutoBinding.functionWrapper());
-    functionWrappers.addAll(SemanticsConfigurationAutoBinding.functionWrapper());
+    functionWrappers
+        .addAll(SemanticsConfigurationAutoBinding.functionWrapper());
     functionWrappers.addAll(PlatformViewsServiceAutoBinding.functionWrapper());
     functionWrappers.addAll(RestorationManagerAutoBinding.functionWrapper());
     functionWrappers.addAll(TextInputFormatterAutoBinding.functionWrapper());
@@ -703,13 +746,15 @@ class FlutterLibraryBinding extends BindingHandler {
     functionWrappers.addAll(AnimatedListAutoBinding.functionWrapper());
     functionWrappers.addAll(AnimatedListStateAutoBinding.functionWrapper());
     functionWrappers.addAll(SliverAnimatedListAutoBinding.functionWrapper());
-    functionWrappers.addAll(SliverAnimatedListStateAutoBinding.functionWrapper());
+    functionWrappers
+        .addAll(SliverAnimatedListStateAutoBinding.functionWrapper());
     functionWrappers.addAll(AnimatedSwitcherAutoBinding.functionWrapper());
     functionWrappers.addAll(WidgetsAppAutoBinding.functionWrapper());
     functionWrappers.addAll(KeepAliveHandleAutoBinding.functionWrapper());
     functionWrappers.addAll(BannerPainterAutoBinding.functionWrapper());
     functionWrappers.addAll(ShaderMaskAutoBinding.functionWrapper());
-    functionWrappers.addAll(WidgetToRenderBoxAdapterAutoBinding.functionWrapper());
+    functionWrappers
+        .addAll(WidgetToRenderBoxAdapterAutoBinding.functionWrapper());
     functionWrappers.addAll(ListenerAutoBinding.functionWrapper());
     functionWrappers.addAll(MouseRegionAutoBinding.functionWrapper());
     functionWrappers.addAll(SemanticsAutoBinding.functionWrapper());
@@ -717,7 +762,8 @@ class FlutterLibraryBinding extends BindingHandler {
     functionWrappers.addAll(StatefulBuilderAutoBinding.functionWrapper());
     functionWrappers.addAll(WidgetsFlutterBindingAutoBinding.functionWrapper());
     functionWrappers.addAll(DismissibleAutoBinding.functionWrapper());
-    functionWrappers.addAll(DraggableScrollableSheetAutoBinding.functionWrapper());
+    functionWrappers
+        .addAll(DraggableScrollableSheetAutoBinding.functionWrapper());
     functionWrappers.addAll(DualTransitionBuilderAutoBinding.functionWrapper());
     functionWrappers.addAll(TextEditingControllerAutoBinding.functionWrapper());
     functionWrappers.addAll(EditableTextAutoBinding.functionWrapper());
@@ -730,15 +776,19 @@ class FlutterLibraryBinding extends BindingHandler {
     functionWrappers.addAll(RequestFocusActionAutoBinding.functionWrapper());
     functionWrappers.addAll(NextFocusActionAutoBinding.functionWrapper());
     functionWrappers.addAll(PreviousFocusActionAutoBinding.functionWrapper());
-    functionWrappers.addAll(DirectionalFocusActionAutoBinding.functionWrapper());
+    functionWrappers
+        .addAll(DirectionalFocusActionAutoBinding.functionWrapper());
     functionWrappers.addAll(FormAutoBinding.functionWrapper());
     functionWrappers.addAll(BuildOwnerAutoBinding.functionWrapper());
     functionWrappers.addAll(StatelessElementAutoBinding.functionWrapper());
     functionWrappers.addAll(StatefulElementAutoBinding.functionWrapper());
     functionWrappers.addAll(InheritedElementAutoBinding.functionWrapper());
-    functionWrappers.addAll(LeafRenderObjectElementAutoBinding.functionWrapper());
-    functionWrappers.addAll(SingleChildRenderObjectElementAutoBinding.functionWrapper());
-    functionWrappers.addAll(MultiChildRenderObjectElementAutoBinding.functionWrapper());
+    functionWrappers
+        .addAll(LeafRenderObjectElementAutoBinding.functionWrapper());
+    functionWrappers
+        .addAll(SingleChildRenderObjectElementAutoBinding.functionWrapper());
+    functionWrappers
+        .addAll(MultiChildRenderObjectElementAutoBinding.functionWrapper());
     functionWrappers.addAll(GestureDetectorAutoBinding.functionWrapper());
     functionWrappers.addAll(HeroAutoBinding.functionWrapper());
     functionWrappers.addAll(HeroControllerAutoBinding.functionWrapper());
@@ -747,28 +797,38 @@ class FlutterLibraryBinding extends BindingHandler {
     functionWrappers.addAll(AnimatedPaddingAutoBinding.functionWrapper());
     functionWrappers.addAll(AnimatedAlignAutoBinding.functionWrapper());
     functionWrappers.addAll(AnimatedPositionedAutoBinding.functionWrapper());
-    functionWrappers.addAll(AnimatedPositionedDirectionalAutoBinding.functionWrapper());
+    functionWrappers
+        .addAll(AnimatedPositionedDirectionalAutoBinding.functionWrapper());
     functionWrappers.addAll(AnimatedOpacityAutoBinding.functionWrapper());
     functionWrappers.addAll(SliverAnimatedOpacityAutoBinding.functionWrapper());
-    functionWrappers.addAll(AnimatedDefaultTextStyleAutoBinding.functionWrapper());
+    functionWrappers
+        .addAll(AnimatedDefaultTextStyleAutoBinding.functionWrapper());
     functionWrappers.addAll(AnimatedPhysicalModelAutoBinding.functionWrapper());
     functionWrappers.addAll(InteractiveViewerAutoBinding.functionWrapper());
-    functionWrappers.addAll(TransformationControllerAutoBinding.functionWrapper());
+    functionWrappers
+        .addAll(TransformationControllerAutoBinding.functionWrapper());
     functionWrappers.addAll(LayoutBuilderAutoBinding.functionWrapper());
-    functionWrappers.addAll(ListWheelChildBuilderDelegateAutoBinding.functionWrapper());
-    functionWrappers.addAll(FixedExtentScrollControllerAutoBinding.functionWrapper());
+    functionWrappers
+        .addAll(ListWheelChildBuilderDelegateAutoBinding.functionWrapper());
+    functionWrappers
+        .addAll(FixedExtentScrollControllerAutoBinding.functionWrapper());
     functionWrappers.addAll(ListWheelElementAutoBinding.functionWrapper());
     functionWrappers.addAll(NavigatorAutoBinding.functionWrapper());
     functionWrappers.addAll(NavigatorStateAutoBinding.functionWrapper());
     functionWrappers.addAll(NestedScrollViewAutoBinding.functionWrapper());
-    functionWrappers.addAll(SliverOverlapAbsorberHandleAutoBinding.functionWrapper());
-    functionWrappers.addAll(RenderSliverOverlapAbsorberAutoBinding.functionWrapper());
-    functionWrappers.addAll(RenderSliverOverlapInjectorAutoBinding.functionWrapper());
-    functionWrappers.addAll(RenderNestedScrollViewViewportAutoBinding.functionWrapper());
+    functionWrappers
+        .addAll(SliverOverlapAbsorberHandleAutoBinding.functionWrapper());
+    functionWrappers
+        .addAll(RenderSliverOverlapAbsorberAutoBinding.functionWrapper());
+    functionWrappers
+        .addAll(RenderSliverOverlapInjectorAutoBinding.functionWrapper());
+    functionWrappers
+        .addAll(RenderNestedScrollViewViewportAutoBinding.functionWrapper());
     functionWrappers.addAll(OrientationBuilderAutoBinding.functionWrapper());
     functionWrappers.addAll(OverlayEntryAutoBinding.functionWrapper());
     functionWrappers.addAll(OverlayStateAutoBinding.functionWrapper());
-    functionWrappers.addAll(GlowingOverscrollIndicatorAutoBinding.functionWrapper());
+    functionWrappers
+        .addAll(GlowingOverscrollIndicatorAutoBinding.functionWrapper());
     functionWrappers.addAll(PageControllerAutoBinding.functionWrapper());
     functionWrappers.addAll(PageViewAutoBinding.functionWrapper());
     functionWrappers.addAll(AndroidViewAutoBinding.functionWrapper());
@@ -776,7 +836,8 @@ class FlutterLibraryBinding extends BindingHandler {
     functionWrappers.addAll(PlatformViewLinkAutoBinding.functionWrapper());
     functionWrappers.addAll(ReorderableListAutoBinding.functionWrapper());
     functionWrappers.addAll(SliverReorderableListAutoBinding.functionWrapper());
-    functionWrappers.addAll(SliverReorderableListStateAutoBinding.functionWrapper());
+    functionWrappers
+        .addAll(SliverReorderableListStateAutoBinding.functionWrapper());
     functionWrappers.addAll(RestorableDoubleAutoBinding.functionWrapper());
     functionWrappers.addAll(RestorableIntAutoBinding.functionWrapper());
     functionWrappers.addAll(RestorableStringAutoBinding.functionWrapper());
@@ -785,8 +846,10 @@ class FlutterLibraryBinding extends BindingHandler {
     functionWrappers.addAll(RestorableDoubleNAutoBinding.functionWrapper());
     functionWrappers.addAll(RestorableIntNAutoBinding.functionWrapper());
     functionWrappers.addAll(RestorableStringNAutoBinding.functionWrapper());
-    functionWrappers.addAll(RestorableTextEditingControllerAutoBinding.functionWrapper());
-    functionWrappers.addAll(PlatformRouteInformationProviderAutoBinding.functionWrapper());
+    functionWrappers
+        .addAll(RestorableTextEditingControllerAutoBinding.functionWrapper());
+    functionWrappers
+        .addAll(PlatformRouteInformationProviderAutoBinding.functionWrapper());
     functionWrappers.addAll(LocalHistoryEntryAutoBinding.functionWrapper());
     functionWrappers.addAll(ScrollableAutoBinding.functionWrapper());
     functionWrappers.addAll(ScrollableStateAutoBinding.functionWrapper());
@@ -796,18 +859,25 @@ class FlutterLibraryBinding extends BindingHandler {
     functionWrappers.addAll(HoldScrollActivityAutoBinding.functionWrapper());
     functionWrappers.addAll(ScrollDragControllerAutoBinding.functionWrapper());
     functionWrappers.addAll(ScrollControllerAutoBinding.functionWrapper());
-    functionWrappers.addAll(TrackingScrollControllerAutoBinding.functionWrapper());
-    functionWrappers.addAll(ScrollPositionWithSingleContextAutoBinding.functionWrapper());
+    functionWrappers
+        .addAll(TrackingScrollControllerAutoBinding.functionWrapper());
+    functionWrappers
+        .addAll(ScrollPositionWithSingleContextAutoBinding.functionWrapper());
     functionWrappers.addAll(ListViewAutoBinding.functionWrapper());
     functionWrappers.addAll(GridViewAutoBinding.functionWrapper());
     functionWrappers.addAll(ShortcutManagerAutoBinding.functionWrapper());
-    functionWrappers.addAll(SliverChildBuilderDelegateAutoBinding.functionWrapper());
-    functionWrappers.addAll(SliverChildListDelegateAutoBinding.functionWrapper());
-    functionWrappers.addAll(SliverMultiBoxAdaptorElementAutoBinding.functionWrapper());
+    functionWrappers
+        .addAll(SliverChildBuilderDelegateAutoBinding.functionWrapper());
+    functionWrappers
+        .addAll(SliverChildListDelegateAutoBinding.functionWrapper());
+    functionWrappers
+        .addAll(SliverMultiBoxAdaptorElementAutoBinding.functionWrapper());
     functionWrappers.addAll(SliverLayoutBuilderAutoBinding.functionWrapper());
     functionWrappers.addAll(TextSelectionOverlayAutoBinding.functionWrapper());
-    functionWrappers.addAll(TextSelectionGestureDetectorAutoBinding.functionWrapper());
-    functionWrappers.addAll(ClipboardStatusNotifierAutoBinding.functionWrapper());
+    functionWrappers
+        .addAll(TextSelectionGestureDetectorAutoBinding.functionWrapper());
+    functionWrappers
+        .addAll(ClipboardStatusNotifierAutoBinding.functionWrapper());
     functionWrappers.addAll(AnimatedBuilderAutoBinding.functionWrapper());
     functionWrappers.addAll(WidgetInspectorAutoBinding.functionWrapper());
     functionWrappers.addAll(WidgetSpanAutoBinding.functionWrapper());
@@ -984,10 +1054,8 @@ class FlutterLibraryBinding extends BindingHandler {
       RawSynchronousSocketAutoBinding(),
       BigIntAutoBinding(),
       DateTimeAutoBinding(),
-      DoubleAutoBinding(),
       DurationAutoBinding(),
       FunctionAutoBinding(),
-      IntAutoBinding(),
       InvocationAutoBinding(),
       RegExpAutoBinding(),
       StackTraceAutoBinding(),
@@ -2200,10 +2268,8 @@ class FlutterLibraryBinding extends BindingHandler {
     futures.add(interpreter.import('dart://io/sync_socket.ht'));
     futures.add(interpreter.import('dart://core/bigint.ht'));
     futures.add(interpreter.import('dart://core/date_time.ht'));
-    futures.add(interpreter.import('dart://core/double.ht'));
     futures.add(interpreter.import('dart://core/duration.ht'));
     futures.add(interpreter.import('dart://core/function.ht'));
-    futures.add(interpreter.import('dart://core/int.ht'));
     futures.add(interpreter.import('dart://core/invocation.ht'));
     futures.add(interpreter.import('dart://core/regexp.ht'));
     futures.add(interpreter.import('dart://core/stacktrace.ht'));
@@ -2213,18 +2279,21 @@ class FlutterLibraryBinding extends BindingHandler {
     futures.add(interpreter.import('dart://core/uri.ht'));
     futures.add(interpreter.import('flutter://animation/animation.ht'));
     futures.add(interpreter.import('flutter://animation/animations.ht'));
-    futures.add(interpreter.import('flutter://animation/animation_controller.ht'));
+    futures
+        .add(interpreter.import('flutter://animation/animation_controller.ht'));
     futures.add(interpreter.import('flutter://animation/curves.ht'));
     futures.add(interpreter.import('flutter://animation/tween.ht'));
     futures.add(interpreter.import('flutter://animation/tween_sequence.ht'));
     futures.add(interpreter.import('flutter://cupertino/action_sheet.ht'));
-    futures.add(interpreter.import('flutter://cupertino/activity_indicator.ht'));
+    futures
+        .add(interpreter.import('flutter://cupertino/activity_indicator.ht'));
     futures.add(interpreter.import('flutter://cupertino/app.ht'));
     futures.add(interpreter.import('flutter://cupertino/bottom_tab_bar.ht'));
     futures.add(interpreter.import('flutter://cupertino/button.ht'));
     futures.add(interpreter.import('flutter://cupertino/colors.ht'));
     futures.add(interpreter.import('flutter://cupertino/context_menu.ht'));
-    futures.add(interpreter.import('flutter://cupertino/context_menu_action.ht'));
+    futures
+        .add(interpreter.import('flutter://cupertino/context_menu_action.ht'));
     futures.add(interpreter.import('flutter://cupertino/date_picker.ht'));
     futures.add(interpreter.import('flutter://cupertino/dialog.ht'));
     futures.add(interpreter.import('flutter://cupertino/form_row.ht'));
@@ -2245,10 +2314,13 @@ class FlutterLibraryBinding extends BindingHandler {
     futures.add(interpreter.import('flutter://cupertino/tab_scaffold.ht'));
     futures.add(interpreter.import('flutter://cupertino/tab_view.ht'));
     futures.add(interpreter.import('flutter://cupertino/text_field.ht'));
-    futures.add(interpreter.import('flutter://cupertino/text_form_field_row.ht'));
+    futures
+        .add(interpreter.import('flutter://cupertino/text_form_field_row.ht'));
     futures.add(interpreter.import('flutter://cupertino/text_selection.ht'));
-    futures.add(interpreter.import('flutter://cupertino/text_selection_toolbar.ht'));
-    futures.add(interpreter.import('flutter://cupertino/text_selection_toolbar_button.ht'));
+    futures.add(
+        interpreter.import('flutter://cupertino/text_selection_toolbar.ht'));
+    futures.add(interpreter
+        .import('flutter://cupertino/text_selection_toolbar_button.ht'));
     futures.add(interpreter.import('flutter://cupertino/text_theme.ht'));
     futures.add(interpreter.import('flutter://cupertino/theme.ht'));
     futures.add(interpreter.import('flutter://cupertino/thumb_painter.ht'));
@@ -2277,7 +2349,8 @@ class FlutterLibraryBinding extends BindingHandler {
     futures.add(interpreter.import('flutter://gestures/multidrag.ht'));
     futures.add(interpreter.import('flutter://gestures/multitap.ht'));
     futures.add(interpreter.import('flutter://gestures/pointer_router.ht'));
-    futures.add(interpreter.import('flutter://gestures/pointer_signal_resolver.ht'));
+    futures.add(
+        interpreter.import('flutter://gestures/pointer_signal_resolver.ht'));
     futures.add(interpreter.import('flutter://gestures/recognizer.ht'));
     futures.add(interpreter.import('flutter://gestures/resampler.ht'));
     futures.add(interpreter.import('flutter://gestures/scale.ht'));
@@ -2286,7 +2359,8 @@ class FlutterLibraryBinding extends BindingHandler {
     futures.add(interpreter.import('flutter://gestures/velocity_tracker.ht'));
     futures.add(interpreter.import('flutter://material/about.ht'));
     futures.add(interpreter.import('flutter://material/animated_icons.ht'));
-    futures.add(interpreter.import('flutter://material/animated_icons_data.ht'));
+    futures
+        .add(interpreter.import('flutter://material/animated_icons_data.ht'));
     futures.add(interpreter.import('flutter://material/app.ht'));
     futures.add(interpreter.import('flutter://material/app_bar.ht'));
     futures.add(interpreter.import('flutter://material/app_bar_theme.ht'));
@@ -2295,9 +2369,12 @@ class FlutterLibraryBinding extends BindingHandler {
     futures.add(interpreter.import('flutter://material/banner.ht'));
     futures.add(interpreter.import('flutter://material/banner_theme.ht'));
     futures.add(interpreter.import('flutter://material/bottom_app_bar.ht'));
-    futures.add(interpreter.import('flutter://material/bottom_app_bar_theme.ht'));
-    futures.add(interpreter.import('flutter://material/bottom_navigation_bar.ht'));
-    futures.add(interpreter.import('flutter://material/bottom_navigation_bar_theme.ht'));
+    futures
+        .add(interpreter.import('flutter://material/bottom_app_bar_theme.ht'));
+    futures
+        .add(interpreter.import('flutter://material/bottom_navigation_bar.ht'));
+    futures.add(interpreter
+        .import('flutter://material/bottom_navigation_bar_theme.ht'));
     futures.add(interpreter.import('flutter://material/bottom_sheet.ht'));
     futures.add(interpreter.import('flutter://material/bottom_sheet_theme.ht'));
     futures.add(interpreter.import('flutter://material/button.ht'));
@@ -2305,7 +2382,8 @@ class FlutterLibraryBinding extends BindingHandler {
     futures.add(interpreter.import('flutter://material/button_bar_theme.ht'));
     futures.add(interpreter.import('flutter://material/button_style.ht'));
     futures.add(interpreter.import('flutter://material/button_theme.ht'));
-    futures.add(interpreter.import('flutter://material/calendar_date_picker.ht'));
+    futures
+        .add(interpreter.import('flutter://material/calendar_date_picker.ht'));
     futures.add(interpreter.import('flutter://material/card.ht'));
     futures.add(interpreter.import('flutter://material/card_theme.ht'));
     futures.add(interpreter.import('flutter://material/checkbox.ht'));
@@ -2319,7 +2397,8 @@ class FlutterLibraryBinding extends BindingHandler {
     futures.add(interpreter.import('flutter://material/data_table.ht'));
     futures.add(interpreter.import('flutter://material/data_table_theme.ht'));
     futures.add(interpreter.import('flutter://material/date.ht'));
-    futures.add(interpreter.import('flutter://material/date_picker_deprecated.ht'));
+    futures.add(
+        interpreter.import('flutter://material/date_picker_deprecated.ht'));
     futures.add(interpreter.import('flutter://material/dialog.ht'));
     futures.add(interpreter.import('flutter://material/dialog_theme.ht'));
     futures.add(interpreter.import('flutter://material/divider.ht'));
@@ -2328,7 +2407,8 @@ class FlutterLibraryBinding extends BindingHandler {
     futures.add(interpreter.import('flutter://material/drawer_header.ht'));
     futures.add(interpreter.import('flutter://material/dropdown.ht'));
     futures.add(interpreter.import('flutter://material/elevated_button.ht'));
-    futures.add(interpreter.import('flutter://material/elevated_button_theme.ht'));
+    futures
+        .add(interpreter.import('flutter://material/elevated_button_theme.ht'));
     futures.add(interpreter.import('flutter://material/elevation_overlay.ht'));
     futures.add(interpreter.import('flutter://material/expand_icon.ht'));
     futures.add(interpreter.import('flutter://material/expansion_panel.ht'));
@@ -2336,8 +2416,10 @@ class FlutterLibraryBinding extends BindingHandler {
     futures.add(interpreter.import('flutter://material/feedback.ht'));
     futures.add(interpreter.import('flutter://material/flat_button.ht'));
     futures.add(interpreter.import('flutter://material/flexible_space_bar.ht'));
-    futures.add(interpreter.import('flutter://material/floating_action_button.ht'));
-    futures.add(interpreter.import('flutter://material/floating_action_button_theme.ht'));
+    futures.add(
+        interpreter.import('flutter://material/floating_action_button.ht'));
+    futures.add(interpreter
+        .import('flutter://material/floating_action_button_theme.ht'));
     futures.add(interpreter.import('flutter://material/flutter_logo.ht'));
     futures.add(interpreter.import('flutter://material/grid_tile.ht'));
     futures.add(interpreter.import('flutter://material/grid_tile_bar.ht'));
@@ -2349,21 +2431,27 @@ class FlutterLibraryBinding extends BindingHandler {
     futures.add(interpreter.import('flutter://material/ink_splash.ht'));
     futures.add(interpreter.import('flutter://material/ink_well.ht'));
     futures.add(interpreter.import('flutter://material/input_border.ht'));
-    futures.add(interpreter.import('flutter://material/input_date_picker_form_field.ht'));
+    futures.add(interpreter
+        .import('flutter://material/input_date_picker_form_field.ht'));
     futures.add(interpreter.import('flutter://material/input_decorator.ht'));
     futures.add(interpreter.import('flutter://material/list_tile.ht'));
     futures.add(interpreter.import('flutter://material/material.ht'));
     futures.add(interpreter.import('flutter://material/material_button.ht'));
-    futures.add(interpreter.import('flutter://material/material_localizations.ht'));
+    futures.add(
+        interpreter.import('flutter://material/material_localizations.ht'));
     futures.add(interpreter.import('flutter://material/material_state.ht'));
     futures.add(interpreter.import('flutter://material/mergeable_material.ht'));
     futures.add(interpreter.import('flutter://material/navigation_rail.ht'));
-    futures.add(interpreter.import('flutter://material/navigation_rail_theme.ht'));
+    futures
+        .add(interpreter.import('flutter://material/navigation_rail_theme.ht'));
     futures.add(interpreter.import('flutter://material/outlined_button.ht'));
-    futures.add(interpreter.import('flutter://material/outlined_button_theme.ht'));
+    futures
+        .add(interpreter.import('flutter://material/outlined_button_theme.ht'));
     futures.add(interpreter.import('flutter://material/outline_button.ht'));
-    futures.add(interpreter.import('flutter://material/page_transitions_theme.ht'));
-    futures.add(interpreter.import('flutter://material/paginated_data_table.ht'));
+    futures.add(
+        interpreter.import('flutter://material/page_transitions_theme.ht'));
+    futures
+        .add(interpreter.import('flutter://material/paginated_data_table.ht'));
     futures.add(interpreter.import('flutter://material/popup_menu.ht'));
     futures.add(interpreter.import('flutter://material/popup_menu_theme.ht'));
     futures.add(interpreter.import('flutter://material/progress_indicator.ht'));
@@ -2393,9 +2481,12 @@ class FlutterLibraryBinding extends BindingHandler {
     futures.add(interpreter.import('flutter://material/text_field.ht'));
     futures.add(interpreter.import('flutter://material/text_form_field.ht'));
     futures.add(interpreter.import('flutter://material/text_selection.ht'));
-    futures.add(interpreter.import('flutter://material/text_selection_theme.ht'));
-    futures.add(interpreter.import('flutter://material/text_selection_toolbar.ht'));
-    futures.add(interpreter.import('flutter://material/text_selection_toolbar_text_button.ht'));
+    futures
+        .add(interpreter.import('flutter://material/text_selection_theme.ht'));
+    futures.add(
+        interpreter.import('flutter://material/text_selection_toolbar.ht'));
+    futures.add(interpreter
+        .import('flutter://material/text_selection_toolbar_text_button.ht'));
     futures.add(interpreter.import('flutter://material/text_theme.ht'));
     futures.add(interpreter.import('flutter://material/theme.ht'));
     futures.add(interpreter.import('flutter://material/theme_data.ht'));
@@ -2403,14 +2494,17 @@ class FlutterLibraryBinding extends BindingHandler {
     futures.add(interpreter.import('flutter://material/time_picker.ht'));
     futures.add(interpreter.import('flutter://material/time_picker_theme.ht'));
     futures.add(interpreter.import('flutter://material/toggle_buttons.ht'));
-    futures.add(interpreter.import('flutter://material/toggle_buttons_theme.ht'));
+    futures
+        .add(interpreter.import('flutter://material/toggle_buttons_theme.ht'));
     futures.add(interpreter.import('flutter://material/tooltip.ht'));
     futures.add(interpreter.import('flutter://material/tooltip_theme.ht'));
     futures.add(interpreter.import('flutter://material/typography.ht'));
-    futures.add(interpreter.import('flutter://material/user_accounts_drawer_header.ht'));
+    futures.add(interpreter
+        .import('flutter://material/user_accounts_drawer_header.ht'));
     futures.add(interpreter.import('flutter://painting/alignment.ht'));
     futures.add(interpreter.import('flutter://painting/basic_types.ht'));
-    futures.add(interpreter.import('flutter://painting/beveled_rectangle_border.ht'));
+    futures.add(
+        interpreter.import('flutter://painting/beveled_rectangle_border.ht'));
     futures.add(interpreter.import('flutter://painting/borders.ht'));
     futures.add(interpreter.import('flutter://painting/border_radius.ht'));
     futures.add(interpreter.import('flutter://painting/box_border.ht'));
@@ -2419,7 +2513,8 @@ class FlutterLibraryBinding extends BindingHandler {
     futures.add(interpreter.import('flutter://painting/box_shadow.ht'));
     futures.add(interpreter.import('flutter://painting/circle_border.ht'));
     futures.add(interpreter.import('flutter://painting/colors.ht'));
-    futures.add(interpreter.import('flutter://painting/continuous_rectangle_border.ht'));
+    futures.add(interpreter
+        .import('flutter://painting/continuous_rectangle_border.ht'));
     futures.add(interpreter.import('flutter://painting/debug.ht'));
     futures.add(interpreter.import('flutter://painting/decoration_image.ht'));
     futures.add(interpreter.import('flutter://painting/edge_insets.ht'));
@@ -2433,7 +2528,8 @@ class FlutterLibraryBinding extends BindingHandler {
     futures.add(interpreter.import('flutter://painting/inline_span.ht'));
     futures.add(interpreter.import('flutter://painting/matrix_utils.ht'));
     futures.add(interpreter.import('flutter://painting/notched_shapes.ht'));
-    futures.add(interpreter.import('flutter://painting/rounded_rectangle_border.ht'));
+    futures.add(
+        interpreter.import('flutter://painting/rounded_rectangle_border.ht'));
     futures.add(interpreter.import('flutter://painting/shader_warm_up.ht'));
     futures.add(interpreter.import('flutter://painting/shape_decoration.ht'));
     futures.add(interpreter.import('flutter://painting/stadium_border.ht'));
@@ -2459,12 +2555,14 @@ class FlutterLibraryBinding extends BindingHandler {
     futures.add(interpreter.import('flutter://rendering/layer.ht'));
     futures.add(interpreter.import('flutter://rendering/layout_helper.ht'));
     futures.add(interpreter.import('flutter://rendering/list_body.ht'));
-    futures.add(interpreter.import('flutter://rendering/list_wheel_viewport.ht'));
+    futures
+        .add(interpreter.import('flutter://rendering/list_wheel_viewport.ht'));
     futures.add(interpreter.import('flutter://rendering/mouse_cursor.ht'));
     futures.add(interpreter.import('flutter://rendering/mouse_tracking.ht'));
     futures.add(interpreter.import('flutter://rendering/object.ht'));
     futures.add(interpreter.import('flutter://rendering/paragraph.ht'));
-    futures.add(interpreter.import('flutter://rendering/performance_overlay.ht'));
+    futures
+        .add(interpreter.import('flutter://rendering/performance_overlay.ht'));
     futures.add(interpreter.import('flutter://rendering/platform_view.ht'));
     futures.add(interpreter.import('flutter://rendering/proxy_box.ht'));
     futures.add(interpreter.import('flutter://rendering/proxy_sliver.ht'));
@@ -2472,12 +2570,15 @@ class FlutterLibraryBinding extends BindingHandler {
     futures.add(interpreter.import('flutter://rendering/shifted_box.ht'));
     futures.add(interpreter.import('flutter://rendering/sliver.ht'));
     futures.add(interpreter.import('flutter://rendering/sliver_fill.ht'));
-    futures.add(interpreter.import('flutter://rendering/sliver_fixed_extent_list.ht'));
+    futures.add(
+        interpreter.import('flutter://rendering/sliver_fixed_extent_list.ht'));
     futures.add(interpreter.import('flutter://rendering/sliver_grid.ht'));
     futures.add(interpreter.import('flutter://rendering/sliver_list.ht'));
-    futures.add(interpreter.import('flutter://rendering/sliver_multi_box_adaptor.ht'));
+    futures.add(
+        interpreter.import('flutter://rendering/sliver_multi_box_adaptor.ht'));
     futures.add(interpreter.import('flutter://rendering/sliver_padding.ht'));
-    futures.add(interpreter.import('flutter://rendering/sliver_persistent_header.ht'));
+    futures.add(
+        interpreter.import('flutter://rendering/sliver_persistent_header.ht'));
     futures.add(interpreter.import('flutter://rendering/stack.ht'));
     futures.add(interpreter.import('flutter://rendering/table.ht'));
     futures.add(interpreter.import('flutter://rendering/table_border.ht'));
@@ -2505,13 +2606,16 @@ class FlutterLibraryBinding extends BindingHandler {
     futures.add(interpreter.import('flutter://services/platform_channel.ht'));
     futures.add(interpreter.import('flutter://services/platform_views.ht'));
     futures.add(interpreter.import('flutter://services/raw_keyboard.ht'));
-    futures.add(interpreter.import('flutter://services/raw_keyboard_android.ht'));
-    futures.add(interpreter.import('flutter://services/raw_keyboard_fuchsia.ht'));
+    futures
+        .add(interpreter.import('flutter://services/raw_keyboard_android.ht'));
+    futures
+        .add(interpreter.import('flutter://services/raw_keyboard_fuchsia.ht'));
     futures.add(interpreter.import('flutter://services/raw_keyboard_ios.ht'));
     futures.add(interpreter.import('flutter://services/raw_keyboard_linux.ht'));
     futures.add(interpreter.import('flutter://services/raw_keyboard_macos.ht'));
     futures.add(interpreter.import('flutter://services/raw_keyboard_web.ht'));
-    futures.add(interpreter.import('flutter://services/raw_keyboard_windows.ht'));
+    futures
+        .add(interpreter.import('flutter://services/raw_keyboard_windows.ht'));
     futures.add(interpreter.import('flutter://services/restoration.ht'));
     futures.add(interpreter.import('flutter://services/system_channels.ht'));
     futures.add(interpreter.import('flutter://services/system_chrome.ht'));
@@ -2528,18 +2632,23 @@ class FlutterLibraryBinding extends BindingHandler {
     futures.add(interpreter.import('flutter://widgets/app.ht'));
     futures.add(interpreter.import('flutter://widgets/async.ht'));
     futures.add(interpreter.import('flutter://widgets/autofill.ht'));
-    futures.add(interpreter.import('flutter://widgets/automatic_keep_alive.ht'));
+    futures
+        .add(interpreter.import('flutter://widgets/automatic_keep_alive.ht'));
     futures.add(interpreter.import('flutter://widgets/banner.ht'));
     futures.add(interpreter.import('flutter://widgets/basic.ht'));
     futures.add(interpreter.import('flutter://widgets/binding.ht'));
-    futures.add(interpreter.import('flutter://widgets/bottom_navigation_bar_item.ht'));
+    futures.add(
+        interpreter.import('flutter://widgets/bottom_navigation_bar_item.ht'));
     futures.add(interpreter.import('flutter://widgets/color_filter.ht'));
     futures.add(interpreter.import('flutter://widgets/container.ht'));
-    futures.add(interpreter.import('flutter://widgets/desktop_text_selection_toolbar_layout_delegate.ht'));
+    futures.add(interpreter.import(
+        'flutter://widgets/desktop_text_selection_toolbar_layout_delegate.ht'));
     futures.add(interpreter.import('flutter://widgets/dismissible.ht'));
-    futures.add(interpreter.import('flutter://widgets/draggable_scrollable_sheet.ht'));
+    futures.add(
+        interpreter.import('flutter://widgets/draggable_scrollable_sheet.ht'));
     futures.add(interpreter.import('flutter://widgets/drag_target.ht'));
-    futures.add(interpreter.import('flutter://widgets/dual_transition_builder.ht'));
+    futures.add(
+        interpreter.import('flutter://widgets/dual_transition_builder.ht'));
     futures.add(interpreter.import('flutter://widgets/editable_text.ht'));
     futures.add(interpreter.import('flutter://widgets/fade_in_image.ht'));
     futures.add(interpreter.import('flutter://widgets/focus_manager.ht'));
@@ -2560,59 +2669,73 @@ class FlutterLibraryBinding extends BindingHandler {
     futures.add(interpreter.import('flutter://widgets/implicit_animations.ht'));
     futures.add(interpreter.import('flutter://widgets/interactive_viewer.ht'));
     futures.add(interpreter.import('flutter://widgets/layout_builder.ht'));
-    futures.add(interpreter.import('flutter://widgets/list_wheel_scroll_view.ht'));
+    futures
+        .add(interpreter.import('flutter://widgets/list_wheel_scroll_view.ht'));
     futures.add(interpreter.import('flutter://widgets/localizations.ht'));
     futures.add(interpreter.import('flutter://widgets/media_query.ht'));
     futures.add(interpreter.import('flutter://widgets/modal_barrier.ht'));
     futures.add(interpreter.import('flutter://widgets/navigation_toolbar.ht'));
     futures.add(interpreter.import('flutter://widgets/navigator.ht'));
     futures.add(interpreter.import('flutter://widgets/nested_scroll_view.ht'));
-    futures.add(interpreter.import('flutter://widgets/notification_listener.ht'));
+    futures
+        .add(interpreter.import('flutter://widgets/notification_listener.ht'));
     futures.add(interpreter.import('flutter://widgets/orientation_builder.ht'));
     futures.add(interpreter.import('flutter://widgets/overflow_bar.ht'));
     futures.add(interpreter.import('flutter://widgets/overlay.ht'));
-    futures.add(interpreter.import('flutter://widgets/overscroll_indicator.ht'));
+    futures
+        .add(interpreter.import('flutter://widgets/overscroll_indicator.ht'));
     futures.add(interpreter.import('flutter://widgets/page_storage.ht'));
     futures.add(interpreter.import('flutter://widgets/page_view.ht'));
     futures.add(interpreter.import('flutter://widgets/performance_overlay.ht'));
     futures.add(interpreter.import('flutter://widgets/placeholder.ht'));
     futures.add(interpreter.import('flutter://widgets/platform_view.ht'));
     futures.add(interpreter.import('flutter://widgets/preferred_size.ht'));
-    futures.add(interpreter.import('flutter://widgets/primary_scroll_controller.ht'));
-    futures.add(interpreter.import('flutter://widgets/raw_keyboard_listener.ht'));
+    futures.add(
+        interpreter.import('flutter://widgets/primary_scroll_controller.ht'));
+    futures
+        .add(interpreter.import('flutter://widgets/raw_keyboard_listener.ht'));
     futures.add(interpreter.import('flutter://widgets/reorderable_list.ht'));
     futures.add(interpreter.import('flutter://widgets/restoration.ht'));
-    futures.add(interpreter.import('flutter://widgets/restoration_properties.ht'));
+    futures
+        .add(interpreter.import('flutter://widgets/restoration_properties.ht'));
     futures.add(interpreter.import('flutter://widgets/router.ht'));
     futures.add(interpreter.import('flutter://widgets/routes.ht'));
     futures.add(interpreter.import('flutter://widgets/safe_area.ht'));
     futures.add(interpreter.import('flutter://widgets/scrollable.ht'));
     futures.add(interpreter.import('flutter://widgets/scrollbar.ht'));
     futures.add(interpreter.import('flutter://widgets/scroll_activity.ht'));
-    futures.add(interpreter.import('flutter://widgets/scroll_configuration.ht'));
+    futures
+        .add(interpreter.import('flutter://widgets/scroll_configuration.ht'));
     futures.add(interpreter.import('flutter://widgets/scroll_controller.ht'));
     futures.add(interpreter.import('flutter://widgets/scroll_metrics.ht'));
     futures.add(interpreter.import('flutter://widgets/scroll_notification.ht'));
     futures.add(interpreter.import('flutter://widgets/scroll_physics.ht'));
     futures.add(interpreter.import('flutter://widgets/scroll_position.ht'));
-    futures.add(interpreter.import('flutter://widgets/scroll_position_with_single_context.ht'));
+    futures.add(interpreter
+        .import('flutter://widgets/scroll_position_with_single_context.ht'));
     futures.add(interpreter.import('flutter://widgets/scroll_simulation.ht'));
     futures.add(interpreter.import('flutter://widgets/scroll_view.ht'));
     futures.add(interpreter.import('flutter://widgets/semantics_debugger.ht'));
     futures.add(interpreter.import('flutter://widgets/shortcuts.ht'));
-    futures.add(interpreter.import('flutter://widgets/single_child_scroll_view.ht'));
-    futures.add(interpreter.import('flutter://widgets/size_changed_layout_notifier.ht'));
+    futures.add(
+        interpreter.import('flutter://widgets/single_child_scroll_view.ht'));
+    futures.add(interpreter
+        .import('flutter://widgets/size_changed_layout_notifier.ht'));
     futures.add(interpreter.import('flutter://widgets/sliver.ht'));
     futures.add(interpreter.import('flutter://widgets/sliver_fill.ht'));
-    futures.add(interpreter.import('flutter://widgets/sliver_layout_builder.ht'));
-    futures.add(interpreter.import('flutter://widgets/sliver_persistent_header.ht'));
-    futures.add(interpreter.import('flutter://widgets/sliver_prototype_extent_list.ht'));
+    futures
+        .add(interpreter.import('flutter://widgets/sliver_layout_builder.ht'));
+    futures.add(
+        interpreter.import('flutter://widgets/sliver_persistent_header.ht'));
+    futures.add(interpreter
+        .import('flutter://widgets/sliver_prototype_extent_list.ht'));
     futures.add(interpreter.import('flutter://widgets/spacer.ht'));
     futures.add(interpreter.import('flutter://widgets/table.ht'));
     futures.add(interpreter.import('flutter://widgets/text.ht'));
     futures.add(interpreter.import('flutter://widgets/texture.ht'));
     futures.add(interpreter.import('flutter://widgets/text_selection.ht'));
-    futures.add(interpreter.import('flutter://widgets/text_selection_toolbar_layout_delegate.ht'));
+    futures.add(interpreter
+        .import('flutter://widgets/text_selection_toolbar_layout_delegate.ht'));
     futures.add(interpreter.import('flutter://widgets/ticker_provider.ht'));
     futures.add(interpreter.import('flutter://widgets/title.ht'));
     futures.add(interpreter.import('flutter://widgets/transitions.ht'));

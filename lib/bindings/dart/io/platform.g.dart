@@ -48,7 +48,7 @@ class PlatformAutoBinding extends HTExternalClass {
       case 'Platform.isFuchsia':
         return Platform.isFuchsia;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

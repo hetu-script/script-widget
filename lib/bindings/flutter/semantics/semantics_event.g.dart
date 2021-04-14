@@ -8,9 +8,10 @@ class AnnounceSemanticsEventAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'AnnounceSemanticsEvent':
-        return ({positionalArgs, namedArgs, typeArgs}) => AnnounceSemanticsEvent(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            AnnounceSemanticsEvent(positionalArgs[0], positionalArgs[1]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -24,7 +25,7 @@ extension AnnounceSemanticsEventBinding on AnnounceSemanticsEvent {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('AnnounceSemanticsEvent');
+        return const HTType('AnnounceSemanticsEvent');
       case 'message':
         return message;
       case 'textDirection':
@@ -34,12 +35,13 @@ extension AnnounceSemanticsEventBinding on AnnounceSemanticsEvent {
       case 'getDataMap':
         return ({positionalArgs, namedArgs, typeArgs}) => getDataMap();
       case 'toMap':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toMap(nodeId: namedArgs.containsKey('nodeId') ? namedArgs['nodeId'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => toMap(
+            nodeId:
+                namedArgs.containsKey('nodeId') ? namedArgs['nodeId'] : null);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -51,9 +53,10 @@ class TooltipSemanticsEventAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'TooltipSemanticsEvent':
-        return ({positionalArgs, namedArgs, typeArgs}) => TooltipSemanticsEvent(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            TooltipSemanticsEvent(positionalArgs[0]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -67,7 +70,7 @@ extension TooltipSemanticsEventBinding on TooltipSemanticsEvent {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('TooltipSemanticsEvent');
+        return const HTType('TooltipSemanticsEvent');
       case 'message':
         return message;
       case 'type':
@@ -75,12 +78,13 @@ extension TooltipSemanticsEventBinding on TooltipSemanticsEvent {
       case 'getDataMap':
         return ({positionalArgs, namedArgs, typeArgs}) => getDataMap();
       case 'toMap':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toMap(nodeId: namedArgs.containsKey('nodeId') ? namedArgs['nodeId'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => toMap(
+            nodeId:
+                namedArgs.containsKey('nodeId') ? namedArgs['nodeId'] : null);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -92,9 +96,10 @@ class LongPressSemanticsEventAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'LongPressSemanticsEvent':
-        return ({positionalArgs, namedArgs, typeArgs}) => LongPressSemanticsEvent();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            LongPressSemanticsEvent();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -108,18 +113,19 @@ extension LongPressSemanticsEventBinding on LongPressSemanticsEvent {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('LongPressSemanticsEvent');
+        return const HTType('LongPressSemanticsEvent');
       case 'type':
         return type;
       case 'getDataMap':
         return ({positionalArgs, namedArgs, typeArgs}) => getDataMap();
       case 'toMap':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toMap(nodeId: namedArgs.containsKey('nodeId') ? namedArgs['nodeId'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => toMap(
+            nodeId:
+                namedArgs.containsKey('nodeId') ? namedArgs['nodeId'] : null);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -133,7 +139,7 @@ class TapSemanticEventAutoBinding extends HTExternalClass {
       case 'TapSemanticEvent':
         return ({positionalArgs, namedArgs, typeArgs}) => TapSemanticEvent();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -147,18 +153,19 @@ extension TapSemanticEventBinding on TapSemanticEvent {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('TapSemanticEvent');
+        return const HTType('TapSemanticEvent');
       case 'type':
         return type;
       case 'getDataMap':
         return ({positionalArgs, namedArgs, typeArgs}) => getDataMap();
       case 'toMap':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toMap(nodeId: namedArgs.containsKey('nodeId') ? namedArgs['nodeId'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => toMap(
+            nodeId:
+                namedArgs.containsKey('nodeId') ? namedArgs['nodeId'] : null);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

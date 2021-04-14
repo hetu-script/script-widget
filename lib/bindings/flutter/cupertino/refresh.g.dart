@@ -22,7 +22,7 @@ class RefreshIndicatorModeAutoBinding extends HTExternalClass {
       case 'RefreshIndicatorMode.done':
         return RefreshIndicatorMode.done;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -30,40 +30,57 @@ class RefreshIndicatorModeAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('RefreshIndicatorMode');
+        return const HTType('RefreshIndicatorMode');
       case 'index':
         return (instance as RefreshIndicatorMode).index;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => (instance as RefreshIndicatorMode).toString();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            (instance as RefreshIndicatorMode).toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
 
 class CupertinoSliverRefreshControlAutoBinding extends HTExternalClass {
-  CupertinoSliverRefreshControlAutoBinding() : super('CupertinoSliverRefreshControl');
+  CupertinoSliverRefreshControlAutoBinding()
+      : super('CupertinoSliverRefreshControl');
 
   @override
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'CupertinoSliverRefreshControl':
-        const buildRefreshIndicator = CupertinoSliverRefreshControl.buildRefreshIndicator;
-        return ({positionalArgs, namedArgs, typeArgs}) => CupertinoSliverRefreshControl(
-            key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
-            refreshTriggerPullDistance: namedArgs.containsKey('refreshTriggerPullDistance')
-                ? namedArgs['refreshTriggerPullDistance']
-                : _defaultRefreshTriggerPullDistance,
-            refreshIndicatorExtent: namedArgs.containsKey('refreshIndicatorExtent')
-                ? namedArgs['refreshIndicatorExtent']
-                : _defaultRefreshIndicatorExtent,
-            builder: namedArgs.containsKey('builder') ? namedArgs['builder'] : buildRefreshIndicator,
-            onRefresh: namedArgs.containsKey('onRefresh') ? namedArgs['onRefresh'] : null);
+        const buildRefreshIndicator =
+            CupertinoSliverRefreshControl.buildRefreshIndicator;
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            CupertinoSliverRefreshControl(
+                key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
+                refreshTriggerPullDistance:
+                    namedArgs.containsKey(
+                            'refreshTriggerPullDistance')
+                        ? namedArgs['refreshTriggerPullDistance']
+                        : _defaultRefreshTriggerPullDistance,
+                refreshIndicatorExtent:
+                    namedArgs
+                            .containsKey('refreshIndicatorExtent')
+                        ? namedArgs['refreshIndicatorExtent']
+                        : _defaultRefreshIndicatorExtent,
+                builder: namedArgs.containsKey('builder')
+                    ? namedArgs['builder']
+                    : buildRefreshIndicator,
+                onRefresh: namedArgs.containsKey('onRefresh')
+                    ? namedArgs['onRefresh']
+                    : null);
       case 'CupertinoSliverRefreshControl.buildRefreshIndicator':
-        return ({positionalArgs, namedArgs, typeArgs}) => CupertinoSliverRefreshControl.buildRefreshIndicator(
-            positionalArgs[0], positionalArgs[1], positionalArgs[2], positionalArgs[3], positionalArgs[4]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            CupertinoSliverRefreshControl.buildRefreshIndicator(
+                positionalArgs[0],
+                positionalArgs[1],
+                positionalArgs[2],
+                positionalArgs[3],
+                positionalArgs[4]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -74,12 +91,20 @@ class CupertinoSliverRefreshControlAutoBinding extends HTExternalClass {
 
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'RefreshControlIndicatorBuilder': (HTFunction function) =>
-          (context, refreshState, pulledExtent, refreshTriggerPullDistance, refreshIndicatorExtent) => function.call(
-              positionalArgs: [context, refreshState, pulledExtent, refreshTriggerPullDistance, refreshIndicatorExtent],
-              namedArgs: const {}) as Widget,
-      'RefreshCallback': (HTFunction function) =>
-          () => function.call(positionalArgs: const [], namedArgs: const {}) as Future<void>,
+      'RefreshControlIndicatorBuilder': (HTFunction function) => (context,
+              refreshState,
+              pulledExtent,
+              refreshTriggerPullDistance,
+              refreshIndicatorExtent) =>
+          function.call(positionalArgs: [
+            context,
+            refreshState,
+            pulledExtent,
+            refreshTriggerPullDistance,
+            refreshIndicatorExtent
+          ], namedArgs: const {}) as Widget,
+      'RefreshCallback': (HTFunction function) => () => function
+          .call(positionalArgs: const [], namedArgs: const {}) as Future<void>,
     };
   }
 
@@ -87,11 +112,12 @@ class CupertinoSliverRefreshControlAutoBinding extends HTExternalClass {
   static const _defaultRefreshIndicatorExtent = 60.0;
 }
 
-extension CupertinoSliverRefreshControlBinding on CupertinoSliverRefreshControl {
+extension CupertinoSliverRefreshControlBinding
+    on CupertinoSliverRefreshControl {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('CupertinoSliverRefreshControl');
+        return const HTType('CupertinoSliverRefreshControl');
       case 'refreshTriggerPullDistance':
         return refreshTriggerPullDistance;
       case 'refreshIndicatorExtent':
@@ -111,25 +137,37 @@ extension CupertinoSliverRefreshControlBinding on CupertinoSliverRefreshControl 
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'toStringShallow':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
-            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            joiner:
+                namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

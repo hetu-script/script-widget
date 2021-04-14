@@ -11,18 +11,27 @@ class DialogThemeAutoBinding extends HTExternalClass {
     switch (varName) {
       case 'DialogTheme':
         return ({positionalArgs, namedArgs, typeArgs}) => DialogTheme(
-            backgroundColor: namedArgs.containsKey('backgroundColor') ? namedArgs['backgroundColor'] : null,
-            elevation: namedArgs.containsKey('elevation') ? namedArgs['elevation'] : null,
+            backgroundColor: namedArgs.containsKey('backgroundColor')
+                ? namedArgs['backgroundColor']
+                : null,
+            elevation: namedArgs.containsKey('elevation')
+                ? namedArgs['elevation']
+                : null,
             shape: namedArgs.containsKey('shape') ? namedArgs['shape'] : null,
-            titleTextStyle: namedArgs.containsKey('titleTextStyle') ? namedArgs['titleTextStyle'] : null,
-            contentTextStyle: namedArgs.containsKey('contentTextStyle') ? namedArgs['contentTextStyle'] : null);
+            titleTextStyle: namedArgs.containsKey('titleTextStyle')
+                ? namedArgs['titleTextStyle']
+                : null,
+            contentTextStyle: namedArgs.containsKey('contentTextStyle')
+                ? namedArgs['contentTextStyle']
+                : null);
       case 'DialogTheme.of':
-        return ({positionalArgs, namedArgs, typeArgs}) => DialogTheme.of(positionalArgs[0]);
-      case 'DialogTheme.lerp':
         return ({positionalArgs, namedArgs, typeArgs}) =>
-            DialogTheme.lerp(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
+            DialogTheme.of(positionalArgs[0]);
+      case 'DialogTheme.lerp':
+        return ({positionalArgs, namedArgs, typeArgs}) => DialogTheme.lerp(
+            positionalArgs[0], positionalArgs[1], positionalArgs[2]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -36,7 +45,7 @@ extension DialogThemeBinding on DialogTheme {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('DialogTheme');
+        return const HTType('DialogTheme');
       case 'backgroundColor':
         return backgroundColor;
       case 'elevation':
@@ -51,24 +60,35 @@ extension DialogThemeBinding on DialogTheme {
         return hashCode;
       case 'copyWith':
         return ({positionalArgs, namedArgs, typeArgs}) => copyWith(
-            backgroundColor: namedArgs.containsKey('backgroundColor') ? namedArgs['backgroundColor'] : null,
-            elevation: namedArgs.containsKey('elevation') ? namedArgs['elevation'] : null,
+            backgroundColor: namedArgs.containsKey('backgroundColor')
+                ? namedArgs['backgroundColor']
+                : null,
+            elevation: namedArgs.containsKey('elevation')
+                ? namedArgs['elevation']
+                : null,
             shape: namedArgs.containsKey('shape') ? namedArgs['shape'] : null,
-            titleTextStyle: namedArgs.containsKey('titleTextStyle') ? namedArgs['titleTextStyle'] : null,
-            contentTextStyle: namedArgs.containsKey('contentTextStyle') ? namedArgs['contentTextStyle'] : null);
+            titleTextStyle: namedArgs.containsKey('titleTextStyle')
+                ? namedArgs['titleTextStyle']
+                : null,
+            contentTextStyle: namedArgs.containsKey('contentTextStyle')
+                ? namedArgs['contentTextStyle']
+                : null);
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

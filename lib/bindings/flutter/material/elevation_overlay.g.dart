@@ -9,15 +9,17 @@ class ElevationOverlayAutoBinding extends HTExternalClass {
     switch (varName) {
       case 'ElevationOverlay.applyOverlay':
         return ({positionalArgs, namedArgs, typeArgs}) =>
-            ElevationOverlay.applyOverlay(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
+            ElevationOverlay.applyOverlay(
+                positionalArgs[0], positionalArgs[1], positionalArgs[2]);
       case 'ElevationOverlay.overlayColor':
         return ({positionalArgs, namedArgs, typeArgs}) =>
             ElevationOverlay.overlayColor(positionalArgs[0], positionalArgs[1]);
       case 'ElevationOverlay.colorWithOverlay':
         return ({positionalArgs, namedArgs, typeArgs}) =>
-            ElevationOverlay.colorWithOverlay(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
+            ElevationOverlay.colorWithOverlay(
+                positionalArgs[0], positionalArgs[1], positionalArgs[2]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

@@ -10,10 +10,14 @@ class DefaultShaderWarmUpAutoBinding extends HTExternalClass {
     switch (varName) {
       case 'DefaultShaderWarmUp':
         return ({positionalArgs, namedArgs, typeArgs}) => DefaultShaderWarmUp(
-            drawCallSpacing: namedArgs.containsKey('drawCallSpacing') ? namedArgs['drawCallSpacing'] : 0.0,
-            canvasSize: namedArgs.containsKey('canvasSize') ? namedArgs['canvasSize'] : const ui.Size(100.0, 100.0));
+            drawCallSpacing: namedArgs.containsKey('drawCallSpacing')
+                ? namedArgs['drawCallSpacing']
+                : 0.0,
+            canvasSize: namedArgs.containsKey('canvasSize')
+                ? namedArgs['canvasSize']
+                : const ui.Size(100.0, 100.0));
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -27,7 +31,7 @@ extension DefaultShaderWarmUpBinding on DefaultShaderWarmUp {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('DefaultShaderWarmUp');
+        return const HTType('DefaultShaderWarmUp');
       case 'drawCallSpacing':
         return drawCallSpacing;
       case 'canvasSize':
@@ -35,11 +39,12 @@ extension DefaultShaderWarmUpBinding on DefaultShaderWarmUp {
       case 'size':
         return size;
       case 'warmUpOnCanvas':
-        return ({positionalArgs, namedArgs, typeArgs}) => warmUpOnCanvas(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            warmUpOnCanvas(positionalArgs[0]);
       case 'execute':
         return ({positionalArgs, namedArgs, typeArgs}) => execute();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

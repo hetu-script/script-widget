@@ -8,9 +8,10 @@ class HitTestEntryAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'HitTestEntry':
-        return ({positionalArgs, namedArgs, typeArgs}) => HitTestEntry(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            HitTestEntry(positionalArgs[0]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -24,7 +25,7 @@ extension HitTestEntryBinding on HitTestEntry {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('HitTestEntry');
+        return const HTType('HitTestEntry');
       case 'target':
         return target;
       case 'transform':
@@ -32,7 +33,7 @@ extension HitTestEntryBinding on HitTestEntry {
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -46,9 +47,10 @@ class HitTestResultAutoBinding extends HTExternalClass {
       case 'HitTestResult':
         return ({positionalArgs, namedArgs, typeArgs}) => HitTestResult();
       case 'HitTestResult.wrap':
-        return ({positionalArgs, namedArgs, typeArgs}) => HitTestResult.wrap(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            HitTestResult.wrap(positionalArgs[0]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -62,15 +64,16 @@ extension HitTestResultBinding on HitTestResult {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('HitTestResult');
+        return const HTType('HitTestResult');
       case 'path':
         return path;
       case 'add':
-        return ({positionalArgs, namedArgs, typeArgs}) => add(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            add(positionalArgs[0]);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

@@ -10,11 +10,17 @@ class ScaleStartDetailsAutoBinding extends HTExternalClass {
     switch (varName) {
       case 'ScaleStartDetails':
         return ({positionalArgs, namedArgs, typeArgs}) => ScaleStartDetails(
-            focalPoint: namedArgs.containsKey('focalPoint') ? namedArgs['focalPoint'] : Offset.zero,
-            localFocalPoint: namedArgs.containsKey('localFocalPoint') ? namedArgs['localFocalPoint'] : null,
-            pointerCount: namedArgs.containsKey('pointerCount') ? namedArgs['pointerCount'] : 0);
+            focalPoint: namedArgs.containsKey('focalPoint')
+                ? namedArgs['focalPoint']
+                : Offset.zero,
+            localFocalPoint: namedArgs.containsKey('localFocalPoint')
+                ? namedArgs['localFocalPoint']
+                : null,
+            pointerCount: namedArgs.containsKey('pointerCount')
+                ? namedArgs['pointerCount']
+                : 0);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -28,7 +34,7 @@ extension ScaleStartDetailsBinding on ScaleStartDetails {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('ScaleStartDetails');
+        return const HTType('ScaleStartDetails');
       case 'focalPoint':
         return focalPoint;
       case 'localFocalPoint':
@@ -38,7 +44,7 @@ extension ScaleStartDetailsBinding on ScaleStartDetails {
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -51,15 +57,26 @@ class ScaleUpdateDetailsAutoBinding extends HTExternalClass {
     switch (varName) {
       case 'ScaleUpdateDetails':
         return ({positionalArgs, namedArgs, typeArgs}) => ScaleUpdateDetails(
-            focalPoint: namedArgs.containsKey('focalPoint') ? namedArgs['focalPoint'] : Offset.zero,
-            localFocalPoint: namedArgs.containsKey('localFocalPoint') ? namedArgs['localFocalPoint'] : null,
+            focalPoint: namedArgs.containsKey('focalPoint')
+                ? namedArgs['focalPoint']
+                : Offset.zero,
+            localFocalPoint: namedArgs.containsKey('localFocalPoint')
+                ? namedArgs['localFocalPoint']
+                : null,
             scale: namedArgs.containsKey('scale') ? namedArgs['scale'] : 1.0,
-            horizontalScale: namedArgs.containsKey('horizontalScale') ? namedArgs['horizontalScale'] : 1.0,
-            verticalScale: namedArgs.containsKey('verticalScale') ? namedArgs['verticalScale'] : 1.0,
-            rotation: namedArgs.containsKey('rotation') ? namedArgs['rotation'] : 0.0,
-            pointerCount: namedArgs.containsKey('pointerCount') ? namedArgs['pointerCount'] : 0);
+            horizontalScale: namedArgs.containsKey('horizontalScale')
+                ? namedArgs['horizontalScale']
+                : 1.0,
+            verticalScale: namedArgs.containsKey('verticalScale')
+                ? namedArgs['verticalScale']
+                : 1.0,
+            rotation:
+                namedArgs.containsKey('rotation') ? namedArgs['rotation'] : 0.0,
+            pointerCount: namedArgs.containsKey('pointerCount')
+                ? namedArgs['pointerCount']
+                : 0);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -73,7 +90,7 @@ extension ScaleUpdateDetailsBinding on ScaleUpdateDetails {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('ScaleUpdateDetails');
+        return const HTType('ScaleUpdateDetails');
       case 'focalPoint':
         return focalPoint;
       case 'localFocalPoint':
@@ -91,7 +108,7 @@ extension ScaleUpdateDetailsBinding on ScaleUpdateDetails {
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -104,10 +121,14 @@ class ScaleEndDetailsAutoBinding extends HTExternalClass {
     switch (varName) {
       case 'ScaleEndDetails':
         return ({positionalArgs, namedArgs, typeArgs}) => ScaleEndDetails(
-            velocity: namedArgs.containsKey('velocity') ? namedArgs['velocity'] : Velocity.zero,
-            pointerCount: namedArgs.containsKey('pointerCount') ? namedArgs['pointerCount'] : 0);
+            velocity: namedArgs.containsKey('velocity')
+                ? namedArgs['velocity']
+                : Velocity.zero,
+            pointerCount: namedArgs.containsKey('pointerCount')
+                ? namedArgs['pointerCount']
+                : 0);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -121,7 +142,7 @@ extension ScaleEndDetailsBinding on ScaleEndDetails {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('ScaleEndDetails');
+        return const HTType('ScaleEndDetails');
       case 'velocity':
         return velocity;
       case 'pointerCount':
@@ -129,7 +150,7 @@ extension ScaleEndDetailsBinding on ScaleEndDetails {
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -141,13 +162,17 @@ class ScaleGestureRecognizerAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'ScaleGestureRecognizer':
-        return ({positionalArgs, namedArgs, typeArgs}) => ScaleGestureRecognizer(
-            debugOwner: namedArgs.containsKey('debugOwner') ? namedArgs['debugOwner'] : null,
-            kind: namedArgs.containsKey('kind') ? namedArgs['kind'] : null,
-            dragStartBehavior:
-                namedArgs.containsKey('dragStartBehavior') ? namedArgs['dragStartBehavior'] : DragStartBehavior.down);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            ScaleGestureRecognizer(
+                debugOwner: namedArgs.containsKey('debugOwner')
+                    ? namedArgs['debugOwner']
+                    : null,
+                kind: namedArgs.containsKey('kind') ? namedArgs['kind'] : null,
+                dragStartBehavior: namedArgs.containsKey('dragStartBehavior')
+                    ? namedArgs['dragStartBehavior']
+                    : DragStartBehavior.down);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -166,7 +191,7 @@ extension ScaleGestureRecognizerBinding on ScaleGestureRecognizer {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('ScaleGestureRecognizer');
+        return const HTType('ScaleGestureRecognizer');
       case 'dragStartBehavior':
         return dragStartBehavior;
       case 'onStart':
@@ -182,35 +207,54 @@ extension ScaleGestureRecognizerBinding on ScaleGestureRecognizer {
       case 'team':
         return team;
       case 'addAllowedPointer':
-        return ({positionalArgs, namedArgs, typeArgs}) => addAllowedPointer(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            addAllowedPointer(positionalArgs[0]);
       case 'handleEvent':
-        return ({positionalArgs, namedArgs, typeArgs}) => handleEvent(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            handleEvent(positionalArgs[0]);
       case 'acceptGesture':
-        return ({positionalArgs, namedArgs, typeArgs}) => acceptGesture(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            acceptGesture(positionalArgs[0]);
       case 'rejectGesture':
-        return ({positionalArgs, namedArgs, typeArgs}) => rejectGesture(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            rejectGesture(positionalArgs[0]);
       case 'didStopTrackingLastPointer':
-        return ({positionalArgs, namedArgs, typeArgs}) => didStopTrackingLastPointer(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            didStopTrackingLastPointer(positionalArgs[0]);
       case 'dispose':
         return ({positionalArgs, namedArgs, typeArgs}) => dispose();
       case 'handleNonAllowedPointer':
-        return ({positionalArgs, namedArgs, typeArgs}) => handleNonAllowedPointer(positionalArgs[0]);
-      case 'addPointer':
-        return ({positionalArgs, namedArgs, typeArgs}) => addPointer(positionalArgs[0]);
-      case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
-      case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+            handleNonAllowedPointer(positionalArgs[0]);
+      case 'addPointer':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            addPointer(positionalArgs[0]);
+      case 'debugFillProperties':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       case 'toStringShallow':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
-            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            joiner:
+                namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'toDiagnosticsNode':
@@ -218,9 +262,10 @@ extension ScaleGestureRecognizerBinding on ScaleGestureRecognizer {
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'debugDescribeChildren':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugDescribeChildren();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugDescribeChildren();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -239,7 +284,7 @@ extension ScaleGestureRecognizerBinding on ScaleGestureRecognizer {
         onEnd = value;
         break;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

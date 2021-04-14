@@ -10,10 +10,14 @@ class LongPressStartDetailsAutoBinding extends HTExternalClass {
     switch (varName) {
       case 'LongPressStartDetails':
         return ({positionalArgs, namedArgs, typeArgs}) => LongPressStartDetails(
-            globalPosition: namedArgs.containsKey('globalPosition') ? namedArgs['globalPosition'] : Offset.zero,
-            localPosition: namedArgs.containsKey('localPosition') ? namedArgs['localPosition'] : null);
+            globalPosition: namedArgs.containsKey('globalPosition')
+                ? namedArgs['globalPosition']
+                : Offset.zero,
+            localPosition: namedArgs.containsKey('localPosition')
+                ? namedArgs['localPosition']
+                : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -27,13 +31,13 @@ extension LongPressStartDetailsBinding on LongPressStartDetails {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('LongPressStartDetails');
+        return const HTType('LongPressStartDetails');
       case 'globalPosition':
         return globalPosition;
       case 'localPosition':
         return localPosition;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -45,14 +49,23 @@ class LongPressMoveUpdateDetailsAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'LongPressMoveUpdateDetails':
-        return ({positionalArgs, namedArgs, typeArgs}) => LongPressMoveUpdateDetails(
-            globalPosition: namedArgs.containsKey('globalPosition') ? namedArgs['globalPosition'] : Offset.zero,
-            localPosition: namedArgs.containsKey('localPosition') ? namedArgs['localPosition'] : null,
-            offsetFromOrigin: namedArgs.containsKey('offsetFromOrigin') ? namedArgs['offsetFromOrigin'] : Offset.zero,
-            localOffsetFromOrigin:
-                namedArgs.containsKey('localOffsetFromOrigin') ? namedArgs['localOffsetFromOrigin'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            LongPressMoveUpdateDetails(
+                globalPosition: namedArgs.containsKey('globalPosition')
+                    ? namedArgs['globalPosition']
+                    : Offset.zero,
+                localPosition: namedArgs.containsKey('localPosition')
+                    ? namedArgs['localPosition']
+                    : null,
+                offsetFromOrigin: namedArgs.containsKey('offsetFromOrigin')
+                    ? namedArgs['offsetFromOrigin']
+                    : Offset.zero,
+                localOffsetFromOrigin:
+                    namedArgs.containsKey('localOffsetFromOrigin')
+                        ? namedArgs['localOffsetFromOrigin']
+                        : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -66,7 +79,7 @@ extension LongPressMoveUpdateDetailsBinding on LongPressMoveUpdateDetails {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('LongPressMoveUpdateDetails');
+        return const HTType('LongPressMoveUpdateDetails');
       case 'globalPosition':
         return globalPosition;
       case 'localPosition':
@@ -76,7 +89,7 @@ extension LongPressMoveUpdateDetailsBinding on LongPressMoveUpdateDetails {
       case 'localOffsetFromOrigin':
         return localOffsetFromOrigin;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -89,11 +102,17 @@ class LongPressEndDetailsAutoBinding extends HTExternalClass {
     switch (varName) {
       case 'LongPressEndDetails':
         return ({positionalArgs, namedArgs, typeArgs}) => LongPressEndDetails(
-            globalPosition: namedArgs.containsKey('globalPosition') ? namedArgs['globalPosition'] : Offset.zero,
-            localPosition: namedArgs.containsKey('localPosition') ? namedArgs['localPosition'] : null,
-            velocity: namedArgs.containsKey('velocity') ? namedArgs['velocity'] : Velocity.zero);
+            globalPosition: namedArgs.containsKey('globalPosition')
+                ? namedArgs['globalPosition']
+                : Offset.zero,
+            localPosition: namedArgs.containsKey('localPosition')
+                ? namedArgs['localPosition']
+                : null,
+            velocity: namedArgs.containsKey('velocity')
+                ? namedArgs['velocity']
+                : Velocity.zero);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -107,7 +126,7 @@ extension LongPressEndDetailsBinding on LongPressEndDetails {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('LongPressEndDetails');
+        return const HTType('LongPressEndDetails');
       case 'globalPosition':
         return globalPosition;
       case 'localPosition':
@@ -115,7 +134,7 @@ extension LongPressEndDetailsBinding on LongPressEndDetails {
       case 'velocity':
         return velocity;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -127,14 +146,21 @@ class LongPressGestureRecognizerAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'LongPressGestureRecognizer':
-        return ({positionalArgs, namedArgs, typeArgs}) => LongPressGestureRecognizer(
-            duration: namedArgs.containsKey('duration') ? namedArgs['duration'] : null,
-            postAcceptSlopTolerance:
-                namedArgs.containsKey('postAcceptSlopTolerance') ? namedArgs['postAcceptSlopTolerance'] : null,
-            kind: namedArgs.containsKey('kind') ? namedArgs['kind'] : null,
-            debugOwner: namedArgs.containsKey('debugOwner') ? namedArgs['debugOwner'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            LongPressGestureRecognizer(
+                duration: namedArgs.containsKey('duration')
+                    ? namedArgs['duration']
+                    : null,
+                postAcceptSlopTolerance:
+                    namedArgs.containsKey('postAcceptSlopTolerance')
+                        ? namedArgs['postAcceptSlopTolerance']
+                        : null,
+                kind: namedArgs.containsKey('kind') ? namedArgs['kind'] : null,
+                debugOwner: namedArgs.containsKey('debugOwner')
+                    ? namedArgs['debugOwner']
+                    : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -153,7 +179,7 @@ extension LongPressGestureRecognizerBinding on LongPressGestureRecognizer {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('LongPressGestureRecognizer');
+        return const HTType('LongPressGestureRecognizer');
       case 'onLongPress':
         return onLongPress;
       case 'onLongPressStart':
@@ -203,43 +229,65 @@ extension LongPressGestureRecognizerBinding on LongPressGestureRecognizer {
       case 'team':
         return team;
       case 'isPointerAllowed':
-        return ({positionalArgs, namedArgs, typeArgs}) => isPointerAllowed(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            isPointerAllowed(positionalArgs[0]);
       case 'didExceedDeadline':
         return ({positionalArgs, namedArgs, typeArgs}) => didExceedDeadline();
       case 'handlePrimaryPointer':
-        return ({positionalArgs, namedArgs, typeArgs}) => handlePrimaryPointer(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            handlePrimaryPointer(positionalArgs[0]);
       case 'resolve':
-        return ({positionalArgs, namedArgs, typeArgs}) => resolve(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            resolve(positionalArgs[0]);
       case 'acceptGesture':
-        return ({positionalArgs, namedArgs, typeArgs}) => acceptGesture(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            acceptGesture(positionalArgs[0]);
       case 'addAllowedPointer':
-        return ({positionalArgs, namedArgs, typeArgs}) => addAllowedPointer(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            addAllowedPointer(positionalArgs[0]);
       case 'handleEvent':
-        return ({positionalArgs, namedArgs, typeArgs}) => handleEvent(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            handleEvent(positionalArgs[0]);
       case 'rejectGesture':
-        return ({positionalArgs, namedArgs, typeArgs}) => rejectGesture(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            rejectGesture(positionalArgs[0]);
       case 'didStopTrackingLastPointer':
-        return ({positionalArgs, namedArgs, typeArgs}) => didStopTrackingLastPointer(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            didStopTrackingLastPointer(positionalArgs[0]);
       case 'dispose':
         return ({positionalArgs, namedArgs, typeArgs}) => dispose();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
-      case 'handleNonAllowedPointer':
-        return ({positionalArgs, namedArgs, typeArgs}) => handleNonAllowedPointer(positionalArgs[0]);
-      case 'addPointer':
-        return ({positionalArgs, namedArgs, typeArgs}) => addPointer(positionalArgs[0]);
-      case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+            debugFillProperties(positionalArgs[0]);
+      case 'handleNonAllowedPointer':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            handleNonAllowedPointer(positionalArgs[0]);
+      case 'addPointer':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            addPointer(positionalArgs[0]);
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       case 'toStringShallow':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
-            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            joiner:
+                namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'toDiagnosticsNode':
@@ -247,9 +295,10 @@ extension LongPressGestureRecognizerBinding on LongPressGestureRecognizer {
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'debugDescribeChildren':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugDescribeChildren();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugDescribeChildren();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -310,7 +359,7 @@ extension LongPressGestureRecognizerBinding on LongPressGestureRecognizer {
         initialPosition = value;
         break;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

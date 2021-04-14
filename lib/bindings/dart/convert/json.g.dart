@@ -8,11 +8,15 @@ class JsonUnsupportedObjectErrorAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'JsonUnsupportedObjectError':
-        return ({positionalArgs, namedArgs, typeArgs}) => JsonUnsupportedObjectError(positionalArgs[0],
-            cause: namedArgs.containsKey('cause') ? namedArgs['cause'] : null,
-            partialResult: namedArgs.containsKey('partialResult') ? namedArgs['partialResult'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            JsonUnsupportedObjectError(positionalArgs[0],
+                cause:
+                    namedArgs.containsKey('cause') ? namedArgs['cause'] : null,
+                partialResult: namedArgs.containsKey('partialResult')
+                    ? namedArgs['partialResult']
+                    : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -26,7 +30,7 @@ extension JsonUnsupportedObjectErrorBinding on JsonUnsupportedObjectError {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('JsonUnsupportedObjectError');
+        return const HTType('JsonUnsupportedObjectError');
       case 'unsupportedObject':
         return unsupportedObject;
       case 'cause':
@@ -36,7 +40,7 @@ extension JsonUnsupportedObjectErrorBinding on JsonUnsupportedObjectError {
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -48,9 +52,10 @@ class JsonCyclicErrorAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'JsonCyclicError':
-        return ({positionalArgs, namedArgs, typeArgs}) => JsonCyclicError(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            JsonCyclicError(positionalArgs[0]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -64,7 +69,7 @@ extension JsonCyclicErrorBinding on JsonCyclicError {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('JsonCyclicError');
+        return const HTType('JsonCyclicError');
       case 'unsupportedObject':
         return unsupportedObject;
       case 'cause':
@@ -74,7 +79,7 @@ extension JsonCyclicErrorBinding on JsonCyclicError {
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -87,12 +92,16 @@ class JsonCodecAutoBinding extends HTExternalClass {
     switch (varName) {
       case 'JsonCodec':
         return ({positionalArgs, namedArgs, typeArgs}) => JsonCodec(
-            reviver: namedArgs.containsKey('reviver') ? namedArgs['reviver'] : null,
-            toEncodable: namedArgs.containsKey('toEncodable') ? namedArgs['toEncodable'] : null);
+            reviver:
+                namedArgs.containsKey('reviver') ? namedArgs['reviver'] : null,
+            toEncodable: namedArgs.containsKey('toEncodable')
+                ? namedArgs['toEncodable']
+                : null);
       case 'JsonCodec.withReviver':
-        return ({positionalArgs, namedArgs, typeArgs}) => JsonCodec.withReviver(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            JsonCodec.withReviver(positionalArgs[0]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -106,19 +115,24 @@ extension JsonCodecBinding on JsonCodec {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('JsonCodec');
+        return const HTType('JsonCodec');
       case 'encoder':
         return encoder;
       case 'decoder':
         return decoder;
       case 'decode':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            decode(positionalArgs[0], reviver: namedArgs.containsKey('reviver') ? namedArgs['reviver'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => decode(
+            positionalArgs[0],
+            reviver:
+                namedArgs.containsKey('reviver') ? namedArgs['reviver'] : null);
       case 'encode':
-        return ({positionalArgs, namedArgs, typeArgs}) => encode(positionalArgs[0],
-            toEncodable: namedArgs.containsKey('toEncodable') ? namedArgs['toEncodable'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => encode(
+            positionalArgs[0],
+            toEncodable: namedArgs.containsKey('toEncodable')
+                ? namedArgs['toEncodable']
+                : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -134,9 +148,10 @@ class JsonEncoderAutoBinding extends HTExternalClass {
             JsonEncoder(positionalArgs.length > 0 ? positionalArgs[0] : null);
       case 'JsonEncoder.withIndent':
         return ({positionalArgs, namedArgs, typeArgs}) =>
-            JsonEncoder.withIndent(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : null);
+            JsonEncoder.withIndent(positionalArgs[0],
+                positionalArgs.length > 1 ? positionalArgs[1] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -150,21 +165,25 @@ extension JsonEncoderBinding on JsonEncoder {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('JsonEncoder');
+        return const HTType('JsonEncoder');
       case 'indent':
         return indent;
       case 'convert':
-        return ({positionalArgs, namedArgs, typeArgs}) => convert(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            convert(positionalArgs[0]);
       case 'startChunkedConversion':
-        return ({positionalArgs, namedArgs, typeArgs}) => startChunkedConversion(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            startChunkedConversion(positionalArgs[0]);
       case 'bind':
-        return ({positionalArgs, namedArgs, typeArgs}) => bind(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            bind(positionalArgs[0]);
       case 'fuse':
-        return ({positionalArgs, namedArgs, typeArgs}) => fuse(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            fuse(positionalArgs[0]);
       case 'cast':
         return ({positionalArgs, namedArgs, typeArgs}) => cast();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -181,7 +200,7 @@ class JsonUtf8EncoderAutoBinding extends HTExternalClass {
             positionalArgs.length > 1 ? positionalArgs[1] : null,
             positionalArgs.length > 2 ? positionalArgs[2] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -195,19 +214,23 @@ extension JsonUtf8EncoderBinding on JsonUtf8Encoder {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('JsonUtf8Encoder');
+        return const HTType('JsonUtf8Encoder');
       case 'convert':
-        return ({positionalArgs, namedArgs, typeArgs}) => convert(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            convert(positionalArgs[0]);
       case 'startChunkedConversion':
-        return ({positionalArgs, namedArgs, typeArgs}) => startChunkedConversion(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            startChunkedConversion(positionalArgs[0]);
       case 'bind':
-        return ({positionalArgs, namedArgs, typeArgs}) => bind(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            bind(positionalArgs[0]);
       case 'fuse':
-        return ({positionalArgs, namedArgs, typeArgs}) => fuse(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            fuse(positionalArgs[0]);
       case 'cast':
         return ({positionalArgs, namedArgs, typeArgs}) => cast();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -222,7 +245,7 @@ class JsonDecoderAutoBinding extends HTExternalClass {
         return ({positionalArgs, namedArgs, typeArgs}) =>
             JsonDecoder(positionalArgs.length > 0 ? positionalArgs[0] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -236,19 +259,23 @@ extension JsonDecoderBinding on JsonDecoder {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('JsonDecoder');
+        return const HTType('JsonDecoder');
       case 'convert':
-        return ({positionalArgs, namedArgs, typeArgs}) => convert(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            convert(positionalArgs[0]);
       case 'startChunkedConversion':
-        return ({positionalArgs, namedArgs, typeArgs}) => startChunkedConversion(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            startChunkedConversion(positionalArgs[0]);
       case 'bind':
-        return ({positionalArgs, namedArgs, typeArgs}) => bind(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            bind(positionalArgs[0]);
       case 'fuse':
-        return ({positionalArgs, namedArgs, typeArgs}) => fuse(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            fuse(positionalArgs[0]);
       case 'cast':
         return ({positionalArgs, namedArgs, typeArgs}) => cast();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

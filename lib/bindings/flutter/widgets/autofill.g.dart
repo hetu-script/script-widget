@@ -14,7 +14,7 @@ class AutofillContextActionAutoBinding extends HTExternalClass {
       case 'AutofillContextAction.cancel':
         return AutofillContextAction.cancel;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -22,13 +22,14 @@ class AutofillContextActionAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('AutofillContextAction');
+        return const HTType('AutofillContextAction');
       case 'index':
         return (instance as AutofillContextAction).index;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => (instance as AutofillContextAction).toString();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            (instance as AutofillContextAction).toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -43,12 +44,14 @@ class AutofillGroupAutoBinding extends HTExternalClass {
         return ({positionalArgs, namedArgs, typeArgs}) => AutofillGroup(
             key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
             child: namedArgs['child'],
-            onDisposeAction:
-                namedArgs.containsKey('onDisposeAction') ? namedArgs['onDisposeAction'] : AutofillContextAction.commit);
+            onDisposeAction: namedArgs.containsKey('onDisposeAction')
+                ? namedArgs['onDisposeAction']
+                : AutofillContextAction.commit);
       case 'AutofillGroup.of':
-        return ({positionalArgs, namedArgs, typeArgs}) => AutofillGroup.of(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            AutofillGroup.of(positionalArgs[0]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -62,7 +65,7 @@ extension AutofillGroupBinding on AutofillGroup {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('AutofillGroup');
+        return const HTType('AutofillGroup');
       case 'child':
         return child;
       case 'onDisposeAction':
@@ -78,25 +81,37 @@ extension AutofillGroupBinding on AutofillGroup {
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'toStringShallow':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
-            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            joiner:
+                namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -110,7 +125,7 @@ class AutofillGroupStateAutoBinding extends HTExternalClass {
       case 'AutofillGroupState':
         return ({positionalArgs, namedArgs, typeArgs}) => AutofillGroupState();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -124,7 +139,7 @@ extension AutofillGroupStateBinding on AutofillGroupState {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('AutofillGroupState');
+        return const HTType('AutofillGroupState');
       case 'autofillClients':
         return autofillClients;
       case 'widget':
@@ -134,32 +149,41 @@ extension AutofillGroupStateBinding on AutofillGroupState {
       case 'mounted':
         return mounted;
       case 'getAutofillClient':
-        return ({positionalArgs, namedArgs, typeArgs}) => getAutofillClient(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            getAutofillClient(positionalArgs[0]);
       case 'register':
-        return ({positionalArgs, namedArgs, typeArgs}) => register(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            register(positionalArgs[0]);
       case 'unregister':
-        return ({positionalArgs, namedArgs, typeArgs}) => unregister(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            unregister(positionalArgs[0]);
       case 'didChangeDependencies':
-        return ({positionalArgs, namedArgs, typeArgs}) => didChangeDependencies();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            didChangeDependencies();
       case 'build':
-        return ({positionalArgs, namedArgs, typeArgs}) => build(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            build(positionalArgs[0]);
       case 'dispose':
         return ({positionalArgs, namedArgs, typeArgs}) => dispose();
       case 'attach':
-        return ({positionalArgs, namedArgs, typeArgs}) => attach(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            attach(positionalArgs[0], positionalArgs[1]);
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

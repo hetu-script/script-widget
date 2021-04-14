@@ -14,7 +14,7 @@ class TimePickerEntryModeAutoBinding extends HTExternalClass {
       case 'TimePickerEntryMode.input':
         return TimePickerEntryMode.input;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -22,13 +22,14 @@ class TimePickerEntryModeAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('TimePickerEntryMode');
+        return const HTType('TimePickerEntryMode');
       case 'index':
         return (instance as TimePickerEntryMode).index;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => (instance as TimePickerEntryMode).toString();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            (instance as TimePickerEntryMode).toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

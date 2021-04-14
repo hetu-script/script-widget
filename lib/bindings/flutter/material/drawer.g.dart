@@ -17,7 +17,7 @@ class DrawerAlignmentAutoBinding extends HTExternalClass {
       case 'DrawerAlignment.end':
         return DrawerAlignment.end;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -25,13 +25,14 @@ class DrawerAlignmentAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('DrawerAlignment');
+        return const HTType('DrawerAlignment');
       case 'index':
         return (instance as DrawerAlignment).index;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => (instance as DrawerAlignment).toString();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            (instance as DrawerAlignment).toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -45,11 +46,15 @@ class DrawerAutoBinding extends HTExternalClass {
       case 'Drawer':
         return ({positionalArgs, namedArgs, typeArgs}) => Drawer(
             key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
-            elevation: namedArgs.containsKey('elevation') ? namedArgs['elevation'] : 16.0,
+            elevation: namedArgs.containsKey('elevation')
+                ? namedArgs['elevation']
+                : 16.0,
             child: namedArgs.containsKey('child') ? namedArgs['child'] : null,
-            semanticLabel: namedArgs.containsKey('semanticLabel') ? namedArgs['semanticLabel'] : null);
+            semanticLabel: namedArgs.containsKey('semanticLabel')
+                ? namedArgs['semanticLabel']
+                : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -63,7 +68,7 @@ extension DrawerBinding on Drawer {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('Drawer');
+        return const HTType('Drawer');
       case 'elevation':
         return elevation;
       case 'child':
@@ -75,31 +80,44 @@ extension DrawerBinding on Drawer {
       case 'hashCode':
         return hashCode;
       case 'build':
-        return ({positionalArgs, namedArgs, typeArgs}) => build(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            build(positionalArgs[0]);
       case 'createElement':
         return ({positionalArgs, namedArgs, typeArgs}) => createElement();
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'toStringShallow':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
-            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            joiner:
+                namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -115,16 +133,27 @@ class DrawerControllerAutoBinding extends HTExternalClass {
             key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
             child: namedArgs['child'],
             alignment: namedArgs['alignment'],
-            isDrawerOpen: namedArgs.containsKey('isDrawerOpen') ? namedArgs['isDrawerOpen'] : false,
-            drawerCallback: namedArgs.containsKey('drawerCallback') ? namedArgs['drawerCallback'] : null,
-            dragStartBehavior:
-                namedArgs.containsKey('dragStartBehavior') ? namedArgs['dragStartBehavior'] : DragStartBehavior.start,
-            scrimColor: namedArgs.containsKey('scrimColor') ? namedArgs['scrimColor'] : null,
-            edgeDragWidth: namedArgs.containsKey('edgeDragWidth') ? namedArgs['edgeDragWidth'] : null,
+            isDrawerOpen: namedArgs.containsKey('isDrawerOpen')
+                ? namedArgs['isDrawerOpen']
+                : false,
+            drawerCallback: namedArgs.containsKey('drawerCallback')
+                ? namedArgs['drawerCallback']
+                : null,
+            dragStartBehavior: namedArgs.containsKey('dragStartBehavior')
+                ? namedArgs['dragStartBehavior']
+                : DragStartBehavior.start,
+            scrimColor: namedArgs.containsKey('scrimColor')
+                ? namedArgs['scrimColor']
+                : null,
+            edgeDragWidth: namedArgs.containsKey('edgeDragWidth')
+                ? namedArgs['edgeDragWidth']
+                : null,
             enableOpenDragGesture:
-                namedArgs.containsKey('enableOpenDragGesture') ? namedArgs['enableOpenDragGesture'] : true);
+                namedArgs.containsKey('enableOpenDragGesture')
+                    ? namedArgs['enableOpenDragGesture']
+                    : true);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -135,8 +164,8 @@ class DrawerControllerAutoBinding extends HTExternalClass {
 
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'DrawerCallback': (HTFunction function) =>
-          (isOpened) => function.call(positionalArgs: [isOpened], namedArgs: const {}),
+      'DrawerCallback': (HTFunction function) => (isOpened) =>
+          function.call(positionalArgs: [isOpened], namedArgs: const {}),
     };
   }
 }
@@ -145,7 +174,7 @@ extension DrawerControllerBinding on DrawerController {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('DrawerController');
+        return const HTType('DrawerController');
       case 'child':
         return child;
       case 'alignment':
@@ -173,25 +202,37 @@ extension DrawerControllerBinding on DrawerController {
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'toStringShallow':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
-            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            joiner:
+                namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -203,9 +244,10 @@ class DrawerControllerStateAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'DrawerControllerState':
-        return ({positionalArgs, namedArgs, typeArgs}) => DrawerControllerState();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            DrawerControllerState();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -216,8 +258,8 @@ class DrawerControllerStateAutoBinding extends HTExternalClass {
 
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'TickerCallback': (HTFunction function) =>
-          (elapsed) => function.call(positionalArgs: [elapsed], namedArgs: const {}),
+      'TickerCallback': (HTFunction function) => (elapsed) =>
+          function.call(positionalArgs: [elapsed], namedArgs: const {}),
     };
   }
 }
@@ -226,7 +268,7 @@ extension DrawerControllerStateBinding on DrawerControllerState {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('DrawerControllerState');
+        return const HTType('DrawerControllerState');
       case 'widget':
         return widget;
       case 'context':
@@ -238,30 +280,37 @@ extension DrawerControllerStateBinding on DrawerControllerState {
       case 'dispose':
         return ({positionalArgs, namedArgs, typeArgs}) => dispose();
       case 'didUpdateWidget':
-        return ({positionalArgs, namedArgs, typeArgs}) => didUpdateWidget(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            didUpdateWidget(positionalArgs[0]);
       case 'open':
         return ({positionalArgs, namedArgs, typeArgs}) => open();
       case 'close':
         return ({positionalArgs, namedArgs, typeArgs}) => close();
       case 'build':
-        return ({positionalArgs, namedArgs, typeArgs}) => build(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            build(positionalArgs[0]);
       case 'createTicker':
-        return ({positionalArgs, namedArgs, typeArgs}) => createTicker(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            createTicker(positionalArgs[0]);
       case 'didChangeDependencies':
-        return ({positionalArgs, namedArgs, typeArgs}) => didChangeDependencies();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            didChangeDependencies();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

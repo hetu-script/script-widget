@@ -20,20 +20,27 @@ class CupertinoThumbPainterAutoBinding extends HTExternalClass {
     switch (varName) {
       case 'CupertinoThumbPainter':
         return ({positionalArgs, namedArgs, typeArgs}) => CupertinoThumbPainter(
-            color: namedArgs.containsKey('color') ? namedArgs['color'] : CupertinoColors.white,
-            shadows:
-                namedArgs.containsKey('shadows') ? List<BoxShadow>.from(namedArgs['shadows']) : _kSliderBoxShadows);
+            color: namedArgs.containsKey('color')
+                ? namedArgs['color']
+                : CupertinoColors.white,
+            shadows: namedArgs.containsKey('shadows')
+                ? List<BoxShadow>.from(namedArgs['shadows'])
+                : _kSliderBoxShadows);
       case 'CupertinoThumbPainter.switchThumb':
-        return ({positionalArgs, namedArgs, typeArgs}) => CupertinoThumbPainter.switchThumb(
-            color: namedArgs.containsKey('color') ? namedArgs['color'] : CupertinoColors.white,
-            shadows:
-                namedArgs.containsKey('shadows') ? List<BoxShadow>.from(namedArgs['shadows']) : _kSwitchBoxShadows);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            CupertinoThumbPainter.switchThumb(
+                color: namedArgs.containsKey('color')
+                    ? namedArgs['color']
+                    : CupertinoColors.white,
+                shadows: namedArgs.containsKey('shadows')
+                    ? List<BoxShadow>.from(namedArgs['shadows'])
+                    : _kSwitchBoxShadows);
       case 'CupertinoThumbPainter.radius':
         return CupertinoThumbPainter.radius;
       case 'CupertinoThumbPainter.extension':
         return CupertinoThumbPainter.extension;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -47,15 +54,16 @@ extension CupertinoThumbPainterBinding on CupertinoThumbPainter {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('CupertinoThumbPainter');
+        return const HTType('CupertinoThumbPainter');
       case 'color':
         return color;
       case 'shadows':
         return shadows;
       case 'paint':
-        return ({positionalArgs, namedArgs, typeArgs}) => paint(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            paint(positionalArgs[0], positionalArgs[1]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

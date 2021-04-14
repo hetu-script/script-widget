@@ -20,7 +20,7 @@ class SchedulerPhaseAutoBinding extends HTExternalClass {
       case 'SchedulerPhase.postFrameCallbacks':
         return SchedulerPhase.postFrameCallbacks;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -28,13 +28,14 @@ class SchedulerPhaseAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('SchedulerPhase');
+        return const HTType('SchedulerPhase');
       case 'index':
         return (instance as SchedulerPhase).index;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => (instance as SchedulerPhase).toString();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            (instance as SchedulerPhase).toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

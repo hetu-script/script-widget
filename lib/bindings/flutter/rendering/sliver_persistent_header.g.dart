@@ -3,18 +3,24 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter/animation.dart';
 
 class OverScrollHeaderStretchConfigurationAutoBinding extends HTExternalClass {
-  OverScrollHeaderStretchConfigurationAutoBinding() : super('OverScrollHeaderStretchConfiguration');
+  OverScrollHeaderStretchConfigurationAutoBinding()
+      : super('OverScrollHeaderStretchConfiguration');
 
   @override
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'OverScrollHeaderStretchConfiguration':
-        return ({positionalArgs, namedArgs, typeArgs}) => OverScrollHeaderStretchConfiguration(
-            stretchTriggerOffset:
-                namedArgs.containsKey('stretchTriggerOffset') ? namedArgs['stretchTriggerOffset'] : 100.0,
-            onStretchTrigger: namedArgs.containsKey('onStretchTrigger') ? namedArgs['onStretchTrigger'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            OverScrollHeaderStretchConfiguration(
+                stretchTriggerOffset:
+                    namedArgs.containsKey('stretchTriggerOffset')
+                        ? namedArgs['stretchTriggerOffset']
+                        : 100.0,
+                onStretchTrigger: namedArgs.containsKey('onStretchTrigger')
+                    ? namedArgs['onStretchTrigger']
+                    : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -25,42 +31,49 @@ class OverScrollHeaderStretchConfigurationAutoBinding extends HTExternalClass {
 
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'AsyncCallback': (HTFunction function) =>
-          () => function.call(positionalArgs: const [], namedArgs: const {}) as Future<void>,
+      'AsyncCallback': (HTFunction function) => () => function
+          .call(positionalArgs: const [], namedArgs: const {}) as Future<void>,
     };
   }
 }
 
-extension OverScrollHeaderStretchConfigurationBinding on OverScrollHeaderStretchConfiguration {
+extension OverScrollHeaderStretchConfigurationBinding
+    on OverScrollHeaderStretchConfiguration {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('OverScrollHeaderStretchConfiguration');
+        return const HTType('OverScrollHeaderStretchConfiguration');
       case 'stretchTriggerOffset':
         return stretchTriggerOffset;
       case 'onStretchTrigger':
         return onStretchTrigger;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
 
-class PersistentHeaderShowOnScreenConfigurationAutoBinding extends HTExternalClass {
-  PersistentHeaderShowOnScreenConfigurationAutoBinding() : super('PersistentHeaderShowOnScreenConfiguration');
+class PersistentHeaderShowOnScreenConfigurationAutoBinding
+    extends HTExternalClass {
+  PersistentHeaderShowOnScreenConfigurationAutoBinding()
+      : super('PersistentHeaderShowOnScreenConfiguration');
 
   @override
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'PersistentHeaderShowOnScreenConfiguration':
-        return ({positionalArgs, namedArgs, typeArgs}) => PersistentHeaderShowOnScreenConfiguration(
-            minShowOnScreenExtent: namedArgs.containsKey('minShowOnScreenExtent')
-                ? namedArgs['minShowOnScreenExtent']
-                : double.negativeInfinity,
-            maxShowOnScreenExtent:
-                namedArgs.containsKey('maxShowOnScreenExtent') ? namedArgs['maxShowOnScreenExtent'] : double.infinity);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            PersistentHeaderShowOnScreenConfiguration(
+                minShowOnScreenExtent:
+                    namedArgs.containsKey('minShowOnScreenExtent')
+                        ? namedArgs['minShowOnScreenExtent']
+                        : double.negativeInfinity,
+                maxShowOnScreenExtent:
+                    namedArgs.containsKey('maxShowOnScreenExtent')
+                        ? namedArgs['maxShowOnScreenExtent']
+                        : double.infinity);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -70,33 +83,40 @@ class PersistentHeaderShowOnScreenConfigurationAutoBinding extends HTExternalCla
   }
 }
 
-extension PersistentHeaderShowOnScreenConfigurationBinding on PersistentHeaderShowOnScreenConfiguration {
+extension PersistentHeaderShowOnScreenConfigurationBinding
+    on PersistentHeaderShowOnScreenConfiguration {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('PersistentHeaderShowOnScreenConfiguration');
+        return const HTType('PersistentHeaderShowOnScreenConfiguration');
       case 'minShowOnScreenExtent':
         return minShowOnScreenExtent;
       case 'maxShowOnScreenExtent':
         return maxShowOnScreenExtent;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
 
 class FloatingHeaderSnapConfigurationAutoBinding extends HTExternalClass {
-  FloatingHeaderSnapConfigurationAutoBinding() : super('FloatingHeaderSnapConfiguration');
+  FloatingHeaderSnapConfigurationAutoBinding()
+      : super('FloatingHeaderSnapConfiguration');
 
   @override
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'FloatingHeaderSnapConfiguration':
-        return ({positionalArgs, namedArgs, typeArgs}) => FloatingHeaderSnapConfiguration(
-            curve: namedArgs.containsKey('curve') ? namedArgs['curve'] : Curves.ease,
-            duration: namedArgs.containsKey('duration') ? namedArgs['duration'] : const Duration(milliseconds: 300));
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            FloatingHeaderSnapConfiguration(
+                curve: namedArgs.containsKey('curve')
+                    ? namedArgs['curve']
+                    : Curves.ease,
+                duration: namedArgs.containsKey('duration')
+                    ? namedArgs['duration']
+                    : const Duration(milliseconds: 300));
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -106,17 +126,18 @@ class FloatingHeaderSnapConfigurationAutoBinding extends HTExternalClass {
   }
 }
 
-extension FloatingHeaderSnapConfigurationBinding on FloatingHeaderSnapConfiguration {
+extension FloatingHeaderSnapConfigurationBinding
+    on FloatingHeaderSnapConfiguration {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('FloatingHeaderSnapConfiguration');
+        return const HTType('FloatingHeaderSnapConfiguration');
       case 'curve':
         return curve;
       case 'duration':
         return duration;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

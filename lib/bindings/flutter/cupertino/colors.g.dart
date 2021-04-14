@@ -94,7 +94,7 @@ class CupertinoColorsAutoBinding extends HTExternalClass {
       case 'CupertinoColors.link':
         return CupertinoColors.link;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -107,7 +107,9 @@ class CupertinoDynamicColorAutoBinding extends HTExternalClass {
     switch (varName) {
       case 'CupertinoDynamicColor':
         return ({positionalArgs, namedArgs, typeArgs}) => CupertinoDynamicColor(
-            debugLabel: namedArgs.containsKey('debugLabel') ? namedArgs['debugLabel'] : null,
+            debugLabel: namedArgs.containsKey('debugLabel')
+                ? namedArgs['debugLabel']
+                : null,
             color: namedArgs['color'],
             darkColor: namedArgs['darkColor'],
             highContrastColor: namedArgs['highContrastColor'],
@@ -115,27 +117,35 @@ class CupertinoDynamicColorAutoBinding extends HTExternalClass {
             elevatedColor: namedArgs['elevatedColor'],
             darkElevatedColor: namedArgs['darkElevatedColor'],
             highContrastElevatedColor: namedArgs['highContrastElevatedColor'],
-            darkHighContrastElevatedColor: namedArgs['darkHighContrastElevatedColor']);
+            darkHighContrastElevatedColor:
+                namedArgs['darkHighContrastElevatedColor']);
       case 'CupertinoDynamicColor.withBrightnessAndContrast':
-        return ({positionalArgs, namedArgs, typeArgs}) => CupertinoDynamicColor.withBrightnessAndContrast(
-            debugLabel: namedArgs.containsKey('debugLabel') ? namedArgs['debugLabel'] : null,
-            color: namedArgs['color'],
-            darkColor: namedArgs['darkColor'],
-            highContrastColor: namedArgs['highContrastColor'],
-            darkHighContrastColor: namedArgs['darkHighContrastColor']);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            CupertinoDynamicColor.withBrightnessAndContrast(
+                debugLabel: namedArgs.containsKey('debugLabel')
+                    ? namedArgs['debugLabel']
+                    : null,
+                color: namedArgs['color'],
+                darkColor: namedArgs['darkColor'],
+                highContrastColor: namedArgs['highContrastColor'],
+                darkHighContrastColor: namedArgs['darkHighContrastColor']);
       case 'CupertinoDynamicColor.withBrightness':
-        return ({positionalArgs, namedArgs, typeArgs}) => CupertinoDynamicColor.withBrightness(
-            debugLabel: namedArgs.containsKey('debugLabel') ? namedArgs['debugLabel'] : null,
-            color: namedArgs['color'],
-            darkColor: namedArgs['darkColor']);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            CupertinoDynamicColor.withBrightness(
+                debugLabel: namedArgs.containsKey('debugLabel')
+                    ? namedArgs['debugLabel']
+                    : null,
+                color: namedArgs['color'],
+                darkColor: namedArgs['darkColor']);
       case 'CupertinoDynamicColor.resolve':
         return ({positionalArgs, namedArgs, typeArgs}) =>
             CupertinoDynamicColor.resolve(positionalArgs[0], positionalArgs[1]);
       case 'CupertinoDynamicColor.maybeResolve':
         return ({positionalArgs, namedArgs, typeArgs}) =>
-            CupertinoDynamicColor.maybeResolve(positionalArgs[0], positionalArgs[1]);
+            CupertinoDynamicColor.maybeResolve(
+                positionalArgs[0], positionalArgs[1]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -149,7 +159,7 @@ extension CupertinoDynamicColorBinding on CupertinoDynamicColor {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('CupertinoDynamicColor');
+        return const HTType('CupertinoDynamicColor');
       case 'color':
         return color;
       case 'darkColor':
@@ -181,12 +191,16 @@ extension CupertinoDynamicColorBinding on CupertinoDynamicColor {
       case 'blue':
         return blue;
       case 'resolveFrom':
-        return ({positionalArgs, namedArgs, typeArgs}) => resolveFrom(positionalArgs[0]);
-      case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+            resolveFrom(positionalArgs[0]);
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'toDiagnosticsNode':
@@ -194,19 +208,24 @@ extension CupertinoDynamicColorBinding on CupertinoDynamicColor {
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'withAlpha':
-        return ({positionalArgs, namedArgs, typeArgs}) => withAlpha(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            withAlpha(positionalArgs[0]);
       case 'withOpacity':
-        return ({positionalArgs, namedArgs, typeArgs}) => withOpacity(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            withOpacity(positionalArgs[0]);
       case 'withRed':
-        return ({positionalArgs, namedArgs, typeArgs}) => withRed(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            withRed(positionalArgs[0]);
       case 'withGreen':
-        return ({positionalArgs, namedArgs, typeArgs}) => withGreen(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            withGreen(positionalArgs[0]);
       case 'withBlue':
-        return ({positionalArgs, namedArgs, typeArgs}) => withBlue(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            withBlue(positionalArgs[0]);
       case 'computeLuminance':
         return ({positionalArgs, namedArgs, typeArgs}) => computeLuminance();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

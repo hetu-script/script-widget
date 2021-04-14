@@ -8,10 +8,13 @@ class GravitySimulationAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'GravitySimulation':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            GravitySimulation(positionalArgs[0], positionalArgs[1], positionalArgs[2], positionalArgs[3]);
+        return ({positionalArgs, namedArgs, typeArgs}) => GravitySimulation(
+            positionalArgs[0],
+            positionalArgs[1],
+            positionalArgs[2],
+            positionalArgs[3]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -30,7 +33,7 @@ extension GravitySimulationBinding on GravitySimulation {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('GravitySimulation');
+        return const HTType('GravitySimulation');
       case 'tolerance':
         return tolerance;
       case 'x':
@@ -38,11 +41,12 @@ extension GravitySimulationBinding on GravitySimulation {
       case 'dx':
         return ({positionalArgs, namedArgs, typeArgs}) => dx(positionalArgs[0]);
       case 'isDone':
-        return ({positionalArgs, namedArgs, typeArgs}) => isDone(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            isDone(positionalArgs[0]);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -52,7 +56,7 @@ extension GravitySimulationBinding on GravitySimulation {
         tolerance = value;
         break;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

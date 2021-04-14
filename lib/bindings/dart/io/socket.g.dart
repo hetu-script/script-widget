@@ -16,7 +16,7 @@ class InternetAddressTypeAutoBinding extends HTExternalClass {
       case 'InternetAddressType.any':
         return InternetAddressType.any;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -28,16 +28,22 @@ class InternetAddressAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'InternetAddress':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            InternetAddress(positionalArgs[0], type: namedArgs.containsKey('type') ? namedArgs['type'] : null);
-      case 'InternetAddress.fromRawAddress':
-        return ({positionalArgs, namedArgs, typeArgs}) => InternetAddress.fromRawAddress(positionalArgs[0],
+        return ({positionalArgs, namedArgs, typeArgs}) => InternetAddress(
+            positionalArgs[0],
             type: namedArgs.containsKey('type') ? namedArgs['type'] : null);
+      case 'InternetAddress.fromRawAddress':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            InternetAddress.fromRawAddress(positionalArgs[0],
+                type: namedArgs.containsKey('type') ? namedArgs['type'] : null);
       case 'InternetAddress.lookup':
-        return ({positionalArgs, namedArgs, typeArgs}) => InternetAddress.lookup(positionalArgs[0],
-            type: namedArgs.containsKey('type') ? namedArgs['type'] : InternetAddressType.any);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            InternetAddress.lookup(positionalArgs[0],
+                type: namedArgs.containsKey('type')
+                    ? namedArgs['type']
+                    : InternetAddressType.any);
       case 'InternetAddress.tryParse':
-        return ({positionalArgs, namedArgs, typeArgs}) => InternetAddress.tryParse(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            InternetAddress.tryParse(positionalArgs[0]);
       case 'InternetAddress.loopbackIPv4':
         return InternetAddress.loopbackIPv4;
       case 'InternetAddress.loopbackIPv6':
@@ -47,7 +53,7 @@ class InternetAddressAutoBinding extends HTExternalClass {
       case 'InternetAddress.anyIPv6':
         return InternetAddress.anyIPv6;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -61,7 +67,7 @@ extension InternetAddressBinding on InternetAddress {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('InternetAddress');
+        return const HTType('InternetAddress');
       case 'type':
         return type;
       case 'address':
@@ -79,7 +85,7 @@ extension InternetAddressBinding on InternetAddress {
       case 'reverse':
         return ({positionalArgs, namedArgs, typeArgs}) => reverse();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -92,13 +98,19 @@ class NetworkInterfaceAutoBinding extends HTExternalClass {
     switch (varName) {
       case 'NetworkInterface.list':
         return ({positionalArgs, namedArgs, typeArgs}) => NetworkInterface.list(
-            includeLoopback: namedArgs.containsKey('includeLoopback') ? namedArgs['includeLoopback'] : false,
-            includeLinkLocal: namedArgs.containsKey('includeLinkLocal') ? namedArgs['includeLinkLocal'] : false,
-            type: namedArgs.containsKey('type') ? namedArgs['type'] : InternetAddressType.any);
+            includeLoopback: namedArgs.containsKey('includeLoopback')
+                ? namedArgs['includeLoopback']
+                : false,
+            includeLinkLocal: namedArgs.containsKey('includeLinkLocal')
+                ? namedArgs['includeLinkLocal']
+                : false,
+            type: namedArgs.containsKey('type')
+                ? namedArgs['type']
+                : InternetAddressType.any);
       case 'NetworkInterface.listSupported':
         return NetworkInterface.listSupported;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -110,12 +122,16 @@ class RawServerSocketAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'RawServerSocket.bind':
-        return ({positionalArgs, namedArgs, typeArgs}) => RawServerSocket.bind(positionalArgs[0], positionalArgs[1],
-            backlog: namedArgs.containsKey('backlog') ? namedArgs['backlog'] : 0,
-            v6Only: namedArgs.containsKey('v6Only') ? namedArgs['v6Only'] : false,
-            shared: namedArgs.containsKey('shared') ? namedArgs['shared'] : false);
+        return ({positionalArgs, namedArgs, typeArgs}) => RawServerSocket.bind(
+            positionalArgs[0], positionalArgs[1],
+            backlog:
+                namedArgs.containsKey('backlog') ? namedArgs['backlog'] : 0,
+            v6Only:
+                namedArgs.containsKey('v6Only') ? namedArgs['v6Only'] : false,
+            shared:
+                namedArgs.containsKey('shared') ? namedArgs['shared'] : false);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -127,12 +143,16 @@ class ServerSocketAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'ServerSocket.bind':
-        return ({positionalArgs, namedArgs, typeArgs}) => ServerSocket.bind(positionalArgs[0], positionalArgs[1],
-            backlog: namedArgs.containsKey('backlog') ? namedArgs['backlog'] : 0,
-            v6Only: namedArgs.containsKey('v6Only') ? namedArgs['v6Only'] : false,
-            shared: namedArgs.containsKey('shared') ? namedArgs['shared'] : false);
+        return ({positionalArgs, namedArgs, typeArgs}) => ServerSocket.bind(
+            positionalArgs[0], positionalArgs[1],
+            backlog:
+                namedArgs.containsKey('backlog') ? namedArgs['backlog'] : 0,
+            v6Only:
+                namedArgs.containsKey('v6Only') ? namedArgs['v6Only'] : false,
+            shared:
+                namedArgs.containsKey('shared') ? namedArgs['shared'] : false);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -150,7 +170,7 @@ class SocketDirectionAutoBinding extends HTExternalClass {
       case 'SocketDirection.both':
         return SocketDirection.both;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -164,7 +184,7 @@ class SocketOptionAutoBinding extends HTExternalClass {
       case 'SocketOption.tcpNoDelay':
         return SocketOption.tcpNoDelay;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -176,14 +196,16 @@ class RawSocketOptionAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'RawSocketOption':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            RawSocketOption(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
+        return ({positionalArgs, namedArgs, typeArgs}) => RawSocketOption(
+            positionalArgs[0], positionalArgs[1], positionalArgs[2]);
       case 'RawSocketOption.fromInt':
         return ({positionalArgs, namedArgs, typeArgs}) =>
-            RawSocketOption.fromInt(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
+            RawSocketOption.fromInt(
+                positionalArgs[0], positionalArgs[1], positionalArgs[2]);
       case 'RawSocketOption.fromBool':
         return ({positionalArgs, namedArgs, typeArgs}) =>
-            RawSocketOption.fromBool(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
+            RawSocketOption.fromBool(
+                positionalArgs[0], positionalArgs[1], positionalArgs[2]);
       case 'RawSocketOption.levelSocket':
         return RawSocketOption.levelSocket;
       case 'RawSocketOption.levelIPv4':
@@ -199,7 +221,7 @@ class RawSocketOptionAutoBinding extends HTExternalClass {
       case 'RawSocketOption.levelUdp':
         return RawSocketOption.levelUdp;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -213,7 +235,7 @@ extension RawSocketOptionBinding on RawSocketOption {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('RawSocketOption');
+        return const HTType('RawSocketOption');
       case 'level':
         return level;
       case 'option':
@@ -221,7 +243,7 @@ extension RawSocketOptionBinding on RawSocketOption {
       case 'value':
         return value;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -241,7 +263,7 @@ class RawSocketEventAutoBinding extends HTExternalClass {
       case 'RawSocketEvent.closed':
         return RawSocketEvent.closed;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -253,14 +275,21 @@ class RawSocketAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'RawSocket.connect':
-        return ({positionalArgs, namedArgs, typeArgs}) => RawSocket.connect(positionalArgs[0], positionalArgs[1],
-            sourceAddress: namedArgs.containsKey('sourceAddress') ? namedArgs['sourceAddress'] : null,
-            timeout: namedArgs.containsKey('timeout') ? namedArgs['timeout'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => RawSocket.connect(
+            positionalArgs[0], positionalArgs[1],
+            sourceAddress: namedArgs.containsKey('sourceAddress')
+                ? namedArgs['sourceAddress']
+                : null,
+            timeout:
+                namedArgs.containsKey('timeout') ? namedArgs['timeout'] : null);
       case 'RawSocket.startConnect':
-        return ({positionalArgs, namedArgs, typeArgs}) => RawSocket.startConnect(positionalArgs[0], positionalArgs[1],
-            sourceAddress: namedArgs.containsKey('sourceAddress') ? namedArgs['sourceAddress'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            RawSocket.startConnect(positionalArgs[0], positionalArgs[1],
+                sourceAddress: namedArgs.containsKey('sourceAddress')
+                    ? namedArgs['sourceAddress']
+                    : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -272,14 +301,21 @@ class SocketAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'Socket.connect':
-        return ({positionalArgs, namedArgs, typeArgs}) => Socket.connect(positionalArgs[0], positionalArgs[1],
-            sourceAddress: namedArgs.containsKey('sourceAddress') ? namedArgs['sourceAddress'] : null,
-            timeout: namedArgs.containsKey('timeout') ? namedArgs['timeout'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => Socket.connect(
+            positionalArgs[0], positionalArgs[1],
+            sourceAddress: namedArgs.containsKey('sourceAddress')
+                ? namedArgs['sourceAddress']
+                : null,
+            timeout:
+                namedArgs.containsKey('timeout') ? namedArgs['timeout'] : null);
       case 'Socket.startConnect':
-        return ({positionalArgs, namedArgs, typeArgs}) => Socket.startConnect(positionalArgs[0], positionalArgs[1],
-            sourceAddress: namedArgs.containsKey('sourceAddress') ? namedArgs['sourceAddress'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => Socket.startConnect(
+            positionalArgs[0], positionalArgs[1],
+            sourceAddress: namedArgs.containsKey('sourceAddress')
+                ? namedArgs['sourceAddress']
+                : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -294,7 +330,7 @@ class DatagramAutoBinding extends HTExternalClass {
         return ({positionalArgs, namedArgs, typeArgs}) =>
             Datagram(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -313,7 +349,7 @@ extension DatagramBinding on Datagram {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('Datagram');
+        return const HTType('Datagram');
       case 'data':
         return data;
       case 'address':
@@ -321,7 +357,7 @@ extension DatagramBinding on Datagram {
       case 'port':
         return port;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -337,7 +373,7 @@ extension DatagramBinding on Datagram {
         port = value;
         break;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -349,12 +385,17 @@ class RawDatagramSocketAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'RawDatagramSocket.bind':
-        return ({positionalArgs, namedArgs, typeArgs}) => RawDatagramSocket.bind(positionalArgs[0], positionalArgs[1],
-            reuseAddress: namedArgs.containsKey('reuseAddress') ? namedArgs['reuseAddress'] : true,
-            reusePort: namedArgs.containsKey('reusePort') ? namedArgs['reusePort'] : false,
-            ttl: namedArgs.containsKey('ttl') ? namedArgs['ttl'] : 1);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            RawDatagramSocket.bind(positionalArgs[0], positionalArgs[1],
+                reuseAddress: namedArgs.containsKey('reuseAddress')
+                    ? namedArgs['reuseAddress']
+                    : true,
+                reusePort: namedArgs.containsKey('reusePort')
+                    ? namedArgs['reusePort']
+                    : false,
+                ttl: namedArgs.containsKey('ttl') ? namedArgs['ttl'] : 1);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -366,14 +407,18 @@ class SocketExceptionAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'SocketException':
-        return ({positionalArgs, namedArgs, typeArgs}) => SocketException(positionalArgs[0],
-            osError: namedArgs.containsKey('osError') ? namedArgs['osError'] : null,
-            address: namedArgs.containsKey('address') ? namedArgs['address'] : null,
+        return ({positionalArgs, namedArgs, typeArgs}) => SocketException(
+            positionalArgs[0],
+            osError:
+                namedArgs.containsKey('osError') ? namedArgs['osError'] : null,
+            address:
+                namedArgs.containsKey('address') ? namedArgs['address'] : null,
             port: namedArgs.containsKey('port') ? namedArgs['port'] : null);
       case 'SocketException.closed':
-        return ({positionalArgs, namedArgs, typeArgs}) => SocketException.closed();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            SocketException.closed();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -387,7 +432,7 @@ extension SocketExceptionBinding on SocketException {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('SocketException');
+        return const HTType('SocketException');
       case 'message':
         return message;
       case 'osError':
@@ -399,7 +444,7 @@ extension SocketExceptionBinding on SocketException {
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

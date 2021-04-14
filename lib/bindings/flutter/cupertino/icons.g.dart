@@ -2656,7 +2656,7 @@ class CupertinoIconsAutoBinding extends HTExternalClass {
       case 'CupertinoIcons.zzz':
         return CupertinoIcons.zzz;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

@@ -17,7 +17,7 @@ class NavigationRailLabelTypeAutoBinding extends HTExternalClass {
       case 'NavigationRailLabelType.all':
         return NavigationRailLabelType.all;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -25,13 +25,14 @@ class NavigationRailLabelTypeAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('NavigationRailLabelType');
+        return const HTType('NavigationRailLabelType');
       case 'index':
         return (instance as NavigationRailLabelType).index;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => (instance as NavigationRailLabelType).toString();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            (instance as NavigationRailLabelType).toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -44,29 +45,58 @@ class NavigationRailAutoBinding extends HTExternalClass {
     switch (varName) {
       case 'NavigationRail':
         return ({positionalArgs, namedArgs, typeArgs}) => NavigationRail(
-            backgroundColor: namedArgs.containsKey('backgroundColor') ? namedArgs['backgroundColor'] : null,
-            extended: namedArgs.containsKey('extended') ? namedArgs['extended'] : false,
-            leading: namedArgs.containsKey('leading') ? namedArgs['leading'] : null,
-            trailing: namedArgs.containsKey('trailing') ? namedArgs['trailing'] : null,
-            destinations: List<NavigationRailDestination>.from(namedArgs['destinations']),
+            backgroundColor: namedArgs.containsKey('backgroundColor')
+                ? namedArgs['backgroundColor']
+                : null,
+            extended: namedArgs.containsKey('extended')
+                ? namedArgs['extended']
+                : false,
+            leading:
+                namedArgs.containsKey('leading') ? namedArgs['leading'] : null,
+            trailing: namedArgs.containsKey('trailing')
+                ? namedArgs['trailing']
+                : null,
+            destinations:
+                List<NavigationRailDestination>.from(namedArgs['destinations']),
             selectedIndex: namedArgs['selectedIndex'],
             onDestinationSelected:
-                namedArgs.containsKey('onDestinationSelected') ? namedArgs['onDestinationSelected'] : null,
-            elevation: namedArgs.containsKey('elevation') ? namedArgs['elevation'] : null,
-            groupAlignment: namedArgs.containsKey('groupAlignment') ? namedArgs['groupAlignment'] : null,
-            labelType: namedArgs.containsKey('labelType') ? namedArgs['labelType'] : null,
+                namedArgs.containsKey('onDestinationSelected')
+                    ? namedArgs['onDestinationSelected']
+                    : null,
+            elevation: namedArgs.containsKey('elevation')
+                ? namedArgs['elevation']
+                : null,
+            groupAlignment: namedArgs.containsKey('groupAlignment')
+                ? namedArgs['groupAlignment']
+                : null,
+            labelType: namedArgs.containsKey('labelType')
+                ? namedArgs['labelType']
+                : null,
             unselectedLabelTextStyle:
-                namedArgs.containsKey('unselectedLabelTextStyle') ? namedArgs['unselectedLabelTextStyle'] : null,
+                namedArgs.containsKey('unselectedLabelTextStyle')
+                    ? namedArgs['unselectedLabelTextStyle']
+                    : null,
             selectedLabelTextStyle:
-                namedArgs.containsKey('selectedLabelTextStyle') ? namedArgs['selectedLabelTextStyle'] : null,
-            unselectedIconTheme: namedArgs.containsKey('unselectedIconTheme') ? namedArgs['unselectedIconTheme'] : null,
-            selectedIconTheme: namedArgs.containsKey('selectedIconTheme') ? namedArgs['selectedIconTheme'] : null,
-            minWidth: namedArgs.containsKey('minWidth') ? namedArgs['minWidth'] : null,
-            minExtendedWidth: namedArgs.containsKey('minExtendedWidth') ? namedArgs['minExtendedWidth'] : null);
+                namedArgs.containsKey('selectedLabelTextStyle')
+                    ? namedArgs['selectedLabelTextStyle']
+                    : null,
+            unselectedIconTheme: namedArgs.containsKey('unselectedIconTheme')
+                ? namedArgs['unselectedIconTheme']
+                : null,
+            selectedIconTheme: namedArgs.containsKey('selectedIconTheme')
+                ? namedArgs['selectedIconTheme']
+                : null,
+            minWidth: namedArgs.containsKey('minWidth')
+                ? namedArgs['minWidth']
+                : null,
+            minExtendedWidth: namedArgs.containsKey('minExtendedWidth')
+                ? namedArgs['minExtendedWidth']
+                : null);
       case 'NavigationRail.extendedAnimation':
-        return ({positionalArgs, namedArgs, typeArgs}) => NavigationRail.extendedAnimation(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            NavigationRail.extendedAnimation(positionalArgs[0]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -80,7 +110,7 @@ extension NavigationRailBinding on NavigationRail {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('NavigationRail');
+        return const HTType('NavigationRail');
       case 'backgroundColor':
         return backgroundColor;
       case 'extended':
@@ -124,25 +154,37 @@ extension NavigationRailBinding on NavigationRail {
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'toStringShallow':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
-            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            joiner:
+                namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -154,13 +196,19 @@ class NavigationRailDestinationAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'NavigationRailDestination':
-        return ({positionalArgs, namedArgs, typeArgs}) => NavigationRailDestination(
-            icon: namedArgs['icon'],
-            selectedIcon: namedArgs.containsKey('selectedIcon') ? namedArgs['selectedIcon'] : null,
-            label: namedArgs.containsKey('label') ? namedArgs['label'] : null,
-            padding: namedArgs.containsKey('padding') ? namedArgs['padding'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            NavigationRailDestination(
+                icon: namedArgs['icon'],
+                selectedIcon: namedArgs.containsKey('selectedIcon')
+                    ? namedArgs['selectedIcon']
+                    : null,
+                label:
+                    namedArgs.containsKey('label') ? namedArgs['label'] : null,
+                padding: namedArgs.containsKey('padding')
+                    ? namedArgs['padding']
+                    : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -174,7 +222,7 @@ extension NavigationRailDestinationBinding on NavigationRailDestination {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('NavigationRailDestination');
+        return const HTType('NavigationRailDestination');
       case 'icon':
         return icon;
       case 'selectedIcon':
@@ -184,7 +232,7 @@ extension NavigationRailDestinationBinding on NavigationRailDestination {
       case 'padding':
         return padding;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

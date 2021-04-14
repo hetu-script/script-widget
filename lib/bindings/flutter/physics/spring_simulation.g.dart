@@ -16,7 +16,7 @@ class SpringTypeAutoBinding extends HTExternalClass {
       case 'SpringType.overDamped':
         return SpringType.overDamped;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -24,13 +24,14 @@ class SpringTypeAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('SpringType');
+        return const HTType('SpringType');
       case 'index':
         return (instance as SpringType).index;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => (instance as SpringType).toString();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            (instance as SpringType).toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -43,14 +44,18 @@ class SpringDescriptionAutoBinding extends HTExternalClass {
     switch (varName) {
       case 'SpringDescription':
         return ({positionalArgs, namedArgs, typeArgs}) => SpringDescription(
-            mass: namedArgs['mass'], stiffness: namedArgs['stiffness'], damping: namedArgs['damping']);
-      case 'SpringDescription.withDampingRatio':
-        return ({positionalArgs, namedArgs, typeArgs}) => SpringDescription.withDampingRatio(
             mass: namedArgs['mass'],
             stiffness: namedArgs['stiffness'],
-            ratio: namedArgs.containsKey('ratio') ? namedArgs['ratio'] : 1.0);
+            damping: namedArgs['damping']);
+      case 'SpringDescription.withDampingRatio':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            SpringDescription.withDampingRatio(
+                mass: namedArgs['mass'],
+                stiffness: namedArgs['stiffness'],
+                ratio:
+                    namedArgs.containsKey('ratio') ? namedArgs['ratio'] : 1.0);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -64,7 +69,7 @@ extension SpringDescriptionBinding on SpringDescription {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('SpringDescription');
+        return const HTType('SpringDescription');
       case 'mass':
         return mass;
       case 'stiffness':
@@ -74,7 +79,7 @@ extension SpringDescriptionBinding on SpringDescription {
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -87,10 +92,15 @@ class SpringSimulationAutoBinding extends HTExternalClass {
     switch (varName) {
       case 'SpringSimulation':
         return ({positionalArgs, namedArgs, typeArgs}) => SpringSimulation(
-            positionalArgs[0], positionalArgs[1], positionalArgs[2], positionalArgs[3],
-            tolerance: namedArgs.containsKey('tolerance') ? namedArgs['tolerance'] : Tolerance.defaultTolerance);
+            positionalArgs[0],
+            positionalArgs[1],
+            positionalArgs[2],
+            positionalArgs[3],
+            tolerance: namedArgs.containsKey('tolerance')
+                ? namedArgs['tolerance']
+                : Tolerance.defaultTolerance);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -109,7 +119,7 @@ extension SpringSimulationBinding on SpringSimulation {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('SpringSimulation');
+        return const HTType('SpringSimulation');
       case 'tolerance':
         return tolerance;
       case 'type':
@@ -119,11 +129,12 @@ extension SpringSimulationBinding on SpringSimulation {
       case 'dx':
         return ({positionalArgs, namedArgs, typeArgs}) => dx(positionalArgs[0]);
       case 'isDone':
-        return ({positionalArgs, namedArgs, typeArgs}) => isDone(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            isDone(positionalArgs[0]);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -133,7 +144,7 @@ extension SpringSimulationBinding on SpringSimulation {
         tolerance = value;
         break;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -145,11 +156,14 @@ class ScrollSpringSimulationAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'ScrollSpringSimulation':
-        return ({positionalArgs, namedArgs, typeArgs}) => ScrollSpringSimulation(
-            positionalArgs[0], positionalArgs[1], positionalArgs[2], positionalArgs[3],
-            tolerance: namedArgs.containsKey('tolerance') ? namedArgs['tolerance'] : Tolerance.defaultTolerance);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            ScrollSpringSimulation(positionalArgs[0], positionalArgs[1],
+                positionalArgs[2], positionalArgs[3],
+                tolerance: namedArgs.containsKey('tolerance')
+                    ? namedArgs['tolerance']
+                    : Tolerance.defaultTolerance);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -168,7 +182,7 @@ extension ScrollSpringSimulationBinding on ScrollSpringSimulation {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('ScrollSpringSimulation');
+        return const HTType('ScrollSpringSimulation');
       case 'tolerance':
         return tolerance;
       case 'type':
@@ -178,11 +192,12 @@ extension ScrollSpringSimulationBinding on ScrollSpringSimulation {
       case 'dx':
         return ({positionalArgs, namedArgs, typeArgs}) => dx(positionalArgs[0]);
       case 'isDone':
-        return ({positionalArgs, namedArgs, typeArgs}) => isDone(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            isDone(positionalArgs[0]);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -192,7 +207,7 @@ extension ScrollSpringSimulationBinding on ScrollSpringSimulation {
         tolerance = value;
         break;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

@@ -18,7 +18,7 @@ class CollapseModeAutoBinding extends HTExternalClass {
       case 'CollapseMode.none':
         return CollapseMode.none;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -26,13 +26,14 @@ class CollapseModeAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('CollapseMode');
+        return const HTType('CollapseMode');
       case 'index':
         return (instance as CollapseMode).index;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => (instance as CollapseMode).toString();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            (instance as CollapseMode).toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -52,7 +53,7 @@ class StretchModeAutoBinding extends HTExternalClass {
       case 'StretchMode.fadeTitle':
         return StretchMode.fadeTitle;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -60,13 +61,14 @@ class StretchModeAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('StretchMode');
+        return const HTType('StretchMode');
       case 'index':
         return (instance as StretchMode).index;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => (instance as StretchMode).toString();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            (instance as StretchMode).toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -81,22 +83,40 @@ class FlexibleSpaceBarAutoBinding extends HTExternalClass {
         return ({positionalArgs, namedArgs, typeArgs}) => FlexibleSpaceBar(
             key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
             title: namedArgs.containsKey('title') ? namedArgs['title'] : null,
-            background: namedArgs.containsKey('background') ? namedArgs['background'] : null,
-            centerTitle: namedArgs.containsKey('centerTitle') ? namedArgs['centerTitle'] : null,
-            titlePadding: namedArgs.containsKey('titlePadding') ? namedArgs['titlePadding'] : null,
-            collapseMode: namedArgs.containsKey('collapseMode') ? namedArgs['collapseMode'] : CollapseMode.parallax,
+            background: namedArgs.containsKey('background')
+                ? namedArgs['background']
+                : null,
+            centerTitle: namedArgs.containsKey('centerTitle')
+                ? namedArgs['centerTitle']
+                : null,
+            titlePadding: namedArgs.containsKey('titlePadding')
+                ? namedArgs['titlePadding']
+                : null,
+            collapseMode: namedArgs.containsKey('collapseMode')
+                ? namedArgs['collapseMode']
+                : CollapseMode.parallax,
             stretchModes: namedArgs.containsKey('stretchModes')
                 ? List<StretchMode>.from(namedArgs['stretchModes'])
                 : const <StretchMode>[StretchMode.zoomBackground]);
       case 'FlexibleSpaceBar.createSettings':
-        return ({positionalArgs, namedArgs, typeArgs}) => FlexibleSpaceBar.createSettings(
-            toolbarOpacity: namedArgs.containsKey('toolbarOpacity') ? namedArgs['toolbarOpacity'] : null,
-            minExtent: namedArgs.containsKey('minExtent') ? namedArgs['minExtent'] : null,
-            maxExtent: namedArgs.containsKey('maxExtent') ? namedArgs['maxExtent'] : null,
-            currentExtent: namedArgs.containsKey('currentExtent') ? namedArgs['currentExtent'] : null,
-            child: namedArgs.containsKey('child') ? namedArgs['child'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            FlexibleSpaceBar.createSettings(
+                toolbarOpacity: namedArgs.containsKey('toolbarOpacity')
+                    ? namedArgs['toolbarOpacity']
+                    : null,
+                minExtent: namedArgs.containsKey('minExtent')
+                    ? namedArgs['minExtent']
+                    : null,
+                maxExtent: namedArgs.containsKey('maxExtent')
+                    ? namedArgs['maxExtent']
+                    : null,
+                currentExtent: namedArgs.containsKey('currentExtent')
+                    ? namedArgs['currentExtent']
+                    : null,
+                child:
+                    namedArgs.containsKey('child') ? namedArgs['child'] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -110,7 +130,7 @@ extension FlexibleSpaceBarBinding on FlexibleSpaceBar {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('FlexibleSpaceBar');
+        return const HTType('FlexibleSpaceBar');
       case 'title':
         return title;
       case 'background':
@@ -134,25 +154,37 @@ extension FlexibleSpaceBarBinding on FlexibleSpaceBar {
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'toStringShallow':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
-            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            joiner:
+                namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -164,15 +196,16 @@ class FlexibleSpaceBarSettingsAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'FlexibleSpaceBarSettings':
-        return ({positionalArgs, namedArgs, typeArgs}) => FlexibleSpaceBarSettings(
-            key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
-            toolbarOpacity: namedArgs['toolbarOpacity'],
-            minExtent: namedArgs['minExtent'],
-            maxExtent: namedArgs['maxExtent'],
-            currentExtent: namedArgs['currentExtent'],
-            child: namedArgs['child']);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            FlexibleSpaceBarSettings(
+                key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
+                toolbarOpacity: namedArgs['toolbarOpacity'],
+                minExtent: namedArgs['minExtent'],
+                maxExtent: namedArgs['maxExtent'],
+                currentExtent: namedArgs['currentExtent'],
+                child: namedArgs['child']);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -186,7 +219,7 @@ extension FlexibleSpaceBarSettingsBinding on FlexibleSpaceBarSettings {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('FlexibleSpaceBarSettings');
+        return const HTType('FlexibleSpaceBarSettings');
       case 'toolbarOpacity':
         return toolbarOpacity;
       case 'minExtent':
@@ -202,31 +235,44 @@ extension FlexibleSpaceBarSettingsBinding on FlexibleSpaceBarSettings {
       case 'hashCode':
         return hashCode;
       case 'updateShouldNotify':
-        return ({positionalArgs, namedArgs, typeArgs}) => updateShouldNotify(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            updateShouldNotify(positionalArgs[0]);
       case 'createElement':
         return ({positionalArgs, namedArgs, typeArgs}) => createElement();
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'toStringShallow':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
-            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            joiner:
+                namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

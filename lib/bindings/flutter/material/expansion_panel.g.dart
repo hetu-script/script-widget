@@ -4,7 +4,8 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 
 const _kPanelHeaderCollapsedHeight = kMinInteractiveDimension;
-const _kPanelHeaderExpandedDefaultPadding = EdgeInsets.symmetric(vertical: 64.0 - _kPanelHeaderCollapsedHeight);
+const _kPanelHeaderExpandedDefaultPadding =
+    EdgeInsets.symmetric(vertical: 64.0 - _kPanelHeaderCollapsedHeight);
 
 class ExpansionPanelAutoBinding extends HTExternalClass {
   ExpansionPanelAutoBinding() : super('ExpansionPanel');
@@ -16,11 +17,17 @@ class ExpansionPanelAutoBinding extends HTExternalClass {
         return ({positionalArgs, namedArgs, typeArgs}) => ExpansionPanel(
             headerBuilder: namedArgs['headerBuilder'],
             body: namedArgs['body'],
-            isExpanded: namedArgs.containsKey('isExpanded') ? namedArgs['isExpanded'] : false,
-            canTapOnHeader: namedArgs.containsKey('canTapOnHeader') ? namedArgs['canTapOnHeader'] : false,
-            backgroundColor: namedArgs.containsKey('backgroundColor') ? namedArgs['backgroundColor'] : null);
+            isExpanded: namedArgs.containsKey('isExpanded')
+                ? namedArgs['isExpanded']
+                : false,
+            canTapOnHeader: namedArgs.containsKey('canTapOnHeader')
+                ? namedArgs['canTapOnHeader']
+                : false,
+            backgroundColor: namedArgs.containsKey('backgroundColor')
+                ? namedArgs['backgroundColor']
+                : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -32,7 +39,9 @@ class ExpansionPanelAutoBinding extends HTExternalClass {
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
       'ExpansionPanelHeaderBuilder': (HTFunction function) =>
-          (context, isExpanded) => function.call(positionalArgs: [context, isExpanded], namedArgs: const {}) as Widget,
+          (context, isExpanded) => function.call(
+              positionalArgs: [context, isExpanded],
+              namedArgs: const {}) as Widget,
     };
   }
 }
@@ -41,7 +50,7 @@ extension ExpansionPanelBinding on ExpansionPanel {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('ExpansionPanel');
+        return const HTType('ExpansionPanel');
       case 'headerBuilder':
         return headerBuilder;
       case 'body':
@@ -53,7 +62,7 @@ extension ExpansionPanelBinding on ExpansionPanel {
       case 'backgroundColor':
         return backgroundColor;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -69,10 +78,14 @@ class ExpansionPanelRadioAutoBinding extends HTExternalClass {
             value: namedArgs['value'],
             headerBuilder: namedArgs['headerBuilder'],
             body: namedArgs['body'],
-            canTapOnHeader: namedArgs.containsKey('canTapOnHeader') ? namedArgs['canTapOnHeader'] : false,
-            backgroundColor: namedArgs.containsKey('backgroundColor') ? namedArgs['backgroundColor'] : null);
+            canTapOnHeader: namedArgs.containsKey('canTapOnHeader')
+                ? namedArgs['canTapOnHeader']
+                : false,
+            backgroundColor: namedArgs.containsKey('backgroundColor')
+                ? namedArgs['backgroundColor']
+                : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -84,7 +97,9 @@ class ExpansionPanelRadioAutoBinding extends HTExternalClass {
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
       'ExpansionPanelHeaderBuilder': (HTFunction function) =>
-          (context, isExpanded) => function.call(positionalArgs: [context, isExpanded], namedArgs: const {}) as Widget,
+          (context, isExpanded) => function.call(
+              positionalArgs: [context, isExpanded],
+              namedArgs: const {}) as Widget,
     };
   }
 }
@@ -93,7 +108,7 @@ extension ExpansionPanelRadioBinding on ExpansionPanelRadio {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('ExpansionPanelRadio');
+        return const HTType('ExpansionPanelRadio');
       case 'value':
         return value;
       case 'headerBuilder':
@@ -107,7 +122,7 @@ extension ExpansionPanelRadioBinding on ExpansionPanelRadio {
       case 'backgroundColor':
         return backgroundColor;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -124,32 +139,54 @@ class ExpansionPanelListAutoBinding extends HTExternalClass {
             children: namedArgs.containsKey('children')
                 ? List<ExpansionPanel>.from(namedArgs['children'])
                 : const <ExpansionPanel>[],
-            expansionCallback: namedArgs.containsKey('expansionCallback') ? namedArgs['expansionCallback'] : null,
-            animationDuration:
-                namedArgs.containsKey('animationDuration') ? namedArgs['animationDuration'] : kThemeAnimationDuration,
-            expandedHeaderPadding: namedArgs.containsKey('expandedHeaderPadding')
-                ? namedArgs['expandedHeaderPadding']
-                : _kPanelHeaderExpandedDefaultPadding,
-            dividerColor: namedArgs.containsKey('dividerColor') ? namedArgs['dividerColor'] : null,
-            elevation: namedArgs.containsKey('elevation') ? namedArgs['elevation'] : 2);
+            expansionCallback: namedArgs.containsKey('expansionCallback')
+                ? namedArgs['expansionCallback']
+                : null,
+            animationDuration: namedArgs.containsKey('animationDuration')
+                ? namedArgs['animationDuration']
+                : kThemeAnimationDuration,
+            expandedHeaderPadding:
+                namedArgs.containsKey('expandedHeaderPadding')
+                    ? namedArgs['expandedHeaderPadding']
+                    : _kPanelHeaderExpandedDefaultPadding,
+            dividerColor: namedArgs.containsKey('dividerColor')
+                ? namedArgs['dividerColor']
+                : null,
+            elevation: namedArgs.containsKey('elevation')
+                ? namedArgs['elevation']
+                : 2);
       case 'ExpansionPanelList.radio':
-        return ({positionalArgs, namedArgs, typeArgs}) => ExpansionPanelList.radio(
-            key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
-            children: namedArgs.containsKey('children')
-                ? List<ExpansionPanel>.from(namedArgs['children'])
-                : const <ExpansionPanelRadio>[],
-            expansionCallback: namedArgs.containsKey('expansionCallback') ? namedArgs['expansionCallback'] : null,
-            animationDuration:
-                namedArgs.containsKey('animationDuration') ? namedArgs['animationDuration'] : kThemeAnimationDuration,
-            initialOpenPanelValue:
-                namedArgs.containsKey('initialOpenPanelValue') ? namedArgs['initialOpenPanelValue'] : null,
-            expandedHeaderPadding: namedArgs.containsKey('expandedHeaderPadding')
-                ? namedArgs['expandedHeaderPadding']
-                : _kPanelHeaderExpandedDefaultPadding,
-            dividerColor: namedArgs.containsKey('dividerColor') ? namedArgs['dividerColor'] : null,
-            elevation: namedArgs.containsKey('elevation') ? namedArgs['elevation'] : 2);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            ExpansionPanelList
+                .radio(
+                    key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
+                    children: namedArgs.containsKey('children')
+                        ? List<ExpansionPanel>.from(namedArgs['children'])
+                        : const <ExpansionPanelRadio>[],
+                    expansionCallback:
+                        namedArgs.containsKey('expansionCallback')
+                            ? namedArgs['expansionCallback']
+                            : null,
+                    animationDuration:
+                        namedArgs.containsKey('animationDuration')
+                            ? namedArgs['animationDuration']
+                            : kThemeAnimationDuration,
+                    initialOpenPanelValue:
+                        namedArgs.containsKey('initialOpenPanelValue')
+                            ? namedArgs['initialOpenPanelValue']
+                            : null,
+                    expandedHeaderPadding:
+                        namedArgs.containsKey('expandedHeaderPadding')
+                            ? namedArgs['expandedHeaderPadding']
+                            : _kPanelHeaderExpandedDefaultPadding,
+                    dividerColor: namedArgs.containsKey('dividerColor')
+                        ? namedArgs['dividerColor']
+                        : null,
+                    elevation: namedArgs.containsKey('elevation')
+                        ? namedArgs['elevation']
+                        : 2);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -161,7 +198,8 @@ class ExpansionPanelListAutoBinding extends HTExternalClass {
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
       'ExpansionPanelCallback': (HTFunction function) =>
-          (panelIndex, isExpanded) => function.call(positionalArgs: [panelIndex, isExpanded], namedArgs: const {}),
+          (panelIndex, isExpanded) => function.call(
+              positionalArgs: [panelIndex, isExpanded], namedArgs: const {}),
     };
   }
 }
@@ -170,7 +208,7 @@ extension ExpansionPanelListBinding on ExpansionPanelList {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('ExpansionPanelList');
+        return const HTType('ExpansionPanelList');
       case 'children':
         return children;
       case 'expansionCallback':
@@ -196,25 +234,37 @@ extension ExpansionPanelListBinding on ExpansionPanelList {
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'toStringShallow':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
-            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            joiner:
+                namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

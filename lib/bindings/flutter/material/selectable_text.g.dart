@@ -13,63 +13,147 @@ class SelectableTextAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'SelectableText':
-        return ({positionalArgs, namedArgs, typeArgs}) => SelectableText(positionalArgs[0],
+        return ({positionalArgs, namedArgs, typeArgs}) => SelectableText(
+            positionalArgs[0],
             key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
-            focusNode: namedArgs.containsKey('focusNode') ? namedArgs['focusNode'] : null,
+            focusNode: namedArgs.containsKey('focusNode')
+                ? namedArgs['focusNode']
+                : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null,
-            strutStyle: namedArgs.containsKey('strutStyle') ? namedArgs['strutStyle'] : null,
-            textAlign: namedArgs.containsKey('textAlign') ? namedArgs['textAlign'] : null,
-            textDirection: namedArgs.containsKey('textDirection') ? namedArgs['textDirection'] : null,
-            textScaleFactor: namedArgs.containsKey('textScaleFactor') ? namedArgs['textScaleFactor'] : null,
-            showCursor: namedArgs.containsKey('showCursor') ? namedArgs['showCursor'] : false,
-            autofocus: namedArgs.containsKey('autofocus') ? namedArgs['autofocus'] : false,
-            toolbarOptions: namedArgs.containsKey('toolbarOptions') ? namedArgs['toolbarOptions'] : null,
-            minLines: namedArgs.containsKey('minLines') ? namedArgs['minLines'] : null,
-            maxLines: namedArgs.containsKey('maxLines') ? namedArgs['maxLines'] : null,
-            cursorWidth: namedArgs.containsKey('cursorWidth') ? namedArgs['cursorWidth'] : 2.0,
-            cursorHeight: namedArgs.containsKey('cursorHeight') ? namedArgs['cursorHeight'] : null,
-            cursorRadius: namedArgs.containsKey('cursorRadius') ? namedArgs['cursorRadius'] : null,
-            cursorColor: namedArgs.containsKey('cursorColor') ? namedArgs['cursorColor'] : null,
-            dragStartBehavior:
-                namedArgs.containsKey('dragStartBehavior') ? namedArgs['dragStartBehavior'] : DragStartBehavior.start,
+            strutStyle: namedArgs.containsKey('strutStyle')
+                ? namedArgs['strutStyle']
+                : null,
+            textAlign: namedArgs.containsKey('textAlign')
+                ? namedArgs['textAlign']
+                : null,
+            textDirection: namedArgs.containsKey('textDirection')
+                ? namedArgs['textDirection']
+                : null,
+            textScaleFactor: namedArgs.containsKey('textScaleFactor')
+                ? namedArgs['textScaleFactor']
+                : null,
+            showCursor: namedArgs.containsKey('showCursor')
+                ? namedArgs['showCursor']
+                : false,
+            autofocus: namedArgs.containsKey('autofocus')
+                ? namedArgs['autofocus']
+                : false,
+            toolbarOptions: namedArgs.containsKey('toolbarOptions')
+                ? namedArgs['toolbarOptions']
+                : null,
+            minLines: namedArgs.containsKey('minLines')
+                ? namedArgs['minLines']
+                : null,
+            maxLines: namedArgs.containsKey('maxLines')
+                ? namedArgs['maxLines']
+                : null,
+            cursorWidth: namedArgs.containsKey('cursorWidth')
+                ? namedArgs['cursorWidth']
+                : 2.0,
+            cursorHeight: namedArgs.containsKey('cursorHeight')
+                ? namedArgs['cursorHeight']
+                : null,
+            cursorRadius: namedArgs.containsKey('cursorRadius')
+                ? namedArgs['cursorRadius']
+                : null,
+            cursorColor: namedArgs.containsKey('cursorColor')
+                ? namedArgs['cursorColor']
+                : null,
+            dragStartBehavior: namedArgs.containsKey('dragStartBehavior')
+                ? namedArgs['dragStartBehavior']
+                : DragStartBehavior.start,
             enableInteractiveSelection:
-                namedArgs.containsKey('enableInteractiveSelection') ? namedArgs['enableInteractiveSelection'] : true,
-            selectionControls: namedArgs.containsKey('selectionControls') ? namedArgs['selectionControls'] : null,
+                namedArgs.containsKey('enableInteractiveSelection')
+                    ? namedArgs['enableInteractiveSelection']
+                    : true,
+            selectionControls: namedArgs.containsKey('selectionControls')
+                ? namedArgs['selectionControls']
+                : null,
             onTap: namedArgs.containsKey('onTap') ? namedArgs['onTap'] : null,
-            scrollPhysics: namedArgs.containsKey('scrollPhysics') ? namedArgs['scrollPhysics'] : null,
-            textHeightBehavior: namedArgs.containsKey('textHeightBehavior') ? namedArgs['textHeightBehavior'] : null,
-            textWidthBasis: namedArgs.containsKey('textWidthBasis') ? namedArgs['textWidthBasis'] : null,
-            onSelectionChanged: namedArgs.containsKey('onSelectionChanged') ? namedArgs['onSelectionChanged'] : null);
+            scrollPhysics: namedArgs.containsKey('scrollPhysics')
+                ? namedArgs['scrollPhysics']
+                : null,
+            textHeightBehavior: namedArgs.containsKey('textHeightBehavior')
+                ? namedArgs['textHeightBehavior']
+                : null,
+            textWidthBasis: namedArgs.containsKey('textWidthBasis')
+                ? namedArgs['textWidthBasis']
+                : null,
+            onSelectionChanged: namedArgs.containsKey('onSelectionChanged')
+                ? namedArgs['onSelectionChanged']
+                : null);
       case 'SelectableText.rich':
-        return ({positionalArgs, namedArgs, typeArgs}) => SelectableText.rich(positionalArgs[0],
+        return ({positionalArgs, namedArgs, typeArgs}) => SelectableText.rich(
+            positionalArgs[0],
             key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
-            focusNode: namedArgs.containsKey('focusNode') ? namedArgs['focusNode'] : null,
+            focusNode: namedArgs.containsKey('focusNode')
+                ? namedArgs['focusNode']
+                : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null,
-            strutStyle: namedArgs.containsKey('strutStyle') ? namedArgs['strutStyle'] : null,
-            textAlign: namedArgs.containsKey('textAlign') ? namedArgs['textAlign'] : null,
-            textDirection: namedArgs.containsKey('textDirection') ? namedArgs['textDirection'] : null,
-            textScaleFactor: namedArgs.containsKey('textScaleFactor') ? namedArgs['textScaleFactor'] : null,
-            showCursor: namedArgs.containsKey('showCursor') ? namedArgs['showCursor'] : false,
-            autofocus: namedArgs.containsKey('autofocus') ? namedArgs['autofocus'] : false,
-            toolbarOptions: namedArgs.containsKey('toolbarOptions') ? namedArgs['toolbarOptions'] : null,
-            minLines: namedArgs.containsKey('minLines') ? namedArgs['minLines'] : null,
-            maxLines: namedArgs.containsKey('maxLines') ? namedArgs['maxLines'] : null,
-            cursorWidth: namedArgs.containsKey('cursorWidth') ? namedArgs['cursorWidth'] : 2.0,
-            cursorHeight: namedArgs.containsKey('cursorHeight') ? namedArgs['cursorHeight'] : null,
-            cursorRadius: namedArgs.containsKey('cursorRadius') ? namedArgs['cursorRadius'] : null,
-            cursorColor: namedArgs.containsKey('cursorColor') ? namedArgs['cursorColor'] : null,
-            dragStartBehavior:
-                namedArgs.containsKey('dragStartBehavior') ? namedArgs['dragStartBehavior'] : DragStartBehavior.start,
+            strutStyle: namedArgs.containsKey('strutStyle')
+                ? namedArgs['strutStyle']
+                : null,
+            textAlign: namedArgs.containsKey('textAlign')
+                ? namedArgs['textAlign']
+                : null,
+            textDirection: namedArgs.containsKey('textDirection')
+                ? namedArgs['textDirection']
+                : null,
+            textScaleFactor: namedArgs.containsKey('textScaleFactor')
+                ? namedArgs['textScaleFactor']
+                : null,
+            showCursor: namedArgs.containsKey('showCursor')
+                ? namedArgs['showCursor']
+                : false,
+            autofocus: namedArgs.containsKey('autofocus')
+                ? namedArgs['autofocus']
+                : false,
+            toolbarOptions: namedArgs.containsKey('toolbarOptions')
+                ? namedArgs['toolbarOptions']
+                : null,
+            minLines: namedArgs.containsKey('minLines')
+                ? namedArgs['minLines']
+                : null,
+            maxLines: namedArgs.containsKey('maxLines')
+                ? namedArgs['maxLines']
+                : null,
+            cursorWidth: namedArgs.containsKey('cursorWidth')
+                ? namedArgs['cursorWidth']
+                : 2.0,
+            cursorHeight: namedArgs.containsKey('cursorHeight')
+                ? namedArgs['cursorHeight']
+                : null,
+            cursorRadius: namedArgs.containsKey('cursorRadius')
+                ? namedArgs['cursorRadius']
+                : null,
+            cursorColor: namedArgs.containsKey('cursorColor')
+                ? namedArgs['cursorColor']
+                : null,
+            dragStartBehavior: namedArgs.containsKey('dragStartBehavior')
+                ? namedArgs['dragStartBehavior']
+                : DragStartBehavior.start,
             enableInteractiveSelection:
-                namedArgs.containsKey('enableInteractiveSelection') ? namedArgs['enableInteractiveSelection'] : true,
-            selectionControls: namedArgs.containsKey('selectionControls') ? namedArgs['selectionControls'] : null,
+                namedArgs.containsKey('enableInteractiveSelection')
+                    ? namedArgs['enableInteractiveSelection']
+                    : true,
+            selectionControls: namedArgs.containsKey('selectionControls')
+                ? namedArgs['selectionControls']
+                : null,
             onTap: namedArgs.containsKey('onTap') ? namedArgs['onTap'] : null,
-            scrollPhysics: namedArgs.containsKey('scrollPhysics') ? namedArgs['scrollPhysics'] : null,
-            textHeightBehavior: namedArgs.containsKey('textHeightBehavior') ? namedArgs['textHeightBehavior'] : null,
-            textWidthBasis: namedArgs.containsKey('textWidthBasis') ? namedArgs['textWidthBasis'] : null,
-            onSelectionChanged: namedArgs.containsKey('onSelectionChanged') ? namedArgs['onSelectionChanged'] : null);
+            scrollPhysics: namedArgs.containsKey('scrollPhysics')
+                ? namedArgs['scrollPhysics']
+                : null,
+            textHeightBehavior: namedArgs.containsKey('textHeightBehavior')
+                ? namedArgs['textHeightBehavior']
+                : null,
+            textWidthBasis: namedArgs.containsKey('textWidthBasis')
+                ? namedArgs['textWidthBasis']
+                : null,
+            onSelectionChanged: namedArgs.containsKey('onSelectionChanged')
+                ? namedArgs['onSelectionChanged']
+                : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -80,9 +164,11 @@ class SelectableTextAutoBinding extends HTExternalClass {
 
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'GestureTapCallback': (HTFunction function) => () => function.call(positionalArgs: const [], namedArgs: const {}),
-      'SelectionChangedCallback': (HTFunction function) =>
-          (selection, cause) => function.call(positionalArgs: [selection, cause], namedArgs: const {}),
+      'GestureTapCallback': (HTFunction function) =>
+          () => function.call(positionalArgs: const [], namedArgs: const {}),
+      'SelectionChangedCallback': (HTFunction function) => (selection, cause) =>
+          function
+              .call(positionalArgs: [selection, cause], namedArgs: const {}),
     };
   }
 }
@@ -91,7 +177,7 @@ extension SelectableTextBinding on SelectableText {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('SelectableText');
+        return const HTType('SelectableText');
       case 'data':
         return data;
       case 'textSpan':
@@ -151,29 +237,41 @@ extension SelectableTextBinding on SelectableText {
       case 'createState':
         return ({positionalArgs, namedArgs, typeArgs}) => createState();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'createElement':
         return ({positionalArgs, namedArgs, typeArgs}) => createElement();
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'toStringShallow':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
-            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            joiner:
+                namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

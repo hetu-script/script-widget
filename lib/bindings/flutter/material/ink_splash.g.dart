@@ -14,18 +14,31 @@ class InkSplashAutoBinding extends HTExternalClass {
             controller: namedArgs['controller'],
             referenceBox: namedArgs['referenceBox'],
             textDirection: namedArgs['textDirection'],
-            position: namedArgs.containsKey('position') ? namedArgs['position'] : null,
+            position: namedArgs.containsKey('position')
+                ? namedArgs['position']
+                : null,
             color: namedArgs['color'],
-            containedInkWell: namedArgs.containsKey('containedInkWell') ? namedArgs['containedInkWell'] : false,
-            rectCallback: namedArgs.containsKey('rectCallback') ? namedArgs['rectCallback'] : null,
-            borderRadius: namedArgs.containsKey('borderRadius') ? namedArgs['borderRadius'] : null,
-            customBorder: namedArgs.containsKey('customBorder') ? namedArgs['customBorder'] : null,
-            radius: namedArgs.containsKey('radius') ? namedArgs['radius'] : null,
-            onRemoved: namedArgs.containsKey('onRemoved') ? namedArgs['onRemoved'] : null);
+            containedInkWell: namedArgs.containsKey('containedInkWell')
+                ? namedArgs['containedInkWell']
+                : false,
+            rectCallback: namedArgs.containsKey('rectCallback')
+                ? namedArgs['rectCallback']
+                : null,
+            borderRadius: namedArgs.containsKey('borderRadius')
+                ? namedArgs['borderRadius']
+                : null,
+            customBorder: namedArgs.containsKey('customBorder')
+                ? namedArgs['customBorder']
+                : null,
+            radius:
+                namedArgs.containsKey('radius') ? namedArgs['radius'] : null,
+            onRemoved: namedArgs.containsKey('onRemoved')
+                ? namedArgs['onRemoved']
+                : null);
       case 'InkSplash.splashFactory':
         return InkSplash.splashFactory;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -36,9 +49,10 @@ class InkSplashAutoBinding extends HTExternalClass {
 
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'RectCallback': (HTFunction function) =>
-          () => function.call(positionalArgs: const [], namedArgs: const {}) as Rect,
-      'VoidCallback': (HTFunction function) => () => function.call(positionalArgs: const [], namedArgs: const {}),
+      'RectCallback': (HTFunction function) => () =>
+          function.call(positionalArgs: const [], namedArgs: const {}) as Rect,
+      'VoidCallback': (HTFunction function) =>
+          () => function.call(positionalArgs: const [], namedArgs: const {}),
     };
   }
 }
@@ -47,7 +61,7 @@ extension InkSplashBinding on InkSplash {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('InkSplash');
+        return const HTType('InkSplash');
       case 'referenceBox':
         return referenceBox;
       case 'onRemoved':
@@ -63,11 +77,12 @@ extension InkSplashBinding on InkSplash {
       case 'dispose':
         return ({positionalArgs, namedArgs, typeArgs}) => dispose();
       case 'paintFeature':
-        return ({positionalArgs, namedArgs, typeArgs}) => paintFeature(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            paintFeature(positionalArgs[0], positionalArgs[1]);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

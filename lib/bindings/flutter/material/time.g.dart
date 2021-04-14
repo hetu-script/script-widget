@@ -14,7 +14,7 @@ class DayPeriodAutoBinding extends HTExternalClass {
       case 'DayPeriod.pm':
         return DayPeriod.pm;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -22,13 +22,14 @@ class DayPeriodAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('DayPeriod');
+        return const HTType('DayPeriod');
       case 'index':
         return (instance as DayPeriod).index;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => (instance as DayPeriod).toString();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            (instance as DayPeriod).toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -54,7 +55,7 @@ class TimeOfDayFormatAutoBinding extends HTExternalClass {
       case 'TimeOfDayFormat.a_space_h_colon_mm':
         return TimeOfDayFormat.a_space_h_colon_mm;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -62,13 +63,14 @@ class TimeOfDayFormatAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('TimeOfDayFormat');
+        return const HTType('TimeOfDayFormat');
       case 'index':
         return (instance as TimeOfDayFormat).index;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => (instance as TimeOfDayFormat).toString();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            (instance as TimeOfDayFormat).toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -88,7 +90,7 @@ class HourFormatAutoBinding extends HTExternalClass {
       case 'HourFormat.h':
         return HourFormat.h;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -96,13 +98,14 @@ class HourFormatAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('HourFormat');
+        return const HTType('HourFormat');
       case 'index':
         return (instance as HourFormat).index;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => (instance as HourFormat).toString();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            (instance as HourFormat).toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -117,7 +120,8 @@ class TimeOfDayAutoBinding extends HTExternalClass {
         return ({positionalArgs, namedArgs, typeArgs}) =>
             TimeOfDay(hour: namedArgs['hour'], minute: namedArgs['minute']);
       case 'TimeOfDay.fromDateTime':
-        return ({positionalArgs, namedArgs, typeArgs}) => TimeOfDay.fromDateTime(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            TimeOfDay.fromDateTime(positionalArgs[0]);
       case 'TimeOfDay.now':
         return ({positionalArgs, namedArgs, typeArgs}) => TimeOfDay.now();
       case 'TimeOfDay.hoursPerDay':
@@ -127,7 +131,7 @@ class TimeOfDayAutoBinding extends HTExternalClass {
       case 'TimeOfDay.minutesPerHour':
         return TimeOfDay.minutesPerHour;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -141,7 +145,7 @@ extension TimeOfDayBinding on TimeOfDay {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('TimeOfDay');
+        return const HTType('TimeOfDay');
       case 'hour':
         return hour;
       case 'minute':
@@ -157,13 +161,15 @@ extension TimeOfDayBinding on TimeOfDay {
       case 'replacing':
         return ({positionalArgs, namedArgs, typeArgs}) => replacing(
             hour: namedArgs.containsKey('hour') ? namedArgs['hour'] : null,
-            minute: namedArgs.containsKey('minute') ? namedArgs['minute'] : null);
+            minute:
+                namedArgs.containsKey('minute') ? namedArgs['minute'] : null);
       case 'format':
-        return ({positionalArgs, namedArgs, typeArgs}) => format(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            format(positionalArgs[0]);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

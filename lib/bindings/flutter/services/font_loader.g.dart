@@ -8,9 +8,10 @@ class FontLoaderAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'FontLoader':
-        return ({positionalArgs, namedArgs, typeArgs}) => FontLoader(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            FontLoader(positionalArgs[0]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -24,15 +25,16 @@ extension FontLoaderBinding on FontLoader {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('FontLoader');
+        return const HTType('FontLoader');
       case 'family':
         return family;
       case 'addFont':
-        return ({positionalArgs, namedArgs, typeArgs}) => addFont(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            addFont(positionalArgs[0]);
       case 'load':
         return ({positionalArgs, namedArgs, typeArgs}) => load();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

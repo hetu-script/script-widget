@@ -12,18 +12,30 @@ class SwitchThemeDataAutoBinding extends HTExternalClass {
     switch (varName) {
       case 'SwitchThemeData':
         return ({positionalArgs, namedArgs, typeArgs}) => SwitchThemeData(
-            thumbColor: namedArgs.containsKey('thumbColor') ? namedArgs['thumbColor'] : null,
-            trackColor: namedArgs.containsKey('trackColor') ? namedArgs['trackColor'] : null,
+            thumbColor: namedArgs.containsKey('thumbColor')
+                ? namedArgs['thumbColor']
+                : null,
+            trackColor: namedArgs.containsKey('trackColor')
+                ? namedArgs['trackColor']
+                : null,
             materialTapTargetSize:
-                namedArgs.containsKey('materialTapTargetSize') ? namedArgs['materialTapTargetSize'] : null,
-            mouseCursor: namedArgs.containsKey('mouseCursor') ? namedArgs['mouseCursor'] : null,
-            overlayColor: namedArgs.containsKey('overlayColor') ? namedArgs['overlayColor'] : null,
-            splashRadius: namedArgs.containsKey('splashRadius') ? namedArgs['splashRadius'] : null);
+                namedArgs.containsKey('materialTapTargetSize')
+                    ? namedArgs['materialTapTargetSize']
+                    : null,
+            mouseCursor: namedArgs.containsKey('mouseCursor')
+                ? namedArgs['mouseCursor']
+                : null,
+            overlayColor: namedArgs.containsKey('overlayColor')
+                ? namedArgs['overlayColor']
+                : null,
+            splashRadius: namedArgs.containsKey('splashRadius')
+                ? namedArgs['splashRadius']
+                : null);
       case 'SwitchThemeData.lerp':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            SwitchThemeData.lerp(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
+        return ({positionalArgs, namedArgs, typeArgs}) => SwitchThemeData.lerp(
+            positionalArgs[0], positionalArgs[1], positionalArgs[2]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -37,7 +49,7 @@ extension SwitchThemeDataBinding on SwitchThemeData {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('SwitchThemeData');
+        return const HTType('SwitchThemeData');
       case 'thumbColor':
         return thumbColor;
       case 'trackColor':
@@ -54,26 +66,41 @@ extension SwitchThemeDataBinding on SwitchThemeData {
         return hashCode;
       case 'copyWith':
         return ({positionalArgs, namedArgs, typeArgs}) => copyWith(
-            thumbColor: namedArgs.containsKey('thumbColor') ? namedArgs['thumbColor'] : null,
-            trackColor: namedArgs.containsKey('trackColor') ? namedArgs['trackColor'] : null,
+            thumbColor: namedArgs.containsKey('thumbColor')
+                ? namedArgs['thumbColor']
+                : null,
+            trackColor: namedArgs.containsKey('trackColor')
+                ? namedArgs['trackColor']
+                : null,
             materialTapTargetSize:
-                namedArgs.containsKey('materialTapTargetSize') ? namedArgs['materialTapTargetSize'] : null,
-            mouseCursor: namedArgs.containsKey('mouseCursor') ? namedArgs['mouseCursor'] : null,
-            overlayColor: namedArgs.containsKey('overlayColor') ? namedArgs['overlayColor'] : null,
-            splashRadius: namedArgs.containsKey('splashRadius') ? namedArgs['splashRadius'] : null);
+                namedArgs.containsKey('materialTapTargetSize')
+                    ? namedArgs['materialTapTargetSize']
+                    : null,
+            mouseCursor: namedArgs.containsKey('mouseCursor')
+                ? namedArgs['mouseCursor']
+                : null,
+            overlayColor: namedArgs.containsKey('overlayColor')
+                ? namedArgs['overlayColor']
+                : null,
+            splashRadius: namedArgs.containsKey('splashRadius')
+                ? namedArgs['splashRadius']
+                : null);
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -90,9 +117,10 @@ class SwitchThemeAutoBinding extends HTExternalClass {
             data: namedArgs['data'],
             child: namedArgs['child']);
       case 'SwitchTheme.of':
-        return ({positionalArgs, namedArgs, typeArgs}) => SwitchTheme.of(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            SwitchTheme.of(positionalArgs[0]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -106,7 +134,7 @@ extension SwitchThemeBinding on SwitchTheme {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('SwitchTheme');
+        return const HTType('SwitchTheme');
       case 'data':
         return data;
       case 'child':
@@ -116,31 +144,44 @@ extension SwitchThemeBinding on SwitchTheme {
       case 'hashCode':
         return hashCode;
       case 'updateShouldNotify':
-        return ({positionalArgs, namedArgs, typeArgs}) => updateShouldNotify(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            updateShouldNotify(positionalArgs[0]);
       case 'createElement':
         return ({positionalArgs, namedArgs, typeArgs}) => createElement();
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'toStringShallow':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
-            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            joiner:
+                namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

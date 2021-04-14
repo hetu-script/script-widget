@@ -10,7 +10,7 @@ class BinaryCodecAutoBinding extends HTExternalClass {
       case 'BinaryCodec':
         return ({positionalArgs, namedArgs, typeArgs}) => BinaryCodec();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -24,13 +24,15 @@ extension BinaryCodecBinding on BinaryCodec {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('BinaryCodec');
+        return const HTType('BinaryCodec');
       case 'decodeMessage':
-        return ({positionalArgs, namedArgs, typeArgs}) => decodeMessage(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            decodeMessage(positionalArgs[0]);
       case 'encodeMessage':
-        return ({positionalArgs, namedArgs, typeArgs}) => encodeMessage(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            encodeMessage(positionalArgs[0]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -44,7 +46,7 @@ class StringCodecAutoBinding extends HTExternalClass {
       case 'StringCodec':
         return ({positionalArgs, namedArgs, typeArgs}) => StringCodec();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -58,13 +60,15 @@ extension StringCodecBinding on StringCodec {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('StringCodec');
+        return const HTType('StringCodec');
       case 'decodeMessage':
-        return ({positionalArgs, namedArgs, typeArgs}) => decodeMessage(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            decodeMessage(positionalArgs[0]);
       case 'encodeMessage':
-        return ({positionalArgs, namedArgs, typeArgs}) => encodeMessage(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            encodeMessage(positionalArgs[0]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -78,7 +82,7 @@ class JSONMessageCodecAutoBinding extends HTExternalClass {
       case 'JSONMessageCodec':
         return ({positionalArgs, namedArgs, typeArgs}) => JSONMessageCodec();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -92,13 +96,15 @@ extension JSONMessageCodecBinding on JSONMessageCodec {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('JSONMessageCodec');
+        return const HTType('JSONMessageCodec');
       case 'encodeMessage':
-        return ({positionalArgs, namedArgs, typeArgs}) => encodeMessage(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            encodeMessage(positionalArgs[0]);
       case 'decodeMessage':
-        return ({positionalArgs, namedArgs, typeArgs}) => decodeMessage(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            decodeMessage(positionalArgs[0]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -112,7 +118,7 @@ class JSONMethodCodecAutoBinding extends HTExternalClass {
       case 'JSONMethodCodec':
         return ({positionalArgs, namedArgs, typeArgs}) => JSONMethodCodec();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -126,22 +132,28 @@ extension JSONMethodCodecBinding on JSONMethodCodec {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('JSONMethodCodec');
+        return const HTType('JSONMethodCodec');
       case 'encodeMethodCall':
-        return ({positionalArgs, namedArgs, typeArgs}) => encodeMethodCall(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            encodeMethodCall(positionalArgs[0]);
       case 'decodeMethodCall':
-        return ({positionalArgs, namedArgs, typeArgs}) => decodeMethodCall(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            decodeMethodCall(positionalArgs[0]);
       case 'decodeEnvelope':
-        return ({positionalArgs, namedArgs, typeArgs}) => decodeEnvelope(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            decodeEnvelope(positionalArgs[0]);
       case 'encodeSuccessEnvelope':
-        return ({positionalArgs, namedArgs, typeArgs}) => encodeSuccessEnvelope(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            encodeSuccessEnvelope(positionalArgs[0]);
       case 'encodeErrorEnvelope':
         return ({positionalArgs, namedArgs, typeArgs}) => encodeErrorEnvelope(
             code: namedArgs.containsKey('code') ? namedArgs['code'] : null,
-            message: namedArgs.containsKey('message') ? namedArgs['message'] : null,
-            details: namedArgs.containsKey('details') ? namedArgs['details'] : null);
+            message:
+                namedArgs.containsKey('message') ? namedArgs['message'] : null,
+            details:
+                namedArgs.containsKey('details') ? namedArgs['details'] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -153,9 +165,10 @@ class StandardMessageCodecAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'StandardMessageCodec':
-        return ({positionalArgs, namedArgs, typeArgs}) => StandardMessageCodec();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            StandardMessageCodec();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -169,23 +182,30 @@ extension StandardMessageCodecBinding on StandardMessageCodec {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('StandardMessageCodec');
+        return const HTType('StandardMessageCodec');
       case 'encodeMessage':
-        return ({positionalArgs, namedArgs, typeArgs}) => encodeMessage(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            encodeMessage(positionalArgs[0]);
       case 'decodeMessage':
-        return ({positionalArgs, namedArgs, typeArgs}) => decodeMessage(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            decodeMessage(positionalArgs[0]);
       case 'writeValue':
-        return ({positionalArgs, namedArgs, typeArgs}) => writeValue(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            writeValue(positionalArgs[0], positionalArgs[1]);
       case 'readValue':
-        return ({positionalArgs, namedArgs, typeArgs}) => readValue(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            readValue(positionalArgs[0]);
       case 'readValueOfType':
-        return ({positionalArgs, namedArgs, typeArgs}) => readValueOfType(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            readValueOfType(positionalArgs[0], positionalArgs[1]);
       case 'writeSize':
-        return ({positionalArgs, namedArgs, typeArgs}) => writeSize(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            writeSize(positionalArgs[0], positionalArgs[1]);
       case 'readSize':
-        return ({positionalArgs, namedArgs, typeArgs}) => readSize(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            readSize(positionalArgs[0]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -197,10 +217,12 @@ class StandardMethodCodecAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'StandardMethodCodec':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            StandardMethodCodec(positionalArgs.length > 0 ? positionalArgs[0] : const StandardMessageCodec());
+        return ({positionalArgs, namedArgs, typeArgs}) => StandardMethodCodec(
+            positionalArgs.length > 0
+                ? positionalArgs[0]
+                : const StandardMessageCodec());
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -214,24 +236,30 @@ extension StandardMethodCodecBinding on StandardMethodCodec {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('StandardMethodCodec');
+        return const HTType('StandardMethodCodec');
       case 'messageCodec':
         return messageCodec;
       case 'encodeMethodCall':
-        return ({positionalArgs, namedArgs, typeArgs}) => encodeMethodCall(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            encodeMethodCall(positionalArgs[0]);
       case 'decodeMethodCall':
-        return ({positionalArgs, namedArgs, typeArgs}) => decodeMethodCall(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            decodeMethodCall(positionalArgs[0]);
       case 'encodeSuccessEnvelope':
-        return ({positionalArgs, namedArgs, typeArgs}) => encodeSuccessEnvelope(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            encodeSuccessEnvelope(positionalArgs[0]);
       case 'encodeErrorEnvelope':
         return ({positionalArgs, namedArgs, typeArgs}) => encodeErrorEnvelope(
             code: namedArgs.containsKey('code') ? namedArgs['code'] : null,
-            message: namedArgs.containsKey('message') ? namedArgs['message'] : null,
-            details: namedArgs.containsKey('details') ? namedArgs['details'] : null);
+            message:
+                namedArgs.containsKey('message') ? namedArgs['message'] : null,
+            details:
+                namedArgs.containsKey('details') ? namedArgs['details'] : null);
       case 'decodeEnvelope':
-        return ({positionalArgs, namedArgs, typeArgs}) => decodeEnvelope(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            decodeEnvelope(positionalArgs[0]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

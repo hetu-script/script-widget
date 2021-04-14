@@ -14,7 +14,7 @@ class BoxShapeAutoBinding extends HTExternalClass {
       case 'BoxShape.circle':
         return BoxShape.circle;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -22,13 +22,14 @@ class BoxShapeAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('BoxShape');
+        return const HTType('BoxShape');
       case 'index':
         return (instance as BoxShape).index;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => (instance as BoxShape).toString();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            (instance as BoxShape).toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -41,28 +42,46 @@ class BorderAutoBinding extends HTExternalClass {
     switch (varName) {
       case 'Border':
         return ({positionalArgs, namedArgs, typeArgs}) => Border(
-            top: namedArgs.containsKey('top') ? namedArgs['top'] : BorderSide.none,
-            right: namedArgs.containsKey('right') ? namedArgs['right'] : BorderSide.none,
-            bottom: namedArgs.containsKey('bottom') ? namedArgs['bottom'] : BorderSide.none,
-            left: namedArgs.containsKey('left') ? namedArgs['left'] : BorderSide.none);
+            top: namedArgs.containsKey('top')
+                ? namedArgs['top']
+                : BorderSide.none,
+            right: namedArgs.containsKey('right')
+                ? namedArgs['right']
+                : BorderSide.none,
+            bottom: namedArgs.containsKey('bottom')
+                ? namedArgs['bottom']
+                : BorderSide.none,
+            left: namedArgs.containsKey('left')
+                ? namedArgs['left']
+                : BorderSide.none);
       case 'Border.fromBorderSide':
-        return ({positionalArgs, namedArgs, typeArgs}) => Border.fromBorderSide(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            Border.fromBorderSide(positionalArgs[0]);
       case 'Border.symmetric':
         return ({positionalArgs, namedArgs, typeArgs}) => Border.symmetric(
-            vertical: namedArgs.containsKey('vertical') ? namedArgs['vertical'] : BorderSide.none,
-            horizontal: namedArgs.containsKey('horizontal') ? namedArgs['horizontal'] : BorderSide.none);
+            vertical: namedArgs.containsKey('vertical')
+                ? namedArgs['vertical']
+                : BorderSide.none,
+            horizontal: namedArgs.containsKey('horizontal')
+                ? namedArgs['horizontal']
+                : BorderSide.none);
       case 'Border.all':
         return ({positionalArgs, namedArgs, typeArgs}) => Border.all(
-            color: namedArgs.containsKey('color') ? namedArgs['color'] : const Color(0xFF000000),
+            color: namedArgs.containsKey('color')
+                ? namedArgs['color']
+                : const Color(0xFF000000),
             width: namedArgs.containsKey('width') ? namedArgs['width'] : 1.0,
-            style: namedArgs.containsKey('style') ? namedArgs['style'] : BorderStyle.solid);
+            style: namedArgs.containsKey('style')
+                ? namedArgs['style']
+                : BorderStyle.solid);
       case 'Border.merge':
-        return ({positionalArgs, namedArgs, typeArgs}) => Border.merge(positionalArgs[0], positionalArgs[1]);
-      case 'Border.lerp':
         return ({positionalArgs, namedArgs, typeArgs}) =>
-            Border.lerp(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
+            Border.merge(positionalArgs[0], positionalArgs[1]);
+      case 'Border.lerp':
+        return ({positionalArgs, namedArgs, typeArgs}) => Border.lerp(
+            positionalArgs[0], positionalArgs[1], positionalArgs[2]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -76,7 +95,7 @@ extension BorderBinding on Border {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('Border');
+        return const HTType('Border');
       case 'top':
         return top;
       case 'right':
@@ -92,29 +111,47 @@ extension BorderBinding on Border {
       case 'hashCode':
         return hashCode;
       case 'add':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            add(positionalArgs[0], reversed: namedArgs.containsKey('reversed') ? namedArgs['reversed'] : false);
+        return ({positionalArgs, namedArgs, typeArgs}) => add(positionalArgs[0],
+            reversed: namedArgs.containsKey('reversed')
+                ? namedArgs['reversed']
+                : false);
       case 'scale':
-        return ({positionalArgs, namedArgs, typeArgs}) => scale(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            scale(positionalArgs[0]);
       case 'lerpFrom':
-        return ({positionalArgs, namedArgs, typeArgs}) => lerpFrom(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            lerpFrom(positionalArgs[0], positionalArgs[1]);
       case 'lerpTo':
-        return ({positionalArgs, namedArgs, typeArgs}) => lerpTo(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            lerpTo(positionalArgs[0], positionalArgs[1]);
       case 'paint':
-        return ({positionalArgs, namedArgs, typeArgs}) => paint(positionalArgs[0], positionalArgs[1],
-            textDirection: namedArgs.containsKey('textDirection') ? namedArgs['textDirection'] : null,
-            shape: namedArgs.containsKey('shape') ? namedArgs['shape'] : BoxShape.rectangle,
-            borderRadius: namedArgs.containsKey('borderRadius') ? namedArgs['borderRadius'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => paint(
+            positionalArgs[0], positionalArgs[1],
+            textDirection: namedArgs.containsKey('textDirection')
+                ? namedArgs['textDirection']
+                : null,
+            shape: namedArgs.containsKey('shape')
+                ? namedArgs['shape']
+                : BoxShape.rectangle,
+            borderRadius: namedArgs.containsKey('borderRadius')
+                ? namedArgs['borderRadius']
+                : null);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       case 'getInnerPath':
-        return ({positionalArgs, namedArgs, typeArgs}) => getInnerPath(positionalArgs[0],
-            textDirection: namedArgs.containsKey('textDirection') ? namedArgs['textDirection'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => getInnerPath(
+            positionalArgs[0],
+            textDirection: namedArgs.containsKey('textDirection')
+                ? namedArgs['textDirection']
+                : null);
       case 'getOuterPath':
-        return ({positionalArgs, namedArgs, typeArgs}) => getOuterPath(positionalArgs[0],
-            textDirection: namedArgs.containsKey('textDirection') ? namedArgs['textDirection'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => getOuterPath(
+            positionalArgs[0],
+            textDirection: namedArgs.containsKey('textDirection')
+                ? namedArgs['textDirection']
+                : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -127,17 +164,27 @@ class BorderDirectionalAutoBinding extends HTExternalClass {
     switch (varName) {
       case 'BorderDirectional':
         return ({positionalArgs, namedArgs, typeArgs}) => BorderDirectional(
-            top: namedArgs.containsKey('top') ? namedArgs['top'] : BorderSide.none,
-            start: namedArgs.containsKey('start') ? namedArgs['start'] : BorderSide.none,
-            end: namedArgs.containsKey('end') ? namedArgs['end'] : BorderSide.none,
-            bottom: namedArgs.containsKey('bottom') ? namedArgs['bottom'] : BorderSide.none);
+            top: namedArgs.containsKey('top')
+                ? namedArgs['top']
+                : BorderSide.none,
+            start: namedArgs.containsKey('start')
+                ? namedArgs['start']
+                : BorderSide.none,
+            end: namedArgs.containsKey('end')
+                ? namedArgs['end']
+                : BorderSide.none,
+            bottom: namedArgs.containsKey('bottom')
+                ? namedArgs['bottom']
+                : BorderSide.none);
       case 'BorderDirectional.merge':
-        return ({positionalArgs, namedArgs, typeArgs}) => BorderDirectional.merge(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            BorderDirectional.merge(positionalArgs[0], positionalArgs[1]);
       case 'BorderDirectional.lerp':
         return ({positionalArgs, namedArgs, typeArgs}) =>
-            BorderDirectional.lerp(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
+            BorderDirectional.lerp(
+                positionalArgs[0], positionalArgs[1], positionalArgs[2]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -151,7 +198,7 @@ extension BorderDirectionalBinding on BorderDirectional {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('BorderDirectional');
+        return const HTType('BorderDirectional');
       case 'top':
         return top;
       case 'start':
@@ -167,29 +214,47 @@ extension BorderDirectionalBinding on BorderDirectional {
       case 'hashCode':
         return hashCode;
       case 'add':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            add(positionalArgs[0], reversed: namedArgs.containsKey('reversed') ? namedArgs['reversed'] : false);
+        return ({positionalArgs, namedArgs, typeArgs}) => add(positionalArgs[0],
+            reversed: namedArgs.containsKey('reversed')
+                ? namedArgs['reversed']
+                : false);
       case 'scale':
-        return ({positionalArgs, namedArgs, typeArgs}) => scale(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            scale(positionalArgs[0]);
       case 'lerpFrom':
-        return ({positionalArgs, namedArgs, typeArgs}) => lerpFrom(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            lerpFrom(positionalArgs[0], positionalArgs[1]);
       case 'lerpTo':
-        return ({positionalArgs, namedArgs, typeArgs}) => lerpTo(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            lerpTo(positionalArgs[0], positionalArgs[1]);
       case 'paint':
-        return ({positionalArgs, namedArgs, typeArgs}) => paint(positionalArgs[0], positionalArgs[1],
-            textDirection: namedArgs.containsKey('textDirection') ? namedArgs['textDirection'] : null,
-            shape: namedArgs.containsKey('shape') ? namedArgs['shape'] : BoxShape.rectangle,
-            borderRadius: namedArgs.containsKey('borderRadius') ? namedArgs['borderRadius'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => paint(
+            positionalArgs[0], positionalArgs[1],
+            textDirection: namedArgs.containsKey('textDirection')
+                ? namedArgs['textDirection']
+                : null,
+            shape: namedArgs.containsKey('shape')
+                ? namedArgs['shape']
+                : BoxShape.rectangle,
+            borderRadius: namedArgs.containsKey('borderRadius')
+                ? namedArgs['borderRadius']
+                : null);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       case 'getInnerPath':
-        return ({positionalArgs, namedArgs, typeArgs}) => getInnerPath(positionalArgs[0],
-            textDirection: namedArgs.containsKey('textDirection') ? namedArgs['textDirection'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => getInnerPath(
+            positionalArgs[0],
+            textDirection: namedArgs.containsKey('textDirection')
+                ? namedArgs['textDirection']
+                : null);
       case 'getOuterPath':
-        return ({positionalArgs, namedArgs, typeArgs}) => getOuterPath(positionalArgs[0],
-            textDirection: namedArgs.containsKey('textDirection') ? namedArgs['textDirection'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => getOuterPath(
+            positionalArgs[0],
+            textDirection: namedArgs.containsKey('textDirection')
+                ? namedArgs['textDirection']
+                : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

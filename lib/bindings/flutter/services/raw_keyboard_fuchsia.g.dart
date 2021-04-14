@@ -8,10 +8,17 @@ class RawKeyEventDataFuchsiaAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'RawKeyEventDataFuchsia':
-        return ({positionalArgs, namedArgs, typeArgs}) => RawKeyEventDataFuchsia(
-            hidUsage: namedArgs.containsKey('hidUsage') ? namedArgs['hidUsage'] : 0,
-            codePoint: namedArgs.containsKey('codePoint') ? namedArgs['codePoint'] : 0,
-            modifiers: namedArgs.containsKey('modifiers') ? namedArgs['modifiers'] : 0);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            RawKeyEventDataFuchsia(
+                hidUsage: namedArgs.containsKey('hidUsage')
+                    ? namedArgs['hidUsage']
+                    : 0,
+                codePoint: namedArgs.containsKey('codePoint')
+                    ? namedArgs['codePoint']
+                    : 0,
+                modifiers: namedArgs.containsKey('modifiers')
+                    ? namedArgs['modifiers']
+                    : 0);
       case 'RawKeyEventDataFuchsia.modifierNone':
         return RawKeyEventDataFuchsia.modifierNone;
       case 'RawKeyEventDataFuchsia.modifierCapsLock':
@@ -41,7 +48,7 @@ class RawKeyEventDataFuchsiaAutoBinding extends HTExternalClass {
       case 'RawKeyEventDataFuchsia.modifierMeta':
         return RawKeyEventDataFuchsia.modifierMeta;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -55,7 +62,7 @@ extension RawKeyEventDataFuchsiaBinding on RawKeyEventDataFuchsia {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('RawKeyEventDataFuchsia');
+        return const HTType('RawKeyEventDataFuchsia');
       case 'hidUsage':
         return hidUsage;
       case 'codePoint':
@@ -79,14 +86,18 @@ extension RawKeyEventDataFuchsiaBinding on RawKeyEventDataFuchsia {
       case 'modifiersPressed':
         return modifiersPressed;
       case 'isModifierPressed':
-        return ({positionalArgs, namedArgs, typeArgs}) => isModifierPressed(positionalArgs[0],
-            side: namedArgs.containsKey('side') ? namedArgs['side'] : KeyboardSide.any);
+        return ({positionalArgs, namedArgs, typeArgs}) => isModifierPressed(
+            positionalArgs[0],
+            side: namedArgs.containsKey('side')
+                ? namedArgs['side']
+                : KeyboardSide.any);
       case 'getModifierSide':
-        return ({positionalArgs, namedArgs, typeArgs}) => getModifierSide(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            getModifierSide(positionalArgs[0]);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

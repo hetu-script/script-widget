@@ -1,8 +1,9 @@
 class Widget {
+    
+    external static fun _rebuild(instance)
+
     ///Dart宿主对象
     var host
-    
-    external fun _rebuild(instance)
 
     //重建Widget的方法，由Dart赋值
     fun rebuild {
@@ -18,7 +19,7 @@ class Widget {
     fun init() {}
 
     ///用于创建一个Dart Widget，必须override并返回一个Widget
-    fun build(context)
+    fun build(context) {}
 
     fun dispose() {
       host = null

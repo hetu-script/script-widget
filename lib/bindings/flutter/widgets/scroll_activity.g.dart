@@ -8,9 +8,10 @@ class IdleScrollActivityAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'IdleScrollActivity':
-        return ({positionalArgs, namedArgs, typeArgs}) => IdleScrollActivity(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            IdleScrollActivity(positionalArgs[0]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -24,7 +25,7 @@ extension IdleScrollActivityBinding on IdleScrollActivity {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('IdleScrollActivity');
+        return const HTType('IdleScrollActivity');
       case 'shouldIgnorePointer':
         return shouldIgnorePointer;
       case 'isScrolling':
@@ -36,18 +37,22 @@ extension IdleScrollActivityBinding on IdleScrollActivity {
       case 'applyNewDimensions':
         return ({positionalArgs, namedArgs, typeArgs}) => applyNewDimensions();
       case 'updateDelegate':
-        return ({positionalArgs, namedArgs, typeArgs}) => updateDelegate(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            updateDelegate(positionalArgs[0]);
       case 'resetActivity':
         return ({positionalArgs, namedArgs, typeArgs}) => resetActivity();
       case 'dispatchScrollStartNotification':
         return ({positionalArgs, namedArgs, typeArgs}) =>
-            dispatchScrollStartNotification(positionalArgs[0], positionalArgs[1]);
+            dispatchScrollStartNotification(
+                positionalArgs[0], positionalArgs[1]);
       case 'dispatchScrollUpdateNotification':
         return ({positionalArgs, namedArgs, typeArgs}) =>
-            dispatchScrollUpdateNotification(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
+            dispatchScrollUpdateNotification(
+                positionalArgs[0], positionalArgs[1], positionalArgs[2]);
       case 'dispatchOverscrollNotification':
         return ({positionalArgs, namedArgs, typeArgs}) =>
-            dispatchOverscrollNotification(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
+            dispatchOverscrollNotification(
+                positionalArgs[0], positionalArgs[1], positionalArgs[2]);
       case 'dispatchScrollEndNotification':
         return ({positionalArgs, namedArgs, typeArgs}) =>
             dispatchScrollEndNotification(positionalArgs[0], positionalArgs[1]);
@@ -56,7 +61,7 @@ extension IdleScrollActivityBinding on IdleScrollActivity {
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -70,9 +75,11 @@ class HoldScrollActivityAutoBinding extends HTExternalClass {
       case 'HoldScrollActivity':
         return ({positionalArgs, namedArgs, typeArgs}) => HoldScrollActivity(
             delegate: namedArgs['delegate'],
-            onHoldCanceled: namedArgs.containsKey('onHoldCanceled') ? namedArgs['onHoldCanceled'] : null);
+            onHoldCanceled: namedArgs.containsKey('onHoldCanceled')
+                ? namedArgs['onHoldCanceled']
+                : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -83,7 +90,8 @@ class HoldScrollActivityAutoBinding extends HTExternalClass {
 
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'VoidCallback': (HTFunction function) => () => function.call(positionalArgs: const [], namedArgs: const {}),
+      'VoidCallback': (HTFunction function) =>
+          () => function.call(positionalArgs: const [], namedArgs: const {}),
     };
   }
 }
@@ -92,7 +100,7 @@ extension HoldScrollActivityBinding on HoldScrollActivity {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('HoldScrollActivity');
+        return const HTType('HoldScrollActivity');
       case 'onHoldCanceled':
         return onHoldCanceled;
       case 'shouldIgnorePointer':
@@ -108,18 +116,22 @@ extension HoldScrollActivityBinding on HoldScrollActivity {
       case 'dispose':
         return ({positionalArgs, namedArgs, typeArgs}) => dispose();
       case 'updateDelegate':
-        return ({positionalArgs, namedArgs, typeArgs}) => updateDelegate(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            updateDelegate(positionalArgs[0]);
       case 'resetActivity':
         return ({positionalArgs, namedArgs, typeArgs}) => resetActivity();
       case 'dispatchScrollStartNotification':
         return ({positionalArgs, namedArgs, typeArgs}) =>
-            dispatchScrollStartNotification(positionalArgs[0], positionalArgs[1]);
+            dispatchScrollStartNotification(
+                positionalArgs[0], positionalArgs[1]);
       case 'dispatchScrollUpdateNotification':
         return ({positionalArgs, namedArgs, typeArgs}) =>
-            dispatchScrollUpdateNotification(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
+            dispatchScrollUpdateNotification(
+                positionalArgs[0], positionalArgs[1], positionalArgs[2]);
       case 'dispatchOverscrollNotification':
         return ({positionalArgs, namedArgs, typeArgs}) =>
-            dispatchOverscrollNotification(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
+            dispatchOverscrollNotification(
+                positionalArgs[0], positionalArgs[1], positionalArgs[2]);
       case 'dispatchScrollEndNotification':
         return ({positionalArgs, namedArgs, typeArgs}) =>
             dispatchScrollEndNotification(positionalArgs[0], positionalArgs[1]);
@@ -128,7 +140,7 @@ extension HoldScrollActivityBinding on HoldScrollActivity {
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -143,17 +155,22 @@ class ScrollDragControllerAutoBinding extends HTExternalClass {
         return ({positionalArgs, namedArgs, typeArgs}) => ScrollDragController(
             delegate: namedArgs['delegate'],
             details: namedArgs['details'],
-            onDragCanceled: namedArgs.containsKey('onDragCanceled') ? namedArgs['onDragCanceled'] : null,
-            carriedVelocity: namedArgs.containsKey('carriedVelocity') ? namedArgs['carriedVelocity'] : null,
-            motionStartDistanceThreshold: namedArgs.containsKey('motionStartDistanceThreshold')
-                ? namedArgs['motionStartDistanceThreshold']
-                : null);
+            onDragCanceled: namedArgs.containsKey('onDragCanceled')
+                ? namedArgs['onDragCanceled']
+                : null,
+            carriedVelocity: namedArgs.containsKey('carriedVelocity')
+                ? namedArgs['carriedVelocity']
+                : null,
+            motionStartDistanceThreshold:
+                namedArgs.containsKey('motionStartDistanceThreshold')
+                    ? namedArgs['motionStartDistanceThreshold']
+                    : null);
       case 'ScrollDragController.momentumRetainStationaryDurationThreshold':
         return ScrollDragController.momentumRetainStationaryDurationThreshold;
       case 'ScrollDragController.motionStoppedDurationThreshold':
         return ScrollDragController.motionStoppedDurationThreshold;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -164,7 +181,8 @@ class ScrollDragControllerAutoBinding extends HTExternalClass {
 
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'VoidCallback': (HTFunction function) => () => function.call(positionalArgs: const [], namedArgs: const {}),
+      'VoidCallback': (HTFunction function) =>
+          () => function.call(positionalArgs: const [], namedArgs: const {}),
     };
   }
 }
@@ -173,7 +191,7 @@ extension ScrollDragControllerBinding on ScrollDragController {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('ScrollDragController');
+        return const HTType('ScrollDragController');
       case 'onDragCanceled':
         return onDragCanceled;
       case 'carriedVelocity':
@@ -185,11 +203,14 @@ extension ScrollDragControllerBinding on ScrollDragController {
       case 'lastDetails':
         return lastDetails;
       case 'updateDelegate':
-        return ({positionalArgs, namedArgs, typeArgs}) => updateDelegate(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            updateDelegate(positionalArgs[0]);
       case 'update':
-        return ({positionalArgs, namedArgs, typeArgs}) => update(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            update(positionalArgs[0]);
       case 'end':
-        return ({positionalArgs, namedArgs, typeArgs}) => end(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            end(positionalArgs[0]);
       case 'cancel':
         return ({positionalArgs, namedArgs, typeArgs}) => cancel();
       case 'dispose':
@@ -197,7 +218,7 @@ extension ScrollDragControllerBinding on ScrollDragController {
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -209,9 +230,10 @@ class DragScrollActivityAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'DragScrollActivity':
-        return ({positionalArgs, namedArgs, typeArgs}) => DragScrollActivity(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            DragScrollActivity(positionalArgs[0], positionalArgs[1]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -225,7 +247,7 @@ extension DragScrollActivityBinding on DragScrollActivity {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('DragScrollActivity');
+        return const HTType('DragScrollActivity');
       case 'shouldIgnorePointer':
         return shouldIgnorePointer;
       case 'isScrolling':
@@ -236,13 +258,16 @@ extension DragScrollActivityBinding on DragScrollActivity {
         return delegate;
       case 'dispatchScrollStartNotification':
         return ({positionalArgs, namedArgs, typeArgs}) =>
-            dispatchScrollStartNotification(positionalArgs[0], positionalArgs[1]);
+            dispatchScrollStartNotification(
+                positionalArgs[0], positionalArgs[1]);
       case 'dispatchScrollUpdateNotification':
         return ({positionalArgs, namedArgs, typeArgs}) =>
-            dispatchScrollUpdateNotification(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
+            dispatchScrollUpdateNotification(
+                positionalArgs[0], positionalArgs[1], positionalArgs[2]);
       case 'dispatchOverscrollNotification':
         return ({positionalArgs, namedArgs, typeArgs}) =>
-            dispatchOverscrollNotification(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
+            dispatchOverscrollNotification(
+                positionalArgs[0], positionalArgs[1], positionalArgs[2]);
       case 'dispatchScrollEndNotification':
         return ({positionalArgs, namedArgs, typeArgs}) =>
             dispatchScrollEndNotification(positionalArgs[0], positionalArgs[1]);
@@ -251,13 +276,14 @@ extension DragScrollActivityBinding on DragScrollActivity {
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       case 'updateDelegate':
-        return ({positionalArgs, namedArgs, typeArgs}) => updateDelegate(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            updateDelegate(positionalArgs[0]);
       case 'resetActivity':
         return ({positionalArgs, namedArgs, typeArgs}) => resetActivity();
       case 'applyNewDimensions':
         return ({positionalArgs, namedArgs, typeArgs}) => applyNewDimensions();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -270,9 +296,10 @@ class BallisticScrollActivityAutoBinding extends HTExternalClass {
     switch (varName) {
       case 'BallisticScrollActivity':
         return ({positionalArgs, namedArgs, typeArgs}) =>
-            BallisticScrollActivity(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
+            BallisticScrollActivity(
+                positionalArgs[0], positionalArgs[1], positionalArgs[2]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -286,7 +313,7 @@ extension BallisticScrollActivityBinding on BallisticScrollActivity {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('BallisticScrollActivity');
+        return const HTType('BallisticScrollActivity');
       case 'shouldIgnorePointer':
         return shouldIgnorePointer;
       case 'isScrolling':
@@ -301,24 +328,28 @@ extension BallisticScrollActivityBinding on BallisticScrollActivity {
         return ({positionalArgs, namedArgs, typeArgs}) => applyNewDimensions();
       case 'dispatchOverscrollNotification':
         return ({positionalArgs, namedArgs, typeArgs}) =>
-            dispatchOverscrollNotification(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
+            dispatchOverscrollNotification(
+                positionalArgs[0], positionalArgs[1], positionalArgs[2]);
       case 'dispose':
         return ({positionalArgs, namedArgs, typeArgs}) => dispose();
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       case 'updateDelegate':
-        return ({positionalArgs, namedArgs, typeArgs}) => updateDelegate(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            updateDelegate(positionalArgs[0]);
       case 'dispatchScrollStartNotification':
         return ({positionalArgs, namedArgs, typeArgs}) =>
-            dispatchScrollStartNotification(positionalArgs[0], positionalArgs[1]);
+            dispatchScrollStartNotification(
+                positionalArgs[0], positionalArgs[1]);
       case 'dispatchScrollUpdateNotification':
         return ({positionalArgs, namedArgs, typeArgs}) =>
-            dispatchScrollUpdateNotification(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
+            dispatchScrollUpdateNotification(
+                positionalArgs[0], positionalArgs[1], positionalArgs[2]);
       case 'dispatchScrollEndNotification':
         return ({positionalArgs, namedArgs, typeArgs}) =>
             dispatchScrollEndNotification(positionalArgs[0], positionalArgs[1]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -330,14 +361,15 @@ class DrivenScrollActivityAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'DrivenScrollActivity':
-        return ({positionalArgs, namedArgs, typeArgs}) => DrivenScrollActivity(positionalArgs[0],
+        return ({positionalArgs, namedArgs, typeArgs}) => DrivenScrollActivity(
+            positionalArgs[0],
             from: namedArgs['from'],
             to: namedArgs['to'],
             duration: namedArgs['duration'],
             curve: namedArgs['curve'],
             vsync: namedArgs['vsync']);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -351,7 +383,7 @@ extension DrivenScrollActivityBinding on DrivenScrollActivity {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('DrivenScrollActivity');
+        return const HTType('DrivenScrollActivity');
       case 'done':
         return done;
       case 'shouldIgnorePointer':
@@ -364,28 +396,32 @@ extension DrivenScrollActivityBinding on DrivenScrollActivity {
         return delegate;
       case 'dispatchOverscrollNotification':
         return ({positionalArgs, namedArgs, typeArgs}) =>
-            dispatchOverscrollNotification(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
+            dispatchOverscrollNotification(
+                positionalArgs[0], positionalArgs[1], positionalArgs[2]);
       case 'dispose':
         return ({positionalArgs, namedArgs, typeArgs}) => dispose();
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       case 'updateDelegate':
-        return ({positionalArgs, namedArgs, typeArgs}) => updateDelegate(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            updateDelegate(positionalArgs[0]);
       case 'resetActivity':
         return ({positionalArgs, namedArgs, typeArgs}) => resetActivity();
       case 'dispatchScrollStartNotification':
         return ({positionalArgs, namedArgs, typeArgs}) =>
-            dispatchScrollStartNotification(positionalArgs[0], positionalArgs[1]);
+            dispatchScrollStartNotification(
+                positionalArgs[0], positionalArgs[1]);
       case 'dispatchScrollUpdateNotification':
         return ({positionalArgs, namedArgs, typeArgs}) =>
-            dispatchScrollUpdateNotification(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
+            dispatchScrollUpdateNotification(
+                positionalArgs[0], positionalArgs[1], positionalArgs[2]);
       case 'dispatchScrollEndNotification':
         return ({positionalArgs, namedArgs, typeArgs}) =>
             dispatchScrollEndNotification(positionalArgs[0], positionalArgs[1]);
       case 'applyNewDimensions':
         return ({positionalArgs, namedArgs, typeArgs}) => applyNewDimensions();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

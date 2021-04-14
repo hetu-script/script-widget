@@ -10,9 +10,10 @@ class GradientRotationAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'GradientRotation':
-        return ({positionalArgs, namedArgs, typeArgs}) => GradientRotation(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            GradientRotation(positionalArgs[0]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -26,14 +27,17 @@ extension GradientRotationBinding on GradientRotation {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('GradientRotation');
+        return const HTType('GradientRotation');
       case 'radians':
         return radians;
       case 'transform':
-        return ({positionalArgs, namedArgs, typeArgs}) => transform(positionalArgs[0],
-            textDirection: namedArgs.containsKey('textDirection') ? namedArgs['textDirection'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => transform(
+            positionalArgs[0],
+            textDirection: namedArgs.containsKey('textDirection')
+                ? namedArgs['textDirection']
+                : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -46,17 +50,27 @@ class LinearGradientAutoBinding extends HTExternalClass {
     switch (varName) {
       case 'LinearGradient':
         return ({positionalArgs, namedArgs, typeArgs}) => LinearGradient(
-            begin: namedArgs.containsKey('begin') ? namedArgs['begin'] : Alignment.centerLeft,
-            end: namedArgs.containsKey('end') ? namedArgs['end'] : Alignment.centerRight,
+            begin: namedArgs.containsKey('begin')
+                ? namedArgs['begin']
+                : Alignment.centerLeft,
+            end: namedArgs.containsKey('end')
+                ? namedArgs['end']
+                : Alignment.centerRight,
             colors: List<Color>.from(namedArgs['colors']),
-            stops: namedArgs.containsKey('stops') ? List<double>.from(namedArgs['stops']) : null,
-            tileMode: namedArgs.containsKey('tileMode') ? namedArgs['tileMode'] : TileMode.clamp,
-            transform: namedArgs.containsKey('transform') ? namedArgs['transform'] : null);
+            stops: namedArgs.containsKey('stops')
+                ? List<double>.from(namedArgs['stops'])
+                : null,
+            tileMode: namedArgs.containsKey('tileMode')
+                ? namedArgs['tileMode']
+                : TileMode.clamp,
+            transform: namedArgs.containsKey('transform')
+                ? namedArgs['transform']
+                : null);
       case 'LinearGradient.lerp':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            LinearGradient.lerp(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
+        return ({positionalArgs, namedArgs, typeArgs}) => LinearGradient.lerp(
+            positionalArgs[0], positionalArgs[1], positionalArgs[2]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -70,7 +84,7 @@ extension LinearGradientBinding on LinearGradient {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('LinearGradient');
+        return const HTType('LinearGradient');
       case 'begin':
         return begin;
       case 'end':
@@ -86,18 +100,24 @@ extension LinearGradientBinding on LinearGradient {
       case 'hashCode':
         return hashCode;
       case 'createShader':
-        return ({positionalArgs, namedArgs, typeArgs}) => createShader(positionalArgs[0],
-            textDirection: namedArgs.containsKey('textDirection') ? namedArgs['textDirection'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => createShader(
+            positionalArgs[0],
+            textDirection: namedArgs.containsKey('textDirection')
+                ? namedArgs['textDirection']
+                : null);
       case 'scale':
-        return ({positionalArgs, namedArgs, typeArgs}) => scale(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            scale(positionalArgs[0]);
       case 'lerpFrom':
-        return ({positionalArgs, namedArgs, typeArgs}) => lerpFrom(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            lerpFrom(positionalArgs[0], positionalArgs[1]);
       case 'lerpTo':
-        return ({positionalArgs, namedArgs, typeArgs}) => lerpTo(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            lerpTo(positionalArgs[0], positionalArgs[1]);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -110,19 +130,29 @@ class RadialGradientAutoBinding extends HTExternalClass {
     switch (varName) {
       case 'RadialGradient':
         return ({positionalArgs, namedArgs, typeArgs}) => RadialGradient(
-            center: namedArgs.containsKey('center') ? namedArgs['center'] : Alignment.center,
+            center: namedArgs.containsKey('center')
+                ? namedArgs['center']
+                : Alignment.center,
             radius: namedArgs.containsKey('radius') ? namedArgs['radius'] : 0.5,
             colors: List<Color>.from(namedArgs['colors']),
-            stops: namedArgs.containsKey('stops') ? List<double>.from(namedArgs['stops']) : null,
-            tileMode: namedArgs.containsKey('tileMode') ? namedArgs['tileMode'] : TileMode.clamp,
+            stops: namedArgs.containsKey('stops')
+                ? List<double>.from(namedArgs['stops'])
+                : null,
+            tileMode: namedArgs.containsKey('tileMode')
+                ? namedArgs['tileMode']
+                : TileMode.clamp,
             focal: namedArgs.containsKey('focal') ? namedArgs['focal'] : null,
-            focalRadius: namedArgs.containsKey('focalRadius') ? namedArgs['focalRadius'] : 0.0,
-            transform: namedArgs.containsKey('transform') ? namedArgs['transform'] : null);
+            focalRadius: namedArgs.containsKey('focalRadius')
+                ? namedArgs['focalRadius']
+                : 0.0,
+            transform: namedArgs.containsKey('transform')
+                ? namedArgs['transform']
+                : null);
       case 'RadialGradient.lerp':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            RadialGradient.lerp(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
+        return ({positionalArgs, namedArgs, typeArgs}) => RadialGradient.lerp(
+            positionalArgs[0], positionalArgs[1], positionalArgs[2]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -136,7 +166,7 @@ extension RadialGradientBinding on RadialGradient {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('RadialGradient');
+        return const HTType('RadialGradient');
       case 'center':
         return center;
       case 'radius':
@@ -156,18 +186,24 @@ extension RadialGradientBinding on RadialGradient {
       case 'hashCode':
         return hashCode;
       case 'createShader':
-        return ({positionalArgs, namedArgs, typeArgs}) => createShader(positionalArgs[0],
-            textDirection: namedArgs.containsKey('textDirection') ? namedArgs['textDirection'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => createShader(
+            positionalArgs[0],
+            textDirection: namedArgs.containsKey('textDirection')
+                ? namedArgs['textDirection']
+                : null);
       case 'scale':
-        return ({positionalArgs, namedArgs, typeArgs}) => scale(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            scale(positionalArgs[0]);
       case 'lerpFrom':
-        return ({positionalArgs, namedArgs, typeArgs}) => lerpFrom(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            lerpFrom(positionalArgs[0], positionalArgs[1]);
       case 'lerpTo':
-        return ({positionalArgs, namedArgs, typeArgs}) => lerpTo(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            lerpTo(positionalArgs[0], positionalArgs[1]);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -180,18 +216,30 @@ class SweepGradientAutoBinding extends HTExternalClass {
     switch (varName) {
       case 'SweepGradient':
         return ({positionalArgs, namedArgs, typeArgs}) => SweepGradient(
-            center: namedArgs.containsKey('center') ? namedArgs['center'] : Alignment.center,
-            startAngle: namedArgs.containsKey('startAngle') ? namedArgs['startAngle'] : 0.0,
-            endAngle: namedArgs.containsKey('endAngle') ? namedArgs['endAngle'] : math.pi * 2,
+            center: namedArgs.containsKey('center')
+                ? namedArgs['center']
+                : Alignment.center,
+            startAngle: namedArgs.containsKey('startAngle')
+                ? namedArgs['startAngle']
+                : 0.0,
+            endAngle: namedArgs.containsKey('endAngle')
+                ? namedArgs['endAngle']
+                : math.pi * 2,
             colors: List<Color>.from(namedArgs['colors']),
-            stops: namedArgs.containsKey('stops') ? List<double>.from(namedArgs['stops']) : null,
-            tileMode: namedArgs.containsKey('tileMode') ? namedArgs['tileMode'] : TileMode.clamp,
-            transform: namedArgs.containsKey('transform') ? namedArgs['transform'] : null);
+            stops: namedArgs.containsKey('stops')
+                ? List<double>.from(namedArgs['stops'])
+                : null,
+            tileMode: namedArgs.containsKey('tileMode')
+                ? namedArgs['tileMode']
+                : TileMode.clamp,
+            transform: namedArgs.containsKey('transform')
+                ? namedArgs['transform']
+                : null);
       case 'SweepGradient.lerp':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            SweepGradient.lerp(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
+        return ({positionalArgs, namedArgs, typeArgs}) => SweepGradient.lerp(
+            positionalArgs[0], positionalArgs[1], positionalArgs[2]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -205,7 +253,7 @@ extension SweepGradientBinding on SweepGradient {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('SweepGradient');
+        return const HTType('SweepGradient');
       case 'center':
         return center;
       case 'startAngle':
@@ -223,18 +271,24 @@ extension SweepGradientBinding on SweepGradient {
       case 'hashCode':
         return hashCode;
       case 'createShader':
-        return ({positionalArgs, namedArgs, typeArgs}) => createShader(positionalArgs[0],
-            textDirection: namedArgs.containsKey('textDirection') ? namedArgs['textDirection'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => createShader(
+            positionalArgs[0],
+            textDirection: namedArgs.containsKey('textDirection')
+                ? namedArgs['textDirection']
+                : null);
       case 'scale':
-        return ({positionalArgs, namedArgs, typeArgs}) => scale(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            scale(positionalArgs[0]);
       case 'lerpFrom':
-        return ({positionalArgs, namedArgs, typeArgs}) => lerpFrom(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            lerpFrom(positionalArgs[0], positionalArgs[1]);
       case 'lerpTo':
-        return ({positionalArgs, namedArgs, typeArgs}) => lerpTo(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            lerpTo(positionalArgs[0], positionalArgs[1]);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

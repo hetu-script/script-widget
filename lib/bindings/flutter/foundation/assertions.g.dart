@@ -9,11 +9,13 @@ class PartialStackFrameAutoBinding extends HTExternalClass {
     switch (varName) {
       case 'PartialStackFrame':
         return ({positionalArgs, namedArgs, typeArgs}) => PartialStackFrame(
-            package: namedArgs['package'], className: namedArgs['className'], method: namedArgs['method']);
+            package: namedArgs['package'],
+            className: namedArgs['className'],
+            method: namedArgs['method']);
       case 'PartialStackFrame.asynchronousSuspension':
         return PartialStackFrame.asynchronousSuspension;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -27,7 +29,7 @@ extension PartialStackFrameBinding on PartialStackFrame {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('PartialStackFrame');
+        return const HTType('PartialStackFrame');
       case 'package':
         return package;
       case 'className':
@@ -35,9 +37,10 @@ extension PartialStackFrameBinding on PartialStackFrame {
       case 'method':
         return method;
       case 'matches':
-        return ({positionalArgs, namedArgs, typeArgs}) => matches(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            matches(positionalArgs[0]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -49,10 +52,12 @@ class RepetitiveStackFrameFilterAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'RepetitiveStackFrameFilter':
-        return ({positionalArgs, namedArgs, typeArgs}) => RepetitiveStackFrameFilter(
-            frames: List<PartialStackFrame>.from(namedArgs['frames']), replacement: namedArgs['replacement']);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            RepetitiveStackFrameFilter(
+                frames: List<PartialStackFrame>.from(namedArgs['frames']),
+                replacement: namedArgs['replacement']);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -66,7 +71,7 @@ extension RepetitiveStackFrameFilterBinding on RepetitiveStackFrameFilter {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('RepetitiveStackFrameFilter');
+        return const HTType('RepetitiveStackFrameFilter');
       case 'frames':
         return frames;
       case 'replacement':
@@ -74,10 +79,11 @@ extension RepetitiveStackFrameFilterBinding on RepetitiveStackFrameFilter {
       case 'numFrames':
         return numFrames;
       case 'filter':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            filter(List<StackFrame>.from(positionalArgs[0]), List<String?>.from(positionalArgs[1]));
+        return ({positionalArgs, namedArgs, typeArgs}) => filter(
+            List<StackFrame>.from(positionalArgs[0]),
+            List<String?>.from(positionalArgs[1]));
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -89,9 +95,10 @@ class ErrorDescriptionAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'ErrorDescription':
-        return ({positionalArgs, namedArgs, typeArgs}) => ErrorDescription(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            ErrorDescription(positionalArgs[0]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -105,7 +112,7 @@ extension ErrorDescriptionBinding on ErrorDescription {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('ErrorDescription');
+        return const HTType('ErrorDescription');
       case 'expandableValue':
         return expandableValue;
       case 'allowWrap':
@@ -146,32 +153,48 @@ extension ErrorDescriptionBinding on ErrorDescription {
         return allowTruncate;
       case 'valueToString':
         return ({positionalArgs, namedArgs, typeArgs}) => valueToString(
-            parentConfiguration:
-                namedArgs.containsKey('parentConfiguration') ? namedArgs['parentConfiguration'] : null);
+            parentConfiguration: namedArgs.containsKey('parentConfiguration')
+                ? namedArgs['parentConfiguration']
+                : null);
       case 'toJsonMap':
-        return ({positionalArgs, namedArgs, typeArgs}) => toJsonMap(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toJsonMap(positionalArgs[0]);
       case 'toDescription':
         return ({positionalArgs, namedArgs, typeArgs}) => toDescription(
-            parentConfiguration:
-                namedArgs.containsKey('parentConfiguration') ? namedArgs['parentConfiguration'] : null);
+            parentConfiguration: namedArgs.containsKey('parentConfiguration')
+                ? namedArgs['parentConfiguration']
+                : null);
       case 'getProperties':
         return ({positionalArgs, namedArgs, typeArgs}) => getProperties();
       case 'getChildren':
         return ({positionalArgs, namedArgs, typeArgs}) => getChildren();
       case 'isFiltered':
-        return ({positionalArgs, namedArgs, typeArgs}) => isFiltered(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            isFiltered(positionalArgs[0]);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString(
-            parentConfiguration: namedArgs.containsKey('parentConfiguration') ? namedArgs['parentConfiguration'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+            parentConfiguration: namedArgs.containsKey('parentConfiguration')
+                ? namedArgs['parentConfiguration']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            parentConfiguration: namedArgs.containsKey('parentConfiguration') ? namedArgs['parentConfiguration'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            parentConfiguration: namedArgs.containsKey('parentConfiguration')
+                ? namedArgs['parentConfiguration']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -183,9 +206,10 @@ class ErrorSummaryAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'ErrorSummary':
-        return ({positionalArgs, namedArgs, typeArgs}) => ErrorSummary(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            ErrorSummary(positionalArgs[0]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -199,7 +223,7 @@ extension ErrorSummaryBinding on ErrorSummary {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('ErrorSummary');
+        return const HTType('ErrorSummary');
       case 'expandableValue':
         return expandableValue;
       case 'allowWrap':
@@ -240,32 +264,48 @@ extension ErrorSummaryBinding on ErrorSummary {
         return allowTruncate;
       case 'valueToString':
         return ({positionalArgs, namedArgs, typeArgs}) => valueToString(
-            parentConfiguration:
-                namedArgs.containsKey('parentConfiguration') ? namedArgs['parentConfiguration'] : null);
+            parentConfiguration: namedArgs.containsKey('parentConfiguration')
+                ? namedArgs['parentConfiguration']
+                : null);
       case 'toJsonMap':
-        return ({positionalArgs, namedArgs, typeArgs}) => toJsonMap(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toJsonMap(positionalArgs[0]);
       case 'toDescription':
         return ({positionalArgs, namedArgs, typeArgs}) => toDescription(
-            parentConfiguration:
-                namedArgs.containsKey('parentConfiguration') ? namedArgs['parentConfiguration'] : null);
+            parentConfiguration: namedArgs.containsKey('parentConfiguration')
+                ? namedArgs['parentConfiguration']
+                : null);
       case 'getProperties':
         return ({positionalArgs, namedArgs, typeArgs}) => getProperties();
       case 'getChildren':
         return ({positionalArgs, namedArgs, typeArgs}) => getChildren();
       case 'isFiltered':
-        return ({positionalArgs, namedArgs, typeArgs}) => isFiltered(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            isFiltered(positionalArgs[0]);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString(
-            parentConfiguration: namedArgs.containsKey('parentConfiguration') ? namedArgs['parentConfiguration'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+            parentConfiguration: namedArgs.containsKey('parentConfiguration')
+                ? namedArgs['parentConfiguration']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            parentConfiguration: namedArgs.containsKey('parentConfiguration') ? namedArgs['parentConfiguration'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            parentConfiguration: namedArgs.containsKey('parentConfiguration')
+                ? namedArgs['parentConfiguration']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -277,9 +317,10 @@ class ErrorHintAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'ErrorHint':
-        return ({positionalArgs, namedArgs, typeArgs}) => ErrorHint(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            ErrorHint(positionalArgs[0]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -293,7 +334,7 @@ extension ErrorHintBinding on ErrorHint {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('ErrorHint');
+        return const HTType('ErrorHint');
       case 'expandableValue':
         return expandableValue;
       case 'allowWrap':
@@ -334,32 +375,48 @@ extension ErrorHintBinding on ErrorHint {
         return allowTruncate;
       case 'valueToString':
         return ({positionalArgs, namedArgs, typeArgs}) => valueToString(
-            parentConfiguration:
-                namedArgs.containsKey('parentConfiguration') ? namedArgs['parentConfiguration'] : null);
+            parentConfiguration: namedArgs.containsKey('parentConfiguration')
+                ? namedArgs['parentConfiguration']
+                : null);
       case 'toJsonMap':
-        return ({positionalArgs, namedArgs, typeArgs}) => toJsonMap(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toJsonMap(positionalArgs[0]);
       case 'toDescription':
         return ({positionalArgs, namedArgs, typeArgs}) => toDescription(
-            parentConfiguration:
-                namedArgs.containsKey('parentConfiguration') ? namedArgs['parentConfiguration'] : null);
+            parentConfiguration: namedArgs.containsKey('parentConfiguration')
+                ? namedArgs['parentConfiguration']
+                : null);
       case 'getProperties':
         return ({positionalArgs, namedArgs, typeArgs}) => getProperties();
       case 'getChildren':
         return ({positionalArgs, namedArgs, typeArgs}) => getChildren();
       case 'isFiltered':
-        return ({positionalArgs, namedArgs, typeArgs}) => isFiltered(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            isFiltered(positionalArgs[0]);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString(
-            parentConfiguration: namedArgs.containsKey('parentConfiguration') ? namedArgs['parentConfiguration'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+            parentConfiguration: namedArgs.containsKey('parentConfiguration')
+                ? namedArgs['parentConfiguration']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            parentConfiguration: namedArgs.containsKey('parentConfiguration') ? namedArgs['parentConfiguration'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            parentConfiguration: namedArgs.containsKey('parentConfiguration')
+                ? namedArgs['parentConfiguration']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -373,7 +430,7 @@ class ErrorSpacerAutoBinding extends HTExternalClass {
       case 'ErrorSpacer':
         return ({positionalArgs, namedArgs, typeArgs}) => ErrorSpacer();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -387,7 +444,7 @@ extension ErrorSpacerBinding on ErrorSpacer {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('ErrorSpacer');
+        return const HTType('ErrorSpacer');
       case 'expandableValue':
         return expandableValue;
       case 'allowWrap':
@@ -427,33 +484,49 @@ extension ErrorSpacerBinding on ErrorSpacer {
       case 'allowTruncate':
         return allowTruncate;
       case 'toJsonMap':
-        return ({positionalArgs, namedArgs, typeArgs}) => toJsonMap(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toJsonMap(positionalArgs[0]);
       case 'valueToString':
         return ({positionalArgs, namedArgs, typeArgs}) => valueToString(
-            parentConfiguration:
-                namedArgs.containsKey('parentConfiguration') ? namedArgs['parentConfiguration'] : null);
+            parentConfiguration: namedArgs.containsKey('parentConfiguration')
+                ? namedArgs['parentConfiguration']
+                : null);
       case 'toDescription':
         return ({positionalArgs, namedArgs, typeArgs}) => toDescription(
-            parentConfiguration:
-                namedArgs.containsKey('parentConfiguration') ? namedArgs['parentConfiguration'] : null);
+            parentConfiguration: namedArgs.containsKey('parentConfiguration')
+                ? namedArgs['parentConfiguration']
+                : null);
       case 'getProperties':
         return ({positionalArgs, namedArgs, typeArgs}) => getProperties();
       case 'getChildren':
         return ({positionalArgs, namedArgs, typeArgs}) => getChildren();
       case 'isFiltered':
-        return ({positionalArgs, namedArgs, typeArgs}) => isFiltered(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            isFiltered(positionalArgs[0]);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString(
-            parentConfiguration: namedArgs.containsKey('parentConfiguration') ? namedArgs['parentConfiguration'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+            parentConfiguration: namedArgs.containsKey('parentConfiguration')
+                ? namedArgs['parentConfiguration']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            parentConfiguration: namedArgs.containsKey('parentConfiguration') ? namedArgs['parentConfiguration'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            parentConfiguration: namedArgs.containsKey('parentConfiguration')
+                ? namedArgs['parentConfiguration']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -468,16 +541,23 @@ class FlutterErrorDetailsAutoBinding extends HTExternalClass {
         return ({positionalArgs, namedArgs, typeArgs}) => FlutterErrorDetails(
             exception: namedArgs['exception'],
             stack: namedArgs.containsKey('stack') ? namedArgs['stack'] : null,
-            library: namedArgs.containsKey('library') ? namedArgs['library'] : 'Flutter framework',
-            context: namedArgs.containsKey('context') ? namedArgs['context'] : null,
-            stackFilter: namedArgs.containsKey('stackFilter') ? namedArgs['stackFilter'] : null,
-            informationCollector:
-                namedArgs.containsKey('informationCollector') ? namedArgs['informationCollector'] : null,
-            silent: namedArgs.containsKey('silent') ? namedArgs['silent'] : false);
+            library: namedArgs.containsKey('library')
+                ? namedArgs['library']
+                : 'Flutter framework',
+            context:
+                namedArgs.containsKey('context') ? namedArgs['context'] : null,
+            stackFilter: namedArgs.containsKey('stackFilter')
+                ? namedArgs['stackFilter']
+                : null,
+            informationCollector: namedArgs.containsKey('informationCollector')
+                ? namedArgs['informationCollector']
+                : null,
+            silent:
+                namedArgs.containsKey('silent') ? namedArgs['silent'] : false);
       case 'FlutterErrorDetails.propertiesTransformers':
         return FlutterErrorDetails.propertiesTransformers;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -488,8 +568,9 @@ class FlutterErrorDetailsAutoBinding extends HTExternalClass {
 
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'InformationCollector': (HTFunction function) =>
-          () => function.call(positionalArgs: const [], namedArgs: const {}) as Iterable<DiagnosticsNode>,
+      'InformationCollector': (HTFunction function) => () =>
+          function.call(positionalArgs: const [], namedArgs: const {})
+              as Iterable<DiagnosticsNode>,
     };
   }
 }
@@ -498,7 +579,7 @@ extension FlutterErrorDetailsBinding on FlutterErrorDetails {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('FlutterErrorDetails');
+        return const HTType('FlutterErrorDetails');
       case 'exception':
         return exception;
       case 'stack':
@@ -517,29 +598,40 @@ extension FlutterErrorDetailsBinding on FlutterErrorDetails {
         return summary;
       case 'copyWith':
         return ({positionalArgs, namedArgs, typeArgs}) => copyWith(
-            context: namedArgs.containsKey('context') ? namedArgs['context'] : null,
-            exception: namedArgs.containsKey('exception') ? namedArgs['exception'] : null,
-            informationCollector:
-                namedArgs.containsKey('informationCollector') ? namedArgs['informationCollector'] : null,
-            library: namedArgs.containsKey('library') ? namedArgs['library'] : null,
-            silent: namedArgs.containsKey('silent') ? namedArgs['silent'] : null,
+            context:
+                namedArgs.containsKey('context') ? namedArgs['context'] : null,
+            exception: namedArgs.containsKey('exception')
+                ? namedArgs['exception']
+                : null,
+            informationCollector: namedArgs.containsKey('informationCollector')
+                ? namedArgs['informationCollector']
+                : null,
+            library:
+                namedArgs.containsKey('library') ? namedArgs['library'] : null,
+            silent:
+                namedArgs.containsKey('silent') ? namedArgs['silent'] : null,
             stack: namedArgs.containsKey('stack') ? namedArgs['stack'] : null,
-            stackFilter: namedArgs.containsKey('stackFilter') ? namedArgs['stackFilter'] : null);
+            stackFilter: namedArgs.containsKey('stackFilter')
+                ? namedArgs['stackFilter']
+                : null);
       case 'exceptionAsString':
         return ({positionalArgs, namedArgs, typeArgs}) => exceptionAsString();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -551,21 +643,30 @@ class FlutterErrorAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'FlutterError':
-        return ({positionalArgs, namedArgs, typeArgs}) => FlutterError(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            FlutterError(positionalArgs[0]);
       case 'FlutterError.fromParts':
         return ({positionalArgs, namedArgs, typeArgs}) =>
-            FlutterError.fromParts(List<DiagnosticsNode>.from(positionalArgs[0]));
+            FlutterError.fromParts(
+                List<DiagnosticsNode>.from(positionalArgs[0]));
       case 'FlutterError.resetErrorCount':
-        return ({positionalArgs, namedArgs, typeArgs}) => FlutterError.resetErrorCount();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            FlutterError.resetErrorCount();
       case 'FlutterError.dumpErrorToConsole':
-        return ({positionalArgs, namedArgs, typeArgs}) => FlutterError.dumpErrorToConsole(positionalArgs[0],
-            forceReport: namedArgs.containsKey('forceReport') ? namedArgs['forceReport'] : false);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            FlutterError.dumpErrorToConsole(positionalArgs[0],
+                forceReport: namedArgs.containsKey('forceReport')
+                    ? namedArgs['forceReport']
+                    : false);
       case 'FlutterError.addDefaultStackFilter':
-        return ({positionalArgs, namedArgs, typeArgs}) => FlutterError.addDefaultStackFilter(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            FlutterError.addDefaultStackFilter(positionalArgs[0]);
       case 'FlutterError.defaultStackFilter':
-        return ({positionalArgs, namedArgs, typeArgs}) => FlutterError.defaultStackFilter(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            FlutterError.defaultStackFilter(positionalArgs[0]);
       case 'FlutterError.reportError':
-        return ({positionalArgs, namedArgs, typeArgs}) => FlutterError.reportError(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            FlutterError.reportError(positionalArgs[0]);
       case 'FlutterError.onError':
         return FlutterError.onError;
       case 'FlutterError.demangleStackTrace':
@@ -575,12 +676,13 @@ class FlutterErrorAutoBinding extends HTExternalClass {
       case 'FlutterError.wrapWidth':
         return FlutterError.wrapWidth;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
   @override
-  void memberSet(String varName, dynamic value, {String from = HTLexicon.global}) {
+  void memberSet(String varName, dynamic value,
+      {String from = HTLexicon.global}) {
     switch (varName) {
       case 'FlutterError.onError':
         return FlutterError.onError = value;
@@ -589,7 +691,7 @@ class FlutterErrorAutoBinding extends HTExternalClass {
       case 'FlutterError.presentError':
         return FlutterError.presentError = value;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -603,35 +705,48 @@ extension FlutterErrorBinding on FlutterError {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('FlutterError');
+        return const HTType('FlutterError');
       case 'diagnostics':
         return diagnostics;
       case 'message':
         return message;
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       case 'toStringShallow':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
-            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            joiner:
+                namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'debugDescribeChildren':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugDescribeChildren();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugDescribeChildren();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -643,15 +758,23 @@ class DiagnosticsStackTraceAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'DiagnosticsStackTrace':
-        return ({positionalArgs, namedArgs, typeArgs}) => DiagnosticsStackTrace(positionalArgs[0], positionalArgs[1],
-            stackFilter: namedArgs.containsKey('stackFilter') ? namedArgs['stackFilter'] : null,
-            showSeparator: namedArgs.containsKey('showSeparator') ? namedArgs['showSeparator'] : true);
+        return ({positionalArgs, namedArgs, typeArgs}) => DiagnosticsStackTrace(
+            positionalArgs[0], positionalArgs[1],
+            stackFilter: namedArgs.containsKey('stackFilter')
+                ? namedArgs['stackFilter']
+                : null,
+            showSeparator: namedArgs.containsKey('showSeparator')
+                ? namedArgs['showSeparator']
+                : true);
       case 'DiagnosticsStackTrace.singleFrame':
-        return ({positionalArgs, namedArgs, typeArgs}) => DiagnosticsStackTrace.singleFrame(positionalArgs[0],
-            frame: namedArgs['frame'],
-            showSeparator: namedArgs.containsKey('showSeparator') ? namedArgs['showSeparator'] : true);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            DiagnosticsStackTrace.singleFrame(positionalArgs[0],
+                frame: namedArgs['frame'],
+                showSeparator: namedArgs.containsKey('showSeparator')
+                    ? namedArgs['showSeparator']
+                    : true);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -665,7 +788,7 @@ extension DiagnosticsStackTraceBinding on DiagnosticsStackTrace {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('DiagnosticsStackTrace');
+        return const HTType('DiagnosticsStackTrace');
       case 'level':
         return level;
       case 'value':
@@ -694,24 +817,39 @@ extension DiagnosticsStackTraceBinding on DiagnosticsStackTrace {
         return ({positionalArgs, namedArgs, typeArgs}) => getProperties();
       case 'toDescription':
         return ({positionalArgs, namedArgs, typeArgs}) => toDescription(
-            parentConfiguration:
-                namedArgs.containsKey('parentConfiguration') ? namedArgs['parentConfiguration'] : null);
+            parentConfiguration: namedArgs.containsKey('parentConfiguration')
+                ? namedArgs['parentConfiguration']
+                : null);
       case 'isFiltered':
-        return ({positionalArgs, namedArgs, typeArgs}) => isFiltered(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            isFiltered(positionalArgs[0]);
       case 'toJsonMap':
-        return ({positionalArgs, namedArgs, typeArgs}) => toJsonMap(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toJsonMap(positionalArgs[0]);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString(
-            parentConfiguration: namedArgs.containsKey('parentConfiguration') ? namedArgs['parentConfiguration'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+            parentConfiguration: namedArgs.containsKey('parentConfiguration')
+                ? namedArgs['parentConfiguration']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            parentConfiguration: namedArgs.containsKey('parentConfiguration') ? namedArgs['parentConfiguration'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            parentConfiguration: namedArgs.containsKey('parentConfiguration')
+                ? namedArgs['parentConfiguration']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

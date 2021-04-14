@@ -14,54 +14,85 @@ class GestureDetectorAutoBinding extends HTExternalClass {
         return ({positionalArgs, namedArgs, typeArgs}) => GestureDetector(
             key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
             child: namedArgs.containsKey('child') ? namedArgs['child'] : null,
-            onTapDown: namedArgs.containsKey('onTapDown') ? namedArgs['onTapDown'] : null,
-            onTapUp: namedArgs.containsKey('onTapUp') ? namedArgs['onTapUp'] : null,
+            onTapDown: namedArgs.containsKey('onTapDown')
+                ? namedArgs['onTapDown']
+                : null,
+            onTapUp:
+                namedArgs.containsKey('onTapUp') ? namedArgs['onTapUp'] : null,
             onTap: namedArgs.containsKey('onTap') ? namedArgs['onTap'] : null,
-            onTapCancel: namedArgs.containsKey('onTapCancel') ? namedArgs['onTapCancel'] : null,
-            onSecondaryTap: namedArgs.containsKey('onSecondaryTap') ? namedArgs['onSecondaryTap'] : null,
-            onSecondaryTapDown: namedArgs.containsKey('onSecondaryTapDown') ? namedArgs['onSecondaryTapDown'] : null,
-            onSecondaryTapUp: namedArgs.containsKey('onSecondaryTapUp') ? namedArgs['onSecondaryTapUp'] : null,
-            onSecondaryTapCancel:
-                namedArgs.containsKey('onSecondaryTapCancel') ? namedArgs['onSecondaryTapCancel'] : null,
-            onTertiaryTapDown: namedArgs.containsKey('onTertiaryTapDown') ? namedArgs['onTertiaryTapDown'] : null,
-            onTertiaryTapUp: namedArgs.containsKey('onTertiaryTapUp') ? namedArgs['onTertiaryTapUp'] : null,
-            onTertiaryTapCancel: namedArgs.containsKey('onTertiaryTapCancel') ? namedArgs['onTertiaryTapCancel'] : null,
-            onDoubleTapDown: namedArgs.containsKey('onDoubleTapDown') ? namedArgs['onDoubleTapDown'] : null,
-            onDoubleTap: namedArgs.containsKey('onDoubleTap') ? namedArgs['onDoubleTap'] : null,
-            onDoubleTapCancel: namedArgs.containsKey('onDoubleTapCancel') ? namedArgs['onDoubleTapCancel'] : null,
-            onLongPress: namedArgs.containsKey('onLongPress') ? namedArgs['onLongPress'] : null,
-            onLongPressStart: namedArgs.containsKey('onLongPressStart') ? namedArgs['onLongPressStart'] : null,
-            onLongPressMoveUpdate:
-                namedArgs.containsKey('onLongPressMoveUpdate') ? namedArgs['onLongPressMoveUpdate'] : null,
-            onLongPressUp: namedArgs.containsKey('onLongPressUp') ? namedArgs['onLongPressUp'] : null,
-            onLongPressEnd: namedArgs.containsKey('onLongPressEnd') ? namedArgs['onLongPressEnd'] : null,
-            onSecondaryLongPress:
-                namedArgs.containsKey('onSecondaryLongPress') ? namedArgs['onSecondaryLongPress'] : null,
-            onSecondaryLongPressStart:
-                namedArgs.containsKey('onSecondaryLongPressStart') ? namedArgs['onSecondaryLongPressStart'] : null,
+            onTapCancel: namedArgs.containsKey('onTapCancel')
+                ? namedArgs['onTapCancel']
+                : null,
+            onSecondaryTap: namedArgs.containsKey('onSecondaryTap')
+                ? namedArgs['onSecondaryTap']
+                : null,
+            onSecondaryTapDown: namedArgs.containsKey('onSecondaryTapDown')
+                ? namedArgs['onSecondaryTapDown']
+                : null,
+            onSecondaryTapUp: namedArgs.containsKey('onSecondaryTapUp')
+                ? namedArgs['onSecondaryTapUp']
+                : null,
+            onSecondaryTapCancel: namedArgs.containsKey('onSecondaryTapCancel')
+                ? namedArgs['onSecondaryTapCancel']
+                : null,
+            onTertiaryTapDown: namedArgs.containsKey('onTertiaryTapDown')
+                ? namedArgs['onTertiaryTapDown']
+                : null,
+            onTertiaryTapUp: namedArgs.containsKey('onTertiaryTapUp')
+                ? namedArgs['onTertiaryTapUp']
+                : null,
+            onTertiaryTapCancel: namedArgs.containsKey('onTertiaryTapCancel')
+                ? namedArgs['onTertiaryTapCancel']
+                : null,
+            onDoubleTapDown: namedArgs.containsKey('onDoubleTapDown')
+                ? namedArgs['onDoubleTapDown']
+                : null,
+            onDoubleTap: namedArgs.containsKey('onDoubleTap')
+                ? namedArgs['onDoubleTap']
+                : null,
+            onDoubleTapCancel: namedArgs.containsKey('onDoubleTapCancel')
+                ? namedArgs['onDoubleTapCancel']
+                : null,
+            onLongPress: namedArgs.containsKey('onLongPress')
+                ? namedArgs['onLongPress']
+                : null,
+            onLongPressStart: namedArgs.containsKey('onLongPressStart')
+                ? namedArgs['onLongPressStart']
+                : null,
+            onLongPressMoveUpdate: namedArgs.containsKey('onLongPressMoveUpdate')
+                ? namedArgs['onLongPressMoveUpdate']
+                : null,
+            onLongPressUp: namedArgs.containsKey('onLongPressUp')
+                ? namedArgs['onLongPressUp']
+                : null,
+            onLongPressEnd: namedArgs.containsKey('onLongPressEnd')
+                ? namedArgs['onLongPressEnd']
+                : null,
+            onSecondaryLongPress: namedArgs.containsKey('onSecondaryLongPress')
+                ? namedArgs['onSecondaryLongPress']
+                : null,
+            onSecondaryLongPressStart: namedArgs.containsKey('onSecondaryLongPressStart')
+                ? namedArgs['onSecondaryLongPressStart']
+                : null,
             onSecondaryLongPressMoveUpdate: namedArgs.containsKey('onSecondaryLongPressMoveUpdate')
                 ? namedArgs['onSecondaryLongPressMoveUpdate']
                 : null,
-            onSecondaryLongPressUp:
-                namedArgs.containsKey('onSecondaryLongPressUp') ? namedArgs['onSecondaryLongPressUp'] : null,
-            onSecondaryLongPressEnd:
-                namedArgs.containsKey('onSecondaryLongPressEnd') ? namedArgs['onSecondaryLongPressEnd'] : null,
+            onSecondaryLongPressUp: namedArgs.containsKey('onSecondaryLongPressUp')
+                ? namedArgs['onSecondaryLongPressUp']
+                : null,
+            onSecondaryLongPressEnd: namedArgs.containsKey('onSecondaryLongPressEnd')
+                ? namedArgs['onSecondaryLongPressEnd']
+                : null,
             onVerticalDragDown: namedArgs.containsKey('onVerticalDragDown') ? namedArgs['onVerticalDragDown'] : null,
             onVerticalDragStart: namedArgs.containsKey('onVerticalDragStart') ? namedArgs['onVerticalDragStart'] : null,
-            onVerticalDragUpdate:
-                namedArgs.containsKey('onVerticalDragUpdate') ? namedArgs['onVerticalDragUpdate'] : null,
+            onVerticalDragUpdate: namedArgs.containsKey('onVerticalDragUpdate') ? namedArgs['onVerticalDragUpdate'] : null,
             onVerticalDragEnd: namedArgs.containsKey('onVerticalDragEnd') ? namedArgs['onVerticalDragEnd'] : null,
-            onVerticalDragCancel:
-                namedArgs.containsKey('onVerticalDragCancel') ? namedArgs['onVerticalDragCancel'] : null,
-            onHorizontalDragDown:
-                namedArgs.containsKey('onHorizontalDragDown') ? namedArgs['onHorizontalDragDown'] : null,
-            onHorizontalDragStart:
-                namedArgs.containsKey('onHorizontalDragStart') ? namedArgs['onHorizontalDragStart'] : null,
-            onHorizontalDragUpdate:
-                namedArgs.containsKey('onHorizontalDragUpdate') ? namedArgs['onHorizontalDragUpdate'] : null,
+            onVerticalDragCancel: namedArgs.containsKey('onVerticalDragCancel') ? namedArgs['onVerticalDragCancel'] : null,
+            onHorizontalDragDown: namedArgs.containsKey('onHorizontalDragDown') ? namedArgs['onHorizontalDragDown'] : null,
+            onHorizontalDragStart: namedArgs.containsKey('onHorizontalDragStart') ? namedArgs['onHorizontalDragStart'] : null,
+            onHorizontalDragUpdate: namedArgs.containsKey('onHorizontalDragUpdate') ? namedArgs['onHorizontalDragUpdate'] : null,
             onHorizontalDragEnd: namedArgs.containsKey('onHorizontalDragEnd') ? namedArgs['onHorizontalDragEnd'] : null,
-            onHorizontalDragCancel:
-                namedArgs.containsKey('onHorizontalDragCancel') ? namedArgs['onHorizontalDragCancel'] : null,
+            onHorizontalDragCancel: namedArgs.containsKey('onHorizontalDragCancel') ? namedArgs['onHorizontalDragCancel'] : null,
             onForcePressStart: namedArgs.containsKey('onForcePressStart') ? namedArgs['onForcePressStart'] : null,
             onForcePressPeak: namedArgs.containsKey('onForcePressPeak') ? namedArgs['onForcePressPeak'] : null,
             onForcePressUpdate: namedArgs.containsKey('onForcePressUpdate') ? namedArgs['onForcePressUpdate'] : null,
@@ -75,12 +106,10 @@ class GestureDetectorAutoBinding extends HTExternalClass {
             onScaleUpdate: namedArgs.containsKey('onScaleUpdate') ? namedArgs['onScaleUpdate'] : null,
             onScaleEnd: namedArgs.containsKey('onScaleEnd') ? namedArgs['onScaleEnd'] : null,
             behavior: namedArgs.containsKey('behavior') ? namedArgs['behavior'] : null,
-            excludeFromSemantics:
-                namedArgs.containsKey('excludeFromSemantics') ? namedArgs['excludeFromSemantics'] : false,
-            dragStartBehavior:
-                namedArgs.containsKey('dragStartBehavior') ? namedArgs['dragStartBehavior'] : DragStartBehavior.start);
+            excludeFromSemantics: namedArgs.containsKey('excludeFromSemantics') ? namedArgs['excludeFromSemantics'] : false,
+            dragStartBehavior: namedArgs.containsKey('dragStartBehavior') ? namedArgs['dragStartBehavior'] : DragStartBehavior.start);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -91,47 +120,49 @@ class GestureDetectorAutoBinding extends HTExternalClass {
 
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'GestureTapDownCallback': (HTFunction function) =>
-          (details) => function.call(positionalArgs: [details], namedArgs: const {}),
-      'GestureTapUpCallback': (HTFunction function) =>
-          (details) => function.call(positionalArgs: [details], namedArgs: const {}),
-      'GestureTapCallback': (HTFunction function) => () => function.call(positionalArgs: const [], namedArgs: const {}),
+      'GestureTapDownCallback': (HTFunction function) => (details) =>
+          function.call(positionalArgs: [details], namedArgs: const {}),
+      'GestureTapUpCallback': (HTFunction function) => (details) =>
+          function.call(positionalArgs: [details], namedArgs: const {}),
+      'GestureTapCallback': (HTFunction function) =>
+          () => function.call(positionalArgs: const [], namedArgs: const {}),
       'GestureTapCancelCallback': (HTFunction function) =>
           () => function.call(positionalArgs: const [], namedArgs: const {}),
       'GestureLongPressCallback': (HTFunction function) =>
           () => function.call(positionalArgs: const [], namedArgs: const {}),
-      'GestureLongPressStartCallback': (HTFunction function) =>
-          (details) => function.call(positionalArgs: [details], namedArgs: const {}),
+      'GestureLongPressStartCallback': (HTFunction function) => (details) =>
+          function.call(positionalArgs: [details], namedArgs: const {}),
       'GestureLongPressMoveUpdateCallback': (HTFunction function) =>
-          (details) => function.call(positionalArgs: [details], namedArgs: const {}),
+          (details) =>
+              function.call(positionalArgs: [details], namedArgs: const {}),
       'GestureLongPressUpCallback': (HTFunction function) =>
           () => function.call(positionalArgs: const [], namedArgs: const {}),
-      'GestureLongPressEndCallback': (HTFunction function) =>
-          (details) => function.call(positionalArgs: [details], namedArgs: const {}),
-      'GestureDragDownCallback': (HTFunction function) =>
-          (details) => function.call(positionalArgs: [details], namedArgs: const {}),
-      'GestureDragStartCallback': (HTFunction function) =>
-          (details) => function.call(positionalArgs: [details], namedArgs: const {}),
-      'GestureDragUpdateCallback': (HTFunction function) =>
-          (details) => function.call(positionalArgs: [details], namedArgs: const {}),
-      'GestureDragEndCallback': (HTFunction function) =>
-          (details) => function.call(positionalArgs: [details], namedArgs: const {}),
+      'GestureLongPressEndCallback': (HTFunction function) => (details) =>
+          function.call(positionalArgs: [details], namedArgs: const {}),
+      'GestureDragDownCallback': (HTFunction function) => (details) =>
+          function.call(positionalArgs: [details], namedArgs: const {}),
+      'GestureDragStartCallback': (HTFunction function) => (details) =>
+          function.call(positionalArgs: [details], namedArgs: const {}),
+      'GestureDragUpdateCallback': (HTFunction function) => (details) =>
+          function.call(positionalArgs: [details], namedArgs: const {}),
+      'GestureDragEndCallback': (HTFunction function) => (details) =>
+          function.call(positionalArgs: [details], namedArgs: const {}),
       'GestureDragCancelCallback': (HTFunction function) =>
           () => function.call(positionalArgs: const [], namedArgs: const {}),
-      'GestureForcePressStartCallback': (HTFunction function) =>
-          (details) => function.call(positionalArgs: [details], namedArgs: const {}),
-      'GestureForcePressPeakCallback': (HTFunction function) =>
-          (details) => function.call(positionalArgs: [details], namedArgs: const {}),
-      'GestureForcePressUpdateCallback': (HTFunction function) =>
-          (details) => function.call(positionalArgs: [details], namedArgs: const {}),
-      'GestureForcePressEndCallback': (HTFunction function) =>
-          (details) => function.call(positionalArgs: [details], namedArgs: const {}),
-      'GestureScaleStartCallback': (HTFunction function) =>
-          (details) => function.call(positionalArgs: [details], namedArgs: const {}),
-      'GestureScaleUpdateCallback': (HTFunction function) =>
-          (details) => function.call(positionalArgs: [details], namedArgs: const {}),
-      'GestureScaleEndCallback': (HTFunction function) =>
-          (details) => function.call(positionalArgs: [details], namedArgs: const {}),
+      'GestureForcePressStartCallback': (HTFunction function) => (details) =>
+          function.call(positionalArgs: [details], namedArgs: const {}),
+      'GestureForcePressPeakCallback': (HTFunction function) => (details) =>
+          function.call(positionalArgs: [details], namedArgs: const {}),
+      'GestureForcePressUpdateCallback': (HTFunction function) => (details) =>
+          function.call(positionalArgs: [details], namedArgs: const {}),
+      'GestureForcePressEndCallback': (HTFunction function) => (details) =>
+          function.call(positionalArgs: [details], namedArgs: const {}),
+      'GestureScaleStartCallback': (HTFunction function) => (details) =>
+          function.call(positionalArgs: [details], namedArgs: const {}),
+      'GestureScaleUpdateCallback': (HTFunction function) => (details) =>
+          function.call(positionalArgs: [details], namedArgs: const {}),
+      'GestureScaleEndCallback': (HTFunction function) => (details) =>
+          function.call(positionalArgs: [details], namedArgs: const {}),
     };
   }
 }
@@ -140,7 +171,7 @@ extension GestureDetectorBinding on GestureDetector {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('GestureDetector');
+        return const HTType('GestureDetector');
       case 'child':
         return child;
       case 'onTapDown':
@@ -246,31 +277,44 @@ extension GestureDetectorBinding on GestureDetector {
       case 'hashCode':
         return hashCode;
       case 'build':
-        return ({positionalArgs, namedArgs, typeArgs}) => build(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            build(positionalArgs[0]);
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'createElement':
         return ({positionalArgs, namedArgs, typeArgs}) => createElement();
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'toStringShallow':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
-            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            joiner:
+                namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -285,14 +329,20 @@ class RawGestureDetectorAutoBinding extends HTExternalClass {
         return ({positionalArgs, namedArgs, typeArgs}) => RawGestureDetector(
             key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
             child: namedArgs.containsKey('child') ? namedArgs['child'] : null,
-            gestures:
-                namedArgs.containsKey('gestures') ? namedArgs['gestures'] : const <Type, GestureRecognizerFactory>{},
-            behavior: namedArgs.containsKey('behavior') ? namedArgs['behavior'] : null,
-            excludeFromSemantics:
-                namedArgs.containsKey('excludeFromSemantics') ? namedArgs['excludeFromSemantics'] : false,
-            semantics: namedArgs.containsKey('semantics') ? namedArgs['semantics'] : null);
+            gestures: namedArgs.containsKey('gestures')
+                ? namedArgs['gestures']
+                : const <Type, GestureRecognizerFactory>{},
+            behavior: namedArgs.containsKey('behavior')
+                ? namedArgs['behavior']
+                : null,
+            excludeFromSemantics: namedArgs.containsKey('excludeFromSemantics')
+                ? namedArgs['excludeFromSemantics']
+                : false,
+            semantics: namedArgs.containsKey('semantics')
+                ? namedArgs['semantics']
+                : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -306,7 +356,7 @@ extension RawGestureDetectorBinding on RawGestureDetector {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('RawGestureDetector');
+        return const HTType('RawGestureDetector');
       case 'child':
         return child;
       case 'gestures':
@@ -328,25 +378,37 @@ extension RawGestureDetectorBinding on RawGestureDetector {
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'toStringShallow':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
-            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            joiner:
+                namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -358,9 +420,10 @@ class RawGestureDetectorStateAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'RawGestureDetectorState':
-        return ({positionalArgs, namedArgs, typeArgs}) => RawGestureDetectorState();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            RawGestureDetectorState();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -374,7 +437,7 @@ extension RawGestureDetectorStateBinding on RawGestureDetectorState {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('RawGestureDetectorState');
+        return const HTType('RawGestureDetectorState');
       case 'widget':
         return widget;
       case 'context':
@@ -384,28 +447,35 @@ extension RawGestureDetectorStateBinding on RawGestureDetectorState {
       case 'initState':
         return ({positionalArgs, namedArgs, typeArgs}) => initState();
       case 'didUpdateWidget':
-        return ({positionalArgs, namedArgs, typeArgs}) => didUpdateWidget(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            didUpdateWidget(positionalArgs[0]);
       case 'replaceGestureRecognizers':
-        return ({positionalArgs, namedArgs, typeArgs}) => replaceGestureRecognizers(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            replaceGestureRecognizers(positionalArgs[0]);
       case 'replaceSemanticsActions':
-        return ({positionalArgs, namedArgs, typeArgs}) => replaceSemanticsActions(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            replaceSemanticsActions(positionalArgs[0]);
       case 'dispose':
         return ({positionalArgs, namedArgs, typeArgs}) => dispose();
       case 'build':
-        return ({positionalArgs, namedArgs, typeArgs}) => build(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            build(positionalArgs[0]);
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

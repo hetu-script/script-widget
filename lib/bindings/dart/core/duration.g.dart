@@ -11,10 +11,16 @@ class DurationAutoBinding extends HTExternalClass {
         return ({positionalArgs, namedArgs, typeArgs}) => Duration(
             days: namedArgs.containsKey('days') ? namedArgs['days'] : 0,
             hours: namedArgs.containsKey('hours') ? namedArgs['hours'] : 0,
-            minutes: namedArgs.containsKey('minutes') ? namedArgs['minutes'] : 0,
-            seconds: namedArgs.containsKey('seconds') ? namedArgs['seconds'] : 0,
-            milliseconds: namedArgs.containsKey('milliseconds') ? namedArgs['milliseconds'] : 0,
-            microseconds: namedArgs.containsKey('microseconds') ? namedArgs['microseconds'] : 0);
+            minutes:
+                namedArgs.containsKey('minutes') ? namedArgs['minutes'] : 0,
+            seconds:
+                namedArgs.containsKey('seconds') ? namedArgs['seconds'] : 0,
+            milliseconds: namedArgs.containsKey('milliseconds')
+                ? namedArgs['milliseconds']
+                : 0,
+            microseconds: namedArgs.containsKey('microseconds')
+                ? namedArgs['microseconds']
+                : 0);
       case 'Duration.microsecondsPerMillisecond':
         return Duration.microsecondsPerMillisecond;
       case 'Duration.millisecondsPerSecond':
@@ -48,7 +54,7 @@ class DurationAutoBinding extends HTExternalClass {
       case 'Duration.zero':
         return Duration.zero;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -62,7 +68,7 @@ extension DurationBinding on Duration {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('Duration');
+        return const HTType('Duration');
       case 'inDays':
         return inDays;
       case 'inHours':
@@ -80,13 +86,14 @@ extension DurationBinding on Duration {
       case 'isNegative':
         return isNegative;
       case 'compareTo':
-        return ({positionalArgs, namedArgs, typeArgs}) => compareTo(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            compareTo(positionalArgs[0]);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       case 'abs':
         return ({positionalArgs, namedArgs, typeArgs}) => abs();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

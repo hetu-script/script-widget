@@ -2,7 +2,8 @@ import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/widgets.dart';
 
 class ScrollPositionAlignmentPolicyAutoBinding extends HTExternalClass {
-  ScrollPositionAlignmentPolicyAutoBinding() : super('ScrollPositionAlignmentPolicy');
+  ScrollPositionAlignmentPolicyAutoBinding()
+      : super('ScrollPositionAlignmentPolicy');
 
   @override
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
@@ -16,7 +17,7 @@ class ScrollPositionAlignmentPolicyAutoBinding extends HTExternalClass {
       case 'ScrollPositionAlignmentPolicy.keepVisibleAtStart':
         return ScrollPositionAlignmentPolicy.keepVisibleAtStart;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -24,13 +25,14 @@ class ScrollPositionAlignmentPolicyAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('ScrollPositionAlignmentPolicy');
+        return const HTType('ScrollPositionAlignmentPolicy');
       case 'index':
         return (instance as ScrollPositionAlignmentPolicy).index;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => (instance as ScrollPositionAlignmentPolicy).toString();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            (instance as ScrollPositionAlignmentPolicy).toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

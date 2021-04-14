@@ -10,10 +10,12 @@ class MethodChannelAutoBinding extends HTExternalClass {
       case 'MethodChannel':
         return ({positionalArgs, namedArgs, typeArgs}) => MethodChannel(
             positionalArgs[0],
-            positionalArgs.length > 1 ? positionalArgs[1] : const StandardMethodCodec(),
+            positionalArgs.length > 1
+                ? positionalArgs[1]
+                : const StandardMethodCodec(),
             positionalArgs.length > 2 ? positionalArgs[2] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -27,7 +29,7 @@ extension MethodChannelBinding on MethodChannel {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('MethodChannel');
+        return const HTType('MethodChannel');
       case 'name':
         return name;
       case 'codec':
@@ -35,24 +37,31 @@ extension MethodChannelBinding on MethodChannel {
       case 'binaryMessenger':
         return binaryMessenger;
       case 'invokeMethod':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            invokeMethod(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => invokeMethod(
+            positionalArgs[0],
+            positionalArgs.length > 1 ? positionalArgs[1] : null);
       case 'invokeListMethod':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            invokeListMethod(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => invokeListMethod(
+            positionalArgs[0],
+            positionalArgs.length > 1 ? positionalArgs[1] : null);
       case 'invokeMapMethod':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            invokeMapMethod(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => invokeMapMethod(
+            positionalArgs[0],
+            positionalArgs.length > 1 ? positionalArgs[1] : null);
       case 'setMethodCallHandler':
-        return ({positionalArgs, namedArgs, typeArgs}) => setMethodCallHandler(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            setMethodCallHandler(positionalArgs[0]);
       case 'checkMethodCallHandler':
-        return ({positionalArgs, namedArgs, typeArgs}) => checkMethodCallHandler(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            checkMethodCallHandler(positionalArgs[0]);
       case 'setMockMethodCallHandler':
-        return ({positionalArgs, namedArgs, typeArgs}) => setMockMethodCallHandler(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            setMockMethodCallHandler(positionalArgs[0]);
       case 'checkMockMethodCallHandler':
-        return ({positionalArgs, namedArgs, typeArgs}) => checkMockMethodCallHandler(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            checkMockMethodCallHandler(positionalArgs[0]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -65,9 +74,12 @@ class OptionalMethodChannelAutoBinding extends HTExternalClass {
     switch (varName) {
       case 'OptionalMethodChannel':
         return ({positionalArgs, namedArgs, typeArgs}) => OptionalMethodChannel(
-            positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : const StandardMethodCodec());
+            positionalArgs[0],
+            positionalArgs.length > 1
+                ? positionalArgs[1]
+                : const StandardMethodCodec());
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -81,7 +93,7 @@ extension OptionalMethodChannelBinding on OptionalMethodChannel {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('OptionalMethodChannel');
+        return const HTType('OptionalMethodChannel');
       case 'name':
         return name;
       case 'codec':
@@ -89,24 +101,31 @@ extension OptionalMethodChannelBinding on OptionalMethodChannel {
       case 'binaryMessenger':
         return binaryMessenger;
       case 'invokeMethod':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            invokeMethod(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => invokeMethod(
+            positionalArgs[0],
+            positionalArgs.length > 1 ? positionalArgs[1] : null);
       case 'invokeListMethod':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            invokeListMethod(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => invokeListMethod(
+            positionalArgs[0],
+            positionalArgs.length > 1 ? positionalArgs[1] : null);
       case 'invokeMapMethod':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            invokeMapMethod(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => invokeMapMethod(
+            positionalArgs[0],
+            positionalArgs.length > 1 ? positionalArgs[1] : null);
       case 'setMethodCallHandler':
-        return ({positionalArgs, namedArgs, typeArgs}) => setMethodCallHandler(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            setMethodCallHandler(positionalArgs[0]);
       case 'checkMethodCallHandler':
-        return ({positionalArgs, namedArgs, typeArgs}) => checkMethodCallHandler(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            checkMethodCallHandler(positionalArgs[0]);
       case 'setMockMethodCallHandler':
-        return ({positionalArgs, namedArgs, typeArgs}) => setMockMethodCallHandler(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            setMockMethodCallHandler(positionalArgs[0]);
       case 'checkMockMethodCallHandler':
-        return ({positionalArgs, namedArgs, typeArgs}) => checkMockMethodCallHandler(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            checkMockMethodCallHandler(positionalArgs[0]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -120,10 +139,12 @@ class EventChannelAutoBinding extends HTExternalClass {
       case 'EventChannel':
         return ({positionalArgs, namedArgs, typeArgs}) => EventChannel(
             positionalArgs[0],
-            positionalArgs.length > 1 ? positionalArgs[1] : const StandardMethodCodec(),
+            positionalArgs.length > 1
+                ? positionalArgs[1]
+                : const StandardMethodCodec(),
             positionalArgs.length > 2 ? positionalArgs[2] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -137,7 +158,7 @@ extension EventChannelBinding on EventChannel {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('EventChannel');
+        return const HTType('EventChannel');
       case 'name':
         return name;
       case 'codec':
@@ -146,9 +167,10 @@ extension EventChannelBinding on EventChannel {
         return binaryMessenger;
       case 'receiveBroadcastStream':
         return ({positionalArgs, namedArgs, typeArgs}) =>
-            receiveBroadcastStream(positionalArgs.length > 0 ? positionalArgs[0] : null);
+            receiveBroadcastStream(
+                positionalArgs.length > 0 ? positionalArgs[0] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

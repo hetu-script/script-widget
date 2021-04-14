@@ -18,7 +18,7 @@ class ConnectionStateAutoBinding extends HTExternalClass {
       case 'ConnectionState.done':
         return ConnectionState.done;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -26,13 +26,14 @@ class ConnectionStateAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('ConnectionState');
+        return const HTType('ConnectionState');
       case 'index':
         return (instance as ConnectionState).index;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => (instance as ConnectionState).toString();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            (instance as ConnectionState).toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

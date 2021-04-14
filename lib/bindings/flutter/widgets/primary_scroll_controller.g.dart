@@ -9,17 +9,21 @@ class PrimaryScrollControllerAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'PrimaryScrollController':
-        return ({positionalArgs, namedArgs, typeArgs}) => PrimaryScrollController(
-            key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
-            controller: namedArgs['controller'],
-            child: namedArgs['child']);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            PrimaryScrollController(
+                key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
+                controller: namedArgs['controller'],
+                child: namedArgs['child']);
       case 'PrimaryScrollController.none':
-        return ({positionalArgs, namedArgs, typeArgs}) => PrimaryScrollController.none(
-            key: namedArgs.containsKey('key') ? namedArgs['key'] : null, child: namedArgs['child']);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            PrimaryScrollController.none(
+                key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
+                child: namedArgs['child']);
       case 'PrimaryScrollController.of':
-        return ({positionalArgs, namedArgs, typeArgs}) => PrimaryScrollController.of(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            PrimaryScrollController.of(positionalArgs[0]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -33,7 +37,7 @@ extension PrimaryScrollControllerBinding on PrimaryScrollController {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('PrimaryScrollController');
+        return const HTType('PrimaryScrollController');
       case 'controller':
         return controller;
       case 'child':
@@ -43,31 +47,44 @@ extension PrimaryScrollControllerBinding on PrimaryScrollController {
       case 'hashCode':
         return hashCode;
       case 'updateShouldNotify':
-        return ({positionalArgs, namedArgs, typeArgs}) => updateShouldNotify(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            updateShouldNotify(positionalArgs[0]);
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'createElement':
         return ({positionalArgs, namedArgs, typeArgs}) => createElement();
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'toStringShallow':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
-            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            joiner:
+                namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

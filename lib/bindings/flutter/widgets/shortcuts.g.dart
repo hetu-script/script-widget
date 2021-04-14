@@ -15,9 +15,10 @@ class LogicalKeySetAutoBinding extends HTExternalClass {
             positionalArgs.length > 2 ? positionalArgs[2] : null,
             positionalArgs.length > 3 ? positionalArgs[3] : null);
       case 'LogicalKeySet.fromSet':
-        return ({positionalArgs, namedArgs, typeArgs}) => LogicalKeySet.fromSet(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            LogicalKeySet.fromSet(positionalArgs[0]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -31,7 +32,7 @@ extension LogicalKeySetBinding on LogicalKeySet {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('LogicalKeySet');
+        return const HTType('LogicalKeySet');
       case 'keys':
         return keys;
       case 'hashCode':
@@ -39,18 +40,21 @@ extension LogicalKeySetBinding on LogicalKeySet {
       case 'debugDescribeKeys':
         return ({positionalArgs, namedArgs, typeArgs}) => debugDescribeKeys();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -62,13 +66,22 @@ class ShortcutMapPropertyAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'ShortcutMapProperty':
-        return ({positionalArgs, namedArgs, typeArgs}) => ShortcutMapProperty(positionalArgs[0], positionalArgs[1],
-            showName: namedArgs.containsKey('showName') ? namedArgs['showName'] : true,
-            defaultValue: namedArgs.containsKey('defaultValue') ? namedArgs['defaultValue'] : kNoDefaultValue,
-            level: namedArgs.containsKey('level') ? namedArgs['level'] : DiagnosticLevel.info,
-            description: namedArgs.containsKey('description') ? namedArgs['description'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => ShortcutMapProperty(
+            positionalArgs[0], positionalArgs[1],
+            showName: namedArgs.containsKey('showName')
+                ? namedArgs['showName']
+                : true,
+            defaultValue: namedArgs.containsKey('defaultValue')
+                ? namedArgs['defaultValue']
+                : kNoDefaultValue,
+            level: namedArgs.containsKey('level')
+                ? namedArgs['level']
+                : DiagnosticLevel.info,
+            description: namedArgs.containsKey('description')
+                ? namedArgs['description']
+                : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -82,7 +95,7 @@ extension ShortcutMapPropertyBinding on ShortcutMapProperty {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('ShortcutMapProperty');
+        return const HTType('ShortcutMapProperty');
       case 'expandableValue':
         return expandableValue;
       case 'allowWrap':
@@ -123,32 +136,48 @@ extension ShortcutMapPropertyBinding on ShortcutMapProperty {
         return allowTruncate;
       case 'valueToString':
         return ({positionalArgs, namedArgs, typeArgs}) => valueToString(
-            parentConfiguration:
-                namedArgs.containsKey('parentConfiguration') ? namedArgs['parentConfiguration'] : null);
+            parentConfiguration: namedArgs.containsKey('parentConfiguration')
+                ? namedArgs['parentConfiguration']
+                : null);
       case 'toJsonMap':
-        return ({positionalArgs, namedArgs, typeArgs}) => toJsonMap(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toJsonMap(positionalArgs[0]);
       case 'toDescription':
         return ({positionalArgs, namedArgs, typeArgs}) => toDescription(
-            parentConfiguration:
-                namedArgs.containsKey('parentConfiguration') ? namedArgs['parentConfiguration'] : null);
+            parentConfiguration: namedArgs.containsKey('parentConfiguration')
+                ? namedArgs['parentConfiguration']
+                : null);
       case 'getProperties':
         return ({positionalArgs, namedArgs, typeArgs}) => getProperties();
       case 'getChildren':
         return ({positionalArgs, namedArgs, typeArgs}) => getChildren();
       case 'isFiltered':
-        return ({positionalArgs, namedArgs, typeArgs}) => isFiltered(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            isFiltered(positionalArgs[0]);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString(
-            parentConfiguration: namedArgs.containsKey('parentConfiguration') ? namedArgs['parentConfiguration'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+            parentConfiguration: namedArgs.containsKey('parentConfiguration')
+                ? namedArgs['parentConfiguration']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            parentConfiguration: namedArgs.containsKey('parentConfiguration') ? namedArgs['parentConfiguration'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            parentConfiguration: namedArgs.containsKey('parentConfiguration')
+                ? namedArgs['parentConfiguration']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -161,10 +190,12 @@ class ShortcutManagerAutoBinding extends HTExternalClass {
     switch (varName) {
       case 'ShortcutManager':
         return ({positionalArgs, namedArgs, typeArgs}) => ShortcutManager(
-            shortcuts: namedArgs.containsKey('shortcuts') ? namedArgs['shortcuts'] : const <LogicalKeySet, Intent>{},
+            shortcuts: namedArgs.containsKey('shortcuts')
+                ? namedArgs['shortcuts']
+                : const <LogicalKeySet, Intent>{},
             modal: namedArgs.containsKey('modal') ? namedArgs['modal'] : false);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -180,7 +211,8 @@ class ShortcutManagerAutoBinding extends HTExternalClass {
 
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'VoidCallback': (HTFunction function) => () => function.call(positionalArgs: const [], namedArgs: const {}),
+      'VoidCallback': (HTFunction function) =>
+          () => function.call(positionalArgs: const [], namedArgs: const {}),
     };
   }
 }
@@ -189,30 +221,35 @@ extension ShortcutManagerBinding on ShortcutManager {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('ShortcutManager');
+        return const HTType('ShortcutManager');
       case 'modal':
         return modal;
       case 'shortcuts':
         return shortcuts;
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'addListener':
-        return ({positionalArgs, namedArgs, typeArgs}) => addListener(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            addListener(positionalArgs[0]);
       case 'removeListener':
-        return ({positionalArgs, namedArgs, typeArgs}) => removeListener(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            removeListener(positionalArgs[0]);
       case 'dispose':
         return ({positionalArgs, namedArgs, typeArgs}) => dispose();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -222,7 +259,7 @@ extension ShortcutManagerBinding on ShortcutManager {
         shortcuts = value;
         break;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -236,16 +273,21 @@ class ShortcutsAutoBinding extends HTExternalClass {
       case 'Shortcuts':
         return ({positionalArgs, namedArgs, typeArgs}) => Shortcuts(
             key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
-            manager: namedArgs.containsKey('manager') ? namedArgs['manager'] : null,
+            manager:
+                namedArgs.containsKey('manager') ? namedArgs['manager'] : null,
             shortcuts: namedArgs['shortcuts'],
             child: namedArgs['child'],
-            debugLabel: namedArgs.containsKey('debugLabel') ? namedArgs['debugLabel'] : null);
+            debugLabel: namedArgs.containsKey('debugLabel')
+                ? namedArgs['debugLabel']
+                : null);
       case 'Shortcuts.of':
-        return ({positionalArgs, namedArgs, typeArgs}) => Shortcuts.of(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            Shortcuts.of(positionalArgs[0]);
       case 'Shortcuts.maybeOf':
-        return ({positionalArgs, namedArgs, typeArgs}) => Shortcuts.maybeOf(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            Shortcuts.maybeOf(positionalArgs[0]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -259,7 +301,7 @@ extension ShortcutsBinding on Shortcuts {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('Shortcuts');
+        return const HTType('Shortcuts');
       case 'manager':
         return manager;
       case 'shortcuts':
@@ -275,29 +317,41 @@ extension ShortcutsBinding on Shortcuts {
       case 'createState':
         return ({positionalArgs, namedArgs, typeArgs}) => createState();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'createElement':
         return ({positionalArgs, namedArgs, typeArgs}) => createElement();
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'toStringShallow':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
-            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            joiner:
+                namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

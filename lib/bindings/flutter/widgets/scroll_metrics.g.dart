@@ -15,7 +15,7 @@ class FixedScrollMetricsAutoBinding extends HTExternalClass {
             viewportDimension: namedArgs['viewportDimension'],
             axisDirection: namedArgs['axisDirection']);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -29,7 +29,7 @@ extension FixedScrollMetricsBinding on FixedScrollMetrics {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('FixedScrollMetrics');
+        return const HTType('FixedScrollMetrics');
       case 'axisDirection':
         return axisDirection;
       case 'minScrollExtent':
@@ -62,13 +62,22 @@ extension FixedScrollMetricsBinding on FixedScrollMetrics {
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       case 'copyWith':
         return ({positionalArgs, namedArgs, typeArgs}) => copyWith(
-            minScrollExtent: namedArgs.containsKey('minScrollExtent') ? namedArgs['minScrollExtent'] : null,
-            maxScrollExtent: namedArgs.containsKey('maxScrollExtent') ? namedArgs['maxScrollExtent'] : null,
-            pixels: namedArgs.containsKey('pixels') ? namedArgs['pixels'] : null,
-            viewportDimension: namedArgs.containsKey('viewportDimension') ? namedArgs['viewportDimension'] : null,
-            axisDirection: namedArgs.containsKey('axisDirection') ? namedArgs['axisDirection'] : null);
+            minScrollExtent: namedArgs.containsKey('minScrollExtent')
+                ? namedArgs['minScrollExtent']
+                : null,
+            maxScrollExtent: namedArgs.containsKey('maxScrollExtent')
+                ? namedArgs['maxScrollExtent']
+                : null,
+            pixels:
+                namedArgs.containsKey('pixels') ? namedArgs['pixels'] : null,
+            viewportDimension: namedArgs.containsKey('viewportDimension')
+                ? namedArgs['viewportDimension']
+                : null,
+            axisDirection: namedArgs.containsKey('axisDirection')
+                ? namedArgs['axisDirection']
+                : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

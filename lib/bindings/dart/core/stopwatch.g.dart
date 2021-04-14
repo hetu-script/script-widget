@@ -10,7 +10,7 @@ class StopwatchAutoBinding extends HTExternalClass {
       case 'Stopwatch':
         return ({positionalArgs, namedArgs, typeArgs}) => Stopwatch();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -24,7 +24,7 @@ extension StopwatchBinding on Stopwatch {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('Stopwatch');
+        return const HTType('Stopwatch');
       case 'frequency':
         return frequency;
       case 'elapsedTicks':
@@ -44,7 +44,7 @@ extension StopwatchBinding on Stopwatch {
       case 'reset':
         return ({positionalArgs, namedArgs, typeArgs}) => reset();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

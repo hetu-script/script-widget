@@ -1,6 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart';
-import 'package:hetu_script/hetu_script.dart';
+import 'package:hetu_script/src/instance.dart';
 import 'package:flutter/material.dart';
 
 class ScriptContainer extends StatefulWidget {
@@ -15,7 +15,8 @@ class ScriptContainer extends StatefulWidget {
     if (instance == null) {
       print('rebuild: null');
     } else {
-      print('rebuild: $instance, ${instance.runtimeType}, ${shortHash(instance)}');
+      print(
+          'rebuild: $instance, ${instance.runtimeType}, ${shortHash(instance)}');
       (instance as _ScriptContainerState).rebuild();
     }
   }
@@ -25,7 +26,8 @@ class _ScriptContainerState extends State<ScriptContainer> {
   late HTInstance child;
 
   void debug(String status) {
-    print('[$status] this: [${shortHash(this)}] child: ${child.typeid}[${shortHash(child)}] ');
+    print(
+        '[$status] this: [${shortHash(this)}] child: ${child.runtimeType}[${shortHash(child)}] ');
   }
 
   void rebuild() {

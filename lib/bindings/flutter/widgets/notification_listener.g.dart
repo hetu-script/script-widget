@@ -8,9 +8,10 @@ class LayoutChangedNotificationAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'LayoutChangedNotification':
-        return ({positionalArgs, namedArgs, typeArgs}) => LayoutChangedNotification();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            LayoutChangedNotification();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -24,13 +25,14 @@ extension LayoutChangedNotificationBinding on LayoutChangedNotification {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('LayoutChangedNotification');
+        return const HTType('LayoutChangedNotification');
       case 'dispatch':
-        return ({positionalArgs, namedArgs, typeArgs}) => dispatch(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            dispatch(positionalArgs[0]);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

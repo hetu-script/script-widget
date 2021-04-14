@@ -25,7 +25,7 @@ class SelectionChangedCauseAutoBinding extends HTExternalClass {
       case 'SelectionChangedCause.drag':
         return SelectionChangedCause.drag;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -33,13 +33,14 @@ class SelectionChangedCauseAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('SelectionChangedCause');
+        return const HTType('SelectionChangedCause');
       case 'index':
         return (instance as SelectionChangedCause).index;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => (instance as SelectionChangedCause).toString();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            (instance as SelectionChangedCause).toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -51,9 +52,10 @@ class TextSelectionPointAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'TextSelectionPoint':
-        return ({positionalArgs, namedArgs, typeArgs}) => TextSelectionPoint(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            TextSelectionPoint(positionalArgs[0], positionalArgs[1]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -67,7 +69,7 @@ extension TextSelectionPointBinding on TextSelectionPoint {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('TextSelectionPoint');
+        return const HTType('TextSelectionPoint');
       case 'point':
         return point;
       case 'direction':
@@ -75,7 +77,7 @@ extension TextSelectionPointBinding on TextSelectionPoint {
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -90,57 +92,92 @@ class RenderEditableAutoBinding extends HTExternalClass {
         return ({positionalArgs, namedArgs, typeArgs}) => RenderEditable(
             text: namedArgs.containsKey('text') ? namedArgs['text'] : null,
             textDirection: namedArgs['textDirection'],
-            textAlign: namedArgs.containsKey('textAlign') ? namedArgs['textAlign'] : TextAlign.start,
-            cursorColor: namedArgs.containsKey('cursorColor') ? namedArgs['cursorColor'] : null,
-            backgroundCursorColor:
-                namedArgs.containsKey('backgroundCursorColor') ? namedArgs['backgroundCursorColor'] : null,
-            showCursor: namedArgs.containsKey('showCursor') ? namedArgs['showCursor'] : null,
-            hasFocus: namedArgs.containsKey('hasFocus') ? namedArgs['hasFocus'] : null,
+            textAlign: namedArgs.containsKey('textAlign')
+                ? namedArgs['textAlign']
+                : TextAlign.start,
+            cursorColor: namedArgs.containsKey('cursorColor')
+                ? namedArgs['cursorColor']
+                : null,
+            backgroundCursorColor: namedArgs.containsKey('backgroundCursorColor')
+                ? namedArgs['backgroundCursorColor']
+                : null,
+            showCursor: namedArgs.containsKey('showCursor')
+                ? namedArgs['showCursor']
+                : null,
+            hasFocus: namedArgs.containsKey('hasFocus')
+                ? namedArgs['hasFocus']
+                : null,
             startHandleLayerLink: namedArgs['startHandleLayerLink'],
             endHandleLayerLink: namedArgs['endHandleLayerLink'],
-            maxLines: namedArgs.containsKey('maxLines') ? namedArgs['maxLines'] : 1,
-            minLines: namedArgs.containsKey('minLines') ? namedArgs['minLines'] : null,
-            expands: namedArgs.containsKey('expands') ? namedArgs['expands'] : false,
-            strutStyle: namedArgs.containsKey('strutStyle') ? namedArgs['strutStyle'] : null,
-            selectionColor: namedArgs.containsKey('selectionColor') ? namedArgs['selectionColor'] : null,
-            textScaleFactor: namedArgs.containsKey('textScaleFactor') ? namedArgs['textScaleFactor'] : 1.0,
-            selection: namedArgs.containsKey('selection') ? namedArgs['selection'] : null,
+            maxLines:
+                namedArgs.containsKey('maxLines') ? namedArgs['maxLines'] : 1,
+            minLines: namedArgs.containsKey('minLines')
+                ? namedArgs['minLines']
+                : null,
+            expands:
+                namedArgs.containsKey('expands') ? namedArgs['expands'] : false,
+            strutStyle: namedArgs.containsKey('strutStyle')
+                ? namedArgs['strutStyle']
+                : null,
+            selectionColor: namedArgs.containsKey('selectionColor')
+                ? namedArgs['selectionColor']
+                : null,
+            textScaleFactor: namedArgs.containsKey('textScaleFactor')
+                ? namedArgs['textScaleFactor']
+                : 1.0,
+            selection: namedArgs.containsKey('selection')
+                ? namedArgs['selection']
+                : null,
             offset: namedArgs['offset'],
-            onSelectionChanged: namedArgs.containsKey('onSelectionChanged') ? namedArgs['onSelectionChanged'] : null,
-            onCaretChanged: namedArgs.containsKey('onCaretChanged') ? namedArgs['onCaretChanged'] : null,
-            ignorePointer: namedArgs.containsKey('ignorePointer') ? namedArgs['ignorePointer'] : false,
-            readOnly: namedArgs.containsKey('readOnly') ? namedArgs['readOnly'] : false,
-            forceLine: namedArgs.containsKey('forceLine') ? namedArgs['forceLine'] : true,
-            textHeightBehavior: namedArgs.containsKey('textHeightBehavior') ? namedArgs['textHeightBehavior'] : null,
-            textWidthBasis:
-                namedArgs.containsKey('textWidthBasis') ? namedArgs['textWidthBasis'] : TextWidthBasis.parent,
-            obscuringCharacter: namedArgs.containsKey('obscuringCharacter') ? namedArgs['obscuringCharacter'] : '•',
-            obscureText: namedArgs.containsKey('obscureText') ? namedArgs['obscureText'] : false,
-            locale: namedArgs.containsKey('locale') ? namedArgs['locale'] : null,
-            cursorWidth: namedArgs.containsKey('cursorWidth') ? namedArgs['cursorWidth'] : 1.0,
-            cursorHeight: namedArgs.containsKey('cursorHeight') ? namedArgs['cursorHeight'] : null,
+            onSelectionChanged: namedArgs.containsKey('onSelectionChanged')
+                ? namedArgs['onSelectionChanged']
+                : null,
+            onCaretChanged: namedArgs.containsKey('onCaretChanged')
+                ? namedArgs['onCaretChanged']
+                : null,
+            ignorePointer: namedArgs.containsKey('ignorePointer')
+                ? namedArgs['ignorePointer']
+                : false,
+            readOnly: namedArgs.containsKey('readOnly')
+                ? namedArgs['readOnly']
+                : false,
+            forceLine: namedArgs.containsKey('forceLine')
+                ? namedArgs['forceLine']
+                : true,
+            textHeightBehavior: namedArgs.containsKey('textHeightBehavior')
+                ? namedArgs['textHeightBehavior']
+                : null,
+            textWidthBasis: namedArgs.containsKey('textWidthBasis')
+                ? namedArgs['textWidthBasis']
+                : TextWidthBasis.parent,
+            obscuringCharacter: namedArgs.containsKey('obscuringCharacter')
+                ? namedArgs['obscuringCharacter']
+                : '•',
+            obscureText: namedArgs.containsKey('obscureText')
+                ? namedArgs['obscureText']
+                : false,
+            locale:
+                namedArgs.containsKey('locale') ? namedArgs['locale'] : null,
+            cursorWidth: namedArgs.containsKey('cursorWidth')
+                ? namedArgs['cursorWidth']
+                : 1.0,
+            cursorHeight: namedArgs.containsKey('cursorHeight')
+                ? namedArgs['cursorHeight']
+                : null,
             cursorRadius: namedArgs.containsKey('cursorRadius') ? namedArgs['cursorRadius'] : null,
-            paintCursorAboveText:
-                namedArgs.containsKey('paintCursorAboveText') ? namedArgs['paintCursorAboveText'] : false,
+            paintCursorAboveText: namedArgs.containsKey('paintCursorAboveText') ? namedArgs['paintCursorAboveText'] : false,
             cursorOffset: namedArgs.containsKey('cursorOffset') ? namedArgs['cursorOffset'] : null,
             devicePixelRatio: namedArgs.containsKey('devicePixelRatio') ? namedArgs['devicePixelRatio'] : 1.0,
-            selectionHeightStyle: namedArgs.containsKey('selectionHeightStyle')
-                ? namedArgs['selectionHeightStyle']
-                : ui.BoxHeightStyle.tight,
-            selectionWidthStyle: namedArgs.containsKey('selectionWidthStyle')
-                ? namedArgs['selectionWidthStyle']
-                : ui.BoxWidthStyle.tight,
-            enableInteractiveSelection:
-                namedArgs.containsKey('enableInteractiveSelection') ? namedArgs['enableInteractiveSelection'] : null,
-            floatingCursorAddedMargin: namedArgs.containsKey('floatingCursorAddedMargin')
-                ? namedArgs['floatingCursorAddedMargin']
-                : const EdgeInsets.fromLTRB(4, 4, 4, 5),
+            selectionHeightStyle: namedArgs.containsKey('selectionHeightStyle') ? namedArgs['selectionHeightStyle'] : ui.BoxHeightStyle.tight,
+            selectionWidthStyle: namedArgs.containsKey('selectionWidthStyle') ? namedArgs['selectionWidthStyle'] : ui.BoxWidthStyle.tight,
+            enableInteractiveSelection: namedArgs.containsKey('enableInteractiveSelection') ? namedArgs['enableInteractiveSelection'] : null,
+            floatingCursorAddedMargin: namedArgs.containsKey('floatingCursorAddedMargin') ? namedArgs['floatingCursorAddedMargin'] : const EdgeInsets.fromLTRB(4, 4, 4, 5),
             promptRectRange: namedArgs.containsKey('promptRectRange') ? namedArgs['promptRectRange'] : null,
             promptRectColor: namedArgs.containsKey('promptRectColor') ? namedArgs['promptRectColor'] : null,
             clipBehavior: namedArgs.containsKey('clipBehavior') ? namedArgs['clipBehavior'] : Clip.hardEdge,
             textSelectionDelegate: namedArgs['textSelectionDelegate']);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -156,12 +193,14 @@ class RenderEditableAutoBinding extends HTExternalClass {
 
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'SelectionChangedHandler': (HTFunction function) => (selection, renderObject, cause) =>
-          function.call(positionalArgs: [selection, renderObject, cause], namedArgs: const {}),
-      'CaretChangedHandler': (HTFunction function) =>
-          (caretRect) => function.call(positionalArgs: [caretRect], namedArgs: const {}),
-      'RenderObjectVisitor': (HTFunction function) =>
-          (child) => function.call(positionalArgs: [child], namedArgs: const {}),
+      'SelectionChangedHandler': (HTFunction function) =>
+          (selection, renderObject, cause) => function.call(
+              positionalArgs: [selection, renderObject, cause],
+              namedArgs: const {}),
+      'CaretChangedHandler': (HTFunction function) => (caretRect) =>
+          function.call(positionalArgs: [caretRect], namedArgs: const {}),
+      'RenderObjectVisitor': (HTFunction function) => (child) =>
+          function.call(positionalArgs: [child], namedArgs: const {}),
     };
   }
 }
@@ -170,7 +209,7 @@ extension RenderEditableBinding on RenderEditable {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('RenderEditable');
+        return const HTType('RenderEditable');
       case 'onSelectionChanged':
         return onSelectionChanged;
       case 'onCaretChanged':
@@ -308,41 +347,58 @@ extension RenderEditableBinding on RenderEditable {
       case 'parent':
         return parent;
       case 'systemFontsDidChange':
-        return ({positionalArgs, namedArgs, typeArgs}) => systemFontsDidChange();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            systemFontsDidChange();
       case 'setPromptRectRange':
-        return ({positionalArgs, namedArgs, typeArgs}) => setPromptRectRange(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            setPromptRectRange(positionalArgs[0]);
       case 'describeSemanticsConfiguration':
-        return ({positionalArgs, namedArgs, typeArgs}) => describeSemanticsConfiguration(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            describeSemanticsConfiguration(positionalArgs[0]);
       case 'attach':
-        return ({positionalArgs, namedArgs, typeArgs}) => attach(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            attach(positionalArgs[0]);
       case 'detach':
         return ({positionalArgs, namedArgs, typeArgs}) => detach();
       case 'getEndpointsForSelection':
-        return ({positionalArgs, namedArgs, typeArgs}) => getEndpointsForSelection(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            getEndpointsForSelection(positionalArgs[0]);
       case 'getRectForComposingRange':
-        return ({positionalArgs, namedArgs, typeArgs}) => getRectForComposingRange(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            getRectForComposingRange(positionalArgs[0]);
       case 'getPositionForPoint':
-        return ({positionalArgs, namedArgs, typeArgs}) => getPositionForPoint(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            getPositionForPoint(positionalArgs[0]);
       case 'getLocalRectForCaret':
-        return ({positionalArgs, namedArgs, typeArgs}) => getLocalRectForCaret(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            getLocalRectForCaret(positionalArgs[0]);
       case 'computeMinIntrinsicWidth':
-        return ({positionalArgs, namedArgs, typeArgs}) => computeMinIntrinsicWidth(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            computeMinIntrinsicWidth(positionalArgs[0]);
       case 'computeMaxIntrinsicWidth':
-        return ({positionalArgs, namedArgs, typeArgs}) => computeMaxIntrinsicWidth(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            computeMaxIntrinsicWidth(positionalArgs[0]);
       case 'computeMinIntrinsicHeight':
-        return ({positionalArgs, namedArgs, typeArgs}) => computeMinIntrinsicHeight(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            computeMinIntrinsicHeight(positionalArgs[0]);
       case 'computeMaxIntrinsicHeight':
-        return ({positionalArgs, namedArgs, typeArgs}) => computeMaxIntrinsicHeight(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            computeMaxIntrinsicHeight(positionalArgs[0]);
       case 'computeDistanceToActualBaseline':
-        return ({positionalArgs, namedArgs, typeArgs}) => computeDistanceToActualBaseline(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            computeDistanceToActualBaseline(positionalArgs[0]);
       case 'hitTestSelf':
-        return ({positionalArgs, namedArgs, typeArgs}) => hitTestSelf(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            hitTestSelf(positionalArgs[0]);
       case 'handleEvent':
-        return ({positionalArgs, namedArgs, typeArgs}) => handleEvent(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            handleEvent(positionalArgs[0], positionalArgs[1]);
       case 'handleSecondaryTapDown':
-        return ({positionalArgs, namedArgs, typeArgs}) => handleSecondaryTapDown(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            handleSecondaryTapDown(positionalArgs[0]);
       case 'handleTapDown':
-        return ({positionalArgs, namedArgs, typeArgs}) => handleTapDown(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            handleTapDown(positionalArgs[0]);
       case 'handleTap':
         return ({positionalArgs, namedArgs, typeArgs}) => handleTap();
       case 'handleDoubleTap':
@@ -350,158 +406,239 @@ extension RenderEditableBinding on RenderEditable {
       case 'handleLongPress':
         return ({positionalArgs, namedArgs, typeArgs}) => handleLongPress();
       case 'selectPosition':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            selectPosition(cause: namedArgs.containsKey('cause') ? namedArgs['cause'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => selectPosition(
+            cause: namedArgs.containsKey('cause') ? namedArgs['cause'] : null);
       case 'selectPositionAt':
         return ({positionalArgs, namedArgs, typeArgs}) => selectPositionAt(
             from: namedArgs.containsKey('from') ? namedArgs['from'] : null,
             to: namedArgs.containsKey('to') ? namedArgs['to'] : null,
             cause: namedArgs.containsKey('cause') ? namedArgs['cause'] : null);
       case 'selectWord':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            selectWord(cause: namedArgs.containsKey('cause') ? namedArgs['cause'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => selectWord(
+            cause: namedArgs.containsKey('cause') ? namedArgs['cause'] : null);
       case 'selectWordsInRange':
         return ({positionalArgs, namedArgs, typeArgs}) => selectWordsInRange(
             from: namedArgs.containsKey('from') ? namedArgs['from'] : null,
             to: namedArgs.containsKey('to') ? namedArgs['to'] : null,
             cause: namedArgs.containsKey('cause') ? namedArgs['cause'] : null);
       case 'selectWordEdge':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            selectWordEdge(cause: namedArgs.containsKey('cause') ? namedArgs['cause'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => selectWordEdge(
+            cause: namedArgs.containsKey('cause') ? namedArgs['cause'] : null);
       case 'computeDryLayout':
-        return ({positionalArgs, namedArgs, typeArgs}) => computeDryLayout(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            computeDryLayout(positionalArgs[0]);
       case 'performLayout':
         return ({positionalArgs, namedArgs, typeArgs}) => performLayout();
       case 'setFloatingCursor':
         return ({positionalArgs, namedArgs, typeArgs}) => setFloatingCursor(
             positionalArgs[0], positionalArgs[1], positionalArgs[2],
-            resetLerpValue: namedArgs.containsKey('resetLerpValue') ? namedArgs['resetLerpValue'] : null);
+            resetLerpValue: namedArgs.containsKey('resetLerpValue')
+                ? namedArgs['resetLerpValue']
+                : null);
       case 'calculateBoundedFloatingCursorOffset':
-        return ({positionalArgs, namedArgs, typeArgs}) => calculateBoundedFloatingCursorOffset(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            calculateBoundedFloatingCursorOffset(positionalArgs[0]);
       case 'paint':
-        return ({positionalArgs, namedArgs, typeArgs}) => paint(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            paint(positionalArgs[0], positionalArgs[1]);
       case 'describeApproximatePaintClip':
-        return ({positionalArgs, namedArgs, typeArgs}) => describeApproximatePaintClip(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            describeApproximatePaintClip(positionalArgs[0]);
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'debugDescribeChildren':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugDescribeChildren();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugDescribeChildren();
       case 'setupParentData':
-        return ({positionalArgs, namedArgs, typeArgs}) => setupParentData(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            setupParentData(positionalArgs[0]);
       case 'getMinIntrinsicWidth':
-        return ({positionalArgs, namedArgs, typeArgs}) => getMinIntrinsicWidth(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            getMinIntrinsicWidth(positionalArgs[0]);
       case 'getMaxIntrinsicWidth':
-        return ({positionalArgs, namedArgs, typeArgs}) => getMaxIntrinsicWidth(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            getMaxIntrinsicWidth(positionalArgs[0]);
       case 'getMinIntrinsicHeight':
-        return ({positionalArgs, namedArgs, typeArgs}) => getMinIntrinsicHeight(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            getMinIntrinsicHeight(positionalArgs[0]);
       case 'getMaxIntrinsicHeight':
-        return ({positionalArgs, namedArgs, typeArgs}) => getMaxIntrinsicHeight(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            getMaxIntrinsicHeight(positionalArgs[0]);
       case 'getDryLayout':
-        return ({positionalArgs, namedArgs, typeArgs}) => getDryLayout(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            getDryLayout(positionalArgs[0]);
       case 'debugCannotComputeDryLayout':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugCannotComputeDryLayout(
-            reason: namedArgs.containsKey('reason') ? namedArgs['reason'] : null,
-            error: namedArgs.containsKey('error') ? namedArgs['error'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugCannotComputeDryLayout(
+                reason: namedArgs.containsKey('reason')
+                    ? namedArgs['reason']
+                    : null,
+                error:
+                    namedArgs.containsKey('error') ? namedArgs['error'] : null);
       case 'debugAdoptSize':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugAdoptSize(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugAdoptSize(positionalArgs[0]);
       case 'debugResetSize':
         return ({positionalArgs, namedArgs, typeArgs}) => debugResetSize();
       case 'getDistanceToBaseline':
-        return ({positionalArgs, namedArgs, typeArgs}) => getDistanceToBaseline(positionalArgs[0],
-            onlyReal: namedArgs.containsKey('onlyReal') ? namedArgs['onlyReal'] : false);
+        return ({positionalArgs, namedArgs, typeArgs}) => getDistanceToBaseline(
+            positionalArgs[0],
+            onlyReal: namedArgs.containsKey('onlyReal')
+                ? namedArgs['onlyReal']
+                : false);
       case 'debugAssertDoesMeetConstraints':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugAssertDoesMeetConstraints();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugAssertDoesMeetConstraints();
       case 'markNeedsLayout':
         return ({positionalArgs, namedArgs, typeArgs}) => markNeedsLayout();
       case 'performResize':
         return ({positionalArgs, namedArgs, typeArgs}) => performResize();
       case 'hitTest':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            hitTest(positionalArgs[0], position: namedArgs.containsKey('position') ? namedArgs['position'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => hitTest(
+            positionalArgs[0],
+            position: namedArgs.containsKey('position')
+                ? namedArgs['position']
+                : null);
       case 'applyPaintTransform':
-        return ({positionalArgs, namedArgs, typeArgs}) => applyPaintTransform(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            applyPaintTransform(positionalArgs[0], positionalArgs[1]);
       case 'globalToLocal':
-        return ({positionalArgs, namedArgs, typeArgs}) => globalToLocal(positionalArgs[0],
-            ancestor: namedArgs.containsKey('ancestor') ? namedArgs['ancestor'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => globalToLocal(
+            positionalArgs[0],
+            ancestor: namedArgs.containsKey('ancestor')
+                ? namedArgs['ancestor']
+                : null);
       case 'localToGlobal':
-        return ({positionalArgs, namedArgs, typeArgs}) => localToGlobal(positionalArgs[0],
-            ancestor: namedArgs.containsKey('ancestor') ? namedArgs['ancestor'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => localToGlobal(
+            positionalArgs[0],
+            ancestor: namedArgs.containsKey('ancestor')
+                ? namedArgs['ancestor']
+                : null);
       case 'debugHandleEvent':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugHandleEvent(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugHandleEvent(positionalArgs[0], positionalArgs[1]);
       case 'debugPaint':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugPaint(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugPaint(positionalArgs[0], positionalArgs[1]);
       case 'reassemble':
         return ({positionalArgs, namedArgs, typeArgs}) => reassemble();
       case 'adoptChild':
-        return ({positionalArgs, namedArgs, typeArgs}) => adoptChild(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            adoptChild(positionalArgs[0]);
       case 'dropChild':
-        return ({positionalArgs, namedArgs, typeArgs}) => dropChild(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            dropChild(positionalArgs[0]);
       case 'visitChildren':
-        return ({positionalArgs, namedArgs, typeArgs}) => visitChildren(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            visitChildren(positionalArgs[0]);
       case 'markNeedsLayoutForSizedByParentChange':
-        return ({positionalArgs, namedArgs, typeArgs}) => markNeedsLayoutForSizedByParentChange();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            markNeedsLayoutForSizedByParentChange();
       case 'scheduleInitialLayout':
-        return ({positionalArgs, namedArgs, typeArgs}) => scheduleInitialLayout();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            scheduleInitialLayout();
       case 'layout':
-        return ({positionalArgs, namedArgs, typeArgs}) => layout(positionalArgs[0],
-            parentUsesSize: namedArgs.containsKey('parentUsesSize') ? namedArgs['parentUsesSize'] : false);
+        return ({positionalArgs, namedArgs, typeArgs}) => layout(
+            positionalArgs[0],
+            parentUsesSize: namedArgs.containsKey('parentUsesSize')
+                ? namedArgs['parentUsesSize']
+                : false);
       case 'rotate':
         return ({positionalArgs, namedArgs, typeArgs}) => rotate(
-            oldAngle: namedArgs.containsKey('oldAngle') ? namedArgs['oldAngle'] : null,
-            newAngle: namedArgs.containsKey('newAngle') ? namedArgs['newAngle'] : null,
+            oldAngle: namedArgs.containsKey('oldAngle')
+                ? namedArgs['oldAngle']
+                : null,
+            newAngle: namedArgs.containsKey('newAngle')
+                ? namedArgs['newAngle']
+                : null,
             time: namedArgs.containsKey('time') ? namedArgs['time'] : null);
       case 'debugRegisterRepaintBoundaryPaint':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugRegisterRepaintBoundaryPaint(
-            includedParent: namedArgs.containsKey('includedParent') ? namedArgs['includedParent'] : true,
-            includedChild: namedArgs.containsKey('includedChild') ? namedArgs['includedChild'] : false);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugRegisterRepaintBoundaryPaint(
+                includedParent: namedArgs.containsKey('includedParent')
+                    ? namedArgs['includedParent']
+                    : true,
+                includedChild: namedArgs.containsKey('includedChild')
+                    ? namedArgs['includedChild']
+                    : false);
       case 'markNeedsCompositingBitsUpdate':
-        return ({positionalArgs, namedArgs, typeArgs}) => markNeedsCompositingBitsUpdate();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            markNeedsCompositingBitsUpdate();
       case 'markNeedsPaint':
         return ({positionalArgs, namedArgs, typeArgs}) => markNeedsPaint();
       case 'scheduleInitialPaint':
-        return ({positionalArgs, namedArgs, typeArgs}) => scheduleInitialPaint(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            scheduleInitialPaint(positionalArgs[0]);
       case 'replaceRootLayer':
-        return ({positionalArgs, namedArgs, typeArgs}) => replaceRootLayer(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            replaceRootLayer(positionalArgs[0]);
       case 'getTransformTo':
-        return ({positionalArgs, namedArgs, typeArgs}) => getTransformTo(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            getTransformTo(positionalArgs[0]);
       case 'describeSemanticsClip':
-        return ({positionalArgs, namedArgs, typeArgs}) => describeSemanticsClip(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            describeSemanticsClip(positionalArgs[0]);
       case 'scheduleInitialSemantics':
-        return ({positionalArgs, namedArgs, typeArgs}) => scheduleInitialSemantics();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            scheduleInitialSemantics();
       case 'sendSemanticsEvent':
-        return ({positionalArgs, namedArgs, typeArgs}) => sendSemanticsEvent(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            sendSemanticsEvent(positionalArgs[0]);
       case 'clearSemantics':
         return ({positionalArgs, namedArgs, typeArgs}) => clearSemantics();
       case 'markNeedsSemanticsUpdate':
-        return ({positionalArgs, namedArgs, typeArgs}) => markNeedsSemanticsUpdate();
-      case 'visitChildrenForSemantics':
-        return ({positionalArgs, namedArgs, typeArgs}) => visitChildrenForSemantics(positionalArgs[0]);
-      case 'assembleSemanticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) =>
-            assembleSemanticsNode(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
+            markNeedsSemanticsUpdate();
+      case 'visitChildrenForSemantics':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            visitChildrenForSemantics(positionalArgs[0]);
+      case 'assembleSemanticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => assembleSemanticsNode(
+            positionalArgs[0], positionalArgs[1], positionalArgs[2]);
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : '',
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : '',
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringShallow':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
-            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            joiner:
+                namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'showOnScreen':
         return ({positionalArgs, namedArgs, typeArgs}) => showOnScreen(
-            descendant: namedArgs.containsKey('descendant') ? namedArgs['descendant'] : null,
+            descendant: namedArgs.containsKey('descendant')
+                ? namedArgs['descendant']
+                : null,
             rect: namedArgs.containsKey('rect') ? namedArgs['rect'] : null,
-            duration: namedArgs.containsKey('duration') ? namedArgs['duration'] : Duration.zero,
-            curve: namedArgs.containsKey('curve') ? namedArgs['curve'] : Curves.ease);
+            duration: namedArgs.containsKey('duration')
+                ? namedArgs['duration']
+                : Duration.zero,
+            curve: namedArgs.containsKey('curve')
+                ? namedArgs['curve']
+                : Curves.ease);
       case 'describeForError':
-        return ({positionalArgs, namedArgs, typeArgs}) => describeForError(positionalArgs[0],
-            style: namedArgs.containsKey('style') ? namedArgs['style'] : DiagnosticsTreeStyle.shallow);
+        return ({positionalArgs, namedArgs, typeArgs}) => describeForError(
+            positionalArgs[0],
+            style: namedArgs.containsKey('style')
+                ? namedArgs['style']
+                : DiagnosticsTreeStyle.shallow);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
@@ -509,7 +646,7 @@ extension RenderEditableBinding on RenderEditable {
       case 'redepthChildren':
         return ({positionalArgs, namedArgs, typeArgs}) => redepthChildren();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -642,7 +779,7 @@ extension RenderEditableBinding on RenderEditable {
         clipBehavior = value;
         break;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

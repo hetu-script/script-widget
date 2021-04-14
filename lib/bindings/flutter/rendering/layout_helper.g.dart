@@ -9,12 +9,13 @@ class ChildLayoutHelperAutoBinding extends HTExternalClass {
     switch (varName) {
       case 'ChildLayoutHelper.dryLayoutChild':
         return ({positionalArgs, namedArgs, typeArgs}) =>
-            ChildLayoutHelper.dryLayoutChild(positionalArgs[0], positionalArgs[1]);
+            ChildLayoutHelper.dryLayoutChild(
+                positionalArgs[0], positionalArgs[1]);
       case 'ChildLayoutHelper.layoutChild':
         return ({positionalArgs, namedArgs, typeArgs}) =>
             ChildLayoutHelper.layoutChild(positionalArgs[0], positionalArgs[1]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

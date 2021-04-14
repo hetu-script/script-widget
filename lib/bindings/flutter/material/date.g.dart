@@ -14,7 +14,7 @@ class DatePickerEntryModeAutoBinding extends HTExternalClass {
       case 'DatePickerEntryMode.input':
         return DatePickerEntryMode.input;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -22,13 +22,14 @@ class DatePickerEntryModeAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('DatePickerEntryMode');
+        return const HTType('DatePickerEntryMode');
       case 'index':
         return (instance as DatePickerEntryMode).index;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => (instance as DatePickerEntryMode).toString();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            (instance as DatePickerEntryMode).toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -46,7 +47,7 @@ class DatePickerModeAutoBinding extends HTExternalClass {
       case 'DatePickerMode.year':
         return DatePickerMode.year;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -54,13 +55,14 @@ class DatePickerModeAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('DatePickerMode');
+        return const HTType('DatePickerMode');
       case 'index':
         return (instance as DatePickerMode).index;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => (instance as DatePickerMode).toString();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            (instance as DatePickerMode).toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -72,28 +74,36 @@ class DateUtilsAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'DateUtils.dateOnly':
-        return ({positionalArgs, namedArgs, typeArgs}) => DateUtils.dateOnly(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            DateUtils.dateOnly(positionalArgs[0]);
       case 'DateUtils.datesOnly':
-        return ({positionalArgs, namedArgs, typeArgs}) => DateUtils.datesOnly(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            DateUtils.datesOnly(positionalArgs[0]);
       case 'DateUtils.isSameDay':
-        return ({positionalArgs, namedArgs, typeArgs}) => DateUtils.isSameDay(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            DateUtils.isSameDay(positionalArgs[0], positionalArgs[1]);
       case 'DateUtils.isSameMonth':
-        return ({positionalArgs, namedArgs, typeArgs}) => DateUtils.isSameMonth(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            DateUtils.isSameMonth(positionalArgs[0], positionalArgs[1]);
       case 'DateUtils.monthDelta':
-        return ({positionalArgs, namedArgs, typeArgs}) => DateUtils.monthDelta(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            DateUtils.monthDelta(positionalArgs[0], positionalArgs[1]);
       case 'DateUtils.addMonthsToMonthDate':
         return ({positionalArgs, namedArgs, typeArgs}) =>
-            DateUtils.addMonthsToMonthDate(positionalArgs[0], positionalArgs[1]);
+            DateUtils.addMonthsToMonthDate(
+                positionalArgs[0], positionalArgs[1]);
       case 'DateUtils.addDaysToDate':
-        return ({positionalArgs, namedArgs, typeArgs}) => DateUtils.addDaysToDate(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            DateUtils.addDaysToDate(positionalArgs[0], positionalArgs[1]);
       case 'DateUtils.firstDayOffset':
         return ({positionalArgs, namedArgs, typeArgs}) =>
-            DateUtils.firstDayOffset(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
+            DateUtils.firstDayOffset(
+                positionalArgs[0], positionalArgs[1], positionalArgs[2]);
       case 'DateUtils.getDaysInMonth':
         return ({positionalArgs, namedArgs, typeArgs}) =>
             DateUtils.getDaysInMonth(positionalArgs[0], positionalArgs[1]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -108,7 +118,7 @@ class DateTimeRangeAutoBinding extends HTExternalClass {
         return ({positionalArgs, namedArgs, typeArgs}) =>
             DateTimeRange(start: namedArgs['start'], end: namedArgs['end']);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -122,7 +132,7 @@ extension DateTimeRangeBinding on DateTimeRange {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('DateTimeRange');
+        return const HTType('DateTimeRange');
       case 'start':
         return start;
       case 'end':
@@ -134,7 +144,7 @@ extension DateTimeRangeBinding on DateTimeRange {
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

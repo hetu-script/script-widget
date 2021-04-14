@@ -8,10 +8,10 @@ class ClipboardDataAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'ClipboardData':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            ClipboardData(text: namedArgs.containsKey('text') ? namedArgs['text'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => ClipboardData(
+            text: namedArgs.containsKey('text') ? namedArgs['text'] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -25,11 +25,11 @@ extension ClipboardDataBinding on ClipboardData {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('ClipboardData');
+        return const HTType('ClipboardData');
       case 'text':
         return text;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -41,13 +41,15 @@ class ClipboardAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'Clipboard.setData':
-        return ({positionalArgs, namedArgs, typeArgs}) => Clipboard.setData(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            Clipboard.setData(positionalArgs[0]);
       case 'Clipboard.getData':
-        return ({positionalArgs, namedArgs, typeArgs}) => Clipboard.getData(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            Clipboard.getData(positionalArgs[0]);
       case 'Clipboard.kTextPlain':
         return Clipboard.kTextPlain;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

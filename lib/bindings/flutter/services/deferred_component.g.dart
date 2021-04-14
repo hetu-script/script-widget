@@ -8,13 +8,19 @@ class DeferredComponentAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'DeferredComponent.installDeferredComponent':
-        return ({positionalArgs, namedArgs, typeArgs}) => DeferredComponent.installDeferredComponent(
-            moduleName: namedArgs.containsKey('moduleName') ? namedArgs['moduleName'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            DeferredComponent.installDeferredComponent(
+                moduleName: namedArgs.containsKey('moduleName')
+                    ? namedArgs['moduleName']
+                    : null);
       case 'DeferredComponent.uninstallDeferredComponent':
-        return ({positionalArgs, namedArgs, typeArgs}) => DeferredComponent.uninstallDeferredComponent(
-            moduleName: namedArgs.containsKey('moduleName') ? namedArgs['moduleName'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            DeferredComponent.uninstallDeferredComponent(
+                moduleName: namedArgs.containsKey('moduleName')
+                    ? namedArgs['moduleName']
+                    : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

@@ -11,22 +11,44 @@ class NavigationRailThemeDataAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'NavigationRailThemeData':
-        return ({positionalArgs, namedArgs, typeArgs}) => NavigationRailThemeData(
-            backgroundColor: namedArgs.containsKey('backgroundColor') ? namedArgs['backgroundColor'] : null,
-            elevation: namedArgs.containsKey('elevation') ? namedArgs['elevation'] : null,
-            unselectedLabelTextStyle:
-                namedArgs.containsKey('unselectedLabelTextStyle') ? namedArgs['unselectedLabelTextStyle'] : null,
-            selectedLabelTextStyle:
-                namedArgs.containsKey('selectedLabelTextStyle') ? namedArgs['selectedLabelTextStyle'] : null,
-            unselectedIconTheme: namedArgs.containsKey('unselectedIconTheme') ? namedArgs['unselectedIconTheme'] : null,
-            selectedIconTheme: namedArgs.containsKey('selectedIconTheme') ? namedArgs['selectedIconTheme'] : null,
-            groupAlignment: namedArgs.containsKey('groupAlignment') ? namedArgs['groupAlignment'] : null,
-            labelType: namedArgs.containsKey('labelType') ? namedArgs['labelType'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            NavigationRailThemeData(
+                backgroundColor: namedArgs.containsKey('backgroundColor')
+                    ? namedArgs['backgroundColor']
+                    : null,
+                elevation: namedArgs.containsKey('elevation')
+                    ? namedArgs['elevation']
+                    : null,
+                unselectedLabelTextStyle:
+                    namedArgs.containsKey(
+                            'unselectedLabelTextStyle')
+                        ? namedArgs['unselectedLabelTextStyle']
+                        : null,
+                selectedLabelTextStyle:
+                    namedArgs.containsKey(
+                            'selectedLabelTextStyle')
+                        ? namedArgs['selectedLabelTextStyle']
+                        : null,
+                unselectedIconTheme:
+                    namedArgs
+                            .containsKey('unselectedIconTheme')
+                        ? namedArgs['unselectedIconTheme']
+                        : null,
+                selectedIconTheme: namedArgs.containsKey('selectedIconTheme')
+                    ? namedArgs['selectedIconTheme']
+                    : null,
+                groupAlignment: namedArgs.containsKey('groupAlignment')
+                    ? namedArgs['groupAlignment']
+                    : null,
+                labelType: namedArgs.containsKey('labelType')
+                    ? namedArgs['labelType']
+                    : null);
       case 'NavigationRailThemeData.lerp':
         return ({positionalArgs, namedArgs, typeArgs}) =>
-            NavigationRailThemeData.lerp(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
+            NavigationRailThemeData.lerp(
+                positionalArgs[0], positionalArgs[1], positionalArgs[2]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -40,7 +62,7 @@ extension NavigationRailThemeDataBinding on NavigationRailThemeData {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('NavigationRailThemeData');
+        return const HTType('NavigationRailThemeData');
       case 'backgroundColor':
         return backgroundColor;
       case 'elevation':
@@ -61,29 +83,48 @@ extension NavigationRailThemeDataBinding on NavigationRailThemeData {
         return hashCode;
       case 'copyWith':
         return ({positionalArgs, namedArgs, typeArgs}) => copyWith(
-            backgroundColor: namedArgs.containsKey('backgroundColor') ? namedArgs['backgroundColor'] : null,
-            elevation: namedArgs.containsKey('elevation') ? namedArgs['elevation'] : null,
+            backgroundColor: namedArgs.containsKey('backgroundColor')
+                ? namedArgs['backgroundColor']
+                : null,
+            elevation: namedArgs.containsKey('elevation')
+                ? namedArgs['elevation']
+                : null,
             unselectedLabelTextStyle:
-                namedArgs.containsKey('unselectedLabelTextStyle') ? namedArgs['unselectedLabelTextStyle'] : null,
+                namedArgs.containsKey('unselectedLabelTextStyle')
+                    ? namedArgs['unselectedLabelTextStyle']
+                    : null,
             selectedLabelTextStyle:
-                namedArgs.containsKey('selectedLabelTextStyle') ? namedArgs['selectedLabelTextStyle'] : null,
-            unselectedIconTheme: namedArgs.containsKey('unselectedIconTheme') ? namedArgs['unselectedIconTheme'] : null,
-            selectedIconTheme: namedArgs.containsKey('selectedIconTheme') ? namedArgs['selectedIconTheme'] : null,
-            groupAlignment: namedArgs.containsKey('groupAlignment') ? namedArgs['groupAlignment'] : null,
-            labelType: namedArgs.containsKey('labelType') ? namedArgs['labelType'] : null);
+                namedArgs.containsKey('selectedLabelTextStyle')
+                    ? namedArgs['selectedLabelTextStyle']
+                    : null,
+            unselectedIconTheme: namedArgs.containsKey('unselectedIconTheme')
+                ? namedArgs['unselectedIconTheme']
+                : null,
+            selectedIconTheme: namedArgs.containsKey('selectedIconTheme')
+                ? namedArgs['selectedIconTheme']
+                : null,
+            groupAlignment: namedArgs.containsKey('groupAlignment')
+                ? namedArgs['groupAlignment']
+                : null,
+            labelType: namedArgs.containsKey('labelType')
+                ? namedArgs['labelType']
+                : null);
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -100,9 +141,10 @@ class NavigationRailThemeAutoBinding extends HTExternalClass {
             data: namedArgs['data'],
             child: namedArgs['child']);
       case 'NavigationRailTheme.of':
-        return ({positionalArgs, namedArgs, typeArgs}) => NavigationRailTheme.of(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            NavigationRailTheme.of(positionalArgs[0]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -116,7 +158,7 @@ extension NavigationRailThemeBinding on NavigationRailTheme {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('NavigationRailTheme');
+        return const HTType('NavigationRailTheme');
       case 'data':
         return data;
       case 'child':
@@ -126,33 +168,47 @@ extension NavigationRailThemeBinding on NavigationRailTheme {
       case 'hashCode':
         return hashCode;
       case 'wrap':
-        return ({positionalArgs, namedArgs, typeArgs}) => wrap(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            wrap(positionalArgs[0], positionalArgs[1]);
       case 'updateShouldNotify':
-        return ({positionalArgs, namedArgs, typeArgs}) => updateShouldNotify(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            updateShouldNotify(positionalArgs[0]);
       case 'createElement':
         return ({positionalArgs, namedArgs, typeArgs}) => createElement();
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'toStringShallow':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
-            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            joiner:
+                namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

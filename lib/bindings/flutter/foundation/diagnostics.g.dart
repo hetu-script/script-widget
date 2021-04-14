@@ -34,7 +34,7 @@ class DiagnosticLevelAutoBinding extends HTExternalClass {
       case 'DiagnosticLevel.off':
         return DiagnosticLevel.off;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -42,13 +42,14 @@ class DiagnosticLevelAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('DiagnosticLevel');
+        return const HTType('DiagnosticLevel');
       case 'index':
         return (instance as DiagnosticLevel).index;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => (instance as DiagnosticLevel).toString();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            (instance as DiagnosticLevel).toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -86,7 +87,7 @@ class DiagnosticsTreeStyleAutoBinding extends HTExternalClass {
       case 'DiagnosticsTreeStyle.truncateChildren':
         return DiagnosticsTreeStyle.truncateChildren;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -94,13 +95,14 @@ class DiagnosticsTreeStyleAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('DiagnosticsTreeStyle');
+        return const HTType('DiagnosticsTreeStyle');
       case 'index':
         return (instance as DiagnosticsTreeStyle).index;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => (instance as DiagnosticsTreeStyle).toString();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            (instance as DiagnosticsTreeStyle).toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -120,31 +122,59 @@ class TextTreeConfigurationAutoBinding extends HTExternalClass {
             linkCharacter: namedArgs['linkCharacter'],
             propertyPrefixIfChildren: namedArgs['propertyPrefixIfChildren'],
             propertyPrefixNoChildren: namedArgs['propertyPrefixNoChildren'],
-            lineBreak: namedArgs.containsKey('lineBreak') ? namedArgs['lineBreak'] : '\n',
-            lineBreakProperties: namedArgs.containsKey('lineBreakProperties') ? namedArgs['lineBreakProperties'] : true,
-            afterName: namedArgs.containsKey('afterName') ? namedArgs['afterName'] : ':',
-            afterDescriptionIfBody:
-                namedArgs.containsKey('afterDescriptionIfBody') ? namedArgs['afterDescriptionIfBody'] : '',
-            afterDescription: namedArgs.containsKey('afterDescription') ? namedArgs['afterDescription'] : '',
-            beforeProperties: namedArgs.containsKey('beforeProperties') ? namedArgs['beforeProperties'] : '',
-            afterProperties: namedArgs.containsKey('afterProperties') ? namedArgs['afterProperties'] : '',
-            mandatoryAfterProperties:
-                namedArgs.containsKey('mandatoryAfterProperties') ? namedArgs['mandatoryAfterProperties'] : '',
-            propertySeparator: namedArgs.containsKey('propertySeparator') ? namedArgs['propertySeparator'] : '',
-            bodyIndent: namedArgs.containsKey('bodyIndent') ? namedArgs['bodyIndent'] : '',
-            footer: namedArgs.containsKey('footer') ? namedArgs['footer'] : '',
-            showChildren: namedArgs.containsKey('showChildren') ? namedArgs['showChildren'] : true,
-            addBlankLineIfNoChildren:
-                namedArgs.containsKey('addBlankLineIfNoChildren') ? namedArgs['addBlankLineIfNoChildren'] : true,
-            isNameOnOwnLine: namedArgs.containsKey('isNameOnOwnLine') ? namedArgs['isNameOnOwnLine'] : false,
-            isBlankLineBetweenPropertiesAndChildren: namedArgs.containsKey('isBlankLineBetweenPropertiesAndChildren')
-                ? namedArgs['isBlankLineBetweenPropertiesAndChildren']
+            lineBreak: namedArgs.containsKey('lineBreak')
+                ? namedArgs['lineBreak']
+                : '\n',
+            lineBreakProperties: namedArgs.containsKey('lineBreakProperties')
+                ? namedArgs['lineBreakProperties']
                 : true,
-            beforeName: namedArgs.containsKey('beforeName') ? namedArgs['beforeName'] : '',
-            suffixLineOne: namedArgs.containsKey('suffixLineOne') ? namedArgs['suffixLineOne'] : '',
+            afterName: namedArgs.containsKey('afterName')
+                ? namedArgs['afterName']
+                : ':',
+            afterDescriptionIfBody: namedArgs.containsKey('afterDescriptionIfBody')
+                ? namedArgs['afterDescriptionIfBody']
+                : '',
+            afterDescription: namedArgs.containsKey('afterDescription')
+                ? namedArgs['afterDescription']
+                : '',
+            beforeProperties: namedArgs.containsKey('beforeProperties')
+                ? namedArgs['beforeProperties']
+                : '',
+            afterProperties: namedArgs.containsKey('afterProperties')
+                ? namedArgs['afterProperties']
+                : '',
+            mandatoryAfterProperties: namedArgs.containsKey('mandatoryAfterProperties')
+                ? namedArgs['mandatoryAfterProperties']
+                : '',
+            propertySeparator: namedArgs.containsKey('propertySeparator')
+                ? namedArgs['propertySeparator']
+                : '',
+            bodyIndent: namedArgs.containsKey('bodyIndent')
+                ? namedArgs['bodyIndent']
+                : '',
+            footer: namedArgs.containsKey('footer') ? namedArgs['footer'] : '',
+            showChildren: namedArgs.containsKey('showChildren')
+                ? namedArgs['showChildren']
+                : true,
+            addBlankLineIfNoChildren: namedArgs.containsKey('addBlankLineIfNoChildren')
+                ? namedArgs['addBlankLineIfNoChildren']
+                : true,
+            isNameOnOwnLine: namedArgs.containsKey('isNameOnOwnLine')
+                ? namedArgs['isNameOnOwnLine']
+                : false,
+            isBlankLineBetweenPropertiesAndChildren:
+                namedArgs.containsKey('isBlankLineBetweenPropertiesAndChildren')
+                    ? namedArgs['isBlankLineBetweenPropertiesAndChildren']
+                    : true,
+            beforeName: namedArgs.containsKey('beforeName')
+                ? namedArgs['beforeName']
+                : '',
+            suffixLineOne: namedArgs.containsKey('suffixLineOne')
+                ? namedArgs['suffixLineOne']
+                : '',
             mandatoryFooter: namedArgs.containsKey('mandatoryFooter') ? namedArgs['mandatoryFooter'] : '');
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -158,7 +188,7 @@ extension TextTreeConfigurationBinding on TextTreeConfiguration {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('TextTreeConfiguration');
+        return const HTType('TextTreeConfiguration');
       case 'prefixLineOne':
         return prefixLineOne;
       case 'suffixLineOne':
@@ -212,7 +242,7 @@ extension TextTreeConfigurationBinding on TextTreeConfiguration {
       case 'isBlankLineBetweenPropertiesAndChildren':
         return isBlankLineBetweenPropertiesAndChildren;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -225,14 +255,21 @@ class TextTreeRendererAutoBinding extends HTExternalClass {
     switch (varName) {
       case 'TextTreeRenderer':
         return ({positionalArgs, namedArgs, typeArgs}) => TextTreeRenderer(
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug,
-            wrapWidth: namedArgs.containsKey('wrapWidth') ? namedArgs['wrapWidth'] : 100,
-            wrapWidthProperties: namedArgs.containsKey('wrapWidthProperties') ? namedArgs['wrapWidthProperties'] : 65,
-            maxDescendentsTruncatableNode: namedArgs.containsKey('maxDescendentsTruncatableNode')
-                ? namedArgs['maxDescendentsTruncatableNode']
-                : -1);
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug,
+            wrapWidth: namedArgs.containsKey('wrapWidth')
+                ? namedArgs['wrapWidth']
+                : 100,
+            wrapWidthProperties: namedArgs.containsKey('wrapWidthProperties')
+                ? namedArgs['wrapWidthProperties']
+                : 65,
+            maxDescendentsTruncatableNode:
+                namedArgs.containsKey('maxDescendentsTruncatableNode')
+                    ? namedArgs['maxDescendentsTruncatableNode']
+                    : -1);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -246,15 +283,21 @@ extension TextTreeRendererBinding on TextTreeRenderer {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('TextTreeRenderer');
+        return const HTType('TextTreeRenderer');
       case 'render':
-        return ({positionalArgs, namedArgs, typeArgs}) => render(positionalArgs[0],
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            parentConfiguration:
-                namedArgs.containsKey('parentConfiguration') ? namedArgs['parentConfiguration'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => render(
+            positionalArgs[0],
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            parentConfiguration: namedArgs.containsKey('parentConfiguration')
+                ? namedArgs['parentConfiguration']
+                : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -266,15 +309,25 @@ class DiagnosticsNodeAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'DiagnosticsNode.message':
-        return ({positionalArgs, namedArgs, typeArgs}) => DiagnosticsNode.message(positionalArgs[0],
-            style: namedArgs.containsKey('style') ? namedArgs['style'] : DiagnosticsTreeStyle.singleLine,
-            level: namedArgs.containsKey('level') ? namedArgs['level'] : DiagnosticLevel.info,
-            allowWrap: namedArgs.containsKey('allowWrap') ? namedArgs['allowWrap'] : true);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            DiagnosticsNode.message(positionalArgs[0],
+                style: namedArgs.containsKey('style')
+                    ? namedArgs['style']
+                    : DiagnosticsTreeStyle.singleLine,
+                level: namedArgs.containsKey('level')
+                    ? namedArgs['level']
+                    : DiagnosticLevel.info,
+                allowWrap: namedArgs.containsKey('allowWrap')
+                    ? namedArgs['allowWrap']
+                    : true);
       case 'DiagnosticsNode.toJsonList':
-        return ({positionalArgs, namedArgs, typeArgs}) => DiagnosticsNode.toJsonList(
-            List<DiagnosticsNode>.from(positionalArgs[0]), positionalArgs[1], positionalArgs[2]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            DiagnosticsNode.toJsonList(
+                List<DiagnosticsNode>.from(positionalArgs[0]),
+                positionalArgs[1],
+                positionalArgs[2]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -288,7 +341,7 @@ extension DiagnosticsNodeBinding on DiagnosticsNode {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('DiagnosticsNode');
+        return const HTType('DiagnosticsNode');
       case 'name':
         return name;
       case 'showSeparator':
@@ -313,28 +366,43 @@ extension DiagnosticsNodeBinding on DiagnosticsNode {
         return allowTruncate;
       case 'toDescription':
         return ({positionalArgs, namedArgs, typeArgs}) => toDescription(
-            parentConfiguration:
-                namedArgs.containsKey('parentConfiguration') ? namedArgs['parentConfiguration'] : null);
+            parentConfiguration: namedArgs.containsKey('parentConfiguration')
+                ? namedArgs['parentConfiguration']
+                : null);
       case 'isFiltered':
-        return ({positionalArgs, namedArgs, typeArgs}) => isFiltered(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            isFiltered(positionalArgs[0]);
       case 'getProperties':
         return ({positionalArgs, namedArgs, typeArgs}) => getProperties();
       case 'getChildren':
         return ({positionalArgs, namedArgs, typeArgs}) => getChildren();
       case 'toJsonMap':
-        return ({positionalArgs, namedArgs, typeArgs}) => toJsonMap(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toJsonMap(positionalArgs[0]);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString(
-            parentConfiguration: namedArgs.containsKey('parentConfiguration') ? namedArgs['parentConfiguration'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+            parentConfiguration: namedArgs.containsKey('parentConfiguration')
+                ? namedArgs['parentConfiguration']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            parentConfiguration: namedArgs.containsKey('parentConfiguration') ? namedArgs['parentConfiguration'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            parentConfiguration: namedArgs.containsKey('parentConfiguration')
+                ? namedArgs['parentConfiguration']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -346,11 +414,16 @@ class MessagePropertyAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'MessageProperty':
-        return ({positionalArgs, namedArgs, typeArgs}) => MessageProperty(positionalArgs[0], positionalArgs[1],
-            style: namedArgs.containsKey('style') ? namedArgs['style'] : DiagnosticsTreeStyle.singleLine,
-            level: namedArgs.containsKey('level') ? namedArgs['level'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => MessageProperty(
+            positionalArgs[0], positionalArgs[1],
+            style: namedArgs.containsKey('style')
+                ? namedArgs['style']
+                : DiagnosticsTreeStyle.singleLine,
+            level: namedArgs.containsKey('level')
+                ? namedArgs['level']
+                : DiagnosticLevel.info);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -364,7 +437,7 @@ extension MessagePropertyBinding on MessageProperty {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('MessageProperty');
+        return const HTType('MessageProperty');
       case 'expandableValue':
         return expandableValue;
       case 'allowWrap':
@@ -404,33 +477,49 @@ extension MessagePropertyBinding on MessageProperty {
       case 'allowTruncate':
         return allowTruncate;
       case 'toJsonMap':
-        return ({positionalArgs, namedArgs, typeArgs}) => toJsonMap(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toJsonMap(positionalArgs[0]);
       case 'valueToString':
         return ({positionalArgs, namedArgs, typeArgs}) => valueToString(
-            parentConfiguration:
-                namedArgs.containsKey('parentConfiguration') ? namedArgs['parentConfiguration'] : null);
+            parentConfiguration: namedArgs.containsKey('parentConfiguration')
+                ? namedArgs['parentConfiguration']
+                : null);
       case 'toDescription':
         return ({positionalArgs, namedArgs, typeArgs}) => toDescription(
-            parentConfiguration:
-                namedArgs.containsKey('parentConfiguration') ? namedArgs['parentConfiguration'] : null);
+            parentConfiguration: namedArgs.containsKey('parentConfiguration')
+                ? namedArgs['parentConfiguration']
+                : null);
       case 'getProperties':
         return ({positionalArgs, namedArgs, typeArgs}) => getProperties();
       case 'getChildren':
         return ({positionalArgs, namedArgs, typeArgs}) => getChildren();
       case 'isFiltered':
-        return ({positionalArgs, namedArgs, typeArgs}) => isFiltered(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            isFiltered(positionalArgs[0]);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString(
-            parentConfiguration: namedArgs.containsKey('parentConfiguration') ? namedArgs['parentConfiguration'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+            parentConfiguration: namedArgs.containsKey('parentConfiguration')
+                ? namedArgs['parentConfiguration']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            parentConfiguration: namedArgs.containsKey('parentConfiguration') ? namedArgs['parentConfiguration'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            parentConfiguration: namedArgs.containsKey('parentConfiguration')
+                ? namedArgs['parentConfiguration']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -442,17 +531,31 @@ class StringPropertyAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'StringProperty':
-        return ({positionalArgs, namedArgs, typeArgs}) => StringProperty(positionalArgs[0], positionalArgs[1],
-            description: namedArgs.containsKey('description') ? namedArgs['description'] : null,
-            tooltip: namedArgs.containsKey('tooltip') ? namedArgs['tooltip'] : null,
-            showName: namedArgs.containsKey('showName') ? namedArgs['showName'] : true,
-            defaultValue: namedArgs.containsKey('defaultValue') ? namedArgs['defaultValue'] : kNoDefaultValue,
-            quoted: namedArgs.containsKey('quoted') ? namedArgs['quoted'] : true,
-            ifEmpty: namedArgs.containsKey('ifEmpty') ? namedArgs['ifEmpty'] : null,
-            style: namedArgs.containsKey('style') ? namedArgs['style'] : DiagnosticsTreeStyle.singleLine,
-            level: namedArgs.containsKey('level') ? namedArgs['level'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => StringProperty(
+            positionalArgs[0], positionalArgs[1],
+            description: namedArgs.containsKey('description')
+                ? namedArgs['description']
+                : null,
+            tooltip:
+                namedArgs.containsKey('tooltip') ? namedArgs['tooltip'] : null,
+            showName: namedArgs.containsKey('showName')
+                ? namedArgs['showName']
+                : true,
+            defaultValue: namedArgs.containsKey('defaultValue')
+                ? namedArgs['defaultValue']
+                : kNoDefaultValue,
+            quoted:
+                namedArgs.containsKey('quoted') ? namedArgs['quoted'] : true,
+            ifEmpty:
+                namedArgs.containsKey('ifEmpty') ? namedArgs['ifEmpty'] : null,
+            style: namedArgs.containsKey('style')
+                ? namedArgs['style']
+                : DiagnosticsTreeStyle.singleLine,
+            level: namedArgs.containsKey('level')
+                ? namedArgs['level']
+                : DiagnosticLevel.info);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -466,7 +569,7 @@ extension StringPropertyBinding on StringProperty {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('StringProperty');
+        return const HTType('StringProperty');
       case 'quoted':
         return quoted;
       case 'expandableValue':
@@ -508,33 +611,49 @@ extension StringPropertyBinding on StringProperty {
       case 'allowTruncate':
         return allowTruncate;
       case 'toJsonMap':
-        return ({positionalArgs, namedArgs, typeArgs}) => toJsonMap(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toJsonMap(positionalArgs[0]);
       case 'valueToString':
         return ({positionalArgs, namedArgs, typeArgs}) => valueToString(
-            parentConfiguration:
-                namedArgs.containsKey('parentConfiguration') ? namedArgs['parentConfiguration'] : null);
+            parentConfiguration: namedArgs.containsKey('parentConfiguration')
+                ? namedArgs['parentConfiguration']
+                : null);
       case 'toDescription':
         return ({positionalArgs, namedArgs, typeArgs}) => toDescription(
-            parentConfiguration:
-                namedArgs.containsKey('parentConfiguration') ? namedArgs['parentConfiguration'] : null);
+            parentConfiguration: namedArgs.containsKey('parentConfiguration')
+                ? namedArgs['parentConfiguration']
+                : null);
       case 'getProperties':
         return ({positionalArgs, namedArgs, typeArgs}) => getProperties();
       case 'getChildren':
         return ({positionalArgs, namedArgs, typeArgs}) => getChildren();
       case 'isFiltered':
-        return ({positionalArgs, namedArgs, typeArgs}) => isFiltered(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            isFiltered(positionalArgs[0]);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString(
-            parentConfiguration: namedArgs.containsKey('parentConfiguration') ? namedArgs['parentConfiguration'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+            parentConfiguration: namedArgs.containsKey('parentConfiguration')
+                ? namedArgs['parentConfiguration']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            parentConfiguration: namedArgs.containsKey('parentConfiguration') ? namedArgs['parentConfiguration'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            parentConfiguration: namedArgs.containsKey('parentConfiguration')
+                ? namedArgs['parentConfiguration']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -546,24 +665,44 @@ class DoublePropertyAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'DoubleProperty':
-        return ({positionalArgs, namedArgs, typeArgs}) => DoubleProperty(positionalArgs[0], positionalArgs[1],
-            ifNull: namedArgs.containsKey('ifNull') ? namedArgs['ifNull'] : null,
+        return ({positionalArgs, namedArgs, typeArgs}) => DoubleProperty(
+            positionalArgs[0], positionalArgs[1],
+            ifNull:
+                namedArgs.containsKey('ifNull') ? namedArgs['ifNull'] : null,
             unit: namedArgs.containsKey('unit') ? namedArgs['unit'] : null,
-            tooltip: namedArgs.containsKey('tooltip') ? namedArgs['tooltip'] : null,
-            defaultValue: namedArgs.containsKey('defaultValue') ? namedArgs['defaultValue'] : kNoDefaultValue,
-            showName: namedArgs.containsKey('showName') ? namedArgs['showName'] : true,
-            style: namedArgs.containsKey('style') ? namedArgs['style'] : DiagnosticsTreeStyle.singleLine,
-            level: namedArgs.containsKey('level') ? namedArgs['level'] : DiagnosticLevel.info);
+            tooltip:
+                namedArgs.containsKey('tooltip') ? namedArgs['tooltip'] : null,
+            defaultValue: namedArgs.containsKey('defaultValue')
+                ? namedArgs['defaultValue']
+                : kNoDefaultValue,
+            showName: namedArgs.containsKey('showName')
+                ? namedArgs['showName']
+                : true,
+            style: namedArgs.containsKey('style')
+                ? namedArgs['style']
+                : DiagnosticsTreeStyle.singleLine,
+            level: namedArgs.containsKey('level')
+                ? namedArgs['level']
+                : DiagnosticLevel.info);
       case 'DoubleProperty.lazy':
-        return ({positionalArgs, namedArgs, typeArgs}) => DoubleProperty.lazy(positionalArgs[0], positionalArgs[1],
-            ifNull: namedArgs.containsKey('ifNull') ? namedArgs['ifNull'] : null,
-            showName: namedArgs.containsKey('showName') ? namedArgs['showName'] : true,
+        return ({positionalArgs, namedArgs, typeArgs}) => DoubleProperty.lazy(
+            positionalArgs[0], positionalArgs[1],
+            ifNull:
+                namedArgs.containsKey('ifNull') ? namedArgs['ifNull'] : null,
+            showName: namedArgs.containsKey('showName')
+                ? namedArgs['showName']
+                : true,
             unit: namedArgs.containsKey('unit') ? namedArgs['unit'] : null,
-            tooltip: namedArgs.containsKey('tooltip') ? namedArgs['tooltip'] : null,
-            defaultValue: namedArgs.containsKey('defaultValue') ? namedArgs['defaultValue'] : kNoDefaultValue,
-            level: namedArgs.containsKey('level') ? namedArgs['level'] : DiagnosticLevel.info);
+            tooltip:
+                namedArgs.containsKey('tooltip') ? namedArgs['tooltip'] : null,
+            defaultValue: namedArgs.containsKey('defaultValue')
+                ? namedArgs['defaultValue']
+                : kNoDefaultValue,
+            level: namedArgs.containsKey('level')
+                ? namedArgs['level']
+                : DiagnosticLevel.info);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -577,7 +716,7 @@ extension DoublePropertyBinding on DoubleProperty {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('DoubleProperty');
+        return const HTType('DoubleProperty');
       case 'unit':
         return unit;
       case 'expandableValue':
@@ -621,33 +760,49 @@ extension DoublePropertyBinding on DoubleProperty {
       case 'numberToString':
         return ({positionalArgs, namedArgs, typeArgs}) => numberToString();
       case 'toJsonMap':
-        return ({positionalArgs, namedArgs, typeArgs}) => toJsonMap(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toJsonMap(positionalArgs[0]);
       case 'valueToString':
         return ({positionalArgs, namedArgs, typeArgs}) => valueToString(
-            parentConfiguration:
-                namedArgs.containsKey('parentConfiguration') ? namedArgs['parentConfiguration'] : null);
+            parentConfiguration: namedArgs.containsKey('parentConfiguration')
+                ? namedArgs['parentConfiguration']
+                : null);
       case 'toDescription':
         return ({positionalArgs, namedArgs, typeArgs}) => toDescription(
-            parentConfiguration:
-                namedArgs.containsKey('parentConfiguration') ? namedArgs['parentConfiguration'] : null);
+            parentConfiguration: namedArgs.containsKey('parentConfiguration')
+                ? namedArgs['parentConfiguration']
+                : null);
       case 'getProperties':
         return ({positionalArgs, namedArgs, typeArgs}) => getProperties();
       case 'getChildren':
         return ({positionalArgs, namedArgs, typeArgs}) => getChildren();
       case 'isFiltered':
-        return ({positionalArgs, namedArgs, typeArgs}) => isFiltered(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            isFiltered(positionalArgs[0]);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString(
-            parentConfiguration: namedArgs.containsKey('parentConfiguration') ? namedArgs['parentConfiguration'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+            parentConfiguration: namedArgs.containsKey('parentConfiguration')
+                ? namedArgs['parentConfiguration']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            parentConfiguration: namedArgs.containsKey('parentConfiguration') ? namedArgs['parentConfiguration'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            parentConfiguration: namedArgs.containsKey('parentConfiguration')
+                ? namedArgs['parentConfiguration']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -659,15 +814,25 @@ class IntPropertyAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'IntProperty':
-        return ({positionalArgs, namedArgs, typeArgs}) => IntProperty(positionalArgs[0], positionalArgs[1],
-            ifNull: namedArgs.containsKey('ifNull') ? namedArgs['ifNull'] : null,
-            showName: namedArgs.containsKey('showName') ? namedArgs['showName'] : true,
+        return ({positionalArgs, namedArgs, typeArgs}) => IntProperty(
+            positionalArgs[0], positionalArgs[1],
+            ifNull:
+                namedArgs.containsKey('ifNull') ? namedArgs['ifNull'] : null,
+            showName: namedArgs.containsKey('showName')
+                ? namedArgs['showName']
+                : true,
             unit: namedArgs.containsKey('unit') ? namedArgs['unit'] : null,
-            defaultValue: namedArgs.containsKey('defaultValue') ? namedArgs['defaultValue'] : kNoDefaultValue,
-            style: namedArgs.containsKey('style') ? namedArgs['style'] : DiagnosticsTreeStyle.singleLine,
-            level: namedArgs.containsKey('level') ? namedArgs['level'] : DiagnosticLevel.info);
+            defaultValue: namedArgs.containsKey('defaultValue')
+                ? namedArgs['defaultValue']
+                : kNoDefaultValue,
+            style: namedArgs.containsKey('style')
+                ? namedArgs['style']
+                : DiagnosticsTreeStyle.singleLine,
+            level: namedArgs.containsKey('level')
+                ? namedArgs['level']
+                : DiagnosticLevel.info);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -681,7 +846,7 @@ extension IntPropertyBinding on IntProperty {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('IntProperty');
+        return const HTType('IntProperty');
       case 'unit':
         return unit;
       case 'expandableValue':
@@ -725,33 +890,49 @@ extension IntPropertyBinding on IntProperty {
       case 'numberToString':
         return ({positionalArgs, namedArgs, typeArgs}) => numberToString();
       case 'toJsonMap':
-        return ({positionalArgs, namedArgs, typeArgs}) => toJsonMap(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toJsonMap(positionalArgs[0]);
       case 'valueToString':
         return ({positionalArgs, namedArgs, typeArgs}) => valueToString(
-            parentConfiguration:
-                namedArgs.containsKey('parentConfiguration') ? namedArgs['parentConfiguration'] : null);
+            parentConfiguration: namedArgs.containsKey('parentConfiguration')
+                ? namedArgs['parentConfiguration']
+                : null);
       case 'toDescription':
         return ({positionalArgs, namedArgs, typeArgs}) => toDescription(
-            parentConfiguration:
-                namedArgs.containsKey('parentConfiguration') ? namedArgs['parentConfiguration'] : null);
+            parentConfiguration: namedArgs.containsKey('parentConfiguration')
+                ? namedArgs['parentConfiguration']
+                : null);
       case 'getProperties':
         return ({positionalArgs, namedArgs, typeArgs}) => getProperties();
       case 'getChildren':
         return ({positionalArgs, namedArgs, typeArgs}) => getChildren();
       case 'isFiltered':
-        return ({positionalArgs, namedArgs, typeArgs}) => isFiltered(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            isFiltered(positionalArgs[0]);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString(
-            parentConfiguration: namedArgs.containsKey('parentConfiguration') ? namedArgs['parentConfiguration'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+            parentConfiguration: namedArgs.containsKey('parentConfiguration')
+                ? namedArgs['parentConfiguration']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            parentConfiguration: namedArgs.containsKey('parentConfiguration') ? namedArgs['parentConfiguration'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            parentConfiguration: namedArgs.containsKey('parentConfiguration')
+                ? namedArgs['parentConfiguration']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -763,14 +944,21 @@ class PercentPropertyAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'PercentProperty':
-        return ({positionalArgs, namedArgs, typeArgs}) => PercentProperty(positionalArgs[0], positionalArgs[1],
-            ifNull: namedArgs.containsKey('ifNull') ? namedArgs['ifNull'] : null,
-            showName: namedArgs.containsKey('showName') ? namedArgs['showName'] : true,
-            tooltip: namedArgs.containsKey('tooltip') ? namedArgs['tooltip'] : null,
+        return ({positionalArgs, namedArgs, typeArgs}) => PercentProperty(
+            positionalArgs[0], positionalArgs[1],
+            ifNull:
+                namedArgs.containsKey('ifNull') ? namedArgs['ifNull'] : null,
+            showName: namedArgs.containsKey('showName')
+                ? namedArgs['showName']
+                : true,
+            tooltip:
+                namedArgs.containsKey('tooltip') ? namedArgs['tooltip'] : null,
             unit: namedArgs.containsKey('unit') ? namedArgs['unit'] : null,
-            level: namedArgs.containsKey('level') ? namedArgs['level'] : DiagnosticLevel.info);
+            level: namedArgs.containsKey('level')
+                ? namedArgs['level']
+                : DiagnosticLevel.info);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -784,7 +972,7 @@ extension PercentPropertyBinding on PercentProperty {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('PercentProperty');
+        return const HTType('PercentProperty');
       case 'unit':
         return unit;
       case 'expandableValue':
@@ -827,34 +1015,50 @@ extension PercentPropertyBinding on PercentProperty {
         return allowTruncate;
       case 'valueToString':
         return ({positionalArgs, namedArgs, typeArgs}) => valueToString(
-            parentConfiguration:
-                namedArgs.containsKey('parentConfiguration') ? namedArgs['parentConfiguration'] : null);
+            parentConfiguration: namedArgs.containsKey('parentConfiguration')
+                ? namedArgs['parentConfiguration']
+                : null);
       case 'numberToString':
         return ({positionalArgs, namedArgs, typeArgs}) => numberToString();
       case 'toJsonMap':
-        return ({positionalArgs, namedArgs, typeArgs}) => toJsonMap(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toJsonMap(positionalArgs[0]);
       case 'toDescription':
         return ({positionalArgs, namedArgs, typeArgs}) => toDescription(
-            parentConfiguration:
-                namedArgs.containsKey('parentConfiguration') ? namedArgs['parentConfiguration'] : null);
+            parentConfiguration: namedArgs.containsKey('parentConfiguration')
+                ? namedArgs['parentConfiguration']
+                : null);
       case 'getProperties':
         return ({positionalArgs, namedArgs, typeArgs}) => getProperties();
       case 'getChildren':
         return ({positionalArgs, namedArgs, typeArgs}) => getChildren();
       case 'isFiltered':
-        return ({positionalArgs, namedArgs, typeArgs}) => isFiltered(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            isFiltered(positionalArgs[0]);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString(
-            parentConfiguration: namedArgs.containsKey('parentConfiguration') ? namedArgs['parentConfiguration'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+            parentConfiguration: namedArgs.containsKey('parentConfiguration')
+                ? namedArgs['parentConfiguration']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            parentConfiguration: namedArgs.containsKey('parentConfiguration') ? namedArgs['parentConfiguration'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            parentConfiguration: namedArgs.containsKey('parentConfiguration')
+                ? namedArgs['parentConfiguration']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -866,15 +1070,24 @@ class FlagPropertyAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'FlagProperty':
-        return ({positionalArgs, namedArgs, typeArgs}) => FlagProperty(positionalArgs[0],
+        return ({positionalArgs, namedArgs, typeArgs}) => FlagProperty(
+            positionalArgs[0],
             value: namedArgs['value'],
-            ifTrue: namedArgs.containsKey('ifTrue') ? namedArgs['ifTrue'] : null,
-            ifFalse: namedArgs.containsKey('ifFalse') ? namedArgs['ifFalse'] : null,
-            showName: namedArgs.containsKey('showName') ? namedArgs['showName'] : false,
-            defaultValue: namedArgs.containsKey('defaultValue') ? namedArgs['defaultValue'] : null,
-            level: namedArgs.containsKey('level') ? namedArgs['level'] : DiagnosticLevel.info);
+            ifTrue:
+                namedArgs.containsKey('ifTrue') ? namedArgs['ifTrue'] : null,
+            ifFalse:
+                namedArgs.containsKey('ifFalse') ? namedArgs['ifFalse'] : null,
+            showName: namedArgs.containsKey('showName')
+                ? namedArgs['showName']
+                : false,
+            defaultValue: namedArgs.containsKey('defaultValue')
+                ? namedArgs['defaultValue']
+                : null,
+            level: namedArgs.containsKey('level')
+                ? namedArgs['level']
+                : DiagnosticLevel.info);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -888,7 +1101,7 @@ extension FlagPropertyBinding on FlagProperty {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('FlagProperty');
+        return const HTType('FlagProperty');
       case 'ifTrue':
         return ifTrue;
       case 'ifFalse':
@@ -932,33 +1145,49 @@ extension FlagPropertyBinding on FlagProperty {
       case 'allowTruncate':
         return allowTruncate;
       case 'toJsonMap':
-        return ({positionalArgs, namedArgs, typeArgs}) => toJsonMap(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toJsonMap(positionalArgs[0]);
       case 'valueToString':
         return ({positionalArgs, namedArgs, typeArgs}) => valueToString(
-            parentConfiguration:
-                namedArgs.containsKey('parentConfiguration') ? namedArgs['parentConfiguration'] : null);
+            parentConfiguration: namedArgs.containsKey('parentConfiguration')
+                ? namedArgs['parentConfiguration']
+                : null);
       case 'toDescription':
         return ({positionalArgs, namedArgs, typeArgs}) => toDescription(
-            parentConfiguration:
-                namedArgs.containsKey('parentConfiguration') ? namedArgs['parentConfiguration'] : null);
+            parentConfiguration: namedArgs.containsKey('parentConfiguration')
+                ? namedArgs['parentConfiguration']
+                : null);
       case 'getProperties':
         return ({positionalArgs, namedArgs, typeArgs}) => getProperties();
       case 'getChildren':
         return ({positionalArgs, namedArgs, typeArgs}) => getChildren();
       case 'isFiltered':
-        return ({positionalArgs, namedArgs, typeArgs}) => isFiltered(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            isFiltered(positionalArgs[0]);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString(
-            parentConfiguration: namedArgs.containsKey('parentConfiguration') ? namedArgs['parentConfiguration'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+            parentConfiguration: namedArgs.containsKey('parentConfiguration')
+                ? namedArgs['parentConfiguration']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            parentConfiguration: namedArgs.containsKey('parentConfiguration') ? namedArgs['parentConfiguration'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            parentConfiguration: namedArgs.containsKey('parentConfiguration')
+                ? namedArgs['parentConfiguration']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -970,12 +1199,13 @@ class DiagnosticableTreeNodeAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'DiagnosticableTreeNode':
-        return ({positionalArgs, namedArgs, typeArgs}) => DiagnosticableTreeNode(
-            name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
-            value: namedArgs['value'],
-            style: namedArgs['style']);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            DiagnosticableTreeNode(
+                name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
+                value: namedArgs['value'],
+                style: namedArgs['style']);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -989,7 +1219,7 @@ extension DiagnosticableTreeNodeBinding on DiagnosticableTreeNode {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('DiagnosticableTreeNode');
+        return const HTType('DiagnosticableTreeNode');
       case 'value':
         return value;
       case 'name':
@@ -1020,41 +1250,59 @@ extension DiagnosticableTreeNodeBinding on DiagnosticableTreeNode {
         return ({positionalArgs, namedArgs, typeArgs}) => getProperties();
       case 'toDescription':
         return ({positionalArgs, namedArgs, typeArgs}) => toDescription(
-            parentConfiguration:
-                namedArgs.containsKey('parentConfiguration') ? namedArgs['parentConfiguration'] : null);
+            parentConfiguration: namedArgs.containsKey('parentConfiguration')
+                ? namedArgs['parentConfiguration']
+                : null);
       case 'isFiltered':
-        return ({positionalArgs, namedArgs, typeArgs}) => isFiltered(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            isFiltered(positionalArgs[0]);
       case 'toJsonMap':
-        return ({positionalArgs, namedArgs, typeArgs}) => toJsonMap(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toJsonMap(positionalArgs[0]);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString(
-            parentConfiguration: namedArgs.containsKey('parentConfiguration') ? namedArgs['parentConfiguration'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+            parentConfiguration: namedArgs.containsKey('parentConfiguration')
+                ? namedArgs['parentConfiguration']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            parentConfiguration: namedArgs.containsKey('parentConfiguration') ? namedArgs['parentConfiguration'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            parentConfiguration: namedArgs.containsKey('parentConfiguration')
+                ? namedArgs['parentConfiguration']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
 
 class DiagnosticPropertiesBuilderAutoBinding extends HTExternalClass {
-  DiagnosticPropertiesBuilderAutoBinding() : super('DiagnosticPropertiesBuilder');
+  DiagnosticPropertiesBuilderAutoBinding()
+      : super('DiagnosticPropertiesBuilder');
 
   @override
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'DiagnosticPropertiesBuilder':
-        return ({positionalArgs, namedArgs, typeArgs}) => DiagnosticPropertiesBuilder();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            DiagnosticPropertiesBuilder();
       case 'DiagnosticPropertiesBuilder.fromProperties':
         return ({positionalArgs, namedArgs, typeArgs}) =>
-            DiagnosticPropertiesBuilder.fromProperties(List<DiagnosticsNode>.from(positionalArgs[0]));
+            DiagnosticPropertiesBuilder.fromProperties(
+                List<DiagnosticsNode>.from(positionalArgs[0]));
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -1073,7 +1321,7 @@ extension DiagnosticPropertiesBuilderBinding on DiagnosticPropertiesBuilder {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('DiagnosticPropertiesBuilder');
+        return const HTType('DiagnosticPropertiesBuilder');
       case 'properties':
         return properties;
       case 'defaultDiagnosticsTreeStyle':
@@ -1081,9 +1329,10 @@ extension DiagnosticPropertiesBuilderBinding on DiagnosticPropertiesBuilder {
       case 'emptyBodyDescription':
         return emptyBodyDescription;
       case 'add':
-        return ({positionalArgs, namedArgs, typeArgs}) => add(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            add(positionalArgs[0]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -1096,7 +1345,7 @@ extension DiagnosticPropertiesBuilderBinding on DiagnosticPropertiesBuilder {
         emptyBodyDescription = value;
         break;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -1110,14 +1359,28 @@ class DiagnosticsBlockAutoBinding extends HTExternalClass {
       case 'DiagnosticsBlock':
         return ({positionalArgs, namedArgs, typeArgs}) => DiagnosticsBlock(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
-            style: namedArgs.containsKey('style') ? namedArgs['style'] : DiagnosticsTreeStyle.whitespace,
-            showName: namedArgs.containsKey('showName') ? namedArgs['showName'] : true,
-            showSeparator: namedArgs.containsKey('showSeparator') ? namedArgs['showSeparator'] : true,
-            linePrefix: namedArgs.containsKey('linePrefix') ? namedArgs['linePrefix'] : null,
+            style: namedArgs.containsKey('style')
+                ? namedArgs['style']
+                : DiagnosticsTreeStyle.whitespace,
+            showName: namedArgs.containsKey('showName')
+                ? namedArgs['showName']
+                : true,
+            showSeparator: namedArgs.containsKey('showSeparator')
+                ? namedArgs['showSeparator']
+                : true,
+            linePrefix: namedArgs.containsKey('linePrefix')
+                ? namedArgs['linePrefix']
+                : null,
             value: namedArgs.containsKey('value') ? namedArgs['value'] : null,
-            description: namedArgs.containsKey('description') ? namedArgs['description'] : null,
-            level: namedArgs.containsKey('level') ? namedArgs['level'] : DiagnosticLevel.info,
-            allowTruncate: namedArgs.containsKey('allowTruncate') ? namedArgs['allowTruncate'] : false,
+            description: namedArgs.containsKey('description')
+                ? namedArgs['description']
+                : null,
+            level: namedArgs.containsKey('level')
+                ? namedArgs['level']
+                : DiagnosticLevel.info,
+            allowTruncate: namedArgs.containsKey('allowTruncate')
+                ? namedArgs['allowTruncate']
+                : false,
             children: namedArgs.containsKey('children')
                 ? List<DiagnosticsNode>.from(namedArgs['children'])
                 : const <DiagnosticsNode>[],
@@ -1125,7 +1388,7 @@ class DiagnosticsBlockAutoBinding extends HTExternalClass {
                 ? List<DiagnosticsNode>.from(namedArgs['properties'])
                 : const <DiagnosticsNode>[]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -1139,7 +1402,7 @@ extension DiagnosticsBlockBinding on DiagnosticsBlock {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('DiagnosticsBlock');
+        return const HTType('DiagnosticsBlock');
       case 'level':
         return level;
       case 'value':
@@ -1168,40 +1431,61 @@ extension DiagnosticsBlockBinding on DiagnosticsBlock {
         return ({positionalArgs, namedArgs, typeArgs}) => getProperties();
       case 'toDescription':
         return ({positionalArgs, namedArgs, typeArgs}) => toDescription(
-            parentConfiguration:
-                namedArgs.containsKey('parentConfiguration') ? namedArgs['parentConfiguration'] : null);
+            parentConfiguration: namedArgs.containsKey('parentConfiguration')
+                ? namedArgs['parentConfiguration']
+                : null);
       case 'isFiltered':
-        return ({positionalArgs, namedArgs, typeArgs}) => isFiltered(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            isFiltered(positionalArgs[0]);
       case 'toJsonMap':
-        return ({positionalArgs, namedArgs, typeArgs}) => toJsonMap(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            toJsonMap(positionalArgs[0]);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString(
-            parentConfiguration: namedArgs.containsKey('parentConfiguration') ? namedArgs['parentConfiguration'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+            parentConfiguration: namedArgs.containsKey('parentConfiguration')
+                ? namedArgs['parentConfiguration']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            parentConfiguration: namedArgs.containsKey('parentConfiguration') ? namedArgs['parentConfiguration'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            parentConfiguration: namedArgs.containsKey('parentConfiguration')
+                ? namedArgs['parentConfiguration']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
 
 class DiagnosticsSerializationDelegateAutoBinding extends HTExternalClass {
-  DiagnosticsSerializationDelegateAutoBinding() : super('DiagnosticsSerializationDelegate');
+  DiagnosticsSerializationDelegateAutoBinding()
+      : super('DiagnosticsSerializationDelegate');
 
   @override
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'DiagnosticsSerializationDelegate':
-        return ({positionalArgs, namedArgs, typeArgs}) => DiagnosticsSerializationDelegate(
-            subtreeDepth: namedArgs.containsKey('subtreeDepth') ? namedArgs['subtreeDepth'] : null,
-            includeProperties: namedArgs.containsKey('includeProperties') ? namedArgs['includeProperties'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            DiagnosticsSerializationDelegate(
+                subtreeDepth: namedArgs.containsKey('subtreeDepth')
+                    ? namedArgs['subtreeDepth']
+                    : null,
+                includeProperties: namedArgs.containsKey('includeProperties')
+                    ? namedArgs['includeProperties']
+                    : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -1211,11 +1495,12 @@ class DiagnosticsSerializationDelegateAutoBinding extends HTExternalClass {
   }
 }
 
-extension DiagnosticsSerializationDelegateBinding on DiagnosticsSerializationDelegate {
+extension DiagnosticsSerializationDelegateBinding
+    on DiagnosticsSerializationDelegate {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('DiagnosticsSerializationDelegate');
+        return const HTType('DiagnosticsSerializationDelegate');
       case 'subtreeDepth':
         return subtreeDepth;
       case 'includeProperties':
@@ -1223,24 +1508,30 @@ extension DiagnosticsSerializationDelegateBinding on DiagnosticsSerializationDel
       case 'expandPropertyValues':
         return expandPropertyValues;
       case 'additionalNodeProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => additionalNodeProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            additionalNodeProperties(positionalArgs[0]);
       case 'filterChildren':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            filterChildren(List<DiagnosticsNode>.from(positionalArgs[0]), positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => filterChildren(
+            List<DiagnosticsNode>.from(positionalArgs[0]), positionalArgs[1]);
       case 'filterProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            filterProperties(List<DiagnosticsNode>.from(positionalArgs[0]), positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => filterProperties(
+            List<DiagnosticsNode>.from(positionalArgs[0]), positionalArgs[1]);
       case 'truncateNodesList':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            truncateNodesList(List<DiagnosticsNode>.from(positionalArgs[0]), positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) => truncateNodesList(
+            List<DiagnosticsNode>.from(positionalArgs[0]), positionalArgs[1]);
       case 'delegateForNode':
-        return ({positionalArgs, namedArgs, typeArgs}) => delegateForNode(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            delegateForNode(positionalArgs[0]);
       case 'copyWith':
         return ({positionalArgs, namedArgs, typeArgs}) => copyWith(
-            subtreeDepth: namedArgs.containsKey('subtreeDepth') ? namedArgs['subtreeDepth'] : null,
-            includeProperties: namedArgs.containsKey('includeProperties') ? namedArgs['includeProperties'] : null);
+            subtreeDepth: namedArgs.containsKey('subtreeDepth')
+                ? namedArgs['subtreeDepth']
+                : null,
+            includeProperties: namedArgs.containsKey('includeProperties')
+                ? namedArgs['includeProperties']
+                : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

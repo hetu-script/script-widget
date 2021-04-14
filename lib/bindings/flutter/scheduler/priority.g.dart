@@ -16,7 +16,7 @@ class PriorityAutoBinding extends HTExternalClass {
       case 'Priority.kMaxOffset':
         return Priority.kMaxOffset;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

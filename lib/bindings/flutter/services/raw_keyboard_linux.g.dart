@@ -10,13 +10,18 @@ class RawKeyEventDataLinuxAutoBinding extends HTExternalClass {
       case 'RawKeyEventDataLinux':
         return ({positionalArgs, namedArgs, typeArgs}) => RawKeyEventDataLinux(
             keyHelper: namedArgs['keyHelper'],
-            unicodeScalarValues: namedArgs.containsKey('unicodeScalarValues') ? namedArgs['unicodeScalarValues'] : 0,
-            scanCode: namedArgs.containsKey('scanCode') ? namedArgs['scanCode'] : 0,
-            keyCode: namedArgs.containsKey('keyCode') ? namedArgs['keyCode'] : 0,
-            modifiers: namedArgs.containsKey('modifiers') ? namedArgs['modifiers'] : 0,
+            unicodeScalarValues: namedArgs.containsKey('unicodeScalarValues')
+                ? namedArgs['unicodeScalarValues']
+                : 0,
+            scanCode:
+                namedArgs.containsKey('scanCode') ? namedArgs['scanCode'] : 0,
+            keyCode:
+                namedArgs.containsKey('keyCode') ? namedArgs['keyCode'] : 0,
+            modifiers:
+                namedArgs.containsKey('modifiers') ? namedArgs['modifiers'] : 0,
             isDown: namedArgs['isDown']);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -30,7 +35,7 @@ extension RawKeyEventDataLinuxBinding on RawKeyEventDataLinux {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('RawKeyEventDataLinux');
+        return const HTType('RawKeyEventDataLinux');
       case 'keyHelper':
         return keyHelper;
       case 'unicodeScalarValues':
@@ -60,14 +65,18 @@ extension RawKeyEventDataLinuxBinding on RawKeyEventDataLinux {
       case 'modifiersPressed':
         return modifiersPressed;
       case 'isModifierPressed':
-        return ({positionalArgs, namedArgs, typeArgs}) => isModifierPressed(positionalArgs[0],
-            side: namedArgs.containsKey('side') ? namedArgs['side'] : KeyboardSide.any);
+        return ({positionalArgs, namedArgs, typeArgs}) => isModifierPressed(
+            positionalArgs[0],
+            side: namedArgs.containsKey('side')
+                ? namedArgs['side']
+                : KeyboardSide.any);
       case 'getModifierSide':
-        return ({positionalArgs, namedArgs, typeArgs}) => getModifierSide(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            getModifierSide(positionalArgs[0]);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -79,9 +88,10 @@ class KeyHelperAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'KeyHelper':
-        return ({positionalArgs, namedArgs, typeArgs}) => KeyHelper(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            KeyHelper(positionalArgs[0]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -95,20 +105,28 @@ extension KeyHelperBinding on KeyHelper {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('KeyHelper');
+        return const HTType('KeyHelper');
       case 'getModifierSide':
-        return ({positionalArgs, namedArgs, typeArgs}) => getModifierSide(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            getModifierSide(positionalArgs[0]);
       case 'isModifierPressed':
-        return ({positionalArgs, namedArgs, typeArgs}) => isModifierPressed(positionalArgs[0], positionalArgs[1],
-            side: namedArgs.containsKey('side') ? namedArgs['side'] : KeyboardSide.any,
-            keyCode: namedArgs.containsKey('keyCode') ? namedArgs['keyCode'] : null,
-            isDown: namedArgs.containsKey('isDown') ? namedArgs['isDown'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => isModifierPressed(
+            positionalArgs[0], positionalArgs[1],
+            side: namedArgs.containsKey('side')
+                ? namedArgs['side']
+                : KeyboardSide.any,
+            keyCode:
+                namedArgs.containsKey('keyCode') ? namedArgs['keyCode'] : null,
+            isDown:
+                namedArgs.containsKey('isDown') ? namedArgs['isDown'] : null);
       case 'numpadKey':
-        return ({positionalArgs, namedArgs, typeArgs}) => numpadKey(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            numpadKey(positionalArgs[0]);
       case 'logicalKey':
-        return ({positionalArgs, namedArgs, typeArgs}) => logicalKey(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            logicalKey(positionalArgs[0]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -134,7 +152,7 @@ class GLFWKeyHelperAutoBinding extends HTExternalClass {
       case 'GLFWKeyHelper.modifierNumericPad':
         return GLFWKeyHelper.modifierNumericPad;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -148,20 +166,28 @@ extension GLFWKeyHelperBinding on GLFWKeyHelper {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('GLFWKeyHelper');
+        return const HTType('GLFWKeyHelper');
       case 'isModifierPressed':
-        return ({positionalArgs, namedArgs, typeArgs}) => isModifierPressed(positionalArgs[0], positionalArgs[1],
-            side: namedArgs.containsKey('side') ? namedArgs['side'] : KeyboardSide.any,
-            keyCode: namedArgs.containsKey('keyCode') ? namedArgs['keyCode'] : null,
-            isDown: namedArgs.containsKey('isDown') ? namedArgs['isDown'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => isModifierPressed(
+            positionalArgs[0], positionalArgs[1],
+            side: namedArgs.containsKey('side')
+                ? namedArgs['side']
+                : KeyboardSide.any,
+            keyCode:
+                namedArgs.containsKey('keyCode') ? namedArgs['keyCode'] : null,
+            isDown:
+                namedArgs.containsKey('isDown') ? namedArgs['isDown'] : null);
       case 'getModifierSide':
-        return ({positionalArgs, namedArgs, typeArgs}) => getModifierSide(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            getModifierSide(positionalArgs[0]);
       case 'numpadKey':
-        return ({positionalArgs, namedArgs, typeArgs}) => numpadKey(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            numpadKey(positionalArgs[0]);
       case 'logicalKey':
-        return ({positionalArgs, namedArgs, typeArgs}) => logicalKey(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            logicalKey(positionalArgs[0]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -187,7 +213,7 @@ class GtkKeyHelperAutoBinding extends HTExternalClass {
       case 'GtkKeyHelper.modifierMeta':
         return GtkKeyHelper.modifierMeta;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -201,20 +227,28 @@ extension GtkKeyHelperBinding on GtkKeyHelper {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('GtkKeyHelper');
+        return const HTType('GtkKeyHelper');
       case 'isModifierPressed':
-        return ({positionalArgs, namedArgs, typeArgs}) => isModifierPressed(positionalArgs[0], positionalArgs[1],
-            side: namedArgs.containsKey('side') ? namedArgs['side'] : KeyboardSide.any,
-            keyCode: namedArgs.containsKey('keyCode') ? namedArgs['keyCode'] : null,
-            isDown: namedArgs.containsKey('isDown') ? namedArgs['isDown'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => isModifierPressed(
+            positionalArgs[0], positionalArgs[1],
+            side: namedArgs.containsKey('side')
+                ? namedArgs['side']
+                : KeyboardSide.any,
+            keyCode:
+                namedArgs.containsKey('keyCode') ? namedArgs['keyCode'] : null,
+            isDown:
+                namedArgs.containsKey('isDown') ? namedArgs['isDown'] : null);
       case 'getModifierSide':
-        return ({positionalArgs, namedArgs, typeArgs}) => getModifierSide(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            getModifierSide(positionalArgs[0]);
       case 'numpadKey':
-        return ({positionalArgs, namedArgs, typeArgs}) => numpadKey(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            numpadKey(positionalArgs[0]);
       case 'logicalKey':
-        return ({positionalArgs, namedArgs, typeArgs}) => logicalKey(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            logicalKey(positionalArgs[0]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

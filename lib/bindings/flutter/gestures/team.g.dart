@@ -10,7 +10,7 @@ class GestureArenaTeamAutoBinding extends HTExternalClass {
       case 'GestureArenaTeam':
         return ({positionalArgs, namedArgs, typeArgs}) => GestureArenaTeam();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -29,13 +29,14 @@ extension GestureArenaTeamBinding on GestureArenaTeam {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('GestureArenaTeam');
+        return const HTType('GestureArenaTeam');
       case 'captain':
         return captain;
       case 'add':
-        return ({positionalArgs, namedArgs, typeArgs}) => add(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            add(positionalArgs[0], positionalArgs[1]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -45,7 +46,7 @@ extension GestureArenaTeamBinding on GestureArenaTeam {
         captain = value;
         break;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

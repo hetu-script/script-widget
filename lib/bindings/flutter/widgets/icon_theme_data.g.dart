@@ -11,15 +11,17 @@ class IconThemeDataAutoBinding extends HTExternalClass {
       case 'IconThemeData':
         return ({positionalArgs, namedArgs, typeArgs}) => IconThemeData(
             color: namedArgs.containsKey('color') ? namedArgs['color'] : null,
-            opacity: namedArgs.containsKey('opacity') ? namedArgs['opacity'] : null,
+            opacity:
+                namedArgs.containsKey('opacity') ? namedArgs['opacity'] : null,
             size: namedArgs.containsKey('size') ? namedArgs['size'] : null);
       case 'IconThemeData.fallback':
-        return ({positionalArgs, namedArgs, typeArgs}) => IconThemeData.fallback();
-      case 'IconThemeData.lerp':
         return ({positionalArgs, namedArgs, typeArgs}) =>
-            IconThemeData.lerp(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
+            IconThemeData.fallback();
+      case 'IconThemeData.lerp':
+        return ({positionalArgs, namedArgs, typeArgs}) => IconThemeData.lerp(
+            positionalArgs[0], positionalArgs[1], positionalArgs[2]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -33,7 +35,7 @@ extension IconThemeDataBinding on IconThemeData {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('IconThemeData');
+        return const HTType('IconThemeData');
       case 'color':
         return color;
       case 'size':
@@ -47,25 +49,31 @@ extension IconThemeDataBinding on IconThemeData {
       case 'copyWith':
         return ({positionalArgs, namedArgs, typeArgs}) => copyWith(
             color: namedArgs.containsKey('color') ? namedArgs['color'] : null,
-            opacity: namedArgs.containsKey('opacity') ? namedArgs['opacity'] : null,
+            opacity:
+                namedArgs.containsKey('opacity') ? namedArgs['opacity'] : null,
             size: namedArgs.containsKey('size') ? namedArgs['size'] : null);
       case 'merge':
-        return ({positionalArgs, namedArgs, typeArgs}) => merge(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            merge(positionalArgs[0]);
       case 'resolve':
-        return ({positionalArgs, namedArgs, typeArgs}) => resolve(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            resolve(positionalArgs[0]);
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

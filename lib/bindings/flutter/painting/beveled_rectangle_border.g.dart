@@ -8,11 +8,16 @@ class BeveledRectangleBorderAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'BeveledRectangleBorder':
-        return ({positionalArgs, namedArgs, typeArgs}) => BeveledRectangleBorder(
-            side: namedArgs.containsKey('side') ? namedArgs['side'] : BorderSide.none,
-            borderRadius: namedArgs.containsKey('borderRadius') ? namedArgs['borderRadius'] : BorderRadius.zero);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            BeveledRectangleBorder(
+                side: namedArgs.containsKey('side')
+                    ? namedArgs['side']
+                    : BorderSide.none,
+                borderRadius: namedArgs.containsKey('borderRadius')
+                    ? namedArgs['borderRadius']
+                    : BorderRadius.zero);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -26,7 +31,7 @@ extension BeveledRectangleBorderBinding on BeveledRectangleBorder {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('BeveledRectangleBorder');
+        return const HTType('BeveledRectangleBorder');
       case 'borderRadius':
         return borderRadius;
       case 'side':
@@ -36,28 +41,42 @@ extension BeveledRectangleBorderBinding on BeveledRectangleBorder {
       case 'hashCode':
         return hashCode;
       case 'scale':
-        return ({positionalArgs, namedArgs, typeArgs}) => scale(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            scale(positionalArgs[0]);
       case 'lerpFrom':
-        return ({positionalArgs, namedArgs, typeArgs}) => lerpFrom(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            lerpFrom(positionalArgs[0], positionalArgs[1]);
       case 'lerpTo':
-        return ({positionalArgs, namedArgs, typeArgs}) => lerpTo(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            lerpTo(positionalArgs[0], positionalArgs[1]);
       case 'copyWith':
         return ({positionalArgs, namedArgs, typeArgs}) => copyWith(
             side: namedArgs.containsKey('side') ? namedArgs['side'] : null,
-            borderRadius: namedArgs.containsKey('borderRadius') ? namedArgs['borderRadius'] : null);
+            borderRadius: namedArgs.containsKey('borderRadius')
+                ? namedArgs['borderRadius']
+                : null);
       case 'getInnerPath':
-        return ({positionalArgs, namedArgs, typeArgs}) => getInnerPath(positionalArgs[0],
-            textDirection: namedArgs.containsKey('textDirection') ? namedArgs['textDirection'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => getInnerPath(
+            positionalArgs[0],
+            textDirection: namedArgs.containsKey('textDirection')
+                ? namedArgs['textDirection']
+                : null);
       case 'getOuterPath':
-        return ({positionalArgs, namedArgs, typeArgs}) => getOuterPath(positionalArgs[0],
-            textDirection: namedArgs.containsKey('textDirection') ? namedArgs['textDirection'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => getOuterPath(
+            positionalArgs[0],
+            textDirection: namedArgs.containsKey('textDirection')
+                ? namedArgs['textDirection']
+                : null);
       case 'paint':
-        return ({positionalArgs, namedArgs, typeArgs}) => paint(positionalArgs[0], positionalArgs[1],
-            textDirection: namedArgs.containsKey('textDirection') ? namedArgs['textDirection'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => paint(
+            positionalArgs[0], positionalArgs[1],
+            textDirection: namedArgs.containsKey('textDirection')
+                ? namedArgs['textDirection']
+                : null);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

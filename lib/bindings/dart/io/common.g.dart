@@ -8,12 +8,13 @@ class OSErrorAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'OSError':
-        return ({positionalArgs, namedArgs, typeArgs}) => OSError(positionalArgs.length > 0 ? positionalArgs[0] : '',
+        return ({positionalArgs, namedArgs, typeArgs}) => OSError(
+            positionalArgs.length > 0 ? positionalArgs[0] : '',
             positionalArgs.length > 1 ? positionalArgs[1] : noErrorCode);
       case 'OSError.noErrorCode':
         return OSError.noErrorCode;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -29,7 +30,7 @@ extension OSErrorBinding on OSError {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('OSError');
+        return const HTType('OSError');
       case 'message':
         return message;
       case 'errorCode':
@@ -37,7 +38,7 @@ extension OSErrorBinding on OSError {
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

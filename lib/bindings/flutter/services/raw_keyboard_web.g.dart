@@ -11,7 +11,9 @@ class RawKeyEventDataWebAutoBinding extends HTExternalClass {
         return ({positionalArgs, namedArgs, typeArgs}) => RawKeyEventDataWeb(
             code: namedArgs['code'],
             key: namedArgs['key'],
-            metaState: namedArgs.containsKey('metaState') ? namedArgs['metaState'] : modifierNone);
+            metaState: namedArgs.containsKey('metaState')
+                ? namedArgs['metaState']
+                : modifierNone);
       case 'RawKeyEventDataWeb.modifierNone':
         return RawKeyEventDataWeb.modifierNone;
       case 'RawKeyEventDataWeb.modifierShift':
@@ -29,7 +31,7 @@ class RawKeyEventDataWebAutoBinding extends HTExternalClass {
       case 'RawKeyEventDataWeb.modifierScrollLock':
         return RawKeyEventDataWeb.modifierScrollLock;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -45,7 +47,7 @@ extension RawKeyEventDataWebBinding on RawKeyEventDataWeb {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('RawKeyEventDataWeb');
+        return const HTType('RawKeyEventDataWeb');
       case 'code':
         return code;
       case 'key':
@@ -69,14 +71,18 @@ extension RawKeyEventDataWebBinding on RawKeyEventDataWeb {
       case 'modifiersPressed':
         return modifiersPressed;
       case 'isModifierPressed':
-        return ({positionalArgs, namedArgs, typeArgs}) => isModifierPressed(positionalArgs[0],
-            side: namedArgs.containsKey('side') ? namedArgs['side'] : KeyboardSide.any);
+        return ({positionalArgs, namedArgs, typeArgs}) => isModifierPressed(
+            positionalArgs[0],
+            side: namedArgs.containsKey('side')
+                ? namedArgs['side']
+                : KeyboardSide.any);
       case 'getModifierSide':
-        return ({positionalArgs, namedArgs, typeArgs}) => getModifierSide(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            getModifierSide(positionalArgs[0]);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

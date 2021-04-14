@@ -16,7 +16,7 @@ class SnackBarBehaviorAutoBinding extends HTExternalClass {
       case 'SnackBarBehavior.floating':
         return SnackBarBehavior.floating;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -24,13 +24,14 @@ class SnackBarBehaviorAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('SnackBarBehavior');
+        return const HTType('SnackBarBehavior');
       case 'index':
         return (instance as SnackBarBehavior).index;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => (instance as SnackBarBehavior).toString();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            (instance as SnackBarBehavior).toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -43,19 +44,32 @@ class SnackBarThemeDataAutoBinding extends HTExternalClass {
     switch (varName) {
       case 'SnackBarThemeData':
         return ({positionalArgs, namedArgs, typeArgs}) => SnackBarThemeData(
-            backgroundColor: namedArgs.containsKey('backgroundColor') ? namedArgs['backgroundColor'] : null,
-            actionTextColor: namedArgs.containsKey('actionTextColor') ? namedArgs['actionTextColor'] : null,
+            backgroundColor: namedArgs.containsKey('backgroundColor')
+                ? namedArgs['backgroundColor']
+                : null,
+            actionTextColor: namedArgs.containsKey('actionTextColor')
+                ? namedArgs['actionTextColor']
+                : null,
             disabledActionTextColor:
-                namedArgs.containsKey('disabledActionTextColor') ? namedArgs['disabledActionTextColor'] : null,
-            contentTextStyle: namedArgs.containsKey('contentTextStyle') ? namedArgs['contentTextStyle'] : null,
-            elevation: namedArgs.containsKey('elevation') ? namedArgs['elevation'] : null,
+                namedArgs.containsKey('disabledActionTextColor')
+                    ? namedArgs['disabledActionTextColor']
+                    : null,
+            contentTextStyle: namedArgs.containsKey('contentTextStyle')
+                ? namedArgs['contentTextStyle']
+                : null,
+            elevation: namedArgs.containsKey('elevation')
+                ? namedArgs['elevation']
+                : null,
             shape: namedArgs.containsKey('shape') ? namedArgs['shape'] : null,
-            behavior: namedArgs.containsKey('behavior') ? namedArgs['behavior'] : null);
+            behavior: namedArgs.containsKey('behavior')
+                ? namedArgs['behavior']
+                : null);
       case 'SnackBarThemeData.lerp':
         return ({positionalArgs, namedArgs, typeArgs}) =>
-            SnackBarThemeData.lerp(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
+            SnackBarThemeData.lerp(
+                positionalArgs[0], positionalArgs[1], positionalArgs[2]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -69,7 +83,7 @@ extension SnackBarThemeDataBinding on SnackBarThemeData {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('SnackBarThemeData');
+        return const HTType('SnackBarThemeData');
       case 'backgroundColor':
         return backgroundColor;
       case 'actionTextColor':
@@ -88,27 +102,42 @@ extension SnackBarThemeDataBinding on SnackBarThemeData {
         return hashCode;
       case 'copyWith':
         return ({positionalArgs, namedArgs, typeArgs}) => copyWith(
-            backgroundColor: namedArgs.containsKey('backgroundColor') ? namedArgs['backgroundColor'] : null,
-            actionTextColor: namedArgs.containsKey('actionTextColor') ? namedArgs['actionTextColor'] : null,
+            backgroundColor: namedArgs.containsKey('backgroundColor')
+                ? namedArgs['backgroundColor']
+                : null,
+            actionTextColor: namedArgs.containsKey('actionTextColor')
+                ? namedArgs['actionTextColor']
+                : null,
             disabledActionTextColor:
-                namedArgs.containsKey('disabledActionTextColor') ? namedArgs['disabledActionTextColor'] : null,
-            contentTextStyle: namedArgs.containsKey('contentTextStyle') ? namedArgs['contentTextStyle'] : null,
-            elevation: namedArgs.containsKey('elevation') ? namedArgs['elevation'] : null,
+                namedArgs.containsKey('disabledActionTextColor')
+                    ? namedArgs['disabledActionTextColor']
+                    : null,
+            contentTextStyle: namedArgs.containsKey('contentTextStyle')
+                ? namedArgs['contentTextStyle']
+                : null,
+            elevation: namedArgs.containsKey('elevation')
+                ? namedArgs['elevation']
+                : null,
             shape: namedArgs.containsKey('shape') ? namedArgs['shape'] : null,
-            behavior: namedArgs.containsKey('behavior') ? namedArgs['behavior'] : null);
+            behavior: namedArgs.containsKey('behavior')
+                ? namedArgs['behavior']
+                : null);
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

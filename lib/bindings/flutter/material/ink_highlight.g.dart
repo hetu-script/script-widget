@@ -17,16 +17,28 @@ class InkHighlightAutoBinding extends HTExternalClass {
             referenceBox: namedArgs['referenceBox'],
             color: namedArgs['color'],
             textDirection: namedArgs['textDirection'],
-            shape: namedArgs.containsKey('shape') ? namedArgs['shape'] : BoxShape.rectangle,
-            radius: namedArgs.containsKey('radius') ? namedArgs['radius'] : null,
-            borderRadius: namedArgs.containsKey('borderRadius') ? namedArgs['borderRadius'] : null,
-            customBorder: namedArgs.containsKey('customBorder') ? namedArgs['customBorder'] : null,
-            rectCallback: namedArgs.containsKey('rectCallback') ? namedArgs['rectCallback'] : null,
-            onRemoved: namedArgs.containsKey('onRemoved') ? namedArgs['onRemoved'] : null,
-            fadeDuration:
-                namedArgs.containsKey('fadeDuration') ? namedArgs['fadeDuration'] : _kDefaultHighlightFadeDuration);
+            shape: namedArgs.containsKey('shape')
+                ? namedArgs['shape']
+                : BoxShape.rectangle,
+            radius:
+                namedArgs.containsKey('radius') ? namedArgs['radius'] : null,
+            borderRadius: namedArgs.containsKey('borderRadius')
+                ? namedArgs['borderRadius']
+                : null,
+            customBorder: namedArgs.containsKey('customBorder')
+                ? namedArgs['customBorder']
+                : null,
+            rectCallback: namedArgs.containsKey('rectCallback')
+                ? namedArgs['rectCallback']
+                : null,
+            onRemoved: namedArgs.containsKey('onRemoved')
+                ? namedArgs['onRemoved']
+                : null,
+            fadeDuration: namedArgs.containsKey('fadeDuration')
+                ? namedArgs['fadeDuration']
+                : _kDefaultHighlightFadeDuration);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -37,9 +49,10 @@ class InkHighlightAutoBinding extends HTExternalClass {
 
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'RectCallback': (HTFunction function) =>
-          () => function.call(positionalArgs: const [], namedArgs: const {}) as Rect,
-      'VoidCallback': (HTFunction function) => () => function.call(positionalArgs: const [], namedArgs: const {}),
+      'RectCallback': (HTFunction function) => () =>
+          function.call(positionalArgs: const [], namedArgs: const {}) as Rect,
+      'VoidCallback': (HTFunction function) =>
+          () => function.call(positionalArgs: const [], namedArgs: const {}),
     };
   }
 }
@@ -48,7 +61,7 @@ extension InkHighlightBinding on InkHighlight {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('InkHighlight');
+        return const HTType('InkHighlight');
       case 'referenceBox':
         return referenceBox;
       case 'onRemoved':
@@ -66,7 +79,8 @@ extension InkHighlightBinding on InkHighlight {
       case 'dispose':
         return ({positionalArgs, namedArgs, typeArgs}) => dispose();
       case 'paintFeature':
-        return ({positionalArgs, namedArgs, typeArgs}) => paintFeature(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            paintFeature(positionalArgs[0], positionalArgs[1]);
       case 'confirm':
         return ({positionalArgs, namedArgs, typeArgs}) => confirm();
       case 'cancel':
@@ -74,7 +88,7 @@ extension InkHighlightBinding on InkHighlight {
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

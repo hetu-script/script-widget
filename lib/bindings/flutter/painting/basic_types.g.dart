@@ -18,7 +18,7 @@ class RenderComparisonAutoBinding extends HTExternalClass {
       case 'RenderComparison.layout':
         return RenderComparison.layout;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -26,13 +26,14 @@ class RenderComparisonAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('RenderComparison');
+        return const HTType('RenderComparison');
       case 'index':
         return (instance as RenderComparison).index;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => (instance as RenderComparison).toString();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            (instance as RenderComparison).toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -50,7 +51,7 @@ class AxisAutoBinding extends HTExternalClass {
       case 'Axis.vertical':
         return Axis.vertical;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -58,13 +59,14 @@ class AxisAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('Axis');
+        return const HTType('Axis');
       case 'index':
         return (instance as Axis).index;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => (instance as Axis).toString();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            (instance as Axis).toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -82,7 +84,7 @@ class VerticalDirectionAutoBinding extends HTExternalClass {
       case 'VerticalDirection.down':
         return VerticalDirection.down;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -90,13 +92,14 @@ class VerticalDirectionAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('VerticalDirection');
+        return const HTType('VerticalDirection');
       case 'index':
         return (instance as VerticalDirection).index;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => (instance as VerticalDirection).toString();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            (instance as VerticalDirection).toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -118,7 +121,7 @@ class AxisDirectionAutoBinding extends HTExternalClass {
       case 'AxisDirection.left':
         return AxisDirection.left;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -126,13 +129,14 @@ class AxisDirectionAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('AxisDirection');
+        return const HTType('AxisDirection');
       case 'index':
         return (instance as AxisDirection).index;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => (instance as AxisDirection).toString();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            (instance as AxisDirection).toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

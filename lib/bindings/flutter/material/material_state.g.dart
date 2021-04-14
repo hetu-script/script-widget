@@ -24,7 +24,7 @@ class MaterialStateAutoBinding extends HTExternalClass {
       case 'MaterialState.error':
         return MaterialState.error;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -32,13 +32,14 @@ class MaterialStateAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('MaterialState');
+        return const HTType('MaterialState');
       case 'index':
         return (instance as MaterialState).index;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => (instance as MaterialState).toString();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            (instance as MaterialState).toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

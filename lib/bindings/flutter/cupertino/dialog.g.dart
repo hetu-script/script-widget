@@ -14,18 +14,27 @@ class CupertinoAlertDialogAutoBinding extends HTExternalClass {
         return ({positionalArgs, namedArgs, typeArgs}) => CupertinoAlertDialog(
             key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
             title: namedArgs.containsKey('title') ? namedArgs['title'] : null,
-            content: namedArgs.containsKey('content') ? namedArgs['content'] : null,
-            actions: namedArgs.containsKey('actions') ? List<Widget>.from(namedArgs['actions']) : const <Widget>[],
-            scrollController: namedArgs.containsKey('scrollController') ? namedArgs['scrollController'] : null,
+            content:
+                namedArgs.containsKey('content') ? namedArgs['content'] : null,
+            actions: namedArgs.containsKey('actions')
+                ? List<Widget>.from(namedArgs['actions'])
+                : const <Widget>[],
+            scrollController: namedArgs.containsKey('scrollController')
+                ? namedArgs['scrollController']
+                : null,
             actionScrollController:
-                namedArgs.containsKey('actionScrollController') ? namedArgs['actionScrollController'] : null,
-            insetAnimationDuration: namedArgs.containsKey('insetAnimationDuration')
-                ? namedArgs['insetAnimationDuration']
-                : const Duration(milliseconds: 100),
-            insetAnimationCurve:
-                namedArgs.containsKey('insetAnimationCurve') ? namedArgs['insetAnimationCurve'] : Curves.decelerate);
+                namedArgs.containsKey('actionScrollController')
+                    ? namedArgs['actionScrollController']
+                    : null,
+            insetAnimationDuration:
+                namedArgs.containsKey('insetAnimationDuration')
+                    ? namedArgs['insetAnimationDuration']
+                    : const Duration(milliseconds: 100),
+            insetAnimationCurve: namedArgs.containsKey('insetAnimationCurve')
+                ? namedArgs['insetAnimationCurve']
+                : Curves.decelerate);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -39,7 +48,7 @@ extension CupertinoAlertDialogBinding on CupertinoAlertDialog {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('CupertinoAlertDialog');
+        return const HTType('CupertinoAlertDialog');
       case 'title':
         return title;
       case 'content':
@@ -59,31 +68,44 @@ extension CupertinoAlertDialogBinding on CupertinoAlertDialog {
       case 'hashCode':
         return hashCode;
       case 'build':
-        return ({positionalArgs, namedArgs, typeArgs}) => build(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            build(positionalArgs[0]);
       case 'createElement':
         return ({positionalArgs, namedArgs, typeArgs}) => createElement();
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'toStringShallow':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
-            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            joiner:
+                namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -97,10 +119,12 @@ class CupertinoPopupSurfaceAutoBinding extends HTExternalClass {
       case 'CupertinoPopupSurface':
         return ({positionalArgs, namedArgs, typeArgs}) => CupertinoPopupSurface(
             key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
-            isSurfacePainted: namedArgs.containsKey('isSurfacePainted') ? namedArgs['isSurfacePainted'] : true,
+            isSurfacePainted: namedArgs.containsKey('isSurfacePainted')
+                ? namedArgs['isSurfacePainted']
+                : true,
             child: namedArgs.containsKey('child') ? namedArgs['child'] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -114,7 +138,7 @@ extension CupertinoPopupSurfaceBinding on CupertinoPopupSurface {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('CupertinoPopupSurface');
+        return const HTType('CupertinoPopupSurface');
       case 'isSurfacePainted':
         return isSurfacePainted;
       case 'child':
@@ -124,31 +148,44 @@ extension CupertinoPopupSurfaceBinding on CupertinoPopupSurface {
       case 'hashCode':
         return hashCode;
       case 'build':
-        return ({positionalArgs, namedArgs, typeArgs}) => build(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            build(positionalArgs[0]);
       case 'createElement':
         return ({positionalArgs, namedArgs, typeArgs}) => createElement();
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'toStringShallow':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
-            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            joiner:
+                namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -162,14 +199,21 @@ class CupertinoDialogActionAutoBinding extends HTExternalClass {
       case 'CupertinoDialogAction':
         return ({positionalArgs, namedArgs, typeArgs}) => CupertinoDialogAction(
             key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
-            onPressed: namedArgs.containsKey('onPressed') ? namedArgs['onPressed'] : null,
-            isDefaultAction: namedArgs.containsKey('isDefaultAction') ? namedArgs['isDefaultAction'] : false,
-            isDestructiveAction:
-                namedArgs.containsKey('isDestructiveAction') ? namedArgs['isDestructiveAction'] : false,
-            textStyle: namedArgs.containsKey('textStyle') ? namedArgs['textStyle'] : null,
+            onPressed: namedArgs.containsKey('onPressed')
+                ? namedArgs['onPressed']
+                : null,
+            isDefaultAction: namedArgs.containsKey('isDefaultAction')
+                ? namedArgs['isDefaultAction']
+                : false,
+            isDestructiveAction: namedArgs.containsKey('isDestructiveAction')
+                ? namedArgs['isDestructiveAction']
+                : false,
+            textStyle: namedArgs.containsKey('textStyle')
+                ? namedArgs['textStyle']
+                : null,
             child: namedArgs['child']);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -180,7 +224,8 @@ class CupertinoDialogActionAutoBinding extends HTExternalClass {
 
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'VoidCallback': (HTFunction function) => () => function.call(positionalArgs: const [], namedArgs: const {}),
+      'VoidCallback': (HTFunction function) =>
+          () => function.call(positionalArgs: const [], namedArgs: const {}),
     };
   }
 }
@@ -189,7 +234,7 @@ extension CupertinoDialogActionBinding on CupertinoDialogAction {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('CupertinoDialogAction');
+        return const HTType('CupertinoDialogAction');
       case 'onPressed':
         return onPressed;
       case 'isDefaultAction':
@@ -207,31 +252,44 @@ extension CupertinoDialogActionBinding on CupertinoDialogAction {
       case 'hashCode':
         return hashCode;
       case 'build':
-        return ({positionalArgs, namedArgs, typeArgs}) => build(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            build(positionalArgs[0]);
       case 'createElement':
         return ({positionalArgs, namedArgs, typeArgs}) => createElement();
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'toStringShallow':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
-            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            joiner:
+                namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

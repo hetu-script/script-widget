@@ -13,21 +13,45 @@ class PaginatedDataTableAutoBinding extends HTExternalClass {
       case 'PaginatedDataTable':
         return ({positionalArgs, namedArgs, typeArgs}) => PaginatedDataTable(
             key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
-            header: namedArgs.containsKey('header') ? namedArgs['header'] : null,
-            actions: namedArgs.containsKey('actions') ? List<Widget>.from(namedArgs['actions']) : null,
+            header:
+                namedArgs.containsKey('header') ? namedArgs['header'] : null,
+            actions: namedArgs.containsKey('actions')
+                ? List<Widget>.from(namedArgs['actions'])
+                : null,
             columns: List<DataColumn>.from(namedArgs['columns']),
-            sortColumnIndex: namedArgs.containsKey('sortColumnIndex') ? namedArgs['sortColumnIndex'] : null,
-            sortAscending: namedArgs.containsKey('sortAscending') ? namedArgs['sortAscending'] : true,
-            onSelectAll: namedArgs.containsKey('onSelectAll') ? namedArgs['onSelectAll'] : null,
-            dataRowHeight:
-                namedArgs.containsKey('dataRowHeight') ? namedArgs['dataRowHeight'] : kMinInteractiveDimension,
-            headingRowHeight: namedArgs.containsKey('headingRowHeight') ? namedArgs['headingRowHeight'] : 56.0,
-            horizontalMargin: namedArgs.containsKey('horizontalMargin') ? namedArgs['horizontalMargin'] : 24.0,
-            columnSpacing: namedArgs.containsKey('columnSpacing') ? namedArgs['columnSpacing'] : 56.0,
-            showCheckboxColumn: namedArgs.containsKey('showCheckboxColumn') ? namedArgs['showCheckboxColumn'] : true,
-            initialFirstRowIndex: namedArgs.containsKey('initialFirstRowIndex') ? namedArgs['initialFirstRowIndex'] : 0,
-            onPageChanged: namedArgs.containsKey('onPageChanged') ? namedArgs['onPageChanged'] : null,
-            rowsPerPage: namedArgs.containsKey('rowsPerPage') ? namedArgs['rowsPerPage'] : defaultRowsPerPage,
+            sortColumnIndex: namedArgs.containsKey('sortColumnIndex')
+                ? namedArgs['sortColumnIndex']
+                : null,
+            sortAscending: namedArgs.containsKey('sortAscending')
+                ? namedArgs['sortAscending']
+                : true,
+            onSelectAll: namedArgs.containsKey('onSelectAll')
+                ? namedArgs['onSelectAll']
+                : null,
+            dataRowHeight: namedArgs.containsKey('dataRowHeight')
+                ? namedArgs['dataRowHeight']
+                : kMinInteractiveDimension,
+            headingRowHeight: namedArgs.containsKey('headingRowHeight')
+                ? namedArgs['headingRowHeight']
+                : 56.0,
+            horizontalMargin: namedArgs.containsKey('horizontalMargin')
+                ? namedArgs['horizontalMargin']
+                : 24.0,
+            columnSpacing: namedArgs.containsKey('columnSpacing')
+                ? namedArgs['columnSpacing']
+                : 56.0,
+            showCheckboxColumn: namedArgs.containsKey('showCheckboxColumn')
+                ? namedArgs['showCheckboxColumn']
+                : true,
+            initialFirstRowIndex: namedArgs.containsKey('initialFirstRowIndex')
+                ? namedArgs['initialFirstRowIndex']
+                : 0,
+            onPageChanged: namedArgs.containsKey('onPageChanged')
+                ? namedArgs['onPageChanged']
+                : null,
+            rowsPerPage: namedArgs.containsKey('rowsPerPage')
+                ? namedArgs['rowsPerPage']
+                : defaultRowsPerPage,
             availableRowsPerPage: namedArgs.containsKey('availableRowsPerPage')
                 ? List<int>.from(namedArgs['availableRowsPerPage'])
                 : const <int>[
@@ -36,15 +60,17 @@ class PaginatedDataTableAutoBinding extends HTExternalClass {
                     defaultRowsPerPage * 5,
                     defaultRowsPerPage * 10
                   ],
-            onRowsPerPageChanged:
-                namedArgs.containsKey('onRowsPerPageChanged') ? namedArgs['onRowsPerPageChanged'] : null,
-            dragStartBehavior:
-                namedArgs.containsKey('dragStartBehavior') ? namedArgs['dragStartBehavior'] : DragStartBehavior.start,
+            onRowsPerPageChanged: namedArgs.containsKey('onRowsPerPageChanged')
+                ? namedArgs['onRowsPerPageChanged']
+                : null,
+            dragStartBehavior: namedArgs.containsKey('dragStartBehavior')
+                ? namedArgs['dragStartBehavior']
+                : DragStartBehavior.start,
             source: namedArgs['source']);
       case 'PaginatedDataTable.defaultRowsPerPage':
         return PaginatedDataTable.defaultRowsPerPage;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -60,7 +86,7 @@ extension PaginatedDataTableBinding on PaginatedDataTable {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('PaginatedDataTable');
+        return const HTType('PaginatedDataTable');
       case 'header':
         return header;
       case 'actions':
@@ -108,25 +134,37 @@ extension PaginatedDataTableBinding on PaginatedDataTable {
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'toStringShallow':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
-            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            joiner:
+                namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -138,9 +176,10 @@ class PaginatedDataTableStateAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'PaginatedDataTableState':
-        return ({positionalArgs, namedArgs, typeArgs}) => PaginatedDataTableState();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            PaginatedDataTableState();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -154,7 +193,7 @@ extension PaginatedDataTableStateBinding on PaginatedDataTableState {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('PaginatedDataTableState');
+        return const HTType('PaginatedDataTableState');
       case 'widget':
         return widget;
       case 'context':
@@ -164,26 +203,32 @@ extension PaginatedDataTableStateBinding on PaginatedDataTableState {
       case 'initState':
         return ({positionalArgs, namedArgs, typeArgs}) => initState();
       case 'didUpdateWidget':
-        return ({positionalArgs, namedArgs, typeArgs}) => didUpdateWidget(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            didUpdateWidget(positionalArgs[0]);
       case 'dispose':
         return ({positionalArgs, namedArgs, typeArgs}) => dispose();
       case 'pageTo':
-        return ({positionalArgs, namedArgs, typeArgs}) => pageTo(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            pageTo(positionalArgs[0]);
       case 'build':
-        return ({positionalArgs, namedArgs, typeArgs}) => build(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            build(positionalArgs[0]);
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

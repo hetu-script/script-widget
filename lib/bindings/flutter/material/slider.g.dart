@@ -16,39 +16,75 @@ class SliderAutoBinding extends HTExternalClass {
             key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
             value: namedArgs['value'],
             onChanged: namedArgs['onChanged'],
-            onChangeStart: namedArgs.containsKey('onChangeStart') ? namedArgs['onChangeStart'] : null,
-            onChangeEnd: namedArgs.containsKey('onChangeEnd') ? namedArgs['onChangeEnd'] : null,
+            onChangeStart: namedArgs.containsKey('onChangeStart')
+                ? namedArgs['onChangeStart']
+                : null,
+            onChangeEnd: namedArgs.containsKey('onChangeEnd')
+                ? namedArgs['onChangeEnd']
+                : null,
             min: namedArgs.containsKey('min') ? namedArgs['min'] : 0.0,
             max: namedArgs.containsKey('max') ? namedArgs['max'] : 1.0,
-            divisions: namedArgs.containsKey('divisions') ? namedArgs['divisions'] : null,
+            divisions: namedArgs.containsKey('divisions')
+                ? namedArgs['divisions']
+                : null,
             label: namedArgs.containsKey('label') ? namedArgs['label'] : null,
-            activeColor: namedArgs.containsKey('activeColor') ? namedArgs['activeColor'] : null,
-            inactiveColor: namedArgs.containsKey('inactiveColor') ? namedArgs['inactiveColor'] : null,
-            mouseCursor: namedArgs.containsKey('mouseCursor') ? namedArgs['mouseCursor'] : null,
+            activeColor: namedArgs.containsKey('activeColor')
+                ? namedArgs['activeColor']
+                : null,
+            inactiveColor: namedArgs.containsKey('inactiveColor')
+                ? namedArgs['inactiveColor']
+                : null,
+            mouseCursor: namedArgs.containsKey('mouseCursor')
+                ? namedArgs['mouseCursor']
+                : null,
             semanticFormatterCallback:
-                namedArgs.containsKey('semanticFormatterCallback') ? namedArgs['semanticFormatterCallback'] : null,
-            focusNode: namedArgs.containsKey('focusNode') ? namedArgs['focusNode'] : null,
-            autofocus: namedArgs.containsKey('autofocus') ? namedArgs['autofocus'] : false);
+                namedArgs.containsKey('semanticFormatterCallback')
+                    ? namedArgs['semanticFormatterCallback']
+                    : null,
+            focusNode: namedArgs.containsKey('focusNode')
+                ? namedArgs['focusNode']
+                : null,
+            autofocus: namedArgs.containsKey('autofocus')
+                ? namedArgs['autofocus']
+                : false);
       case 'Slider.adaptive':
         return ({positionalArgs, namedArgs, typeArgs}) => Slider.adaptive(
             key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
             value: namedArgs['value'],
             onChanged: namedArgs['onChanged'],
-            onChangeStart: namedArgs.containsKey('onChangeStart') ? namedArgs['onChangeStart'] : null,
-            onChangeEnd: namedArgs.containsKey('onChangeEnd') ? namedArgs['onChangeEnd'] : null,
+            onChangeStart: namedArgs.containsKey('onChangeStart')
+                ? namedArgs['onChangeStart']
+                : null,
+            onChangeEnd: namedArgs.containsKey('onChangeEnd')
+                ? namedArgs['onChangeEnd']
+                : null,
             min: namedArgs.containsKey('min') ? namedArgs['min'] : 0.0,
             max: namedArgs.containsKey('max') ? namedArgs['max'] : 1.0,
-            divisions: namedArgs.containsKey('divisions') ? namedArgs['divisions'] : null,
+            divisions: namedArgs.containsKey('divisions')
+                ? namedArgs['divisions']
+                : null,
             label: namedArgs.containsKey('label') ? namedArgs['label'] : null,
-            mouseCursor: namedArgs.containsKey('mouseCursor') ? namedArgs['mouseCursor'] : null,
-            activeColor: namedArgs.containsKey('activeColor') ? namedArgs['activeColor'] : null,
-            inactiveColor: namedArgs.containsKey('inactiveColor') ? namedArgs['inactiveColor'] : null,
+            mouseCursor: namedArgs.containsKey('mouseCursor')
+                ? namedArgs['mouseCursor']
+                : null,
+            activeColor: namedArgs.containsKey('activeColor')
+                ? namedArgs['activeColor']
+                : null,
+            inactiveColor: namedArgs.containsKey('inactiveColor')
+                ? namedArgs['inactiveColor']
+                : null,
             semanticFormatterCallback:
-                namedArgs.containsKey('semanticFormatterCallback') ? namedArgs['semanticFormatterCallback'] : null,
-            focusNode: namedArgs.containsKey('focusNode') ? namedArgs['focusNode'] : null,
-            autofocus: namedArgs.containsKey('autofocus') ? namedArgs['autofocus'] : false);
+                namedArgs.containsKey('semanticFormatterCallback')
+                    ? namedArgs['semanticFormatterCallback']
+                    : null,
+            focusNode: namedArgs.containsKey('focusNode')
+                ? namedArgs['focusNode']
+                : null,
+            autofocus: namedArgs.containsKey('autofocus')
+                ? namedArgs['autofocus']
+                : false);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -59,8 +95,8 @@ class SliderAutoBinding extends HTExternalClass {
 
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'SemanticFormatterCallback': (HTFunction function) =>
-          (value) => function.call(positionalArgs: [value], namedArgs: const {}) as String,
+      'SemanticFormatterCallback': (HTFunction function) => (value) =>
+          function.call(positionalArgs: [value], namedArgs: const {}) as String,
     };
   }
 }
@@ -69,7 +105,7 @@ extension SliderBinding on Slider {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('Slider');
+        return const HTType('Slider');
       case 'value':
         return value;
       case 'onChanged':
@@ -105,29 +141,41 @@ extension SliderBinding on Slider {
       case 'createState':
         return ({positionalArgs, namedArgs, typeArgs}) => createState();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'createElement':
         return ({positionalArgs, namedArgs, typeArgs}) => createElement();
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'toStringShallow':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
-            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            joiner:
+                namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

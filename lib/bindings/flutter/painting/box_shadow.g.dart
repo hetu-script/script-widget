@@ -9,18 +9,28 @@ class BoxShadowAutoBinding extends HTExternalClass {
     switch (varName) {
       case 'BoxShadow':
         return ({positionalArgs, namedArgs, typeArgs}) => BoxShadow(
-            color: namedArgs.containsKey('color') ? namedArgs['color'] : const Color(0xFF000000),
-            offset: namedArgs.containsKey('offset') ? namedArgs['offset'] : Offset.zero,
-            blurRadius: namedArgs.containsKey('blurRadius') ? namedArgs['blurRadius'] : 0.0,
-            spreadRadius: namedArgs.containsKey('spreadRadius') ? namedArgs['spreadRadius'] : 0.0);
+            color: namedArgs.containsKey('color')
+                ? namedArgs['color']
+                : const Color(0xFF000000),
+            offset: namedArgs.containsKey('offset')
+                ? namedArgs['offset']
+                : Offset.zero,
+            blurRadius: namedArgs.containsKey('blurRadius')
+                ? namedArgs['blurRadius']
+                : 0.0,
+            spreadRadius: namedArgs.containsKey('spreadRadius')
+                ? namedArgs['spreadRadius']
+                : 0.0);
       case 'BoxShadow.lerp':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            BoxShadow.lerp(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
+        return ({positionalArgs, namedArgs, typeArgs}) => BoxShadow.lerp(
+            positionalArgs[0], positionalArgs[1], positionalArgs[2]);
       case 'BoxShadow.lerpList':
         return ({positionalArgs, namedArgs, typeArgs}) => BoxShadow.lerpList(
-            List<BoxShadow>.from(positionalArgs[0]), List<BoxShadow>.from(positionalArgs[1]), positionalArgs[2]);
+            List<BoxShadow>.from(positionalArgs[0]),
+            List<BoxShadow>.from(positionalArgs[1]),
+            positionalArgs[2]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -34,7 +44,7 @@ extension BoxShadowBinding on BoxShadow {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('BoxShadow');
+        return const HTType('BoxShadow');
       case 'spreadRadius':
         return spreadRadius;
       case 'color':
@@ -50,11 +60,12 @@ extension BoxShadowBinding on BoxShadow {
       case 'toPaint':
         return ({positionalArgs, namedArgs, typeArgs}) => toPaint();
       case 'scale':
-        return ({positionalArgs, namedArgs, typeArgs}) => scale(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            scale(positionalArgs[0]);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

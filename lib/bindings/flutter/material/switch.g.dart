@@ -17,27 +17,58 @@ class SwitchAutoBinding extends HTExternalClass {
             key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
             value: namedArgs['value'],
             onChanged: namedArgs['onChanged'],
-            activeColor: namedArgs.containsKey('activeColor') ? namedArgs['activeColor'] : null,
-            activeTrackColor: namedArgs.containsKey('activeTrackColor') ? namedArgs['activeTrackColor'] : null,
-            inactiveThumbColor: namedArgs.containsKey('inactiveThumbColor') ? namedArgs['inactiveThumbColor'] : null,
-            inactiveTrackColor: namedArgs.containsKey('inactiveTrackColor') ? namedArgs['inactiveTrackColor'] : null,
-            activeThumbImage: namedArgs.containsKey('activeThumbImage') ? namedArgs['activeThumbImage'] : null,
-            onActiveThumbImageError:
-                namedArgs.containsKey('onActiveThumbImageError') ? namedArgs['onActiveThumbImageError'] : null,
-            inactiveThumbImage: namedArgs.containsKey('inactiveThumbImage') ? namedArgs['inactiveThumbImage'] : null,
+            activeColor: namedArgs.containsKey('activeColor')
+                ? namedArgs['activeColor']
+                : null,
+            activeTrackColor: namedArgs.containsKey('activeTrackColor')
+                ? namedArgs['activeTrackColor']
+                : null,
+            inactiveThumbColor: namedArgs.containsKey('inactiveThumbColor')
+                ? namedArgs['inactiveThumbColor']
+                : null,
+            inactiveTrackColor: namedArgs.containsKey('inactiveTrackColor')
+                ? namedArgs['inactiveTrackColor']
+                : null,
+            activeThumbImage: namedArgs.containsKey('activeThumbImage')
+                ? namedArgs['activeThumbImage']
+                : null,
+            onActiveThumbImageError: namedArgs.containsKey('onActiveThumbImageError')
+                ? namedArgs['onActiveThumbImageError']
+                : null,
+            inactiveThumbImage: namedArgs.containsKey('inactiveThumbImage')
+                ? namedArgs['inactiveThumbImage']
+                : null,
             onInactiveThumbImageError:
-                namedArgs.containsKey('onInactiveThumbImageError') ? namedArgs['onInactiveThumbImageError'] : null,
-            thumbColor: namedArgs.containsKey('thumbColor') ? namedArgs['thumbColor'] : null,
-            trackColor: namedArgs.containsKey('trackColor') ? namedArgs['trackColor'] : null,
-            materialTapTargetSize:
-                namedArgs.containsKey('materialTapTargetSize') ? namedArgs['materialTapTargetSize'] : null,
-            dragStartBehavior:
-                namedArgs.containsKey('dragStartBehavior') ? namedArgs['dragStartBehavior'] : DragStartBehavior.start,
-            mouseCursor: namedArgs.containsKey('mouseCursor') ? namedArgs['mouseCursor'] : null,
-            focusColor: namedArgs.containsKey('focusColor') ? namedArgs['focusColor'] : null,
-            hoverColor: namedArgs.containsKey('hoverColor') ? namedArgs['hoverColor'] : null,
-            overlayColor: namedArgs.containsKey('overlayColor') ? namedArgs['overlayColor'] : null,
-            splashRadius: namedArgs.containsKey('splashRadius') ? namedArgs['splashRadius'] : null,
+                namedArgs.containsKey('onInactiveThumbImageError')
+                    ? namedArgs['onInactiveThumbImageError']
+                    : null,
+            thumbColor: namedArgs.containsKey('thumbColor')
+                ? namedArgs['thumbColor']
+                : null,
+            trackColor: namedArgs.containsKey('trackColor')
+                ? namedArgs['trackColor']
+                : null,
+            materialTapTargetSize: namedArgs.containsKey('materialTapTargetSize')
+                ? namedArgs['materialTapTargetSize']
+                : null,
+            dragStartBehavior: namedArgs.containsKey('dragStartBehavior')
+                ? namedArgs['dragStartBehavior']
+                : DragStartBehavior.start,
+            mouseCursor: namedArgs.containsKey('mouseCursor')
+                ? namedArgs['mouseCursor']
+                : null,
+            focusColor: namedArgs.containsKey('focusColor')
+                ? namedArgs['focusColor']
+                : null,
+            hoverColor: namedArgs.containsKey('hoverColor')
+                ? namedArgs['hoverColor']
+                : null,
+            overlayColor: namedArgs.containsKey('overlayColor')
+                ? namedArgs['overlayColor']
+                : null,
+            splashRadius: namedArgs.containsKey('splashRadius')
+                ? namedArgs['splashRadius']
+                : null,
             focusNode: namedArgs.containsKey('focusNode') ? namedArgs['focusNode'] : null,
             autofocus: namedArgs.containsKey('autofocus') ? namedArgs['autofocus'] : false);
       case 'Switch.adaptive':
@@ -45,31 +76,56 @@ class SwitchAutoBinding extends HTExternalClass {
             key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
             value: namedArgs['value'],
             onChanged: namedArgs['onChanged'],
-            activeColor: namedArgs.containsKey('activeColor') ? namedArgs['activeColor'] : null,
-            activeTrackColor: namedArgs.containsKey('activeTrackColor') ? namedArgs['activeTrackColor'] : null,
-            inactiveThumbColor: namedArgs.containsKey('inactiveThumbColor') ? namedArgs['inactiveThumbColor'] : null,
-            inactiveTrackColor: namedArgs.containsKey('inactiveTrackColor') ? namedArgs['inactiveTrackColor'] : null,
-            activeThumbImage: namedArgs.containsKey('activeThumbImage') ? namedArgs['activeThumbImage'] : null,
-            onActiveThumbImageError:
-                namedArgs.containsKey('onActiveThumbImageError') ? namedArgs['onActiveThumbImageError'] : null,
-            inactiveThumbImage: namedArgs.containsKey('inactiveThumbImage') ? namedArgs['inactiveThumbImage'] : null,
+            activeColor: namedArgs.containsKey('activeColor')
+                ? namedArgs['activeColor']
+                : null,
+            activeTrackColor: namedArgs.containsKey('activeTrackColor')
+                ? namedArgs['activeTrackColor']
+                : null,
+            inactiveThumbColor: namedArgs.containsKey('inactiveThumbColor')
+                ? namedArgs['inactiveThumbColor']
+                : null,
+            inactiveTrackColor: namedArgs.containsKey('inactiveTrackColor')
+                ? namedArgs['inactiveTrackColor']
+                : null,
+            activeThumbImage: namedArgs.containsKey('activeThumbImage')
+                ? namedArgs['activeThumbImage']
+                : null,
+            onActiveThumbImageError: namedArgs.containsKey('onActiveThumbImageError')
+                ? namedArgs['onActiveThumbImageError']
+                : null,
+            inactiveThumbImage: namedArgs.containsKey('inactiveThumbImage')
+                ? namedArgs['inactiveThumbImage']
+                : null,
             onInactiveThumbImageError:
-                namedArgs.containsKey('onInactiveThumbImageError') ? namedArgs['onInactiveThumbImageError'] : null,
-            materialTapTargetSize:
-                namedArgs.containsKey('materialTapTargetSize') ? namedArgs['materialTapTargetSize'] : null,
-            thumbColor: namedArgs.containsKey('thumbColor') ? namedArgs['thumbColor'] : null,
-            trackColor: namedArgs.containsKey('trackColor') ? namedArgs['trackColor'] : null,
-            dragStartBehavior:
-                namedArgs.containsKey('dragStartBehavior') ? namedArgs['dragStartBehavior'] : DragStartBehavior.start,
-            mouseCursor: namedArgs.containsKey('mouseCursor') ? namedArgs['mouseCursor'] : null,
-            focusColor: namedArgs.containsKey('focusColor') ? namedArgs['focusColor'] : null,
+                namedArgs.containsKey('onInactiveThumbImageError')
+                    ? namedArgs['onInactiveThumbImageError']
+                    : null,
+            materialTapTargetSize: namedArgs.containsKey('materialTapTargetSize')
+                ? namedArgs['materialTapTargetSize']
+                : null,
+            thumbColor: namedArgs.containsKey('thumbColor')
+                ? namedArgs['thumbColor']
+                : null,
+            trackColor: namedArgs.containsKey('trackColor')
+                ? namedArgs['trackColor']
+                : null,
+            dragStartBehavior: namedArgs.containsKey('dragStartBehavior')
+                ? namedArgs['dragStartBehavior']
+                : DragStartBehavior.start,
+            mouseCursor: namedArgs.containsKey('mouseCursor')
+                ? namedArgs['mouseCursor']
+                : null,
+            focusColor: namedArgs.containsKey('focusColor')
+                ? namedArgs['focusColor']
+                : null,
             hoverColor: namedArgs.containsKey('hoverColor') ? namedArgs['hoverColor'] : null,
             overlayColor: namedArgs.containsKey('overlayColor') ? namedArgs['overlayColor'] : null,
             splashRadius: namedArgs.containsKey('splashRadius') ? namedArgs['splashRadius'] : null,
             focusNode: namedArgs.containsKey('focusNode') ? namedArgs['focusNode'] : null,
             autofocus: namedArgs.containsKey('autofocus') ? namedArgs['autofocus'] : false);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -80,8 +136,9 @@ class SwitchAutoBinding extends HTExternalClass {
 
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'ImageErrorListener': (HTFunction function) =>
-          (exception, stackTrace) => function.call(positionalArgs: [exception, stackTrace], namedArgs: const {}),
+      'ImageErrorListener': (HTFunction function) => (exception, stackTrace) =>
+          function.call(
+              positionalArgs: [exception, stackTrace], namedArgs: const {}),
     };
   }
 }
@@ -90,7 +147,7 @@ extension SwitchBinding on Switch {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('Switch');
+        return const HTType('Switch');
       case 'value':
         return value;
       case 'onChanged':
@@ -140,29 +197,41 @@ extension SwitchBinding on Switch {
       case 'createState':
         return ({positionalArgs, namedArgs, typeArgs}) => createState();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'createElement':
         return ({positionalArgs, namedArgs, typeArgs}) => createElement();
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'toStringShallow':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
-            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            joiner:
+                namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

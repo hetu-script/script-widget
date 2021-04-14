@@ -10,11 +10,15 @@ class TapDownDetailsAutoBinding extends HTExternalClass {
     switch (varName) {
       case 'TapDownDetails':
         return ({positionalArgs, namedArgs, typeArgs}) => TapDownDetails(
-            globalPosition: namedArgs.containsKey('globalPosition') ? namedArgs['globalPosition'] : Offset.zero,
-            localPosition: namedArgs.containsKey('localPosition') ? namedArgs['localPosition'] : null,
+            globalPosition: namedArgs.containsKey('globalPosition')
+                ? namedArgs['globalPosition']
+                : Offset.zero,
+            localPosition: namedArgs.containsKey('localPosition')
+                ? namedArgs['localPosition']
+                : null,
             kind: namedArgs.containsKey('kind') ? namedArgs['kind'] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -28,7 +32,7 @@ extension TapDownDetailsBinding on TapDownDetails {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('TapDownDetails');
+        return const HTType('TapDownDetails');
       case 'globalPosition':
         return globalPosition;
       case 'kind':
@@ -36,7 +40,7 @@ extension TapDownDetailsBinding on TapDownDetails {
       case 'localPosition':
         return localPosition;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -50,10 +54,14 @@ class TapUpDetailsAutoBinding extends HTExternalClass {
       case 'TapUpDetails':
         return ({positionalArgs, namedArgs, typeArgs}) => TapUpDetails(
             kind: namedArgs['kind'],
-            globalPosition: namedArgs.containsKey('globalPosition') ? namedArgs['globalPosition'] : Offset.zero,
-            localPosition: namedArgs.containsKey('localPosition') ? namedArgs['localPosition'] : null);
+            globalPosition: namedArgs.containsKey('globalPosition')
+                ? namedArgs['globalPosition']
+                : Offset.zero,
+            localPosition: namedArgs.containsKey('localPosition')
+                ? namedArgs['localPosition']
+                : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -67,7 +75,7 @@ extension TapUpDetailsBinding on TapUpDetails {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('TapUpDetails');
+        return const HTType('TapUpDetails');
       case 'globalPosition':
         return globalPosition;
       case 'localPosition':
@@ -75,7 +83,7 @@ extension TapUpDetailsBinding on TapUpDetails {
       case 'kind':
         return kind;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -87,10 +95,12 @@ class TapGestureRecognizerAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'TapGestureRecognizer':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            TapGestureRecognizer(debugOwner: namedArgs.containsKey('debugOwner') ? namedArgs['debugOwner'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => TapGestureRecognizer(
+            debugOwner: namedArgs.containsKey('debugOwner')
+                ? namedArgs['debugOwner']
+                : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -109,7 +119,7 @@ extension TapGestureRecognizerBinding on TapGestureRecognizer {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('TapGestureRecognizer');
+        return const HTType('TapGestureRecognizer');
       case 'onTapDown':
         return onTapDown;
       case 'onTapUp':
@@ -151,43 +161,65 @@ extension TapGestureRecognizerBinding on TapGestureRecognizer {
       case 'team':
         return team;
       case 'isPointerAllowed':
-        return ({positionalArgs, namedArgs, typeArgs}) => isPointerAllowed(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            isPointerAllowed(positionalArgs[0]);
       case 'addAllowedPointer':
-        return ({positionalArgs, namedArgs, typeArgs}) => addAllowedPointer(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            addAllowedPointer(positionalArgs[0]);
       case 'handlePrimaryPointer':
-        return ({positionalArgs, namedArgs, typeArgs}) => handlePrimaryPointer(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            handlePrimaryPointer(positionalArgs[0]);
       case 'resolve':
-        return ({positionalArgs, namedArgs, typeArgs}) => resolve(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            resolve(positionalArgs[0]);
       case 'didExceedDeadline':
         return ({positionalArgs, namedArgs, typeArgs}) => didExceedDeadline();
       case 'acceptGesture':
-        return ({positionalArgs, namedArgs, typeArgs}) => acceptGesture(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            acceptGesture(positionalArgs[0]);
       case 'rejectGesture':
-        return ({positionalArgs, namedArgs, typeArgs}) => rejectGesture(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            rejectGesture(positionalArgs[0]);
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'handleEvent':
-        return ({positionalArgs, namedArgs, typeArgs}) => handleEvent(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            handleEvent(positionalArgs[0]);
       case 'didStopTrackingLastPointer':
-        return ({positionalArgs, namedArgs, typeArgs}) => didStopTrackingLastPointer(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            didStopTrackingLastPointer(positionalArgs[0]);
       case 'dispose':
         return ({positionalArgs, namedArgs, typeArgs}) => dispose();
       case 'handleNonAllowedPointer':
-        return ({positionalArgs, namedArgs, typeArgs}) => handleNonAllowedPointer(positionalArgs[0]);
-      case 'addPointer':
-        return ({positionalArgs, namedArgs, typeArgs}) => addPointer(positionalArgs[0]);
-      case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+            handleNonAllowedPointer(positionalArgs[0]);
+      case 'addPointer':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            addPointer(positionalArgs[0]);
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       case 'toStringShallow':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
-            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            joiner:
+                namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'toDiagnosticsNode':
@@ -195,9 +227,10 @@ extension TapGestureRecognizerBinding on TapGestureRecognizer {
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'debugDescribeChildren':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugDescribeChildren();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugDescribeChildren();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -246,7 +279,7 @@ extension TapGestureRecognizerBinding on TapGestureRecognizer {
         initialPosition = value;
         break;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

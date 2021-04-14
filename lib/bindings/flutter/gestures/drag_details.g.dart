@@ -10,10 +10,14 @@ class DragDownDetailsAutoBinding extends HTExternalClass {
     switch (varName) {
       case 'DragDownDetails':
         return ({positionalArgs, namedArgs, typeArgs}) => DragDownDetails(
-            globalPosition: namedArgs.containsKey('globalPosition') ? namedArgs['globalPosition'] : Offset.zero,
-            localPosition: namedArgs.containsKey('localPosition') ? namedArgs['localPosition'] : null);
+            globalPosition: namedArgs.containsKey('globalPosition')
+                ? namedArgs['globalPosition']
+                : Offset.zero,
+            localPosition: namedArgs.containsKey('localPosition')
+                ? namedArgs['localPosition']
+                : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -27,7 +31,7 @@ extension DragDownDetailsBinding on DragDownDetails {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('DragDownDetails');
+        return const HTType('DragDownDetails');
       case 'globalPosition':
         return globalPosition;
       case 'localPosition':
@@ -35,7 +39,7 @@ extension DragDownDetailsBinding on DragDownDetails {
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -48,12 +52,18 @@ class DragStartDetailsAutoBinding extends HTExternalClass {
     switch (varName) {
       case 'DragStartDetails':
         return ({positionalArgs, namedArgs, typeArgs}) => DragStartDetails(
-            sourceTimeStamp: namedArgs.containsKey('sourceTimeStamp') ? namedArgs['sourceTimeStamp'] : null,
-            globalPosition: namedArgs.containsKey('globalPosition') ? namedArgs['globalPosition'] : Offset.zero,
-            localPosition: namedArgs.containsKey('localPosition') ? namedArgs['localPosition'] : null,
+            sourceTimeStamp: namedArgs.containsKey('sourceTimeStamp')
+                ? namedArgs['sourceTimeStamp']
+                : null,
+            globalPosition: namedArgs.containsKey('globalPosition')
+                ? namedArgs['globalPosition']
+                : Offset.zero,
+            localPosition: namedArgs.containsKey('localPosition')
+                ? namedArgs['localPosition']
+                : null,
             kind: namedArgs.containsKey('kind') ? namedArgs['kind'] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -67,7 +77,7 @@ extension DragStartDetailsBinding on DragStartDetails {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('DragStartDetails');
+        return const HTType('DragStartDetails');
       case 'sourceTimeStamp':
         return sourceTimeStamp;
       case 'globalPosition':
@@ -79,7 +89,7 @@ extension DragStartDetailsBinding on DragStartDetails {
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -92,13 +102,21 @@ class DragUpdateDetailsAutoBinding extends HTExternalClass {
     switch (varName) {
       case 'DragUpdateDetails':
         return ({positionalArgs, namedArgs, typeArgs}) => DragUpdateDetails(
-            sourceTimeStamp: namedArgs.containsKey('sourceTimeStamp') ? namedArgs['sourceTimeStamp'] : null,
-            delta: namedArgs.containsKey('delta') ? namedArgs['delta'] : Offset.zero,
-            primaryDelta: namedArgs.containsKey('primaryDelta') ? namedArgs['primaryDelta'] : null,
+            sourceTimeStamp: namedArgs.containsKey('sourceTimeStamp')
+                ? namedArgs['sourceTimeStamp']
+                : null,
+            delta: namedArgs.containsKey('delta')
+                ? namedArgs['delta']
+                : Offset.zero,
+            primaryDelta: namedArgs.containsKey('primaryDelta')
+                ? namedArgs['primaryDelta']
+                : null,
             globalPosition: namedArgs['globalPosition'],
-            localPosition: namedArgs.containsKey('localPosition') ? namedArgs['localPosition'] : null);
+            localPosition: namedArgs.containsKey('localPosition')
+                ? namedArgs['localPosition']
+                : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -112,7 +130,7 @@ extension DragUpdateDetailsBinding on DragUpdateDetails {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('DragUpdateDetails');
+        return const HTType('DragUpdateDetails');
       case 'sourceTimeStamp':
         return sourceTimeStamp;
       case 'delta':
@@ -126,7 +144,7 @@ extension DragUpdateDetailsBinding on DragUpdateDetails {
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -139,10 +157,14 @@ class DragEndDetailsAutoBinding extends HTExternalClass {
     switch (varName) {
       case 'DragEndDetails':
         return ({positionalArgs, namedArgs, typeArgs}) => DragEndDetails(
-            velocity: namedArgs.containsKey('velocity') ? namedArgs['velocity'] : Velocity.zero,
-            primaryVelocity: namedArgs.containsKey('primaryVelocity') ? namedArgs['primaryVelocity'] : null);
+            velocity: namedArgs.containsKey('velocity')
+                ? namedArgs['velocity']
+                : Velocity.zero,
+            primaryVelocity: namedArgs.containsKey('primaryVelocity')
+                ? namedArgs['primaryVelocity']
+                : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -156,7 +178,7 @@ extension DragEndDetailsBinding on DragEndDetails {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('DragEndDetails');
+        return const HTType('DragEndDetails');
       case 'velocity':
         return velocity;
       case 'primaryVelocity':
@@ -164,7 +186,7 @@ extension DragEndDetailsBinding on DragEndDetails {
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

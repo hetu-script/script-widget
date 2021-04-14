@@ -8,9 +8,10 @@ class MaterialColorAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'MaterialColor':
-        return ({positionalArgs, namedArgs, typeArgs}) => MaterialColor(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            MaterialColor(positionalArgs[0], positionalArgs[1]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -24,7 +25,7 @@ extension MaterialColorBinding on MaterialColor {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('MaterialColor');
+        return const HTType('MaterialColor');
       case 'value':
         return value;
       case 'shade50':
@@ -62,19 +63,24 @@ extension MaterialColorBinding on MaterialColor {
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       case 'withAlpha':
-        return ({positionalArgs, namedArgs, typeArgs}) => withAlpha(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            withAlpha(positionalArgs[0]);
       case 'withOpacity':
-        return ({positionalArgs, namedArgs, typeArgs}) => withOpacity(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            withOpacity(positionalArgs[0]);
       case 'withRed':
-        return ({positionalArgs, namedArgs, typeArgs}) => withRed(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            withRed(positionalArgs[0]);
       case 'withGreen':
-        return ({positionalArgs, namedArgs, typeArgs}) => withGreen(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            withGreen(positionalArgs[0]);
       case 'withBlue':
-        return ({positionalArgs, namedArgs, typeArgs}) => withBlue(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            withBlue(positionalArgs[0]);
       case 'computeLuminance':
         return ({positionalArgs, namedArgs, typeArgs}) => computeLuminance();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -86,9 +92,10 @@ class MaterialAccentColorAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'MaterialAccentColor':
-        return ({positionalArgs, namedArgs, typeArgs}) => MaterialAccentColor(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            MaterialAccentColor(positionalArgs[0], positionalArgs[1]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -102,7 +109,7 @@ extension MaterialAccentColorBinding on MaterialAccentColor {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('MaterialAccentColor');
+        return const HTType('MaterialAccentColor');
       case 'value':
         return value;
       case 'shade50':
@@ -130,19 +137,24 @@ extension MaterialAccentColorBinding on MaterialAccentColor {
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       case 'withAlpha':
-        return ({positionalArgs, namedArgs, typeArgs}) => withAlpha(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            withAlpha(positionalArgs[0]);
       case 'withOpacity':
-        return ({positionalArgs, namedArgs, typeArgs}) => withOpacity(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            withOpacity(positionalArgs[0]);
       case 'withRed':
-        return ({positionalArgs, namedArgs, typeArgs}) => withRed(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            withRed(positionalArgs[0]);
       case 'withGreen':
-        return ({positionalArgs, namedArgs, typeArgs}) => withGreen(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            withGreen(positionalArgs[0]);
       case 'withBlue':
-        return ({positionalArgs, namedArgs, typeArgs}) => withBlue(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            withBlue(positionalArgs[0]);
       case 'computeLuminance':
         return ({positionalArgs, namedArgs, typeArgs}) => computeLuminance();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -262,7 +274,7 @@ class ColorsAutoBinding extends HTExternalClass {
       case 'Colors.accents':
         return Colors.accents;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

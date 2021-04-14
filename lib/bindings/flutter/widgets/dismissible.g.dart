@@ -25,7 +25,7 @@ class DismissDirectionAutoBinding extends HTExternalClass {
       case 'DismissDirection.none':
         return DismissDirection.none;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -33,13 +33,14 @@ class DismissDirectionAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('DismissDirection');
+        return const HTType('DismissDirection');
       case 'index':
         return (instance as DismissDirection).index;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => (instance as DismissDirection).toString();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            (instance as DismissDirection).toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -54,12 +55,24 @@ class DismissibleAutoBinding extends HTExternalClass {
         return ({positionalArgs, namedArgs, typeArgs}) => Dismissible(
             key: namedArgs['key'],
             child: namedArgs['child'],
-            background: namedArgs.containsKey('background') ? namedArgs['background'] : null,
-            secondaryBackground: namedArgs.containsKey('secondaryBackground') ? namedArgs['secondaryBackground'] : null,
-            confirmDismiss: namedArgs.containsKey('confirmDismiss') ? namedArgs['confirmDismiss'] : null,
-            onResize: namedArgs.containsKey('onResize') ? namedArgs['onResize'] : null,
-            onDismissed: namedArgs.containsKey('onDismissed') ? namedArgs['onDismissed'] : null,
-            direction: namedArgs.containsKey('direction') ? namedArgs['direction'] : DismissDirection.horizontal,
+            background: namedArgs.containsKey('background')
+                ? namedArgs['background']
+                : null,
+            secondaryBackground: namedArgs.containsKey('secondaryBackground')
+                ? namedArgs['secondaryBackground']
+                : null,
+            confirmDismiss: namedArgs.containsKey('confirmDismiss')
+                ? namedArgs['confirmDismiss']
+                : null,
+            onResize: namedArgs.containsKey('onResize')
+                ? namedArgs['onResize']
+                : null,
+            onDismissed: namedArgs.containsKey('onDismissed')
+                ? namedArgs['onDismissed']
+                : null,
+            direction: namedArgs.containsKey('direction')
+                ? namedArgs['direction']
+                : DismissDirection.horizontal,
             resizeDuration: namedArgs.containsKey('resizeDuration')
                 ? namedArgs['resizeDuration']
                 : const Duration(milliseconds: 300),
@@ -69,12 +82,17 @@ class DismissibleAutoBinding extends HTExternalClass {
             movementDuration: namedArgs.containsKey('movementDuration')
                 ? namedArgs['movementDuration']
                 : const Duration(milliseconds: 200),
-            crossAxisEndOffset: namedArgs.containsKey('crossAxisEndOffset') ? namedArgs['crossAxisEndOffset'] : 0.0,
-            dragStartBehavior:
-                namedArgs.containsKey('dragStartBehavior') ? namedArgs['dragStartBehavior'] : DragStartBehavior.start,
-            behavior: namedArgs.containsKey('behavior') ? namedArgs['behavior'] : HitTestBehavior.opaque);
+            crossAxisEndOffset: namedArgs.containsKey('crossAxisEndOffset')
+                ? namedArgs['crossAxisEndOffset']
+                : 0.0,
+            dragStartBehavior: namedArgs.containsKey('dragStartBehavior')
+                ? namedArgs['dragStartBehavior']
+                : DragStartBehavior.start,
+            behavior: namedArgs.containsKey('behavior')
+                ? namedArgs['behavior']
+                : HitTestBehavior.opaque);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -85,11 +103,13 @@ class DismissibleAutoBinding extends HTExternalClass {
 
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'ConfirmDismissCallback': (HTFunction function) =>
-          (direction) => function.call(positionalArgs: [direction], namedArgs: const {}) as Future<bool?>,
-      'VoidCallback': (HTFunction function) => () => function.call(positionalArgs: const [], namedArgs: const {}),
-      'DismissDirectionCallback': (HTFunction function) =>
-          (direction) => function.call(positionalArgs: [direction], namedArgs: const {}),
+      'ConfirmDismissCallback': (HTFunction function) => (direction) =>
+          function.call(positionalArgs: [direction], namedArgs: const {})
+              as Future<bool?>,
+      'VoidCallback': (HTFunction function) =>
+          () => function.call(positionalArgs: const [], namedArgs: const {}),
+      'DismissDirectionCallback': (HTFunction function) => (direction) =>
+          function.call(positionalArgs: [direction], namedArgs: const {}),
     };
   }
 }
@@ -98,7 +118,7 @@ extension DismissibleBinding on Dismissible {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('Dismissible');
+        return const HTType('Dismissible');
       case 'child':
         return child;
       case 'background':
@@ -136,25 +156,37 @@ extension DismissibleBinding on Dismissible {
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'toStringShallow':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
-            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            joiner:
+                namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

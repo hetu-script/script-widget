@@ -8,9 +8,10 @@ class DeferredLoadExceptionAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'DeferredLoadException':
-        return ({positionalArgs, namedArgs, typeArgs}) => DeferredLoadException(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            DeferredLoadException(positionalArgs[0]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -24,11 +25,11 @@ extension DeferredLoadExceptionBinding on DeferredLoadException {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('DeferredLoadException');
+        return const HTType('DeferredLoadException');
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

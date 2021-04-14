@@ -16,7 +16,7 @@ class GrowthDirectionAutoBinding extends HTExternalClass {
       case 'GrowthDirection.reverse':
         return GrowthDirection.reverse;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -24,13 +24,14 @@ class GrowthDirectionAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('GrowthDirection');
+        return const HTType('GrowthDirection');
       case 'index':
         return (instance as GrowthDirection).index;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => (instance as GrowthDirection).toString();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            (instance as GrowthDirection).toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -56,7 +57,7 @@ class SliverConstraintsAutoBinding extends HTExternalClass {
             remainingCacheExtent: namedArgs['remainingCacheExtent'],
             cacheOrigin: namedArgs['cacheOrigin']);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -67,8 +68,9 @@ class SliverConstraintsAutoBinding extends HTExternalClass {
 
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'InformationCollector': (HTFunction function) =>
-          () => function.call(positionalArgs: const [], namedArgs: const {}) as Iterable<DiagnosticsNode>,
+      'InformationCollector': (HTFunction function) => () =>
+          function.call(positionalArgs: const [], namedArgs: const {})
+              as Iterable<DiagnosticsNode>,
     };
   }
 }
@@ -77,7 +79,7 @@ extension SliverConstraintsBinding on SliverConstraints {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('SliverConstraints');
+        return const HTType('SliverConstraints');
       case 'axisDirection':
         return axisDirection;
       case 'growthDirection':
@@ -114,37 +116,66 @@ extension SliverConstraintsBinding on SliverConstraints {
         return hashCode;
       case 'copyWith':
         return ({positionalArgs, namedArgs, typeArgs}) => copyWith(
-            axisDirection: namedArgs.containsKey('axisDirection') ? namedArgs['axisDirection'] : null,
-            growthDirection: namedArgs.containsKey('growthDirection') ? namedArgs['growthDirection'] : null,
-            userScrollDirection: namedArgs.containsKey('userScrollDirection') ? namedArgs['userScrollDirection'] : null,
-            scrollOffset: namedArgs.containsKey('scrollOffset') ? namedArgs['scrollOffset'] : null,
+            axisDirection: namedArgs.containsKey('axisDirection')
+                ? namedArgs['axisDirection']
+                : null,
+            growthDirection: namedArgs.containsKey('growthDirection')
+                ? namedArgs['growthDirection']
+                : null,
+            userScrollDirection: namedArgs.containsKey('userScrollDirection')
+                ? namedArgs['userScrollDirection']
+                : null,
+            scrollOffset: namedArgs.containsKey('scrollOffset')
+                ? namedArgs['scrollOffset']
+                : null,
             precedingScrollExtent:
-                namedArgs.containsKey('precedingScrollExtent') ? namedArgs['precedingScrollExtent'] : null,
-            overlap: namedArgs.containsKey('overlap') ? namedArgs['overlap'] : null,
-            remainingPaintExtent:
-                namedArgs.containsKey('remainingPaintExtent') ? namedArgs['remainingPaintExtent'] : null,
-            crossAxisExtent: namedArgs.containsKey('crossAxisExtent') ? namedArgs['crossAxisExtent'] : null,
-            crossAxisDirection: namedArgs.containsKey('crossAxisDirection') ? namedArgs['crossAxisDirection'] : null,
+                namedArgs.containsKey('precedingScrollExtent')
+                    ? namedArgs['precedingScrollExtent']
+                    : null,
+            overlap:
+                namedArgs.containsKey('overlap') ? namedArgs['overlap'] : null,
+            remainingPaintExtent: namedArgs.containsKey('remainingPaintExtent')
+                ? namedArgs['remainingPaintExtent']
+                : null,
+            crossAxisExtent: namedArgs.containsKey('crossAxisExtent')
+                ? namedArgs['crossAxisExtent']
+                : null,
+            crossAxisDirection: namedArgs.containsKey('crossAxisDirection')
+                ? namedArgs['crossAxisDirection']
+                : null,
             viewportMainAxisExtent:
-                namedArgs.containsKey('viewportMainAxisExtent') ? namedArgs['viewportMainAxisExtent'] : null,
-            remainingCacheExtent:
-                namedArgs.containsKey('remainingCacheExtent') ? namedArgs['remainingCacheExtent'] : null,
-            cacheOrigin: namedArgs.containsKey('cacheOrigin') ? namedArgs['cacheOrigin'] : null);
+                namedArgs.containsKey('viewportMainAxisExtent')
+                    ? namedArgs['viewportMainAxisExtent']
+                    : null,
+            remainingCacheExtent: namedArgs.containsKey('remainingCacheExtent')
+                ? namedArgs['remainingCacheExtent']
+                : null,
+            cacheOrigin: namedArgs.containsKey('cacheOrigin')
+                ? namedArgs['cacheOrigin']
+                : null);
       case 'asBoxConstraints':
         return ({positionalArgs, namedArgs, typeArgs}) => asBoxConstraints(
-            minExtent: namedArgs.containsKey('minExtent') ? namedArgs['minExtent'] : 0.0,
-            maxExtent: namedArgs.containsKey('maxExtent') ? namedArgs['maxExtent'] : double.infinity,
-            crossAxisExtent: namedArgs.containsKey('crossAxisExtent') ? namedArgs['crossAxisExtent'] : null);
+            minExtent: namedArgs.containsKey('minExtent')
+                ? namedArgs['minExtent']
+                : 0.0,
+            maxExtent: namedArgs.containsKey('maxExtent')
+                ? namedArgs['maxExtent']
+                : double.infinity,
+            crossAxisExtent: namedArgs.containsKey('crossAxisExtent')
+                ? namedArgs['crossAxisExtent']
+                : null);
       case 'debugAssertIsValid':
         return ({positionalArgs, namedArgs, typeArgs}) => debugAssertIsValid(
-            isAppliedConstraint:
-                namedArgs.containsKey('isAppliedConstraint') ? namedArgs['isAppliedConstraint'] : false,
-            informationCollector:
-                namedArgs.containsKey('informationCollector') ? namedArgs['informationCollector'] : null);
+            isAppliedConstraint: namedArgs.containsKey('isAppliedConstraint')
+                ? namedArgs['isAppliedConstraint']
+                : false,
+            informationCollector: namedArgs.containsKey('informationCollector')
+                ? namedArgs['informationCollector']
+                : null);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -157,23 +188,44 @@ class SliverGeometryAutoBinding extends HTExternalClass {
     switch (varName) {
       case 'SliverGeometry':
         return ({positionalArgs, namedArgs, typeArgs}) => SliverGeometry(
-            scrollExtent: namedArgs.containsKey('scrollExtent') ? namedArgs['scrollExtent'] : 0.0,
-            paintExtent: namedArgs.containsKey('paintExtent') ? namedArgs['paintExtent'] : 0.0,
-            paintOrigin: namedArgs.containsKey('paintOrigin') ? namedArgs['paintOrigin'] : 0.0,
-            layoutExtent: namedArgs.containsKey('layoutExtent') ? namedArgs['layoutExtent'] : null,
-            maxPaintExtent: namedArgs.containsKey('maxPaintExtent') ? namedArgs['maxPaintExtent'] : 0.0,
+            scrollExtent: namedArgs.containsKey('scrollExtent')
+                ? namedArgs['scrollExtent']
+                : 0.0,
+            paintExtent: namedArgs.containsKey('paintExtent')
+                ? namedArgs['paintExtent']
+                : 0.0,
+            paintOrigin: namedArgs.containsKey('paintOrigin')
+                ? namedArgs['paintOrigin']
+                : 0.0,
+            layoutExtent: namedArgs.containsKey('layoutExtent')
+                ? namedArgs['layoutExtent']
+                : null,
+            maxPaintExtent: namedArgs.containsKey('maxPaintExtent')
+                ? namedArgs['maxPaintExtent']
+                : 0.0,
             maxScrollObstructionExtent:
-                namedArgs.containsKey('maxScrollObstructionExtent') ? namedArgs['maxScrollObstructionExtent'] : 0.0,
-            hitTestExtent: namedArgs.containsKey('hitTestExtent') ? namedArgs['hitTestExtent'] : null,
-            visible: namedArgs.containsKey('visible') ? namedArgs['visible'] : null,
-            hasVisualOverflow: namedArgs.containsKey('hasVisualOverflow') ? namedArgs['hasVisualOverflow'] : false,
+                namedArgs.containsKey('maxScrollObstructionExtent')
+                    ? namedArgs['maxScrollObstructionExtent']
+                    : 0.0,
+            hitTestExtent: namedArgs.containsKey('hitTestExtent')
+                ? namedArgs['hitTestExtent']
+                : null,
+            visible:
+                namedArgs.containsKey('visible') ? namedArgs['visible'] : null,
+            hasVisualOverflow: namedArgs.containsKey('hasVisualOverflow')
+                ? namedArgs['hasVisualOverflow']
+                : false,
             scrollOffsetCorrection:
-                namedArgs.containsKey('scrollOffsetCorrection') ? namedArgs['scrollOffsetCorrection'] : null,
-            cacheExtent: namedArgs.containsKey('cacheExtent') ? namedArgs['cacheExtent'] : null);
+                namedArgs.containsKey('scrollOffsetCorrection')
+                    ? namedArgs['scrollOffsetCorrection']
+                    : null,
+            cacheExtent: namedArgs.containsKey('cacheExtent')
+                ? namedArgs['cacheExtent']
+                : null);
       case 'SliverGeometry.zero':
         return SliverGeometry.zero;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -184,8 +236,9 @@ class SliverGeometryAutoBinding extends HTExternalClass {
 
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'InformationCollector': (HTFunction function) =>
-          () => function.call(positionalArgs: const [], namedArgs: const {}) as Iterable<DiagnosticsNode>,
+      'InformationCollector': (HTFunction function) => () =>
+          function.call(positionalArgs: const [], namedArgs: const {})
+              as Iterable<DiagnosticsNode>,
     };
   }
 }
@@ -194,7 +247,7 @@ extension SliverGeometryBinding on SliverGeometry {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('SliverGeometry');
+        return const HTType('SliverGeometry');
       case 'scrollExtent':
         return scrollExtent;
       case 'paintOrigin':
@@ -219,21 +272,25 @@ extension SliverGeometryBinding on SliverGeometry {
         return cacheExtent;
       case 'debugAssertIsValid':
         return ({positionalArgs, namedArgs, typeArgs}) => debugAssertIsValid(
-            informationCollector:
-                namedArgs.containsKey('informationCollector') ? namedArgs['informationCollector'] : null);
+            informationCollector: namedArgs.containsKey('informationCollector')
+                ? namedArgs['informationCollector']
+                : null);
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
-      case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+            debugFillProperties(positionalArgs[0]);
+      case 'toString':
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -247,9 +304,10 @@ class SliverHitTestResultAutoBinding extends HTExternalClass {
       case 'SliverHitTestResult':
         return ({positionalArgs, namedArgs, typeArgs}) => SliverHitTestResult();
       case 'SliverHitTestResult.wrap':
-        return ({positionalArgs, namedArgs, typeArgs}) => SliverHitTestResult.wrap(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            SliverHitTestResult.wrap(positionalArgs[0]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -260,9 +318,14 @@ class SliverHitTestResultAutoBinding extends HTExternalClass {
 
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'SliverHitTest': (HTFunction function) => (result, {mainAxisPosition, crossAxisPosition}) => function.call(
-          positionalArgs: [result],
-          namedArgs: {'mainAxisPosition': mainAxisPosition, 'crossAxisPosition': crossAxisPosition}) as bool,
+      'SliverHitTest': (HTFunction function) => (result,
+              {mainAxisPosition, crossAxisPosition}) =>
+          function.call(positionalArgs: [
+            result
+          ], namedArgs: {
+            'mainAxisPosition': mainAxisPosition,
+            'crossAxisPosition': crossAxisPosition
+          }) as bool,
     };
   }
 }
@@ -271,23 +334,35 @@ extension SliverHitTestResultBinding on SliverHitTestResult {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('SliverHitTestResult');
+        return const HTType('SliverHitTestResult');
       case 'path':
         return path;
       case 'addWithAxisOffset':
         return ({positionalArgs, namedArgs, typeArgs}) => addWithAxisOffset(
-            paintOffset: namedArgs.containsKey('paintOffset') ? namedArgs['paintOffset'] : null,
-            mainAxisOffset: namedArgs.containsKey('mainAxisOffset') ? namedArgs['mainAxisOffset'] : null,
-            crossAxisOffset: namedArgs.containsKey('crossAxisOffset') ? namedArgs['crossAxisOffset'] : null,
-            mainAxisPosition: namedArgs.containsKey('mainAxisPosition') ? namedArgs['mainAxisPosition'] : null,
-            crossAxisPosition: namedArgs.containsKey('crossAxisPosition') ? namedArgs['crossAxisPosition'] : null,
-            hitTest: namedArgs.containsKey('hitTest') ? namedArgs['hitTest'] : null);
+            paintOffset: namedArgs.containsKey('paintOffset')
+                ? namedArgs['paintOffset']
+                : null,
+            mainAxisOffset: namedArgs.containsKey('mainAxisOffset')
+                ? namedArgs['mainAxisOffset']
+                : null,
+            crossAxisOffset: namedArgs.containsKey('crossAxisOffset')
+                ? namedArgs['crossAxisOffset']
+                : null,
+            mainAxisPosition: namedArgs.containsKey('mainAxisPosition')
+                ? namedArgs['mainAxisPosition']
+                : null,
+            crossAxisPosition: namedArgs.containsKey('crossAxisPosition')
+                ? namedArgs['crossAxisPosition']
+                : null,
+            hitTest:
+                namedArgs.containsKey('hitTest') ? namedArgs['hitTest'] : null);
       case 'add':
-        return ({positionalArgs, namedArgs, typeArgs}) => add(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            add(positionalArgs[0]);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -299,10 +374,12 @@ class SliverHitTestEntryAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'SliverHitTestEntry':
-        return ({positionalArgs, namedArgs, typeArgs}) => SliverHitTestEntry(positionalArgs[0],
-            mainAxisPosition: namedArgs['mainAxisPosition'], crossAxisPosition: namedArgs['crossAxisPosition']);
+        return ({positionalArgs, namedArgs, typeArgs}) => SliverHitTestEntry(
+            positionalArgs[0],
+            mainAxisPosition: namedArgs['mainAxisPosition'],
+            crossAxisPosition: namedArgs['crossAxisPosition']);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -316,7 +393,7 @@ extension SliverHitTestEntryBinding on SliverHitTestEntry {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('SliverHitTestEntry');
+        return const HTType('SliverHitTestEntry');
       case 'mainAxisPosition':
         return mainAxisPosition;
       case 'crossAxisPosition':
@@ -328,7 +405,7 @@ extension SliverHitTestEntryBinding on SliverHitTestEntry {
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -340,9 +417,10 @@ class SliverLogicalParentDataAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'SliverLogicalParentData':
-        return ({positionalArgs, namedArgs, typeArgs}) => SliverLogicalParentData();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            SliverLogicalParentData();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -361,13 +439,13 @@ extension SliverLogicalParentDataBinding on SliverLogicalParentData {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('SliverLogicalParentData');
+        return const HTType('SliverLogicalParentData');
       case 'layoutOffset':
         return layoutOffset;
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -377,21 +455,23 @@ extension SliverLogicalParentDataBinding on SliverLogicalParentData {
         layoutOffset = value;
         break;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
 
 class SliverLogicalContainerParentDataAutoBinding extends HTExternalClass {
-  SliverLogicalContainerParentDataAutoBinding() : super('SliverLogicalContainerParentData');
+  SliverLogicalContainerParentDataAutoBinding()
+      : super('SliverLogicalContainerParentData');
 
   @override
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'SliverLogicalContainerParentData':
-        return ({positionalArgs, namedArgs, typeArgs}) => SliverLogicalContainerParentData();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            SliverLogicalContainerParentData();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -406,11 +486,12 @@ class SliverLogicalContainerParentDataAutoBinding extends HTExternalClass {
   }
 }
 
-extension SliverLogicalContainerParentDataBinding on SliverLogicalContainerParentData {
+extension SliverLogicalContainerParentDataBinding
+    on SliverLogicalContainerParentData {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('SliverLogicalContainerParentData');
+        return const HTType('SliverLogicalContainerParentData');
       case 'layoutOffset':
         return layoutOffset;
       case 'detach':
@@ -418,7 +499,7 @@ extension SliverLogicalContainerParentDataBinding on SliverLogicalContainerParen
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -428,7 +509,7 @@ extension SliverLogicalContainerParentDataBinding on SliverLogicalContainerParen
         layoutOffset = value;
         break;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -440,9 +521,10 @@ class SliverPhysicalParentDataAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'SliverPhysicalParentData':
-        return ({positionalArgs, namedArgs, typeArgs}) => SliverPhysicalParentData();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            SliverPhysicalParentData();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -461,15 +543,16 @@ extension SliverPhysicalParentDataBinding on SliverPhysicalParentData {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('SliverPhysicalParentData');
+        return const HTType('SliverPhysicalParentData');
       case 'paintOffset':
         return paintOffset;
       case 'applyPaintTransform':
-        return ({positionalArgs, namedArgs, typeArgs}) => applyPaintTransform(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            applyPaintTransform(positionalArgs[0]);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -479,21 +562,23 @@ extension SliverPhysicalParentDataBinding on SliverPhysicalParentData {
         paintOffset = value;
         break;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
 
 class SliverPhysicalContainerParentDataAutoBinding extends HTExternalClass {
-  SliverPhysicalContainerParentDataAutoBinding() : super('SliverPhysicalContainerParentData');
+  SliverPhysicalContainerParentDataAutoBinding()
+      : super('SliverPhysicalContainerParentData');
 
   @override
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'SliverPhysicalContainerParentData':
-        return ({positionalArgs, namedArgs, typeArgs}) => SliverPhysicalContainerParentData();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            SliverPhysicalContainerParentData();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -508,21 +593,23 @@ class SliverPhysicalContainerParentDataAutoBinding extends HTExternalClass {
   }
 }
 
-extension SliverPhysicalContainerParentDataBinding on SliverPhysicalContainerParentData {
+extension SliverPhysicalContainerParentDataBinding
+    on SliverPhysicalContainerParentData {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('SliverPhysicalContainerParentData');
+        return const HTType('SliverPhysicalContainerParentData');
       case 'paintOffset':
         return paintOffset;
       case 'detach':
         return ({positionalArgs, namedArgs, typeArgs}) => detach();
       case 'applyPaintTransform':
-        return ({positionalArgs, namedArgs, typeArgs}) => applyPaintTransform(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            applyPaintTransform(positionalArgs[0]);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -532,7 +619,7 @@ extension SliverPhysicalContainerParentDataBinding on SliverPhysicalContainerPar
         paintOffset = value;
         break;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -545,9 +632,11 @@ class RenderSliverToBoxAdapterAutoBinding extends HTExternalClass {
     switch (varName) {
       case 'RenderSliverToBoxAdapter':
         return ({positionalArgs, namedArgs, typeArgs}) =>
-            RenderSliverToBoxAdapter(child: namedArgs.containsKey('child') ? namedArgs['child'] : null);
+            RenderSliverToBoxAdapter(
+                child:
+                    namedArgs.containsKey('child') ? namedArgs['child'] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -563,8 +652,8 @@ class RenderSliverToBoxAdapterAutoBinding extends HTExternalClass {
 
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'RenderObjectVisitor': (HTFunction function) =>
-          (child) => function.call(positionalArgs: [child], namedArgs: const {}),
+      'RenderObjectVisitor': (HTFunction function) => (child) =>
+          function.call(positionalArgs: [child], namedArgs: const {}),
     };
   }
 }
@@ -573,7 +662,7 @@ extension RenderSliverToBoxAdapterBinding on RenderSliverToBoxAdapter {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('RenderSliverToBoxAdapter');
+        return const HTType('RenderSliverToBoxAdapter');
       case 'parentData':
         return parentData;
       case 'debugCreator':
@@ -623,135 +712,206 @@ extension RenderSliverToBoxAdapterBinding on RenderSliverToBoxAdapter {
       case 'performLayout':
         return ({positionalArgs, namedArgs, typeArgs}) => performLayout();
       case 'setupParentData':
-        return ({positionalArgs, namedArgs, typeArgs}) => setupParentData(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            setupParentData(positionalArgs[0]);
       case 'hitTestChildren':
-        return ({positionalArgs, namedArgs, typeArgs}) => hitTestChildren(positionalArgs[0],
-            mainAxisPosition: namedArgs.containsKey('mainAxisPosition') ? namedArgs['mainAxisPosition'] : null,
-            crossAxisPosition: namedArgs.containsKey('crossAxisPosition') ? namedArgs['crossAxisPosition'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => hitTestChildren(
+            positionalArgs[0],
+            mainAxisPosition: namedArgs.containsKey('mainAxisPosition')
+                ? namedArgs['mainAxisPosition']
+                : null,
+            crossAxisPosition: namedArgs.containsKey('crossAxisPosition')
+                ? namedArgs['crossAxisPosition']
+                : null);
       case 'childMainAxisPosition':
-        return ({positionalArgs, namedArgs, typeArgs}) => childMainAxisPosition(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            childMainAxisPosition(positionalArgs[0]);
       case 'applyPaintTransform':
-        return ({positionalArgs, namedArgs, typeArgs}) => applyPaintTransform(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            applyPaintTransform(positionalArgs[0], positionalArgs[1]);
       case 'paint':
-        return ({positionalArgs, namedArgs, typeArgs}) => paint(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            paint(positionalArgs[0], positionalArgs[1]);
       case 'debugValidateChild':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugValidateChild(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugValidateChild(positionalArgs[0]);
       case 'attach':
-        return ({positionalArgs, namedArgs, typeArgs}) => attach(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            attach(positionalArgs[0]);
       case 'detach':
         return ({positionalArgs, namedArgs, typeArgs}) => detach();
       case 'redepthChildren':
         return ({positionalArgs, namedArgs, typeArgs}) => redepthChildren();
       case 'visitChildren':
-        return ({positionalArgs, namedArgs, typeArgs}) => visitChildren(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            visitChildren(positionalArgs[0]);
       case 'debugDescribeChildren':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugDescribeChildren();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugDescribeChildren();
       case 'debugResetSize':
         return ({positionalArgs, namedArgs, typeArgs}) => debugResetSize();
       case 'debugAssertDoesMeetConstraints':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugAssertDoesMeetConstraints();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugAssertDoesMeetConstraints();
       case 'performResize':
         return ({positionalArgs, namedArgs, typeArgs}) => performResize();
       case 'hitTest':
-        return ({positionalArgs, namedArgs, typeArgs}) => hitTest(positionalArgs[0],
-            mainAxisPosition: namedArgs.containsKey('mainAxisPosition') ? namedArgs['mainAxisPosition'] : null,
-            crossAxisPosition: namedArgs.containsKey('crossAxisPosition') ? namedArgs['crossAxisPosition'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => hitTest(
+            positionalArgs[0],
+            mainAxisPosition: namedArgs.containsKey('mainAxisPosition')
+                ? namedArgs['mainAxisPosition']
+                : null,
+            crossAxisPosition: namedArgs.containsKey('crossAxisPosition')
+                ? namedArgs['crossAxisPosition']
+                : null);
       case 'calculatePaintOffset':
-        return ({positionalArgs, namedArgs, typeArgs}) => calculatePaintOffset(positionalArgs[0],
+        return ({positionalArgs, namedArgs, typeArgs}) => calculatePaintOffset(
+            positionalArgs[0],
             from: namedArgs.containsKey('from') ? namedArgs['from'] : null,
             to: namedArgs.containsKey('to') ? namedArgs['to'] : null);
       case 'calculateCacheOffset':
-        return ({positionalArgs, namedArgs, typeArgs}) => calculateCacheOffset(positionalArgs[0],
+        return ({positionalArgs, namedArgs, typeArgs}) => calculateCacheOffset(
+            positionalArgs[0],
             from: namedArgs.containsKey('from') ? namedArgs['from'] : null,
             to: namedArgs.containsKey('to') ? namedArgs['to'] : null);
       case 'childScrollOffset':
-        return ({positionalArgs, namedArgs, typeArgs}) => childScrollOffset(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            childScrollOffset(positionalArgs[0]);
       case 'debugPaint':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugPaint(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugPaint(positionalArgs[0], positionalArgs[1]);
       case 'handleEvent':
-        return ({positionalArgs, namedArgs, typeArgs}) => handleEvent(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            handleEvent(positionalArgs[0], positionalArgs[1]);
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'reassemble':
         return ({positionalArgs, namedArgs, typeArgs}) => reassemble();
       case 'adoptChild':
-        return ({positionalArgs, namedArgs, typeArgs}) => adoptChild(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            adoptChild(positionalArgs[0]);
       case 'dropChild':
-        return ({positionalArgs, namedArgs, typeArgs}) => dropChild(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            dropChild(positionalArgs[0]);
       case 'markNeedsLayout':
         return ({positionalArgs, namedArgs, typeArgs}) => markNeedsLayout();
       case 'markNeedsLayoutForSizedByParentChange':
-        return ({positionalArgs, namedArgs, typeArgs}) => markNeedsLayoutForSizedByParentChange();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            markNeedsLayoutForSizedByParentChange();
       case 'scheduleInitialLayout':
-        return ({positionalArgs, namedArgs, typeArgs}) => scheduleInitialLayout();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            scheduleInitialLayout();
       case 'layout':
-        return ({positionalArgs, namedArgs, typeArgs}) => layout(positionalArgs[0],
-            parentUsesSize: namedArgs.containsKey('parentUsesSize') ? namedArgs['parentUsesSize'] : false);
+        return ({positionalArgs, namedArgs, typeArgs}) => layout(
+            positionalArgs[0],
+            parentUsesSize: namedArgs.containsKey('parentUsesSize')
+                ? namedArgs['parentUsesSize']
+                : false);
       case 'rotate':
         return ({positionalArgs, namedArgs, typeArgs}) => rotate(
-            oldAngle: namedArgs.containsKey('oldAngle') ? namedArgs['oldAngle'] : null,
-            newAngle: namedArgs.containsKey('newAngle') ? namedArgs['newAngle'] : null,
+            oldAngle: namedArgs.containsKey('oldAngle')
+                ? namedArgs['oldAngle']
+                : null,
+            newAngle: namedArgs.containsKey('newAngle')
+                ? namedArgs['newAngle']
+                : null,
             time: namedArgs.containsKey('time') ? namedArgs['time'] : null);
       case 'debugRegisterRepaintBoundaryPaint':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugRegisterRepaintBoundaryPaint(
-            includedParent: namedArgs.containsKey('includedParent') ? namedArgs['includedParent'] : true,
-            includedChild: namedArgs.containsKey('includedChild') ? namedArgs['includedChild'] : false);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugRegisterRepaintBoundaryPaint(
+                includedParent: namedArgs.containsKey('includedParent')
+                    ? namedArgs['includedParent']
+                    : true,
+                includedChild: namedArgs.containsKey('includedChild')
+                    ? namedArgs['includedChild']
+                    : false);
       case 'markNeedsCompositingBitsUpdate':
-        return ({positionalArgs, namedArgs, typeArgs}) => markNeedsCompositingBitsUpdate();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            markNeedsCompositingBitsUpdate();
       case 'markNeedsPaint':
         return ({positionalArgs, namedArgs, typeArgs}) => markNeedsPaint();
       case 'scheduleInitialPaint':
-        return ({positionalArgs, namedArgs, typeArgs}) => scheduleInitialPaint(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            scheduleInitialPaint(positionalArgs[0]);
       case 'replaceRootLayer':
-        return ({positionalArgs, namedArgs, typeArgs}) => replaceRootLayer(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            replaceRootLayer(positionalArgs[0]);
       case 'getTransformTo':
-        return ({positionalArgs, namedArgs, typeArgs}) => getTransformTo(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            getTransformTo(positionalArgs[0]);
       case 'describeApproximatePaintClip':
-        return ({positionalArgs, namedArgs, typeArgs}) => describeApproximatePaintClip(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            describeApproximatePaintClip(positionalArgs[0]);
       case 'describeSemanticsClip':
-        return ({positionalArgs, namedArgs, typeArgs}) => describeSemanticsClip(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            describeSemanticsClip(positionalArgs[0]);
       case 'scheduleInitialSemantics':
-        return ({positionalArgs, namedArgs, typeArgs}) => scheduleInitialSemantics();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            scheduleInitialSemantics();
       case 'sendSemanticsEvent':
-        return ({positionalArgs, namedArgs, typeArgs}) => sendSemanticsEvent(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            sendSemanticsEvent(positionalArgs[0]);
       case 'clearSemantics':
         return ({positionalArgs, namedArgs, typeArgs}) => clearSemantics();
       case 'markNeedsSemanticsUpdate':
-        return ({positionalArgs, namedArgs, typeArgs}) => markNeedsSemanticsUpdate();
-      case 'visitChildrenForSemantics':
-        return ({positionalArgs, namedArgs, typeArgs}) => visitChildrenForSemantics(positionalArgs[0]);
-      case 'assembleSemanticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) =>
-            assembleSemanticsNode(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
+            markNeedsSemanticsUpdate();
+      case 'visitChildrenForSemantics':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            visitChildrenForSemantics(positionalArgs[0]);
+      case 'assembleSemanticsNode':
+        return ({positionalArgs, namedArgs, typeArgs}) => assembleSemanticsNode(
+            positionalArgs[0], positionalArgs[1], positionalArgs[2]);
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : '',
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : '',
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringShallow':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
-            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            joiner:
+                namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'showOnScreen':
         return ({positionalArgs, namedArgs, typeArgs}) => showOnScreen(
-            descendant: namedArgs.containsKey('descendant') ? namedArgs['descendant'] : null,
+            descendant: namedArgs.containsKey('descendant')
+                ? namedArgs['descendant']
+                : null,
             rect: namedArgs.containsKey('rect') ? namedArgs['rect'] : null,
-            duration: namedArgs.containsKey('duration') ? namedArgs['duration'] : Duration.zero,
-            curve: namedArgs.containsKey('curve') ? namedArgs['curve'] : Curves.ease);
+            duration: namedArgs.containsKey('duration')
+                ? namedArgs['duration']
+                : Duration.zero,
+            curve: namedArgs.containsKey('curve')
+                ? namedArgs['curve']
+                : Curves.ease);
       case 'describeForError':
-        return ({positionalArgs, namedArgs, typeArgs}) => describeForError(positionalArgs[0],
-            style: namedArgs.containsKey('style') ? namedArgs['style'] : DiagnosticsTreeStyle.shallow);
+        return ({positionalArgs, namedArgs, typeArgs}) => describeForError(
+            positionalArgs[0],
+            style: namedArgs.containsKey('style')
+                ? namedArgs['style']
+                : DiagnosticsTreeStyle.shallow);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -764,7 +924,7 @@ extension RenderSliverToBoxAdapterBinding on RenderSliverToBoxAdapter {
         debugCreator = value;
         break;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

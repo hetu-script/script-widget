@@ -20,7 +20,7 @@ class FramePhaseAutoBinding extends HTExternalClass {
       case 'FramePhase.rasterFinish':
         return FramePhase.rasterFinish;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -28,13 +28,14 @@ class FramePhaseAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('FramePhase');
+        return const HTType('FramePhase');
       case 'index':
         return (instance as FramePhase).index;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => (instance as FramePhase).toString();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            (instance as FramePhase).toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -56,7 +57,7 @@ class AppLifecycleStateAutoBinding extends HTExternalClass {
       case 'AppLifecycleState.detached':
         return AppLifecycleState.detached;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -64,13 +65,14 @@ class AppLifecycleStateAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('AppLifecycleState');
+        return const HTType('AppLifecycleState');
       case 'index':
         return (instance as AppLifecycleState).index;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => (instance as AppLifecycleState).toString();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            (instance as AppLifecycleState).toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -84,7 +86,7 @@ class PlatformDispatcherAutoBinding extends HTExternalClass {
       case 'PlatformDispatcher.instance':
         return PlatformDispatcher.instance;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -103,7 +105,7 @@ class FrameTimingAutoBinding extends HTExternalClass {
             rasterStart: namedArgs['rasterStart'],
             rasterFinish: namedArgs['rasterFinish']);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -117,7 +119,7 @@ extension FrameTimingBinding on FrameTiming {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('FrameTiming');
+        return const HTType('FrameTiming');
       case 'buildDuration':
         return buildDuration;
       case 'rasterDuration':
@@ -127,11 +129,12 @@ extension FrameTimingBinding on FrameTiming {
       case 'totalSpan':
         return totalSpan;
       case 'timestampInMicroseconds':
-        return ({positionalArgs, namedArgs, typeArgs}) => timestampInMicroseconds(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            timestampInMicroseconds(positionalArgs[0]);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -145,7 +148,7 @@ class WindowPaddingAutoBinding extends HTExternalClass {
       case 'WindowPadding.zero':
         return WindowPadding.zero;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -157,15 +160,22 @@ class LocaleAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'Locale':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            Locale(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => Locale(
+            positionalArgs[0],
+            positionalArgs.length > 1 ? positionalArgs[1] : null);
       case 'Locale.fromSubtags':
         return ({positionalArgs, namedArgs, typeArgs}) => Locale.fromSubtags(
-            languageCode: namedArgs.containsKey('languageCode') ? namedArgs['languageCode'] : 'und',
-            scriptCode: namedArgs.containsKey('scriptCode') ? namedArgs['scriptCode'] : null,
-            countryCode: namedArgs.containsKey('countryCode') ? namedArgs['countryCode'] : null);
+            languageCode: namedArgs.containsKey('languageCode')
+                ? namedArgs['languageCode']
+                : 'und',
+            scriptCode: namedArgs.containsKey('scriptCode')
+                ? namedArgs['scriptCode']
+                : null,
+            countryCode: namedArgs.containsKey('countryCode')
+                ? namedArgs['countryCode']
+                : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -179,7 +189,7 @@ extension LocaleBinding on Locale {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('Locale');
+        return const HTType('Locale');
       case 'scriptCode':
         return scriptCode;
       case 'languageCode':
@@ -193,7 +203,7 @@ extension LocaleBinding on Locale {
       case 'toLanguageTag':
         return ({positionalArgs, namedArgs, typeArgs}) => toLanguageTag();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

@@ -13,11 +13,14 @@ class DataColumnAutoBinding extends HTExternalClass {
       case 'DataColumn':
         return ({positionalArgs, namedArgs, typeArgs}) => DataColumn(
             label: namedArgs['label'],
-            tooltip: namedArgs.containsKey('tooltip') ? namedArgs['tooltip'] : null,
-            numeric: namedArgs.containsKey('numeric') ? namedArgs['numeric'] : false,
-            onSort: namedArgs.containsKey('onSort') ? namedArgs['onSort'] : null);
+            tooltip:
+                namedArgs.containsKey('tooltip') ? namedArgs['tooltip'] : null,
+            numeric:
+                namedArgs.containsKey('numeric') ? namedArgs['numeric'] : false,
+            onSort:
+                namedArgs.containsKey('onSort') ? namedArgs['onSort'] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -29,7 +32,8 @@ class DataColumnAutoBinding extends HTExternalClass {
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
       'DataColumnSortCallback': (HTFunction function) =>
-          (columnIndex, ascending) => function.call(positionalArgs: [columnIndex, ascending], namedArgs: const {}),
+          (columnIndex, ascending) => function.call(
+              positionalArgs: [columnIndex, ascending], namedArgs: const {}),
     };
   }
 }
@@ -38,7 +42,7 @@ extension DataColumnBinding on DataColumn {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('DataColumn');
+        return const HTType('DataColumn');
       case 'label':
         return label;
       case 'tooltip':
@@ -48,7 +52,7 @@ extension DataColumnBinding on DataColumn {
       case 'onSort':
         return onSort;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -62,19 +66,27 @@ class DataRowAutoBinding extends HTExternalClass {
       case 'DataRow':
         return ({positionalArgs, namedArgs, typeArgs}) => DataRow(
             key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
-            selected: namedArgs.containsKey('selected') ? namedArgs['selected'] : false,
-            onSelectChanged: namedArgs.containsKey('onSelectChanged') ? namedArgs['onSelectChanged'] : null,
+            selected: namedArgs.containsKey('selected')
+                ? namedArgs['selected']
+                : false,
+            onSelectChanged: namedArgs.containsKey('onSelectChanged')
+                ? namedArgs['onSelectChanged']
+                : null,
             color: namedArgs.containsKey('color') ? namedArgs['color'] : null,
             cells: List<DataCell>.from(namedArgs['cells']));
       case 'DataRow.byIndex':
         return ({positionalArgs, namedArgs, typeArgs}) => DataRow.byIndex(
             index: namedArgs.containsKey('index') ? namedArgs['index'] : null,
-            selected: namedArgs.containsKey('selected') ? namedArgs['selected'] : false,
-            onSelectChanged: namedArgs.containsKey('onSelectChanged') ? namedArgs['onSelectChanged'] : null,
+            selected: namedArgs.containsKey('selected')
+                ? namedArgs['selected']
+                : false,
+            onSelectChanged: namedArgs.containsKey('onSelectChanged')
+                ? namedArgs['onSelectChanged']
+                : null,
             color: namedArgs.containsKey('color') ? namedArgs['color'] : null,
             cells: List<DataCell>.from(namedArgs['cells']));
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -88,7 +100,7 @@ extension DataRowBinding on DataRow {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('DataRow');
+        return const HTType('DataRow');
       case 'key':
         return key;
       case 'onSelectChanged':
@@ -100,7 +112,7 @@ extension DataRowBinding on DataRow {
       case 'color':
         return color;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -112,14 +124,19 @@ class DataCellAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'DataCell':
-        return ({positionalArgs, namedArgs, typeArgs}) => DataCell(positionalArgs[0],
-            placeholder: namedArgs.containsKey('placeholder') ? namedArgs['placeholder'] : false,
-            showEditIcon: namedArgs.containsKey('showEditIcon') ? namedArgs['showEditIcon'] : false,
+        return ({positionalArgs, namedArgs, typeArgs}) => DataCell(
+            positionalArgs[0],
+            placeholder: namedArgs.containsKey('placeholder')
+                ? namedArgs['placeholder']
+                : false,
+            showEditIcon: namedArgs.containsKey('showEditIcon')
+                ? namedArgs['showEditIcon']
+                : false,
             onTap: namedArgs.containsKey('onTap') ? namedArgs['onTap'] : null);
       case 'DataCell.empty':
         return DataCell.empty;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -130,7 +147,8 @@ class DataCellAutoBinding extends HTExternalClass {
 
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'VoidCallback': (HTFunction function) => () => function.call(positionalArgs: const [], namedArgs: const {}),
+      'VoidCallback': (HTFunction function) =>
+          () => function.call(positionalArgs: const [], namedArgs: const {}),
     };
   }
 }
@@ -139,7 +157,7 @@ extension DataCellBinding on DataCell {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('DataCell');
+        return const HTType('DataCell');
       case 'child':
         return child;
       case 'placeholder':
@@ -149,7 +167,7 @@ extension DataCellBinding on DataCell {
       case 'onTap':
         return onTap;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -164,24 +182,54 @@ class DataTableAutoBinding extends HTExternalClass {
         return ({positionalArgs, namedArgs, typeArgs}) => DataTable(
             key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
             columns: List<DataColumn>.from(namedArgs['columns']),
-            sortColumnIndex: namedArgs.containsKey('sortColumnIndex') ? namedArgs['sortColumnIndex'] : null,
-            sortAscending: namedArgs.containsKey('sortAscending') ? namedArgs['sortAscending'] : true,
-            onSelectAll: namedArgs.containsKey('onSelectAll') ? namedArgs['onSelectAll'] : null,
-            decoration: namedArgs.containsKey('decoration') ? namedArgs['decoration'] : null,
-            dataRowColor: namedArgs.containsKey('dataRowColor') ? namedArgs['dataRowColor'] : null,
-            dataRowHeight: namedArgs.containsKey('dataRowHeight') ? namedArgs['dataRowHeight'] : null,
-            dataTextStyle: namedArgs.containsKey('dataTextStyle') ? namedArgs['dataTextStyle'] : null,
-            headingRowColor: namedArgs.containsKey('headingRowColor') ? namedArgs['headingRowColor'] : null,
-            headingRowHeight: namedArgs.containsKey('headingRowHeight') ? namedArgs['headingRowHeight'] : null,
-            headingTextStyle: namedArgs.containsKey('headingTextStyle') ? namedArgs['headingTextStyle'] : null,
-            horizontalMargin: namedArgs.containsKey('horizontalMargin') ? namedArgs['horizontalMargin'] : null,
-            columnSpacing: namedArgs.containsKey('columnSpacing') ? namedArgs['columnSpacing'] : null,
-            showCheckboxColumn: namedArgs.containsKey('showCheckboxColumn') ? namedArgs['showCheckboxColumn'] : true,
-            showBottomBorder: namedArgs.containsKey('showBottomBorder') ? namedArgs['showBottomBorder'] : false,
-            dividerThickness: namedArgs.containsKey('dividerThickness') ? namedArgs['dividerThickness'] : null,
+            sortColumnIndex: namedArgs.containsKey('sortColumnIndex')
+                ? namedArgs['sortColumnIndex']
+                : null,
+            sortAscending: namedArgs.containsKey('sortAscending')
+                ? namedArgs['sortAscending']
+                : true,
+            onSelectAll: namedArgs.containsKey('onSelectAll')
+                ? namedArgs['onSelectAll']
+                : null,
+            decoration: namedArgs.containsKey('decoration')
+                ? namedArgs['decoration']
+                : null,
+            dataRowColor: namedArgs.containsKey('dataRowColor')
+                ? namedArgs['dataRowColor']
+                : null,
+            dataRowHeight: namedArgs.containsKey('dataRowHeight')
+                ? namedArgs['dataRowHeight']
+                : null,
+            dataTextStyle: namedArgs.containsKey('dataTextStyle')
+                ? namedArgs['dataTextStyle']
+                : null,
+            headingRowColor: namedArgs.containsKey('headingRowColor')
+                ? namedArgs['headingRowColor']
+                : null,
+            headingRowHeight: namedArgs.containsKey('headingRowHeight')
+                ? namedArgs['headingRowHeight']
+                : null,
+            headingTextStyle: namedArgs.containsKey('headingTextStyle')
+                ? namedArgs['headingTextStyle']
+                : null,
+            horizontalMargin: namedArgs.containsKey('horizontalMargin')
+                ? namedArgs['horizontalMargin']
+                : null,
+            columnSpacing: namedArgs.containsKey('columnSpacing')
+                ? namedArgs['columnSpacing']
+                : null,
+            showCheckboxColumn: namedArgs.containsKey('showCheckboxColumn')
+                ? namedArgs['showCheckboxColumn']
+                : true,
+            showBottomBorder: namedArgs.containsKey('showBottomBorder')
+                ? namedArgs['showBottomBorder']
+                : false,
+            dividerThickness: namedArgs.containsKey('dividerThickness')
+                ? namedArgs['dividerThickness']
+                : null,
             rows: List<DataRow>.from(namedArgs['rows']));
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -195,7 +243,7 @@ extension DataTableBinding on DataTable {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('DataTable');
+        return const HTType('DataTable');
       case 'columns':
         return columns;
       case 'sortColumnIndex':
@@ -235,31 +283,44 @@ extension DataTableBinding on DataTable {
       case 'hashCode':
         return hashCode;
       case 'build':
-        return ({positionalArgs, namedArgs, typeArgs}) => build(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            build(positionalArgs[0]);
       case 'createElement':
         return ({positionalArgs, namedArgs, typeArgs}) => createElement();
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'toStringShallow':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
-            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            joiner:
+                namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -275,12 +336,20 @@ class TableRowInkWellAutoBinding extends HTExternalClass {
             key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
             child: namedArgs.containsKey('child') ? namedArgs['child'] : null,
             onTap: namedArgs.containsKey('onTap') ? namedArgs['onTap'] : null,
-            onDoubleTap: namedArgs.containsKey('onDoubleTap') ? namedArgs['onDoubleTap'] : null,
-            onLongPress: namedArgs.containsKey('onLongPress') ? namedArgs['onLongPress'] : null,
-            onHighlightChanged: namedArgs.containsKey('onHighlightChanged') ? namedArgs['onHighlightChanged'] : null,
-            overlayColor: namedArgs.containsKey('overlayColor') ? namedArgs['overlayColor'] : null);
+            onDoubleTap: namedArgs.containsKey('onDoubleTap')
+                ? namedArgs['onDoubleTap']
+                : null,
+            onLongPress: namedArgs.containsKey('onLongPress')
+                ? namedArgs['onLongPress']
+                : null,
+            onHighlightChanged: namedArgs.containsKey('onHighlightChanged')
+                ? namedArgs['onHighlightChanged']
+                : null,
+            overlayColor: namedArgs.containsKey('overlayColor')
+                ? namedArgs['overlayColor']
+                : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -291,7 +360,8 @@ class TableRowInkWellAutoBinding extends HTExternalClass {
 
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'GestureTapCallback': (HTFunction function) => () => function.call(positionalArgs: const [], namedArgs: const {}),
+      'GestureTapCallback': (HTFunction function) =>
+          () => function.call(positionalArgs: const [], namedArgs: const {}),
       'GestureLongPressCallback': (HTFunction function) =>
           () => function.call(positionalArgs: const [], namedArgs: const {}),
     };
@@ -302,7 +372,7 @@ extension TableRowInkWellBinding on TableRowInkWell {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('TableRowInkWell');
+        return const HTType('TableRowInkWell');
       case 'child':
         return child;
       case 'onTap':
@@ -360,35 +430,50 @@ extension TableRowInkWellBinding on TableRowInkWell {
       case 'hashCode':
         return hashCode;
       case 'getRectCallback':
-        return ({positionalArgs, namedArgs, typeArgs}) => getRectCallback(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            getRectCallback(positionalArgs[0]);
       case 'debugCheckContext':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugCheckContext(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugCheckContext(positionalArgs[0]);
       case 'build':
-        return ({positionalArgs, namedArgs, typeArgs}) => build(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            build(positionalArgs[0]);
       case 'createElement':
         return ({positionalArgs, namedArgs, typeArgs}) => createElement();
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'toStringShallow':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
-            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            joiner:
+                namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

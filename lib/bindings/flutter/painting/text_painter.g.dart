@@ -15,7 +15,7 @@ class TextWidthBasisAutoBinding extends HTExternalClass {
       case 'TextWidthBasis.longestLine':
         return TextWidthBasis.longestLine;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -23,13 +23,14 @@ class TextWidthBasisAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('TextWidthBasis');
+        return const HTType('TextWidthBasis');
       case 'index':
         return (instance as TextWidthBasis).index;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => (instance as TextWidthBasis).toString();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            (instance as TextWidthBasis).toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -44,12 +45,16 @@ class PlaceholderDimensionsAutoBinding extends HTExternalClass {
         return ({positionalArgs, namedArgs, typeArgs}) => PlaceholderDimensions(
             size: namedArgs['size'],
             alignment: namedArgs['alignment'],
-            baseline: namedArgs.containsKey('baseline') ? namedArgs['baseline'] : null,
-            baselineOffset: namedArgs.containsKey('baselineOffset') ? namedArgs['baselineOffset'] : null);
+            baseline: namedArgs.containsKey('baseline')
+                ? namedArgs['baseline']
+                : null,
+            baselineOffset: namedArgs.containsKey('baselineOffset')
+                ? namedArgs['baselineOffset']
+                : null);
       case 'PlaceholderDimensions.empty':
         return PlaceholderDimensions.empty;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -63,7 +68,7 @@ extension PlaceholderDimensionsBinding on PlaceholderDimensions {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('PlaceholderDimensions');
+        return const HTType('PlaceholderDimensions');
       case 'size':
         return size;
       case 'alignment':
@@ -75,7 +80,7 @@ extension PlaceholderDimensionsBinding on PlaceholderDimensions {
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -89,18 +94,34 @@ class TextPainterAutoBinding extends HTExternalClass {
       case 'TextPainter':
         return ({positionalArgs, namedArgs, typeArgs}) => TextPainter(
             text: namedArgs.containsKey('text') ? namedArgs['text'] : null,
-            textAlign: namedArgs.containsKey('textAlign') ? namedArgs['textAlign'] : TextAlign.start,
-            textDirection: namedArgs.containsKey('textDirection') ? namedArgs['textDirection'] : null,
-            textScaleFactor: namedArgs.containsKey('textScaleFactor') ? namedArgs['textScaleFactor'] : 1.0,
-            maxLines: namedArgs.containsKey('maxLines') ? namedArgs['maxLines'] : null,
-            ellipsis: namedArgs.containsKey('ellipsis') ? namedArgs['ellipsis'] : null,
-            locale: namedArgs.containsKey('locale') ? namedArgs['locale'] : null,
-            strutStyle: namedArgs.containsKey('strutStyle') ? namedArgs['strutStyle'] : null,
-            textWidthBasis:
-                namedArgs.containsKey('textWidthBasis') ? namedArgs['textWidthBasis'] : TextWidthBasis.parent,
-            textHeightBehavior: namedArgs.containsKey('textHeightBehavior') ? namedArgs['textHeightBehavior'] : null);
+            textAlign: namedArgs.containsKey('textAlign')
+                ? namedArgs['textAlign']
+                : TextAlign.start,
+            textDirection: namedArgs.containsKey('textDirection')
+                ? namedArgs['textDirection']
+                : null,
+            textScaleFactor: namedArgs.containsKey('textScaleFactor')
+                ? namedArgs['textScaleFactor']
+                : 1.0,
+            maxLines: namedArgs.containsKey('maxLines')
+                ? namedArgs['maxLines']
+                : null,
+            ellipsis: namedArgs.containsKey('ellipsis')
+                ? namedArgs['ellipsis']
+                : null,
+            locale:
+                namedArgs.containsKey('locale') ? namedArgs['locale'] : null,
+            strutStyle: namedArgs.containsKey('strutStyle')
+                ? namedArgs['strutStyle']
+                : null,
+            textWidthBasis: namedArgs.containsKey('textWidthBasis')
+                ? namedArgs['textWidthBasis']
+                : TextWidthBasis.parent,
+            textHeightBehavior: namedArgs.containsKey('textHeightBehavior')
+                ? namedArgs['textHeightBehavior']
+                : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -119,7 +140,7 @@ extension TextPainterBinding on TextPainter {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('TextPainter');
+        return const HTType('TextPainter');
       case 'text':
         return text;
       case 'textAlign':
@@ -162,39 +183,55 @@ extension TextPainterBinding on TextPainter {
         return ({positionalArgs, namedArgs, typeArgs}) => markNeedsLayout();
       case 'setPlaceholderDimensions':
         return ({positionalArgs, namedArgs, typeArgs}) =>
-            setPlaceholderDimensions(List<PlaceholderDimensions>.from(positionalArgs[0]));
+            setPlaceholderDimensions(
+                List<PlaceholderDimensions>.from(positionalArgs[0]));
       case 'computeDistanceToActualBaseline':
-        return ({positionalArgs, namedArgs, typeArgs}) => computeDistanceToActualBaseline(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            computeDistanceToActualBaseline(positionalArgs[0]);
       case 'layout':
         return ({positionalArgs, namedArgs, typeArgs}) => layout(
-            minWidth: namedArgs.containsKey('minWidth') ? namedArgs['minWidth'] : 0.0,
-            maxWidth: namedArgs.containsKey('maxWidth') ? namedArgs['maxWidth'] : double.infinity);
+            minWidth:
+                namedArgs.containsKey('minWidth') ? namedArgs['minWidth'] : 0.0,
+            maxWidth: namedArgs.containsKey('maxWidth')
+                ? namedArgs['maxWidth']
+                : double.infinity);
       case 'paint':
-        return ({positionalArgs, namedArgs, typeArgs}) => paint(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            paint(positionalArgs[0], positionalArgs[1]);
       case 'getOffsetAfter':
-        return ({positionalArgs, namedArgs, typeArgs}) => getOffsetAfter(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            getOffsetAfter(positionalArgs[0]);
       case 'getOffsetBefore':
-        return ({positionalArgs, namedArgs, typeArgs}) => getOffsetBefore(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            getOffsetBefore(positionalArgs[0]);
       case 'getOffsetForCaret':
-        return ({positionalArgs, namedArgs, typeArgs}) => getOffsetForCaret(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            getOffsetForCaret(positionalArgs[0], positionalArgs[1]);
       case 'getFullHeightForCaret':
-        return ({positionalArgs, namedArgs, typeArgs}) => getFullHeightForCaret(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            getFullHeightForCaret(positionalArgs[0], positionalArgs[1]);
       case 'getBoxesForSelection':
-        return ({positionalArgs, namedArgs, typeArgs}) => getBoxesForSelection(positionalArgs[0],
-            boxHeightStyle:
-                namedArgs.containsKey('boxHeightStyle') ? namedArgs['boxHeightStyle'] : ui.BoxHeightStyle.tight,
-            boxWidthStyle:
-                namedArgs.containsKey('boxWidthStyle') ? namedArgs['boxWidthStyle'] : ui.BoxWidthStyle.tight);
+        return ({positionalArgs, namedArgs, typeArgs}) => getBoxesForSelection(
+            positionalArgs[0],
+            boxHeightStyle: namedArgs.containsKey('boxHeightStyle')
+                ? namedArgs['boxHeightStyle']
+                : ui.BoxHeightStyle.tight,
+            boxWidthStyle: namedArgs.containsKey('boxWidthStyle')
+                ? namedArgs['boxWidthStyle']
+                : ui.BoxWidthStyle.tight);
       case 'getPositionForOffset':
-        return ({positionalArgs, namedArgs, typeArgs}) => getPositionForOffset(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            getPositionForOffset(positionalArgs[0]);
       case 'getWordBoundary':
-        return ({positionalArgs, namedArgs, typeArgs}) => getWordBoundary(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            getWordBoundary(positionalArgs[0]);
       case 'getLineBoundary':
-        return ({positionalArgs, namedArgs, typeArgs}) => getLineBoundary(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            getLineBoundary(positionalArgs[0]);
       case 'computeLineMetrics':
         return ({positionalArgs, namedArgs, typeArgs}) => computeLineMetrics();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -231,7 +268,7 @@ extension TextPainterBinding on TextPainter {
         textHeightBehavior = value;
         break;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

@@ -8,14 +8,22 @@ class BottomNavigationBarItemAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'BottomNavigationBarItem':
-        return ({positionalArgs, namedArgs, typeArgs}) => BottomNavigationBarItem(
-            icon: namedArgs['icon'],
-            label: namedArgs.containsKey('label') ? namedArgs['label'] : null,
-            activeIcon: namedArgs.containsKey('activeIcon') ? namedArgs['activeIcon'] : null,
-            backgroundColor: namedArgs.containsKey('backgroundColor') ? namedArgs['backgroundColor'] : null,
-            tooltip: namedArgs.containsKey('tooltip') ? namedArgs['tooltip'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            BottomNavigationBarItem(
+                icon: namedArgs['icon'],
+                label:
+                    namedArgs.containsKey('label') ? namedArgs['label'] : null,
+                activeIcon: namedArgs.containsKey('activeIcon')
+                    ? namedArgs['activeIcon']
+                    : null,
+                backgroundColor: namedArgs.containsKey('backgroundColor')
+                    ? namedArgs['backgroundColor']
+                    : null,
+                tooltip: namedArgs.containsKey('tooltip')
+                    ? namedArgs['tooltip']
+                    : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -29,7 +37,7 @@ extension BottomNavigationBarItemBinding on BottomNavigationBarItem {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('BottomNavigationBarItem');
+        return const HTType('BottomNavigationBarItem');
       case 'icon':
         return icon;
       case 'activeIcon':
@@ -41,7 +49,7 @@ extension BottomNavigationBarItemBinding on BottomNavigationBarItem {
       case 'tooltip':
         return tooltip;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

@@ -8,11 +8,19 @@ class RawKeyEventDataWindowsAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'RawKeyEventDataWindows':
-        return ({positionalArgs, namedArgs, typeArgs}) => RawKeyEventDataWindows(
-            keyCode: namedArgs.containsKey('keyCode') ? namedArgs['keyCode'] : 0,
-            scanCode: namedArgs.containsKey('scanCode') ? namedArgs['scanCode'] : 0,
-            characterCodePoint: namedArgs.containsKey('characterCodePoint') ? namedArgs['characterCodePoint'] : 0,
-            modifiers: namedArgs.containsKey('modifiers') ? namedArgs['modifiers'] : 0);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            RawKeyEventDataWindows(
+                keyCode:
+                    namedArgs.containsKey('keyCode') ? namedArgs['keyCode'] : 0,
+                scanCode: namedArgs.containsKey('scanCode')
+                    ? namedArgs['scanCode']
+                    : 0,
+                characterCodePoint: namedArgs.containsKey('characterCodePoint')
+                    ? namedArgs['characterCodePoint']
+                    : 0,
+                modifiers: namedArgs.containsKey('modifiers')
+                    ? namedArgs['modifiers']
+                    : 0);
       case 'RawKeyEventDataWindows.modifierShift':
         return RawKeyEventDataWindows.modifierShift;
       case 'RawKeyEventDataWindows.modifierLeftShift':
@@ -42,7 +50,7 @@ class RawKeyEventDataWindowsAutoBinding extends HTExternalClass {
       case 'RawKeyEventDataWindows.modifierScrollLock':
         return RawKeyEventDataWindows.modifierScrollLock;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -56,7 +64,7 @@ extension RawKeyEventDataWindowsBinding on RawKeyEventDataWindows {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('RawKeyEventDataWindows');
+        return const HTType('RawKeyEventDataWindows');
       case 'keyCode':
         return keyCode;
       case 'scanCode':
@@ -82,12 +90,16 @@ extension RawKeyEventDataWindowsBinding on RawKeyEventDataWindows {
       case 'modifiersPressed':
         return modifiersPressed;
       case 'isModifierPressed':
-        return ({positionalArgs, namedArgs, typeArgs}) => isModifierPressed(positionalArgs[0],
-            side: namedArgs.containsKey('side') ? namedArgs['side'] : KeyboardSide.any);
+        return ({positionalArgs, namedArgs, typeArgs}) => isModifierPressed(
+            positionalArgs[0],
+            side: namedArgs.containsKey('side')
+                ? namedArgs['side']
+                : KeyboardSide.any);
       case 'getModifierSide':
-        return ({positionalArgs, namedArgs, typeArgs}) => getModifierSide(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            getModifierSide(positionalArgs[0]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

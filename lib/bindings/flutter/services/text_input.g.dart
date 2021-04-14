@@ -15,7 +15,7 @@ class SmartDashesTypeAutoBinding extends HTExternalClass {
       case 'SmartDashesType.enabled':
         return SmartDashesType.enabled;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -23,13 +23,14 @@ class SmartDashesTypeAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('SmartDashesType');
+        return const HTType('SmartDashesType');
       case 'index':
         return (instance as SmartDashesType).index;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => (instance as SmartDashesType).toString();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            (instance as SmartDashesType).toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -47,7 +48,7 @@ class SmartQuotesTypeAutoBinding extends HTExternalClass {
       case 'SmartQuotesType.enabled':
         return SmartQuotesType.enabled;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -55,13 +56,14 @@ class SmartQuotesTypeAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('SmartQuotesType');
+        return const HTType('SmartQuotesType');
       case 'index':
         return (instance as SmartQuotesType).index;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => (instance as SmartQuotesType).toString();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            (instance as SmartQuotesType).toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -101,7 +103,7 @@ class TextInputActionAutoBinding extends HTExternalClass {
       case 'TextInputAction.newline':
         return TextInputAction.newline;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -109,13 +111,14 @@ class TextInputActionAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('TextInputAction');
+        return const HTType('TextInputAction');
       case 'index':
         return (instance as TextInputAction).index;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => (instance as TextInputAction).toString();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            (instance as TextInputAction).toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -137,7 +140,7 @@ class TextCapitalizationAutoBinding extends HTExternalClass {
       case 'TextCapitalization.none':
         return TextCapitalization.none;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -145,13 +148,14 @@ class TextCapitalizationAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('TextCapitalization');
+        return const HTType('TextCapitalization');
       case 'index':
         return (instance as TextCapitalization).index;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => (instance as TextCapitalization).toString();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            (instance as TextCapitalization).toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -171,7 +175,7 @@ class FloatingCursorDragStateAutoBinding extends HTExternalClass {
       case 'FloatingCursorDragState.End':
         return FloatingCursorDragState.End;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -179,13 +183,14 @@ class FloatingCursorDragStateAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('FloatingCursorDragState');
+        return const HTType('FloatingCursorDragState');
       case 'index':
         return (instance as FloatingCursorDragState).index;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => (instance as FloatingCursorDragState).toString();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            (instance as FloatingCursorDragState).toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -197,9 +202,14 @@ class TextInputTypeAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'TextInputType.numberWithOptions':
-        return ({positionalArgs, namedArgs, typeArgs}) => TextInputType.numberWithOptions(
-            signed: namedArgs.containsKey('signed') ? namedArgs['signed'] : false,
-            decimal: namedArgs.containsKey('decimal') ? namedArgs['decimal'] : false);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            TextInputType.numberWithOptions(
+                signed: namedArgs.containsKey('signed')
+                    ? namedArgs['signed']
+                    : false,
+                decimal: namedArgs.containsKey('decimal')
+                    ? namedArgs['decimal']
+                    : false);
       case 'TextInputType.text':
         return TextInputType.text;
       case 'TextInputType.multiline':
@@ -223,7 +233,7 @@ class TextInputTypeAutoBinding extends HTExternalClass {
       case 'TextInputType.values':
         return TextInputType.values;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -237,7 +247,7 @@ extension TextInputTypeBinding on TextInputType {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('TextInputType');
+        return const HTType('TextInputType');
       case 'index':
         return index;
       case 'signed':
@@ -251,7 +261,7 @@ extension TextInputTypeBinding on TextInputType {
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -263,24 +273,47 @@ class TextInputConfigurationAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'TextInputConfiguration':
-        return ({positionalArgs, namedArgs, typeArgs}) => TextInputConfiguration(
-            inputType: namedArgs.containsKey('inputType') ? namedArgs['inputType'] : TextInputType.text,
-            readOnly: namedArgs.containsKey('readOnly') ? namedArgs['readOnly'] : false,
-            obscureText: namedArgs.containsKey('obscureText') ? namedArgs['obscureText'] : false,
-            autocorrect: namedArgs.containsKey('autocorrect') ? namedArgs['autocorrect'] : true,
-            smartDashesType: namedArgs.containsKey('smartDashesType') ? namedArgs['smartDashesType'] : null,
-            smartQuotesType: namedArgs.containsKey('smartQuotesType') ? namedArgs['smartQuotesType'] : null,
-            enableSuggestions: namedArgs.containsKey('enableSuggestions') ? namedArgs['enableSuggestions'] : true,
-            actionLabel: namedArgs.containsKey('actionLabel') ? namedArgs['actionLabel'] : null,
-            inputAction: namedArgs.containsKey('inputAction') ? namedArgs['inputAction'] : TextInputAction.done,
-            keyboardAppearance:
-                namedArgs.containsKey('keyboardAppearance') ? namedArgs['keyboardAppearance'] : Brightness.light,
-            textCapitalization:
-                namedArgs.containsKey('textCapitalization') ? namedArgs['textCapitalization'] : TextCapitalization.none,
-            autofillConfiguration:
-                namedArgs.containsKey('autofillConfiguration') ? namedArgs['autofillConfiguration'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            TextInputConfiguration(
+                inputType: namedArgs.containsKey('inputType')
+                    ? namedArgs['inputType']
+                    : TextInputType.text,
+                readOnly: namedArgs.containsKey('readOnly')
+                    ? namedArgs['readOnly']
+                    : false,
+                obscureText: namedArgs.containsKey('obscureText')
+                    ? namedArgs['obscureText']
+                    : false,
+                autocorrect: namedArgs.containsKey('autocorrect')
+                    ? namedArgs['autocorrect']
+                    : true,
+                smartDashesType: namedArgs.containsKey('smartDashesType')
+                    ? namedArgs['smartDashesType']
+                    : null,
+                smartQuotesType: namedArgs.containsKey('smartQuotesType')
+                    ? namedArgs['smartQuotesType']
+                    : null,
+                enableSuggestions: namedArgs.containsKey('enableSuggestions')
+                    ? namedArgs['enableSuggestions']
+                    : true,
+                actionLabel: namedArgs.containsKey('actionLabel')
+                    ? namedArgs['actionLabel']
+                    : null,
+                inputAction: namedArgs.containsKey('inputAction')
+                    ? namedArgs['inputAction']
+                    : TextInputAction.done,
+                keyboardAppearance: namedArgs.containsKey('keyboardAppearance')
+                    ? namedArgs['keyboardAppearance']
+                    : Brightness.light,
+                textCapitalization: namedArgs.containsKey('textCapitalization')
+                    ? namedArgs['textCapitalization']
+                    : TextCapitalization.none,
+                autofillConfiguration:
+                    namedArgs.containsKey('autofillConfiguration')
+                        ? namedArgs['autofillConfiguration']
+                        : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -294,7 +327,7 @@ extension TextInputConfigurationBinding on TextInputConfiguration {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('TextInputConfiguration');
+        return const HTType('TextInputConfiguration');
       case 'inputType':
         return inputType;
       case 'readOnly':
@@ -322,7 +355,7 @@ extension TextInputConfigurationBinding on TextInputConfiguration {
       case 'toJson':
         return ({positionalArgs, namedArgs, typeArgs}) => toJson();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -334,10 +367,14 @@ class RawFloatingCursorPointAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'RawFloatingCursorPoint':
-        return ({positionalArgs, namedArgs, typeArgs}) => RawFloatingCursorPoint(
-            offset: namedArgs.containsKey('offset') ? namedArgs['offset'] : null, state: namedArgs['state']);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            RawFloatingCursorPoint(
+                offset: namedArgs.containsKey('offset')
+                    ? namedArgs['offset']
+                    : null,
+                state: namedArgs['state']);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -351,13 +388,13 @@ extension RawFloatingCursorPointBinding on RawFloatingCursorPoint {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('RawFloatingCursorPoint');
+        return const HTType('RawFloatingCursorPoint');
       case 'offset':
         return offset;
       case 'state':
         return state;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -371,15 +408,19 @@ class TextEditingValueAutoBinding extends HTExternalClass {
       case 'TextEditingValue':
         return ({positionalArgs, namedArgs, typeArgs}) => TextEditingValue(
             text: namedArgs.containsKey('text') ? namedArgs['text'] : '',
-            selection:
-                namedArgs.containsKey('selection') ? namedArgs['selection'] : const TextSelection.collapsed(offset: -1),
-            composing: namedArgs.containsKey('composing') ? namedArgs['composing'] : TextRange.empty);
+            selection: namedArgs.containsKey('selection')
+                ? namedArgs['selection']
+                : const TextSelection.collapsed(offset: -1),
+            composing: namedArgs.containsKey('composing')
+                ? namedArgs['composing']
+                : TextRange.empty);
       case 'TextEditingValue.fromJSON':
-        return ({positionalArgs, namedArgs, typeArgs}) => TextEditingValue.fromJSON(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            TextEditingValue.fromJSON(positionalArgs[0]);
       case 'TextEditingValue.empty':
         return TextEditingValue.empty;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -393,7 +434,7 @@ extension TextEditingValueBinding on TextEditingValue {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('TextEditingValue');
+        return const HTType('TextEditingValue');
       case 'text':
         return text;
       case 'selection':
@@ -409,12 +450,16 @@ extension TextEditingValueBinding on TextEditingValue {
       case 'copyWith':
         return ({positionalArgs, namedArgs, typeArgs}) => copyWith(
             text: namedArgs.containsKey('text') ? namedArgs['text'] : null,
-            selection: namedArgs.containsKey('selection') ? namedArgs['selection'] : null,
-            composing: namedArgs.containsKey('composing') ? namedArgs['composing'] : null);
+            selection: namedArgs.containsKey('selection')
+                ? namedArgs['selection']
+                : null,
+            composing: namedArgs.containsKey('composing')
+                ? namedArgs['composing']
+                : null);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -426,12 +471,16 @@ class TextInputAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'TextInput.attach':
-        return ({positionalArgs, namedArgs, typeArgs}) => TextInput.attach(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            TextInput.attach(positionalArgs[0], positionalArgs[1]);
       case 'TextInput.finishAutofillContext':
-        return ({positionalArgs, namedArgs, typeArgs}) => TextInput.finishAutofillContext(
-            shouldSave: namedArgs.containsKey('shouldSave') ? namedArgs['shouldSave'] : true);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            TextInput.finishAutofillContext(
+                shouldSave: namedArgs.containsKey('shouldSave')
+                    ? namedArgs['shouldSave']
+                    : true);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

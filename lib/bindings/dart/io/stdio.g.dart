@@ -8,10 +8,11 @@ class StdoutExceptionAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'StdoutException':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            StdoutException(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => StdoutException(
+            positionalArgs[0],
+            positionalArgs.length > 1 ? positionalArgs[1] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -25,7 +26,7 @@ extension StdoutExceptionBinding on StdoutException {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('StdoutException');
+        return const HTType('StdoutException');
       case 'message':
         return message;
       case 'osError':
@@ -33,7 +34,7 @@ extension StdoutExceptionBinding on StdoutException {
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -45,10 +46,11 @@ class StdinExceptionAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'StdinException':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            StdinException(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => StdinException(
+            positionalArgs[0],
+            positionalArgs.length > 1 ? positionalArgs[1] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -62,7 +64,7 @@ extension StdinExceptionBinding on StdinException {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('StdinException');
+        return const HTType('StdinException');
       case 'message':
         return message;
       case 'osError':
@@ -70,7 +72,7 @@ extension StdinExceptionBinding on StdinException {
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -90,7 +92,7 @@ class StdioTypeAutoBinding extends HTExternalClass {
       case 'StdioType.other':
         return StdioType.other;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

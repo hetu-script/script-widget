@@ -8,11 +8,13 @@ class AsyncErrorAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'AsyncError':
-        return ({positionalArgs, namedArgs, typeArgs}) => AsyncError(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            AsyncError(positionalArgs[0], positionalArgs[1]);
       case 'AsyncError.defaultStackTrace':
-        return ({positionalArgs, namedArgs, typeArgs}) => AsyncError.defaultStackTrace(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            AsyncError.defaultStackTrace(positionalArgs[0]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -26,7 +28,7 @@ extension AsyncErrorBinding on AsyncError {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('AsyncError');
+        return const HTType('AsyncError');
       case 'error':
         return error;
       case 'stackTrace':
@@ -34,7 +36,7 @@ extension AsyncErrorBinding on AsyncError {
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

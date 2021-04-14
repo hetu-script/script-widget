@@ -32,7 +32,7 @@ class SystemChannelsAutoBinding extends HTExternalClass {
       case 'SystemChannels.deferredComponent':
         return SystemChannels.deferredComponent;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

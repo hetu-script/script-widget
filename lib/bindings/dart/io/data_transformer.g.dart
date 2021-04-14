@@ -36,7 +36,7 @@ class ZLibOptionAutoBinding extends HTExternalClass {
       case 'ZLibOption.strategyDefault':
         return ZLibOption.strategyDefault;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -49,15 +49,25 @@ class ZLibCodecAutoBinding extends HTExternalClass {
     switch (varName) {
       case 'ZLibCodec':
         return ({positionalArgs, namedArgs, typeArgs}) => ZLibCodec(
-            level: namedArgs.containsKey('level') ? namedArgs['level'] : ZLibOption.defaultLevel,
-            windowBits: namedArgs.containsKey('windowBits') ? namedArgs['windowBits'] : ZLibOption.defaultWindowBits,
-            memLevel: namedArgs.containsKey('memLevel') ? namedArgs['memLevel'] : ZLibOption.defaultMemLevel,
-            strategy: namedArgs.containsKey('strategy') ? namedArgs['strategy'] : ZLibOption.strategyDefault,
-            dictionary: namedArgs.containsKey('dictionary') ? List<int>.from(namedArgs['dictionary']) : null,
+            level: namedArgs.containsKey('level')
+                ? namedArgs['level']
+                : ZLibOption.defaultLevel,
+            windowBits: namedArgs.containsKey('windowBits')
+                ? namedArgs['windowBits']
+                : ZLibOption.defaultWindowBits,
+            memLevel: namedArgs.containsKey('memLevel')
+                ? namedArgs['memLevel']
+                : ZLibOption.defaultMemLevel,
+            strategy: namedArgs.containsKey('strategy')
+                ? namedArgs['strategy']
+                : ZLibOption.strategyDefault,
+            dictionary: namedArgs.containsKey('dictionary')
+                ? List<int>.from(namedArgs['dictionary'])
+                : null,
             raw: namedArgs.containsKey('raw') ? namedArgs['raw'] : false,
             gzip: namedArgs.containsKey('gzip') ? namedArgs['gzip'] : false);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -71,7 +81,7 @@ extension ZLibCodecBinding on ZLibCodec {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('ZLibCodec');
+        return const HTType('ZLibCodec');
       case 'gzip':
         return gzip;
       case 'level':
@@ -91,7 +101,7 @@ extension ZLibCodecBinding on ZLibCodec {
       case 'decoder':
         return decoder;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -104,15 +114,25 @@ class GZipCodecAutoBinding extends HTExternalClass {
     switch (varName) {
       case 'GZipCodec':
         return ({positionalArgs, namedArgs, typeArgs}) => GZipCodec(
-            level: namedArgs.containsKey('level') ? namedArgs['level'] : ZLibOption.defaultLevel,
-            windowBits: namedArgs.containsKey('windowBits') ? namedArgs['windowBits'] : ZLibOption.defaultWindowBits,
-            memLevel: namedArgs.containsKey('memLevel') ? namedArgs['memLevel'] : ZLibOption.defaultMemLevel,
-            strategy: namedArgs.containsKey('strategy') ? namedArgs['strategy'] : ZLibOption.strategyDefault,
-            dictionary: namedArgs.containsKey('dictionary') ? List<int>.from(namedArgs['dictionary']) : null,
+            level: namedArgs.containsKey('level')
+                ? namedArgs['level']
+                : ZLibOption.defaultLevel,
+            windowBits: namedArgs.containsKey('windowBits')
+                ? namedArgs['windowBits']
+                : ZLibOption.defaultWindowBits,
+            memLevel: namedArgs.containsKey('memLevel')
+                ? namedArgs['memLevel']
+                : ZLibOption.defaultMemLevel,
+            strategy: namedArgs.containsKey('strategy')
+                ? namedArgs['strategy']
+                : ZLibOption.strategyDefault,
+            dictionary: namedArgs.containsKey('dictionary')
+                ? List<int>.from(namedArgs['dictionary'])
+                : null,
             raw: namedArgs.containsKey('raw') ? namedArgs['raw'] : false,
             gzip: namedArgs.containsKey('gzip') ? namedArgs['gzip'] : true);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -126,7 +146,7 @@ extension GZipCodecBinding on GZipCodec {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('GZipCodec');
+        return const HTType('GZipCodec');
       case 'gzip':
         return gzip;
       case 'level':
@@ -146,7 +166,7 @@ extension GZipCodecBinding on GZipCodec {
       case 'decoder':
         return decoder;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -160,14 +180,24 @@ class ZLibEncoderAutoBinding extends HTExternalClass {
       case 'ZLibEncoder':
         return ({positionalArgs, namedArgs, typeArgs}) => ZLibEncoder(
             gzip: namedArgs.containsKey('gzip') ? namedArgs['gzip'] : false,
-            level: namedArgs.containsKey('level') ? namedArgs['level'] : ZLibOption.defaultLevel,
-            windowBits: namedArgs.containsKey('windowBits') ? namedArgs['windowBits'] : ZLibOption.defaultWindowBits,
-            memLevel: namedArgs.containsKey('memLevel') ? namedArgs['memLevel'] : ZLibOption.defaultMemLevel,
-            strategy: namedArgs.containsKey('strategy') ? namedArgs['strategy'] : ZLibOption.strategyDefault,
-            dictionary: namedArgs.containsKey('dictionary') ? List<int>.from(namedArgs['dictionary']) : null,
+            level: namedArgs.containsKey('level')
+                ? namedArgs['level']
+                : ZLibOption.defaultLevel,
+            windowBits: namedArgs.containsKey('windowBits')
+                ? namedArgs['windowBits']
+                : ZLibOption.defaultWindowBits,
+            memLevel: namedArgs.containsKey('memLevel')
+                ? namedArgs['memLevel']
+                : ZLibOption.defaultMemLevel,
+            strategy: namedArgs.containsKey('strategy')
+                ? namedArgs['strategy']
+                : ZLibOption.strategyDefault,
+            dictionary: namedArgs.containsKey('dictionary')
+                ? List<int>.from(namedArgs['dictionary'])
+                : null,
             raw: namedArgs.containsKey('raw') ? namedArgs['raw'] : false);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -181,7 +211,7 @@ extension ZLibEncoderBinding on ZLibEncoder {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('ZLibEncoder');
+        return const HTType('ZLibEncoder');
       case 'gzip':
         return gzip;
       case 'level':
@@ -197,17 +227,21 @@ extension ZLibEncoderBinding on ZLibEncoder {
       case 'raw':
         return raw;
       case 'convert':
-        return ({positionalArgs, namedArgs, typeArgs}) => convert(List<int>.from(positionalArgs[0]));
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            convert(List<int>.from(positionalArgs[0]));
       case 'startChunkedConversion':
-        return ({positionalArgs, namedArgs, typeArgs}) => startChunkedConversion(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            startChunkedConversion(positionalArgs[0]);
       case 'fuse':
-        return ({positionalArgs, namedArgs, typeArgs}) => fuse(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            fuse(positionalArgs[0]);
       case 'bind':
-        return ({positionalArgs, namedArgs, typeArgs}) => bind(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            bind(positionalArgs[0]);
       case 'cast':
         return ({positionalArgs, namedArgs, typeArgs}) => cast();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -220,11 +254,15 @@ class ZLibDecoderAutoBinding extends HTExternalClass {
     switch (varName) {
       case 'ZLibDecoder':
         return ({positionalArgs, namedArgs, typeArgs}) => ZLibDecoder(
-            windowBits: namedArgs.containsKey('windowBits') ? namedArgs['windowBits'] : ZLibOption.defaultWindowBits,
-            dictionary: namedArgs.containsKey('dictionary') ? List<int>.from(namedArgs['dictionary']) : null,
+            windowBits: namedArgs.containsKey('windowBits')
+                ? namedArgs['windowBits']
+                : ZLibOption.defaultWindowBits,
+            dictionary: namedArgs.containsKey('dictionary')
+                ? List<int>.from(namedArgs['dictionary'])
+                : null,
             raw: namedArgs.containsKey('raw') ? namedArgs['raw'] : false);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -238,7 +276,7 @@ extension ZLibDecoderBinding on ZLibDecoder {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('ZLibDecoder');
+        return const HTType('ZLibDecoder');
       case 'windowBits':
         return windowBits;
       case 'dictionary':
@@ -246,17 +284,21 @@ extension ZLibDecoderBinding on ZLibDecoder {
       case 'raw':
         return raw;
       case 'convert':
-        return ({positionalArgs, namedArgs, typeArgs}) => convert(List<int>.from(positionalArgs[0]));
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            convert(List<int>.from(positionalArgs[0]));
       case 'startChunkedConversion':
-        return ({positionalArgs, namedArgs, typeArgs}) => startChunkedConversion(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            startChunkedConversion(positionalArgs[0]);
       case 'fuse':
-        return ({positionalArgs, namedArgs, typeArgs}) => fuse(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            fuse(positionalArgs[0]);
       case 'bind':
-        return ({positionalArgs, namedArgs, typeArgs}) => bind(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            bind(positionalArgs[0]);
       case 'cast':
         return ({positionalArgs, namedArgs, typeArgs}) => cast();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -268,21 +310,37 @@ class RawZLibFilterAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'RawZLibFilter.deflateFilter':
-        return ({positionalArgs, namedArgs, typeArgs}) => RawZLibFilter.deflateFilter(
-            gzip: namedArgs.containsKey('gzip') ? namedArgs['gzip'] : false,
-            level: namedArgs.containsKey('level') ? namedArgs['level'] : ZLibOption.defaultLevel,
-            windowBits: namedArgs.containsKey('windowBits') ? namedArgs['windowBits'] : ZLibOption.defaultWindowBits,
-            memLevel: namedArgs.containsKey('memLevel') ? namedArgs['memLevel'] : ZLibOption.defaultMemLevel,
-            strategy: namedArgs.containsKey('strategy') ? namedArgs['strategy'] : ZLibOption.strategyDefault,
-            dictionary: namedArgs.containsKey('dictionary') ? List<int>.from(namedArgs['dictionary']) : null,
-            raw: namedArgs.containsKey('raw') ? namedArgs['raw'] : false);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            RawZLibFilter.deflateFilter(
+                gzip: namedArgs.containsKey('gzip') ? namedArgs['gzip'] : false,
+                level: namedArgs.containsKey('level')
+                    ? namedArgs['level']
+                    : ZLibOption.defaultLevel,
+                windowBits: namedArgs.containsKey('windowBits')
+                    ? namedArgs['windowBits']
+                    : ZLibOption.defaultWindowBits,
+                memLevel: namedArgs.containsKey('memLevel')
+                    ? namedArgs['memLevel']
+                    : ZLibOption.defaultMemLevel,
+                strategy: namedArgs.containsKey('strategy')
+                    ? namedArgs['strategy']
+                    : ZLibOption.strategyDefault,
+                dictionary: namedArgs.containsKey('dictionary')
+                    ? List<int>.from(namedArgs['dictionary'])
+                    : null,
+                raw: namedArgs.containsKey('raw') ? namedArgs['raw'] : false);
       case 'RawZLibFilter.inflateFilter':
-        return ({positionalArgs, namedArgs, typeArgs}) => RawZLibFilter.inflateFilter(
-            windowBits: namedArgs.containsKey('windowBits') ? namedArgs['windowBits'] : ZLibOption.defaultWindowBits,
-            dictionary: namedArgs.containsKey('dictionary') ? List<int>.from(namedArgs['dictionary']) : null,
-            raw: namedArgs.containsKey('raw') ? namedArgs['raw'] : false);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            RawZLibFilter.inflateFilter(
+                windowBits: namedArgs.containsKey('windowBits')
+                    ? namedArgs['windowBits']
+                    : ZLibOption.defaultWindowBits,
+                dictionary: namedArgs.containsKey('dictionary')
+                    ? List<int>.from(namedArgs['dictionary'])
+                    : null,
+                raw: namedArgs.containsKey('raw') ? namedArgs['raw'] : false);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -296,16 +354,18 @@ extension RawZLibFilterBinding on RawZLibFilter {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('RawZLibFilter');
+        return const HTType('RawZLibFilter');
       case 'process':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            process(List<int>.from(positionalArgs[0]), positionalArgs[1], positionalArgs[2]);
+        return ({positionalArgs, namedArgs, typeArgs}) => process(
+            List<int>.from(positionalArgs[0]),
+            positionalArgs[1],
+            positionalArgs[2]);
       case 'processed':
         return ({positionalArgs, namedArgs, typeArgs}) => processed(
             flush: namedArgs.containsKey('flush') ? namedArgs['flush'] : true,
             end: namedArgs.containsKey('end') ? namedArgs['end'] : false);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

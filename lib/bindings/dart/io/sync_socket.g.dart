@@ -9,9 +9,10 @@ class RawSynchronousSocketAutoBinding extends HTExternalClass {
     switch (varName) {
       case 'RawSynchronousSocket.connectSync':
         return ({positionalArgs, namedArgs, typeArgs}) =>
-            RawSynchronousSocket.connectSync(positionalArgs[0], positionalArgs[1]);
+            RawSynchronousSocket.connectSync(
+                positionalArgs[0], positionalArgs[1]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

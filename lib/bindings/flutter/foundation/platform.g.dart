@@ -22,7 +22,7 @@ class TargetPlatformAutoBinding extends HTExternalClass {
       case 'TargetPlatform.windows':
         return TargetPlatform.windows;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -30,13 +30,14 @@ class TargetPlatformAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('TargetPlatform');
+        return const HTType('TargetPlatform');
       case 'index':
         return (instance as TargetPlatform).index;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => (instance as TargetPlatform).toString();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            (instance as TargetPlatform).toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

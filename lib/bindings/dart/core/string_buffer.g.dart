@@ -11,7 +11,7 @@ class StringBufferAutoBinding extends HTExternalClass {
         return ({positionalArgs, namedArgs, typeArgs}) =>
             StringBuffer(positionalArgs.length > 0 ? positionalArgs[0] : '');
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -25,7 +25,7 @@ extension StringBufferBinding on StringBuffer {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('StringBuffer');
+        return const HTType('StringBuffer');
       case 'length':
         return length;
       case 'isEmpty':
@@ -33,20 +33,24 @@ extension StringBufferBinding on StringBuffer {
       case 'isNotEmpty':
         return isNotEmpty;
       case 'write':
-        return ({positionalArgs, namedArgs, typeArgs}) => write(positionalArgs[0]);
-      case 'writeCharCode':
-        return ({positionalArgs, namedArgs, typeArgs}) => writeCharCode(positionalArgs[0]);
-      case 'writeAll':
         return ({positionalArgs, namedArgs, typeArgs}) =>
-            writeAll(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : '');
+            write(positionalArgs[0]);
+      case 'writeCharCode':
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            writeCharCode(positionalArgs[0]);
+      case 'writeAll':
+        return ({positionalArgs, namedArgs, typeArgs}) => writeAll(
+            positionalArgs[0],
+            positionalArgs.length > 1 ? positionalArgs[1] : '');
       case 'writeln':
-        return ({positionalArgs, namedArgs, typeArgs}) => writeln(positionalArgs.length > 0 ? positionalArgs[0] : '');
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            writeln(positionalArgs.length > 0 ? positionalArgs[0] : '');
       case 'clear':
         return ({positionalArgs, namedArgs, typeArgs}) => clear();
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

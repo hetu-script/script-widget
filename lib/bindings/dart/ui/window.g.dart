@@ -14,7 +14,7 @@ class BrightnessAutoBinding extends HTExternalClass {
       case 'Brightness.light':
         return Brightness.light;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -22,13 +22,14 @@ class BrightnessAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('Brightness');
+        return const HTType('Brightness');
       case 'index':
         return (instance as Brightness).index;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => (instance as Brightness).toString();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            (instance as Brightness).toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

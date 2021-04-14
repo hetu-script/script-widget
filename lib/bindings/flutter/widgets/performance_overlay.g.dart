@@ -11,26 +11,38 @@ class PerformanceOverlayAutoBinding extends HTExternalClass {
       case 'PerformanceOverlay':
         return ({positionalArgs, namedArgs, typeArgs}) => PerformanceOverlay(
             key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
-            optionsMask: namedArgs.containsKey('optionsMask') ? namedArgs['optionsMask'] : 0,
-            rasterizerThreshold: namedArgs.containsKey('rasterizerThreshold') ? namedArgs['rasterizerThreshold'] : 0,
-            checkerboardRasterCacheImages: namedArgs.containsKey('checkerboardRasterCacheImages')
-                ? namedArgs['checkerboardRasterCacheImages']
-                : false,
-            checkerboardOffscreenLayers: namedArgs.containsKey('checkerboardOffscreenLayers')
-                ? namedArgs['checkerboardOffscreenLayers']
-                : false);
+            optionsMask: namedArgs.containsKey('optionsMask')
+                ? namedArgs['optionsMask']
+                : 0,
+            rasterizerThreshold: namedArgs.containsKey('rasterizerThreshold')
+                ? namedArgs['rasterizerThreshold']
+                : 0,
+            checkerboardRasterCacheImages:
+                namedArgs.containsKey('checkerboardRasterCacheImages')
+                    ? namedArgs['checkerboardRasterCacheImages']
+                    : false,
+            checkerboardOffscreenLayers:
+                namedArgs.containsKey('checkerboardOffscreenLayers')
+                    ? namedArgs['checkerboardOffscreenLayers']
+                    : false);
       case 'PerformanceOverlay.allEnabled':
-        return ({positionalArgs, namedArgs, typeArgs}) => PerformanceOverlay.allEnabled(
-            key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
-            rasterizerThreshold: namedArgs.containsKey('rasterizerThreshold') ? namedArgs['rasterizerThreshold'] : 0,
-            checkerboardRasterCacheImages: namedArgs.containsKey('checkerboardRasterCacheImages')
-                ? namedArgs['checkerboardRasterCacheImages']
-                : false,
-            checkerboardOffscreenLayers: namedArgs.containsKey('checkerboardOffscreenLayers')
-                ? namedArgs['checkerboardOffscreenLayers']
-                : false);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            PerformanceOverlay.allEnabled(
+                key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
+                rasterizerThreshold:
+                    namedArgs.containsKey('rasterizerThreshold')
+                        ? namedArgs['rasterizerThreshold']
+                        : 0,
+                checkerboardRasterCacheImages: namedArgs
+                        .containsKey('checkerboardRasterCacheImages')
+                    ? namedArgs['checkerboardRasterCacheImages']
+                    : false,
+                checkerboardOffscreenLayers:
+                    namedArgs.containsKey('checkerboardOffscreenLayers')
+                        ? namedArgs['checkerboardOffscreenLayers']
+                        : false);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -44,7 +56,7 @@ extension PerformanceOverlayBinding on PerformanceOverlay {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('PerformanceOverlay');
+        return const HTType('PerformanceOverlay');
       case 'optionsMask':
         return optionsMask;
       case 'rasterizerThreshold':
@@ -58,33 +70,47 @@ extension PerformanceOverlayBinding on PerformanceOverlay {
       case 'hashCode':
         return hashCode;
       case 'createRenderObject':
-        return ({positionalArgs, namedArgs, typeArgs}) => createRenderObject(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            createRenderObject(positionalArgs[0]);
       case 'updateRenderObject':
-        return ({positionalArgs, namedArgs, typeArgs}) => updateRenderObject(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            updateRenderObject(positionalArgs[0], positionalArgs[1]);
       case 'createElement':
         return ({positionalArgs, namedArgs, typeArgs}) => createElement();
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'toStringShallow':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
-            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            joiner:
+                namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

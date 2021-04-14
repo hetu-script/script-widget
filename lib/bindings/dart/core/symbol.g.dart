@@ -8,13 +8,14 @@ class SymbolAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'Symbol':
-        return ({positionalArgs, namedArgs, typeArgs}) => Symbol(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            Symbol(positionalArgs[0]);
       case 'Symbol.unaryMinus':
         return Symbol.unaryMinus;
       case 'Symbol.empty':
         return Symbol.empty;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -28,11 +29,11 @@ extension SymbolBinding on Symbol {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('Symbol');
+        return const HTType('Symbol');
       case 'hashCode':
         return hashCode;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

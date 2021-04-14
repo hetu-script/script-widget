@@ -4,7 +4,8 @@ import 'dart:async';
 import 'package:flutter/widgets.dart';
 
 class RefreshIndicatorTriggerModeAutoBinding extends HTExternalClass {
-  RefreshIndicatorTriggerModeAutoBinding() : super('RefreshIndicatorTriggerMode');
+  RefreshIndicatorTriggerModeAutoBinding()
+      : super('RefreshIndicatorTriggerMode');
 
   @override
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
@@ -16,7 +17,7 @@ class RefreshIndicatorTriggerModeAutoBinding extends HTExternalClass {
       case 'RefreshIndicatorTriggerMode.onEdge':
         return RefreshIndicatorTriggerMode.onEdge;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -24,13 +25,14 @@ class RefreshIndicatorTriggerModeAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('RefreshIndicatorTriggerMode');
+        return const HTType('RefreshIndicatorTriggerMode');
       case 'index':
         return (instance as RefreshIndicatorTriggerMode).index;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => (instance as RefreshIndicatorTriggerMode).toString();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            (instance as RefreshIndicatorTriggerMode).toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -45,20 +47,32 @@ class RefreshIndicatorAutoBinding extends HTExternalClass {
         return ({positionalArgs, namedArgs, typeArgs}) => RefreshIndicator(
             key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
             child: namedArgs['child'],
-            displacement: namedArgs.containsKey('displacement') ? namedArgs['displacement'] : 40.0,
+            displacement: namedArgs.containsKey('displacement')
+                ? namedArgs['displacement']
+                : 40.0,
             onRefresh: namedArgs['onRefresh'],
             color: namedArgs.containsKey('color') ? namedArgs['color'] : null,
-            backgroundColor: namedArgs.containsKey('backgroundColor') ? namedArgs['backgroundColor'] : null,
-            notificationPredicate: namedArgs.containsKey('notificationPredicate')
-                ? namedArgs['notificationPredicate']
-                : defaultScrollNotificationPredicate,
-            semanticsLabel: namedArgs.containsKey('semanticsLabel') ? namedArgs['semanticsLabel'] : null,
-            semanticsValue: namedArgs.containsKey('semanticsValue') ? namedArgs['semanticsValue'] : null,
-            strokeWidth: namedArgs.containsKey('strokeWidth') ? namedArgs['strokeWidth'] : 2.0,
-            triggerMode:
-                namedArgs.containsKey('triggerMode') ? namedArgs['triggerMode'] : RefreshIndicatorTriggerMode.onEdge);
+            backgroundColor: namedArgs.containsKey('backgroundColor')
+                ? namedArgs['backgroundColor']
+                : null,
+            notificationPredicate:
+                namedArgs.containsKey('notificationPredicate')
+                    ? namedArgs['notificationPredicate']
+                    : defaultScrollNotificationPredicate,
+            semanticsLabel: namedArgs.containsKey('semanticsLabel')
+                ? namedArgs['semanticsLabel']
+                : null,
+            semanticsValue: namedArgs.containsKey('semanticsValue')
+                ? namedArgs['semanticsValue']
+                : null,
+            strokeWidth: namedArgs.containsKey('strokeWidth')
+                ? namedArgs['strokeWidth']
+                : 2.0,
+            triggerMode: namedArgs.containsKey('triggerMode')
+                ? namedArgs['triggerMode']
+                : RefreshIndicatorTriggerMode.onEdge);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -69,10 +83,11 @@ class RefreshIndicatorAutoBinding extends HTExternalClass {
 
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'RefreshCallback': (HTFunction function) =>
-          () => function.call(positionalArgs: const [], namedArgs: const {}) as Future<void>,
-      'ScrollNotificationPredicate': (HTFunction function) =>
-          (notification) => function.call(positionalArgs: [notification], namedArgs: const {}) as bool,
+      'RefreshCallback': (HTFunction function) => () => function
+          .call(positionalArgs: const [], namedArgs: const {}) as Future<void>,
+      'ScrollNotificationPredicate': (HTFunction function) => (notification) =>
+          function.call(positionalArgs: [notification], namedArgs: const {})
+              as bool,
     };
   }
 }
@@ -81,7 +96,7 @@ extension RefreshIndicatorBinding on RefreshIndicator {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('RefreshIndicator');
+        return const HTType('RefreshIndicator');
       case 'child':
         return child;
       case 'displacement':
@@ -113,25 +128,37 @@ extension RefreshIndicatorBinding on RefreshIndicator {
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'toStringShallow':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
-            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            joiner:
+                namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -143,9 +170,10 @@ class RefreshIndicatorStateAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'RefreshIndicatorState':
-        return ({positionalArgs, namedArgs, typeArgs}) => RefreshIndicatorState();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            RefreshIndicatorState();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -156,8 +184,8 @@ class RefreshIndicatorStateAutoBinding extends HTExternalClass {
 
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'TickerCallback': (HTFunction function) =>
-          (elapsed) => function.call(positionalArgs: [elapsed], namedArgs: const {}),
+      'TickerCallback': (HTFunction function) => (elapsed) =>
+          function.call(positionalArgs: [elapsed], namedArgs: const {}),
     };
   }
 }
@@ -166,7 +194,7 @@ extension RefreshIndicatorStateBinding on RefreshIndicatorState {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('RefreshIndicatorState');
+        return const HTType('RefreshIndicatorState');
       case 'widget':
         return widget;
       case 'context':
@@ -176,31 +204,38 @@ extension RefreshIndicatorStateBinding on RefreshIndicatorState {
       case 'initState':
         return ({positionalArgs, namedArgs, typeArgs}) => initState();
       case 'didChangeDependencies':
-        return ({positionalArgs, namedArgs, typeArgs}) => didChangeDependencies();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            didChangeDependencies();
       case 'didUpdateWidget':
-        return ({positionalArgs, namedArgs, typeArgs}) => didUpdateWidget(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            didUpdateWidget(positionalArgs[0]);
       case 'dispose':
         return ({positionalArgs, namedArgs, typeArgs}) => dispose();
       case 'show':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            show(atTop: namedArgs.containsKey('atTop') ? namedArgs['atTop'] : true);
+        return ({positionalArgs, namedArgs, typeArgs}) => show(
+            atTop: namedArgs.containsKey('atTop') ? namedArgs['atTop'] : true);
       case 'build':
-        return ({positionalArgs, namedArgs, typeArgs}) => build(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            build(positionalArgs[0]);
       case 'createTicker':
-        return ({positionalArgs, namedArgs, typeArgs}) => createTicker(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            createTicker(positionalArgs[0]);
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

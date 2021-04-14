@@ -24,7 +24,7 @@ class BoxFitAutoBinding extends HTExternalClass {
       case 'BoxFit.scaleDown':
         return BoxFit.scaleDown;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -32,13 +32,14 @@ class BoxFitAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('BoxFit');
+        return const HTType('BoxFit');
       case 'index':
         return (instance as BoxFit).index;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => (instance as BoxFit).toString();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            (instance as BoxFit).toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -50,9 +51,10 @@ class FittedSizesAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'FittedSizes':
-        return ({positionalArgs, namedArgs, typeArgs}) => FittedSizes(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            FittedSizes(positionalArgs[0], positionalArgs[1]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -66,13 +68,13 @@ extension FittedSizesBinding on FittedSizes {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('FittedSizes');
+        return const HTType('FittedSizes');
       case 'source':
         return source;
       case 'destination':
         return destination;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

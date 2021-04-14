@@ -3,15 +3,17 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter/rendering.dart';
 
 class SizeChangedLayoutNotificationAutoBinding extends HTExternalClass {
-  SizeChangedLayoutNotificationAutoBinding() : super('SizeChangedLayoutNotification');
+  SizeChangedLayoutNotificationAutoBinding()
+      : super('SizeChangedLayoutNotification');
 
   @override
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'SizeChangedLayoutNotification':
-        return ({positionalArgs, namedArgs, typeArgs}) => SizeChangedLayoutNotification();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            SizeChangedLayoutNotification();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -21,17 +23,19 @@ class SizeChangedLayoutNotificationAutoBinding extends HTExternalClass {
   }
 }
 
-extension SizeChangedLayoutNotificationBinding on SizeChangedLayoutNotification {
+extension SizeChangedLayoutNotificationBinding
+    on SizeChangedLayoutNotification {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('SizeChangedLayoutNotification');
+        return const HTType('SizeChangedLayoutNotification');
       case 'dispatch':
-        return ({positionalArgs, namedArgs, typeArgs}) => dispatch(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            dispatch(positionalArgs[0]);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -43,11 +47,13 @@ class SizeChangedLayoutNotifierAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'SizeChangedLayoutNotifier':
-        return ({positionalArgs, namedArgs, typeArgs}) => SizeChangedLayoutNotifier(
-            key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
-            child: namedArgs.containsKey('child') ? namedArgs['child'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            SizeChangedLayoutNotifier(
+                key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
+                child:
+                    namedArgs.containsKey('child') ? namedArgs['child'] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -61,7 +67,7 @@ extension SizeChangedLayoutNotifierBinding on SizeChangedLayoutNotifier {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('SizeChangedLayoutNotifier');
+        return const HTType('SizeChangedLayoutNotifier');
       case 'child':
         return child;
       case 'key':
@@ -69,31 +75,44 @@ extension SizeChangedLayoutNotifierBinding on SizeChangedLayoutNotifier {
       case 'hashCode':
         return hashCode;
       case 'createRenderObject':
-        return ({positionalArgs, namedArgs, typeArgs}) => createRenderObject(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            createRenderObject(positionalArgs[0]);
       case 'createElement':
         return ({positionalArgs, namedArgs, typeArgs}) => createElement();
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'toStringShallow':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
-            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            joiner:
+                namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

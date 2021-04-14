@@ -11,7 +11,7 @@ class TimeoutExceptionAutoBinding extends HTExternalClass {
         return ({positionalArgs, namedArgs, typeArgs}) =>
             TimeoutException(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -25,7 +25,7 @@ extension TimeoutExceptionBinding on TimeoutException {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('TimeoutException');
+        return const HTType('TimeoutException');
       case 'message':
         return message;
       case 'duration':
@@ -33,7 +33,7 @@ extension TimeoutExceptionBinding on TimeoutException {
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

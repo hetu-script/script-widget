@@ -1,7 +1,6 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/foundation.dart';
 
-
 class UnicodeAutoBinding extends HTExternalClass {
   UnicodeAutoBinding() : super('Unicode');
 
@@ -33,13 +32,7 @@ class UnicodeAutoBinding extends HTExternalClass {
       case 'Unicode.ALM':
         return Unicode.ALM;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
-
-
-
-
 }
-
-

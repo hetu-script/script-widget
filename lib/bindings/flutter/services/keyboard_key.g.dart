@@ -9,15 +9,22 @@ class LogicalKeyboardKeyAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'LogicalKeyboardKey':
-        return ({positionalArgs, namedArgs, typeArgs}) => LogicalKeyboardKey(positionalArgs[0],
-            debugName: namedArgs.containsKey('debugName') ? namedArgs['debugName'] : null,
-            keyLabel: namedArgs.containsKey('keyLabel') ? namedArgs['keyLabel'] : '');
+        return ({positionalArgs, namedArgs, typeArgs}) => LogicalKeyboardKey(
+            positionalArgs[0],
+            debugName: namedArgs.containsKey('debugName')
+                ? namedArgs['debugName']
+                : null,
+            keyLabel:
+                namedArgs.containsKey('keyLabel') ? namedArgs['keyLabel'] : '');
       case 'LogicalKeyboardKey.findKeyByKeyId':
-        return ({positionalArgs, namedArgs, typeArgs}) => LogicalKeyboardKey.findKeyByKeyId(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            LogicalKeyboardKey.findKeyByKeyId(positionalArgs[0]);
       case 'LogicalKeyboardKey.isControlCharacter':
-        return ({positionalArgs, namedArgs, typeArgs}) => LogicalKeyboardKey.isControlCharacter(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            LogicalKeyboardKey.isControlCharacter(positionalArgs[0]);
       case 'LogicalKeyboardKey.collapseSynonyms':
-        return ({positionalArgs, namedArgs, typeArgs}) => LogicalKeyboardKey.collapseSynonyms(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            LogicalKeyboardKey.collapseSynonyms(positionalArgs[0]);
       case 'LogicalKeyboardKey.valueMask':
         return LogicalKeyboardKey.valueMask;
       case 'LogicalKeyboardKey.platformMask':
@@ -577,7 +584,7 @@ class LogicalKeyboardKeyAutoBinding extends HTExternalClass {
       case 'LogicalKeyboardKey.control':
         return LogicalKeyboardKey.control;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -591,7 +598,7 @@ extension LogicalKeyboardKeyBinding on LogicalKeyboardKey {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('LogicalKeyboardKey');
+        return const HTType('LogicalKeyboardKey');
       case 'keyId':
         return keyId;
       case 'debugName':
@@ -605,18 +612,21 @@ extension LogicalKeyboardKeyBinding on LogicalKeyboardKey {
       case 'synonyms':
         return synonyms;
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -628,10 +638,14 @@ class PhysicalKeyboardKeyAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'PhysicalKeyboardKey':
-        return ({positionalArgs, namedArgs, typeArgs}) => PhysicalKeyboardKey(positionalArgs[0],
-            debugName: namedArgs.containsKey('debugName') ? namedArgs['debugName'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => PhysicalKeyboardKey(
+            positionalArgs[0],
+            debugName: namedArgs.containsKey('debugName')
+                ? namedArgs['debugName']
+                : null);
       case 'PhysicalKeyboardKey.findKeyByCode':
-        return ({positionalArgs, namedArgs, typeArgs}) => PhysicalKeyboardKey.findKeyByCode(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            PhysicalKeyboardKey.findKeyByCode(positionalArgs[0]);
       case 'PhysicalKeyboardKey.none':
         return PhysicalKeyboardKey.none;
       case 'PhysicalKeyboardKey.hyper':
@@ -1171,7 +1185,7 @@ class PhysicalKeyboardKeyAutoBinding extends HTExternalClass {
       case 'PhysicalKeyboardKey.fn':
         return PhysicalKeyboardKey.fn;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -1185,7 +1199,7 @@ extension PhysicalKeyboardKeyBinding on PhysicalKeyboardKey {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('PhysicalKeyboardKey');
+        return const HTType('PhysicalKeyboardKey');
       case 'usbHidUsage':
         return usbHidUsage;
       case 'debugName':
@@ -1193,18 +1207,21 @@ extension PhysicalKeyboardKeyBinding on PhysicalKeyboardKey {
       case 'hashCode':
         return hashCode;
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

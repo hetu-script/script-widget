@@ -17,7 +17,7 @@ class CupertinoDatePickerModeAutoBinding extends HTExternalClass {
       case 'CupertinoDatePickerMode.dateAndTime':
         return CupertinoDatePickerMode.dateAndTime;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -25,13 +25,14 @@ class CupertinoDatePickerModeAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('CupertinoDatePickerMode');
+        return const HTType('CupertinoDatePickerMode');
       case 'index':
         return (instance as CupertinoDatePickerMode).index;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => (instance as CupertinoDatePickerMode).toString();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            (instance as CupertinoDatePickerMode).toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -51,7 +52,7 @@ class CupertinoTimerPickerModeAutoBinding extends HTExternalClass {
       case 'CupertinoTimerPickerMode.hms':
         return CupertinoTimerPickerMode.hms;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -59,13 +60,14 @@ class CupertinoTimerPickerModeAutoBinding extends HTExternalClass {
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('CupertinoTimerPickerMode');
+        return const HTType('CupertinoTimerPickerMode');
       case 'index':
         return (instance as CupertinoTimerPickerMode).index;
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) => (instance as CupertinoTimerPickerMode).toString();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            (instance as CupertinoTimerPickerMode).toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -79,18 +81,36 @@ class CupertinoDatePickerAutoBinding extends HTExternalClass {
       case 'CupertinoDatePicker':
         return ({positionalArgs, namedArgs, typeArgs}) => CupertinoDatePicker(
             key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
-            mode: namedArgs.containsKey('mode') ? namedArgs['mode'] : CupertinoDatePickerMode.dateAndTime,
+            mode: namedArgs.containsKey('mode')
+                ? namedArgs['mode']
+                : CupertinoDatePickerMode.dateAndTime,
             onDateTimeChanged: namedArgs['onDateTimeChanged'],
-            initialDateTime: namedArgs.containsKey('initialDateTime') ? namedArgs['initialDateTime'] : null,
-            minimumDate: namedArgs.containsKey('minimumDate') ? namedArgs['minimumDate'] : null,
-            maximumDate: namedArgs.containsKey('maximumDate') ? namedArgs['maximumDate'] : null,
-            minimumYear: namedArgs.containsKey('minimumYear') ? namedArgs['minimumYear'] : 1,
-            maximumYear: namedArgs.containsKey('maximumYear') ? namedArgs['maximumYear'] : null,
-            minuteInterval: namedArgs.containsKey('minuteInterval') ? namedArgs['minuteInterval'] : 1,
-            use24hFormat: namedArgs.containsKey('use24hFormat') ? namedArgs['use24hFormat'] : false,
-            backgroundColor: namedArgs.containsKey('backgroundColor') ? namedArgs['backgroundColor'] : null);
+            initialDateTime: namedArgs.containsKey('initialDateTime')
+                ? namedArgs['initialDateTime']
+                : null,
+            minimumDate: namedArgs.containsKey('minimumDate')
+                ? namedArgs['minimumDate']
+                : null,
+            maximumDate: namedArgs.containsKey('maximumDate')
+                ? namedArgs['maximumDate']
+                : null,
+            minimumYear: namedArgs.containsKey('minimumYear')
+                ? namedArgs['minimumYear']
+                : 1,
+            maximumYear: namedArgs.containsKey('maximumYear')
+                ? namedArgs['maximumYear']
+                : null,
+            minuteInterval: namedArgs.containsKey('minuteInterval')
+                ? namedArgs['minuteInterval']
+                : 1,
+            use24hFormat: namedArgs.containsKey('use24hFormat')
+                ? namedArgs['use24hFormat']
+                : false,
+            backgroundColor: namedArgs.containsKey('backgroundColor')
+                ? namedArgs['backgroundColor']
+                : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -104,7 +124,7 @@ extension CupertinoDatePickerBinding on CupertinoDatePicker {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('CupertinoDatePicker');
+        return const HTType('CupertinoDatePicker');
       case 'mode':
         return mode;
       case 'initialDateTime':
@@ -136,25 +156,37 @@ extension CupertinoDatePickerBinding on CupertinoDatePicker {
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'toStringShallow':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
-            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            joiner:
+                namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -168,16 +200,27 @@ class CupertinoTimerPickerAutoBinding extends HTExternalClass {
       case 'CupertinoTimerPicker':
         return ({positionalArgs, namedArgs, typeArgs}) => CupertinoTimerPicker(
             key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
-            mode: namedArgs.containsKey('mode') ? namedArgs['mode'] : CupertinoTimerPickerMode.hms,
-            initialTimerDuration:
-                namedArgs.containsKey('initialTimerDuration') ? namedArgs['initialTimerDuration'] : Duration.zero,
-            minuteInterval: namedArgs.containsKey('minuteInterval') ? namedArgs['minuteInterval'] : 1,
-            secondInterval: namedArgs.containsKey('secondInterval') ? namedArgs['secondInterval'] : 1,
-            alignment: namedArgs.containsKey('alignment') ? namedArgs['alignment'] : Alignment.center,
-            backgroundColor: namedArgs.containsKey('backgroundColor') ? namedArgs['backgroundColor'] : null,
+            mode: namedArgs.containsKey('mode')
+                ? namedArgs['mode']
+                : CupertinoTimerPickerMode.hms,
+            initialTimerDuration: namedArgs.containsKey('initialTimerDuration')
+                ? namedArgs['initialTimerDuration']
+                : Duration.zero,
+            minuteInterval: namedArgs.containsKey('minuteInterval')
+                ? namedArgs['minuteInterval']
+                : 1,
+            secondInterval: namedArgs.containsKey('secondInterval')
+                ? namedArgs['secondInterval']
+                : 1,
+            alignment: namedArgs.containsKey('alignment')
+                ? namedArgs['alignment']
+                : Alignment.center,
+            backgroundColor: namedArgs.containsKey('backgroundColor')
+                ? namedArgs['backgroundColor']
+                : null,
             onTimerDurationChanged: namedArgs['onTimerDurationChanged']);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -191,7 +234,7 @@ extension CupertinoTimerPickerBinding on CupertinoTimerPicker {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('CupertinoTimerPicker');
+        return const HTType('CupertinoTimerPicker');
       case 'mode':
         return mode;
       case 'initialTimerDuration':
@@ -217,25 +260,37 @@ extension CupertinoTimerPickerBinding on CupertinoTimerPicker {
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'toStringShallow':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
-            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            joiner:
+                namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

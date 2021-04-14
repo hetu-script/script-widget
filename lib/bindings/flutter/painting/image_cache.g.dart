@@ -10,7 +10,7 @@ class ImageCacheAutoBinding extends HTExternalClass {
       case 'ImageCache':
         return ({positionalArgs, namedArgs, typeArgs}) => ImageCache();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -26,8 +26,9 @@ class ImageCacheAutoBinding extends HTExternalClass {
 
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'ImageErrorListener': (HTFunction function) =>
-          (exception, stackTrace) => function.call(positionalArgs: [exception, stackTrace], namedArgs: const {}),
+      'ImageErrorListener': (HTFunction function) => (exception, stackTrace) =>
+          function.call(
+              positionalArgs: [exception, stackTrace], namedArgs: const {}),
     };
   }
 }
@@ -36,7 +37,7 @@ extension ImageCacheBinding on ImageCache {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('ImageCache');
+        return const HTType('ImageCache');
       case 'maximumSize':
         return maximumSize;
       case 'currentSize':
@@ -52,19 +53,26 @@ extension ImageCacheBinding on ImageCache {
       case 'clear':
         return ({positionalArgs, namedArgs, typeArgs}) => clear();
       case 'evict':
-        return ({positionalArgs, namedArgs, typeArgs}) => evict(positionalArgs[0],
-            includeLive: namedArgs.containsKey('includeLive') ? namedArgs['includeLive'] : true);
+        return ({positionalArgs, namedArgs, typeArgs}) => evict(
+            positionalArgs[0],
+            includeLive: namedArgs.containsKey('includeLive')
+                ? namedArgs['includeLive']
+                : true);
       case 'putIfAbsent':
-        return ({positionalArgs, namedArgs, typeArgs}) => putIfAbsent(positionalArgs[0], positionalArgs[1],
-            onError: namedArgs.containsKey('onError') ? namedArgs['onError'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => putIfAbsent(
+            positionalArgs[0], positionalArgs[1],
+            onError:
+                namedArgs.containsKey('onError') ? namedArgs['onError'] : null);
       case 'statusForKey':
-        return ({positionalArgs, namedArgs, typeArgs}) => statusForKey(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            statusForKey(positionalArgs[0]);
       case 'containsKey':
-        return ({positionalArgs, namedArgs, typeArgs}) => containsKey(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            containsKey(positionalArgs[0]);
       case 'clearLiveImages':
         return ({positionalArgs, namedArgs, typeArgs}) => clearLiveImages();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -77,7 +85,7 @@ extension ImageCacheBinding on ImageCache {
         maximumSizeBytes = value;
         break;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

@@ -11,21 +11,34 @@ class ViewportAutoBinding extends HTExternalClass {
       case 'Viewport':
         return ({positionalArgs, namedArgs, typeArgs}) => Viewport(
             key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
-            axisDirection: namedArgs.containsKey('axisDirection') ? namedArgs['axisDirection'] : AxisDirection.down,
-            crossAxisDirection: namedArgs.containsKey('crossAxisDirection') ? namedArgs['crossAxisDirection'] : null,
+            axisDirection: namedArgs.containsKey('axisDirection')
+                ? namedArgs['axisDirection']
+                : AxisDirection.down,
+            crossAxisDirection: namedArgs.containsKey('crossAxisDirection')
+                ? namedArgs['crossAxisDirection']
+                : null,
             anchor: namedArgs.containsKey('anchor') ? namedArgs['anchor'] : 0.0,
             offset: namedArgs['offset'],
-            center: namedArgs.containsKey('center') ? namedArgs['center'] : null,
-            cacheExtent: namedArgs.containsKey('cacheExtent') ? namedArgs['cacheExtent'] : null,
-            cacheExtentStyle:
-                namedArgs.containsKey('cacheExtentStyle') ? namedArgs['cacheExtentStyle'] : CacheExtentStyle.pixel,
-            clipBehavior: namedArgs.containsKey('clipBehavior') ? namedArgs['clipBehavior'] : Clip.hardEdge,
-            slivers: namedArgs.containsKey('slivers') ? List<Widget>.from(namedArgs['slivers']) : const <Widget>[]);
+            center:
+                namedArgs.containsKey('center') ? namedArgs['center'] : null,
+            cacheExtent: namedArgs.containsKey('cacheExtent')
+                ? namedArgs['cacheExtent']
+                : null,
+            cacheExtentStyle: namedArgs.containsKey('cacheExtentStyle')
+                ? namedArgs['cacheExtentStyle']
+                : CacheExtentStyle.pixel,
+            clipBehavior: namedArgs.containsKey('clipBehavior')
+                ? namedArgs['clipBehavior']
+                : Clip.hardEdge,
+            slivers: namedArgs.containsKey('slivers')
+                ? List<Widget>.from(namedArgs['slivers'])
+                : const <Widget>[]);
       case 'Viewport.getDefaultCrossAxisDirection':
         return ({positionalArgs, namedArgs, typeArgs}) =>
-            Viewport.getDefaultCrossAxisDirection(positionalArgs[0], positionalArgs[1]);
+            Viewport.getDefaultCrossAxisDirection(
+                positionalArgs[0], positionalArgs[1]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -39,7 +52,7 @@ extension ViewportBinding on Viewport {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('Viewport');
+        return const HTType('Viewport');
       case 'axisDirection':
         return axisDirection;
       case 'crossAxisDirection':
@@ -63,33 +76,47 @@ extension ViewportBinding on Viewport {
       case 'hashCode':
         return hashCode;
       case 'createRenderObject':
-        return ({positionalArgs, namedArgs, typeArgs}) => createRenderObject(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            createRenderObject(positionalArgs[0]);
       case 'updateRenderObject':
-        return ({positionalArgs, namedArgs, typeArgs}) => updateRenderObject(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            updateRenderObject(positionalArgs[0], positionalArgs[1]);
       case 'createElement':
         return ({positionalArgs, namedArgs, typeArgs}) => createElement();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'toStringShallow':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
-            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            joiner:
+                namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -101,15 +128,24 @@ class ShrinkWrappingViewportAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'ShrinkWrappingViewport':
-        return ({positionalArgs, namedArgs, typeArgs}) => ShrinkWrappingViewport(
-            key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
-            axisDirection: namedArgs.containsKey('axisDirection') ? namedArgs['axisDirection'] : AxisDirection.down,
-            crossAxisDirection: namedArgs.containsKey('crossAxisDirection') ? namedArgs['crossAxisDirection'] : null,
-            offset: namedArgs['offset'],
-            clipBehavior: namedArgs.containsKey('clipBehavior') ? namedArgs['clipBehavior'] : Clip.hardEdge,
-            slivers: namedArgs.containsKey('slivers') ? List<Widget>.from(namedArgs['slivers']) : const <Widget>[]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            ShrinkWrappingViewport(
+                key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
+                axisDirection: namedArgs.containsKey('axisDirection')
+                    ? namedArgs['axisDirection']
+                    : AxisDirection.down,
+                crossAxisDirection: namedArgs.containsKey('crossAxisDirection')
+                    ? namedArgs['crossAxisDirection']
+                    : null,
+                offset: namedArgs['offset'],
+                clipBehavior: namedArgs.containsKey('clipBehavior')
+                    ? namedArgs['clipBehavior']
+                    : Clip.hardEdge,
+                slivers: namedArgs.containsKey('slivers')
+                    ? List<Widget>.from(namedArgs['slivers'])
+                    : const <Widget>[]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -123,7 +159,7 @@ extension ShrinkWrappingViewportBinding on ShrinkWrappingViewport {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('ShrinkWrappingViewport');
+        return const HTType('ShrinkWrappingViewport');
       case 'axisDirection':
         return axisDirection;
       case 'crossAxisDirection':
@@ -139,33 +175,47 @@ extension ShrinkWrappingViewportBinding on ShrinkWrappingViewport {
       case 'hashCode':
         return hashCode;
       case 'createRenderObject':
-        return ({positionalArgs, namedArgs, typeArgs}) => createRenderObject(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            createRenderObject(positionalArgs[0]);
       case 'updateRenderObject':
-        return ({positionalArgs, namedArgs, typeArgs}) => updateRenderObject(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            updateRenderObject(positionalArgs[0], positionalArgs[1]);
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'createElement':
         return ({positionalArgs, namedArgs, typeArgs}) => createElement();
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'toStringShallow':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
-            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            joiner:
+                namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

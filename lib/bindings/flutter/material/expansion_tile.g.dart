@@ -11,24 +11,49 @@ class ExpansionTileAutoBinding extends HTExternalClass {
       case 'ExpansionTile':
         return ({positionalArgs, namedArgs, typeArgs}) => ExpansionTile(
             key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
-            leading: namedArgs.containsKey('leading') ? namedArgs['leading'] : null,
+            leading:
+                namedArgs.containsKey('leading') ? namedArgs['leading'] : null,
             title: namedArgs['title'],
-            subtitle: namedArgs.containsKey('subtitle') ? namedArgs['subtitle'] : null,
-            backgroundColor: namedArgs.containsKey('backgroundColor') ? namedArgs['backgroundColor'] : null,
-            onExpansionChanged: namedArgs.containsKey('onExpansionChanged') ? namedArgs['onExpansionChanged'] : null,
-            trailing: namedArgs.containsKey('trailing') ? namedArgs['trailing'] : null,
-            initiallyExpanded: namedArgs.containsKey('initiallyExpanded') ? namedArgs['initiallyExpanded'] : false,
-            maintainState: namedArgs.containsKey('maintainState') ? namedArgs['maintainState'] : false,
-            tilePadding: namedArgs.containsKey('tilePadding') ? namedArgs['tilePadding'] : null,
+            subtitle: namedArgs.containsKey('subtitle')
+                ? namedArgs['subtitle']
+                : null,
+            backgroundColor: namedArgs.containsKey('backgroundColor')
+                ? namedArgs['backgroundColor']
+                : null,
+            onExpansionChanged: namedArgs.containsKey('onExpansionChanged')
+                ? namedArgs['onExpansionChanged']
+                : null,
+            trailing: namedArgs.containsKey('trailing')
+                ? namedArgs['trailing']
+                : null,
+            initiallyExpanded: namedArgs.containsKey('initiallyExpanded')
+                ? namedArgs['initiallyExpanded']
+                : false,
+            maintainState: namedArgs.containsKey('maintainState')
+                ? namedArgs['maintainState']
+                : false,
+            tilePadding: namedArgs.containsKey('tilePadding')
+                ? namedArgs['tilePadding']
+                : null,
             expandedCrossAxisAlignment:
-                namedArgs.containsKey('expandedCrossAxisAlignment') ? namedArgs['expandedCrossAxisAlignment'] : null,
-            expandedAlignment: namedArgs.containsKey('expandedAlignment') ? namedArgs['expandedAlignment'] : null,
-            childrenPadding: namedArgs.containsKey('childrenPadding') ? namedArgs['childrenPadding'] : null,
+                namedArgs.containsKey('expandedCrossAxisAlignment')
+                    ? namedArgs['expandedCrossAxisAlignment']
+                    : null,
+            expandedAlignment: namedArgs.containsKey('expandedAlignment')
+                ? namedArgs['expandedAlignment']
+                : null,
+            childrenPadding: namedArgs.containsKey('childrenPadding')
+                ? namedArgs['childrenPadding']
+                : null,
             collapsedBackgroundColor:
-                namedArgs.containsKey('collapsedBackgroundColor') ? namedArgs['collapsedBackgroundColor'] : null,
-            children: namedArgs.containsKey('children') ? List<Widget>.from(namedArgs['children']) : const <Widget>[]);
+                namedArgs.containsKey('collapsedBackgroundColor')
+                    ? namedArgs['collapsedBackgroundColor']
+                    : null,
+            children: namedArgs.containsKey('children')
+                ? List<Widget>.from(namedArgs['children'])
+                : const <Widget>[]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -42,7 +67,7 @@ extension ExpansionTileBinding on ExpansionTile {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('ExpansionTile');
+        return const HTType('ExpansionTile');
       case 'leading':
         return leading;
       case 'title':
@@ -82,25 +107,37 @@ extension ExpansionTileBinding on ExpansionTile {
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'toStringShallow':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
-            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            joiner:
+                namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

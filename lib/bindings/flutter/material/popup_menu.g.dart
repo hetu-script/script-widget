@@ -15,9 +15,11 @@ class PopupMenuDividerAutoBinding extends HTExternalClass {
       case 'PopupMenuDivider':
         return ({positionalArgs, namedArgs, typeArgs}) => PopupMenuDivider(
             key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
-            height: namedArgs.containsKey('height') ? namedArgs['height'] : _kMenuDividerHeight);
+            height: namedArgs.containsKey('height')
+                ? namedArgs['height']
+                : _kMenuDividerHeight);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -31,7 +33,7 @@ extension PopupMenuDividerBinding on PopupMenuDivider {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('PopupMenuDivider');
+        return const HTType('PopupMenuDivider');
       case 'height':
         return height;
       case 'key':
@@ -39,7 +41,8 @@ extension PopupMenuDividerBinding on PopupMenuDivider {
       case 'hashCode':
         return hashCode;
       case 'represents':
-        return ({positionalArgs, namedArgs, typeArgs}) => represents(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            represents(positionalArgs[0]);
       case 'createState':
         return ({positionalArgs, namedArgs, typeArgs}) => createState();
       case 'createElement':
@@ -47,25 +50,37 @@ extension PopupMenuDividerBinding on PopupMenuDivider {
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'toStringShallow':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
-            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            joiner:
+                namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

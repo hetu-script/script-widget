@@ -12,14 +12,17 @@ class ScaffoldMessengerAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'ScaffoldMessenger':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            ScaffoldMessenger(key: namedArgs.containsKey('key') ? namedArgs['key'] : null, child: namedArgs['child']);
+        return ({positionalArgs, namedArgs, typeArgs}) => ScaffoldMessenger(
+            key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
+            child: namedArgs['child']);
       case 'ScaffoldMessenger.of':
-        return ({positionalArgs, namedArgs, typeArgs}) => ScaffoldMessenger.of(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            ScaffoldMessenger.of(positionalArgs[0]);
       case 'ScaffoldMessenger.maybeOf':
-        return ({positionalArgs, namedArgs, typeArgs}) => ScaffoldMessenger.maybeOf(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            ScaffoldMessenger.maybeOf(positionalArgs[0]);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -33,7 +36,7 @@ extension ScaffoldMessengerBinding on ScaffoldMessenger {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('ScaffoldMessenger');
+        return const HTType('ScaffoldMessenger');
       case 'child':
         return child;
       case 'key':
@@ -47,25 +50,37 @@ extension ScaffoldMessengerBinding on ScaffoldMessenger {
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'toStringShallow':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
-            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            joiner:
+                namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -77,9 +92,10 @@ class ScaffoldMessengerStateAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'ScaffoldMessengerState':
-        return ({positionalArgs, namedArgs, typeArgs}) => ScaffoldMessengerState();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            ScaffoldMessengerState();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -90,8 +106,8 @@ class ScaffoldMessengerStateAutoBinding extends HTExternalClass {
 
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'TickerCallback': (HTFunction function) =>
-          (elapsed) => function.call(positionalArgs: [elapsed], namedArgs: const {}),
+      'TickerCallback': (HTFunction function) => (elapsed) =>
+          function.call(positionalArgs: [elapsed], namedArgs: const {}),
     };
   }
 }
@@ -100,7 +116,7 @@ extension ScaffoldMessengerStateBinding on ScaffoldMessengerState {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('ScaffoldMessengerState');
+        return const HTType('ScaffoldMessengerState');
       case 'widget':
         return widget;
       case 'context':
@@ -108,34 +124,45 @@ extension ScaffoldMessengerStateBinding on ScaffoldMessengerState {
       case 'mounted':
         return mounted;
       case 'didChangeDependencies':
-        return ({positionalArgs, namedArgs, typeArgs}) => didChangeDependencies();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            didChangeDependencies();
       case 'showSnackBar':
-        return ({positionalArgs, namedArgs, typeArgs}) => showSnackBar(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            showSnackBar(positionalArgs[0]);
       case 'removeCurrentSnackBar':
         return ({positionalArgs, namedArgs, typeArgs}) => removeCurrentSnackBar(
-            reason: namedArgs.containsKey('reason') ? namedArgs['reason'] : SnackBarClosedReason.remove);
+            reason: namedArgs.containsKey('reason')
+                ? namedArgs['reason']
+                : SnackBarClosedReason.remove);
       case 'hideCurrentSnackBar':
         return ({positionalArgs, namedArgs, typeArgs}) => hideCurrentSnackBar(
-            reason: namedArgs.containsKey('reason') ? namedArgs['reason'] : SnackBarClosedReason.hide);
+            reason: namedArgs.containsKey('reason')
+                ? namedArgs['reason']
+                : SnackBarClosedReason.hide);
       case 'build':
-        return ({positionalArgs, namedArgs, typeArgs}) => build(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            build(positionalArgs[0]);
       case 'dispose':
         return ({positionalArgs, namedArgs, typeArgs}) => dispose();
       case 'createTicker':
-        return ({positionalArgs, namedArgs, typeArgs}) => createTicker(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            createTicker(positionalArgs[0]);
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -147,18 +174,19 @@ class ScaffoldPrelayoutGeometryAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'ScaffoldPrelayoutGeometry':
-        return ({positionalArgs, namedArgs, typeArgs}) => ScaffoldPrelayoutGeometry(
-            bottomSheetSize: namedArgs['bottomSheetSize'],
-            contentBottom: namedArgs['contentBottom'],
-            contentTop: namedArgs['contentTop'],
-            floatingActionButtonSize: namedArgs['floatingActionButtonSize'],
-            minInsets: namedArgs['minInsets'],
-            minViewPadding: namedArgs['minViewPadding'],
-            scaffoldSize: namedArgs['scaffoldSize'],
-            snackBarSize: namedArgs['snackBarSize'],
-            textDirection: namedArgs['textDirection']);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            ScaffoldPrelayoutGeometry(
+                bottomSheetSize: namedArgs['bottomSheetSize'],
+                contentBottom: namedArgs['contentBottom'],
+                contentTop: namedArgs['contentTop'],
+                floatingActionButtonSize: namedArgs['floatingActionButtonSize'],
+                minInsets: namedArgs['minInsets'],
+                minViewPadding: namedArgs['minViewPadding'],
+                scaffoldSize: namedArgs['scaffoldSize'],
+                snackBarSize: namedArgs['snackBarSize'],
+                textDirection: namedArgs['textDirection']);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -172,7 +200,7 @@ extension ScaffoldPrelayoutGeometryBinding on ScaffoldPrelayoutGeometry {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('ScaffoldPrelayoutGeometry');
+        return const HTType('ScaffoldPrelayoutGeometry');
       case 'floatingActionButtonSize':
         return floatingActionButtonSize;
       case 'bottomSheetSize':
@@ -192,7 +220,7 @@ extension ScaffoldPrelayoutGeometryBinding on ScaffoldPrelayoutGeometry {
       case 'textDirection':
         return textDirection;
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -206,11 +234,15 @@ class ScaffoldGeometryAutoBinding extends HTExternalClass {
       case 'ScaffoldGeometry':
         return ({positionalArgs, namedArgs, typeArgs}) => ScaffoldGeometry(
             bottomNavigationBarTop:
-                namedArgs.containsKey('bottomNavigationBarTop') ? namedArgs['bottomNavigationBarTop'] : null,
+                namedArgs.containsKey('bottomNavigationBarTop')
+                    ? namedArgs['bottomNavigationBarTop']
+                    : null,
             floatingActionButtonArea:
-                namedArgs.containsKey('floatingActionButtonArea') ? namedArgs['floatingActionButtonArea'] : null);
+                namedArgs.containsKey('floatingActionButtonArea')
+                    ? namedArgs['floatingActionButtonArea']
+                    : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -224,7 +256,7 @@ extension ScaffoldGeometryBinding on ScaffoldGeometry {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('ScaffoldGeometry');
+        return const HTType('ScaffoldGeometry');
       case 'bottomNavigationBarTop':
         return bottomNavigationBarTop;
       case 'floatingActionButtonArea':
@@ -232,11 +264,15 @@ extension ScaffoldGeometryBinding on ScaffoldGeometry {
       case 'copyWith':
         return ({positionalArgs, namedArgs, typeArgs}) => copyWith(
             bottomNavigationBarTop:
-                namedArgs.containsKey('bottomNavigationBarTop') ? namedArgs['bottomNavigationBarTop'] : null,
+                namedArgs.containsKey('bottomNavigationBarTop')
+                    ? namedArgs['bottomNavigationBarTop']
+                    : null,
             floatingActionButtonArea:
-                namedArgs.containsKey('floatingActionButtonArea') ? namedArgs['floatingActionButtonArea'] : null);
+                namedArgs.containsKey('floatingActionButtonArea')
+                    ? namedArgs['floatingActionButtonArea']
+                    : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -250,54 +286,72 @@ class ScaffoldAutoBinding extends HTExternalClass {
       case 'Scaffold':
         return ({positionalArgs, namedArgs, typeArgs}) => Scaffold(
             key: namedArgs.containsKey('key') ? namedArgs['key'] : null,
-            appBar: namedArgs.containsKey('appBar') ? namedArgs['appBar'] : null,
+            appBar:
+                namedArgs.containsKey('appBar') ? namedArgs['appBar'] : null,
             body: namedArgs.containsKey('body') ? namedArgs['body'] : null,
-            floatingActionButton:
-                namedArgs.containsKey('floatingActionButton') ? namedArgs['floatingActionButton'] : null,
-            floatingActionButtonLocation: namedArgs.containsKey('floatingActionButtonLocation')
-                ? namedArgs['floatingActionButtonLocation']
+            floatingActionButton: namedArgs.containsKey('floatingActionButton')
+                ? namedArgs['floatingActionButton']
                 : null,
-            floatingActionButtonAnimator: namedArgs.containsKey('floatingActionButtonAnimator')
-                ? namedArgs['floatingActionButtonAnimator']
-                : null,
+            floatingActionButtonLocation:
+                namedArgs.containsKey('floatingActionButtonLocation')
+                    ? namedArgs['floatingActionButtonLocation']
+                    : null,
+            floatingActionButtonAnimator:
+                namedArgs.containsKey('floatingActionButtonAnimator')
+                    ? namedArgs['floatingActionButtonAnimator']
+                    : null,
             persistentFooterButtons: namedArgs.containsKey('persistentFooterButtons')
                 ? List<Widget>.from(namedArgs['persistentFooterButtons'])
                 : null,
-            drawer: namedArgs.containsKey('drawer') ? namedArgs['drawer'] : null,
-            onDrawerChanged: namedArgs.containsKey('onDrawerChanged') ? namedArgs['onDrawerChanged'] : null,
-            endDrawer: namedArgs.containsKey('endDrawer') ? namedArgs['endDrawer'] : null,
-            onEndDrawerChanged: namedArgs.containsKey('onEndDrawerChanged') ? namedArgs['onEndDrawerChanged'] : null,
-            bottomNavigationBar: namedArgs.containsKey('bottomNavigationBar') ? namedArgs['bottomNavigationBar'] : null,
-            bottomSheet: namedArgs.containsKey('bottomSheet') ? namedArgs['bottomSheet'] : null,
-            backgroundColor: namedArgs.containsKey('backgroundColor') ? namedArgs['backgroundColor'] : null,
-            resizeToAvoidBottomInset:
-                namedArgs.containsKey('resizeToAvoidBottomInset') ? namedArgs['resizeToAvoidBottomInset'] : null,
+            drawer:
+                namedArgs.containsKey('drawer') ? namedArgs['drawer'] : null,
+            onDrawerChanged: namedArgs.containsKey('onDrawerChanged')
+                ? namedArgs['onDrawerChanged']
+                : null,
+            endDrawer: namedArgs.containsKey('endDrawer')
+                ? namedArgs['endDrawer']
+                : null,
+            onEndDrawerChanged: namedArgs.containsKey('onEndDrawerChanged')
+                ? namedArgs['onEndDrawerChanged']
+                : null,
+            bottomNavigationBar: namedArgs.containsKey('bottomNavigationBar')
+                ? namedArgs['bottomNavigationBar']
+                : null,
+            bottomSheet: namedArgs.containsKey('bottomSheet')
+                ? namedArgs['bottomSheet']
+                : null,
+            backgroundColor: namedArgs.containsKey('backgroundColor')
+                ? namedArgs['backgroundColor']
+                : null,
+            resizeToAvoidBottomInset: namedArgs.containsKey('resizeToAvoidBottomInset')
+                ? namedArgs['resizeToAvoidBottomInset']
+                : null,
             primary: namedArgs.containsKey('primary') ? namedArgs['primary'] : true,
-            drawerDragStartBehavior: namedArgs.containsKey('drawerDragStartBehavior')
-                ? namedArgs['drawerDragStartBehavior']
-                : DragStartBehavior.start,
+            drawerDragStartBehavior: namedArgs.containsKey('drawerDragStartBehavior') ? namedArgs['drawerDragStartBehavior'] : DragStartBehavior.start,
             extendBody: namedArgs.containsKey('extendBody') ? namedArgs['extendBody'] : false,
-            extendBodyBehindAppBar:
-                namedArgs.containsKey('extendBodyBehindAppBar') ? namedArgs['extendBodyBehindAppBar'] : false,
+            extendBodyBehindAppBar: namedArgs.containsKey('extendBodyBehindAppBar') ? namedArgs['extendBodyBehindAppBar'] : false,
             drawerScrimColor: namedArgs.containsKey('drawerScrimColor') ? namedArgs['drawerScrimColor'] : null,
             drawerEdgeDragWidth: namedArgs.containsKey('drawerEdgeDragWidth') ? namedArgs['drawerEdgeDragWidth'] : null,
-            drawerEnableOpenDragGesture:
-                namedArgs.containsKey('drawerEnableOpenDragGesture') ? namedArgs['drawerEnableOpenDragGesture'] : true,
-            endDrawerEnableOpenDragGesture: namedArgs.containsKey('endDrawerEnableOpenDragGesture')
-                ? namedArgs['endDrawerEnableOpenDragGesture']
-                : true,
+            drawerEnableOpenDragGesture: namedArgs.containsKey('drawerEnableOpenDragGesture') ? namedArgs['drawerEnableOpenDragGesture'] : true,
+            endDrawerEnableOpenDragGesture: namedArgs.containsKey('endDrawerEnableOpenDragGesture') ? namedArgs['endDrawerEnableOpenDragGesture'] : true,
             restorationId: namedArgs.containsKey('restorationId') ? namedArgs['restorationId'] : null);
       case 'Scaffold.of':
-        return ({positionalArgs, namedArgs, typeArgs}) => Scaffold.of(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            Scaffold.of(positionalArgs[0]);
       case 'Scaffold.maybeOf':
-        return ({positionalArgs, namedArgs, typeArgs}) => Scaffold.maybeOf(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            Scaffold.maybeOf(positionalArgs[0]);
       case 'Scaffold.geometryOf':
-        return ({positionalArgs, namedArgs, typeArgs}) => Scaffold.geometryOf(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            Scaffold.geometryOf(positionalArgs[0]);
       case 'Scaffold.hasDrawer':
-        return ({positionalArgs, namedArgs, typeArgs}) => Scaffold.hasDrawer(positionalArgs[0],
-            registerForUpdates: namedArgs.containsKey('registerForUpdates') ? namedArgs['registerForUpdates'] : true);
+        return ({positionalArgs, namedArgs, typeArgs}) => Scaffold.hasDrawer(
+            positionalArgs[0],
+            registerForUpdates: namedArgs.containsKey('registerForUpdates')
+                ? namedArgs['registerForUpdates']
+                : true);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -308,8 +362,8 @@ class ScaffoldAutoBinding extends HTExternalClass {
 
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'DrawerCallback': (HTFunction function) =>
-          (isOpened) => function.call(positionalArgs: [isOpened], namedArgs: const {}),
+      'DrawerCallback': (HTFunction function) => (isOpened) =>
+          function.call(positionalArgs: [isOpened], namedArgs: const {}),
     };
   }
 }
@@ -318,7 +372,7 @@ extension ScaffoldBinding on Scaffold {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('Scaffold');
+        return const HTType('Scaffold');
       case 'extendBody':
         return extendBody;
       case 'extendBodyBehindAppBar':
@@ -376,25 +430,37 @@ extension ScaffoldBinding on Scaffold {
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'toStringShallow':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShallow(
-            joiner: namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            joiner:
+                namedArgs.containsKey('joiner') ? namedArgs['joiner'] : ', ',
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toStringDeep':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringDeep(
-            prefixLineOne: namedArgs.containsKey('prefixLineOne') ? namedArgs['prefixLineOne'] : '',
-            prefixOtherLines: namedArgs.containsKey('prefixOtherLines') ? namedArgs['prefixOtherLines'] : null,
-            minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.debug);
+            prefixLineOne: namedArgs.containsKey('prefixLineOne')
+                ? namedArgs['prefixLineOne']
+                : '',
+            prefixOtherLines: namedArgs.containsKey('prefixOtherLines')
+                ? namedArgs['prefixOtherLines']
+                : null,
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.debug);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -408,7 +474,7 @@ class ScaffoldStateAutoBinding extends HTExternalClass {
       case 'ScaffoldState':
         return ({positionalArgs, namedArgs, typeArgs}) => ScaffoldState();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -419,10 +485,10 @@ class ScaffoldStateAutoBinding extends HTExternalClass {
 
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      'WidgetBuilder': (HTFunction function) =>
-          (context) => function.call(positionalArgs: [context], namedArgs: const {}) as Widget,
-      'TickerCallback': (HTFunction function) =>
-          (elapsed) => function.call(positionalArgs: [elapsed], namedArgs: const {}),
+      'WidgetBuilder': (HTFunction function) => (context) => function
+          .call(positionalArgs: [context], namedArgs: const {}) as Widget,
+      'TickerCallback': (HTFunction function) => (elapsed) =>
+          function.call(positionalArgs: [elapsed], namedArgs: const {}),
     };
   }
 }
@@ -431,7 +497,7 @@ extension ScaffoldStateBinding on ScaffoldState {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('ScaffoldState');
+        return const HTType('ScaffoldState');
       case 'restorationId':
         return restorationId;
       case 'hasAppBar':
@@ -459,49 +525,67 @@ extension ScaffoldStateBinding on ScaffoldState {
       case 'mounted':
         return mounted;
       case 'restoreState':
-        return ({positionalArgs, namedArgs, typeArgs}) => restoreState(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            restoreState(positionalArgs[0], positionalArgs[1]);
       case 'openDrawer':
         return ({positionalArgs, namedArgs, typeArgs}) => openDrawer();
       case 'openEndDrawer':
         return ({positionalArgs, namedArgs, typeArgs}) => openEndDrawer();
       case 'showBottomSheet':
         return ({positionalArgs, namedArgs, typeArgs}) => showBottomSheet(
-            context: namedArgs.containsKey('context') ? namedArgs['context'] : null,
-            builder: namedArgs.containsKey('builder') ? namedArgs['builder'] : null,
-            backgroundColor: namedArgs.containsKey('backgroundColor') ? namedArgs['backgroundColor'] : null,
-            elevation: namedArgs.containsKey('elevation') ? namedArgs['elevation'] : null,
+            context:
+                namedArgs.containsKey('context') ? namedArgs['context'] : null,
+            builder:
+                namedArgs.containsKey('builder') ? namedArgs['builder'] : null,
+            backgroundColor: namedArgs.containsKey('backgroundColor')
+                ? namedArgs['backgroundColor']
+                : null,
+            elevation: namedArgs.containsKey('elevation')
+                ? namedArgs['elevation']
+                : null,
             shape: namedArgs.containsKey('shape') ? namedArgs['shape'] : null,
-            clipBehavior: namedArgs.containsKey('clipBehavior') ? namedArgs['clipBehavior'] : null,
-            transitionAnimationController: namedArgs.containsKey('transitionAnimationController')
-                ? namedArgs['transitionAnimationController']
-                : null);
+            clipBehavior: namedArgs.containsKey('clipBehavior')
+                ? namedArgs['clipBehavior']
+                : null,
+            transitionAnimationController:
+                namedArgs.containsKey('transitionAnimationController')
+                    ? namedArgs['transitionAnimationController']
+                    : null);
       case 'initState':
         return ({positionalArgs, namedArgs, typeArgs}) => initState();
       case 'didUpdateWidget':
-        return ({positionalArgs, namedArgs, typeArgs}) => didUpdateWidget(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            didUpdateWidget(positionalArgs[0]);
       case 'didChangeDependencies':
-        return ({positionalArgs, namedArgs, typeArgs}) => didChangeDependencies();
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            didChangeDependencies();
       case 'dispose':
         return ({positionalArgs, namedArgs, typeArgs}) => dispose();
       case 'showBodyScrim':
-        return ({positionalArgs, namedArgs, typeArgs}) => showBodyScrim(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            showBodyScrim(positionalArgs[0], positionalArgs[1]);
       case 'build':
-        return ({positionalArgs, namedArgs, typeArgs}) => build(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            build(positionalArgs[0]);
       case 'createTicker':
-        return ({positionalArgs, namedArgs, typeArgs}) => createTicker(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            createTicker(positionalArgs[0]);
       case 'debugFillProperties':
-        return ({positionalArgs, namedArgs, typeArgs}) => debugFillProperties(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            debugFillProperties(positionalArgs[0]);
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
       case 'toString':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            toString(minLevel: namedArgs.containsKey('minLevel') ? namedArgs['minLevel'] : DiagnosticLevel.info);
+        return ({positionalArgs, namedArgs, typeArgs}) => toString(
+            minLevel: namedArgs.containsKey('minLevel')
+                ? namedArgs['minLevel']
+                : DiagnosticLevel.info);
       case 'toDiagnosticsNode':
         return ({positionalArgs, namedArgs, typeArgs}) => toDiagnosticsNode(
             name: namedArgs.containsKey('name') ? namedArgs['name'] : null,
             style: namedArgs.containsKey('style') ? namedArgs['style'] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }

@@ -8,10 +8,11 @@ class ScrollPhysicsAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'ScrollPhysics':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            ScrollPhysics(parent: namedArgs.containsKey('parent') ? namedArgs['parent'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => ScrollPhysics(
+            parent:
+                namedArgs.containsKey('parent') ? namedArgs['parent'] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -25,7 +26,7 @@ extension ScrollPhysicsBinding on ScrollPhysics {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('ScrollPhysics');
+        return const HTType('ScrollPhysics');
       case 'parent':
         return parent;
       case 'spring':
@@ -43,47 +44,65 @@ extension ScrollPhysicsBinding on ScrollPhysics {
       case 'allowImplicitScrolling':
         return allowImplicitScrolling;
       case 'applyTo':
-        return ({positionalArgs, namedArgs, typeArgs}) => applyTo(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            applyTo(positionalArgs[0]);
       case 'applyPhysicsToUserOffset':
         return ({positionalArgs, namedArgs, typeArgs}) =>
             applyPhysicsToUserOffset(positionalArgs[0], positionalArgs[1]);
       case 'shouldAcceptUserOffset':
-        return ({positionalArgs, namedArgs, typeArgs}) => shouldAcceptUserOffset(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            shouldAcceptUserOffset(positionalArgs[0]);
       case 'recommendDeferredLoading':
         return ({positionalArgs, namedArgs, typeArgs}) =>
-            recommendDeferredLoading(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
+            recommendDeferredLoading(
+                positionalArgs[0], positionalArgs[1], positionalArgs[2]);
       case 'applyBoundaryConditions':
-        return ({positionalArgs, namedArgs, typeArgs}) => applyBoundaryConditions(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            applyBoundaryConditions(positionalArgs[0], positionalArgs[1]);
       case 'adjustPositionForNewDimensions':
-        return ({positionalArgs, namedArgs, typeArgs}) => adjustPositionForNewDimensions(
-            oldPosition: namedArgs.containsKey('oldPosition') ? namedArgs['oldPosition'] : null,
-            newPosition: namedArgs.containsKey('newPosition') ? namedArgs['newPosition'] : null,
-            isScrolling: namedArgs.containsKey('isScrolling') ? namedArgs['isScrolling'] : null,
-            velocity: namedArgs.containsKey('velocity') ? namedArgs['velocity'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            adjustPositionForNewDimensions(
+                oldPosition: namedArgs.containsKey('oldPosition')
+                    ? namedArgs['oldPosition']
+                    : null,
+                newPosition: namedArgs.containsKey('newPosition')
+                    ? namedArgs['newPosition']
+                    : null,
+                isScrolling: namedArgs.containsKey('isScrolling')
+                    ? namedArgs['isScrolling']
+                    : null,
+                velocity: namedArgs.containsKey('velocity')
+                    ? namedArgs['velocity']
+                    : null);
       case 'createBallisticSimulation':
         return ({positionalArgs, namedArgs, typeArgs}) =>
             createBallisticSimulation(positionalArgs[0], positionalArgs[1]);
       case 'carriedMomentum':
-        return ({positionalArgs, namedArgs, typeArgs}) => carriedMomentum(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            carriedMomentum(positionalArgs[0]);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
 
 class RangeMaintainingScrollPhysicsAutoBinding extends HTExternalClass {
-  RangeMaintainingScrollPhysicsAutoBinding() : super('RangeMaintainingScrollPhysics');
+  RangeMaintainingScrollPhysicsAutoBinding()
+      : super('RangeMaintainingScrollPhysics');
 
   @override
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'RangeMaintainingScrollPhysics':
         return ({positionalArgs, namedArgs, typeArgs}) =>
-            RangeMaintainingScrollPhysics(parent: namedArgs.containsKey('parent') ? namedArgs['parent'] : null);
+            RangeMaintainingScrollPhysics(
+                parent: namedArgs.containsKey('parent')
+                    ? namedArgs['parent']
+                    : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -93,11 +112,12 @@ class RangeMaintainingScrollPhysicsAutoBinding extends HTExternalClass {
   }
 }
 
-extension RangeMaintainingScrollPhysicsBinding on RangeMaintainingScrollPhysics {
+extension RangeMaintainingScrollPhysicsBinding
+    on RangeMaintainingScrollPhysics {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('RangeMaintainingScrollPhysics');
+        return const HTType('RangeMaintainingScrollPhysics');
       case 'parent':
         return parent;
       case 'spring':
@@ -115,32 +135,46 @@ extension RangeMaintainingScrollPhysicsBinding on RangeMaintainingScrollPhysics 
       case 'allowImplicitScrolling':
         return allowImplicitScrolling;
       case 'applyTo':
-        return ({positionalArgs, namedArgs, typeArgs}) => applyTo(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            applyTo(positionalArgs[0]);
       case 'adjustPositionForNewDimensions':
-        return ({positionalArgs, namedArgs, typeArgs}) => adjustPositionForNewDimensions(
-            oldPosition: namedArgs.containsKey('oldPosition') ? namedArgs['oldPosition'] : null,
-            newPosition: namedArgs.containsKey('newPosition') ? namedArgs['newPosition'] : null,
-            isScrolling: namedArgs.containsKey('isScrolling') ? namedArgs['isScrolling'] : null,
-            velocity: namedArgs.containsKey('velocity') ? namedArgs['velocity'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            adjustPositionForNewDimensions(
+                oldPosition: namedArgs.containsKey('oldPosition')
+                    ? namedArgs['oldPosition']
+                    : null,
+                newPosition: namedArgs.containsKey('newPosition')
+                    ? namedArgs['newPosition']
+                    : null,
+                isScrolling: namedArgs.containsKey('isScrolling')
+                    ? namedArgs['isScrolling']
+                    : null,
+                velocity: namedArgs.containsKey('velocity')
+                    ? namedArgs['velocity']
+                    : null);
       case 'applyPhysicsToUserOffset':
         return ({positionalArgs, namedArgs, typeArgs}) =>
             applyPhysicsToUserOffset(positionalArgs[0], positionalArgs[1]);
       case 'shouldAcceptUserOffset':
-        return ({positionalArgs, namedArgs, typeArgs}) => shouldAcceptUserOffset(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            shouldAcceptUserOffset(positionalArgs[0]);
       case 'recommendDeferredLoading':
         return ({positionalArgs, namedArgs, typeArgs}) =>
-            recommendDeferredLoading(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
+            recommendDeferredLoading(
+                positionalArgs[0], positionalArgs[1], positionalArgs[2]);
       case 'applyBoundaryConditions':
-        return ({positionalArgs, namedArgs, typeArgs}) => applyBoundaryConditions(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            applyBoundaryConditions(positionalArgs[0], positionalArgs[1]);
       case 'createBallisticSimulation':
         return ({positionalArgs, namedArgs, typeArgs}) =>
             createBallisticSimulation(positionalArgs[0], positionalArgs[1]);
       case 'carriedMomentum':
-        return ({positionalArgs, namedArgs, typeArgs}) => carriedMomentum(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            carriedMomentum(positionalArgs[0]);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -152,10 +186,11 @@ class BouncingScrollPhysicsAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'BouncingScrollPhysics':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            BouncingScrollPhysics(parent: namedArgs.containsKey('parent') ? namedArgs['parent'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => BouncingScrollPhysics(
+            parent:
+                namedArgs.containsKey('parent') ? namedArgs['parent'] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -169,7 +204,7 @@ extension BouncingScrollPhysicsBinding on BouncingScrollPhysics {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('BouncingScrollPhysics');
+        return const HTType('BouncingScrollPhysics');
       case 'parent':
         return parent;
       case 'minFlingVelocity':
@@ -187,34 +222,49 @@ extension BouncingScrollPhysicsBinding on BouncingScrollPhysics {
       case 'allowImplicitScrolling':
         return allowImplicitScrolling;
       case 'applyTo':
-        return ({positionalArgs, namedArgs, typeArgs}) => applyTo(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            applyTo(positionalArgs[0]);
       case 'frictionFactor':
-        return ({positionalArgs, namedArgs, typeArgs}) => frictionFactor(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            frictionFactor(positionalArgs[0]);
       case 'applyPhysicsToUserOffset':
         return ({positionalArgs, namedArgs, typeArgs}) =>
             applyPhysicsToUserOffset(positionalArgs[0], positionalArgs[1]);
       case 'applyBoundaryConditions':
-        return ({positionalArgs, namedArgs, typeArgs}) => applyBoundaryConditions(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            applyBoundaryConditions(positionalArgs[0], positionalArgs[1]);
       case 'createBallisticSimulation':
         return ({positionalArgs, namedArgs, typeArgs}) =>
             createBallisticSimulation(positionalArgs[0], positionalArgs[1]);
       case 'carriedMomentum':
-        return ({positionalArgs, namedArgs, typeArgs}) => carriedMomentum(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            carriedMomentum(positionalArgs[0]);
       case 'shouldAcceptUserOffset':
-        return ({positionalArgs, namedArgs, typeArgs}) => shouldAcceptUserOffset(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            shouldAcceptUserOffset(positionalArgs[0]);
       case 'recommendDeferredLoading':
         return ({positionalArgs, namedArgs, typeArgs}) =>
-            recommendDeferredLoading(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
+            recommendDeferredLoading(
+                positionalArgs[0], positionalArgs[1], positionalArgs[2]);
       case 'adjustPositionForNewDimensions':
-        return ({positionalArgs, namedArgs, typeArgs}) => adjustPositionForNewDimensions(
-            oldPosition: namedArgs.containsKey('oldPosition') ? namedArgs['oldPosition'] : null,
-            newPosition: namedArgs.containsKey('newPosition') ? namedArgs['newPosition'] : null,
-            isScrolling: namedArgs.containsKey('isScrolling') ? namedArgs['isScrolling'] : null,
-            velocity: namedArgs.containsKey('velocity') ? namedArgs['velocity'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            adjustPositionForNewDimensions(
+                oldPosition: namedArgs.containsKey('oldPosition')
+                    ? namedArgs['oldPosition']
+                    : null,
+                newPosition: namedArgs.containsKey('newPosition')
+                    ? namedArgs['newPosition']
+                    : null,
+                isScrolling: namedArgs.containsKey('isScrolling')
+                    ? namedArgs['isScrolling']
+                    : null,
+                velocity: namedArgs.containsKey('velocity')
+                    ? namedArgs['velocity']
+                    : null);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
@@ -226,10 +276,11 @@ class ClampingScrollPhysicsAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'ClampingScrollPhysics':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            ClampingScrollPhysics(parent: namedArgs.containsKey('parent') ? namedArgs['parent'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => ClampingScrollPhysics(
+            parent:
+                namedArgs.containsKey('parent') ? namedArgs['parent'] : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -243,7 +294,7 @@ extension ClampingScrollPhysicsBinding on ClampingScrollPhysics {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('ClampingScrollPhysics');
+        return const HTType('ClampingScrollPhysics');
       case 'parent':
         return parent;
       case 'spring':
@@ -261,9 +312,11 @@ extension ClampingScrollPhysicsBinding on ClampingScrollPhysics {
       case 'allowImplicitScrolling':
         return allowImplicitScrolling;
       case 'applyTo':
-        return ({positionalArgs, namedArgs, typeArgs}) => applyTo(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            applyTo(positionalArgs[0]);
       case 'applyBoundaryConditions':
-        return ({positionalArgs, namedArgs, typeArgs}) => applyBoundaryConditions(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            applyBoundaryConditions(positionalArgs[0], positionalArgs[1]);
       case 'createBallisticSimulation':
         return ({positionalArgs, namedArgs, typeArgs}) =>
             createBallisticSimulation(positionalArgs[0], positionalArgs[1]);
@@ -271,37 +324,53 @@ extension ClampingScrollPhysicsBinding on ClampingScrollPhysics {
         return ({positionalArgs, namedArgs, typeArgs}) =>
             applyPhysicsToUserOffset(positionalArgs[0], positionalArgs[1]);
       case 'shouldAcceptUserOffset':
-        return ({positionalArgs, namedArgs, typeArgs}) => shouldAcceptUserOffset(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            shouldAcceptUserOffset(positionalArgs[0]);
       case 'recommendDeferredLoading':
         return ({positionalArgs, namedArgs, typeArgs}) =>
-            recommendDeferredLoading(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
+            recommendDeferredLoading(
+                positionalArgs[0], positionalArgs[1], positionalArgs[2]);
       case 'adjustPositionForNewDimensions':
-        return ({positionalArgs, namedArgs, typeArgs}) => adjustPositionForNewDimensions(
-            oldPosition: namedArgs.containsKey('oldPosition') ? namedArgs['oldPosition'] : null,
-            newPosition: namedArgs.containsKey('newPosition') ? namedArgs['newPosition'] : null,
-            isScrolling: namedArgs.containsKey('isScrolling') ? namedArgs['isScrolling'] : null,
-            velocity: namedArgs.containsKey('velocity') ? namedArgs['velocity'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            adjustPositionForNewDimensions(
+                oldPosition: namedArgs.containsKey('oldPosition')
+                    ? namedArgs['oldPosition']
+                    : null,
+                newPosition: namedArgs.containsKey('newPosition')
+                    ? namedArgs['newPosition']
+                    : null,
+                isScrolling: namedArgs.containsKey('isScrolling')
+                    ? namedArgs['isScrolling']
+                    : null,
+                velocity: namedArgs.containsKey('velocity')
+                    ? namedArgs['velocity']
+                    : null);
       case 'carriedMomentum':
-        return ({positionalArgs, namedArgs, typeArgs}) => carriedMomentum(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            carriedMomentum(positionalArgs[0]);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
 
 class AlwaysScrollableScrollPhysicsAutoBinding extends HTExternalClass {
-  AlwaysScrollableScrollPhysicsAutoBinding() : super('AlwaysScrollableScrollPhysics');
+  AlwaysScrollableScrollPhysicsAutoBinding()
+      : super('AlwaysScrollableScrollPhysics');
 
   @override
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'AlwaysScrollableScrollPhysics':
         return ({positionalArgs, namedArgs, typeArgs}) =>
-            AlwaysScrollableScrollPhysics(parent: namedArgs.containsKey('parent') ? namedArgs['parent'] : null);
+            AlwaysScrollableScrollPhysics(
+                parent: namedArgs.containsKey('parent')
+                    ? namedArgs['parent']
+                    : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -311,11 +380,12 @@ class AlwaysScrollableScrollPhysicsAutoBinding extends HTExternalClass {
   }
 }
 
-extension AlwaysScrollableScrollPhysicsBinding on AlwaysScrollableScrollPhysics {
+extension AlwaysScrollableScrollPhysicsBinding
+    on AlwaysScrollableScrollPhysics {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('AlwaysScrollableScrollPhysics');
+        return const HTType('AlwaysScrollableScrollPhysics');
       case 'parent':
         return parent;
       case 'spring':
@@ -333,47 +403,65 @@ extension AlwaysScrollableScrollPhysicsBinding on AlwaysScrollableScrollPhysics 
       case 'allowImplicitScrolling':
         return allowImplicitScrolling;
       case 'applyTo':
-        return ({positionalArgs, namedArgs, typeArgs}) => applyTo(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            applyTo(positionalArgs[0]);
       case 'shouldAcceptUserOffset':
-        return ({positionalArgs, namedArgs, typeArgs}) => shouldAcceptUserOffset(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            shouldAcceptUserOffset(positionalArgs[0]);
       case 'applyPhysicsToUserOffset':
         return ({positionalArgs, namedArgs, typeArgs}) =>
             applyPhysicsToUserOffset(positionalArgs[0], positionalArgs[1]);
       case 'recommendDeferredLoading':
         return ({positionalArgs, namedArgs, typeArgs}) =>
-            recommendDeferredLoading(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
+            recommendDeferredLoading(
+                positionalArgs[0], positionalArgs[1], positionalArgs[2]);
       case 'applyBoundaryConditions':
-        return ({positionalArgs, namedArgs, typeArgs}) => applyBoundaryConditions(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            applyBoundaryConditions(positionalArgs[0], positionalArgs[1]);
       case 'adjustPositionForNewDimensions':
-        return ({positionalArgs, namedArgs, typeArgs}) => adjustPositionForNewDimensions(
-            oldPosition: namedArgs.containsKey('oldPosition') ? namedArgs['oldPosition'] : null,
-            newPosition: namedArgs.containsKey('newPosition') ? namedArgs['newPosition'] : null,
-            isScrolling: namedArgs.containsKey('isScrolling') ? namedArgs['isScrolling'] : null,
-            velocity: namedArgs.containsKey('velocity') ? namedArgs['velocity'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            adjustPositionForNewDimensions(
+                oldPosition: namedArgs.containsKey('oldPosition')
+                    ? namedArgs['oldPosition']
+                    : null,
+                newPosition: namedArgs.containsKey('newPosition')
+                    ? namedArgs['newPosition']
+                    : null,
+                isScrolling: namedArgs.containsKey('isScrolling')
+                    ? namedArgs['isScrolling']
+                    : null,
+                velocity: namedArgs.containsKey('velocity')
+                    ? namedArgs['velocity']
+                    : null);
       case 'createBallisticSimulation':
         return ({positionalArgs, namedArgs, typeArgs}) =>
             createBallisticSimulation(positionalArgs[0], positionalArgs[1]);
       case 'carriedMomentum':
-        return ({positionalArgs, namedArgs, typeArgs}) => carriedMomentum(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            carriedMomentum(positionalArgs[0]);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
 
 class NeverScrollableScrollPhysicsAutoBinding extends HTExternalClass {
-  NeverScrollableScrollPhysicsAutoBinding() : super('NeverScrollableScrollPhysics');
+  NeverScrollableScrollPhysicsAutoBinding()
+      : super('NeverScrollableScrollPhysics');
 
   @override
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'NeverScrollableScrollPhysics':
         return ({positionalArgs, namedArgs, typeArgs}) =>
-            NeverScrollableScrollPhysics(parent: namedArgs.containsKey('parent') ? namedArgs['parent'] : null);
+            NeverScrollableScrollPhysics(
+                parent: namedArgs.containsKey('parent')
+                    ? namedArgs['parent']
+                    : null);
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 
@@ -387,7 +475,7 @@ extension NeverScrollableScrollPhysicsBinding on NeverScrollableScrollPhysics {
   dynamic htFetch(String varName) {
     switch (varName) {
       case 'typeid':
-        return const HTTypeId('NeverScrollableScrollPhysics');
+        return const HTType('NeverScrollableScrollPhysics');
       case 'parent':
         return parent;
       case 'allowImplicitScrolling':
@@ -405,32 +493,46 @@ extension NeverScrollableScrollPhysicsBinding on NeverScrollableScrollPhysics {
       case 'dragStartDistanceMotionThreshold':
         return dragStartDistanceMotionThreshold;
       case 'applyTo':
-        return ({positionalArgs, namedArgs, typeArgs}) => applyTo(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            applyTo(positionalArgs[0]);
       case 'shouldAcceptUserOffset':
-        return ({positionalArgs, namedArgs, typeArgs}) => shouldAcceptUserOffset(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            shouldAcceptUserOffset(positionalArgs[0]);
       case 'applyPhysicsToUserOffset':
         return ({positionalArgs, namedArgs, typeArgs}) =>
             applyPhysicsToUserOffset(positionalArgs[0], positionalArgs[1]);
       case 'recommendDeferredLoading':
         return ({positionalArgs, namedArgs, typeArgs}) =>
-            recommendDeferredLoading(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
+            recommendDeferredLoading(
+                positionalArgs[0], positionalArgs[1], positionalArgs[2]);
       case 'applyBoundaryConditions':
-        return ({positionalArgs, namedArgs, typeArgs}) => applyBoundaryConditions(positionalArgs[0], positionalArgs[1]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            applyBoundaryConditions(positionalArgs[0], positionalArgs[1]);
       case 'adjustPositionForNewDimensions':
-        return ({positionalArgs, namedArgs, typeArgs}) => adjustPositionForNewDimensions(
-            oldPosition: namedArgs.containsKey('oldPosition') ? namedArgs['oldPosition'] : null,
-            newPosition: namedArgs.containsKey('newPosition') ? namedArgs['newPosition'] : null,
-            isScrolling: namedArgs.containsKey('isScrolling') ? namedArgs['isScrolling'] : null,
-            velocity: namedArgs.containsKey('velocity') ? namedArgs['velocity'] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            adjustPositionForNewDimensions(
+                oldPosition: namedArgs.containsKey('oldPosition')
+                    ? namedArgs['oldPosition']
+                    : null,
+                newPosition: namedArgs.containsKey('newPosition')
+                    ? namedArgs['newPosition']
+                    : null,
+                isScrolling: namedArgs.containsKey('isScrolling')
+                    ? namedArgs['isScrolling']
+                    : null,
+                velocity: namedArgs.containsKey('velocity')
+                    ? namedArgs['velocity']
+                    : null);
       case 'createBallisticSimulation':
         return ({positionalArgs, namedArgs, typeArgs}) =>
             createBallisticSimulation(positionalArgs[0], positionalArgs[1]);
       case 'carriedMomentum':
-        return ({positionalArgs, namedArgs, typeArgs}) => carriedMomentum(positionalArgs[0]);
+        return ({positionalArgs, namedArgs, typeArgs}) =>
+            carriedMomentum(positionalArgs[0]);
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
       default:
-        throw HTErrorUndefined(varName);
+        throw HTError.undefined(varName);
     }
   }
 }
