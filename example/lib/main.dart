@@ -59,6 +59,7 @@ class _MyHomePageState extends State<MyHomePage> {
     var binding = DefaultBindingHander(widget.interpreter);
     await widget.interpreter.init();
     binding.loadExternalFunctionTypes();
+    binding.loadExternalFunctions();
     binding.loadExternalClasses();
     await binding.importScripts();
     setState(() {

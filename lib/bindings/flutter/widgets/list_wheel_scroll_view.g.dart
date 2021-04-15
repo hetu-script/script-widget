@@ -27,7 +27,7 @@ class ListWheelChildListDelegateAutoBinding extends HTExternalClass {
 extension ListWheelChildListDelegateBinding on ListWheelChildListDelegate {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ListWheelChildListDelegate');
       case 'children':
         return children;
@@ -74,7 +74,7 @@ extension ListWheelChildLoopingListDelegateBinding
     on ListWheelChildLoopingListDelegate {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ListWheelChildLoopingListDelegate');
       case 'children':
         return children;
@@ -133,7 +133,7 @@ extension ListWheelChildBuilderDelegateBinding
     on ListWheelChildBuilderDelegate {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ListWheelChildBuilderDelegate');
       case 'builder':
         return builder;
@@ -190,7 +190,7 @@ class FixedExtentScrollControllerAutoBinding extends HTExternalClass {
 extension FixedExtentScrollControllerBinding on FixedExtentScrollController {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('FixedExtentScrollController');
       case 'initialItem':
         return initialItem;
@@ -284,7 +284,7 @@ class FixedExtentMetricsAutoBinding extends HTExternalClass {
 extension FixedExtentMetricsBinding on FixedExtentMetrics {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('FixedExtentMetrics');
       case 'itemIndex':
         return itemIndex;
@@ -369,7 +369,7 @@ class FixedExtentScrollPhysicsAutoBinding extends HTExternalClass {
 extension FixedExtentScrollPhysicsBinding on FixedExtentScrollPhysics {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('FixedExtentScrollPhysics');
       case 'parent':
         return parent;
@@ -545,7 +545,7 @@ class ListWheelScrollViewAutoBinding extends HTExternalClass {
 extension ListWheelScrollViewBinding on ListWheelScrollView {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ListWheelScrollView');
       case 'controller':
         return controller;
@@ -653,7 +653,7 @@ class ListWheelElementAutoBinding extends HTExternalClass {
 extension ListWheelElementBinding on ListWheelElement {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ListWheelElement');
       case 'widget':
         return widget;
@@ -895,7 +895,7 @@ class ListWheelViewportAutoBinding extends HTExternalClass {
 extension ListWheelViewportBinding on ListWheelViewport {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ListWheelViewport');
       case 'diameterRatio':
         return diameterRatio;

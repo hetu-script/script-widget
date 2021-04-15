@@ -43,7 +43,7 @@ class BoxShadowAutoBinding extends HTExternalClass {
 extension BoxShadowBinding on BoxShadow {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('BoxShadow');
       case 'spreadRadius':
         return spreadRadius;

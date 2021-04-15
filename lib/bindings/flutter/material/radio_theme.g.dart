@@ -48,7 +48,7 @@ class RadioThemeDataAutoBinding extends HTExternalClass {
 extension RadioThemeDataBinding on RadioThemeData {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RadioThemeData');
       case 'mouseCursor':
         return mouseCursor;
@@ -133,7 +133,7 @@ class RadioThemeAutoBinding extends HTExternalClass {
 extension RadioThemeBinding on RadioTheme {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RadioTheme');
       case 'data':
         return data;

@@ -30,7 +30,7 @@ class FractionalOffsetTweenAutoBinding extends HTExternalClass {
 extension FractionalOffsetTweenBinding on FractionalOffsetTween {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('FractionalOffsetTween');
       case 'begin':
         return begin;
@@ -101,7 +101,7 @@ class AlignmentTweenAutoBinding extends HTExternalClass {
 extension AlignmentTweenBinding on AlignmentTween {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('AlignmentTween');
       case 'begin':
         return begin;
@@ -174,7 +174,7 @@ class AlignmentGeometryTweenAutoBinding extends HTExternalClass {
 extension AlignmentGeometryTweenBinding on AlignmentGeometryTween {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('AlignmentGeometryTween');
       case 'begin':
         return begin;

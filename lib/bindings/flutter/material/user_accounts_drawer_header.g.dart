@@ -62,7 +62,7 @@ class UserAccountsDrawerHeaderAutoBinding extends HTExternalClass {
 extension UserAccountsDrawerHeaderBinding on UserAccountsDrawerHeader {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('UserAccountsDrawerHeader');
       case 'decoration':
         return decoration;

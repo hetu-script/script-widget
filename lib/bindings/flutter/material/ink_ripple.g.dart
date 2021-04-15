@@ -58,7 +58,7 @@ class InkRippleAutoBinding extends HTExternalClass {
 extension InkRippleBinding on InkRipple {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('InkRipple');
       case 'referenceBox':
         return referenceBox;

@@ -33,7 +33,7 @@ class ScaleStartDetailsAutoBinding extends HTExternalClass {
 extension ScaleStartDetailsBinding on ScaleStartDetails {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ScaleStartDetails');
       case 'focalPoint':
         return focalPoint;
@@ -89,7 +89,7 @@ class ScaleUpdateDetailsAutoBinding extends HTExternalClass {
 extension ScaleUpdateDetailsBinding on ScaleUpdateDetails {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ScaleUpdateDetails');
       case 'focalPoint':
         return focalPoint;
@@ -141,7 +141,7 @@ class ScaleEndDetailsAutoBinding extends HTExternalClass {
 extension ScaleEndDetailsBinding on ScaleEndDetails {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ScaleEndDetails');
       case 'velocity':
         return velocity;
@@ -190,7 +190,7 @@ class ScaleGestureRecognizerAutoBinding extends HTExternalClass {
 extension ScaleGestureRecognizerBinding on ScaleGestureRecognizer {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ScaleGestureRecognizer');
       case 'dragStartBehavior':
         return dragStartBehavior;

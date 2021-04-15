@@ -42,7 +42,7 @@ class MaterialBannerThemeDataAutoBinding extends HTExternalClass {
 extension MaterialBannerThemeDataBinding on MaterialBannerThemeData {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('MaterialBannerThemeData');
       case 'backgroundColor':
         return backgroundColor;
@@ -115,7 +115,7 @@ class MaterialBannerThemeAutoBinding extends HTExternalClass {
 extension MaterialBannerThemeBinding on MaterialBannerTheme {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('MaterialBannerTheme');
       case 'data':
         return data;

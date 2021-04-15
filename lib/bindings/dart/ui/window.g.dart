@@ -21,7 +21,7 @@ class BrightnessAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Brightness');
       case 'index':
         return (instance as Brightness).index;

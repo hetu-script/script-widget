@@ -29,7 +29,7 @@ class ImageSizeInfoAutoBinding extends HTExternalClass {
 extension ImageSizeInfoBinding on ImageSizeInfo {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ImageSizeInfo');
       case 'source':
         return source;

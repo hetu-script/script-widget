@@ -25,7 +25,7 @@ class ConnectionStateAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ConnectionState');
       case 'index':
         return (instance as ConnectionState).index;

@@ -35,7 +35,7 @@ class DirectionalityAutoBinding extends HTExternalClass {
 extension DirectionalityBinding on Directionality {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Directionality');
       case 'textDirection':
         return textDirection;
@@ -117,7 +117,7 @@ class OpacityAutoBinding extends HTExternalClass {
 extension OpacityBinding on Opacity {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Opacity');
       case 'opacity':
         return opacity;
@@ -210,7 +210,7 @@ class ShaderMaskAutoBinding extends HTExternalClass {
 extension ShaderMaskBinding on ShaderMask {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ShaderMask');
       case 'shaderCallback':
         return shaderCallback;
@@ -293,7 +293,7 @@ class BackdropFilterAutoBinding extends HTExternalClass {
 extension BackdropFilterBinding on BackdropFilter {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('BackdropFilter');
       case 'filter':
         return filter;
@@ -385,7 +385,7 @@ class CustomPaintAutoBinding extends HTExternalClass {
 extension CustomPaintBinding on CustomPaint {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('CustomPaint');
       case 'painter':
         return painter;
@@ -481,7 +481,7 @@ class ClipRectAutoBinding extends HTExternalClass {
 extension ClipRectBinding on ClipRect {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ClipRect');
       case 'clipper':
         return clipper;
@@ -574,7 +574,7 @@ class ClipRRectAutoBinding extends HTExternalClass {
 extension ClipRRectBinding on ClipRRect {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ClipRRect');
       case 'borderRadius':
         return borderRadius;
@@ -663,7 +663,7 @@ class ClipOvalAutoBinding extends HTExternalClass {
 extension ClipOvalBinding on ClipOval {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ClipOval');
       case 'clipper':
         return clipper;
@@ -761,7 +761,7 @@ class ClipPathAutoBinding extends HTExternalClass {
 extension ClipPathBinding on ClipPath {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ClipPath');
       case 'clipper':
         return clipper;
@@ -862,7 +862,7 @@ class PhysicalModelAutoBinding extends HTExternalClass {
 extension PhysicalModelBinding on PhysicalModel {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('PhysicalModel');
       case 'shape':
         return shape;
@@ -963,7 +963,7 @@ class PhysicalShapeAutoBinding extends HTExternalClass {
 extension PhysicalShapeBinding on PhysicalShape {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('PhysicalShape');
       case 'clipper':
         return clipper;
@@ -1094,7 +1094,7 @@ class TransformAutoBinding extends HTExternalClass {
 extension TransformBinding on Transform {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Transform');
       case 'transform':
         return transform;
@@ -1183,7 +1183,7 @@ class CompositedTransformTargetAutoBinding extends HTExternalClass {
 extension CompositedTransformTargetBinding on CompositedTransformTarget {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('CompositedTransformTarget');
       case 'link':
         return link;
@@ -1279,7 +1279,7 @@ class CompositedTransformFollowerAutoBinding extends HTExternalClass {
 extension CompositedTransformFollowerBinding on CompositedTransformFollower {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('CompositedTransformFollower');
       case 'link':
         return link;
@@ -1376,7 +1376,7 @@ class FittedBoxAutoBinding extends HTExternalClass {
 extension FittedBoxBinding on FittedBox {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('FittedBox');
       case 'fit':
         return fit;
@@ -1464,7 +1464,7 @@ class FractionalTranslationAutoBinding extends HTExternalClass {
 extension FractionalTranslationBinding on FractionalTranslation {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('FractionalTranslation');
       case 'translation':
         return translation;
@@ -1547,7 +1547,7 @@ class RotatedBoxAutoBinding extends HTExternalClass {
 extension RotatedBoxBinding on RotatedBox {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RotatedBox');
       case 'quarterTurns':
         return quarterTurns;
@@ -1628,7 +1628,7 @@ class PaddingAutoBinding extends HTExternalClass {
 extension PaddingBinding on Padding {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Padding');
       case 'padding':
         return padding;
@@ -1717,7 +1717,7 @@ class AlignAutoBinding extends HTExternalClass {
 extension AlignBinding on Align {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Align');
       case 'alignment':
         return alignment;
@@ -1807,7 +1807,7 @@ class CenterAutoBinding extends HTExternalClass {
 extension CenterBinding on Center {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Center');
       case 'alignment':
         return alignment;
@@ -1894,7 +1894,7 @@ class CustomSingleChildLayoutAutoBinding extends HTExternalClass {
 extension CustomSingleChildLayoutBinding on CustomSingleChildLayout {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('CustomSingleChildLayout');
       case 'delegate':
         return delegate;
@@ -1975,7 +1975,7 @@ class LayoutIdAutoBinding extends HTExternalClass {
 extension LayoutIdBinding on LayoutId {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('LayoutId');
       case 'id':
         return id;
@@ -2061,7 +2061,7 @@ class CustomMultiChildLayoutAutoBinding extends HTExternalClass {
 extension CustomMultiChildLayoutBinding on CustomMultiChildLayout {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('CustomMultiChildLayout');
       case 'delegate':
         return delegate;
@@ -2157,7 +2157,7 @@ class SizedBoxAutoBinding extends HTExternalClass {
 extension SizedBoxBinding on SizedBox {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('SizedBox');
       case 'width':
         return width;
@@ -2240,7 +2240,7 @@ class ConstrainedBoxAutoBinding extends HTExternalClass {
 extension ConstrainedBoxBinding on ConstrainedBox {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ConstrainedBox');
       case 'constraints':
         return constraints;
@@ -2332,7 +2332,7 @@ class UnconstrainedBoxAutoBinding extends HTExternalClass {
 extension UnconstrainedBoxBinding on UnconstrainedBox {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('UnconstrainedBox');
       case 'textDirection':
         return textDirection;
@@ -2427,7 +2427,7 @@ class FractionallySizedBoxAutoBinding extends HTExternalClass {
 extension FractionallySizedBoxBinding on FractionallySizedBox {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('FractionallySizedBox');
       case 'widthFactor':
         return widthFactor;
@@ -2517,7 +2517,7 @@ class LimitedBoxAutoBinding extends HTExternalClass {
 extension LimitedBoxBinding on LimitedBox {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('LimitedBox');
       case 'maxWidth':
         return maxWidth;
@@ -2614,7 +2614,7 @@ class OverflowBoxAutoBinding extends HTExternalClass {
 extension OverflowBoxBinding on OverflowBox {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('OverflowBox');
       case 'alignment':
         return alignment;
@@ -2706,7 +2706,7 @@ class SizedOverflowBoxAutoBinding extends HTExternalClass {
 extension SizedOverflowBoxBinding on SizedOverflowBox {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('SizedOverflowBox');
       case 'alignment':
         return alignment;
@@ -2791,7 +2791,7 @@ class OffstageAutoBinding extends HTExternalClass {
 extension OffstageBinding on Offstage {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Offstage');
       case 'offstage':
         return offstage;
@@ -2872,7 +2872,7 @@ class AspectRatioAutoBinding extends HTExternalClass {
 extension AspectRatioBinding on AspectRatio {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('AspectRatio');
       case 'aspectRatio':
         return aspectRatio;
@@ -2958,7 +2958,7 @@ class IntrinsicWidthAutoBinding extends HTExternalClass {
 extension IntrinsicWidthBinding on IntrinsicWidth {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('IntrinsicWidth');
       case 'stepWidth':
         return stepWidth;
@@ -3040,7 +3040,7 @@ class IntrinsicHeightAutoBinding extends HTExternalClass {
 extension IntrinsicHeightBinding on IntrinsicHeight {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('IntrinsicHeight');
       case 'child':
         return child;
@@ -3117,7 +3117,7 @@ class BaselineAutoBinding extends HTExternalClass {
 extension BaselineBinding on Baseline {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Baseline');
       case 'baseline':
         return baseline;
@@ -3199,7 +3199,7 @@ class SliverToBoxAdapterAutoBinding extends HTExternalClass {
 extension SliverToBoxAdapterBinding on SliverToBoxAdapter {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('SliverToBoxAdapter');
       case 'child':
         return child;
@@ -3276,7 +3276,7 @@ class SliverPaddingAutoBinding extends HTExternalClass {
 extension SliverPaddingBinding on SliverPadding {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('SliverPadding');
       case 'padding':
         return padding;
@@ -3363,7 +3363,7 @@ class ListBodyAutoBinding extends HTExternalClass {
 extension ListBodyBinding on ListBody {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ListBody');
       case 'mainAxis':
         return mainAxis;
@@ -3459,7 +3459,7 @@ class StackAutoBinding extends HTExternalClass {
 extension StackBinding on Stack {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Stack');
       case 'alignment':
         return alignment;
@@ -3557,7 +3557,7 @@ class IndexedStackAutoBinding extends HTExternalClass {
 extension IndexedStackBinding on IndexedStack {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('IndexedStack');
       case 'index':
         return index;
@@ -3690,7 +3690,7 @@ class PositionedAutoBinding extends HTExternalClass {
 extension PositionedBinding on Positioned {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Positioned');
       case 'left':
         return left;
@@ -3790,7 +3790,7 @@ class PositionedDirectionalAutoBinding extends HTExternalClass {
 extension PositionedDirectionalBinding on PositionedDirectional {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('PositionedDirectional');
       case 'start':
         return start;
@@ -3901,7 +3901,7 @@ class FlexAutoBinding extends HTExternalClass {
 extension FlexBinding on Flex {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Flex');
       case 'direction':
         return direction;
@@ -4015,7 +4015,7 @@ class RowAutoBinding extends HTExternalClass {
 extension RowBinding on Row {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Row');
       case 'direction':
         return direction;
@@ -4129,7 +4129,7 @@ class ColumnAutoBinding extends HTExternalClass {
 extension ColumnBinding on Column {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Column');
       case 'direction':
         return direction;
@@ -4226,7 +4226,7 @@ class FlexibleAutoBinding extends HTExternalClass {
 extension FlexibleBinding on Flexible {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Flexible');
       case 'flex':
         return flex;
@@ -4311,7 +4311,7 @@ class ExpandedAutoBinding extends HTExternalClass {
 extension ExpandedBinding on Expanded {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Expanded');
       case 'flex':
         return flex;
@@ -4423,7 +4423,7 @@ class WrapAutoBinding extends HTExternalClass {
 extension WrapBinding on Wrap {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Wrap');
       case 'direction':
         return direction;
@@ -4535,7 +4535,7 @@ class FlowAutoBinding extends HTExternalClass {
 extension FlowBinding on Flow {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Flow');
       case 'delegate':
         return delegate;
@@ -4646,7 +4646,7 @@ class RichTextAutoBinding extends HTExternalClass {
 extension RichTextBinding on RichText {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RichText');
       case 'text':
         return text;
@@ -4779,7 +4779,7 @@ class RawImageAutoBinding extends HTExternalClass {
 extension RawImageBinding on RawImage {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RawImage');
       case 'image':
         return image;
@@ -4892,7 +4892,7 @@ class DefaultAssetBundleAutoBinding extends HTExternalClass {
 extension DefaultAssetBundleBinding on DefaultAssetBundle {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('DefaultAssetBundle');
       case 'bundle':
         return bundle;
@@ -4979,7 +4979,7 @@ class WidgetToRenderBoxAdapterAutoBinding extends HTExternalClass {
 extension WidgetToRenderBoxAdapterBinding on WidgetToRenderBoxAdapter {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('WidgetToRenderBoxAdapter');
       case 'renderBox':
         return renderBox;
@@ -5097,7 +5097,7 @@ class ListenerAutoBinding extends HTExternalClass {
 extension ListenerBinding on Listener {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Listener');
       case 'onPointerDown':
         return onPointerDown;
@@ -5211,7 +5211,7 @@ class MouseRegionAutoBinding extends HTExternalClass {
 extension MouseRegionBinding on MouseRegion {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('MouseRegion');
       case 'onEnter':
         return onEnter;
@@ -5301,7 +5301,7 @@ class RepaintBoundaryAutoBinding extends HTExternalClass {
 extension RepaintBoundaryBinding on RepaintBoundary {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RepaintBoundary');
       case 'child':
         return child;
@@ -5382,7 +5382,7 @@ class IgnorePointerAutoBinding extends HTExternalClass {
 extension IgnorePointerBinding on IgnorePointer {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('IgnorePointer');
       case 'ignoring':
         return ignoring;
@@ -5470,7 +5470,7 @@ class AbsorbPointerAutoBinding extends HTExternalClass {
 extension AbsorbPointerBinding on AbsorbPointer {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('AbsorbPointer');
       case 'absorbing':
         return absorbing;
@@ -5558,7 +5558,7 @@ class MetaDataAutoBinding extends HTExternalClass {
 extension MetaDataBinding on MetaData {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('MetaData');
       case 'metaData':
         return metaData;
@@ -5769,7 +5769,7 @@ class SemanticsAutoBinding extends HTExternalClass {
 extension SemanticsBinding on Semantics {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Semantics');
       case 'properties':
         return properties;
@@ -5855,7 +5855,7 @@ class MergeSemanticsAutoBinding extends HTExternalClass {
 extension MergeSemanticsBinding on MergeSemantics {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('MergeSemantics');
       case 'child':
         return child;
@@ -5933,7 +5933,7 @@ class BlockSemanticsAutoBinding extends HTExternalClass {
 extension BlockSemanticsBinding on BlockSemantics {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('BlockSemantics');
       case 'blocking':
         return blocking;
@@ -6016,7 +6016,7 @@ class ExcludeSemanticsAutoBinding extends HTExternalClass {
 extension ExcludeSemanticsBinding on ExcludeSemantics {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ExcludeSemantics');
       case 'excluding':
         return excluding;
@@ -6097,7 +6097,7 @@ class IndexedSemanticsAutoBinding extends HTExternalClass {
 extension IndexedSemanticsBinding on IndexedSemantics {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('IndexedSemantics');
       case 'index':
         return index;
@@ -6187,7 +6187,7 @@ class KeyedSubtreeAutoBinding extends HTExternalClass {
 extension KeyedSubtreeBinding on KeyedSubtree {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('KeyedSubtree');
       case 'child':
         return child;
@@ -6269,7 +6269,7 @@ class BuilderAutoBinding extends HTExternalClass {
 extension BuilderBinding on Builder {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Builder');
       case 'builder':
         return builder;
@@ -6353,7 +6353,7 @@ class StatefulBuilderAutoBinding extends HTExternalClass {
 extension StatefulBuilderBinding on StatefulBuilder {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('StatefulBuilder');
       case 'builder':
         return builder;
@@ -6428,7 +6428,7 @@ class ColoredBoxAutoBinding extends HTExternalClass {
 extension ColoredBoxBinding on ColoredBox {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ColoredBox');
       case 'color':
         return color;

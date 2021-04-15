@@ -33,7 +33,7 @@ class CustomPainterSemanticsAutoBinding extends HTExternalClass {
 extension CustomPainterSemanticsBinding on CustomPainterSemantics {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('CustomPainterSemantics');
       case 'key':
         return key;
@@ -100,7 +100,7 @@ class RenderCustomPaintAutoBinding extends HTExternalClass {
 extension RenderCustomPaintBinding on RenderCustomPaint {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RenderCustomPaint');
       case 'isComplex':
         return isComplex;

@@ -31,7 +31,7 @@ class MultiChildLayoutParentDataAutoBinding extends HTExternalClass {
 extension MultiChildLayoutParentDataBinding on MultiChildLayoutParentData {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('MultiChildLayoutParentData');
       case 'id':
         return id;
@@ -101,7 +101,7 @@ extension RenderCustomMultiChildLayoutBoxBinding
     on RenderCustomMultiChildLayoutBox {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RenderCustomMultiChildLayoutBox');
       case 'parentData':
         return parentData;

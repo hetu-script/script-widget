@@ -168,7 +168,7 @@ class FloatingActionButtonAutoBinding extends HTExternalClass {
 extension FloatingActionButtonBinding on FloatingActionButton {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('FloatingActionButton');
       case 'child':
         return child;

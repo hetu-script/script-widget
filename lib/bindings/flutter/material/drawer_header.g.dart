@@ -41,7 +41,7 @@ class DrawerHeaderAutoBinding extends HTExternalClass {
 extension DrawerHeaderBinding on DrawerHeader {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('DrawerHeader');
       case 'decoration':
         return decoration;

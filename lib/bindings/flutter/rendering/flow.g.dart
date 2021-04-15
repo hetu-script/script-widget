@@ -30,7 +30,7 @@ class FlowParentDataAutoBinding extends HTExternalClass {
 extension FlowParentDataBinding on FlowParentData {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('FlowParentData');
       case 'offset':
         return offset;
@@ -95,7 +95,7 @@ class RenderFlowAutoBinding extends HTExternalClass {
 extension RenderFlowBinding on RenderFlow {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RenderFlow');
       case 'parentData':
         return parentData;

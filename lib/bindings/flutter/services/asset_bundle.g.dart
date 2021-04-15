@@ -24,7 +24,7 @@ class NetworkAssetBundleAutoBinding extends HTExternalClass {
 extension NetworkAssetBundleBinding on NetworkAssetBundle {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('NetworkAssetBundle');
       case 'load':
         return ({positionalArgs, namedArgs, typeArgs}) =>
@@ -69,7 +69,7 @@ class PlatformAssetBundleAutoBinding extends HTExternalClass {
 extension PlatformAssetBundleBinding on PlatformAssetBundle {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('PlatformAssetBundle');
       case 'load':
         return ({positionalArgs, namedArgs, typeArgs}) =>

@@ -25,7 +25,7 @@ class BackButtonIconAutoBinding extends HTExternalClass {
 extension BackButtonIconBinding on BackButtonIcon {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('BackButtonIcon');
       case 'key':
         return key;
@@ -108,7 +108,7 @@ class BackButtonAutoBinding extends HTExternalClass {
 extension BackButtonBinding on BackButton {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('BackButton');
       case 'color':
         return color;
@@ -195,7 +195,7 @@ class CloseButtonAutoBinding extends HTExternalClass {
 extension CloseButtonBinding on CloseButton {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('CloseButton');
       case 'color':
         return color;

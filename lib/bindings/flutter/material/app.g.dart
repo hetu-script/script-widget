@@ -27,7 +27,7 @@ class ThemeModeAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ThemeMode');
       case 'index':
         return (instance as ThemeMode).index;
@@ -215,7 +215,7 @@ class MaterialAppAutoBinding extends HTExternalClass {
 extension MaterialAppBinding on MaterialApp {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('MaterialApp');
       case 'navigatorKey':
         return navigatorKey;

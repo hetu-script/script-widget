@@ -24,7 +24,7 @@ class MaterialColorAutoBinding extends HTExternalClass {
 extension MaterialColorBinding on MaterialColor {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('MaterialColor');
       case 'value':
         return value;
@@ -108,7 +108,7 @@ class MaterialAccentColorAutoBinding extends HTExternalClass {
 extension MaterialAccentColorBinding on MaterialAccentColor {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('MaterialAccentColor');
       case 'value':
         return value;

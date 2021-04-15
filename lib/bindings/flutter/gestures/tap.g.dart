@@ -31,7 +31,7 @@ class TapDownDetailsAutoBinding extends HTExternalClass {
 extension TapDownDetailsBinding on TapDownDetails {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('TapDownDetails');
       case 'globalPosition':
         return globalPosition;
@@ -74,7 +74,7 @@ class TapUpDetailsAutoBinding extends HTExternalClass {
 extension TapUpDetailsBinding on TapUpDetails {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('TapUpDetails');
       case 'globalPosition':
         return globalPosition;
@@ -118,7 +118,7 @@ class TapGestureRecognizerAutoBinding extends HTExternalClass {
 extension TapGestureRecognizerBinding on TapGestureRecognizer {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('TapGestureRecognizer');
       case 'onTapDown':
         return onTapDown;

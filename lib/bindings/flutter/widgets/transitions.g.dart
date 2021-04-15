@@ -33,7 +33,7 @@ class SlideTransitionAutoBinding extends HTExternalClass {
 extension SlideTransitionBinding on SlideTransition {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('SlideTransition');
       case 'textDirection':
         return textDirection;
@@ -122,7 +122,7 @@ class ScaleTransitionAutoBinding extends HTExternalClass {
 extension ScaleTransitionBinding on ScaleTransition {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ScaleTransition');
       case 'alignment':
         return alignment;
@@ -209,7 +209,7 @@ class RotationTransitionAutoBinding extends HTExternalClass {
 extension RotationTransitionBinding on RotationTransition {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RotationTransition');
       case 'alignment':
         return alignment;
@@ -299,7 +299,7 @@ class SizeTransitionAutoBinding extends HTExternalClass {
 extension SizeTransitionBinding on SizeTransition {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('SizeTransition');
       case 'axis':
         return axis;
@@ -389,7 +389,7 @@ class FadeTransitionAutoBinding extends HTExternalClass {
 extension FadeTransitionBinding on FadeTransition {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('FadeTransition');
       case 'opacity':
         return opacity;
@@ -477,7 +477,7 @@ class SliverFadeTransitionAutoBinding extends HTExternalClass {
 extension SliverFadeTransitionBinding on SliverFadeTransition {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('SliverFadeTransition');
       case 'opacity':
         return opacity;
@@ -564,7 +564,7 @@ class RelativeRectTweenAutoBinding extends HTExternalClass {
 extension RelativeRectTweenBinding on RelativeRectTween {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RelativeRectTween');
       case 'begin':
         return begin;
@@ -631,7 +631,7 @@ class PositionedTransitionAutoBinding extends HTExternalClass {
 extension PositionedTransitionBinding on PositionedTransition {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('PositionedTransition');
       case 'child':
         return child;
@@ -716,7 +716,7 @@ class RelativePositionedTransitionAutoBinding extends HTExternalClass {
 extension RelativePositionedTransitionBinding on RelativePositionedTransition {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RelativePositionedTransition');
       case 'size':
         return size;
@@ -804,7 +804,7 @@ class DecoratedBoxTransitionAutoBinding extends HTExternalClass {
 extension DecoratedBoxTransitionBinding on DecoratedBoxTransition {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('DecoratedBoxTransition');
       case 'decoration':
         return decoration;
@@ -894,7 +894,7 @@ class AlignTransitionAutoBinding extends HTExternalClass {
 extension AlignTransitionBinding on AlignTransition {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('AlignTransition');
       case 'widthFactor':
         return widthFactor;
@@ -993,7 +993,7 @@ class DefaultTextStyleTransitionAutoBinding extends HTExternalClass {
 extension DefaultTextStyleTransitionBinding on DefaultTextStyleTransition {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('DefaultTextStyleTransition');
       case 'textAlign':
         return textAlign;
@@ -1092,7 +1092,7 @@ class AnimatedBuilderAutoBinding extends HTExternalClass {
 extension AnimatedBuilderBinding on AnimatedBuilder {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('AnimatedBuilder');
       case 'builder':
         return builder;

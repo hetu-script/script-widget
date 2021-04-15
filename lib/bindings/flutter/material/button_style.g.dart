@@ -72,7 +72,7 @@ class ButtonStyleAutoBinding extends HTExternalClass {
 extension ButtonStyleBinding on ButtonStyle {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ButtonStyle');
       case 'textStyle':
         return textStyle;

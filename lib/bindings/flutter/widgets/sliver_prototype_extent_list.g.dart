@@ -28,7 +28,7 @@ class SliverPrototypeExtentListAutoBinding extends HTExternalClass {
 extension SliverPrototypeExtentListBinding on SliverPrototypeExtentList {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('SliverPrototypeExtentList');
       case 'prototypeItem':
         return prototypeItem;

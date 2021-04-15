@@ -30,7 +30,7 @@ class MaterialPointArcTweenAutoBinding extends HTExternalClass {
 extension MaterialPointArcTweenBinding on MaterialPointArcTween {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('MaterialPointArcTween');
       case 'center':
         return center;
@@ -105,7 +105,7 @@ class MaterialRectArcTweenAutoBinding extends HTExternalClass {
 extension MaterialRectArcTweenBinding on MaterialRectArcTween {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('MaterialRectArcTween');
       case 'beginArc':
         return beginArc;
@@ -178,7 +178,7 @@ class MaterialRectCenterArcTweenAutoBinding extends HTExternalClass {
 extension MaterialRectCenterArcTweenBinding on MaterialRectCenterArcTween {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('MaterialRectCenterArcTween');
       case 'centerArc':
         return centerArc;

@@ -46,7 +46,7 @@ class ShapeDecorationAutoBinding extends HTExternalClass {
 extension ShapeDecorationBinding on ShapeDecoration {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ShapeDecoration');
       case 'color':
         return color;

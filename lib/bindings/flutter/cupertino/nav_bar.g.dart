@@ -96,7 +96,7 @@ class CupertinoNavigationBarAutoBinding extends HTExternalClass {
 extension CupertinoNavigationBarBinding on CupertinoNavigationBar {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('CupertinoNavigationBar');
       case 'leading':
         return leading;
@@ -239,7 +239,7 @@ class CupertinoSliverNavigationBarAutoBinding extends HTExternalClass {
 extension CupertinoSliverNavigationBarBinding on CupertinoSliverNavigationBar {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('CupertinoSliverNavigationBar');
       case 'largeTitle':
         return largeTitle;
@@ -358,7 +358,7 @@ extension CupertinoNavigationBarBackButtonBinding
     on CupertinoNavigationBarBackButton {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('CupertinoNavigationBarBackButton');
       case 'color':
         return color;

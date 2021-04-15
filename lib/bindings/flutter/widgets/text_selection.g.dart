@@ -26,7 +26,7 @@ class TextSelectionHandleTypeAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('TextSelectionHandleType');
       case 'index':
         return (instance as TextSelectionHandleType).index;
@@ -61,7 +61,7 @@ class ClipboardStatusAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ClipboardStatus');
       case 'index':
         return (instance as ClipboardStatus).index;
@@ -102,7 +102,7 @@ class ToolbarItemsParentDataAutoBinding extends HTExternalClass {
 extension ToolbarItemsParentDataBinding on ToolbarItemsParentData {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ToolbarItemsParentData');
       case 'shouldPaint':
         return shouldPaint;
@@ -195,7 +195,7 @@ class TextSelectionOverlayAutoBinding extends HTExternalClass {
 extension TextSelectionOverlayBinding on TextSelectionOverlay {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('TextSelectionOverlay');
       case 'context':
         return context;
@@ -284,7 +284,7 @@ extension TextSelectionGestureDetectorBuilderBinding
     on TextSelectionGestureDetectorBuilder {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('TextSelectionGestureDetectorBuilder');
       case 'shouldShowSelectionToolbar':
         return shouldShowSelectionToolbar;
@@ -406,7 +406,7 @@ class TextSelectionGestureDetectorAutoBinding extends HTExternalClass {
 extension TextSelectionGestureDetectorBinding on TextSelectionGestureDetector {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('TextSelectionGestureDetector');
       case 'onTapDown':
         return onTapDown;
@@ -519,7 +519,7 @@ class ClipboardStatusNotifierAutoBinding extends HTExternalClass {
 extension ClipboardStatusNotifierBinding on ClipboardStatusNotifier {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ClipboardStatusNotifier');
       case 'disposed':
         return disposed;

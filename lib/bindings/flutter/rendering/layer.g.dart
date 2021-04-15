@@ -33,7 +33,7 @@ class PictureLayerAutoBinding extends HTExternalClass {
 extension PictureLayerBinding on PictureLayer {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('PictureLayer');
       case 'canvasBounds':
         return canvasBounds;
@@ -182,7 +182,7 @@ class TextureLayerAutoBinding extends HTExternalClass {
 extension TextureLayerBinding on TextureLayer {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('TextureLayer');
       case 'rect':
         return rect;
@@ -316,7 +316,7 @@ class PlatformViewLayerAutoBinding extends HTExternalClass {
 extension PlatformViewLayerBinding on PlatformViewLayer {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('PlatformViewLayer');
       case 'rect':
         return rect;
@@ -447,7 +447,7 @@ class PerformanceOverlayLayerAutoBinding extends HTExternalClass {
 extension PerformanceOverlayLayerBinding on PerformanceOverlayLayer {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('PerformanceOverlayLayer');
       case 'optionsMask':
         return optionsMask;
@@ -585,7 +585,7 @@ class ContainerLayerAutoBinding extends HTExternalClass {
 extension ContainerLayerBinding on ContainerLayer {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ContainerLayer');
       case 'debugCreator':
         return debugCreator;
@@ -737,7 +737,7 @@ class OffsetLayerAutoBinding extends HTExternalClass {
 extension OffsetLayerBinding on OffsetLayer {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('OffsetLayer');
       case 'debugCreator':
         return debugCreator;
@@ -903,7 +903,7 @@ class ClipRectLayerAutoBinding extends HTExternalClass {
 extension ClipRectLayerBinding on ClipRectLayer {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ClipRectLayer');
       case 'debugCreator':
         return debugCreator;
@@ -1068,7 +1068,7 @@ class ClipRRectLayerAutoBinding extends HTExternalClass {
 extension ClipRRectLayerBinding on ClipRRectLayer {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ClipRRectLayer');
       case 'debugCreator':
         return debugCreator;
@@ -1233,7 +1233,7 @@ class ClipPathLayerAutoBinding extends HTExternalClass {
 extension ClipPathLayerBinding on ClipPathLayer {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ClipPathLayer');
       case 'debugCreator':
         return debugCreator;
@@ -1395,7 +1395,7 @@ class ColorFilterLayerAutoBinding extends HTExternalClass {
 extension ColorFilterLayerBinding on ColorFilterLayer {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ColorFilterLayer');
       case 'debugCreator':
         return debugCreator;
@@ -1552,7 +1552,7 @@ class ImageFilterLayerAutoBinding extends HTExternalClass {
 extension ImageFilterLayerBinding on ImageFilterLayer {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ImageFilterLayer');
       case 'debugCreator':
         return debugCreator;
@@ -1712,7 +1712,7 @@ class TransformLayerAutoBinding extends HTExternalClass {
 extension TransformLayerBinding on TransformLayer {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('TransformLayer');
       case 'debugCreator':
         return debugCreator;
@@ -1878,7 +1878,7 @@ class OpacityLayerAutoBinding extends HTExternalClass {
 extension OpacityLayerBinding on OpacityLayer {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('OpacityLayer');
       case 'debugCreator':
         return debugCreator;
@@ -2045,7 +2045,7 @@ class ShaderMaskLayerAutoBinding extends HTExternalClass {
 extension ShaderMaskLayerBinding on ShaderMaskLayer {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ShaderMaskLayer');
       case 'debugCreator':
         return debugCreator;
@@ -2211,7 +2211,7 @@ class BackdropFilterLayerAutoBinding extends HTExternalClass {
 extension BackdropFilterLayerBinding on BackdropFilterLayer {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('BackdropFilterLayer');
       case 'debugCreator':
         return debugCreator;
@@ -2378,7 +2378,7 @@ class PhysicalModelLayerAutoBinding extends HTExternalClass {
 extension PhysicalModelLayerBinding on PhysicalModelLayer {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('PhysicalModelLayer');
       case 'debugCreator':
         return debugCreator;
@@ -2552,7 +2552,7 @@ class LayerLinkAutoBinding extends HTExternalClass {
 extension LayerLinkBinding on LayerLink {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('LayerLink');
       case 'leaderSize':
         return leaderSize;
@@ -2607,7 +2607,7 @@ class LeaderLayerAutoBinding extends HTExternalClass {
 extension LeaderLayerBinding on LeaderLayer {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('LeaderLayer');
       case 'offset':
         return offset;
@@ -2778,7 +2778,7 @@ class FollowerLayerAutoBinding extends HTExternalClass {
 extension FollowerLayerBinding on FollowerLayer {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('FollowerLayer');
       case 'showWhenUnlinked':
         return showWhenUnlinked;

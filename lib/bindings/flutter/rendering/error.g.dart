@@ -67,7 +67,7 @@ class RenderErrorBoxAutoBinding extends HTExternalClass {
 extension RenderErrorBoxBinding on RenderErrorBox {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RenderErrorBox');
       case 'message':
         return message;

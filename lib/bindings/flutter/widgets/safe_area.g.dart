@@ -38,7 +38,7 @@ class SafeAreaAutoBinding extends HTExternalClass {
 extension SafeAreaBinding on SafeArea {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('SafeArea');
       case 'left':
         return left;
@@ -133,7 +133,7 @@ class SliverSafeAreaAutoBinding extends HTExternalClass {
 extension SliverSafeAreaBinding on SliverSafeArea {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('SliverSafeArea');
       case 'left':
         return left;

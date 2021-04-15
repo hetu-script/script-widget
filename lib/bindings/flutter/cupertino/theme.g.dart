@@ -37,7 +37,7 @@ class CupertinoThemeAutoBinding extends HTExternalClass {
 extension CupertinoThemeBinding on CupertinoTheme {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('CupertinoTheme');
       case 'data':
         return data;
@@ -141,7 +141,7 @@ class CupertinoThemeDataAutoBinding extends HTExternalClass {
 extension CupertinoThemeDataBinding on CupertinoThemeData {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('CupertinoThemeData');
       case 'brightness':
         return brightness;
@@ -246,7 +246,7 @@ class NoDefaultCupertinoThemeDataAutoBinding extends HTExternalClass {
 extension NoDefaultCupertinoThemeDataBinding on NoDefaultCupertinoThemeData {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('NoDefaultCupertinoThemeData');
       case 'brightness':
         return brightness;

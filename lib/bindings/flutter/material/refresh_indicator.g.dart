@@ -24,7 +24,7 @@ class RefreshIndicatorTriggerModeAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RefreshIndicatorTriggerMode');
       case 'index':
         return (instance as RefreshIndicatorTriggerMode).index;
@@ -95,7 +95,7 @@ class RefreshIndicatorAutoBinding extends HTExternalClass {
 extension RefreshIndicatorBinding on RefreshIndicator {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RefreshIndicator');
       case 'child':
         return child;
@@ -193,7 +193,7 @@ class RefreshIndicatorStateAutoBinding extends HTExternalClass {
 extension RefreshIndicatorStateBinding on RefreshIndicatorState {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RefreshIndicatorState');
       case 'widget':
         return widget;

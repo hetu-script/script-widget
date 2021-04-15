@@ -23,7 +23,7 @@ class SystemEncodingAutoBinding extends HTExternalClass {
 extension SystemEncodingBinding on SystemEncoding {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('SystemEncoding');
       case 'name':
         return name;

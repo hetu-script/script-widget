@@ -29,7 +29,7 @@ class ImageInfoAutoBinding extends HTExternalClass {
 extension ImageInfoBinding on ImageInfo {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ImageInfo');
       case 'image':
         return image;
@@ -94,7 +94,7 @@ class ImageStreamListenerAutoBinding extends HTExternalClass {
 extension ImageStreamListenerBinding on ImageStreamListener {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ImageStreamListener');
       case 'onImage':
         return onImage;
@@ -134,7 +134,7 @@ class ImageChunkEventAutoBinding extends HTExternalClass {
 extension ImageChunkEventBinding on ImageChunkEvent {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ImageChunkEvent');
       case 'cumulativeBytesLoaded':
         return cumulativeBytesLoaded;
@@ -182,7 +182,7 @@ class ImageStreamAutoBinding extends HTExternalClass {
 extension ImageStreamBinding on ImageStream {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ImageStream');
       case 'completer':
         return completer;
@@ -260,7 +260,7 @@ class OneFrameImageStreamCompleterAutoBinding extends HTExternalClass {
 extension OneFrameImageStreamCompleterBinding on OneFrameImageStreamCompleter {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('OneFrameImageStreamCompleter');
       case 'debugLabel':
         return debugLabel;
@@ -360,7 +360,7 @@ extension MultiFrameImageStreamCompleterBinding
     on MultiFrameImageStreamCompleter {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('MultiFrameImageStreamCompleter');
       case 'debugLabel':
         return debugLabel;

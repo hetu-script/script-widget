@@ -28,7 +28,7 @@ class StackTraceAutoBinding extends HTExternalClass {
 extension StackTraceBinding on StackTrace {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('StackTrace');
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();

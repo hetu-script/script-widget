@@ -31,7 +31,7 @@ class PointerSignalResolverAutoBinding extends HTExternalClass {
 extension PointerSignalResolverBinding on PointerSignalResolver {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('PointerSignalResolver');
       case 'register':
         return ({positionalArgs, namedArgs, typeArgs}) =>

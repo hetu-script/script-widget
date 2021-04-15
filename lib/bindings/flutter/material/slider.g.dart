@@ -104,7 +104,7 @@ class SliderAutoBinding extends HTExternalClass {
 extension SliderBinding on Slider {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Slider');
       case 'value':
         return value;

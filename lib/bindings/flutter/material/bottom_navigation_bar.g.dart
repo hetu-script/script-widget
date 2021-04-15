@@ -23,7 +23,7 @@ class BottomNavigationBarTypeAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('BottomNavigationBarType');
       case 'index':
         return (instance as BottomNavigationBarType).index;
@@ -110,7 +110,7 @@ class BottomNavigationBarAutoBinding extends HTExternalClass {
 extension BottomNavigationBarBinding on BottomNavigationBar {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('BottomNavigationBar');
       case 'items':
         return items;

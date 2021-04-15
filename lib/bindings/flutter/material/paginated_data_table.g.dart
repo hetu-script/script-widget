@@ -85,7 +85,7 @@ class PaginatedDataTableAutoBinding extends HTExternalClass {
 extension PaginatedDataTableBinding on PaginatedDataTable {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('PaginatedDataTable');
       case 'header':
         return header;
@@ -192,7 +192,7 @@ class PaginatedDataTableStateAutoBinding extends HTExternalClass {
 extension PaginatedDataTableStateBinding on PaginatedDataTableState {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('PaginatedDataTableState');
       case 'widget':
         return widget;

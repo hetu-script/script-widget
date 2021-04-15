@@ -69,7 +69,7 @@ class CupertinoFormSectionAutoBinding extends HTExternalClass {
 extension CupertinoFormSectionBinding on CupertinoFormSection {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('CupertinoFormSection');
       case 'header':
         return header;

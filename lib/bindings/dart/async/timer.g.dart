@@ -30,7 +30,7 @@ class TimerAutoBinding extends HTExternalClass {
 extension TimerBinding on Timer {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Timer');
       case 'tick':
         return tick;

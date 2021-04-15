@@ -28,7 +28,7 @@ class MaterialSliceAutoBinding extends HTExternalClass {
 extension MaterialSliceBinding on MaterialSlice {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('MaterialSlice');
       case 'child':
         return child;
@@ -68,7 +68,7 @@ class MaterialGapAutoBinding extends HTExternalClass {
 extension MaterialGapBinding on MaterialGap {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('MaterialGap');
       case 'size':
         return size;
@@ -119,7 +119,7 @@ class MergeableMaterialAutoBinding extends HTExternalClass {
 extension MergeableMaterialBinding on MergeableMaterial {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('MergeableMaterial');
       case 'children':
         return children;

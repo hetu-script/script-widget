@@ -102,7 +102,7 @@ class CupertinoPickerAutoBinding extends HTExternalClass {
 extension CupertinoPickerBinding on CupertinoPicker {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('CupertinoPicker');
       case 'diameterRatio':
         return diameterRatio;
@@ -208,7 +208,7 @@ extension CupertinoPickerDefaultSelectionOverlayBinding
     on CupertinoPickerDefaultSelectionOverlay {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('CupertinoPickerDefaultSelectionOverlay');
       case 'capLeftEdge':
         return capLeftEdge;

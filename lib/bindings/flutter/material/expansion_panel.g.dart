@@ -49,7 +49,7 @@ class ExpansionPanelAutoBinding extends HTExternalClass {
 extension ExpansionPanelBinding on ExpansionPanel {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ExpansionPanel');
       case 'headerBuilder':
         return headerBuilder;
@@ -107,7 +107,7 @@ class ExpansionPanelRadioAutoBinding extends HTExternalClass {
 extension ExpansionPanelRadioBinding on ExpansionPanelRadio {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ExpansionPanelRadio');
       case 'value':
         return value;
@@ -207,7 +207,7 @@ class ExpansionPanelListAutoBinding extends HTExternalClass {
 extension ExpansionPanelListBinding on ExpansionPanelList {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ExpansionPanelList');
       case 'children':
         return children;

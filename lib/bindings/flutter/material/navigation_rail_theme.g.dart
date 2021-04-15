@@ -61,7 +61,7 @@ class NavigationRailThemeDataAutoBinding extends HTExternalClass {
 extension NavigationRailThemeDataBinding on NavigationRailThemeData {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('NavigationRailThemeData');
       case 'backgroundColor':
         return backgroundColor;
@@ -157,7 +157,7 @@ class NavigationRailThemeAutoBinding extends HTExternalClass {
 extension NavigationRailThemeBinding on NavigationRailTheme {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('NavigationRailTheme');
       case 'data':
         return data;

@@ -24,7 +24,7 @@ class FlutterLogoStyleAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('FlutterLogoStyle');
       case 'index':
         return (instance as FlutterLogoStyle).index;
@@ -79,7 +79,7 @@ class FlutterLogoDecorationAutoBinding extends HTExternalClass {
 extension FlutterLogoDecorationBinding on FlutterLogoDecoration {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('FlutterLogoDecoration');
       case 'textColor':
         return textColor;

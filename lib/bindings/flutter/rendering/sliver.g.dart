@@ -23,7 +23,7 @@ class GrowthDirectionAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('GrowthDirection');
       case 'index':
         return (instance as GrowthDirection).index;
@@ -78,7 +78,7 @@ class SliverConstraintsAutoBinding extends HTExternalClass {
 extension SliverConstraintsBinding on SliverConstraints {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('SliverConstraints');
       case 'axisDirection':
         return axisDirection;
@@ -246,7 +246,7 @@ class SliverGeometryAutoBinding extends HTExternalClass {
 extension SliverGeometryBinding on SliverGeometry {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('SliverGeometry');
       case 'scrollExtent':
         return scrollExtent;
@@ -333,7 +333,7 @@ class SliverHitTestResultAutoBinding extends HTExternalClass {
 extension SliverHitTestResultBinding on SliverHitTestResult {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('SliverHitTestResult');
       case 'path':
         return path;
@@ -392,7 +392,7 @@ class SliverHitTestEntryAutoBinding extends HTExternalClass {
 extension SliverHitTestEntryBinding on SliverHitTestEntry {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('SliverHitTestEntry');
       case 'mainAxisPosition':
         return mainAxisPosition;
@@ -438,7 +438,7 @@ class SliverLogicalParentDataAutoBinding extends HTExternalClass {
 extension SliverLogicalParentDataBinding on SliverLogicalParentData {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('SliverLogicalParentData');
       case 'layoutOffset':
         return layoutOffset;
@@ -490,7 +490,7 @@ extension SliverLogicalContainerParentDataBinding
     on SliverLogicalContainerParentData {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('SliverLogicalContainerParentData');
       case 'layoutOffset':
         return layoutOffset;
@@ -542,7 +542,7 @@ class SliverPhysicalParentDataAutoBinding extends HTExternalClass {
 extension SliverPhysicalParentDataBinding on SliverPhysicalParentData {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('SliverPhysicalParentData');
       case 'paintOffset':
         return paintOffset;
@@ -597,7 +597,7 @@ extension SliverPhysicalContainerParentDataBinding
     on SliverPhysicalContainerParentData {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('SliverPhysicalContainerParentData');
       case 'paintOffset':
         return paintOffset;
@@ -661,7 +661,7 @@ class RenderSliverToBoxAdapterAutoBinding extends HTExternalClass {
 extension RenderSliverToBoxAdapterBinding on RenderSliverToBoxAdapter {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RenderSliverToBoxAdapter');
       case 'parentData':
         return parentData;

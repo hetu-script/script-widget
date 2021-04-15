@@ -37,7 +37,7 @@ class RegExpAutoBinding extends HTExternalClass {
 extension RegExpBinding on RegExp {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RegExp');
       case 'pattern':
         return pattern;

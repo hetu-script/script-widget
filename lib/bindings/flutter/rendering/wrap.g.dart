@@ -31,7 +31,7 @@ class WrapAlignmentAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('WrapAlignment');
       case 'index':
         return (instance as WrapAlignment).index;
@@ -66,7 +66,7 @@ class WrapCrossAlignmentAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('WrapCrossAlignment');
       case 'index':
         return (instance as WrapCrossAlignment).index;
@@ -106,7 +106,7 @@ class WrapParentDataAutoBinding extends HTExternalClass {
 extension WrapParentDataBinding on WrapParentData {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('WrapParentData');
       case 'offset':
         return offset;
@@ -193,7 +193,7 @@ class RenderWrapAutoBinding extends HTExternalClass {
 extension RenderWrapBinding on RenderWrap {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RenderWrap');
       case 'parentData':
         return parentData;

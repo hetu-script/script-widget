@@ -25,7 +25,7 @@ class Base64CodecAutoBinding extends HTExternalClass {
 extension Base64CodecBinding on Base64Codec {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Base64Codec');
       case 'encoder':
         return encoder;
@@ -70,7 +70,7 @@ class Base64EncoderAutoBinding extends HTExternalClass {
 extension Base64EncoderBinding on Base64Encoder {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Base64Encoder');
       case 'convert':
         return ({positionalArgs, namedArgs, typeArgs}) =>
@@ -114,7 +114,7 @@ class Base64DecoderAutoBinding extends HTExternalClass {
 extension Base64DecoderBinding on Base64Decoder {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Base64Decoder');
       case 'convert':
         return ({positionalArgs, namedArgs, typeArgs}) => convert(

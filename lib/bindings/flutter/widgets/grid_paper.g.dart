@@ -36,7 +36,7 @@ class GridPaperAutoBinding extends HTExternalClass {
 extension GridPaperBinding on GridPaper {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('GridPaper');
       case 'color':
         return color;

@@ -23,7 +23,7 @@ class StopwatchAutoBinding extends HTExternalClass {
 extension StopwatchBinding on Stopwatch {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Stopwatch');
       case 'frequency':
         return frequency;

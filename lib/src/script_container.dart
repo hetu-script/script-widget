@@ -1,6 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart';
-import 'package:hetu_script/src/instance.dart';
+import 'package:hetu_script/hetu_script.dart';
 import 'package:flutter/material.dart';
 
 class ScriptContainer extends StatefulWidget {

@@ -68,7 +68,7 @@ class CupertinoTextThemeDataAutoBinding extends HTExternalClass {
 extension CupertinoTextThemeDataBinding on CupertinoTextThemeData {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('CupertinoTextThemeData');
       case 'textStyle':
         return textStyle;

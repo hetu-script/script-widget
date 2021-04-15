@@ -53,7 +53,7 @@ class BoxDecorationAutoBinding extends HTExternalClass {
 extension BoxDecorationBinding on BoxDecoration {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('BoxDecoration');
       case 'color':
         return color;

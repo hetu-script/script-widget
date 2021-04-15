@@ -47,7 +47,7 @@ class AssetImageAutoBinding extends HTExternalClass {
 extension AssetImageBinding on AssetImage {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('AssetImage');
       case 'assetName':
         return assetName;

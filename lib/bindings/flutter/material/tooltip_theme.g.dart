@@ -55,7 +55,7 @@ class TooltipThemeDataAutoBinding extends HTExternalClass {
 extension TooltipThemeDataBinding on TooltipThemeData {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('TooltipThemeData');
       case 'height':
         return height;
@@ -156,7 +156,7 @@ class TooltipThemeAutoBinding extends HTExternalClass {
 extension TooltipThemeBinding on TooltipTheme {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('TooltipTheme');
       case 'data':
         return data;

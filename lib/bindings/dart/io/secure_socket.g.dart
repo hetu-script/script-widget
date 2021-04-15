@@ -170,7 +170,7 @@ class TlsExceptionAutoBinding extends HTExternalClass {
 extension TlsExceptionBinding on TlsException {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('TlsException');
       case 'type':
         return type;
@@ -210,7 +210,7 @@ class HandshakeExceptionAutoBinding extends HTExternalClass {
 extension HandshakeExceptionBinding on HandshakeException {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('HandshakeException');
       case 'type':
         return type;
@@ -250,7 +250,7 @@ class CertificateExceptionAutoBinding extends HTExternalClass {
 extension CertificateExceptionBinding on CertificateException {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('CertificateException');
       case 'type':
         return type;

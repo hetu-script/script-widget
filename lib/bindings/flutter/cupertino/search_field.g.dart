@@ -89,7 +89,7 @@ class CupertinoSearchTextFieldAutoBinding extends HTExternalClass {
 extension CupertinoSearchTextFieldBinding on CupertinoSearchTextField {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('CupertinoSearchTextField');
       case 'controller':
         return controller;

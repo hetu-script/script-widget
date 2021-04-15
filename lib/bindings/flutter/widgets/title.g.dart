@@ -28,7 +28,7 @@ class TitleAutoBinding extends HTExternalClass {
 extension TitleBinding on Title {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Title');
       case 'title':
         return title;

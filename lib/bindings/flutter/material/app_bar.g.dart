@@ -96,7 +96,7 @@ class AppBarAutoBinding extends HTExternalClass {
 extension AppBarBinding on AppBar {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('AppBar');
       case 'leading':
         return leading;
@@ -306,7 +306,7 @@ class SliverAppBarAutoBinding extends HTExternalClass {
 extension SliverAppBarBinding on SliverAppBar {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('SliverAppBar');
       case 'leading':
         return leading;

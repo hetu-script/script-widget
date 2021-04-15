@@ -59,7 +59,7 @@ class RangeSliderAutoBinding extends HTExternalClass {
 extension RangeSliderBinding on RangeSlider {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RangeSlider');
       case 'values':
         return values;

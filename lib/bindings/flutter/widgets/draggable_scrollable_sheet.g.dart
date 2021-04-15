@@ -48,7 +48,7 @@ class DraggableScrollableSheetAutoBinding extends HTExternalClass {
 extension DraggableScrollableSheetBinding on DraggableScrollableSheet {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('DraggableScrollableSheet');
       case 'initialChildSize':
         return initialChildSize;
@@ -136,7 +136,7 @@ extension DraggableScrollableNotificationBinding
     on DraggableScrollableNotification {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('DraggableScrollableNotification');
       case 'extent':
         return extent;
@@ -196,7 +196,7 @@ class DraggableScrollableActuatorAutoBinding extends HTExternalClass {
 extension DraggableScrollableActuatorBinding on DraggableScrollableActuator {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('DraggableScrollableActuator');
       case 'child':
         return child;

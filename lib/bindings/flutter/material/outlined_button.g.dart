@@ -121,7 +121,7 @@ class OutlinedButtonAutoBinding extends HTExternalClass {
 extension OutlinedButtonBinding on OutlinedButton {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('OutlinedButton');
       case 'onPressed':
         return onPressed;

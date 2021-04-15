@@ -90,7 +90,7 @@ class ToggleButtonsAutoBinding extends HTExternalClass {
 extension ToggleButtonsBinding on ToggleButtons {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ToggleButtons');
       case 'children':
         return children;

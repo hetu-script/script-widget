@@ -34,7 +34,7 @@ class IconAutoBinding extends HTExternalClass {
 extension IconBinding on Icon {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Icon');
       case 'icon':
         return icon;

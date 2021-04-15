@@ -23,7 +23,7 @@ class ScrollIncrementTypeAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ScrollIncrementType');
       case 'index':
         return (instance as ScrollIncrementType).index;
@@ -116,7 +116,7 @@ class ScrollableAutoBinding extends HTExternalClass {
 extension ScrollableBinding on Scrollable {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Scrollable');
       case 'axisDirection':
         return axisDirection;
@@ -213,7 +213,7 @@ class ScrollableStateAutoBinding extends HTExternalClass {
 extension ScrollableStateBinding on ScrollableState {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ScrollableState');
       case 'position':
         return position;
@@ -301,7 +301,7 @@ class ScrollIncrementDetailsAutoBinding extends HTExternalClass {
 extension ScrollIncrementDetailsBinding on ScrollIncrementDetails {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ScrollIncrementDetails');
       case 'type':
         return type;
@@ -339,7 +339,7 @@ class ScrollIntentAutoBinding extends HTExternalClass {
 extension ScrollIntentBinding on ScrollIntent {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ScrollIntent');
       case 'direction':
         return direction;
@@ -391,7 +391,7 @@ class ScrollActionAutoBinding extends HTExternalClass {
 extension ScrollActionBinding on ScrollAction {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ScrollAction');
       case 'intentType':
         return intentType;

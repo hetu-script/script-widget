@@ -30,7 +30,7 @@ class RestorationManagerAutoBinding extends HTExternalClass {
 extension RestorationManagerBinding on RestorationManager {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RestorationManager');
       case 'rootBucket':
         return rootBucket;
@@ -87,7 +87,7 @@ class RestorationBucketAutoBinding extends HTExternalClass {
 extension RestorationBucketBinding on RestorationBucket {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RestorationBucket');
       case 'debugOwner':
         return debugOwner;

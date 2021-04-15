@@ -31,7 +31,7 @@ class ContinuousRectangleBorderAutoBinding extends HTExternalClass {
 extension ContinuousRectangleBorderBinding on ContinuousRectangleBorder {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ContinuousRectangleBorder');
       case 'borderRadius':
         return borderRadius;

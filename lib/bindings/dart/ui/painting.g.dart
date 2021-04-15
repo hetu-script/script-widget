@@ -75,7 +75,7 @@ class BlendModeAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('BlendMode');
       case 'index':
         return (instance as BlendMode).index;
@@ -112,7 +112,7 @@ class FilterQualityAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('FilterQuality');
       case 'index':
         return (instance as FilterQuality).index;
@@ -147,7 +147,7 @@ class StrokeCapAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('StrokeCap');
       case 'index':
         return (instance as StrokeCap).index;
@@ -182,7 +182,7 @@ class StrokeJoinAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('StrokeJoin');
       case 'index':
         return (instance as StrokeJoin).index;
@@ -215,7 +215,7 @@ class PaintingStyleAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('PaintingStyle');
       case 'index':
         return (instance as PaintingStyle).index;
@@ -252,7 +252,7 @@ class ClipAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Clip');
       case 'index':
         return (instance as Clip).index;
@@ -287,7 +287,7 @@ class ImageByteFormatAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ImageByteFormat');
       case 'index':
         return (instance as ImageByteFormat).index;
@@ -320,7 +320,7 @@ class PixelFormatAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('PixelFormat');
       case 'index':
         return (instance as PixelFormat).index;
@@ -353,7 +353,7 @@ class PathFillTypeAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('PathFillType');
       case 'index':
         return (instance as PathFillType).index;
@@ -392,7 +392,7 @@ class PathOperationAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('PathOperation');
       case 'index':
         return (instance as PathOperation).index;
@@ -429,7 +429,7 @@ class BlurStyleAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('BlurStyle');
       case 'index':
         return (instance as BlurStyle).index;
@@ -466,7 +466,7 @@ class TileModeAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('TileMode');
       case 'index':
         return (instance as TileMode).index;
@@ -501,7 +501,7 @@ class VertexModeAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('VertexMode');
       case 'index':
         return (instance as VertexMode).index;
@@ -536,7 +536,7 @@ class PointModeAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('PointMode');
       case 'index':
         return (instance as PointMode).index;
@@ -569,7 +569,7 @@ class ClipOpAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ClipOp');
       case 'index':
         return (instance as ClipOp).index;
@@ -626,7 +626,7 @@ class ColorAutoBinding extends HTExternalClass {
 extension ColorBinding on Color {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Color');
       case 'value':
         return value;
@@ -707,7 +707,7 @@ class PaintAutoBinding extends HTExternalClass {
 extension PaintBinding on Paint {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Paint');
       case 'isAntiAlias':
         return isAntiAlias;
@@ -827,7 +827,7 @@ class PathAutoBinding extends HTExternalClass {
 extension PathBinding on Path {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Path');
       case 'fillType':
         return fillType;
@@ -1004,7 +1004,7 @@ class TangentAutoBinding extends HTExternalClass {
 extension TangentBinding on Tangent {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Tangent');
       case 'position':
         return position;
@@ -1041,7 +1041,7 @@ class MaskFilterAutoBinding extends HTExternalClass {
 extension MaskFilterBinding on MaskFilter {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('MaskFilter');
       case 'hashCode':
         return hashCode;
@@ -1085,7 +1085,7 @@ class ColorFilterAutoBinding extends HTExternalClass {
 extension ColorFilterBinding on ColorFilter {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ColorFilter');
       case 'hashCode':
         return hashCode;
@@ -1207,7 +1207,7 @@ class CanvasAutoBinding extends HTExternalClass {
 extension CanvasBinding on Canvas {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Canvas');
       case 'save':
         return ({positionalArgs, namedArgs, typeArgs}) => save();
@@ -1373,7 +1373,7 @@ class PictureRecorderAutoBinding extends HTExternalClass {
 extension PictureRecorderBinding on PictureRecorder {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('PictureRecorder');
       case 'isRecording':
         return isRecording;
@@ -1429,7 +1429,7 @@ class ShadowAutoBinding extends HTExternalClass {
 extension ShadowBinding on Shadow {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Shadow');
       case 'color':
         return color;
@@ -1501,7 +1501,7 @@ class ImageDescriptorAutoBinding extends HTExternalClass {
 extension ImageDescriptorBinding on ImageDescriptor {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ImageDescriptor');
       case 'width':
         return width;

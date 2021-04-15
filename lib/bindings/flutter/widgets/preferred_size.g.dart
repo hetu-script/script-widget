@@ -27,7 +27,7 @@ class PreferredSizeAutoBinding extends HTExternalClass {
 extension PreferredSizeBinding on PreferredSize {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('PreferredSize');
       case 'child':
         return child;

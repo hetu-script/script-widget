@@ -28,7 +28,7 @@ class ScriptContainerClassBinding extends HTExternalClass {
 extension ScriptContainerObjectBinding on ScriptContainer {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ScriptWidget');
       case 'child':
         return child;

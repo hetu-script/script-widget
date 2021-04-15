@@ -28,7 +28,7 @@ class GestureArenaTeamAutoBinding extends HTExternalClass {
 extension GestureArenaTeamBinding on GestureArenaTeam {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('GestureArenaTeam');
       case 'captain':
         return captain;

@@ -32,7 +32,7 @@ class GravitySimulationAutoBinding extends HTExternalClass {
 extension GravitySimulationBinding on GravitySimulation {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('GravitySimulation');
       case 'tolerance':
         return tolerance;

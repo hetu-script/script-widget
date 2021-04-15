@@ -30,7 +30,7 @@ class TickerModeAutoBinding extends HTExternalClass {
 extension TickerModeBinding on TickerMode {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('TickerMode');
       case 'enabled':
         return enabled;

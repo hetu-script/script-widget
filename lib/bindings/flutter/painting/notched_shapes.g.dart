@@ -24,7 +24,7 @@ class CircularNotchedRectangleAutoBinding extends HTExternalClass {
 extension CircularNotchedRectangleBinding on CircularNotchedRectangle {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('CircularNotchedRectangle');
       case 'getOuterPath':
         return ({positionalArgs, namedArgs, typeArgs}) =>
@@ -59,7 +59,7 @@ class AutomaticNotchedShapeAutoBinding extends HTExternalClass {
 extension AutomaticNotchedShapeBinding on AutomaticNotchedShape {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('AutomaticNotchedShape');
       case 'host':
         return host;

@@ -70,7 +70,7 @@ class CupertinoScrollbarAutoBinding extends HTExternalClass {
 extension CupertinoScrollbarBinding on CupertinoScrollbar {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('CupertinoScrollbar');
       case 'thicknessWhileDragging':
         return thicknessWhileDragging;

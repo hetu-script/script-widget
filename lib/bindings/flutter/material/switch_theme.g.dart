@@ -48,7 +48,7 @@ class SwitchThemeDataAutoBinding extends HTExternalClass {
 extension SwitchThemeDataBinding on SwitchThemeData {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('SwitchThemeData');
       case 'thumbColor':
         return thumbColor;
@@ -133,7 +133,7 @@ class SwitchThemeAutoBinding extends HTExternalClass {
 extension SwitchThemeBinding on SwitchTheme {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('SwitchTheme');
       case 'data':
         return data;

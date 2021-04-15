@@ -31,7 +31,7 @@ extension SliverMultiBoxAdaptorParentDataBinding
     on SliverMultiBoxAdaptorParentData {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('SliverMultiBoxAdaptorParentData');
       case 'index':
         return index;

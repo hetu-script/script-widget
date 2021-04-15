@@ -32,7 +32,7 @@ class TableRowAutoBinding extends HTExternalClass {
 extension TableRowBinding on TableRow {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('TableRow');
       case 'key':
         return key;
@@ -92,7 +92,7 @@ class TableAutoBinding extends HTExternalClass {
 extension TableBinding on Table {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Table');
       case 'children':
         return children;
@@ -185,7 +185,7 @@ class TableCellAutoBinding extends HTExternalClass {
 extension TableCellBinding on TableCell {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('TableCell');
       case 'verticalAlignment':
         return verticalAlignment;

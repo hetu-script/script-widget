@@ -74,7 +74,7 @@ class BoxConstraintsAutoBinding extends HTExternalClass {
 extension BoxConstraintsBinding on BoxConstraints {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('BoxConstraints');
       case 'minWidth':
         return minWidth;
@@ -210,7 +210,7 @@ class BoxHitTestResultAutoBinding extends HTExternalClass {
 extension BoxHitTestResultBinding on BoxHitTestResult {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('BoxHitTestResult');
       case 'path':
         return path;
@@ -292,7 +292,7 @@ class BoxHitTestEntryAutoBinding extends HTExternalClass {
 extension BoxHitTestEntryBinding on BoxHitTestEntry {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('BoxHitTestEntry');
       case 'localPosition':
         return localPosition;
@@ -335,7 +335,7 @@ class BoxParentDataAutoBinding extends HTExternalClass {
 extension BoxParentDataBinding on BoxParentData {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('BoxParentData');
       case 'offset':
         return offset;

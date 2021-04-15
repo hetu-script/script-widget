@@ -34,7 +34,7 @@ class DoubleTapGestureRecognizerAutoBinding extends HTExternalClass {
 extension DoubleTapGestureRecognizerBinding on DoubleTapGestureRecognizer {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('DoubleTapGestureRecognizer');
       case 'onDoubleTapDown':
         return onDoubleTapDown;
@@ -156,7 +156,7 @@ class MultiTapGestureRecognizerAutoBinding extends HTExternalClass {
 extension MultiTapGestureRecognizerBinding on MultiTapGestureRecognizer {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('MultiTapGestureRecognizer');
       case 'onTapDown':
         return onTapDown;

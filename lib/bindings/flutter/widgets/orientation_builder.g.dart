@@ -34,7 +34,7 @@ class OrientationBuilderAutoBinding extends HTExternalClass {
 extension OrientationBuilderBinding on OrientationBuilder {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('OrientationBuilder');
       case 'builder':
         return builder;

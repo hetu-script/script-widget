@@ -26,7 +26,7 @@ class KeyboardSideAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('KeyboardSide');
       case 'index':
         return (instance as KeyboardSide).index;
@@ -73,7 +73,7 @@ class ModifierKeyAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ModifierKey');
       case 'index':
         return (instance as ModifierKey).index;
@@ -109,7 +109,7 @@ class RawKeyEventAutoBinding extends HTExternalClass {
 extension RawKeyEventBinding on RawKeyEvent {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RawKeyEvent');
       case 'character':
         return character;
@@ -176,7 +176,7 @@ class RawKeyDownEventAutoBinding extends HTExternalClass {
 extension RawKeyDownEventBinding on RawKeyDownEvent {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RawKeyDownEvent');
       case 'character':
         return character;
@@ -243,7 +243,7 @@ class RawKeyUpEventAutoBinding extends HTExternalClass {
 extension RawKeyUpEventBinding on RawKeyUpEvent {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RawKeyUpEvent');
       case 'character':
         return character;

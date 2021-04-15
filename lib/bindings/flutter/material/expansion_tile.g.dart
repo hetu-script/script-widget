@@ -66,7 +66,7 @@ class ExpansionTileAutoBinding extends HTExternalClass {
 extension ExpansionTileBinding on ExpansionTile {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ExpansionTile');
       case 'leading':
         return leading;

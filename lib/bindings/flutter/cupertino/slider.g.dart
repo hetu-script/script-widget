@@ -45,7 +45,7 @@ class CupertinoSliderAutoBinding extends HTExternalClass {
 extension CupertinoSliderBinding on CupertinoSlider {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('CupertinoSlider');
       case 'value':
         return value;

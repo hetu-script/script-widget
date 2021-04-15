@@ -32,7 +32,7 @@ class PopupMenuDividerAutoBinding extends HTExternalClass {
 extension PopupMenuDividerBinding on PopupMenuDivider {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('PopupMenuDivider');
       case 'height':
         return height;

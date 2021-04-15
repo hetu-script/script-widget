@@ -26,7 +26,7 @@ class CircleBorderAutoBinding extends HTExternalClass {
 extension CircleBorderBinding on CircleBorder {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('CircleBorder');
       case 'side':
         return side;

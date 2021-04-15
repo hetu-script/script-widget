@@ -53,7 +53,7 @@ class CupertinoThumbPainterAutoBinding extends HTExternalClass {
 extension CupertinoThumbPainterBinding on CupertinoThumbPainter {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('CupertinoThumbPainter');
       case 'color':
         return color;

@@ -39,7 +39,7 @@ class TickerAutoBinding extends HTExternalClass {
 extension TickerBinding on Ticker {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Ticker');
       case 'debugLabel':
         return debugLabel;
@@ -115,7 +115,7 @@ class TickerFutureAutoBinding extends HTExternalClass {
 extension TickerFutureBinding on TickerFuture {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('TickerFuture');
       case 'orCancel':
         return orCancel;
@@ -173,7 +173,7 @@ class TickerCanceledAutoBinding extends HTExternalClass {
 extension TickerCanceledBinding on TickerCanceled {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('TickerCanceled');
       case 'ticker':
         return ticker;

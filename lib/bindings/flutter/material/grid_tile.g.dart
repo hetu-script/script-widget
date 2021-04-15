@@ -30,7 +30,7 @@ class GridTileAutoBinding extends HTExternalClass {
 extension GridTileBinding on GridTile {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('GridTile');
       case 'header':
         return header;

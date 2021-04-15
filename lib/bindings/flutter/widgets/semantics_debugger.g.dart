@@ -32,7 +32,7 @@ class SemanticsDebuggerAutoBinding extends HTExternalClass {
 extension SemanticsDebuggerBinding on SemanticsDebugger {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('SemanticsDebugger');
       case 'child':
         return child;

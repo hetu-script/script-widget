@@ -41,7 +41,7 @@ class DataColumnAutoBinding extends HTExternalClass {
 extension DataColumnBinding on DataColumn {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('DataColumn');
       case 'label':
         return label;
@@ -99,7 +99,7 @@ class DataRowAutoBinding extends HTExternalClass {
 extension DataRowBinding on DataRow {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('DataRow');
       case 'key':
         return key;
@@ -156,7 +156,7 @@ class DataCellAutoBinding extends HTExternalClass {
 extension DataCellBinding on DataCell {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('DataCell');
       case 'child':
         return child;
@@ -242,7 +242,7 @@ class DataTableAutoBinding extends HTExternalClass {
 extension DataTableBinding on DataTable {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('DataTable');
       case 'columns':
         return columns;
@@ -371,7 +371,7 @@ class TableRowInkWellAutoBinding extends HTExternalClass {
 extension TableRowInkWellBinding on TableRowInkWell {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('TableRowInkWell');
       case 'child':
         return child;

@@ -30,7 +30,7 @@ class DefaultShaderWarmUpAutoBinding extends HTExternalClass {
 extension DefaultShaderWarmUpBinding on DefaultShaderWarmUp {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('DefaultShaderWarmUp');
       case 'drawCallSpacing':
         return drawCallSpacing;

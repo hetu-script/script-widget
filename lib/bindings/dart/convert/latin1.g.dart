@@ -26,7 +26,7 @@ class Latin1CodecAutoBinding extends HTExternalClass {
 extension Latin1CodecBinding on Latin1Codec {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Latin1Codec');
       case 'name':
         return name;
@@ -74,7 +74,7 @@ class Latin1EncoderAutoBinding extends HTExternalClass {
 extension Latin1EncoderBinding on Latin1Encoder {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Latin1Encoder');
       case 'convert':
         return ({positionalArgs, namedArgs, typeArgs}) => convert(
@@ -123,7 +123,7 @@ class Latin1DecoderAutoBinding extends HTExternalClass {
 extension Latin1DecoderBinding on Latin1Decoder {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Latin1Decoder');
       case 'startChunkedConversion':
         return ({positionalArgs, namedArgs, typeArgs}) =>

@@ -24,7 +24,7 @@ class AnnounceSemanticsEventAutoBinding extends HTExternalClass {
 extension AnnounceSemanticsEventBinding on AnnounceSemanticsEvent {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('AnnounceSemanticsEvent');
       case 'message':
         return message;
@@ -69,7 +69,7 @@ class TooltipSemanticsEventAutoBinding extends HTExternalClass {
 extension TooltipSemanticsEventBinding on TooltipSemanticsEvent {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('TooltipSemanticsEvent');
       case 'message':
         return message;
@@ -112,7 +112,7 @@ class LongPressSemanticsEventAutoBinding extends HTExternalClass {
 extension LongPressSemanticsEventBinding on LongPressSemanticsEvent {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('LongPressSemanticsEvent');
       case 'type':
         return type;
@@ -152,7 +152,7 @@ class TapSemanticEventAutoBinding extends HTExternalClass {
 extension TapSemanticEventBinding on TapSemanticEvent {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('TapSemanticEvent');
       case 'type':
         return type;

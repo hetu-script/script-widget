@@ -56,7 +56,7 @@ class ScrollbarAutoBinding extends HTExternalClass {
 extension ScrollbarBinding on Scrollbar {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Scrollbar');
       case 'child':
         return child;

@@ -24,7 +24,7 @@ class KeyEventResultAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('KeyEventResult');
       case 'index':
         return (instance as KeyEventResult).index;
@@ -57,7 +57,7 @@ class UnfocusDispositionAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('UnfocusDisposition');
       case 'index':
         return (instance as UnfocusDisposition).index;
@@ -90,7 +90,7 @@ class FocusHighlightModeAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('FocusHighlightMode');
       case 'index':
         return (instance as FocusHighlightMode).index;
@@ -125,7 +125,7 @@ class FocusHighlightStrategyAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('FocusHighlightStrategy');
       case 'index':
         return (instance as FocusHighlightStrategy).index;
@@ -186,7 +186,7 @@ class FocusNodeAutoBinding extends HTExternalClass {
 extension FocusNodeBinding on FocusNode {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('FocusNode');
       case 'skipTraversal':
         return skipTraversal;
@@ -351,7 +351,7 @@ class FocusScopeNodeAutoBinding extends HTExternalClass {
 extension FocusScopeNodeBinding on FocusScopeNode {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('FocusScopeNode');
       case 'nearestScope':
         return nearestScope;
@@ -497,7 +497,7 @@ class FocusManagerAutoBinding extends HTExternalClass {
 extension FocusManagerBinding on FocusManager {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('FocusManager');
       case 'rootScope':
         return rootScope;

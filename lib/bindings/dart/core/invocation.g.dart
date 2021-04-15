@@ -39,7 +39,7 @@ class InvocationAutoBinding extends HTExternalClass {
 extension InvocationBinding on Invocation {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Invocation');
       case 'memberName':
         return memberName;

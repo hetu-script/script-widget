@@ -41,7 +41,7 @@ class NavigationToolbarAutoBinding extends HTExternalClass {
 extension NavigationToolbarBinding on NavigationToolbar {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('NavigationToolbar');
       case 'leading':
         return leading;

@@ -49,7 +49,7 @@ class OverlayVisibilityModeAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('OverlayVisibilityMode');
       case 'index':
         return (instance as OverlayVisibilityMode).index;
@@ -314,7 +314,7 @@ class CupertinoTextFieldAutoBinding extends HTExternalClass {
 extension CupertinoTextFieldBinding on CupertinoTextField {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('CupertinoTextField');
       case 'controller':
         return controller;

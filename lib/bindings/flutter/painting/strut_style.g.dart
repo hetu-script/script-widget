@@ -86,7 +86,7 @@ class StrutStyleAutoBinding extends HTExternalClass {
 extension StrutStyleBinding on StrutStyle {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('StrutStyle');
       case 'fontFamily':
         return fontFamily;

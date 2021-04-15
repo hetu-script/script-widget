@@ -30,7 +30,7 @@ class DragDownDetailsAutoBinding extends HTExternalClass {
 extension DragDownDetailsBinding on DragDownDetails {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('DragDownDetails');
       case 'globalPosition':
         return globalPosition;
@@ -76,7 +76,7 @@ class DragStartDetailsAutoBinding extends HTExternalClass {
 extension DragStartDetailsBinding on DragStartDetails {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('DragStartDetails');
       case 'sourceTimeStamp':
         return sourceTimeStamp;
@@ -129,7 +129,7 @@ class DragUpdateDetailsAutoBinding extends HTExternalClass {
 extension DragUpdateDetailsBinding on DragUpdateDetails {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('DragUpdateDetails');
       case 'sourceTimeStamp':
         return sourceTimeStamp;
@@ -177,7 +177,7 @@ class DragEndDetailsAutoBinding extends HTExternalClass {
 extension DragEndDetailsBinding on DragEndDetails {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('DragEndDetails');
       case 'velocity':
         return velocity;

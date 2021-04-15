@@ -55,7 +55,7 @@ class PerformanceOverlayAutoBinding extends HTExternalClass {
 extension PerformanceOverlayBinding on PerformanceOverlay {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('PerformanceOverlay');
       case 'optionsMask':
         return optionsMask;

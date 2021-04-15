@@ -41,7 +41,7 @@ class RenderSliverFixedExtentListAutoBinding extends HTExternalClass {
 extension RenderSliverFixedExtentListBinding on RenderSliverFixedExtentList {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RenderSliverFixedExtentList');
       case 'parentData':
         return parentData;

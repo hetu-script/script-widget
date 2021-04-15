@@ -23,7 +23,7 @@ class ScrollDirectionAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ScrollDirection');
       case 'index':
         return (instance as ScrollDirection).index;
@@ -68,7 +68,7 @@ class ViewportOffsetAutoBinding extends HTExternalClass {
 extension ViewportOffsetBinding on ViewportOffset {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ViewportOffset');
       case 'pixels':
         return pixels;

@@ -42,7 +42,7 @@ class TextSpanAutoBinding extends HTExternalClass {
 extension TextSpanBinding on TextSpan {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('TextSpan');
       case 'text':
         return text;

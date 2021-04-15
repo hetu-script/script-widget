@@ -30,7 +30,7 @@ class ListBodyParentDataAutoBinding extends HTExternalClass {
 extension ListBodyParentDataBinding on ListBodyParentData {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ListBodyParentData');
       case 'offset':
         return offset;
@@ -94,7 +94,7 @@ class RenderListBodyAutoBinding extends HTExternalClass {
 extension RenderListBodyBinding on RenderListBody {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RenderListBody');
       case 'parentData':
         return parentData;

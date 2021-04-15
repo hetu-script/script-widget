@@ -35,7 +35,7 @@ class OffsetAutoBinding extends HTExternalClass {
 extension OffsetBinding on Offset {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Offset');
       case 'dx':
         return dx;
@@ -112,7 +112,7 @@ class SizeAutoBinding extends HTExternalClass {
 extension SizeBinding on Size {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Size');
       case 'width':
         return width;
@@ -222,7 +222,7 @@ class RectAutoBinding extends HTExternalClass {
 extension RectBinding on Rect {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Rect');
       case 'left':
         return left;
@@ -333,7 +333,7 @@ class RadiusAutoBinding extends HTExternalClass {
 extension RadiusBinding on Radius {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Radius');
       case 'x':
         return x;
@@ -426,7 +426,7 @@ class RRectAutoBinding extends HTExternalClass {
 extension RRectBinding on RRect {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RRect');
       case 'left':
         return left;
@@ -553,7 +553,7 @@ class RSTransformAutoBinding extends HTExternalClass {
 extension RSTransformBinding on RSTransform {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RSTransform');
       case 'scos':
         return scos;

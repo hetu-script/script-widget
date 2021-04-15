@@ -25,7 +25,7 @@ class ImageRepeatAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ImageRepeat');
       case 'index':
         return (instance as ImageRepeat).index;
@@ -90,7 +90,7 @@ class DecorationImageAutoBinding extends HTExternalClass {
 extension DecorationImageBinding on DecorationImage {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('DecorationImage');
       case 'image':
         return image;

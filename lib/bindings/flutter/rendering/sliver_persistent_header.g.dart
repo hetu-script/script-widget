@@ -41,7 +41,7 @@ extension OverScrollHeaderStretchConfigurationBinding
     on OverScrollHeaderStretchConfiguration {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('OverScrollHeaderStretchConfiguration');
       case 'stretchTriggerOffset':
         return stretchTriggerOffset;
@@ -87,7 +87,7 @@ extension PersistentHeaderShowOnScreenConfigurationBinding
     on PersistentHeaderShowOnScreenConfiguration {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('PersistentHeaderShowOnScreenConfiguration');
       case 'minShowOnScreenExtent':
         return minShowOnScreenExtent;
@@ -130,7 +130,7 @@ extension FloatingHeaderSnapConfigurationBinding
     on FloatingHeaderSnapConfiguration {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('FloatingHeaderSnapConfiguration');
       case 'curve':
         return curve;

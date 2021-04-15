@@ -25,7 +25,7 @@ class TabBarIndicatorSizeAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('TabBarIndicatorSize');
       case 'index':
         return (instance as TabBarIndicatorSize).index;
@@ -67,7 +67,7 @@ class TabAutoBinding extends HTExternalClass {
 extension TabBinding on Tab {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Tab');
       case 'text':
         return text;
@@ -203,7 +203,7 @@ class TabBarAutoBinding extends HTExternalClass {
 extension TabBarBinding on TabBar {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('TabBar');
       case 'tabs':
         return tabs;
@@ -325,7 +325,7 @@ class TabBarViewAutoBinding extends HTExternalClass {
 extension TabBarViewBinding on TabBarView {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('TabBarView');
       case 'controller':
         return controller;
@@ -408,7 +408,7 @@ class TabPageSelectorIndicatorAutoBinding extends HTExternalClass {
 extension TabPageSelectorIndicatorBinding on TabPageSelectorIndicator {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('TabPageSelectorIndicator');
       case 'backgroundColor':
         return backgroundColor;
@@ -496,7 +496,7 @@ class TabPageSelectorAutoBinding extends HTExternalClass {
 extension TabPageSelectorBinding on TabPageSelector {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('TabPageSelector');
       case 'controller':
         return controller;

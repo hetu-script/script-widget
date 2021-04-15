@@ -27,7 +27,7 @@ class AutomaticKeepAliveAutoBinding extends HTExternalClass {
 extension AutomaticKeepAliveBinding on AutomaticKeepAlive {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('AutomaticKeepAlive');
       case 'child':
         return child;
@@ -100,7 +100,7 @@ class KeepAliveNotificationAutoBinding extends HTExternalClass {
 extension KeepAliveNotificationBinding on KeepAliveNotification {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('KeepAliveNotification');
       case 'handle':
         return handle;
@@ -144,7 +144,7 @@ class KeepAliveHandleAutoBinding extends HTExternalClass {
 extension KeepAliveHandleBinding on KeepAliveHandle {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('KeepAliveHandle');
       case 'release':
         return ({positionalArgs, namedArgs, typeArgs}) => release();

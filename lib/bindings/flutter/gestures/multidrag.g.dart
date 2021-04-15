@@ -36,7 +36,7 @@ extension ImmediateMultiDragGestureRecognizerBinding
     on ImmediateMultiDragGestureRecognizer {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ImmediateMultiDragGestureRecognizer');
       case 'onStart':
         return onStart;
@@ -146,7 +146,7 @@ extension HorizontalMultiDragGestureRecognizerBinding
     on HorizontalMultiDragGestureRecognizer {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('HorizontalMultiDragGestureRecognizer');
       case 'onStart':
         return onStart;
@@ -256,7 +256,7 @@ extension VerticalMultiDragGestureRecognizerBinding
     on VerticalMultiDragGestureRecognizer {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('VerticalMultiDragGestureRecognizer');
       case 'onStart':
         return onStart;
@@ -369,7 +369,7 @@ extension DelayedMultiDragGestureRecognizerBinding
     on DelayedMultiDragGestureRecognizer {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('DelayedMultiDragGestureRecognizer');
       case 'delay':
         return delay;

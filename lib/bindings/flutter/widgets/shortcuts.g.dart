@@ -31,7 +31,7 @@ class LogicalKeySetAutoBinding extends HTExternalClass {
 extension LogicalKeySetBinding on LogicalKeySet {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('LogicalKeySet');
       case 'keys':
         return keys;
@@ -94,7 +94,7 @@ class ShortcutMapPropertyAutoBinding extends HTExternalClass {
 extension ShortcutMapPropertyBinding on ShortcutMapProperty {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ShortcutMapProperty');
       case 'expandableValue':
         return expandableValue;
@@ -220,7 +220,7 @@ class ShortcutManagerAutoBinding extends HTExternalClass {
 extension ShortcutManagerBinding on ShortcutManager {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ShortcutManager');
       case 'modal':
         return modal;
@@ -300,7 +300,7 @@ class ShortcutsAutoBinding extends HTExternalClass {
 extension ShortcutsBinding on Shortcuts {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Shortcuts');
       case 'manager':
         return manager;

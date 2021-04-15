@@ -25,7 +25,7 @@ class ScrollPhysicsAutoBinding extends HTExternalClass {
 extension ScrollPhysicsBinding on ScrollPhysics {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ScrollPhysics');
       case 'parent':
         return parent;
@@ -116,7 +116,7 @@ extension RangeMaintainingScrollPhysicsBinding
     on RangeMaintainingScrollPhysics {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RangeMaintainingScrollPhysics');
       case 'parent':
         return parent;
@@ -203,7 +203,7 @@ class BouncingScrollPhysicsAutoBinding extends HTExternalClass {
 extension BouncingScrollPhysicsBinding on BouncingScrollPhysics {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('BouncingScrollPhysics');
       case 'parent':
         return parent;
@@ -293,7 +293,7 @@ class ClampingScrollPhysicsAutoBinding extends HTExternalClass {
 extension ClampingScrollPhysicsBinding on ClampingScrollPhysics {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ClampingScrollPhysics');
       case 'parent':
         return parent;
@@ -384,7 +384,7 @@ extension AlwaysScrollableScrollPhysicsBinding
     on AlwaysScrollableScrollPhysics {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('AlwaysScrollableScrollPhysics');
       case 'parent':
         return parent;
@@ -474,7 +474,7 @@ class NeverScrollableScrollPhysicsAutoBinding extends HTExternalClass {
 extension NeverScrollableScrollPhysicsBinding on NeverScrollableScrollPhysics {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('NeverScrollableScrollPhysics');
       case 'parent':
         return parent;

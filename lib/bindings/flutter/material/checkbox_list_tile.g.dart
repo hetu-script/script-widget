@@ -66,7 +66,7 @@ class CheckboxListTileAutoBinding extends HTExternalClass {
 extension CheckboxListTileBinding on CheckboxListTile {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('CheckboxListTile');
       case 'value':
         return value;

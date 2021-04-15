@@ -42,7 +42,7 @@ class PageControllerAutoBinding extends HTExternalClass {
 extension PageControllerBinding on PageController {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('PageController');
       case 'initialPage':
         return initialPage;
@@ -152,7 +152,7 @@ class PageMetricsAutoBinding extends HTExternalClass {
 extension PageMetricsBinding on PageMetrics {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('PageMetrics');
       case 'viewportFraction':
         return viewportFraction;
@@ -237,7 +237,7 @@ class PageScrollPhysicsAutoBinding extends HTExternalClass {
 extension PageScrollPhysicsBinding on PageScrollPhysics {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('PageScrollPhysics');
       case 'parent':
         return parent;
@@ -432,7 +432,7 @@ class PageViewAutoBinding extends HTExternalClass {
 extension PageViewBinding on PageView {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('PageView');
       case 'allowImplicitScrolling':
         return allowImplicitScrolling;

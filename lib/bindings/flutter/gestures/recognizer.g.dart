@@ -21,7 +21,7 @@ class DragStartBehaviorAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('DragStartBehavior');
       case 'index':
         return (instance as DragStartBehavior).index;
@@ -56,7 +56,7 @@ class GestureRecognizerStateAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('GestureRecognizerState');
       case 'index':
         return (instance as GestureRecognizerState).index;
@@ -100,7 +100,7 @@ class OffsetPairAutoBinding extends HTExternalClass {
 extension OffsetPairBinding on OffsetPair {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('OffsetPair');
       case 'local':
         return local;

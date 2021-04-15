@@ -27,7 +27,7 @@ extension SizeChangedLayoutNotificationBinding
     on SizeChangedLayoutNotification {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('SizeChangedLayoutNotification');
       case 'dispatch':
         return ({positionalArgs, namedArgs, typeArgs}) =>
@@ -66,7 +66,7 @@ class SizeChangedLayoutNotifierAutoBinding extends HTExternalClass {
 extension SizeChangedLayoutNotifierBinding on SizeChangedLayoutNotifier {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('SizeChangedLayoutNotifier');
       case 'child':
         return child;

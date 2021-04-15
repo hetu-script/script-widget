@@ -50,7 +50,7 @@ class StackFrameAutoBinding extends HTExternalClass {
 extension StackFrameBinding on StackFrame {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('StackFrame');
       case 'source':
         return source;

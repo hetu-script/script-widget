@@ -22,7 +22,7 @@ class DebugSemanticsDumpOrderAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('DebugSemanticsDumpOrder');
       case 'index':
         return (instance as DebugSemanticsDumpOrder).index;
@@ -58,7 +58,7 @@ class SemanticsTagAutoBinding extends HTExternalClass {
 extension SemanticsTagBinding on SemanticsTag {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('SemanticsTag');
       case 'name':
         return name;
@@ -103,7 +103,7 @@ class CustomSemanticsActionAutoBinding extends HTExternalClass {
 extension CustomSemanticsActionBinding on CustomSemanticsAction {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('CustomSemanticsAction');
       case 'label':
         return label;
@@ -171,7 +171,7 @@ class SemanticsDataAutoBinding extends HTExternalClass {
 extension SemanticsDataBinding on SemanticsData {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('SemanticsData');
       case 'flags':
         return flags;
@@ -276,7 +276,7 @@ class SemanticsHintOverridesAutoBinding extends HTExternalClass {
 extension SemanticsHintOverridesBinding on SemanticsHintOverrides {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('SemanticsHintOverrides');
       case 'onTapHint':
         return onTapHint;
@@ -454,7 +454,7 @@ class SemanticsPropertiesAutoBinding extends HTExternalClass {
 extension SemanticsPropertiesBinding on SemanticsProperties {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('SemanticsProperties');
       case 'enabled':
         return enabled;
@@ -643,7 +643,7 @@ class SemanticsNodeAutoBinding extends HTExternalClass {
 extension SemanticsNodeBinding on SemanticsNode {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('SemanticsNode');
       case 'key':
         return key;
@@ -867,7 +867,7 @@ class SemanticsOwnerAutoBinding extends HTExternalClass {
 extension SemanticsOwnerBinding on SemanticsOwner {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('SemanticsOwner');
       case 'rootSemanticsNode':
         return rootSemanticsNode;
@@ -938,7 +938,7 @@ class SemanticsConfigurationAutoBinding extends HTExternalClass {
 extension SemanticsConfigurationBinding on SemanticsConfiguration {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('SemanticsConfiguration');
       case 'explicitChildNodes':
         return explicitChildNodes;
@@ -1325,7 +1325,7 @@ class OrdinalSortKeyAutoBinding extends HTExternalClass {
 extension OrdinalSortKeyBinding on OrdinalSortKey {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('OrdinalSortKey');
       case 'order':
         return order;

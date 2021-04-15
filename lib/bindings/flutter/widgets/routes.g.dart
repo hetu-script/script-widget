@@ -33,7 +33,7 @@ class LocalHistoryEntryAutoBinding extends HTExternalClass {
 extension LocalHistoryEntryBinding on LocalHistoryEntry {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('LocalHistoryEntry');
       case 'onRemove':
         return onRemove;

@@ -26,7 +26,7 @@ class StadiumBorderAutoBinding extends HTExternalClass {
 extension StadiumBorderBinding on StadiumBorder {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('StadiumBorder');
       case 'side':
         return side;

@@ -73,7 +73,7 @@ class ScrollbarPainterAutoBinding extends HTExternalClass {
 extension ScrollbarPainterBinding on ScrollbarPainter {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ScrollbarPainter');
       case 'fadeoutOpacityAnimation':
         return fadeoutOpacityAnimation;
@@ -241,7 +241,7 @@ class RawScrollbarAutoBinding extends HTExternalClass {
 extension RawScrollbarBinding on RawScrollbar {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RawScrollbar');
       case 'child':
         return child;

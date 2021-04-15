@@ -78,7 +78,7 @@ class TimePickerThemeDataAutoBinding extends HTExternalClass {
 extension TimePickerThemeDataBinding on TimePickerThemeData {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('TimePickerThemeData');
       case 'backgroundColor':
         return backgroundColor;
@@ -215,7 +215,7 @@ class TimePickerThemeAutoBinding extends HTExternalClass {
 extension TimePickerThemeBinding on TimePickerTheme {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('TimePickerTheme');
       case 'data':
         return data;

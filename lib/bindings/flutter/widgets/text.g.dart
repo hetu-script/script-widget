@@ -75,7 +75,7 @@ class DefaultTextStyleAutoBinding extends HTExternalClass {
 extension DefaultTextStyleBinding on DefaultTextStyle {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('DefaultTextStyle');
       case 'style':
         return style;
@@ -172,7 +172,7 @@ class DefaultTextHeightBehaviorAutoBinding extends HTExternalClass {
 extension DefaultTextHeightBehaviorBinding on DefaultTextHeightBehavior {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('DefaultTextHeightBehavior');
       case 'textHeightBehavior':
         return textHeightBehavior;
@@ -322,7 +322,7 @@ class TextAutoBinding extends HTExternalClass {
 extension TextBinding on Text {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Text');
       case 'data':
         return data;

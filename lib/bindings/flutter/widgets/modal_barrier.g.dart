@@ -37,7 +37,7 @@ class ModalBarrierAutoBinding extends HTExternalClass {
 extension ModalBarrierBinding on ModalBarrier {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ModalBarrier');
       case 'color':
         return color;
@@ -128,7 +128,7 @@ class AnimatedModalBarrierAutoBinding extends HTExternalClass {
 extension AnimatedModalBarrierBinding on AnimatedModalBarrier {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('AnimatedModalBarrier');
       case 'dismissible':
         return dismissible;

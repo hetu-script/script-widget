@@ -39,7 +39,7 @@ class RenderRotatedBoxAutoBinding extends HTExternalClass {
 extension RenderRotatedBoxBinding on RenderRotatedBox {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RenderRotatedBox');
       case 'parentData':
         return parentData;

@@ -29,7 +29,7 @@ class TextureAutoBinding extends HTExternalClass {
 extension TextureBinding on Texture {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Texture');
       case 'textureId':
         return textureId;

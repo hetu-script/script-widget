@@ -25,7 +25,7 @@ class ButtonTextThemeAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ButtonTextTheme');
       case 'index':
         return (instance as ButtonTextTheme).index;
@@ -58,7 +58,7 @@ class ButtonBarLayoutBehaviorAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ButtonBarLayoutBehavior');
       case 'index':
         return (instance as ButtonBarLayoutBehavior).index;
@@ -146,7 +146,7 @@ class ButtonThemeAutoBinding extends HTExternalClass {
 extension ButtonThemeBinding on ButtonTheme {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ButtonTheme');
       case 'data':
         return data;
@@ -266,7 +266,7 @@ class ButtonThemeDataAutoBinding extends HTExternalClass {
 extension ButtonThemeDataBinding on ButtonThemeData {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ButtonThemeData');
       case 'minWidth':
         return minWidth;

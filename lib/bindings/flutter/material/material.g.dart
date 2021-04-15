@@ -30,7 +30,7 @@ class MaterialTypeAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('MaterialType');
       case 'index':
         return (instance as MaterialType).index;
@@ -98,7 +98,7 @@ class MaterialAutoBinding extends HTExternalClass {
 extension MaterialBinding on Material {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Material');
       case 'child':
         return child;
@@ -197,7 +197,7 @@ class ShapeBorderTweenAutoBinding extends HTExternalClass {
 extension ShapeBorderTweenBinding on ShapeBorderTween {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ShapeBorderTween');
       case 'begin':
         return begin;

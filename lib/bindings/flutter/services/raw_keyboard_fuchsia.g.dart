@@ -61,7 +61,7 @@ class RawKeyEventDataFuchsiaAutoBinding extends HTExternalClass {
 extension RawKeyEventDataFuchsiaBinding on RawKeyEventDataFuchsia {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RawKeyEventDataFuchsia');
       case 'hidUsage':
         return hidUsage;

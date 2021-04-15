@@ -46,7 +46,7 @@ class MaterialBannerAutoBinding extends HTExternalClass {
 extension MaterialBannerBinding on MaterialBanner {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('MaterialBanner');
       case 'content':
         return content;

@@ -32,7 +32,7 @@ class BoxConstraintsTweenAutoBinding extends HTExternalClass {
 extension BoxConstraintsTweenBinding on BoxConstraintsTween {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('BoxConstraintsTween');
       case 'begin':
         return begin;
@@ -103,7 +103,7 @@ class DecorationTweenAutoBinding extends HTExternalClass {
 extension DecorationTweenBinding on DecorationTween {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('DecorationTween');
       case 'begin':
         return begin;
@@ -174,7 +174,7 @@ class EdgeInsetsTweenAutoBinding extends HTExternalClass {
 extension EdgeInsetsTweenBinding on EdgeInsetsTween {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('EdgeInsetsTween');
       case 'begin':
         return begin;
@@ -247,7 +247,7 @@ class EdgeInsetsGeometryTweenAutoBinding extends HTExternalClass {
 extension EdgeInsetsGeometryTweenBinding on EdgeInsetsGeometryTween {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('EdgeInsetsGeometryTween');
       case 'begin':
         return begin;
@@ -318,7 +318,7 @@ class BorderRadiusTweenAutoBinding extends HTExternalClass {
 extension BorderRadiusTweenBinding on BorderRadiusTween {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('BorderRadiusTween');
       case 'begin':
         return begin;
@@ -389,7 +389,7 @@ class BorderTweenAutoBinding extends HTExternalClass {
 extension BorderTweenBinding on BorderTween {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('BorderTween');
       case 'begin':
         return begin;
@@ -460,7 +460,7 @@ class Matrix4TweenAutoBinding extends HTExternalClass {
 extension Matrix4TweenBinding on Matrix4Tween {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Matrix4Tween');
       case 'begin':
         return begin;
@@ -531,7 +531,7 @@ class TextStyleTweenAutoBinding extends HTExternalClass {
 extension TextStyleTweenBinding on TextStyleTween {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('TextStyleTween');
       case 'begin':
         return begin;
@@ -638,7 +638,7 @@ class AnimatedContainerAutoBinding extends HTExternalClass {
 extension AnimatedContainerBinding on AnimatedContainer {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('AnimatedContainer');
       case 'child':
         return child;
@@ -749,7 +749,7 @@ class AnimatedPaddingAutoBinding extends HTExternalClass {
 extension AnimatedPaddingBinding on AnimatedPadding {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('AnimatedPadding');
       case 'padding':
         return padding;
@@ -850,7 +850,7 @@ class AnimatedAlignAutoBinding extends HTExternalClass {
 extension AnimatedAlignBinding on AnimatedAlign {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('AnimatedAlign');
       case 'alignment':
         return alignment;
@@ -968,7 +968,7 @@ class AnimatedPositionedAutoBinding extends HTExternalClass {
 extension AnimatedPositionedBinding on AnimatedPositioned {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('AnimatedPositioned');
       case 'child':
         return child;
@@ -1088,7 +1088,7 @@ extension AnimatedPositionedDirectionalBinding
     on AnimatedPositionedDirectional {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('AnimatedPositionedDirectional');
       case 'child':
         return child;
@@ -1197,7 +1197,7 @@ class AnimatedOpacityAutoBinding extends HTExternalClass {
 extension AnimatedOpacityBinding on AnimatedOpacity {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('AnimatedOpacity');
       case 'child':
         return child;
@@ -1299,7 +1299,7 @@ class SliverAnimatedOpacityAutoBinding extends HTExternalClass {
 extension SliverAnimatedOpacityBinding on SliverAnimatedOpacity {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('SliverAnimatedOpacity');
       case 'sliver':
         return sliver;
@@ -1430,7 +1430,7 @@ class AnimatedDefaultTextStyleAutoBinding extends HTExternalClass {
 extension AnimatedDefaultTextStyleBinding on AnimatedDefaultTextStyle {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('AnimatedDefaultTextStyle');
       case 'child':
         return child;
@@ -1552,7 +1552,7 @@ class AnimatedPhysicalModelAutoBinding extends HTExternalClass {
 extension AnimatedPhysicalModelBinding on AnimatedPhysicalModel {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('AnimatedPhysicalModel');
       case 'child':
         return child;

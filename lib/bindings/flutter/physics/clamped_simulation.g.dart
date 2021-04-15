@@ -41,7 +41,7 @@ class ClampedSimulationAutoBinding extends HTExternalClass {
 extension ClampedSimulationBinding on ClampedSimulation {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ClampedSimulation');
       case 'simulation':
         return simulation;

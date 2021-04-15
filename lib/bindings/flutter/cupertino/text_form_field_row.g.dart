@@ -142,7 +142,7 @@ class CupertinoTextFormFieldRowAutoBinding extends HTExternalClass {
 extension CupertinoTextFormFieldRowBinding on CupertinoTextFormFieldRow {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('CupertinoTextFormFieldRow');
       case 'prefix':
         return prefix;

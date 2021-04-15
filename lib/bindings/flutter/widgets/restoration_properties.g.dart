@@ -36,7 +36,7 @@ class RestorableDoubleAutoBinding extends HTExternalClass {
 extension RestorableDoubleBinding on RestorableDouble {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RestorableDouble');
       case 'enabled':
         return enabled;
@@ -112,7 +112,7 @@ class RestorableIntAutoBinding extends HTExternalClass {
 extension RestorableIntBinding on RestorableInt {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RestorableInt');
       case 'enabled':
         return enabled;
@@ -188,7 +188,7 @@ class RestorableStringAutoBinding extends HTExternalClass {
 extension RestorableStringBinding on RestorableString {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RestorableString');
       case 'enabled':
         return enabled;
@@ -264,7 +264,7 @@ class RestorableBoolAutoBinding extends HTExternalClass {
 extension RestorableBoolBinding on RestorableBool {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RestorableBool');
       case 'enabled':
         return enabled;
@@ -335,7 +335,7 @@ class RestorableBoolNAutoBinding extends HTExternalClass {
 extension RestorableBoolNBinding on RestorableBoolN {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RestorableBoolN');
       case 'value':
         return value;
@@ -398,7 +398,7 @@ class RestorableDoubleNAutoBinding extends HTExternalClass {
 extension RestorableDoubleNBinding on RestorableDoubleN {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RestorableDoubleN');
       case 'value':
         return value;
@@ -461,7 +461,7 @@ class RestorableIntNAutoBinding extends HTExternalClass {
 extension RestorableIntNBinding on RestorableIntN {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RestorableIntN');
       case 'value':
         return value;
@@ -524,7 +524,7 @@ class RestorableStringNAutoBinding extends HTExternalClass {
 extension RestorableStringNBinding on RestorableStringN {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RestorableStringN');
       case 'value':
         return value;
@@ -593,7 +593,7 @@ extension RestorableTextEditingControllerBinding
     on RestorableTextEditingController {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RestorableTextEditingController');
       case 'value':
         return value;

@@ -34,7 +34,7 @@ class IconDataAutoBinding extends HTExternalClass {
 extension IconDataBinding on IconData {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('IconData');
       case 'codePoint':
         return codePoint;
@@ -88,7 +88,7 @@ class IconDataPropertyAutoBinding extends HTExternalClass {
 extension IconDataPropertyBinding on IconDataProperty {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('IconDataProperty');
       case 'expandableValue':
         return expandableValue;

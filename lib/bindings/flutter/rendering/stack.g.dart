@@ -26,7 +26,7 @@ class StackFitAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('StackFit');
       case 'index':
         return (instance as StackFit).index;
@@ -76,7 +76,7 @@ class RelativeRectAutoBinding extends HTExternalClass {
 extension RelativeRectBinding on RelativeRect {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RelativeRect');
       case 'left':
         return left;
@@ -143,7 +143,7 @@ class StackParentDataAutoBinding extends HTExternalClass {
 extension StackParentDataBinding on StackParentData {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('StackParentData');
       case 'top':
         return top;
@@ -261,7 +261,7 @@ class RenderStackAutoBinding extends HTExternalClass {
 extension RenderStackBinding on RenderStack {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RenderStack');
       case 'parentData':
         return parentData;
@@ -682,7 +682,7 @@ class RenderIndexedStackAutoBinding extends HTExternalClass {
 extension RenderIndexedStackBinding on RenderIndexedStack {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RenderIndexedStack');
       case 'parentData':
         return parentData;

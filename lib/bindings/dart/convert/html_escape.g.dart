@@ -44,7 +44,7 @@ class HtmlEscapeModeAutoBinding extends HTExternalClass {
 extension HtmlEscapeModeBinding on HtmlEscapeMode {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('HtmlEscapeMode');
       case 'escapeLtGt':
         return escapeLtGt;
@@ -87,7 +87,7 @@ class HtmlEscapeAutoBinding extends HTExternalClass {
 extension HtmlEscapeBinding on HtmlEscape {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('HtmlEscape');
       case 'mode':
         return mode;

@@ -54,7 +54,7 @@ class CupertinoTabBarAutoBinding extends HTExternalClass {
 extension CupertinoTabBarBinding on CupertinoTabBar {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('CupertinoTabBar');
       case 'items':
         return items;

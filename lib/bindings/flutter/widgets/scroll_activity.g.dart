@@ -24,7 +24,7 @@ class IdleScrollActivityAutoBinding extends HTExternalClass {
 extension IdleScrollActivityBinding on IdleScrollActivity {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('IdleScrollActivity');
       case 'shouldIgnorePointer':
         return shouldIgnorePointer;
@@ -99,7 +99,7 @@ class HoldScrollActivityAutoBinding extends HTExternalClass {
 extension HoldScrollActivityBinding on HoldScrollActivity {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('HoldScrollActivity');
       case 'onHoldCanceled':
         return onHoldCanceled;
@@ -190,7 +190,7 @@ class ScrollDragControllerAutoBinding extends HTExternalClass {
 extension ScrollDragControllerBinding on ScrollDragController {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ScrollDragController');
       case 'onDragCanceled':
         return onDragCanceled;
@@ -246,7 +246,7 @@ class DragScrollActivityAutoBinding extends HTExternalClass {
 extension DragScrollActivityBinding on DragScrollActivity {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('DragScrollActivity');
       case 'shouldIgnorePointer':
         return shouldIgnorePointer;
@@ -312,7 +312,7 @@ class BallisticScrollActivityAutoBinding extends HTExternalClass {
 extension BallisticScrollActivityBinding on BallisticScrollActivity {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('BallisticScrollActivity');
       case 'shouldIgnorePointer':
         return shouldIgnorePointer;
@@ -382,7 +382,7 @@ class DrivenScrollActivityAutoBinding extends HTExternalClass {
 extension DrivenScrollActivityBinding on DrivenScrollActivity {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('DrivenScrollActivity');
       case 'done':
         return done;

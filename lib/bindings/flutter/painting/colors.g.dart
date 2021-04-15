@@ -34,7 +34,7 @@ class HSVColorAutoBinding extends HTExternalClass {
 extension HSVColorBinding on HSVColor {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('HSVColor');
       case 'alpha':
         return alpha;
@@ -100,7 +100,7 @@ class HSLColorAutoBinding extends HTExternalClass {
 extension HSLColorBinding on HSLColor {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('HSLColor');
       case 'alpha':
         return alpha;
@@ -169,7 +169,7 @@ class ColorPropertyAutoBinding extends HTExternalClass {
 extension ColorPropertyBinding on ColorProperty {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ColorProperty');
       case 'expandableValue':
         return expandableValue;

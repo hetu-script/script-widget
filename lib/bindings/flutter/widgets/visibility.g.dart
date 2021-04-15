@@ -47,7 +47,7 @@ class VisibilityAutoBinding extends HTExternalClass {
 extension VisibilityBinding on Visibility {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Visibility');
       case 'child':
         return child;
@@ -157,7 +157,7 @@ class SliverVisibilityAutoBinding extends HTExternalClass {
 extension SliverVisibilityBinding on SliverVisibility {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('SliverVisibility');
       case 'sliver':
         return sliver;

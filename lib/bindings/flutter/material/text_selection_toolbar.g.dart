@@ -60,7 +60,7 @@ class TextSelectionToolbarAutoBinding extends HTExternalClass {
 extension TextSelectionToolbarBinding on TextSelectionToolbar {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('TextSelectionToolbar');
       case 'anchorAbove':
         return anchorAbove;

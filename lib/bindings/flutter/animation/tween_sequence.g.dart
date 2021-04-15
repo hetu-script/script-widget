@@ -24,7 +24,7 @@ class FlippedTweenSequenceAutoBinding extends HTExternalClass {
 extension FlippedTweenSequenceBinding on FlippedTweenSequence {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('FlippedTweenSequence');
       case 'transform':
         return ({positionalArgs, namedArgs, typeArgs}) =>

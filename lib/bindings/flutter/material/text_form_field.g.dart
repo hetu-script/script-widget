@@ -150,7 +150,7 @@ class TextFormFieldAutoBinding extends HTExternalClass {
 extension TextFormFieldBinding on TextFormField {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('TextFormField');
       case 'controller':
         return controller;

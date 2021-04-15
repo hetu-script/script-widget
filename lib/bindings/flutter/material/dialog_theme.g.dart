@@ -44,7 +44,7 @@ class DialogThemeAutoBinding extends HTExternalClass {
 extension DialogThemeBinding on DialogTheme {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('DialogTheme');
       case 'backgroundColor':
         return backgroundColor;

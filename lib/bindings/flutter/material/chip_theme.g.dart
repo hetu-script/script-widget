@@ -32,7 +32,7 @@ class ChipThemeAutoBinding extends HTExternalClass {
 extension ChipThemeBinding on ChipTheme {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ChipTheme');
       case 'data':
         return data;
@@ -158,7 +158,7 @@ class ChipThemeDataAutoBinding extends HTExternalClass {
 extension ChipThemeDataBinding on ChipThemeData {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ChipThemeData');
       case 'backgroundColor':
         return backgroundColor;

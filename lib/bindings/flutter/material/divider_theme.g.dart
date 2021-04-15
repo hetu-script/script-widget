@@ -38,7 +38,7 @@ class DividerThemeDataAutoBinding extends HTExternalClass {
 extension DividerThemeDataBinding on DividerThemeData {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('DividerThemeData');
       case 'color':
         return color;
@@ -112,7 +112,7 @@ class DividerThemeAutoBinding extends HTExternalClass {
 extension DividerThemeBinding on DividerTheme {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('DividerTheme');
       case 'data':
         return data;

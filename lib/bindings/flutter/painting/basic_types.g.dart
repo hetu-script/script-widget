@@ -25,7 +25,7 @@ class RenderComparisonAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RenderComparison');
       case 'index':
         return (instance as RenderComparison).index;
@@ -58,7 +58,7 @@ class AxisAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Axis');
       case 'index':
         return (instance as Axis).index;
@@ -91,7 +91,7 @@ class VerticalDirectionAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('VerticalDirection');
       case 'index':
         return (instance as VerticalDirection).index;
@@ -128,7 +128,7 @@ class AxisDirectionAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('AxisDirection');
       case 'index':
         return (instance as AxisDirection).index;

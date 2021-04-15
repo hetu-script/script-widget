@@ -30,7 +30,7 @@ class RoundedRectangleBorderAutoBinding extends HTExternalClass {
 extension RoundedRectangleBorderBinding on RoundedRectangleBorder {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RoundedRectangleBorder');
       case 'borderRadius':
         return borderRadius;

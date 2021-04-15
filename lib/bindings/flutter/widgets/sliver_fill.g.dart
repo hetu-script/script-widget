@@ -32,7 +32,7 @@ class SliverFillViewportAutoBinding extends HTExternalClass {
 extension SliverFillViewportBinding on SliverFillViewport {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('SliverFillViewport');
       case 'viewportFraction':
         return viewportFraction;
@@ -117,7 +117,7 @@ class SliverFillRemainingAutoBinding extends HTExternalClass {
 extension SliverFillRemainingBinding on SliverFillRemaining {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('SliverFillRemaining');
       case 'child':
         return child;

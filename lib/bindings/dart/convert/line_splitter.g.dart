@@ -28,7 +28,7 @@ class LineSplitterAutoBinding extends HTExternalClass {
 extension LineSplitterBinding on LineSplitter {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('LineSplitter');
       case 'convert':
         return ({positionalArgs, namedArgs, typeArgs}) =>

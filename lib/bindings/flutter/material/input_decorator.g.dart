@@ -26,7 +26,7 @@ class FloatingLabelBehaviorAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('FloatingLabelBehavior');
       case 'index':
         return (instance as FloatingLabelBehavior).index;
@@ -86,7 +86,7 @@ class InputDecoratorAutoBinding extends HTExternalClass {
 extension InputDecoratorBinding on InputDecorator {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('InputDecorator');
       case 'decoration':
         return decoration;
@@ -301,7 +301,7 @@ class InputDecorationAutoBinding extends HTExternalClass {
 extension InputDecorationBinding on InputDecoration {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('InputDecoration');
       case 'icon':
         return icon;
@@ -587,7 +587,7 @@ class InputDecorationThemeAutoBinding extends HTExternalClass {
 extension InputDecorationThemeBinding on InputDecorationTheme {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('InputDecorationTheme');
       case 'labelStyle':
         return labelStyle;

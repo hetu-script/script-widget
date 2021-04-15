@@ -26,7 +26,7 @@ class VelocityAutoBinding extends HTExternalClass {
 extension VelocityBinding on Velocity {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Velocity');
       case 'pixelsPerSecond':
         return pixelsPerSecond;
@@ -69,7 +69,7 @@ class VelocityEstimateAutoBinding extends HTExternalClass {
 extension VelocityEstimateBinding on VelocityEstimate {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('VelocityEstimate');
       case 'pixelsPerSecond':
         return pixelsPerSecond;
@@ -110,7 +110,7 @@ class VelocityTrackerAutoBinding extends HTExternalClass {
 extension VelocityTrackerBinding on VelocityTracker {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('VelocityTracker');
       case 'kind':
         return kind;
@@ -152,7 +152,7 @@ extension IOSScrollViewFlingVelocityTrackerBinding
     on IOSScrollViewFlingVelocityTracker {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('IOSScrollViewFlingVelocityTracker');
       case 'kind':
         return kind;

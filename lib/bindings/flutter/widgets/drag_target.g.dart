@@ -21,7 +21,7 @@ class DragAnchorAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('DragAnchor');
       case 'index':
         return (instance as DragAnchor).index;
@@ -61,7 +61,7 @@ class DraggableDetailsAutoBinding extends HTExternalClass {
 extension DraggableDetailsBinding on DraggableDetails {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('DraggableDetails');
       case 'wasAccepted':
         return wasAccepted;

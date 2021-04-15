@@ -34,7 +34,7 @@ class RawKeyboardListenerAutoBinding extends HTExternalClass {
 extension RawKeyboardListenerBinding on RawKeyboardListener {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RawKeyboardListener');
       case 'focusNode':
         return focusNode;

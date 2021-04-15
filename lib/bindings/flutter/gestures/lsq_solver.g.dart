@@ -29,7 +29,7 @@ class PolynomialFitAutoBinding extends HTExternalClass {
 extension PolynomialFitBinding on PolynomialFit {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('PolynomialFit');
       case 'coefficients':
         return coefficients;
@@ -76,7 +76,7 @@ class LeastSquaresSolverAutoBinding extends HTExternalClass {
 extension LeastSquaresSolverBinding on LeastSquaresSolver {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('LeastSquaresSolver');
       case 'x':
         return x;

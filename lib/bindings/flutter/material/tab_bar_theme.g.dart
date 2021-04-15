@@ -53,7 +53,7 @@ class TabBarThemeAutoBinding extends HTExternalClass {
 extension TabBarThemeBinding on TabBarTheme {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('TabBarTheme');
       case 'indicator':
         return indicator;

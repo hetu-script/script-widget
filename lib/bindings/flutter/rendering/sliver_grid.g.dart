@@ -29,7 +29,7 @@ class SliverGridGeometryAutoBinding extends HTExternalClass {
 extension SliverGridGeometryBinding on SliverGridGeometry {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('SliverGridGeometry');
       case 'scrollOffset':
         return scrollOffset;
@@ -82,7 +82,7 @@ class SliverGridRegularTileLayoutAutoBinding extends HTExternalClass {
 extension SliverGridRegularTileLayoutBinding on SliverGridRegularTileLayout {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('SliverGridRegularTileLayout');
       case 'crossAxisCount':
         return crossAxisCount;
@@ -153,7 +153,7 @@ extension SliverGridDelegateWithFixedCrossAxisCountBinding
     on SliverGridDelegateWithFixedCrossAxisCount {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('SliverGridDelegateWithFixedCrossAxisCount');
       case 'crossAxisCount':
         return crossAxisCount;
@@ -216,7 +216,7 @@ extension SliverGridDelegateWithMaxCrossAxisExtentBinding
     on SliverGridDelegateWithMaxCrossAxisExtent {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('SliverGridDelegateWithMaxCrossAxisExtent');
       case 'maxCrossAxisExtent':
         return maxCrossAxisExtent;
@@ -268,7 +268,7 @@ class SliverGridParentDataAutoBinding extends HTExternalClass {
 extension SliverGridParentDataBinding on SliverGridParentData {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('SliverGridParentData');
       case 'crossAxisOffset':
         return crossAxisOffset;
@@ -340,7 +340,7 @@ class RenderSliverGridAutoBinding extends HTExternalClass {
 extension RenderSliverGridBinding on RenderSliverGrid {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RenderSliverGrid');
       case 'parentData':
         return parentData;

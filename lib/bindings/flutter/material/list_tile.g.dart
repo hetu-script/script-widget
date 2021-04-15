@@ -24,7 +24,7 @@ class ListTileStyleAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ListTileStyle');
       case 'index':
         return (instance as ListTileStyle).index;
@@ -59,7 +59,7 @@ class ListTileControlAffinityAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ListTileControlAffinity');
       case 'index':
         return (instance as ListTileControlAffinity).index;
@@ -171,7 +171,7 @@ class ListTileThemeAutoBinding extends HTExternalClass {
 extension ListTileThemeBinding on ListTileTheme {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ListTileTheme');
       case 'dense':
         return dense;
@@ -351,7 +351,7 @@ class ListTileAutoBinding extends HTExternalClass {
 extension ListTileBinding on ListTile {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ListTile');
       case 'leading':
         return leading;

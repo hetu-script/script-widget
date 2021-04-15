@@ -42,7 +42,7 @@ class TextSelectionAutoBinding extends HTExternalClass {
 extension TextSelectionBinding on TextSelection {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('TextSelection');
       case 'baseOffset':
         return baseOffset;

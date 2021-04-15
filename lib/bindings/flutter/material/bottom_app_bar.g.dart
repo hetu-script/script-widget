@@ -39,7 +39,7 @@ class BottomAppBarAutoBinding extends HTExternalClass {
 extension BottomAppBarBinding on BottomAppBar {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('BottomAppBar');
       case 'child':
         return child;

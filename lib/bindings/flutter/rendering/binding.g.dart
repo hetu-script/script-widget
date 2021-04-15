@@ -34,7 +34,7 @@ class RenderingFlutterBindingAutoBinding extends HTExternalClass {
 extension RenderingFlutterBindingBinding on RenderingFlutterBinding {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RenderingFlutterBinding');
       case 'lifecycleState':
         return lifecycleState;

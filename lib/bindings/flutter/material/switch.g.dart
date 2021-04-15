@@ -146,7 +146,7 @@ class SwitchAutoBinding extends HTExternalClass {
 extension SwitchBinding on Switch {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Switch');
       case 'value':
         return value;

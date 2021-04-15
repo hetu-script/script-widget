@@ -23,7 +23,7 @@ class FlexFitAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('FlexFit');
       case 'index':
         return (instance as FlexFit).index;
@@ -56,7 +56,7 @@ class MainAxisSizeAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('MainAxisSize');
       case 'index':
         return (instance as MainAxisSize).index;
@@ -97,7 +97,7 @@ class MainAxisAlignmentAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('MainAxisAlignment');
       case 'index':
         return (instance as MainAxisAlignment).index;
@@ -136,7 +136,7 @@ class CrossAxisAlignmentAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('CrossAxisAlignment');
       case 'index':
         return (instance as CrossAxisAlignment).index;
@@ -176,7 +176,7 @@ class FlexParentDataAutoBinding extends HTExternalClass {
 extension FlexParentDataBinding on FlexParentData {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('FlexParentData');
       case 'flex':
         return flex;
@@ -271,7 +271,7 @@ class RenderFlexAutoBinding extends HTExternalClass {
 extension RenderFlexBinding on RenderFlex {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RenderFlex');
       case 'parentData':
         return parentData;

@@ -25,7 +25,7 @@ class ParentDataAutoBinding extends HTExternalClass {
 extension ParentDataBinding on ParentData {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ParentData');
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
@@ -83,7 +83,7 @@ class PaintingContextAutoBinding extends HTExternalClass {
 extension PaintingContextBinding on PaintingContext {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('PaintingContext');
       case 'estimatedBounds':
         return estimatedBounds;
@@ -235,7 +235,7 @@ class PipelineOwnerAutoBinding extends HTExternalClass {
 extension PipelineOwnerBinding on PipelineOwner {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('PipelineOwner');
       case 'onNeedVisualUpdate':
         return onNeedVisualUpdate;
@@ -308,7 +308,7 @@ class DiagnosticsDebugCreatorAutoBinding extends HTExternalClass {
 extension DiagnosticsDebugCreatorBinding on DiagnosticsDebugCreator {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('DiagnosticsDebugCreator');
       case 'expandableValue':
         return expandableValue;

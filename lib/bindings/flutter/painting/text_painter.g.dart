@@ -22,7 +22,7 @@ class TextWidthBasisAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('TextWidthBasis');
       case 'index':
         return (instance as TextWidthBasis).index;
@@ -67,7 +67,7 @@ class PlaceholderDimensionsAutoBinding extends HTExternalClass {
 extension PlaceholderDimensionsBinding on PlaceholderDimensions {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('PlaceholderDimensions');
       case 'size':
         return size;
@@ -139,7 +139,7 @@ class TextPainterAutoBinding extends HTExternalClass {
 extension TextPainterBinding on TextPainter {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('TextPainter');
       case 'text':
         return text;

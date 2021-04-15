@@ -55,7 +55,7 @@ class RenderAnimatedSizeAutoBinding extends HTExternalClass {
 extension RenderAnimatedSizeBinding on RenderAnimatedSize {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RenderAnimatedSize');
       case 'parentData':
         return parentData;

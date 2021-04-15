@@ -23,7 +23,7 @@ class SpringTypeAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('SpringType');
       case 'index':
         return (instance as SpringType).index;
@@ -68,7 +68,7 @@ class SpringDescriptionAutoBinding extends HTExternalClass {
 extension SpringDescriptionBinding on SpringDescription {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('SpringDescription');
       case 'mass':
         return mass;
@@ -118,7 +118,7 @@ class SpringSimulationAutoBinding extends HTExternalClass {
 extension SpringSimulationBinding on SpringSimulation {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('SpringSimulation');
       case 'tolerance':
         return tolerance;
@@ -181,7 +181,7 @@ class ScrollSpringSimulationAutoBinding extends HTExternalClass {
 extension ScrollSpringSimulationBinding on ScrollSpringSimulation {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ScrollSpringSimulation');
       case 'tolerance':
         return tolerance;

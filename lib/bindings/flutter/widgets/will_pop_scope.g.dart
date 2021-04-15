@@ -33,7 +33,7 @@ class WillPopScopeAutoBinding extends HTExternalClass {
 extension WillPopScopeBinding on WillPopScope {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('WillPopScope');
       case 'child':
         return child;

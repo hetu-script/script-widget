@@ -24,7 +24,7 @@ class PageStorageBucketAutoBinding extends HTExternalClass {
 extension PageStorageBucketBinding on PageStorageBucket {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('PageStorageBucket');
       case 'writeState':
         return ({positionalArgs, namedArgs, typeArgs}) => writeState(
@@ -72,7 +72,7 @@ class PageStorageAutoBinding extends HTExternalClass {
 extension PageStorageBinding on PageStorage {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('PageStorage');
       case 'child':
         return child;

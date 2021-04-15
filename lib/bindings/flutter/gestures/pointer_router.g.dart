@@ -30,7 +30,7 @@ class PointerRouterAutoBinding extends HTExternalClass {
 extension PointerRouterBinding on PointerRouter {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('PointerRouter');
       case 'debugGlobalRouteCount':
         return debugGlobalRouteCount;

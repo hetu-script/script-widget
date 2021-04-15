@@ -33,7 +33,7 @@ class DropdownButtonHideUnderlineAutoBinding extends HTExternalClass {
 extension DropdownButtonHideUnderlineBinding on DropdownButtonHideUnderline {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('DropdownButtonHideUnderline');
       case 'child':
         return child;

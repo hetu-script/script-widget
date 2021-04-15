@@ -41,7 +41,7 @@ class ImageConfigurationAutoBinding extends HTExternalClass {
 extension ImageConfigurationBinding on ImageConfiguration {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ImageConfiguration');
       case 'bundle':
         return bundle;
@@ -106,7 +106,7 @@ class AssetBundleImageKeyAutoBinding extends HTExternalClass {
 extension AssetBundleImageKeyBinding on AssetBundleImageKey {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('AssetBundleImageKey');
       case 'bundle':
         return bundle;
@@ -174,7 +174,7 @@ class ResizeImageAutoBinding extends HTExternalClass {
 extension ResizeImageBinding on ResizeImage {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ResizeImage');
       case 'imageProvider':
         return imageProvider;
@@ -258,7 +258,7 @@ class NetworkImageAutoBinding extends HTExternalClass {
 extension NetworkImageBinding on NetworkImage {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('NetworkImage');
       case 'url':
         return url;
@@ -338,7 +338,7 @@ class FileImageAutoBinding extends HTExternalClass {
 extension FileImageBinding on FileImage {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('FileImage');
       case 'file':
         return file;
@@ -418,7 +418,7 @@ class MemoryImageAutoBinding extends HTExternalClass {
 extension MemoryImageBinding on MemoryImage {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('MemoryImage');
       case 'bytes':
         return bytes;
@@ -502,7 +502,7 @@ class ExactAssetImageAutoBinding extends HTExternalClass {
 extension ExactAssetImageBinding on ExactAssetImage {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ExactAssetImage');
       case 'assetName':
         return assetName;
@@ -571,7 +571,7 @@ class NetworkImageLoadExceptionAutoBinding extends HTExternalClass {
 extension NetworkImageLoadExceptionBinding on NetworkImageLoadException {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('NetworkImageLoadException');
       case 'statusCode':
         return statusCode;

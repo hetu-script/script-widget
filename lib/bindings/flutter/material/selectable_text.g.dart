@@ -176,7 +176,7 @@ class SelectableTextAutoBinding extends HTExternalClass {
 extension SelectableTextBinding on SelectableText {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('SelectableText');
       case 'data':
         return data;

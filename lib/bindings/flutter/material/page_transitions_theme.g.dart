@@ -29,7 +29,7 @@ extension FadeUpwardsPageTransitionsBuilderBinding
     on FadeUpwardsPageTransitionsBuilder {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('FadeUpwardsPageTransitionsBuilder');
       case 'buildTransitions':
         return ({positionalArgs, namedArgs, typeArgs}) => buildTransitions(
@@ -69,7 +69,7 @@ extension OpenUpwardsPageTransitionsBuilderBinding
     on OpenUpwardsPageTransitionsBuilder {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('OpenUpwardsPageTransitionsBuilder');
       case 'buildTransitions':
         return ({positionalArgs, namedArgs, typeArgs}) => buildTransitions(
@@ -107,7 +107,7 @@ class ZoomPageTransitionsBuilderAutoBinding extends HTExternalClass {
 extension ZoomPageTransitionsBuilderBinding on ZoomPageTransitionsBuilder {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ZoomPageTransitionsBuilder');
       case 'buildTransitions':
         return ({positionalArgs, namedArgs, typeArgs}) => buildTransitions(
@@ -147,7 +147,7 @@ extension CupertinoPageTransitionsBuilderBinding
     on CupertinoPageTransitionsBuilder {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('CupertinoPageTransitionsBuilder');
       case 'buildTransitions':
         return ({positionalArgs, namedArgs, typeArgs}) => buildTransitions(
@@ -187,7 +187,7 @@ class PageTransitionsThemeAutoBinding extends HTExternalClass {
 extension PageTransitionsThemeBinding on PageTransitionsTheme {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('PageTransitionsTheme');
       case 'builders':
         return builders;

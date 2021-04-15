@@ -47,7 +47,7 @@ class CupertinoContextMenuActionAutoBinding extends HTExternalClass {
 extension CupertinoContextMenuActionBinding on CupertinoContextMenuAction {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('CupertinoContextMenuAction');
       case 'child':
         return child;

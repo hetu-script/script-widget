@@ -38,7 +38,7 @@ class WidgetsFlutterBindingAutoBinding extends HTExternalClass {
 extension WidgetsFlutterBindingBinding on WidgetsFlutterBinding {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('WidgetsFlutterBinding');
       case 'lifecycleState':
         return lifecycleState;

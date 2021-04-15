@@ -21,7 +21,7 @@ class BorderStyleAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('BorderStyle');
       case 'index':
         return (instance as BorderStyle).index;
@@ -74,7 +74,7 @@ class BorderSideAutoBinding extends HTExternalClass {
 extension BorderSideBinding on BorderSide {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('BorderSide');
       case 'color':
         return color;

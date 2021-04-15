@@ -109,7 +109,7 @@ class RawMaterialButtonAutoBinding extends HTExternalClass {
 extension RawMaterialButtonBinding on RawMaterialButton {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RawMaterialButton');
       case 'onPressed':
         return onPressed;

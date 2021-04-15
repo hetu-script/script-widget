@@ -252,7 +252,7 @@ class ColorSchemeAutoBinding extends HTExternalClass {
 extension ColorSchemeBinding on ColorScheme {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ColorScheme');
       case 'primary':
         return primary;

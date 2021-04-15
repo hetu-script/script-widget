@@ -21,7 +21,7 @@ class AutofillContextActionAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('AutofillContextAction');
       case 'index':
         return (instance as AutofillContextAction).index;
@@ -64,7 +64,7 @@ class AutofillGroupAutoBinding extends HTExternalClass {
 extension AutofillGroupBinding on AutofillGroup {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('AutofillGroup');
       case 'child':
         return child;
@@ -138,7 +138,7 @@ class AutofillGroupStateAutoBinding extends HTExternalClass {
 extension AutofillGroupStateBinding on AutofillGroupState {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('AutofillGroupState');
       case 'autofillClients':
         return autofillClients;

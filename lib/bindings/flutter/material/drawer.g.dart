@@ -24,7 +24,7 @@ class DrawerAlignmentAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('DrawerAlignment');
       case 'index':
         return (instance as DrawerAlignment).index;
@@ -67,7 +67,7 @@ class DrawerAutoBinding extends HTExternalClass {
 extension DrawerBinding on Drawer {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Drawer');
       case 'elevation':
         return elevation;
@@ -173,7 +173,7 @@ class DrawerControllerAutoBinding extends HTExternalClass {
 extension DrawerControllerBinding on DrawerController {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('DrawerController');
       case 'child':
         return child;
@@ -267,7 +267,7 @@ class DrawerControllerStateAutoBinding extends HTExternalClass {
 extension DrawerControllerStateBinding on DrawerControllerState {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('DrawerControllerState');
       case 'widget':
         return widget;

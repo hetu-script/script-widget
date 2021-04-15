@@ -47,7 +47,7 @@ class DefaultWidgetsLocalizationsAutoBinding extends HTExternalClass {
 extension DefaultWidgetsLocalizationsBinding on DefaultWidgetsLocalizations {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('DefaultWidgetsLocalizations');
       case 'textDirection':
         return textDirection;
@@ -107,7 +107,7 @@ class LocalizationsAutoBinding extends HTExternalClass {
 extension LocalizationsBinding on Localizations {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Localizations');
       case 'locale':
         return locale;

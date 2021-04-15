@@ -162,7 +162,7 @@ class CupertinoAppAutoBinding extends HTExternalClass {
 extension CupertinoAppBinding on CupertinoApp {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('CupertinoApp');
       case 'navigatorKey':
         return navigatorKey;

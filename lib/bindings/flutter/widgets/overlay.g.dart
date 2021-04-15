@@ -45,7 +45,7 @@ class OverlayEntryAutoBinding extends HTExternalClass {
 extension OverlayEntryBinding on OverlayEntry {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('OverlayEntry');
       case 'builder':
         return builder;
@@ -126,7 +126,7 @@ class OverlayAutoBinding extends HTExternalClass {
 extension OverlayBinding on Overlay {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Overlay');
       case 'initialEntries':
         return initialEntries;
@@ -207,7 +207,7 @@ class OverlayStateAutoBinding extends HTExternalClass {
 extension OverlayStateBinding on OverlayState {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('OverlayState');
       case 'widget':
         return widget;

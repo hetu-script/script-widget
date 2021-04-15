@@ -44,7 +44,7 @@ class CupertinoActionSheetAutoBinding extends HTExternalClass {
 extension CupertinoActionSheetBinding on CupertinoActionSheet {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('CupertinoActionSheet');
       case 'title':
         return title;
@@ -145,7 +145,7 @@ class CupertinoActionSheetActionAutoBinding extends HTExternalClass {
 extension CupertinoActionSheetActionBinding on CupertinoActionSheetAction {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('CupertinoActionSheetAction');
       case 'onPressed':
         return onPressed;

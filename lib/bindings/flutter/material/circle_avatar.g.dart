@@ -62,7 +62,7 @@ class CircleAvatarAutoBinding extends HTExternalClass {
 extension CircleAvatarBinding on CircleAvatar {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('CircleAvatar');
       case 'child':
         return child;

@@ -29,7 +29,7 @@ class ForcePressDetailsAutoBinding extends HTExternalClass {
 extension ForcePressDetailsBinding on ForcePressDetails {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ForcePressDetails');
       case 'globalPosition':
         return globalPosition;
@@ -101,7 +101,7 @@ class ForcePressGestureRecognizerAutoBinding extends HTExternalClass {
 extension ForcePressGestureRecognizerBinding on ForcePressGestureRecognizer {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ForcePressGestureRecognizer');
       case 'onStart':
         return onStart;

@@ -181,7 +181,7 @@ class FadeInImageAutoBinding extends HTExternalClass {
 extension FadeInImageBinding on FadeInImage {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('FadeInImage');
       case 'placeholder':
         return placeholder;

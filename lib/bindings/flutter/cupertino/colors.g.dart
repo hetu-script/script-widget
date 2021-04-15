@@ -158,7 +158,7 @@ class CupertinoDynamicColorAutoBinding extends HTExternalClass {
 extension CupertinoDynamicColorBinding on CupertinoDynamicColor {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('CupertinoDynamicColor');
       case 'color':
         return color;

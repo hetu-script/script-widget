@@ -31,7 +31,7 @@ class BoxFitAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('BoxFit');
       case 'index':
         return (instance as BoxFit).index;
@@ -67,7 +67,7 @@ class FittedSizesAutoBinding extends HTExternalClass {
 extension FittedSizesBinding on FittedSizes {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('FittedSizes');
       case 'source':
         return source;

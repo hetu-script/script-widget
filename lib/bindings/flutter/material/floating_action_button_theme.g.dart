@@ -64,7 +64,7 @@ extension FloatingActionButtonThemeDataBinding
     on FloatingActionButtonThemeData {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('FloatingActionButtonThemeData');
       case 'foregroundColor':
         return foregroundColor;

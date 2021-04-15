@@ -32,7 +32,7 @@ class CupertinoPageTransitionAutoBinding extends HTExternalClass {
 extension CupertinoPageTransitionBinding on CupertinoPageTransition {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('CupertinoPageTransition');
       case 'child':
         return child;
@@ -113,7 +113,7 @@ extension CupertinoFullscreenDialogTransitionBinding
     on CupertinoFullscreenDialogTransition {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('CupertinoFullscreenDialogTransition');
       case 'child':
         return child;

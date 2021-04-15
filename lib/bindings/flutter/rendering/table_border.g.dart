@@ -62,7 +62,7 @@ class TableBorderAutoBinding extends HTExternalClass {
 extension TableBorderBinding on TableBorder {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('TableBorder');
       case 'top':
         return top;

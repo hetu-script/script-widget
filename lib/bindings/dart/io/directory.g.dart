@@ -45,7 +45,7 @@ class DirectoryAutoBinding extends HTExternalClass {
 extension DirectoryBinding on Directory {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Directory');
       case 'path':
         return path;

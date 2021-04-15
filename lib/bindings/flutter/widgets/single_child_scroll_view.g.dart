@@ -50,7 +50,7 @@ class SingleChildScrollViewAutoBinding extends HTExternalClass {
 extension SingleChildScrollViewBinding on SingleChildScrollView {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('SingleChildScrollView');
       case 'scrollDirection':
         return scrollDirection;

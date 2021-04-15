@@ -44,7 +44,7 @@ class CardThemeAutoBinding extends HTExternalClass {
 extension CardThemeBinding on CardTheme {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('CardTheme');
       case 'clipBehavior':
         return clipBehavior;

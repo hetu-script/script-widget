@@ -45,7 +45,7 @@ class LinearProgressIndicatorAutoBinding extends HTExternalClass {
 extension LinearProgressIndicatorBinding on LinearProgressIndicator {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('LinearProgressIndicator');
       case 'minHeight':
         return minHeight;
@@ -173,7 +173,7 @@ class CircularProgressIndicatorAutoBinding extends HTExternalClass {
 extension CircularProgressIndicatorBinding on CircularProgressIndicator {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('CircularProgressIndicator');
       case 'strokeWidth':
         return strokeWidth;
@@ -274,7 +274,7 @@ class RefreshProgressIndicatorAutoBinding extends HTExternalClass {
 extension RefreshProgressIndicatorBinding on RefreshProgressIndicator {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RefreshProgressIndicator');
       case 'strokeWidth':
         return strokeWidth;

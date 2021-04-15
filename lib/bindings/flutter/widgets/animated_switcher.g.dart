@@ -63,7 +63,7 @@ class AnimatedSwitcherAutoBinding extends HTExternalClass {
 extension AnimatedSwitcherBinding on AnimatedSwitcher {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('AnimatedSwitcher');
       case 'child':
         return child;

@@ -208,7 +208,7 @@ extension CupertinoTextSelectionToolbarBinding
     on CupertinoTextSelectionToolbar {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('CupertinoTextSelectionToolbar');
       case 'anchorAbove':
         return anchorAbove;

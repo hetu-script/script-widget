@@ -34,7 +34,7 @@ class SliverPersistentHeaderAutoBinding extends HTExternalClass {
 extension SliverPersistentHeaderBinding on SliverPersistentHeader {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('SliverPersistentHeader');
       case 'delegate':
         return delegate;

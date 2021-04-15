@@ -23,7 +23,7 @@ class CacheExtentStyleAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('CacheExtentStyle');
       case 'index':
         return (instance as CacheExtentStyle).index;
@@ -76,7 +76,7 @@ class RevealedOffsetAutoBinding extends HTExternalClass {
 extension RevealedOffsetBinding on RevealedOffset {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RevealedOffset');
       case 'offset':
         return offset;
@@ -148,7 +148,7 @@ class RenderViewportAutoBinding extends HTExternalClass {
 extension RenderViewportBinding on RenderViewport {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RenderViewport');
       case 'parentData':
         return parentData;
@@ -598,7 +598,7 @@ class RenderShrinkWrappingViewportAutoBinding extends HTExternalClass {
 extension RenderShrinkWrappingViewportBinding on RenderShrinkWrappingViewport {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RenderShrinkWrappingViewport');
       case 'parentData':
         return parentData;

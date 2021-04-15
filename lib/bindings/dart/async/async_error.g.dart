@@ -27,7 +27,7 @@ class AsyncErrorAutoBinding extends HTExternalClass {
 extension AsyncErrorBinding on AsyncError {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('AsyncError');
       case 'error':
         return error;

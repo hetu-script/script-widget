@@ -24,7 +24,7 @@ class FontLoaderAutoBinding extends HTExternalClass {
 extension FontLoaderBinding on FontLoader {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('FontLoader');
       case 'family':
         return family;

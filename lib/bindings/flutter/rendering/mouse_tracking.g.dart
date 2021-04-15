@@ -48,7 +48,7 @@ class MouseTrackerAnnotationAutoBinding extends HTExternalClass {
 extension MouseTrackerAnnotationBinding on MouseTrackerAnnotation {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('MouseTrackerAnnotation');
       case 'onEnter':
         return onEnter;
@@ -113,7 +113,7 @@ class MouseTrackerUpdateDetailsAutoBinding extends HTExternalClass {
 extension MouseTrackerUpdateDetailsBinding on MouseTrackerUpdateDetails {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('MouseTrackerUpdateDetails');
       case 'lastAnnotations':
         return lastAnnotations;
@@ -179,7 +179,7 @@ class MouseTrackerAutoBinding extends HTExternalClass {
 extension MouseTrackerBinding on MouseTracker {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('MouseTracker');
       case 'mouseIsConnected':
         return mouseIsConnected;

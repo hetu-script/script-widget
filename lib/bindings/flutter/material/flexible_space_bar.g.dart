@@ -25,7 +25,7 @@ class CollapseModeAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('CollapseMode');
       case 'index':
         return (instance as CollapseMode).index;
@@ -60,7 +60,7 @@ class StretchModeAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('StretchMode');
       case 'index':
         return (instance as StretchMode).index;
@@ -129,7 +129,7 @@ class FlexibleSpaceBarAutoBinding extends HTExternalClass {
 extension FlexibleSpaceBarBinding on FlexibleSpaceBar {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('FlexibleSpaceBar');
       case 'title':
         return title;
@@ -218,7 +218,7 @@ class FlexibleSpaceBarSettingsAutoBinding extends HTExternalClass {
 extension FlexibleSpaceBarSettingsBinding on FlexibleSpaceBarSettings {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('FlexibleSpaceBarSettings');
       case 'toolbarOpacity':
         return toolbarOpacity;

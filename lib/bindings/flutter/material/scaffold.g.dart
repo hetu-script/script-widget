@@ -35,7 +35,7 @@ class ScaffoldMessengerAutoBinding extends HTExternalClass {
 extension ScaffoldMessengerBinding on ScaffoldMessenger {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ScaffoldMessenger');
       case 'child':
         return child;
@@ -115,7 +115,7 @@ class ScaffoldMessengerStateAutoBinding extends HTExternalClass {
 extension ScaffoldMessengerStateBinding on ScaffoldMessengerState {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ScaffoldMessengerState');
       case 'widget':
         return widget;
@@ -199,7 +199,7 @@ class ScaffoldPrelayoutGeometryAutoBinding extends HTExternalClass {
 extension ScaffoldPrelayoutGeometryBinding on ScaffoldPrelayoutGeometry {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ScaffoldPrelayoutGeometry');
       case 'floatingActionButtonSize':
         return floatingActionButtonSize;
@@ -255,7 +255,7 @@ class ScaffoldGeometryAutoBinding extends HTExternalClass {
 extension ScaffoldGeometryBinding on ScaffoldGeometry {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ScaffoldGeometry');
       case 'bottomNavigationBarTop':
         return bottomNavigationBarTop;
@@ -371,7 +371,7 @@ class ScaffoldAutoBinding extends HTExternalClass {
 extension ScaffoldBinding on Scaffold {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Scaffold');
       case 'extendBody':
         return extendBody;
@@ -496,7 +496,7 @@ class ScaffoldStateAutoBinding extends HTExternalClass {
 extension ScaffoldStateBinding on ScaffoldState {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ScaffoldState');
       case 'restorationId':
         return restorationId;

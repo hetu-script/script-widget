@@ -28,7 +28,7 @@ class StepStateAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('StepState');
       case 'index':
         return (instance as StepState).index;
@@ -61,7 +61,7 @@ class StepperTypeAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('StepperType');
       case 'index':
         return (instance as StepperType).index;
@@ -107,7 +107,7 @@ class StepAutoBinding extends HTExternalClass {
 extension StepBinding on Step {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Step');
       case 'title':
         return title;
@@ -184,7 +184,7 @@ class StepperAutoBinding extends HTExternalClass {
 extension StepperBinding on Stepper {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Stepper');
       case 'steps':
         return steps;

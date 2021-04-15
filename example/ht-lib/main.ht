@@ -19,8 +19,8 @@ class Main extends Widget {
 			),
 			bottomNavigationBar: BottomNavigationBar(
 				onTap: fun[ValueChangedInt](index) {
-					print('[TABBAR] tap tabbar ' + index.toString())
-					controller.index = index;
+					print('[TABBAR] tap tabbar', index)
+					controller.index = index
 					rebuild()
 				},
 				currentIndex: controller.index,

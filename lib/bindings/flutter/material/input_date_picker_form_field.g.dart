@@ -63,7 +63,7 @@ class InputDatePickerFormFieldAutoBinding extends HTExternalClass {
 extension InputDatePickerFormFieldBinding on InputDatePickerFormField {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('InputDatePickerFormField');
       case 'initialDate':
         return initialDate;

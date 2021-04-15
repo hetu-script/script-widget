@@ -21,7 +21,7 @@ class FontStyleAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('FontStyle');
       case 'index':
         return (instance as FontStyle).index;
@@ -62,7 +62,7 @@ class TextAlignAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('TextAlign');
       case 'index':
         return (instance as TextAlign).index;
@@ -95,7 +95,7 @@ class TextBaselineAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('TextBaseline');
       case 'index':
         return (instance as TextBaseline).index;
@@ -134,7 +134,7 @@ class TextDecorationStyleAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('TextDecorationStyle');
       case 'index':
         return (instance as TextDecorationStyle).index;
@@ -167,7 +167,7 @@ class TextDirectionAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('TextDirection');
       case 'index':
         return (instance as TextDirection).index;
@@ -200,7 +200,7 @@ class TextAffinityAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('TextAffinity');
       case 'index':
         return (instance as TextAffinity).index;
@@ -241,7 +241,7 @@ class BoxHeightStyleAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('BoxHeightStyle');
       case 'index':
         return (instance as BoxHeightStyle).index;
@@ -274,7 +274,7 @@ class BoxWidthStyleAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('BoxWidthStyle');
       case 'index':
         return (instance as BoxWidthStyle).index;
@@ -315,7 +315,7 @@ class PlaceholderAlignmentAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('PlaceholderAlignment');
       case 'index':
         return (instance as PlaceholderAlignment).index;
@@ -415,7 +415,7 @@ class FontFeatureAutoBinding extends HTExternalClass {
 extension FontFeatureBinding on FontFeature {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('FontFeature');
       case 'feature':
         return feature;
@@ -463,7 +463,7 @@ class TextDecorationAutoBinding extends HTExternalClass {
 extension TextDecorationBinding on TextDecoration {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('TextDecoration');
       case 'hashCode':
         return hashCode;
@@ -511,7 +511,7 @@ class TextHeightBehaviorAutoBinding extends HTExternalClass {
 extension TextHeightBehaviorBinding on TextHeightBehavior {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('TextHeightBehavior');
       case 'applyHeightToFirstAscent':
         return applyHeightToFirstAscent;
@@ -585,7 +585,7 @@ class ParagraphStyleAutoBinding extends HTExternalClass {
 extension ParagraphStyleBinding on ParagraphStyle {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ParagraphStyle');
       case 'hashCode':
         return hashCode;
@@ -624,7 +624,7 @@ class TextBoxAutoBinding extends HTExternalClass {
 extension TextBoxBinding on TextBox {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('TextBox');
       case 'left':
         return left;
@@ -678,7 +678,7 @@ class TextPositionAutoBinding extends HTExternalClass {
 extension TextPositionBinding on TextPosition {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('TextPosition');
       case 'offset':
         return offset;
@@ -722,7 +722,7 @@ class TextRangeAutoBinding extends HTExternalClass {
 extension TextRangeBinding on TextRange {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('TextRange');
       case 'start':
         return start;
@@ -776,7 +776,7 @@ class ParagraphConstraintsAutoBinding extends HTExternalClass {
 extension ParagraphConstraintsBinding on ParagraphConstraints {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ParagraphConstraints');
       case 'width':
         return width;
@@ -821,7 +821,7 @@ class LineMetricsAutoBinding extends HTExternalClass {
 extension LineMetricsBinding on LineMetrics {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('LineMetrics');
       case 'hardBreak':
         return hardBreak;
@@ -874,7 +874,7 @@ class ParagraphBuilderAutoBinding extends HTExternalClass {
 extension ParagraphBuilderBinding on ParagraphBuilder {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ParagraphBuilder');
       case 'placeholderCount':
         return placeholderCount;

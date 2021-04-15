@@ -27,7 +27,7 @@ class FramePhaseAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('FramePhase');
       case 'index':
         return (instance as FramePhase).index;
@@ -64,7 +64,7 @@ class AppLifecycleStateAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('AppLifecycleState');
       case 'index':
         return (instance as AppLifecycleState).index;
@@ -118,7 +118,7 @@ class FrameTimingAutoBinding extends HTExternalClass {
 extension FrameTimingBinding on FrameTiming {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('FrameTiming');
       case 'buildDuration':
         return buildDuration;
@@ -188,7 +188,7 @@ class LocaleAutoBinding extends HTExternalClass {
 extension LocaleBinding on Locale {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Locale');
       case 'scriptCode':
         return scriptCode;

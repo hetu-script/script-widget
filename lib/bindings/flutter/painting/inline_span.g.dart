@@ -24,7 +24,7 @@ class AccumulatorAutoBinding extends HTExternalClass {
 extension AccumulatorBinding on Accumulator {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Accumulator');
       case 'value':
         return value;
@@ -73,7 +73,7 @@ extension InlineSpanSemanticsInformationBinding
     on InlineSpanSemanticsInformation {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('InlineSpanSemanticsInformation');
       case 'text':
         return text;

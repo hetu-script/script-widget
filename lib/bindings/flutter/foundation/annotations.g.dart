@@ -24,7 +24,7 @@ class CategoryAutoBinding extends HTExternalClass {
 extension CategoryBinding on Category {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Category');
       case 'sections':
         return sections;
@@ -57,7 +57,7 @@ class DocumentationIconAutoBinding extends HTExternalClass {
 extension DocumentationIconBinding on DocumentationIcon {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('DocumentationIcon');
       case 'url':
         return url;
@@ -90,7 +90,7 @@ class SummaryAutoBinding extends HTExternalClass {
 extension SummaryBinding on Summary {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Summary');
       case 'text':
         return text;

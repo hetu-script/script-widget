@@ -150,7 +150,7 @@ class ProcessResultAutoBinding extends HTExternalClass {
 extension ProcessResultBinding on ProcessResult {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ProcessResult');
       case 'exitCode':
         return exitCode;
@@ -260,7 +260,7 @@ class SignalExceptionAutoBinding extends HTExternalClass {
 extension SignalExceptionBinding on SignalException {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('SignalException');
       case 'message':
         return message;
@@ -300,7 +300,7 @@ class ProcessExceptionAutoBinding extends HTExternalClass {
 extension ProcessExceptionBinding on ProcessException {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ProcessException');
       case 'executable':
         return executable;

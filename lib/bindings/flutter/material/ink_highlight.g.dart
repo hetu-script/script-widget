@@ -60,7 +60,7 @@ class InkHighlightAutoBinding extends HTExternalClass {
 extension InkHighlightBinding on InkHighlight {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('InkHighlight');
       case 'referenceBox':
         return referenceBox;

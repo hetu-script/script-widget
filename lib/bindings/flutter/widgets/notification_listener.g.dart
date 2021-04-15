@@ -24,7 +24,7 @@ class LayoutChangedNotificationAutoBinding extends HTExternalClass {
 extension LayoutChangedNotificationBinding on LayoutChangedNotification {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('LayoutChangedNotification');
       case 'dispatch':
         return ({positionalArgs, namedArgs, typeArgs}) =>

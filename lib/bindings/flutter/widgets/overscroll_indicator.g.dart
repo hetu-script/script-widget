@@ -49,7 +49,7 @@ class GlowingOverscrollIndicatorAutoBinding extends HTExternalClass {
 extension GlowingOverscrollIndicatorBinding on GlowingOverscrollIndicator {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('GlowingOverscrollIndicator');
       case 'showLeading':
         return showLeading;
@@ -141,7 +141,7 @@ extension OverscrollIndicatorNotificationBinding
     on OverscrollIndicatorNotification {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('OverscrollIndicatorNotification');
       case 'leading':
         return leading;

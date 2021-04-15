@@ -45,7 +45,7 @@ class BottomSheetThemeDataAutoBinding extends HTExternalClass {
 extension BottomSheetThemeDataBinding on BottomSheetThemeData {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('BottomSheetThemeData');
       case 'backgroundColor':
         return backgroundColor;

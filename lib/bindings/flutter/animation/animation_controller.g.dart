@@ -21,7 +21,7 @@ class AnimationBehaviorAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('AnimationBehavior');
       case 'index':
         return (instance as AnimationBehavior).index;
@@ -111,7 +111,7 @@ class AnimationControllerAutoBinding extends HTExternalClass {
 extension AnimationControllerBinding on AnimationController {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('AnimationController');
       case 'lowerBound':
         return lowerBound;

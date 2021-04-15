@@ -74,7 +74,7 @@ class FocusAutoBinding extends HTExternalClass {
 extension FocusBinding on Focus {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Focus');
       case 'debugLabel':
         return debugLabel;
@@ -193,7 +193,7 @@ class FocusScopeAutoBinding extends HTExternalClass {
 extension FocusScopeBinding on FocusScope {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('FocusScope');
       case 'debugLabel':
         return debugLabel;
@@ -288,7 +288,7 @@ class ExcludeFocusAutoBinding extends HTExternalClass {
 extension ExcludeFocusBinding on ExcludeFocus {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ExcludeFocus');
       case 'excluding':
         return excluding;

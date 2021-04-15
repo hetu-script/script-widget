@@ -29,7 +29,7 @@ class ScrollStartNotificationAutoBinding extends HTExternalClass {
 extension ScrollStartNotificationBinding on ScrollStartNotification {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ScrollStartNotification');
       case 'dragDetails':
         return dragDetails;
@@ -87,7 +87,7 @@ class ScrollUpdateNotificationAutoBinding extends HTExternalClass {
 extension ScrollUpdateNotificationBinding on ScrollUpdateNotification {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ScrollUpdateNotification');
       case 'dragDetails':
         return dragDetails;
@@ -148,7 +148,7 @@ class OverscrollNotificationAutoBinding extends HTExternalClass {
 extension OverscrollNotificationBinding on OverscrollNotification {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('OverscrollNotification');
       case 'dragDetails':
         return dragDetails;
@@ -206,7 +206,7 @@ class ScrollEndNotificationAutoBinding extends HTExternalClass {
 extension ScrollEndNotificationBinding on ScrollEndNotification {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ScrollEndNotification');
       case 'dragDetails':
         return dragDetails;
@@ -259,7 +259,7 @@ class UserScrollNotificationAutoBinding extends HTExternalClass {
 extension UserScrollNotificationBinding on UserScrollNotification {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('UserScrollNotification');
       case 'direction':
         return direction;

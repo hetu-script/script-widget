@@ -36,7 +36,7 @@ class LayoutBuilderAutoBinding extends HTExternalClass {
 extension LayoutBuilderBinding on LayoutBuilder {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('LayoutBuilder');
       case 'key':
         return key;

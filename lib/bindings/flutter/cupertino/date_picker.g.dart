@@ -24,7 +24,7 @@ class CupertinoDatePickerModeAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('CupertinoDatePickerMode');
       case 'index':
         return (instance as CupertinoDatePickerMode).index;
@@ -59,7 +59,7 @@ class CupertinoTimerPickerModeAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('CupertinoTimerPickerMode');
       case 'index':
         return (instance as CupertinoTimerPickerMode).index;
@@ -123,7 +123,7 @@ class CupertinoDatePickerAutoBinding extends HTExternalClass {
 extension CupertinoDatePickerBinding on CupertinoDatePicker {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('CupertinoDatePicker');
       case 'mode':
         return mode;
@@ -233,7 +233,7 @@ class CupertinoTimerPickerAutoBinding extends HTExternalClass {
 extension CupertinoTimerPickerBinding on CupertinoTimerPicker {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('CupertinoTimerPicker');
       case 'mode':
         return mode;

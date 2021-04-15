@@ -25,7 +25,7 @@ class ScrollBehaviorAutoBinding extends HTExternalClass {
 extension ScrollBehaviorBinding on ScrollBehavior {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ScrollBehavior');
       case 'getPlatform':
         return ({positionalArgs, namedArgs, typeArgs}) =>
@@ -78,7 +78,7 @@ class ScrollConfigurationAutoBinding extends HTExternalClass {
 extension ScrollConfigurationBinding on ScrollConfiguration {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ScrollConfiguration');
       case 'behavior':
         return behavior;

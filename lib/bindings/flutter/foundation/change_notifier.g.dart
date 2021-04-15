@@ -31,7 +31,7 @@ class ListenableAutoBinding extends HTExternalClass {
 extension ListenableBinding on Listenable {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Listenable');
       case 'addListener':
         return ({positionalArgs, namedArgs, typeArgs}) =>
@@ -74,7 +74,7 @@ class ChangeNotifierAutoBinding extends HTExternalClass {
 extension ChangeNotifierBinding on ChangeNotifier {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ChangeNotifier');
       case 'addListener':
         return ({positionalArgs, namedArgs, typeArgs}) =>

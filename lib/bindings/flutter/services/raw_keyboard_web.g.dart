@@ -46,7 +46,7 @@ class RawKeyEventDataWebAutoBinding extends HTExternalClass {
 extension RawKeyEventDataWebBinding on RawKeyEventDataWeb {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RawKeyEventDataWeb');
       case 'code':
         return code;

@@ -29,7 +29,7 @@ class RefreshIndicatorModeAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RefreshIndicatorMode');
       case 'index':
         return (instance as RefreshIndicatorMode).index;
@@ -116,7 +116,7 @@ extension CupertinoSliverRefreshControlBinding
     on CupertinoSliverRefreshControl {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('CupertinoSliverRefreshControl');
       case 'refreshTriggerPullDistance':
         return refreshTriggerPullDistance;

@@ -36,7 +36,7 @@ extension VerticalDragGestureRecognizerBinding
     on VerticalDragGestureRecognizer {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('VerticalDragGestureRecognizer');
       case 'dragStartBehavior':
         return dragStartBehavior;
@@ -205,7 +205,7 @@ extension HorizontalDragGestureRecognizerBinding
     on HorizontalDragGestureRecognizer {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('HorizontalDragGestureRecognizer');
       case 'dragStartBehavior':
         return dragStartBehavior;
@@ -370,7 +370,7 @@ class PanGestureRecognizerAutoBinding extends HTExternalClass {
 extension PanGestureRecognizerBinding on PanGestureRecognizer {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('PanGestureRecognizer');
       case 'dragStartBehavior':
         return dragStartBehavior;

@@ -23,7 +23,7 @@ class AbstractNodeAutoBinding extends HTExternalClass {
 extension AbstractNodeBinding on AbstractNode {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('AbstractNode');
       case 'depth':
         return depth;

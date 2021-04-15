@@ -34,7 +34,7 @@ class IconThemeDataAutoBinding extends HTExternalClass {
 extension IconThemeDataBinding on IconThemeData {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('IconThemeData');
       case 'color':
         return color;

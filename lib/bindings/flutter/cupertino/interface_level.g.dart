@@ -23,7 +23,7 @@ class CupertinoUserInterfaceLevelDataAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('CupertinoUserInterfaceLevelData');
       case 'index':
         return (instance as CupertinoUserInterfaceLevelData).index;
@@ -69,7 +69,7 @@ class CupertinoUserInterfaceLevelAutoBinding extends HTExternalClass {
 extension CupertinoUserInterfaceLevelBinding on CupertinoUserInterfaceLevel {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('CupertinoUserInterfaceLevel');
       case 'child':
         return child;

@@ -30,7 +30,7 @@ class LongPressStartDetailsAutoBinding extends HTExternalClass {
 extension LongPressStartDetailsBinding on LongPressStartDetails {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('LongPressStartDetails');
       case 'globalPosition':
         return globalPosition;
@@ -78,7 +78,7 @@ class LongPressMoveUpdateDetailsAutoBinding extends HTExternalClass {
 extension LongPressMoveUpdateDetailsBinding on LongPressMoveUpdateDetails {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('LongPressMoveUpdateDetails');
       case 'globalPosition':
         return globalPosition;
@@ -125,7 +125,7 @@ class LongPressEndDetailsAutoBinding extends HTExternalClass {
 extension LongPressEndDetailsBinding on LongPressEndDetails {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('LongPressEndDetails');
       case 'globalPosition':
         return globalPosition;
@@ -178,7 +178,7 @@ class LongPressGestureRecognizerAutoBinding extends HTExternalClass {
 extension LongPressGestureRecognizerBinding on LongPressGestureRecognizer {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('LongPressGestureRecognizer');
       case 'onLongPress':
         return onLongPress;

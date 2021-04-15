@@ -40,7 +40,7 @@ class CupertinoTabControllerAutoBinding extends HTExternalClass {
 extension CupertinoTabControllerBinding on CupertinoTabController {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('CupertinoTabController');
       case 'index':
         return index;
@@ -114,7 +114,7 @@ class CupertinoTabScaffoldAutoBinding extends HTExternalClass {
 extension CupertinoTabScaffoldBinding on CupertinoTabScaffold {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('CupertinoTabScaffold');
       case 'tabBar':
         return tabBar;
@@ -209,7 +209,7 @@ extension RestorableCupertinoTabControllerBinding
     on RestorableCupertinoTabController {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RestorableCupertinoTabController');
       case 'value':
         return value;

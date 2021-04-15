@@ -24,7 +24,7 @@ class HitTestEntryAutoBinding extends HTExternalClass {
 extension HitTestEntryBinding on HitTestEntry {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('HitTestEntry');
       case 'target':
         return target;
@@ -63,7 +63,7 @@ class HitTestResultAutoBinding extends HTExternalClass {
 extension HitTestResultBinding on HitTestResult {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('HitTestResult');
       case 'path':
         return path;

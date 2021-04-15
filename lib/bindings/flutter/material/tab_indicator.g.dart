@@ -37,7 +37,7 @@ class UnderlineTabIndicatorAutoBinding extends HTExternalClass {
 extension UnderlineTabIndicatorBinding on UnderlineTabIndicator {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('UnderlineTabIndicator');
       case 'borderSide':
         return borderSide;

@@ -87,7 +87,7 @@ class ReorderableListAutoBinding extends HTExternalClass {
 extension ReorderableListBinding on ReorderableList {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ReorderableList');
       case 'itemBuilder':
         return itemBuilder;
@@ -192,7 +192,7 @@ class ReorderableListStateAutoBinding extends HTExternalClass {
 extension ReorderableListStateBinding on ReorderableListState {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ReorderableListState');
       case 'widget':
         return widget;
@@ -282,7 +282,7 @@ class SliverReorderableListAutoBinding extends HTExternalClass {
 extension SliverReorderableListBinding on SliverReorderableList {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('SliverReorderableList');
       case 'itemBuilder':
         return itemBuilder;
@@ -368,7 +368,7 @@ class SliverReorderableListStateAutoBinding extends HTExternalClass {
 extension SliverReorderableListStateBinding on SliverReorderableListState {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('SliverReorderableListState');
       case 'widget':
         return widget;
@@ -446,7 +446,7 @@ class ReorderableDragStartListenerAutoBinding extends HTExternalClass {
 extension ReorderableDragStartListenerBinding on ReorderableDragStartListener {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ReorderableDragStartListener');
       case 'child':
         return child;
@@ -527,7 +527,7 @@ extension ReorderableDelayedDragStartListenerBinding
     on ReorderableDelayedDragStartListener {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ReorderableDelayedDragStartListener');
       case 'child':
         return child;

@@ -31,7 +31,7 @@ extension TextSelectionToolbarLayoutDelegateBinding
     on TextSelectionToolbarLayoutDelegate {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('TextSelectionToolbarLayoutDelegate');
       case 'anchorAbove':
         return anchorAbove;

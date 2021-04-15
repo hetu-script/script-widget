@@ -26,7 +26,7 @@ class Utf8CodecAutoBinding extends HTExternalClass {
 extension Utf8CodecBinding on Utf8Codec {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Utf8Codec');
       case 'name':
         return name;
@@ -71,7 +71,7 @@ class Utf8EncoderAutoBinding extends HTExternalClass {
 extension Utf8EncoderBinding on Utf8Encoder {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Utf8Encoder');
       case 'convert':
         return ({positionalArgs, namedArgs, typeArgs}) => convert(
@@ -120,7 +120,7 @@ class Utf8DecoderAutoBinding extends HTExternalClass {
 extension Utf8DecoderBinding on Utf8Decoder {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Utf8Decoder');
       case 'convert':
         return ({positionalArgs, namedArgs, typeArgs}) => convert(

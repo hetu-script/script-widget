@@ -38,7 +38,7 @@ class FlutterLogoAutoBinding extends HTExternalClass {
 extension FlutterLogoBinding on FlutterLogo {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('FlutterLogo');
       case 'size':
         return size;

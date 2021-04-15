@@ -27,7 +27,7 @@ extension MaterialTextSelectionControlsBinding
     on MaterialTextSelectionControls {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('MaterialTextSelectionControls');
       case 'getHandleSize':
         return ({positionalArgs, namedArgs, typeArgs}) =>

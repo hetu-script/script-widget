@@ -23,7 +23,7 @@ class SnackBarBehaviorAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('SnackBarBehavior');
       case 'index':
         return (instance as SnackBarBehavior).index;
@@ -82,7 +82,7 @@ class SnackBarThemeDataAutoBinding extends HTExternalClass {
 extension SnackBarThemeDataBinding on SnackBarThemeData {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('SnackBarThemeData');
       case 'backgroundColor':
         return backgroundColor;

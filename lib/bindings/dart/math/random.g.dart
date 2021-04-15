@@ -26,7 +26,7 @@ class RandomAutoBinding extends HTExternalClass {
 extension RandomBinding on Random {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Random');
       case 'nextInt':
         return ({positionalArgs, namedArgs, typeArgs}) =>

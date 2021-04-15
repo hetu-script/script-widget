@@ -31,7 +31,7 @@ class MaterialStateAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('MaterialState');
       case 'index':
         return (instance as MaterialState).index;

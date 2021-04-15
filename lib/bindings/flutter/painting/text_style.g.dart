@@ -91,7 +91,7 @@ class TextStyleAutoBinding extends HTExternalClass {
 extension TextStyleBinding on TextStyle {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('TextStyle');
       case 'inherit':
         return inherit;

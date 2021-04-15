@@ -25,7 +25,7 @@ class SpacerAutoBinding extends HTExternalClass {
 extension SpacerBinding on Spacer {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Spacer');
       case 'flex':
         return flex;

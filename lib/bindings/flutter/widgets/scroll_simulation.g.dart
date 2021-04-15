@@ -40,7 +40,7 @@ class BouncingScrollSimulationAutoBinding extends HTExternalClass {
 extension BouncingScrollSimulationBinding on BouncingScrollSimulation {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('BouncingScrollSimulation');
       case 'leadingExtent':
         return leadingExtent;
@@ -111,7 +111,7 @@ class ClampingScrollSimulationAutoBinding extends HTExternalClass {
 extension ClampingScrollSimulationBinding on ClampingScrollSimulation {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ClampingScrollSimulation');
       case 'position':
         return position;

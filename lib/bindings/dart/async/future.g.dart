@@ -8,8 +8,9 @@ class TimeoutExceptionAutoBinding extends HTExternalClass {
   dynamic memberGet(String varName, {String from = HTLexicon.global}) {
     switch (varName) {
       case 'TimeoutException':
-        return ({positionalArgs, namedArgs, typeArgs}) =>
-            TimeoutException(positionalArgs[0], positionalArgs.length > 1 ? positionalArgs[1] : null);
+        return ({positionalArgs, namedArgs, typeArgs}) => TimeoutException(
+            positionalArgs[0],
+            positionalArgs.length > 1 ? positionalArgs[1] : null);
       default:
         throw HTError.undefined(varName);
     }
@@ -24,7 +25,7 @@ class TimeoutExceptionAutoBinding extends HTExternalClass {
 extension TimeoutExceptionBinding on TimeoutException {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('TimeoutException');
       case 'message':
         return message;

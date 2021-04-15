@@ -21,7 +21,7 @@ class GestureDispositionAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('GestureDisposition');
       case 'index':
         return (instance as GestureDisposition).index;
@@ -56,7 +56,7 @@ class GestureArenaManagerAutoBinding extends HTExternalClass {
 extension GestureArenaManagerBinding on GestureArenaManager {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('GestureArenaManager');
       case 'add':
         return ({positionalArgs, namedArgs, typeArgs}) =>

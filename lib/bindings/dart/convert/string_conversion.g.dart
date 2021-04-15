@@ -30,7 +30,7 @@ class StringConversionSinkAutoBinding extends HTExternalClass {
 extension StringConversionSinkBinding on StringConversionSink {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('StringConversionSink');
       case 'addSlice':
         return ({positionalArgs, namedArgs, typeArgs}) => addSlice(
@@ -78,7 +78,7 @@ class ClosableStringSinkAutoBinding extends HTExternalClass {
 extension ClosableStringSinkBinding on ClosableStringSink {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ClosableStringSink');
       case 'close':
         return ({positionalArgs, namedArgs, typeArgs}) => close();

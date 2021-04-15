@@ -27,7 +27,7 @@ class ByteConversionSinkAutoBinding extends HTExternalClass {
 extension ByteConversionSinkBinding on ByteConversionSink {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ByteConversionSink');
       case 'addSlice':
         return ({positionalArgs, namedArgs, typeArgs}) => addSlice(

@@ -31,7 +31,7 @@ class DecoratedBoxAutoBinding extends HTExternalClass {
 extension DecoratedBoxBinding on DecoratedBox {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('DecoratedBox');
       case 'decoration':
         return decoration;
@@ -142,7 +142,7 @@ class ContainerAutoBinding extends HTExternalClass {
 extension ContainerBinding on Container {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Container');
       case 'child':
         return child;

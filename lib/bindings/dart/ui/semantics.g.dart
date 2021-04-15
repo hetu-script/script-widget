@@ -142,7 +142,7 @@ class SemanticsUpdateBuilderAutoBinding extends HTExternalClass {
 extension SemanticsUpdateBuilderBinding on SemanticsUpdateBuilder {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('SemanticsUpdateBuilder');
       case 'updateNode':
         return ({positionalArgs, namedArgs, typeArgs}) => updateNode(

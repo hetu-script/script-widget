@@ -27,7 +27,7 @@ class RouteInformationAutoBinding extends HTExternalClass {
 extension RouteInformationBinding on RouteInformation {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RouteInformation');
       case 'location':
         return location;
@@ -62,7 +62,7 @@ class RootBackButtonDispatcherAutoBinding extends HTExternalClass {
 extension RootBackButtonDispatcherBinding on RootBackButtonDispatcher {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RootBackButtonDispatcher');
       case 'hasCallbacks':
         return hasCallbacks;
@@ -117,7 +117,7 @@ class ChildBackButtonDispatcherAutoBinding extends HTExternalClass {
 extension ChildBackButtonDispatcherBinding on ChildBackButtonDispatcher {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ChildBackButtonDispatcher');
       case 'parent':
         return parent;
@@ -185,7 +185,7 @@ extension PlatformRouteInformationProviderBinding
     on PlatformRouteInformationProvider {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('PlatformRouteInformationProvider');
       case 'value':
         return value;

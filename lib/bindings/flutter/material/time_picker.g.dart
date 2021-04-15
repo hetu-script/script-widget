@@ -21,7 +21,7 @@ class TimePickerEntryModeAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('TimePickerEntryMode');
       case 'index':
         return (instance as TimePickerEntryMode).index;

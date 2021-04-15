@@ -31,7 +31,7 @@ class RestorationScopeAutoBinding extends HTExternalClass {
 extension RestorationScopeBinding on RestorationScope {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RestorationScope');
       case 'child':
         return child;
@@ -111,7 +111,7 @@ class UnmanagedRestorationScopeAutoBinding extends HTExternalClass {
 extension UnmanagedRestorationScopeBinding on UnmanagedRestorationScope {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('UnmanagedRestorationScope');
       case 'bucket':
         return bucket;
@@ -189,7 +189,7 @@ class RootRestorationScopeAutoBinding extends HTExternalClass {
 extension RootRestorationScopeBinding on RootRestorationScope {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RootRestorationScope');
       case 'child':
         return child;

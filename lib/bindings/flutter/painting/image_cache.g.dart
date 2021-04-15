@@ -36,7 +36,7 @@ class ImageCacheAutoBinding extends HTExternalClass {
 extension ImageCacheBinding on ImageCache {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ImageCache');
       case 'maximumSize':
         return maximumSize;

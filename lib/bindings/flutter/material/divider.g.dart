@@ -43,7 +43,7 @@ class DividerAutoBinding extends HTExternalClass {
 extension DividerBinding on Divider {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Divider');
       case 'height':
         return height;
@@ -135,7 +135,7 @@ class VerticalDividerAutoBinding extends HTExternalClass {
 extension VerticalDividerBinding on VerticalDivider {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('VerticalDivider');
       case 'width':
         return width;

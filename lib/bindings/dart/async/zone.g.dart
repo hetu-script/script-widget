@@ -127,7 +127,7 @@ class ZoneSpecificationAutoBinding extends HTExternalClass {
 extension ZoneSpecificationBinding on ZoneSpecification {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ZoneSpecification');
       case 'handleUncaughtError':
         return handleUncaughtError;

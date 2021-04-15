@@ -24,7 +24,7 @@ class ScriptCategoryAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ScriptCategory');
       case 'index':
         return (instance as ScriptCategory).index;
@@ -128,7 +128,7 @@ class TypographyAutoBinding extends HTExternalClass {
 extension TypographyBinding on Typography {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Typography');
       case 'black':
         return black;

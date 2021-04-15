@@ -44,7 +44,7 @@ class TextEditingControllerAutoBinding extends HTExternalClass {
 extension TextEditingControllerBinding on TextEditingController {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('TextEditingController');
       case 'text':
         return text;
@@ -123,7 +123,7 @@ class ToolbarOptionsAutoBinding extends HTExternalClass {
 extension ToolbarOptionsBinding on ToolbarOptions {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ToolbarOptions');
       case 'copy':
         return copy;
@@ -305,7 +305,7 @@ class EditableTextAutoBinding extends HTExternalClass {
 extension EditableTextBinding on EditableText {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('EditableText');
       case 'controller':
         return controller;
@@ -507,7 +507,7 @@ class EditableTextStateAutoBinding extends HTExternalClass {
 extension EditableTextStateBinding on EditableTextState {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('EditableTextState');
       case 'currentAutofillScope':
         return currentAutofillScope;

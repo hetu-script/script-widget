@@ -597,7 +597,7 @@ class LogicalKeyboardKeyAutoBinding extends HTExternalClass {
 extension LogicalKeyboardKeyBinding on LogicalKeyboardKey {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('LogicalKeyboardKey');
       case 'keyId':
         return keyId;
@@ -1198,7 +1198,7 @@ class PhysicalKeyboardKeyAutoBinding extends HTExternalClass {
 extension PhysicalKeyboardKeyBinding on PhysicalKeyboardKey {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('PhysicalKeyboardKey');
       case 'usbHidUsage':
         return usbHidUsage;

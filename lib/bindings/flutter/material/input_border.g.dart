@@ -33,7 +33,7 @@ class UnderlineInputBorderAutoBinding extends HTExternalClass {
 extension UnderlineInputBorderBinding on UnderlineInputBorder {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('UnderlineInputBorder');
       case 'borderRadius':
         return borderRadius;
@@ -128,7 +128,7 @@ class OutlineInputBorderAutoBinding extends HTExternalClass {
 extension OutlineInputBorderBinding on OutlineInputBorder {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('OutlineInputBorder');
       case 'gapPadding':
         return gapPadding;

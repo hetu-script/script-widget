@@ -28,7 +28,7 @@ class SecurityContextAutoBinding extends HTExternalClass {
 extension SecurityContextBinding on SecurityContext {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('SecurityContext');
       case 'usePrivateKey':
         return ({positionalArgs, namedArgs, typeArgs}) => usePrivateKey(

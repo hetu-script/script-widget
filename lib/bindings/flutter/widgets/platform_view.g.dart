@@ -57,7 +57,7 @@ class AndroidViewAutoBinding extends HTExternalClass {
 extension AndroidViewBinding on AndroidView {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('AndroidView');
       case 'viewType':
         return viewType;
@@ -171,7 +171,7 @@ class UiKitViewAutoBinding extends HTExternalClass {
 extension UiKitViewBinding on UiKitView {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('UiKitView');
       case 'viewType':
         return viewType;
@@ -257,7 +257,7 @@ class HtmlElementViewAutoBinding extends HTExternalClass {
 extension HtmlElementViewBinding on HtmlElementView {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('HtmlElementView');
       case 'viewType':
         return viewType;
@@ -346,7 +346,7 @@ class PlatformViewLinkAutoBinding extends HTExternalClass {
 extension PlatformViewLinkBinding on PlatformViewLink {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('PlatformViewLink');
       case 'viewType':
         return viewType;
@@ -422,7 +422,7 @@ class PlatformViewSurfaceAutoBinding extends HTExternalClass {
 extension PlatformViewSurfaceBinding on PlatformViewSurface {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('PlatformViewSurface');
       case 'controller':
         return controller;
@@ -506,7 +506,7 @@ class AndroidViewSurfaceAutoBinding extends HTExternalClass {
 extension AndroidViewSurfaceBinding on AndroidViewSurface {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('AndroidViewSurface');
       case 'controller':
         return controller;

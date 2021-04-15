@@ -138,7 +138,7 @@ class UriAutoBinding extends HTExternalClass {
 extension UriBinding on Uri {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Uri');
       case 'scheme':
         return scheme;
@@ -281,7 +281,7 @@ class UriDataAutoBinding extends HTExternalClass {
 extension UriDataBinding on UriData {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('UriData');
       case 'uri':
         return uri;

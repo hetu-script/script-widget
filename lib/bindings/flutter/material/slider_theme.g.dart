@@ -29,7 +29,7 @@ class ShowValueIndicatorAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ShowValueIndicator');
       case 'index':
         return (instance as ShowValueIndicator).index;
@@ -62,7 +62,7 @@ class ThumbAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Thumb');
       case 'index':
         return (instance as Thumb).index;
@@ -103,7 +103,7 @@ class SliderThemeAutoBinding extends HTExternalClass {
 extension SliderThemeBinding on SliderTheme {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('SliderTheme');
       case 'data':
         return data;
@@ -258,7 +258,7 @@ class SliderThemeDataAutoBinding extends HTExternalClass {
 extension SliderThemeDataBinding on SliderThemeData {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('SliderThemeData');
       case 'trackHeight':
         return trackHeight;
@@ -418,7 +418,7 @@ class RectangularSliderTrackShapeAutoBinding extends HTExternalClass {
 extension RectangularSliderTrackShapeBinding on RectangularSliderTrackShape {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RectangularSliderTrackShape');
       case 'paint':
         return ({positionalArgs, namedArgs, typeArgs}) => paint(
@@ -491,7 +491,7 @@ class RoundedRectSliderTrackShapeAutoBinding extends HTExternalClass {
 extension RoundedRectSliderTrackShapeBinding on RoundedRectSliderTrackShape {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RoundedRectSliderTrackShape');
       case 'paint':
         return ({positionalArgs, namedArgs, typeArgs}) => paint(
@@ -569,7 +569,7 @@ extension RectangularRangeSliderTrackShapeBinding
     on RectangularRangeSliderTrackShape {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RectangularRangeSliderTrackShape');
       case 'getPreferredRect':
         return ({positionalArgs, namedArgs, typeArgs}) => getPreferredRect(
@@ -646,7 +646,7 @@ extension RoundedRectRangeSliderTrackShapeBinding
     on RoundedRectRangeSliderTrackShape {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RoundedRectRangeSliderTrackShape');
       case 'getPreferredRect':
         return ({positionalArgs, namedArgs, typeArgs}) => getPreferredRect(
@@ -728,7 +728,7 @@ class RoundSliderTickMarkShapeAutoBinding extends HTExternalClass {
 extension RoundSliderTickMarkShapeBinding on RoundSliderTickMarkShape {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RoundSliderTickMarkShape');
       case 'tickMarkRadius':
         return tickMarkRadius;
@@ -795,7 +795,7 @@ extension RoundRangeSliderTickMarkShapeBinding
     on RoundRangeSliderTickMarkShape {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RoundRangeSliderTickMarkShape');
       case 'tickMarkRadius':
         return tickMarkRadius;
@@ -871,7 +871,7 @@ class RoundSliderThumbShapeAutoBinding extends HTExternalClass {
 extension RoundSliderThumbShapeBinding on RoundSliderThumbShape {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RoundSliderThumbShape');
       case 'enabledThumbRadius':
         return enabledThumbRadius;
@@ -957,7 +957,7 @@ class RoundRangeSliderThumbShapeAutoBinding extends HTExternalClass {
 extension RoundRangeSliderThumbShapeBinding on RoundRangeSliderThumbShape {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RoundRangeSliderThumbShape');
       case 'enabledThumbRadius':
         return enabledThumbRadius;
@@ -1029,7 +1029,7 @@ class RoundSliderOverlayShapeAutoBinding extends HTExternalClass {
 extension RoundSliderOverlayShapeBinding on RoundSliderOverlayShape {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RoundSliderOverlayShape');
       case 'overlayRadius':
         return overlayRadius;
@@ -1098,7 +1098,7 @@ extension RectangularSliderValueIndicatorShapeBinding
     on RectangularSliderValueIndicatorShape {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RectangularSliderValueIndicatorShape');
       case 'getPreferredSize':
         return ({positionalArgs, namedArgs, typeArgs}) => getPreferredSize(
@@ -1172,7 +1172,7 @@ extension RectangularRangeSliderValueIndicatorShapeBinding
     on RectangularRangeSliderValueIndicatorShape {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RectangularRangeSliderValueIndicatorShape');
       case 'getPreferredSize':
         return ({positionalArgs, namedArgs, typeArgs}) => getPreferredSize(
@@ -1267,7 +1267,7 @@ extension PaddleSliderValueIndicatorShapeBinding
     on PaddleSliderValueIndicatorShape {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('PaddleSliderValueIndicatorShape');
       case 'getPreferredSize':
         return ({positionalArgs, namedArgs, typeArgs}) => getPreferredSize(
@@ -1340,7 +1340,7 @@ extension PaddleRangeSliderValueIndicatorShapeBinding
     on PaddleRangeSliderValueIndicatorShape {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('PaddleRangeSliderValueIndicatorShape');
       case 'getPreferredSize':
         return ({positionalArgs, namedArgs, typeArgs}) => getPreferredSize(
@@ -1433,7 +1433,7 @@ class RangeValuesAutoBinding extends HTExternalClass {
 extension RangeValuesBinding on RangeValues {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RangeValues');
       case 'start':
         return start;
@@ -1472,7 +1472,7 @@ class RangeLabelsAutoBinding extends HTExternalClass {
 extension RangeLabelsBinding on RangeLabels {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RangeLabels');
       case 'start':
         return start;

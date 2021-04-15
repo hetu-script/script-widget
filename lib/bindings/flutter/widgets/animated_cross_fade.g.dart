@@ -22,7 +22,7 @@ class CrossFadeStateAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('CrossFadeState');
       case 'index':
         return (instance as CrossFadeState).index;
@@ -99,7 +99,7 @@ class AnimatedCrossFadeAutoBinding extends HTExternalClass {
 extension AnimatedCrossFadeBinding on AnimatedCrossFade {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('AnimatedCrossFade');
       case 'firstChild':
         return firstChild;

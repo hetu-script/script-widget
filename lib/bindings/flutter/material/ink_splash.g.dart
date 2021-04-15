@@ -60,7 +60,7 @@ class InkSplashAutoBinding extends HTExternalClass {
 extension InkSplashBinding on InkSplash {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('InkSplash');
       case 'referenceBox':
         return referenceBox;

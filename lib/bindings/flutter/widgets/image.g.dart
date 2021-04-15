@@ -304,7 +304,7 @@ class ImageAutoBinding extends HTExternalClass {
 extension ImageBinding on Image {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Image');
       case 'image':
         return image;

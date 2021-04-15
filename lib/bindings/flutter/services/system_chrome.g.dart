@@ -25,7 +25,7 @@ class DeviceOrientationAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('DeviceOrientation');
       case 'index':
         return (instance as DeviceOrientation).index;
@@ -58,7 +58,7 @@ class SystemUiOverlayAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('SystemUiOverlay');
       case 'index':
         return (instance as SystemUiOverlay).index;
@@ -101,7 +101,7 @@ extension ApplicationSwitcherDescriptionBinding
     on ApplicationSwitcherDescription {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ApplicationSwitcherDescription');
       case 'label':
         return label;
@@ -161,7 +161,7 @@ class SystemUiOverlayStyleAutoBinding extends HTExternalClass {
 extension SystemUiOverlayStyleBinding on SystemUiOverlayStyle {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('SystemUiOverlayStyle');
       case 'systemNavigationBarColor':
         return systemNavigationBarColor;

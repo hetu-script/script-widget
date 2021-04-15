@@ -27,7 +27,7 @@ class TextOverflowAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('TextOverflow');
       case 'index':
         return (instance as TextOverflow).index;
@@ -67,7 +67,7 @@ class TextParentDataAutoBinding extends HTExternalClass {
 extension TextParentDataBinding on TextParentData {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('TextParentData');
       case 'scale':
         return scale;
@@ -121,7 +121,7 @@ extension PlaceholderSpanIndexSemanticsTagBinding
     on PlaceholderSpanIndexSemanticsTag {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('PlaceholderSpanIndexSemanticsTag');
       case 'index':
         return index;
@@ -202,7 +202,7 @@ class RenderParagraphAutoBinding extends HTExternalClass {
 extension RenderParagraphBinding on RenderParagraph {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RenderParagraph');
       case 'parentData':
         return parentData;

@@ -33,7 +33,7 @@ class IOSinkAutoBinding extends HTExternalClass {
 extension IOSinkBinding on IOSink {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('IOSink');
       case 'encoding':
         return encoding;

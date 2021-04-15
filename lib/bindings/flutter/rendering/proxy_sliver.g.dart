@@ -45,7 +45,7 @@ class RenderSliverOpacityAutoBinding extends HTExternalClass {
 extension RenderSliverOpacityBinding on RenderSliverOpacity {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RenderSliverOpacity');
       case 'parentData':
         return parentData;
@@ -372,7 +372,7 @@ class RenderSliverIgnorePointerAutoBinding extends HTExternalClass {
 extension RenderSliverIgnorePointerBinding on RenderSliverIgnorePointer {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RenderSliverIgnorePointer');
       case 'parentData':
         return parentData;
@@ -689,7 +689,7 @@ class RenderSliverOffstageAutoBinding extends HTExternalClass {
 extension RenderSliverOffstageBinding on RenderSliverOffstage {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RenderSliverOffstage');
       case 'parentData':
         return parentData;
@@ -1006,7 +1006,7 @@ class RenderSliverAnimatedOpacityAutoBinding extends HTExternalClass {
 extension RenderSliverAnimatedOpacityBinding on RenderSliverAnimatedOpacity {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RenderSliverAnimatedOpacity');
       case 'parentData':
         return parentData;

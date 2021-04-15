@@ -61,7 +61,7 @@ class ButtonBarAutoBinding extends HTExternalClass {
 extension ButtonBarBinding on ButtonBar {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ButtonBar');
       case 'alignment':
         return alignment;

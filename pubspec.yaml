@@ -2,6 +2,7 @@ name: script_widget
 description: A new Flutter package project.
 version: 0.0.1
 homepage:
+publish_to: none
 
 environment:
   sdk: '>=2.12.0 <3.0.0'
@@ -11,7 +12,8 @@ dependencies:
   flutter:
     sdk: flutter
 
-  hetu_script: ^0.1.1+1
+  hetu_script:
+    path: ../hetu-script
 
 dev_dependencies:
   pedantic: ^1.11.0

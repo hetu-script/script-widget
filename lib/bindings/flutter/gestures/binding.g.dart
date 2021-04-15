@@ -58,7 +58,7 @@ extension FlutterErrorDetailsForPointerEventDispatcherBinding
     on FlutterErrorDetailsForPointerEventDispatcher {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('FlutterErrorDetailsForPointerEventDispatcher');
       case 'event':
         return event;

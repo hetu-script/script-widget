@@ -24,7 +24,7 @@ class MaterialTapTargetSizeAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('MaterialTapTargetSize');
       case 'index':
         return (instance as MaterialTapTargetSize).index;
@@ -271,7 +271,7 @@ class ThemeDataAutoBinding extends HTExternalClass {
 extension ThemeDataBinding on ThemeData {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ThemeData');
       case 'visualDensity':
         return visualDensity;
@@ -580,7 +580,7 @@ extension MaterialBasedCupertinoThemeDataBinding
     on MaterialBasedCupertinoThemeData {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('MaterialBasedCupertinoThemeData');
       case 'brightness':
         return brightness;
@@ -684,7 +684,7 @@ class VisualDensityAutoBinding extends HTExternalClass {
 extension VisualDensityBinding on VisualDensity {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('VisualDensity');
       case 'horizontal':
         return horizontal;

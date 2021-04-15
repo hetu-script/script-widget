@@ -42,7 +42,7 @@ class RenderSliverFillViewportAutoBinding extends HTExternalClass {
 extension RenderSliverFillViewportBinding on RenderSliverFillViewport {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RenderSliverFillViewport');
       case 'parentData':
         return parentData;
@@ -394,7 +394,7 @@ extension RenderSliverFillRemainingWithScrollableBinding
     on RenderSliverFillRemainingWithScrollable {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RenderSliverFillRemainingWithScrollable');
       case 'parentData':
         return parentData;
@@ -699,7 +699,7 @@ class RenderSliverFillRemainingAutoBinding extends HTExternalClass {
 extension RenderSliverFillRemainingBinding on RenderSliverFillRemaining {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RenderSliverFillRemaining');
       case 'parentData':
         return parentData;
@@ -1007,7 +1007,7 @@ extension RenderSliverFillRemainingAndOverscrollBinding
     on RenderSliverFillRemainingAndOverscroll {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RenderSliverFillRemainingAndOverscroll');
       case 'parentData':
         return parentData;

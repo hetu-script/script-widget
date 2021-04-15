@@ -51,7 +51,7 @@ class ViewportAutoBinding extends HTExternalClass {
 extension ViewportBinding on Viewport {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Viewport');
       case 'axisDirection':
         return axisDirection;
@@ -158,7 +158,7 @@ class ShrinkWrappingViewportAutoBinding extends HTExternalClass {
 extension ShrinkWrappingViewportBinding on ShrinkWrappingViewport {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ShrinkWrappingViewport');
       case 'axisDirection':
         return axisDirection;

@@ -34,7 +34,7 @@ class ThemeAutoBinding extends HTExternalClass {
 extension ThemeBinding on Theme {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Theme');
       case 'data':
         return data;
@@ -116,7 +116,7 @@ class ThemeDataTweenAutoBinding extends HTExternalClass {
 extension ThemeDataTweenBinding on ThemeDataTween {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ThemeDataTween');
       case 'begin':
         return begin;
@@ -197,7 +197,7 @@ class AnimatedThemeAutoBinding extends HTExternalClass {
 extension AnimatedThemeBinding on AnimatedTheme {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('AnimatedTheme');
       case 'data':
         return data;

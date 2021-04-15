@@ -41,7 +41,7 @@ class TextureBoxAutoBinding extends HTExternalClass {
 extension TextureBoxBinding on TextureBox {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('TextureBox');
       case 'parentData':
         return parentData;

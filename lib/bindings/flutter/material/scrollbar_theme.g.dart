@@ -58,7 +58,7 @@ class ScrollbarThemeDataAutoBinding extends HTExternalClass {
 extension ScrollbarThemeDataBinding on ScrollbarThemeData {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ScrollbarThemeData');
       case 'thickness':
         return thickness;
@@ -161,7 +161,7 @@ class ScrollbarThemeAutoBinding extends HTExternalClass {
 extension ScrollbarThemeBinding on ScrollbarTheme {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ScrollbarTheme');
       case 'data':
         return data;

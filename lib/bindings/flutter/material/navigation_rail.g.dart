@@ -24,7 +24,7 @@ class NavigationRailLabelTypeAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('NavigationRailLabelType');
       case 'index':
         return (instance as NavigationRailLabelType).index;
@@ -109,7 +109,7 @@ class NavigationRailAutoBinding extends HTExternalClass {
 extension NavigationRailBinding on NavigationRail {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('NavigationRail');
       case 'backgroundColor':
         return backgroundColor;
@@ -221,7 +221,7 @@ class NavigationRailDestinationAutoBinding extends HTExternalClass {
 extension NavigationRailDestinationBinding on NavigationRailDestination {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('NavigationRailDestination');
       case 'icon':
         return icon;

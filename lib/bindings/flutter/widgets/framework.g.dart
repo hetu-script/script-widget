@@ -25,7 +25,7 @@ class UniqueKeyAutoBinding extends HTExternalClass {
 extension UniqueKeyBinding on UniqueKey {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('UniqueKey');
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();
@@ -58,7 +58,7 @@ class ObjectKeyAutoBinding extends HTExternalClass {
 extension ObjectKeyBinding on ObjectKey {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ObjectKey');
       case 'value':
         return value;
@@ -112,7 +112,7 @@ class BuildOwnerAutoBinding extends HTExternalClass {
 extension BuildOwnerBinding on BuildOwner {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('BuildOwner');
       case 'onBuildScheduled':
         return onBuildScheduled;
@@ -198,7 +198,7 @@ class ErrorWidgetAutoBinding extends HTExternalClass {
 extension ErrorWidgetBinding on ErrorWidget {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ErrorWidget');
       case 'message':
         return message;
@@ -279,7 +279,7 @@ class StatelessElementAutoBinding extends HTExternalClass {
 extension StatelessElementBinding on StatelessElement {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('StatelessElement');
       case 'widget':
         return widget;
@@ -472,7 +472,7 @@ class StatefulElementAutoBinding extends HTExternalClass {
 extension StatefulElementBinding on StatefulElement {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('StatefulElement');
       case 'state':
         return state;
@@ -669,7 +669,7 @@ class InheritedElementAutoBinding extends HTExternalClass {
 extension InheritedElementBinding on InheritedElement {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('InheritedElement');
       case 'widget':
         return widget;
@@ -868,7 +868,7 @@ class LeafRenderObjectElementAutoBinding extends HTExternalClass {
 extension LeafRenderObjectElementBinding on LeafRenderObjectElement {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('LeafRenderObjectElement');
       case 'widget':
         return widget;
@@ -1070,7 +1070,7 @@ extension SingleChildRenderObjectElementBinding
     on SingleChildRenderObjectElement {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('SingleChildRenderObjectElement');
       case 'widget':
         return widget;
@@ -1272,7 +1272,7 @@ extension MultiChildRenderObjectElementBinding
     on MultiChildRenderObjectElement {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('MultiChildRenderObjectElement');
       case 'widget':
         return widget;
@@ -1465,7 +1465,7 @@ class DebugCreatorAutoBinding extends HTExternalClass {
 extension DebugCreatorBinding on DebugCreator {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('DebugCreator');
       case 'element':
         return element;

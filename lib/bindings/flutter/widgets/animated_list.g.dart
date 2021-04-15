@@ -63,7 +63,7 @@ class AnimatedListAutoBinding extends HTExternalClass {
 extension AnimatedListBinding on AnimatedList {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('AnimatedList');
       case 'itemBuilder':
         return itemBuilder;
@@ -162,7 +162,7 @@ class AnimatedListStateAutoBinding extends HTExternalClass {
 extension AnimatedListStateBinding on AnimatedListState {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('AnimatedListState');
       case 'widget':
         return widget;
@@ -255,7 +255,7 @@ class SliverAnimatedListAutoBinding extends HTExternalClass {
 extension SliverAnimatedListBinding on SliverAnimatedList {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('SliverAnimatedList');
       case 'itemBuilder':
         return itemBuilder;
@@ -341,7 +341,7 @@ class SliverAnimatedListStateAutoBinding extends HTExternalClass {
 extension SliverAnimatedListStateBinding on SliverAnimatedListState {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('SliverAnimatedListState');
       case 'widget':
         return widget;

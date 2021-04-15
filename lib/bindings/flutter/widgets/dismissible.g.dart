@@ -32,7 +32,7 @@ class DismissDirectionAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('DismissDirection');
       case 'index':
         return (instance as DismissDirection).index;
@@ -117,7 +117,7 @@ class DismissibleAutoBinding extends HTExternalClass {
 extension DismissibleBinding on Dismissible {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Dismissible');
       case 'child':
         return child;

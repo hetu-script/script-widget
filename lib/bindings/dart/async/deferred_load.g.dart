@@ -24,7 +24,7 @@ class DeferredLoadExceptionAutoBinding extends HTExternalClass {
 extension DeferredLoadExceptionBinding on DeferredLoadException {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('DeferredLoadException');
       case 'toString':
         return ({positionalArgs, namedArgs, typeArgs}) => toString();

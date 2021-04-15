@@ -27,7 +27,7 @@ class PerformanceOverlayOptionAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('PerformanceOverlayOption');
       case 'index':
         return (instance as PerformanceOverlayOption).index;
@@ -90,7 +90,7 @@ class RenderPerformanceOverlayAutoBinding extends HTExternalClass {
 extension RenderPerformanceOverlayBinding on RenderPerformanceOverlay {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RenderPerformanceOverlay');
       case 'parentData':
         return parentData;

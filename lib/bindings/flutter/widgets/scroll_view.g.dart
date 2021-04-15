@@ -24,7 +24,7 @@ class ScrollViewKeyboardDismissBehaviorAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ScrollViewKeyboardDismissBehavior');
       case 'index':
         return (instance as ScrollViewKeyboardDismissBehavior).index;
@@ -100,7 +100,7 @@ class CustomScrollViewAutoBinding extends HTExternalClass {
 extension CustomScrollViewBinding on CustomScrollView {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('CustomScrollView');
       case 'slivers':
         return slivers;
@@ -413,7 +413,7 @@ class ListViewAutoBinding extends HTExternalClass {
 extension ListViewBinding on ListView {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ListView');
       case 'itemExtent':
         return itemExtent;
@@ -802,7 +802,7 @@ class GridViewAutoBinding extends HTExternalClass {
 extension GridViewBinding on GridView {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('GridView');
       case 'gridDelegate':
         return gridDelegate;

@@ -36,7 +36,7 @@ class PlaceholderAutoBinding extends HTExternalClass {
 extension PlaceholderBinding on Placeholder {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Placeholder');
       case 'color':
         return color;

@@ -45,7 +45,7 @@ class DefaultMaterialLocalizationsAutoBinding extends HTExternalClass {
 extension DefaultMaterialLocalizationsBinding on DefaultMaterialLocalizations {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('DefaultMaterialLocalizations');
       case 'narrowWeekdays':
         return narrowWeekdays;

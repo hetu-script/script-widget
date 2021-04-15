@@ -23,7 +23,7 @@ class OrientationAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Orientation');
       case 'index':
         return (instance as Orientation).index;
@@ -56,7 +56,7 @@ class NavigationModeAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('NavigationMode');
       case 'index':
         return (instance as NavigationMode).index;
@@ -138,7 +138,7 @@ class MediaQueryDataAutoBinding extends HTExternalClass {
 extension MediaQueryDataBinding on MediaQueryData {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('MediaQueryData');
       case 'size':
         return size;
@@ -366,7 +366,7 @@ class MediaQueryAutoBinding extends HTExternalClass {
 extension MediaQueryBinding on MediaQuery {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('MediaQuery');
       case 'data':
         return data;

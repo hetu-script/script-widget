@@ -52,7 +52,7 @@ class CheckboxThemeDataAutoBinding extends HTExternalClass {
 extension CheckboxThemeDataBinding on CheckboxThemeData {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('CheckboxThemeData');
       case 'mouseCursor':
         return mouseCursor;
@@ -142,7 +142,7 @@ class CheckboxThemeAutoBinding extends HTExternalClass {
 extension CheckboxThemeBinding on CheckboxTheme {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('CheckboxTheme');
       case 'data':
         return data;

@@ -47,7 +47,7 @@ class CupertinoAlertDialogAutoBinding extends HTExternalClass {
 extension CupertinoAlertDialogBinding on CupertinoAlertDialog {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('CupertinoAlertDialog');
       case 'title':
         return title;
@@ -137,7 +137,7 @@ class CupertinoPopupSurfaceAutoBinding extends HTExternalClass {
 extension CupertinoPopupSurfaceBinding on CupertinoPopupSurface {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('CupertinoPopupSurface');
       case 'isSurfacePainted':
         return isSurfacePainted;
@@ -233,7 +233,7 @@ class CupertinoDialogActionAutoBinding extends HTExternalClass {
 extension CupertinoDialogActionBinding on CupertinoDialogAction {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('CupertinoDialogAction');
       case 'onPressed':
         return onPressed;

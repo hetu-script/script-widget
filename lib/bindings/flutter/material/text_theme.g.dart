@@ -66,7 +66,7 @@ class TextThemeAutoBinding extends HTExternalClass {
 extension TextThemeBinding on TextTheme {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('TextTheme');
       case 'headline1':
         return headline1;

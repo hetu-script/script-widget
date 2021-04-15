@@ -32,7 +32,7 @@ class OutlinedButtonThemeDataAutoBinding extends HTExternalClass {
 extension OutlinedButtonThemeDataBinding on OutlinedButtonThemeData {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('OutlinedButtonThemeData');
       case 'style':
         return style;
@@ -86,7 +86,7 @@ class OutlinedButtonThemeAutoBinding extends HTExternalClass {
 extension OutlinedButtonThemeBinding on OutlinedButtonTheme {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('OutlinedButtonTheme');
       case 'data':
         return data;

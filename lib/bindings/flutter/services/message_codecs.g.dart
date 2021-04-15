@@ -23,7 +23,7 @@ class BinaryCodecAutoBinding extends HTExternalClass {
 extension BinaryCodecBinding on BinaryCodec {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('BinaryCodec');
       case 'decodeMessage':
         return ({positionalArgs, namedArgs, typeArgs}) =>
@@ -59,7 +59,7 @@ class StringCodecAutoBinding extends HTExternalClass {
 extension StringCodecBinding on StringCodec {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('StringCodec');
       case 'decodeMessage':
         return ({positionalArgs, namedArgs, typeArgs}) =>
@@ -95,7 +95,7 @@ class JSONMessageCodecAutoBinding extends HTExternalClass {
 extension JSONMessageCodecBinding on JSONMessageCodec {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('JSONMessageCodec');
       case 'encodeMessage':
         return ({positionalArgs, namedArgs, typeArgs}) =>
@@ -131,7 +131,7 @@ class JSONMethodCodecAutoBinding extends HTExternalClass {
 extension JSONMethodCodecBinding on JSONMethodCodec {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('JSONMethodCodec');
       case 'encodeMethodCall':
         return ({positionalArgs, namedArgs, typeArgs}) =>
@@ -181,7 +181,7 @@ class StandardMessageCodecAutoBinding extends HTExternalClass {
 extension StandardMessageCodecBinding on StandardMessageCodec {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('StandardMessageCodec');
       case 'encodeMessage':
         return ({positionalArgs, namedArgs, typeArgs}) =>
@@ -235,7 +235,7 @@ class StandardMethodCodecAutoBinding extends HTExternalClass {
 extension StandardMethodCodecBinding on StandardMethodCodec {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('StandardMethodCodec');
       case 'messageCodec':
         return messageCodec;

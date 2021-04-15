@@ -75,7 +75,7 @@ class AppBarThemeAutoBinding extends HTExternalClass {
 extension AppBarThemeBinding on AppBarTheme {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('AppBarTheme');
       case 'brightness':
         return brightness;

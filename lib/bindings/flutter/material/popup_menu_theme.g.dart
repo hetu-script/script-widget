@@ -40,7 +40,7 @@ class PopupMenuThemeDataAutoBinding extends HTExternalClass {
 extension PopupMenuThemeDataBinding on PopupMenuThemeData {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('PopupMenuThemeData');
       case 'color':
         return color;
@@ -115,7 +115,7 @@ class PopupMenuThemeAutoBinding extends HTExternalClass {
 extension PopupMenuThemeBinding on PopupMenuTheme {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('PopupMenuTheme');
       case 'data':
         return data;

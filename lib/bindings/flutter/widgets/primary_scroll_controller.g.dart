@@ -36,7 +36,7 @@ class PrimaryScrollControllerAutoBinding extends HTExternalClass {
 extension PrimaryScrollControllerBinding on PrimaryScrollController {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('PrimaryScrollController');
       case 'controller':
         return controller;

@@ -26,7 +26,7 @@ class LicenseParagraphAutoBinding extends HTExternalClass {
 extension LicenseParagraphBinding on LicenseParagraph {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('LicenseParagraph');
       case 'text':
         return text;
@@ -62,7 +62,7 @@ class LicenseEntryWithLineBreaksAutoBinding extends HTExternalClass {
 extension LicenseEntryWithLineBreaksBinding on LicenseEntryWithLineBreaks {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('LicenseEntryWithLineBreaks');
       case 'packages':
         return packages;

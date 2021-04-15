@@ -23,7 +23,7 @@ class MaxLengthEnforcementAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('MaxLengthEnforcement');
       case 'index':
         return (instance as MaxLengthEnforcement).index;
@@ -104,7 +104,7 @@ class FilteringTextInputFormatterAutoBinding extends HTExternalClass {
 extension FilteringTextInputFormatterBinding on FilteringTextInputFormatter {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('FilteringTextInputFormatter');
       case 'filterPattern':
         return filterPattern;
@@ -154,7 +154,7 @@ extension LengthLimitingTextInputFormatterBinding
     on LengthLimitingTextInputFormatter {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('LengthLimitingTextInputFormatter');
       case 'maxLength':
         return maxLength;

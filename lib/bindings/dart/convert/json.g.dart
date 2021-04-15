@@ -29,7 +29,7 @@ class JsonUnsupportedObjectErrorAutoBinding extends HTExternalClass {
 extension JsonUnsupportedObjectErrorBinding on JsonUnsupportedObjectError {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('JsonUnsupportedObjectError');
       case 'unsupportedObject':
         return unsupportedObject;
@@ -68,7 +68,7 @@ class JsonCyclicErrorAutoBinding extends HTExternalClass {
 extension JsonCyclicErrorBinding on JsonCyclicError {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('JsonCyclicError');
       case 'unsupportedObject':
         return unsupportedObject;
@@ -114,7 +114,7 @@ class JsonCodecAutoBinding extends HTExternalClass {
 extension JsonCodecBinding on JsonCodec {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('JsonCodec');
       case 'encoder':
         return encoder;
@@ -164,7 +164,7 @@ class JsonEncoderAutoBinding extends HTExternalClass {
 extension JsonEncoderBinding on JsonEncoder {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('JsonEncoder');
       case 'indent':
         return indent;
@@ -213,7 +213,7 @@ class JsonUtf8EncoderAutoBinding extends HTExternalClass {
 extension JsonUtf8EncoderBinding on JsonUtf8Encoder {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('JsonUtf8Encoder');
       case 'convert':
         return ({positionalArgs, namedArgs, typeArgs}) =>
@@ -258,7 +258,7 @@ class JsonDecoderAutoBinding extends HTExternalClass {
 extension JsonDecoderBinding on JsonDecoder {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('JsonDecoder');
       case 'convert':
         return ({positionalArgs, namedArgs, typeArgs}) =>

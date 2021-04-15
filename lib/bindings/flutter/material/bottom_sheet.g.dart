@@ -67,7 +67,7 @@ class BottomSheetAutoBinding extends HTExternalClass {
 extension BottomSheetBinding on BottomSheet {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('BottomSheet');
       case 'animationController':
         return animationController;

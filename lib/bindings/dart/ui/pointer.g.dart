@@ -31,7 +31,7 @@ class PointerChangeAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('PointerChange');
       case 'index':
         return (instance as PointerChange).index;
@@ -70,7 +70,7 @@ class PointerDeviceKindAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('PointerDeviceKind');
       case 'index':
         return (instance as PointerDeviceKind).index;
@@ -105,7 +105,7 @@ class PointerSignalKindAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('PointerSignalKind');
       case 'index':
         return (instance as PointerSignalKind).index;
@@ -218,7 +218,7 @@ class PointerDataAutoBinding extends HTExternalClass {
 extension PointerDataBinding on PointerData {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('PointerData');
       case 'embedderId':
         return embedderId;
@@ -313,7 +313,7 @@ class PointerDataPacketAutoBinding extends HTExternalClass {
 extension PointerDataPacketBinding on PointerDataPacket {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('PointerDataPacket');
       case 'data':
         return data;

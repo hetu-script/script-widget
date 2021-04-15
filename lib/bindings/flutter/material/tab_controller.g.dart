@@ -41,7 +41,7 @@ class TabControllerAutoBinding extends HTExternalClass {
 extension TabControllerBinding on TabController {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('TabController');
       case 'length':
         return length;
@@ -122,7 +122,7 @@ class DefaultTabControllerAutoBinding extends HTExternalClass {
 extension DefaultTabControllerBinding on DefaultTabController {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('DefaultTabController');
       case 'length':
         return length;

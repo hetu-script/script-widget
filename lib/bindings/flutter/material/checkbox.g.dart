@@ -71,7 +71,7 @@ class CheckboxAutoBinding extends HTExternalClass {
 extension CheckboxBinding on Checkbox {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Checkbox');
       case 'value':
         return value;

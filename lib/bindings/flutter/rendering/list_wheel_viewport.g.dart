@@ -30,7 +30,7 @@ class ListWheelParentDataAutoBinding extends HTExternalClass {
 extension ListWheelParentDataBinding on ListWheelParentData {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ListWheelParentData');
       case 'index':
         return index;
@@ -142,7 +142,7 @@ class RenderListWheelViewportAutoBinding extends HTExternalClass {
 extension RenderListWheelViewportBinding on RenderListWheelViewport {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RenderListWheelViewport');
       case 'childManager':
         return childManager;

@@ -85,7 +85,7 @@ class TransformPropertyAutoBinding extends HTExternalClass {
 extension TransformPropertyBinding on TransformProperty {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('TransformProperty');
       case 'expandableValue':
         return expandableValue;

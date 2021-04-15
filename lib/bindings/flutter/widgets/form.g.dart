@@ -23,7 +23,7 @@ class AutovalidateModeAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('AutovalidateMode');
       case 'index':
         return (instance as AutovalidateMode).index;
@@ -81,7 +81,7 @@ class FormAutoBinding extends HTExternalClass {
 extension FormBinding on Form {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Form');
       case 'child':
         return child;
@@ -159,7 +159,7 @@ class FormStateAutoBinding extends HTExternalClass {
 extension FormStateBinding on FormState {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('FormState');
       case 'widget':
         return widget;

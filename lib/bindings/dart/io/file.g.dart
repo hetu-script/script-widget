@@ -73,7 +73,7 @@ class FileAutoBinding extends HTExternalClass {
 extension FileBinding on File {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('File');
       case 'absolute':
         return absolute;
@@ -236,7 +236,7 @@ class FileSystemExceptionAutoBinding extends HTExternalClass {
 extension FileSystemExceptionBinding on FileSystemException {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('FileSystemException');
       case 'message':
         return message;

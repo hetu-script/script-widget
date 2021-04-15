@@ -63,7 +63,7 @@ class RawKeyEventDataWindowsAutoBinding extends HTExternalClass {
 extension RawKeyEventDataWindowsBinding on RawKeyEventDataWindows {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RawKeyEventDataWindows');
       case 'keyCode':
         return keyCode;

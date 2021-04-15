@@ -71,7 +71,7 @@ class InteractiveViewerAutoBinding extends HTExternalClass {
 extension InteractiveViewerBinding on InteractiveViewer {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('InteractiveViewer');
       case 'clipBehavior':
         return clipBehavior;
@@ -176,7 +176,7 @@ class TransformationControllerAutoBinding extends HTExternalClass {
 extension TransformationControllerBinding on TransformationController {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('TransformationController');
       case 'value':
         return value;

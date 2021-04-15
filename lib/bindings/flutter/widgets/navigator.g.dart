@@ -25,7 +25,7 @@ class RoutePopDispositionAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RoutePopDisposition');
       case 'index':
         return (instance as RoutePopDisposition).index;
@@ -64,7 +64,7 @@ class RouteSettingsAutoBinding extends HTExternalClass {
 extension RouteSettingsBinding on RouteSettings {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RouteSettings');
       case 'name':
         return name;
@@ -106,7 +106,7 @@ class NavigatorObserverAutoBinding extends HTExternalClass {
 extension NavigatorObserverBinding on NavigatorObserver {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('NavigatorObserver');
       case 'navigator':
         return navigator;
@@ -171,7 +171,7 @@ class HeroControllerScopeAutoBinding extends HTExternalClass {
 extension HeroControllerScopeBinding on HeroControllerScope {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('HeroControllerScope');
       case 'controller':
         return controller;
@@ -325,7 +325,7 @@ class NavigatorAutoBinding extends HTExternalClass {
 extension NavigatorBinding on Navigator {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Navigator');
       case 'pages':
         return pages;
@@ -424,7 +424,7 @@ class NavigatorStateAutoBinding extends HTExternalClass {
 extension NavigatorStateBinding on NavigatorState {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('NavigatorState');
       case 'focusScopeNode':
         return focusScopeNode;

@@ -53,7 +53,7 @@ class CalendarDatePickerAutoBinding extends HTExternalClass {
 extension CalendarDatePickerBinding on CalendarDatePicker {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('CalendarDatePicker');
       case 'initialDate':
         return initialDate;
@@ -153,7 +153,7 @@ class YearPickerAutoBinding extends HTExternalClass {
 extension YearPickerBinding on YearPicker {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('YearPicker');
       case 'currentDate':
         return currentDate;

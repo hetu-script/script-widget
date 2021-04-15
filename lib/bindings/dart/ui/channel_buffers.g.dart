@@ -40,7 +40,7 @@ class ChannelBuffersAutoBinding extends HTExternalClass {
 extension ChannelBuffersBinding on ChannelBuffers {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ChannelBuffers');
       case 'push':
         return ({positionalArgs, namedArgs, typeArgs}) =>

@@ -62,6 +62,7 @@ class DefaultBindingHander extends FlutterLibraryBinding {
     var future = super.importScripts();
     var futures = <Future>[];
     futures.add(future);
+    futures.add(interpreter.import('package://script_container.ht'));
     futures.add(interpreter.import('package://widget.ht'));
     return Future.wait(futures);
   }

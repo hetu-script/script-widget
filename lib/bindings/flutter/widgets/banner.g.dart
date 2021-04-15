@@ -34,7 +34,7 @@ class BannerLocationAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('BannerLocation');
       case 'index':
         return (instance as BannerLocation).index;
@@ -85,7 +85,7 @@ class BannerPainterAutoBinding extends HTExternalClass {
 extension BannerPainterBinding on BannerPainter {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('BannerPainter');
       case 'message':
         return message;
@@ -164,7 +164,7 @@ class BannerAutoBinding extends HTExternalClass {
 extension BannerBinding on Banner {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Banner');
       case 'child':
         return child;
@@ -251,7 +251,7 @@ class CheckedModeBannerAutoBinding extends HTExternalClass {
 extension CheckedModeBannerBinding on CheckedModeBanner {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('CheckedModeBanner');
       case 'child':
         return child;

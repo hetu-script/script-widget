@@ -21,7 +21,7 @@ class DatePickerEntryModeAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('DatePickerEntryMode');
       case 'index':
         return (instance as DatePickerEntryMode).index;
@@ -54,7 +54,7 @@ class DatePickerModeAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('DatePickerMode');
       case 'index':
         return (instance as DatePickerMode).index;
@@ -131,7 +131,7 @@ class DateTimeRangeAutoBinding extends HTExternalClass {
 extension DateTimeRangeBinding on DateTimeRange {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('DateTimeRange');
       case 'start':
         return start;

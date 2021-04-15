@@ -36,7 +36,7 @@ class BottomNavigationBarItemAutoBinding extends HTExternalClass {
 extension BottomNavigationBarItemBinding on BottomNavigationBarItem {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('BottomNavigationBarItem');
       case 'icon':
         return icon;

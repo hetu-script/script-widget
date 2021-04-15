@@ -25,7 +25,7 @@ class StdoutExceptionAutoBinding extends HTExternalClass {
 extension StdoutExceptionBinding on StdoutException {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('StdoutException');
       case 'message':
         return message;
@@ -63,7 +63,7 @@ class StdinExceptionAutoBinding extends HTExternalClass {
 extension StdinExceptionBinding on StdinException {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('StdinException');
       case 'message':
         return message;

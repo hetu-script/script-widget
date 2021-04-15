@@ -28,7 +28,7 @@ class FixedScrollMetricsAutoBinding extends HTExternalClass {
 extension FixedScrollMetricsBinding on FixedScrollMetrics {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('FixedScrollMetrics');
       case 'axisDirection':
         return axisDirection;

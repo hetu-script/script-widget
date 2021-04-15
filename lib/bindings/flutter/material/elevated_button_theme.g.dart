@@ -32,7 +32,7 @@ class ElevatedButtonThemeDataAutoBinding extends HTExternalClass {
 extension ElevatedButtonThemeDataBinding on ElevatedButtonThemeData {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ElevatedButtonThemeData');
       case 'style':
         return style;
@@ -86,7 +86,7 @@ class ElevatedButtonThemeAutoBinding extends HTExternalClass {
 extension ElevatedButtonThemeBinding on ElevatedButtonTheme {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ElevatedButtonTheme');
       case 'data':
         return data;

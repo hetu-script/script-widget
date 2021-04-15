@@ -41,7 +41,7 @@ class DiagnosticLevelAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('DiagnosticLevel');
       case 'index':
         return (instance as DiagnosticLevel).index;
@@ -94,7 +94,7 @@ class DiagnosticsTreeStyleAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('DiagnosticsTreeStyle');
       case 'index':
         return (instance as DiagnosticsTreeStyle).index;
@@ -187,7 +187,7 @@ class TextTreeConfigurationAutoBinding extends HTExternalClass {
 extension TextTreeConfigurationBinding on TextTreeConfiguration {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('TextTreeConfiguration');
       case 'prefixLineOne':
         return prefixLineOne;
@@ -282,7 +282,7 @@ class TextTreeRendererAutoBinding extends HTExternalClass {
 extension TextTreeRendererBinding on TextTreeRenderer {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('TextTreeRenderer');
       case 'render':
         return ({positionalArgs, namedArgs, typeArgs}) => render(
@@ -340,7 +340,7 @@ class DiagnosticsNodeAutoBinding extends HTExternalClass {
 extension DiagnosticsNodeBinding on DiagnosticsNode {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('DiagnosticsNode');
       case 'name':
         return name;
@@ -436,7 +436,7 @@ class MessagePropertyAutoBinding extends HTExternalClass {
 extension MessagePropertyBinding on MessageProperty {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('MessageProperty');
       case 'expandableValue':
         return expandableValue;
@@ -568,7 +568,7 @@ class StringPropertyAutoBinding extends HTExternalClass {
 extension StringPropertyBinding on StringProperty {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('StringProperty');
       case 'quoted':
         return quoted;
@@ -715,7 +715,7 @@ class DoublePropertyAutoBinding extends HTExternalClass {
 extension DoublePropertyBinding on DoubleProperty {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('DoubleProperty');
       case 'unit':
         return unit;
@@ -845,7 +845,7 @@ class IntPropertyAutoBinding extends HTExternalClass {
 extension IntPropertyBinding on IntProperty {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('IntProperty');
       case 'unit':
         return unit;
@@ -971,7 +971,7 @@ class PercentPropertyAutoBinding extends HTExternalClass {
 extension PercentPropertyBinding on PercentProperty {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('PercentProperty');
       case 'unit':
         return unit;
@@ -1100,7 +1100,7 @@ class FlagPropertyAutoBinding extends HTExternalClass {
 extension FlagPropertyBinding on FlagProperty {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('FlagProperty');
       case 'ifTrue':
         return ifTrue;
@@ -1218,7 +1218,7 @@ class DiagnosticableTreeNodeAutoBinding extends HTExternalClass {
 extension DiagnosticableTreeNodeBinding on DiagnosticableTreeNode {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('DiagnosticableTreeNode');
       case 'value':
         return value;
@@ -1320,7 +1320,7 @@ class DiagnosticPropertiesBuilderAutoBinding extends HTExternalClass {
 extension DiagnosticPropertiesBuilderBinding on DiagnosticPropertiesBuilder {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('DiagnosticPropertiesBuilder');
       case 'properties':
         return properties;
@@ -1401,7 +1401,7 @@ class DiagnosticsBlockAutoBinding extends HTExternalClass {
 extension DiagnosticsBlockBinding on DiagnosticsBlock {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('DiagnosticsBlock');
       case 'level':
         return level;
@@ -1499,7 +1499,7 @@ extension DiagnosticsSerializationDelegateBinding
     on DiagnosticsSerializationDelegate {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('DiagnosticsSerializationDelegate');
       case 'subtreeDepth':
         return subtreeDepth;

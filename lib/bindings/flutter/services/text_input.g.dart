@@ -22,7 +22,7 @@ class SmartDashesTypeAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('SmartDashesType');
       case 'index':
         return (instance as SmartDashesType).index;
@@ -55,7 +55,7 @@ class SmartQuotesTypeAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('SmartQuotesType');
       case 'index':
         return (instance as SmartQuotesType).index;
@@ -110,7 +110,7 @@ class TextInputActionAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('TextInputAction');
       case 'index':
         return (instance as TextInputAction).index;
@@ -147,7 +147,7 @@ class TextCapitalizationAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('TextCapitalization');
       case 'index':
         return (instance as TextCapitalization).index;
@@ -182,7 +182,7 @@ class FloatingCursorDragStateAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('FloatingCursorDragState');
       case 'index':
         return (instance as FloatingCursorDragState).index;
@@ -246,7 +246,7 @@ class TextInputTypeAutoBinding extends HTExternalClass {
 extension TextInputTypeBinding on TextInputType {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('TextInputType');
       case 'index':
         return index;
@@ -326,7 +326,7 @@ class TextInputConfigurationAutoBinding extends HTExternalClass {
 extension TextInputConfigurationBinding on TextInputConfiguration {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('TextInputConfiguration');
       case 'inputType':
         return inputType;
@@ -387,7 +387,7 @@ class RawFloatingCursorPointAutoBinding extends HTExternalClass {
 extension RawFloatingCursorPointBinding on RawFloatingCursorPoint {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RawFloatingCursorPoint');
       case 'offset':
         return offset;
@@ -433,7 +433,7 @@ class TextEditingValueAutoBinding extends HTExternalClass {
 extension TextEditingValueBinding on TextEditingValue {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('TextEditingValue');
       case 'text':
         return text;

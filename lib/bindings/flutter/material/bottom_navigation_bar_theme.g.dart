@@ -66,7 +66,7 @@ class BottomNavigationBarThemeDataAutoBinding extends HTExternalClass {
 extension BottomNavigationBarThemeDataBinding on BottomNavigationBarThemeData {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('BottomNavigationBarThemeData');
       case 'backgroundColor':
         return backgroundColor;
@@ -174,7 +174,7 @@ class BottomNavigationBarThemeAutoBinding extends HTExternalClass {
 extension BottomNavigationBarThemeBinding on BottomNavigationBarTheme {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('BottomNavigationBarTheme');
       case 'data':
         return data;

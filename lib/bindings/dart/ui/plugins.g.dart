@@ -24,7 +24,7 @@ class CallbackHandleAutoBinding extends HTExternalClass {
 extension CallbackHandleBinding on CallbackHandle {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('CallbackHandle');
       case 'hashCode':
         return hashCode;

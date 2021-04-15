@@ -44,7 +44,7 @@ class ScriptModuleHandler implements HTModuleHandler {
     _cachedKeys.add(uniqueKey);
     final content = await rootBundle.loadString(uniqueKey);
     if (content.isEmpty) {
-      throw HTError.empty(uri.toString());
+      throw HTError.emptyString(uri.toString());
     }
 
     return HTModuleInfo(uniqueKey, content);

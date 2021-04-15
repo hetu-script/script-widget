@@ -111,7 +111,7 @@ class AndroidPointerPropertiesAutoBinding extends HTExternalClass {
 extension AndroidPointerPropertiesBinding on AndroidPointerProperties {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('AndroidPointerProperties');
       case 'id':
         return id;
@@ -156,7 +156,7 @@ class AndroidPointerCoordsAutoBinding extends HTExternalClass {
 extension AndroidPointerCoordsBinding on AndroidPointerCoords {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('AndroidPointerCoords');
       case 'orientation':
         return orientation;
@@ -223,7 +223,7 @@ class AndroidMotionEventAutoBinding extends HTExternalClass {
 extension AndroidMotionEventBinding on AndroidMotionEvent {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('AndroidMotionEvent');
       case 'downTime':
         return downTime;

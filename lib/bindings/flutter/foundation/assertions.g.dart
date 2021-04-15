@@ -28,7 +28,7 @@ class PartialStackFrameAutoBinding extends HTExternalClass {
 extension PartialStackFrameBinding on PartialStackFrame {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('PartialStackFrame');
       case 'package':
         return package;
@@ -70,7 +70,7 @@ class RepetitiveStackFrameFilterAutoBinding extends HTExternalClass {
 extension RepetitiveStackFrameFilterBinding on RepetitiveStackFrameFilter {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RepetitiveStackFrameFilter');
       case 'frames':
         return frames;
@@ -111,7 +111,7 @@ class ErrorDescriptionAutoBinding extends HTExternalClass {
 extension ErrorDescriptionBinding on ErrorDescription {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ErrorDescription');
       case 'expandableValue':
         return expandableValue;
@@ -222,7 +222,7 @@ class ErrorSummaryAutoBinding extends HTExternalClass {
 extension ErrorSummaryBinding on ErrorSummary {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ErrorSummary');
       case 'expandableValue':
         return expandableValue;
@@ -333,7 +333,7 @@ class ErrorHintAutoBinding extends HTExternalClass {
 extension ErrorHintBinding on ErrorHint {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ErrorHint');
       case 'expandableValue':
         return expandableValue;
@@ -443,7 +443,7 @@ class ErrorSpacerAutoBinding extends HTExternalClass {
 extension ErrorSpacerBinding on ErrorSpacer {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ErrorSpacer');
       case 'expandableValue':
         return expandableValue;
@@ -578,7 +578,7 @@ class FlutterErrorDetailsAutoBinding extends HTExternalClass {
 extension FlutterErrorDetailsBinding on FlutterErrorDetails {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('FlutterErrorDetails');
       case 'exception':
         return exception;
@@ -704,7 +704,7 @@ class FlutterErrorAutoBinding extends HTExternalClass {
 extension FlutterErrorBinding on FlutterError {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('FlutterError');
       case 'diagnostics':
         return diagnostics;
@@ -787,7 +787,7 @@ class DiagnosticsStackTraceAutoBinding extends HTExternalClass {
 extension DiagnosticsStackTraceBinding on DiagnosticsStackTrace {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('DiagnosticsStackTrace');
       case 'level':
         return level;

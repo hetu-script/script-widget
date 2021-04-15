@@ -30,7 +30,7 @@ class LinkAutoBinding extends HTExternalClass {
 extension LinkBinding on Link {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Link');
       case 'absolute':
         return absolute;

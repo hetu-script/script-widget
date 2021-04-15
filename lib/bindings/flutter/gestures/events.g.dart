@@ -66,7 +66,7 @@ class PointerAddedEventAutoBinding extends HTExternalClass {
 extension PointerAddedEventBinding on PointerAddedEvent {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('PointerAddedEvent');
       case 'embedderId':
         return embedderId;
@@ -266,7 +266,7 @@ class PointerRemovedEventAutoBinding extends HTExternalClass {
 extension PointerRemovedEventBinding on PointerRemovedEvent {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('PointerRemovedEvent');
       case 'embedderId':
         return embedderId;
@@ -484,7 +484,7 @@ class PointerHoverEventAutoBinding extends HTExternalClass {
 extension PointerHoverEventBinding on PointerHoverEvent {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('PointerHoverEvent');
       case 'embedderId':
         return embedderId;
@@ -706,7 +706,7 @@ class PointerEnterEventAutoBinding extends HTExternalClass {
 extension PointerEnterEventBinding on PointerEnterEvent {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('PointerEnterEvent');
       case 'embedderId':
         return embedderId;
@@ -928,7 +928,7 @@ class PointerExitEventAutoBinding extends HTExternalClass {
 extension PointerExitEventBinding on PointerExitEvent {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('PointerExitEvent');
       case 'embedderId':
         return embedderId;
@@ -1141,7 +1141,7 @@ class PointerDownEventAutoBinding extends HTExternalClass {
 extension PointerDownEventBinding on PointerDownEvent {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('PointerDownEvent');
       case 'embedderId':
         return embedderId;
@@ -1363,7 +1363,7 @@ class PointerMoveEventAutoBinding extends HTExternalClass {
 extension PointerMoveEventBinding on PointerMoveEvent {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('PointerMoveEvent');
       case 'embedderId':
         return embedderId;
@@ -1577,7 +1577,7 @@ class PointerUpEventAutoBinding extends HTExternalClass {
 extension PointerUpEventBinding on PointerUpEvent {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('PointerUpEvent');
       case 'embedderId':
         return embedderId;
@@ -1760,7 +1760,7 @@ class PointerScrollEventAutoBinding extends HTExternalClass {
 extension PointerScrollEventBinding on PointerScrollEvent {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('PointerScrollEvent');
       case 'scrollDelta':
         return scrollDelta;
@@ -1974,7 +1974,7 @@ class PointerCancelEventAutoBinding extends HTExternalClass {
 extension PointerCancelEventBinding on PointerCancelEvent {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('PointerCancelEvent');
       case 'embedderId':
         return embedderId;

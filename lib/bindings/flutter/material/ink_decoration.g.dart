@@ -73,7 +73,7 @@ class InkAutoBinding extends HTExternalClass {
 extension InkBinding on Ink {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Ink');
       case 'child':
         return child;
@@ -172,7 +172,7 @@ class InkDecorationAutoBinding extends HTExternalClass {
 extension InkDecorationBinding on InkDecoration {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('InkDecoration');
       case 'referenceBox':
         return referenceBox;

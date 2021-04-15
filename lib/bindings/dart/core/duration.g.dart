@@ -67,7 +67,7 @@ class DurationAutoBinding extends HTExternalClass {
 extension DurationBinding on Duration {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Duration');
       case 'inDays':
         return inDays;

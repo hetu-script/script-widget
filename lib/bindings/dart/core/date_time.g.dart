@@ -103,7 +103,7 @@ class DateTimeAutoBinding extends HTExternalClass {
 extension DateTimeBinding on DateTime {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('DateTime');
       case 'isUtc':
         return isUtc;

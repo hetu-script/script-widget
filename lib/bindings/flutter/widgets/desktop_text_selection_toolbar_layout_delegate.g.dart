@@ -28,7 +28,7 @@ extension DesktopTextSelectionToolbarLayoutDelegateBinding
     on DesktopTextSelectionToolbarLayoutDelegate {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('DesktopTextSelectionToolbarLayoutDelegate');
       case 'anchor':
         return anchor;

@@ -37,7 +37,7 @@ class GridTileBarAutoBinding extends HTExternalClass {
 extension GridTileBarBinding on GridTileBar {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('GridTileBar');
       case 'backgroundColor':
         return backgroundColor;

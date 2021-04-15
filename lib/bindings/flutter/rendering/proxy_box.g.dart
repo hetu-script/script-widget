@@ -26,7 +26,7 @@ class HitTestBehaviorAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('HitTestBehavior');
       case 'index':
         return (instance as HitTestBehavior).index;
@@ -59,7 +59,7 @@ class DecorationPositionAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('DecorationPosition');
       case 'index':
         return (instance as DecorationPosition).index;
@@ -107,7 +107,7 @@ class RenderProxyBoxAutoBinding extends HTExternalClass {
 extension RenderProxyBoxBinding on RenderProxyBox {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RenderProxyBox');
       case 'parentData':
         return parentData;
@@ -457,7 +457,7 @@ class RenderConstrainedBoxAutoBinding extends HTExternalClass {
 extension RenderConstrainedBoxBinding on RenderConstrainedBox {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RenderConstrainedBox');
       case 'parentData':
         return parentData;
@@ -820,7 +820,7 @@ class RenderLimitedBoxAutoBinding extends HTExternalClass {
 extension RenderLimitedBoxBinding on RenderLimitedBox {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RenderLimitedBox');
       case 'parentData':
         return parentData;
@@ -1180,7 +1180,7 @@ class RenderAspectRatioAutoBinding extends HTExternalClass {
 extension RenderAspectRatioBinding on RenderAspectRatio {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RenderAspectRatio');
       case 'parentData':
         return parentData;
@@ -1540,7 +1540,7 @@ class RenderIntrinsicWidthAutoBinding extends HTExternalClass {
 extension RenderIntrinsicWidthBinding on RenderIntrinsicWidth {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RenderIntrinsicWidth');
       case 'parentData':
         return parentData;
@@ -1899,7 +1899,7 @@ class RenderIntrinsicHeightAutoBinding extends HTExternalClass {
 extension RenderIntrinsicHeightBinding on RenderIntrinsicHeight {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RenderIntrinsicHeight');
       case 'parentData':
         return parentData;
@@ -2254,7 +2254,7 @@ class RenderOpacityAutoBinding extends HTExternalClass {
 extension RenderOpacityBinding on RenderOpacity {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RenderOpacity');
       case 'parentData':
         return parentData;
@@ -2620,7 +2620,7 @@ class RenderAnimatedOpacityAutoBinding extends HTExternalClass {
 extension RenderAnimatedOpacityBinding on RenderAnimatedOpacity {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RenderAnimatedOpacity');
       case 'parentData':
         return parentData;
@@ -2981,7 +2981,7 @@ class RenderShaderMaskAutoBinding extends HTExternalClass {
 extension RenderShaderMaskBinding on RenderShaderMask {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RenderShaderMask');
       case 'parentData':
         return parentData;
@@ -3345,7 +3345,7 @@ class RenderBackdropFilterAutoBinding extends HTExternalClass {
 extension RenderBackdropFilterBinding on RenderBackdropFilter {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RenderBackdropFilter');
       case 'parentData':
         return parentData;
@@ -3701,7 +3701,7 @@ class ShapeBorderClipperAutoBinding extends HTExternalClass {
 extension ShapeBorderClipperBinding on ShapeBorderClipper {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ShapeBorderClipper');
       case 'shape':
         return shape;
@@ -3770,7 +3770,7 @@ class RenderClipRectAutoBinding extends HTExternalClass {
 extension RenderClipRectBinding on RenderClipRect {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RenderClipRect');
       case 'parentData':
         return parentData;
@@ -4134,7 +4134,7 @@ class RenderClipRRectAutoBinding extends HTExternalClass {
 extension RenderClipRRectBinding on RenderClipRRect {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RenderClipRRect');
       case 'parentData':
         return parentData;
@@ -4500,7 +4500,7 @@ class RenderClipOvalAutoBinding extends HTExternalClass {
 extension RenderClipOvalBinding on RenderClipOval {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RenderClipOval');
       case 'parentData':
         return parentData;
@@ -4861,7 +4861,7 @@ class RenderClipPathAutoBinding extends HTExternalClass {
 extension RenderClipPathBinding on RenderClipPath {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RenderClipPath');
       case 'parentData':
         return parentData;
@@ -5233,7 +5233,7 @@ class RenderPhysicalModelAutoBinding extends HTExternalClass {
 extension RenderPhysicalModelBinding on RenderPhysicalModel {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RenderPhysicalModel');
       case 'parentData':
         return parentData;
@@ -5623,7 +5623,7 @@ class RenderPhysicalShapeAutoBinding extends HTExternalClass {
 extension RenderPhysicalShapeBinding on RenderPhysicalShape {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RenderPhysicalShape');
       case 'parentData':
         return parentData;
@@ -5999,7 +5999,7 @@ class RenderDecoratedBoxAutoBinding extends HTExternalClass {
 extension RenderDecoratedBoxBinding on RenderDecoratedBox {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RenderDecoratedBox');
       case 'parentData':
         return parentData;
@@ -6378,7 +6378,7 @@ class RenderTransformAutoBinding extends HTExternalClass {
 extension RenderTransformBinding on RenderTransform {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RenderTransform');
       case 'transformHitTests':
         return transformHitTests;
@@ -6783,7 +6783,7 @@ class RenderFittedBoxAutoBinding extends HTExternalClass {
 extension RenderFittedBoxBinding on RenderFittedBox {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RenderFittedBox');
       case 'parentData':
         return parentData;
@@ -7159,7 +7159,7 @@ class RenderFractionalTranslationAutoBinding extends HTExternalClass {
 extension RenderFractionalTranslationBinding on RenderFractionalTranslation {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RenderFractionalTranslation');
       case 'transformHitTests':
         return transformHitTests;
@@ -7551,7 +7551,7 @@ class RenderPointerListenerAutoBinding extends HTExternalClass {
 extension RenderPointerListenerBinding on RenderPointerListener {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RenderPointerListener');
       case 'onPointerDown':
         return onPointerDown;
@@ -7958,7 +7958,7 @@ class RenderMouseRegionAutoBinding extends HTExternalClass {
 extension RenderMouseRegionBinding on RenderMouseRegion {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RenderMouseRegion');
       case 'onEnter':
         return onEnter;
@@ -8334,7 +8334,7 @@ class RenderRepaintBoundaryAutoBinding extends HTExternalClass {
 extension RenderRepaintBoundaryBinding on RenderRepaintBoundary {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RenderRepaintBoundary');
       case 'parentData':
         return parentData;
@@ -8700,7 +8700,7 @@ class RenderIgnorePointerAutoBinding extends HTExternalClass {
 extension RenderIgnorePointerBinding on RenderIgnorePointer {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RenderIgnorePointer');
       case 'parentData':
         return parentData;
@@ -9062,7 +9062,7 @@ class RenderOffstageAutoBinding extends HTExternalClass {
 extension RenderOffstageBinding on RenderOffstage {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RenderOffstage');
       case 'parentData':
         return parentData;
@@ -9424,7 +9424,7 @@ class RenderAbsorbPointerAutoBinding extends HTExternalClass {
 extension RenderAbsorbPointerBinding on RenderAbsorbPointer {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RenderAbsorbPointer');
       case 'parentData':
         return parentData;
@@ -9789,7 +9789,7 @@ class RenderMetaDataAutoBinding extends HTExternalClass {
 extension RenderMetaDataBinding on RenderMetaData {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RenderMetaData');
       case 'metaData':
         return metaData;
@@ -10179,7 +10179,7 @@ extension RenderSemanticsGestureHandlerBinding
     on RenderSemanticsGestureHandler {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RenderSemanticsGestureHandler');
       case 'scrollFactor':
         return scrollFactor;
@@ -10670,7 +10670,7 @@ class RenderSemanticsAnnotationsAutoBinding extends HTExternalClass {
 extension RenderSemanticsAnnotationsBinding on RenderSemanticsAnnotations {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RenderSemanticsAnnotations');
       case 'parentData':
         return parentData;
@@ -11295,7 +11295,7 @@ class RenderBlockSemanticsAutoBinding extends HTExternalClass {
 extension RenderBlockSemanticsBinding on RenderBlockSemantics {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RenderBlockSemantics');
       case 'parentData':
         return parentData;
@@ -11652,7 +11652,7 @@ class RenderMergeSemanticsAutoBinding extends HTExternalClass {
 extension RenderMergeSemanticsBinding on RenderMergeSemantics {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RenderMergeSemantics');
       case 'parentData':
         return parentData;
@@ -12009,7 +12009,7 @@ class RenderExcludeSemanticsAutoBinding extends HTExternalClass {
 extension RenderExcludeSemanticsBinding on RenderExcludeSemantics {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RenderExcludeSemantics');
       case 'parentData':
         return parentData;
@@ -12366,7 +12366,7 @@ class RenderIndexedSemanticsAutoBinding extends HTExternalClass {
 extension RenderIndexedSemanticsBinding on RenderIndexedSemantics {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RenderIndexedSemantics');
       case 'parentData':
         return parentData;
@@ -12724,7 +12724,7 @@ class RenderLeaderLayerAutoBinding extends HTExternalClass {
 extension RenderLeaderLayerBinding on RenderLeaderLayer {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RenderLeaderLayer');
       case 'parentData':
         return parentData;
@@ -13093,7 +13093,7 @@ class RenderFollowerLayerAutoBinding extends HTExternalClass {
 extension RenderFollowerLayerBinding on RenderFollowerLayer {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RenderFollowerLayer');
       case 'parentData':
         return parentData;

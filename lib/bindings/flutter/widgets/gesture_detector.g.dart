@@ -170,7 +170,7 @@ class GestureDetectorAutoBinding extends HTExternalClass {
 extension GestureDetectorBinding on GestureDetector {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('GestureDetector');
       case 'child':
         return child;
@@ -355,7 +355,7 @@ class RawGestureDetectorAutoBinding extends HTExternalClass {
 extension RawGestureDetectorBinding on RawGestureDetector {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RawGestureDetector');
       case 'child':
         return child;
@@ -436,7 +436,7 @@ class RawGestureDetectorStateAutoBinding extends HTExternalClass {
 extension RawGestureDetectorStateBinding on RawGestureDetectorState {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RawGestureDetectorState');
       case 'widget':
         return widget;

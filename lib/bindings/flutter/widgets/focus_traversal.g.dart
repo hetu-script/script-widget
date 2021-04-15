@@ -26,7 +26,7 @@ class TraversalDirectionAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('TraversalDirection');
       case 'index':
         return (instance as TraversalDirection).index;
@@ -62,7 +62,7 @@ class WidgetOrderTraversalPolicyAutoBinding extends HTExternalClass {
 extension WidgetOrderTraversalPolicyBinding on WidgetOrderTraversalPolicy {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('WidgetOrderTraversalPolicy');
       case 'sortDescendants':
         return ({positionalArgs, namedArgs, typeArgs}) =>
@@ -135,7 +135,7 @@ class ReadingOrderTraversalPolicyAutoBinding extends HTExternalClass {
 extension ReadingOrderTraversalPolicyBinding on ReadingOrderTraversalPolicy {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ReadingOrderTraversalPolicy');
       case 'sortDescendants':
         return ({positionalArgs, namedArgs, typeArgs}) =>
@@ -207,7 +207,7 @@ class NumericFocusOrderAutoBinding extends HTExternalClass {
 extension NumericFocusOrderBinding on NumericFocusOrder {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('NumericFocusOrder');
       case 'order':
         return order;
@@ -260,7 +260,7 @@ class LexicalFocusOrderAutoBinding extends HTExternalClass {
 extension LexicalFocusOrderBinding on LexicalFocusOrder {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('LexicalFocusOrder');
       case 'order':
         return order;
@@ -316,7 +316,7 @@ class OrderedTraversalPolicyAutoBinding extends HTExternalClass {
 extension OrderedTraversalPolicyBinding on OrderedTraversalPolicy {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('OrderedTraversalPolicy');
       case 'secondary':
         return secondary;
@@ -398,7 +398,7 @@ class FocusTraversalOrderAutoBinding extends HTExternalClass {
 extension FocusTraversalOrderBinding on FocusTraversalOrder {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('FocusTraversalOrder');
       case 'order':
         return order;
@@ -487,7 +487,7 @@ class FocusTraversalGroupAutoBinding extends HTExternalClass {
 extension FocusTraversalGroupBinding on FocusTraversalGroup {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('FocusTraversalGroup');
       case 'policy':
         return policy;
@@ -564,7 +564,7 @@ class RequestFocusIntentAutoBinding extends HTExternalClass {
 extension RequestFocusIntentBinding on RequestFocusIntent {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RequestFocusIntent');
       case 'focusNode':
         return focusNode;
@@ -614,7 +614,7 @@ class RequestFocusActionAutoBinding extends HTExternalClass {
 extension RequestFocusActionBinding on RequestFocusAction {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RequestFocusAction');
       case 'intentType':
         return intentType;
@@ -672,7 +672,7 @@ class NextFocusIntentAutoBinding extends HTExternalClass {
 extension NextFocusIntentBinding on NextFocusIntent {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('NextFocusIntent');
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
@@ -720,7 +720,7 @@ class NextFocusActionAutoBinding extends HTExternalClass {
 extension NextFocusActionBinding on NextFocusAction {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('NextFocusAction');
       case 'intentType':
         return intentType;
@@ -778,7 +778,7 @@ class PreviousFocusIntentAutoBinding extends HTExternalClass {
 extension PreviousFocusIntentBinding on PreviousFocusIntent {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('PreviousFocusIntent');
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
@@ -826,7 +826,7 @@ class PreviousFocusActionAutoBinding extends HTExternalClass {
 extension PreviousFocusActionBinding on PreviousFocusAction {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('PreviousFocusAction');
       case 'intentType':
         return intentType;
@@ -888,7 +888,7 @@ class DirectionalFocusIntentAutoBinding extends HTExternalClass {
 extension DirectionalFocusIntentBinding on DirectionalFocusIntent {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('DirectionalFocusIntent');
       case 'direction':
         return direction;
@@ -941,7 +941,7 @@ class DirectionalFocusActionAutoBinding extends HTExternalClass {
 extension DirectionalFocusActionBinding on DirectionalFocusAction {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('DirectionalFocusAction');
       case 'intentType':
         return intentType;

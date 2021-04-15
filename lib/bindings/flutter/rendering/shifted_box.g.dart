@@ -42,7 +42,7 @@ class RenderPaddingAutoBinding extends HTExternalClass {
 extension RenderPaddingBinding on RenderPadding {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RenderPadding');
       case 'parentData':
         return parentData;
@@ -413,7 +413,7 @@ class RenderPositionedBoxAutoBinding extends HTExternalClass {
 extension RenderPositionedBoxBinding on RenderPositionedBox {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RenderPositionedBox');
       case 'parentData':
         return parentData;
@@ -797,7 +797,7 @@ class RenderConstrainedOverflowBoxAutoBinding extends HTExternalClass {
 extension RenderConstrainedOverflowBoxBinding on RenderConstrainedOverflowBox {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RenderConstrainedOverflowBox');
       case 'parentData':
         return parentData;
@@ -1179,7 +1179,7 @@ class RenderUnconstrainedBoxAutoBinding extends HTExternalClass {
 extension RenderUnconstrainedBoxBinding on RenderUnconstrainedBox {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RenderUnconstrainedBox');
       case 'parentData':
         return parentData;
@@ -1555,7 +1555,7 @@ class RenderSizedOverflowBoxAutoBinding extends HTExternalClass {
 extension RenderSizedOverflowBoxBinding on RenderSizedOverflowBox {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RenderSizedOverflowBox');
       case 'parentData':
         return parentData;
@@ -1926,7 +1926,7 @@ extension RenderFractionallySizedOverflowBoxBinding
     on RenderFractionallySizedOverflowBox {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RenderFractionallySizedOverflowBox');
       case 'parentData':
         return parentData;
@@ -2291,7 +2291,7 @@ extension RenderCustomSingleChildLayoutBoxBinding
     on RenderCustomSingleChildLayoutBox {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RenderCustomSingleChildLayoutBox');
       case 'parentData':
         return parentData;
@@ -2644,7 +2644,7 @@ class RenderBaselineAutoBinding extends HTExternalClass {
 extension RenderBaselineBinding on RenderBaseline {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RenderBaseline');
       case 'parentData':
         return parentData;

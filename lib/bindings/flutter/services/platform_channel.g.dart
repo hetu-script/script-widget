@@ -28,7 +28,7 @@ class MethodChannelAutoBinding extends HTExternalClass {
 extension MethodChannelBinding on MethodChannel {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('MethodChannel');
       case 'name':
         return name;
@@ -92,7 +92,7 @@ class OptionalMethodChannelAutoBinding extends HTExternalClass {
 extension OptionalMethodChannelBinding on OptionalMethodChannel {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('OptionalMethodChannel');
       case 'name':
         return name;
@@ -157,7 +157,7 @@ class EventChannelAutoBinding extends HTExternalClass {
 extension EventChannelBinding on EventChannel {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('EventChannel');
       case 'name':
         return name;

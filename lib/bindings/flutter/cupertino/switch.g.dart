@@ -39,7 +39,7 @@ class CupertinoSwitchAutoBinding extends HTExternalClass {
 extension CupertinoSwitchBinding on CupertinoSwitch {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('CupertinoSwitch');
       case 'value':
         return value;

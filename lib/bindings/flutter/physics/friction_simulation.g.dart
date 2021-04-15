@@ -36,7 +36,7 @@ class FrictionSimulationAutoBinding extends HTExternalClass {
 extension FrictionSimulationBinding on FrictionSimulation {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('FrictionSimulation');
       case 'tolerance':
         return tolerance;
@@ -99,7 +99,7 @@ class BoundedFrictionSimulationAutoBinding extends HTExternalClass {
 extension BoundedFrictionSimulationBinding on BoundedFrictionSimulation {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('BoundedFrictionSimulation');
       case 'tolerance':
         return tolerance;

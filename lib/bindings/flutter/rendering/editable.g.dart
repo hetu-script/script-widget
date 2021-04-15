@@ -32,7 +32,7 @@ class SelectionChangedCauseAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('SelectionChangedCause');
       case 'index':
         return (instance as SelectionChangedCause).index;
@@ -68,7 +68,7 @@ class TextSelectionPointAutoBinding extends HTExternalClass {
 extension TextSelectionPointBinding on TextSelectionPoint {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('TextSelectionPoint');
       case 'point':
         return point;
@@ -208,7 +208,7 @@ class RenderEditableAutoBinding extends HTExternalClass {
 extension RenderEditableBinding on RenderEditable {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RenderEditable');
       case 'onSelectionChanged':
         return onSelectionChanged;

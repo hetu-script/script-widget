@@ -116,7 +116,7 @@ class TextButtonAutoBinding extends HTExternalClass {
 extension TextButtonBinding on TextButton {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('TextButton');
       case 'onPressed':
         return onPressed;

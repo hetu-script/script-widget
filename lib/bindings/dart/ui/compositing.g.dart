@@ -23,7 +23,7 @@ class SceneBuilderAutoBinding extends HTExternalClass {
 extension SceneBuilderBinding on SceneBuilder {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('SceneBuilder');
       case 'pushTransform':
         return ({positionalArgs, namedArgs, typeArgs}) => pushTransform(
@@ -208,7 +208,7 @@ class SceneHostAutoBinding extends HTExternalClass {
 extension SceneHostBinding on SceneHost {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('SceneHost');
       case 'dispose':
         return ({positionalArgs, namedArgs, typeArgs}) => dispose();

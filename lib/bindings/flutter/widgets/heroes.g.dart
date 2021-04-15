@@ -22,7 +22,7 @@ class HeroFlightDirectionAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('HeroFlightDirection');
       case 'index':
         return (instance as HeroFlightDirection).index;
@@ -94,7 +94,7 @@ class HeroAutoBinding extends HTExternalClass {
 extension HeroBinding on Hero {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Hero');
       case 'tag':
         return tag;
@@ -187,7 +187,7 @@ class HeroControllerAutoBinding extends HTExternalClass {
 extension HeroControllerBinding on HeroController {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('HeroController');
       case 'createRectTween':
         return createRectTween;
@@ -247,7 +247,7 @@ class HeroModeAutoBinding extends HTExternalClass {
 extension HeroModeBinding on HeroMode {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('HeroMode');
       case 'child':
         return child;

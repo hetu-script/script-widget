@@ -36,7 +36,7 @@ class ActionListenerAutoBinding extends HTExternalClass {
 extension ActionListenerBinding on ActionListener {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ActionListener');
       case 'listener':
         return listener;
@@ -112,7 +112,7 @@ class ActionDispatcherAutoBinding extends HTExternalClass {
 extension ActionDispatcherBinding on ActionDispatcher {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ActionDispatcher');
       case 'invokeAction':
         return ({positionalArgs, namedArgs, typeArgs}) => invokeAction(
@@ -167,7 +167,7 @@ class ActionsAutoBinding extends HTExternalClass {
 extension ActionsBinding on Actions {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Actions');
       case 'dispatcher':
         return dispatcher;
@@ -275,7 +275,7 @@ class FocusableActionDetectorAutoBinding extends HTExternalClass {
 extension FocusableActionDetectorBinding on FocusableActionDetector {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('FocusableActionDetector');
       case 'enabled':
         return enabled;
@@ -365,7 +365,7 @@ class DoNothingIntentAutoBinding extends HTExternalClass {
 extension DoNothingIntentBinding on DoNothingIntent {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('DoNothingIntent');
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
@@ -409,7 +409,7 @@ extension DoNothingAndStopPropagationIntentBinding
     on DoNothingAndStopPropagationIntent {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('DoNothingAndStopPropagationIntent');
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
@@ -460,7 +460,7 @@ class DoNothingActionAutoBinding extends HTExternalClass {
 extension DoNothingActionBinding on DoNothingAction {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('DoNothingAction');
       case 'intentType':
         return intentType;
@@ -518,7 +518,7 @@ class ActivateIntentAutoBinding extends HTExternalClass {
 extension ActivateIntentBinding on ActivateIntent {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ActivateIntent');
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
@@ -560,7 +560,7 @@ class ButtonActivateIntentAutoBinding extends HTExternalClass {
 extension ButtonActivateIntentBinding on ButtonActivateIntent {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ButtonActivateIntent');
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
@@ -601,7 +601,7 @@ class SelectIntentAutoBinding extends HTExternalClass {
 extension SelectIntentBinding on SelectIntent {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('SelectIntent');
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
@@ -642,7 +642,7 @@ class DismissIntentAutoBinding extends HTExternalClass {
 extension DismissIntentBinding on DismissIntent {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('DismissIntent');
       case 'toStringShort':
         return ({positionalArgs, namedArgs, typeArgs}) => toStringShort();
@@ -684,7 +684,7 @@ class PrioritizedIntentsAutoBinding extends HTExternalClass {
 extension PrioritizedIntentsBinding on PrioritizedIntents {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('PrioritizedIntents');
       case 'orderedIntents':
         return orderedIntents;
@@ -734,7 +734,7 @@ class PrioritizedActionAutoBinding extends HTExternalClass {
 extension PrioritizedActionBinding on PrioritizedAction {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('PrioritizedAction');
       case 'intentType':
         return intentType;

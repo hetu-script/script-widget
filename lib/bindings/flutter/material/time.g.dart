@@ -21,7 +21,7 @@ class DayPeriodAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('DayPeriod');
       case 'index':
         return (instance as DayPeriod).index;
@@ -62,7 +62,7 @@ class TimeOfDayFormatAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('TimeOfDayFormat');
       case 'index':
         return (instance as TimeOfDayFormat).index;
@@ -97,7 +97,7 @@ class HourFormatAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('HourFormat');
       case 'index':
         return (instance as HourFormat).index;
@@ -144,7 +144,7 @@ class TimeOfDayAutoBinding extends HTExternalClass {
 extension TimeOfDayBinding on TimeOfDay {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('TimeOfDay');
       case 'hour':
         return hour;

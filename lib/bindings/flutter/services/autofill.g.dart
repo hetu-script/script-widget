@@ -170,7 +170,7 @@ class AutofillConfigurationAutoBinding extends HTExternalClass {
 extension AutofillConfigurationBinding on AutofillConfiguration {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('AutofillConfiguration');
       case 'uniqueIdentifier':
         return uniqueIdentifier;

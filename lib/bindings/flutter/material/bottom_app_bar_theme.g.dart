@@ -37,7 +37,7 @@ class BottomAppBarThemeAutoBinding extends HTExternalClass {
 extension BottomAppBarThemeBinding on BottomAppBarTheme {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('BottomAppBarTheme');
       case 'color':
         return color;

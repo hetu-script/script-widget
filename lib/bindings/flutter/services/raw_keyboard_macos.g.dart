@@ -69,7 +69,7 @@ class RawKeyEventDataMacOsAutoBinding extends HTExternalClass {
 extension RawKeyEventDataMacOsBinding on RawKeyEventDataMacOs {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RawKeyEventDataMacOs');
       case 'characters':
         return characters;

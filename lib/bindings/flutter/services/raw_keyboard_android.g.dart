@@ -90,7 +90,7 @@ class RawKeyEventDataAndroidAutoBinding extends HTExternalClass {
 extension RawKeyEventDataAndroidBinding on RawKeyEventDataAndroid {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RawKeyEventDataAndroid');
       case 'flags':
         return flags;

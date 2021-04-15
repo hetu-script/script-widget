@@ -30,7 +30,7 @@ class TextButtonThemeDataAutoBinding extends HTExternalClass {
 extension TextButtonThemeDataBinding on TextButtonThemeData {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('TextButtonThemeData');
       case 'style':
         return style;
@@ -84,7 +84,7 @@ class TextButtonThemeAutoBinding extends HTExternalClass {
 extension TextButtonThemeBinding on TextButtonTheme {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('TextButtonTheme');
       case 'data':
         return data;

@@ -35,7 +35,7 @@ class SliverLayoutBuilderAutoBinding extends HTExternalClass {
 extension SliverLayoutBuilderBinding on SliverLayoutBuilder {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('SliverLayoutBuilder');
       case 'key':
         return key;

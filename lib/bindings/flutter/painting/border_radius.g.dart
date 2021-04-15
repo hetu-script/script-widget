@@ -61,7 +61,7 @@ class BorderRadiusAutoBinding extends HTExternalClass {
 extension BorderRadiusBinding on BorderRadius {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('BorderRadius');
       case 'topLeft':
         return topLeft;
@@ -158,7 +158,7 @@ class BorderRadiusDirectionalAutoBinding extends HTExternalClass {
 extension BorderRadiusDirectionalBinding on BorderRadiusDirectional {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('BorderRadiusDirectional');
       case 'topStart':
         return topStart;

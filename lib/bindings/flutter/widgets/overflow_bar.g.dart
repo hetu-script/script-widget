@@ -25,7 +25,7 @@ class OverflowBarAlignmentAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('OverflowBarAlignment');
       case 'index':
         return (instance as OverflowBarAlignment).index;
@@ -81,7 +81,7 @@ class OverflowBarAutoBinding extends HTExternalClass {
 extension OverflowBarBinding on OverflowBar {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('OverflowBar');
       case 'spacing':
         return spacing;

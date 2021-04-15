@@ -66,7 +66,7 @@ class InternetAddressAutoBinding extends HTExternalClass {
 extension InternetAddressBinding on InternetAddress {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('InternetAddress');
       case 'type':
         return type;
@@ -234,7 +234,7 @@ class RawSocketOptionAutoBinding extends HTExternalClass {
 extension RawSocketOptionBinding on RawSocketOption {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RawSocketOption');
       case 'level':
         return level;
@@ -348,7 +348,7 @@ class DatagramAutoBinding extends HTExternalClass {
 extension DatagramBinding on Datagram {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Datagram');
       case 'data':
         return data;
@@ -431,7 +431,7 @@ class SocketExceptionAutoBinding extends HTExternalClass {
 extension SocketExceptionBinding on SocketException {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('SocketException');
       case 'message':
         return message;

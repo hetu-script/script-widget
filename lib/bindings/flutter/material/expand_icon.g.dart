@@ -40,7 +40,7 @@ class ExpandIconAutoBinding extends HTExternalClass {
 extension ExpandIconBinding on ExpandIcon {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ExpandIcon');
       case 'isExpanded':
         return isExpanded;

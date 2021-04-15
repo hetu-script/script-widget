@@ -44,7 +44,7 @@ class AboutListTileAutoBinding extends HTExternalClass {
 extension AboutListTileBinding on AboutListTile {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('AboutListTile');
       case 'icon':
         return icon;
@@ -147,7 +147,7 @@ class AboutDialogAutoBinding extends HTExternalClass {
 extension AboutDialogBinding on AboutDialog {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('AboutDialog');
       case 'applicationName':
         return applicationName;
@@ -241,7 +241,7 @@ class LicensePageAutoBinding extends HTExternalClass {
 extension LicensePageBinding on LicensePage {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('LicensePage');
       case 'applicationName':
         return applicationName;

@@ -132,7 +132,7 @@ class SwitchListTileAutoBinding extends HTExternalClass {
 extension SwitchListTileBinding on SwitchListTile {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('SwitchListTile');
       case 'value':
         return value;

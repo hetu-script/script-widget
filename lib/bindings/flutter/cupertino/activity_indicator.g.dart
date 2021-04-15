@@ -44,7 +44,7 @@ class CupertinoActivityIndicatorAutoBinding extends HTExternalClass {
 extension CupertinoActivityIndicatorBinding on CupertinoActivityIndicator {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('CupertinoActivityIndicator');
       case 'animating':
         return animating;

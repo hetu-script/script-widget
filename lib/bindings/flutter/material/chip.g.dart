@@ -89,7 +89,7 @@ class ChipAutoBinding extends HTExternalClass {
 extension ChipBinding on Chip {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Chip');
       case 'avatar':
         return avatar;
@@ -281,7 +281,7 @@ class InputChipAutoBinding extends HTExternalClass {
 extension InputChipBinding on InputChip {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('InputChip');
       case 'avatar':
         return avatar;
@@ -476,7 +476,7 @@ class ChoiceChipAutoBinding extends HTExternalClass {
 extension ChoiceChipBinding on ChoiceChip {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ChoiceChip');
       case 'avatar':
         return avatar;
@@ -661,7 +661,7 @@ class FilterChipAutoBinding extends HTExternalClass {
 extension FilterChipBinding on FilterChip {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('FilterChip');
       case 'avatar':
         return avatar;
@@ -836,7 +836,7 @@ class ActionChipAutoBinding extends HTExternalClass {
 extension ActionChipBinding on ActionChip {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ActionChip');
       case 'avatar':
         return avatar;
@@ -1024,7 +1024,7 @@ class RawChipAutoBinding extends HTExternalClass {
 extension RawChipBinding on RawChip {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RawChip');
       case 'avatar':
         return avatar;

@@ -29,7 +29,7 @@ class ViewConfigurationAutoBinding extends HTExternalClass {
 extension ViewConfigurationBinding on ViewConfiguration {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ViewConfiguration');
       case 'size':
         return size;
@@ -82,7 +82,7 @@ class RenderViewAutoBinding extends HTExternalClass {
 extension RenderViewBinding on RenderView {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RenderView');
       case 'automaticSystemUiAdjustment':
         return automaticSystemUiAdjustment;

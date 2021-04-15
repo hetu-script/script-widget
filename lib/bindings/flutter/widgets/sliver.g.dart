@@ -73,7 +73,7 @@ class SliverChildBuilderDelegateAutoBinding extends HTExternalClass {
 extension SliverChildBuilderDelegateBinding on SliverChildBuilderDelegate {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('SliverChildBuilderDelegate');
       case 'builder':
         return builder;
@@ -195,7 +195,7 @@ class SliverChildListDelegateAutoBinding extends HTExternalClass {
 extension SliverChildListDelegateBinding on SliverChildListDelegate {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('SliverChildListDelegate');
       case 'addAutomaticKeepAlives':
         return addAutomaticKeepAlives;
@@ -259,7 +259,7 @@ class SliverListAutoBinding extends HTExternalClass {
 extension SliverListBinding on SliverList {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('SliverList');
       case 'delegate':
         return delegate;
@@ -339,7 +339,7 @@ class SliverFixedExtentListAutoBinding extends HTExternalClass {
 extension SliverFixedExtentListBinding on SliverFixedExtentList {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('SliverFixedExtentList');
       case 'itemExtent':
         return itemExtent;
@@ -456,7 +456,7 @@ class SliverGridAutoBinding extends HTExternalClass {
 extension SliverGridBinding on SliverGrid {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('SliverGrid');
       case 'gridDelegate':
         return gridDelegate;
@@ -551,7 +551,7 @@ class SliverMultiBoxAdaptorElementAutoBinding extends HTExternalClass {
 extension SliverMultiBoxAdaptorElementBinding on SliverMultiBoxAdaptorElement {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('SliverMultiBoxAdaptorElement');
       case 'widget':
         return widget;
@@ -795,7 +795,7 @@ class SliverOpacityAutoBinding extends HTExternalClass {
 extension SliverOpacityBinding on SliverOpacity {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('SliverOpacity');
       case 'opacity':
         return opacity;
@@ -884,7 +884,7 @@ class SliverIgnorePointerAutoBinding extends HTExternalClass {
 extension SliverIgnorePointerBinding on SliverIgnorePointer {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('SliverIgnorePointer');
       case 'ignoring':
         return ignoring;
@@ -970,7 +970,7 @@ class SliverOffstageAutoBinding extends HTExternalClass {
 extension SliverOffstageBinding on SliverOffstage {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('SliverOffstage');
       case 'offstage':
         return offstage;
@@ -1051,7 +1051,7 @@ class KeepAliveAutoBinding extends HTExternalClass {
 extension KeepAliveBinding on KeepAlive {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('KeepAlive');
       case 'keepAlive':
         return keepAlive;

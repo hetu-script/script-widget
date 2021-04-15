@@ -37,7 +37,7 @@ class WidgetInspectorAutoBinding extends HTExternalClass {
 extension WidgetInspectorBinding on WidgetInspector {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('WidgetInspector');
       case 'child':
         return child;
@@ -116,7 +116,7 @@ class InspectorSelectionAutoBinding extends HTExternalClass {
 extension InspectorSelectionBinding on InspectorSelection {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('InspectorSelection');
       case 'candidates':
         return candidates;
@@ -178,7 +178,7 @@ class DevToolsDeepLinkPropertyAutoBinding extends HTExternalClass {
 extension DevToolsDeepLinkPropertyBinding on DevToolsDeepLinkProperty {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('DevToolsDeepLinkProperty');
       case 'expandableValue':
         return expandableValue;

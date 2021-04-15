@@ -29,7 +29,7 @@ class TableCellVerticalAlignmentAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('TableCellVerticalAlignment');
       case 'index':
         return (instance as TableCellVerticalAlignment).index;
@@ -69,7 +69,7 @@ class TableCellParentDataAutoBinding extends HTExternalClass {
 extension TableCellParentDataBinding on TableCellParentData {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('TableCellParentData');
       case 'verticalAlignment':
         return verticalAlignment;
@@ -129,7 +129,7 @@ class IntrinsicColumnWidthAutoBinding extends HTExternalClass {
 extension IntrinsicColumnWidthBinding on IntrinsicColumnWidth {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('IntrinsicColumnWidth');
       case 'minIntrinsicWidth':
         return ({positionalArgs, namedArgs, typeArgs}) =>
@@ -171,7 +171,7 @@ class FixedColumnWidthAutoBinding extends HTExternalClass {
 extension FixedColumnWidthBinding on FixedColumnWidth {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('FixedColumnWidth');
       case 'value':
         return value;
@@ -215,7 +215,7 @@ class FractionColumnWidthAutoBinding extends HTExternalClass {
 extension FractionColumnWidthBinding on FractionColumnWidth {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('FractionColumnWidth');
       case 'value':
         return value;
@@ -259,7 +259,7 @@ class FlexColumnWidthAutoBinding extends HTExternalClass {
 extension FlexColumnWidthBinding on FlexColumnWidth {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('FlexColumnWidth');
       case 'value':
         return value;
@@ -303,7 +303,7 @@ class MaxColumnWidthAutoBinding extends HTExternalClass {
 extension MaxColumnWidthBinding on MaxColumnWidth {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('MaxColumnWidth');
       case 'a':
         return a;
@@ -349,7 +349,7 @@ class MinColumnWidthAutoBinding extends HTExternalClass {
 extension MinColumnWidthBinding on MinColumnWidth {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('MinColumnWidth');
       case 'a':
         return a;
@@ -434,7 +434,7 @@ class RenderTableAutoBinding extends HTExternalClass {
 extension RenderTableBinding on RenderTable {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RenderTable');
       case 'parentData':
         return parentData;

@@ -23,7 +23,7 @@ class WriteBufferAutoBinding extends HTExternalClass {
 extension WriteBufferBinding on WriteBuffer {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('WriteBuffer');
       case 'putUint8':
         return ({positionalArgs, namedArgs, typeArgs}) =>
@@ -96,7 +96,7 @@ class ReadBufferAutoBinding extends HTExternalClass {
 extension ReadBufferBinding on ReadBuffer {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ReadBuffer');
       case 'data':
         return data;

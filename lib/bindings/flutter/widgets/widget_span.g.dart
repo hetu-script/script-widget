@@ -40,7 +40,7 @@ class WidgetSpanAutoBinding extends HTExternalClass {
 extension WidgetSpanBinding on WidgetSpan {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('WidgetSpan');
       case 'child':
         return child;

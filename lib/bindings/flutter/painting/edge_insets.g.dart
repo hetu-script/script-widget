@@ -54,7 +54,7 @@ class EdgeInsetsAutoBinding extends HTExternalClass {
 extension EdgeInsetsBinding on EdgeInsets {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('EdgeInsets');
       case 'left':
         return left;
@@ -166,7 +166,7 @@ class EdgeInsetsDirectionalAutoBinding extends HTExternalClass {
 extension EdgeInsetsDirectionalBinding on EdgeInsetsDirectional {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('EdgeInsetsDirectional');
       case 'start':
         return start;

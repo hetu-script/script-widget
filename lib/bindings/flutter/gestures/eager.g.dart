@@ -26,7 +26,7 @@ class EagerGestureRecognizerAutoBinding extends HTExternalClass {
 extension EagerGestureRecognizerBinding on EagerGestureRecognizer {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('EagerGestureRecognizer');
       case 'debugOwner':
         return debugOwner;

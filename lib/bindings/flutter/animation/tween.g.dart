@@ -30,7 +30,7 @@ class ColorTweenAutoBinding extends HTExternalClass {
 extension ColorTweenBinding on ColorTween {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ColorTween');
       case 'begin':
         return begin;
@@ -101,7 +101,7 @@ class SizeTweenAutoBinding extends HTExternalClass {
 extension SizeTweenBinding on SizeTween {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('SizeTween');
       case 'begin':
         return begin;
@@ -172,7 +172,7 @@ class RectTweenAutoBinding extends HTExternalClass {
 extension RectTweenBinding on RectTween {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RectTween');
       case 'begin':
         return begin;
@@ -243,7 +243,7 @@ class IntTweenAutoBinding extends HTExternalClass {
 extension IntTweenBinding on IntTween {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('IntTween');
       case 'begin':
         return begin;
@@ -314,7 +314,7 @@ class StepTweenAutoBinding extends HTExternalClass {
 extension StepTweenBinding on StepTween {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('StepTween');
       case 'begin':
         return begin;
@@ -384,7 +384,7 @@ class CurveTweenAutoBinding extends HTExternalClass {
 extension CurveTweenBinding on CurveTween {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('CurveTween');
       case 'curve':
         return curve;

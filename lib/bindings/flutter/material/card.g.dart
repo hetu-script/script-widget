@@ -45,7 +45,7 @@ class CardAutoBinding extends HTExternalClass {
 extension CardBinding on Card {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Card');
       case 'color':
         return color;

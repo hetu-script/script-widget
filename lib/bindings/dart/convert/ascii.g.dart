@@ -26,7 +26,7 @@ class AsciiCodecAutoBinding extends HTExternalClass {
 extension AsciiCodecBinding on AsciiCodec {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('AsciiCodec');
       case 'name':
         return name;
@@ -74,7 +74,7 @@ class AsciiEncoderAutoBinding extends HTExternalClass {
 extension AsciiEncoderBinding on AsciiEncoder {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('AsciiEncoder');
       case 'convert':
         return ({positionalArgs, namedArgs, typeArgs}) => convert(
@@ -123,7 +123,7 @@ class AsciiDecoderAutoBinding extends HTExternalClass {
 extension AsciiDecoderBinding on AsciiDecoder {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('AsciiDecoder');
       case 'startChunkedConversion':
         return ({positionalArgs, namedArgs, typeArgs}) =>

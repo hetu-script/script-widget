@@ -59,7 +59,7 @@ class DataTableThemeDataAutoBinding extends HTExternalClass {
 extension DataTableThemeDataBinding on DataTableThemeData {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('DataTableThemeData');
       case 'decoration':
         return decoration;
@@ -163,7 +163,7 @@ class DataTableThemeAutoBinding extends HTExternalClass {
 extension DataTableThemeBinding on DataTableTheme {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('DataTableTheme');
       case 'data':
         return data;

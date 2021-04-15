@@ -80,7 +80,7 @@ class ZLibCodecAutoBinding extends HTExternalClass {
 extension ZLibCodecBinding on ZLibCodec {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ZLibCodec');
       case 'gzip':
         return gzip;
@@ -145,7 +145,7 @@ class GZipCodecAutoBinding extends HTExternalClass {
 extension GZipCodecBinding on GZipCodec {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('GZipCodec');
       case 'gzip':
         return gzip;
@@ -210,7 +210,7 @@ class ZLibEncoderAutoBinding extends HTExternalClass {
 extension ZLibEncoderBinding on ZLibEncoder {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ZLibEncoder');
       case 'gzip':
         return gzip;
@@ -275,7 +275,7 @@ class ZLibDecoderAutoBinding extends HTExternalClass {
 extension ZLibDecoderBinding on ZLibDecoder {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ZLibDecoder');
       case 'windowBits':
         return windowBits;
@@ -353,7 +353,7 @@ class RawZLibFilterAutoBinding extends HTExternalClass {
 extension RawZLibFilterBinding on RawZLibFilter {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RawZLibFilter');
       case 'process':
         return ({positionalArgs, namedArgs, typeArgs}) => process(

@@ -36,7 +36,7 @@ class ToleranceAutoBinding extends HTExternalClass {
 extension ToleranceBinding on Tolerance {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Tolerance');
       case 'distance':
         return distance;

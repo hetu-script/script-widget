@@ -57,7 +57,7 @@ class ButtonBarThemeDataAutoBinding extends HTExternalClass {
 extension ButtonBarThemeDataBinding on ButtonBarThemeData {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ButtonBarThemeData');
       case 'alignment':
         return alignment;
@@ -157,7 +157,7 @@ class ButtonBarThemeAutoBinding extends HTExternalClass {
 extension ButtonBarThemeBinding on ButtonBarTheme {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ButtonBarTheme');
       case 'data':
         return data;

@@ -27,7 +27,7 @@ class PlatformViewHitTestBehaviorAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('PlatformViewHitTestBehavior');
       case 'index':
         return (instance as PlatformViewHitTestBehavior).index;
@@ -80,7 +80,7 @@ class RenderAndroidViewAutoBinding extends HTExternalClass {
 extension RenderAndroidViewBinding on RenderAndroidView {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RenderAndroidView');
       case 'parentData':
         return parentData;
@@ -436,7 +436,7 @@ class RenderUiKitViewAutoBinding extends HTExternalClass {
 extension RenderUiKitViewBinding on RenderUiKitView {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RenderUiKitView');
       case 'hitTestBehavior':
         return hitTestBehavior;
@@ -781,7 +781,7 @@ class PlatformViewRenderBoxAutoBinding extends HTExternalClass {
 extension PlatformViewRenderBoxBinding on PlatformViewRenderBox {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('PlatformViewRenderBox');
       case 'parentData':
         return parentData;

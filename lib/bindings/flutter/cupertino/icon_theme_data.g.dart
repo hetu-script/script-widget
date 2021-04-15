@@ -32,7 +32,7 @@ class CupertinoIconThemeDataAutoBinding extends HTExternalClass {
 extension CupertinoIconThemeDataBinding on CupertinoIconThemeData {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('CupertinoIconThemeData');
       case 'color':
         return color;

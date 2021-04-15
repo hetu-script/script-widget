@@ -53,7 +53,7 @@ class FractionalOffsetAutoBinding extends HTExternalClass {
 extension FractionalOffsetBinding on FractionalOffset {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('FractionalOffset');
       case 'x':
         return x;

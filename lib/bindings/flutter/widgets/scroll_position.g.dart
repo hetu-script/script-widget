@@ -24,7 +24,7 @@ class ScrollPositionAlignmentPolicyAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ScrollPositionAlignmentPolicy');
       case 'index':
         return (instance as ScrollPositionAlignmentPolicy).index;

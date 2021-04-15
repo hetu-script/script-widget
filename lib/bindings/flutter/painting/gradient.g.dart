@@ -26,7 +26,7 @@ class GradientRotationAutoBinding extends HTExternalClass {
 extension GradientRotationBinding on GradientRotation {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('GradientRotation');
       case 'radians':
         return radians;
@@ -83,7 +83,7 @@ class LinearGradientAutoBinding extends HTExternalClass {
 extension LinearGradientBinding on LinearGradient {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('LinearGradient');
       case 'begin':
         return begin;
@@ -165,7 +165,7 @@ class RadialGradientAutoBinding extends HTExternalClass {
 extension RadialGradientBinding on RadialGradient {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RadialGradient');
       case 'center':
         return center;
@@ -252,7 +252,7 @@ class SweepGradientAutoBinding extends HTExternalClass {
 extension SweepGradientBinding on SweepGradient {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('SweepGradient');
       case 'center':
         return center;

@@ -38,7 +38,7 @@ class BigIntAutoBinding extends HTExternalClass {
 extension BigIntBinding on BigInt {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('BigInt');
       case 'bitLength':
         return bitLength;

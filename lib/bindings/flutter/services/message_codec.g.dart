@@ -25,7 +25,7 @@ class MethodCallAutoBinding extends HTExternalClass {
 extension MethodCallBinding on MethodCall {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('MethodCall');
       case 'method':
         return method;
@@ -69,7 +69,7 @@ class PlatformExceptionAutoBinding extends HTExternalClass {
 extension PlatformExceptionBinding on PlatformException {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('PlatformException');
       case 'code':
         return code;
@@ -111,7 +111,7 @@ class MissingPluginExceptionAutoBinding extends HTExternalClass {
 extension MissingPluginExceptionBinding on MissingPluginException {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('MissingPluginException');
       case 'message':
         return message;

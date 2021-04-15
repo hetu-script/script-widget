@@ -63,7 +63,7 @@ class NestedScrollViewAutoBinding extends HTExternalClass {
 extension NestedScrollViewBinding on NestedScrollView {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('NestedScrollView');
       case 'controller':
         return controller;
@@ -154,7 +154,7 @@ class NestedScrollViewStateAutoBinding extends HTExternalClass {
 extension NestedScrollViewStateBinding on NestedScrollViewState {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('NestedScrollViewState');
       case 'innerController':
         return innerController;
@@ -230,7 +230,7 @@ class SliverOverlapAbsorberHandleAutoBinding extends HTExternalClass {
 extension SliverOverlapAbsorberHandleBinding on SliverOverlapAbsorberHandle {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('SliverOverlapAbsorberHandle');
       case 'layoutExtent':
         return layoutExtent;
@@ -278,7 +278,7 @@ class SliverOverlapAbsorberAutoBinding extends HTExternalClass {
 extension SliverOverlapAbsorberBinding on SliverOverlapAbsorber {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('SliverOverlapAbsorber');
       case 'handle':
         return handle;
@@ -374,7 +374,7 @@ class RenderSliverOverlapAbsorberAutoBinding extends HTExternalClass {
 extension RenderSliverOverlapAbsorberBinding on RenderSliverOverlapAbsorber {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RenderSliverOverlapAbsorber');
       case 'parentData':
         return parentData;
@@ -670,7 +670,7 @@ class SliverOverlapInjectorAutoBinding extends HTExternalClass {
 extension SliverOverlapInjectorBinding on SliverOverlapInjector {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('SliverOverlapInjector');
       case 'handle':
         return handle;
@@ -762,7 +762,7 @@ class RenderSliverOverlapInjectorAutoBinding extends HTExternalClass {
 extension RenderSliverOverlapInjectorBinding on RenderSliverOverlapInjector {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RenderSliverOverlapInjector');
       case 'parentData':
         return parentData;
@@ -1061,7 +1061,7 @@ class NestedScrollViewViewportAutoBinding extends HTExternalClass {
 extension NestedScrollViewViewportBinding on NestedScrollViewViewport {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('NestedScrollViewViewport');
       case 'handle':
         return handle;
@@ -1187,7 +1187,7 @@ extension RenderNestedScrollViewViewportBinding
     on RenderNestedScrollViewViewport {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RenderNestedScrollViewViewport');
       case 'parentData':
         return parentData;

@@ -38,7 +38,7 @@ class ProxyAnimationAutoBinding extends HTExternalClass {
 extension ProxyAnimationBinding on ProxyAnimation {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ProxyAnimation');
       case 'parent':
         return parent;
@@ -133,7 +133,7 @@ class ReverseAnimationAutoBinding extends HTExternalClass {
 extension ReverseAnimationBinding on ReverseAnimation {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ReverseAnimation');
       case 'parent':
         return parent;
@@ -225,7 +225,7 @@ class CurvedAnimationAutoBinding extends HTExternalClass {
 extension CurvedAnimationBinding on CurvedAnimation {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('CurvedAnimation');
       case 'parent':
         return parent;
@@ -319,7 +319,7 @@ class TrainHoppingAnimationAutoBinding extends HTExternalClass {
 extension TrainHoppingAnimationBinding on TrainHoppingAnimation {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('TrainHoppingAnimation');
       case 'onSwitchedTrain':
         return onSwitchedTrain;
@@ -412,7 +412,7 @@ class AnimationMeanAutoBinding extends HTExternalClass {
 extension AnimationMeanBinding on AnimationMean {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('AnimationMean');
       case 'first':
         return first;

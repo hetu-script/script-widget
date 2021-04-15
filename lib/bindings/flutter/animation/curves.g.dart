@@ -25,7 +25,7 @@ class SawToothAutoBinding extends HTExternalClass {
 extension SawToothBinding on SawTooth {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('SawTooth');
       case 'count':
         return count;
@@ -71,7 +71,7 @@ class IntervalAutoBinding extends HTExternalClass {
 extension IntervalBinding on Interval {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Interval');
       case 'begin':
         return begin;
@@ -118,7 +118,7 @@ class ThresholdAutoBinding extends HTExternalClass {
 extension ThresholdBinding on Threshold {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Threshold');
       case 'threshold':
         return threshold;
@@ -164,7 +164,7 @@ class CubicAutoBinding extends HTExternalClass {
 extension CubicBinding on Cubic {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Cubic');
       case 'a':
         return a;
@@ -213,7 +213,7 @@ class Curve2DSampleAutoBinding extends HTExternalClass {
 extension Curve2DSampleBinding on Curve2DSample {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Curve2DSample');
       case 't':
         return t;
@@ -270,7 +270,7 @@ class CatmullRomSplineAutoBinding extends HTExternalClass {
 extension CatmullRomSplineBinding on CatmullRomSpline {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('CatmullRomSpline');
       case 'transformInternal':
         return ({positionalArgs, namedArgs, typeArgs}) =>
@@ -337,7 +337,7 @@ class CatmullRomCurveAutoBinding extends HTExternalClass {
 extension CatmullRomCurveBinding on CatmullRomCurve {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('CatmullRomCurve');
       case 'controlPoints':
         return controlPoints;
@@ -382,7 +382,7 @@ class FlippedCurveAutoBinding extends HTExternalClass {
 extension FlippedCurveBinding on FlippedCurve {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('FlippedCurve');
       case 'curve':
         return curve;
@@ -425,7 +425,7 @@ class ElasticInCurveAutoBinding extends HTExternalClass {
 extension ElasticInCurveBinding on ElasticInCurve {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ElasticInCurve');
       case 'period':
         return period;
@@ -468,7 +468,7 @@ class ElasticOutCurveAutoBinding extends HTExternalClass {
 extension ElasticOutCurveBinding on ElasticOutCurve {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ElasticOutCurve');
       case 'period':
         return period;
@@ -511,7 +511,7 @@ class ElasticInOutCurveAutoBinding extends HTExternalClass {
 extension ElasticInOutCurveBinding on ElasticInOutCurve {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ElasticInOutCurve');
       case 'period':
         return period;

@@ -39,7 +39,7 @@ class ScrollControllerAutoBinding extends HTExternalClass {
 extension ScrollControllerBinding on ScrollController {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ScrollController');
       case 'keepScrollOffset':
         return keepScrollOffset;
@@ -131,7 +131,7 @@ class TrackingScrollControllerAutoBinding extends HTExternalClass {
 extension TrackingScrollControllerBinding on TrackingScrollController {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('TrackingScrollController');
       case 'keepScrollOffset':
         return keepScrollOffset;

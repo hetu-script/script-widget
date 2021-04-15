@@ -44,7 +44,7 @@ extension TextSelectionToolbarTextButtonBinding
     on TextSelectionToolbarTextButton {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('TextSelectionToolbarTextButton');
       case 'child':
         return child;

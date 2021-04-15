@@ -34,7 +34,7 @@ class RawKeyEventDataLinuxAutoBinding extends HTExternalClass {
 extension RawKeyEventDataLinuxBinding on RawKeyEventDataLinux {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('RawKeyEventDataLinux');
       case 'keyHelper':
         return keyHelper;
@@ -104,7 +104,7 @@ class KeyHelperAutoBinding extends HTExternalClass {
 extension KeyHelperBinding on KeyHelper {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('KeyHelper');
       case 'getModifierSide':
         return ({positionalArgs, namedArgs, typeArgs}) =>
@@ -165,7 +165,7 @@ class GLFWKeyHelperAutoBinding extends HTExternalClass {
 extension GLFWKeyHelperBinding on GLFWKeyHelper {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('GLFWKeyHelper');
       case 'isModifierPressed':
         return ({positionalArgs, namedArgs, typeArgs}) => isModifierPressed(
@@ -226,7 +226,7 @@ class GtkKeyHelperAutoBinding extends HTExternalClass {
 extension GtkKeyHelperBinding on GtkKeyHelper {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('GtkKeyHelper');
       case 'isModifierPressed':
         return ({positionalArgs, namedArgs, typeArgs}) => isModifierPressed(

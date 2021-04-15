@@ -21,7 +21,7 @@ class BoxShapeAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('BoxShape');
       case 'index':
         return (instance as BoxShape).index;
@@ -94,7 +94,7 @@ class BorderAutoBinding extends HTExternalClass {
 extension BorderBinding on Border {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Border');
       case 'top':
         return top;
@@ -197,7 +197,7 @@ class BorderDirectionalAutoBinding extends HTExternalClass {
 extension BorderDirectionalBinding on BorderDirectional {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('BorderDirectional');
       case 'top':
         return top;

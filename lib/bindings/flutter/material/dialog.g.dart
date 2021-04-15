@@ -51,7 +51,7 @@ class DialogAutoBinding extends HTExternalClass {
 extension DialogBinding on Dialog {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Dialog');
       case 'backgroundColor':
         return backgroundColor;
@@ -190,7 +190,7 @@ class AlertDialogAutoBinding extends HTExternalClass {
 extension AlertDialogBinding on AlertDialog {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('AlertDialog');
       case 'title':
         return title;
@@ -309,7 +309,7 @@ class SimpleDialogOptionAutoBinding extends HTExternalClass {
 extension SimpleDialogOptionBinding on SimpleDialogOption {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('SimpleDialogOption');
       case 'onPressed':
         return onPressed;
@@ -416,7 +416,7 @@ class SimpleDialogAutoBinding extends HTExternalClass {
 extension SimpleDialogBinding on SimpleDialog {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('SimpleDialog');
       case 'title':
         return title;

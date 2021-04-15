@@ -28,7 +28,7 @@ class ImageFilteredAutoBinding extends HTExternalClass {
 extension ImageFilteredBinding on ImageFiltered {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ImageFiltered');
       case 'imageFilter':
         return imageFilter;

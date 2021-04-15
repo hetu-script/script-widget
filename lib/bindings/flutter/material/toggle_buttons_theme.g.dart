@@ -77,7 +77,7 @@ class ToggleButtonsThemeDataAutoBinding extends HTExternalClass {
 extension ToggleButtonsThemeDataBinding on ToggleButtonsThemeData {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ToggleButtonsThemeData');
       case 'textStyle':
         return textStyle;
@@ -204,7 +204,7 @@ class ToggleButtonsThemeAutoBinding extends HTExternalClass {
 extension ToggleButtonsThemeBinding on ToggleButtonsTheme {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ToggleButtonsTheme');
       case 'data':
         return data;

@@ -40,7 +40,7 @@ class TextSelectionThemeDataAutoBinding extends HTExternalClass {
 extension TextSelectionThemeDataBinding on TextSelectionThemeData {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('TextSelectionThemeData');
       case 'cursorColor':
         return cursorColor;
@@ -109,7 +109,7 @@ class TextSelectionThemeAutoBinding extends HTExternalClass {
 extension TextSelectionThemeBinding on TextSelectionTheme {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('TextSelectionTheme');
       case 'data':
         return data;

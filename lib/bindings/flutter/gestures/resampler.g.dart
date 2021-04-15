@@ -31,7 +31,7 @@ class PointerEventResamplerAutoBinding extends HTExternalClass {
 extension PointerEventResamplerBinding on PointerEventResampler {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('PointerEventResampler');
       case 'hasPendingEvents':
         return hasPendingEvents;

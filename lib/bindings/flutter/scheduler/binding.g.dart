@@ -27,7 +27,7 @@ class SchedulerPhaseAutoBinding extends HTExternalClass {
   @override
   dynamic instanceMemberGet(dynamic instance, String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('SchedulerPhase');
       case 'index':
         return (instance as SchedulerPhase).index;

@@ -45,7 +45,7 @@ class AlignmentAutoBinding extends HTExternalClass {
 extension AlignmentBinding on Alignment {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('Alignment');
       case 'x':
         return x;
@@ -124,7 +124,7 @@ class AlignmentDirectionalAutoBinding extends HTExternalClass {
 extension AlignmentDirectionalBinding on AlignmentDirectional {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('AlignmentDirectional');
       case 'start':
         return start;
@@ -175,7 +175,7 @@ class TextAlignVerticalAutoBinding extends HTExternalClass {
 extension TextAlignVerticalBinding on TextAlignVertical {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('TextAlignVertical');
       case 'y':
         return y;

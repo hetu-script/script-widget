@@ -35,7 +35,7 @@ class AnimatedIconAutoBinding extends HTExternalClass {
 extension AnimatedIconBinding on AnimatedIcon {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('AnimatedIcon');
       case 'progress':
         return progress;

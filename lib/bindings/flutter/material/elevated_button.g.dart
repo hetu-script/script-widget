@@ -121,7 +121,7 @@ class ElevatedButtonAutoBinding extends HTExternalClass {
 extension ElevatedButtonBinding on ElevatedButton {
   dynamic htFetch(String varName) {
     switch (varName) {
-      case 'typeid':
+      case 'runtimeType':
         return const HTType('ElevatedButton');
       case 'onPressed':
         return onPressed;
